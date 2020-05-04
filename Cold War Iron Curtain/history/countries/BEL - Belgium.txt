@@ -25,7 +25,7 @@ if = {
 	set_technology = {
 		subkiller_0 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
 		ship_armament_light_0 = 1
@@ -38,8 +38,8 @@ if = {
 		sub_hull_large_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
-		screen_hull_small_0 = 1
 		screen_hull_medium_0 = 1
+		screen_hull_heavy_0 = 1
 	}
 }
 
@@ -215,7 +215,7 @@ set_variable = { var = domestic_influence_amount value = 5000 }
 		}
 		else = {
 			puppet = RWA
-		}	
+		}
 
 	}
 	RWA = {
@@ -224,7 +224,7 @@ set_variable = { var = domestic_influence_amount value = 5000 }
 			last_election = "1949.1.1"
 			election_frequency = 48
 			elections_allowed = no
-		}	
+		}
 		set_popularities = { 
 			democratic = 0
 			communism = 0
@@ -311,7 +311,7 @@ if = {
 		target = BRD
 		autonomous_state = autonomy_protectorate
 		freedom_level = 0.4
-	}		
+	}
 	else = {
 		puppet = DOC
 		puppet = BRD

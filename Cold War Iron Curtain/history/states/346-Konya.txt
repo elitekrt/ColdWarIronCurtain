@@ -4,7 +4,7 @@ state = {
 
 	history = {
 		owner = TUR
-		set_state_flag = lushdesert
+		set_state_flag = desertlush
 		set_state_flag = lakes
 		set_state_flag = nominal
 		set_state_flag = semideveloped
@@ -29,5 +29,5 @@ state = {
 	}
 	manpower = 430305
 	buildings_max_level_factor = 1.000
-	state_category = pop1dev2
+	state_category = pop1dev1
 }

@@ -238,15 +238,18 @@ ability = {
 		type = army_leader
 		
 		allowed = {
-			has_ability = makeshift_bridges
+			OR = {
+				has_ability = makeshift_bridges
+				#has_tech = amphibious_warfare_2
+			}
 			is_border_war = no
 		}
 		
 		
 		unit_modifiers = {
-			river_crossing_factor = -0.5
+			river_crossing_factor = -0.4
 			river = {
-				attack = 0.4
+				attack = 0.2
 			}
 		}
 		
@@ -297,12 +300,13 @@ ability = {
 		type = army_leader
 		
 		allowed = {
-			has_ability = requisition_winter_gear
-			is_border_war = no
+			OWNER = {
+				has_tech = mountain_warfare_3
+			}
 		}
 		
 		unit_modifiers = {
-			acclimatization_cold_climate_gain_factor = 0.5
+			acclimatization_cold_climate_gain_factor = 1
 		}
 		
 		cost = 0.1
@@ -317,6 +321,42 @@ ability = {
 				}
 				check_variable = { num_units_on_climate@cold_climate > 8 }
 				set_temp_variable = { temp = avg_units_acclimation@cold_climate }
+				divide_temp_variable = { temp = num_units }
+				check_variable = { temp < 0.5 }
+				
+				add = 2
+			}
+		}
+	}
+	
+	requisition_desert_gear = {
+		name = ABILITY_REQUISITION_HEAT_GEAR
+		desc = ABILITY_REQUISITION_HEAT_GEAR_DESC
+		
+		type = army_leader
+		
+		allowed = {
+			OWNER = {
+				has_tech = desert_warfare_2
+			}
+		}
+		
+		unit_modifiers = {
+			acclimatization_hot_climate_gain_factor = 1
+		}
+		
+		cost = 0.1
+		duration = 168
+		
+		
+		ai_will_do = {
+			factor = -1
+			modifier = {
+				FROM = {
+					command_power > 2.0
+				}
+				check_variable = { num_units_on_climate@hot_climate > 8 }
+				set_temp_variable = { temp = avg_units_acclimation@hot_climate }
 				divide_temp_variable = { temp = num_units }
 				check_variable = { temp < 0.5 }
 				

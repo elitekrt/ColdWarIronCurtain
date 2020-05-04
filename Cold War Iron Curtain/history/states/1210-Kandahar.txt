@@ -22,11 +22,14 @@ state = {
 			agri_industrial_complex = 1
 		}
 		add_core_of = AFG
-
+		victory_points = {
+			13918 5 
+		}
+		
 	}
 
 	provinces = {
-		1948 2078 2101 4949 5020 5064 
+		1948 2078 2101 4949 5020 5064 13919 13918 13917
 	}
 	manpower = 1151100
 	buildings_max_level_factor = 1.000

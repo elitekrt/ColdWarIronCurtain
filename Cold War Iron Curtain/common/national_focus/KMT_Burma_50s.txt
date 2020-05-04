@@ -2,12 +2,15 @@ focus_tree = {
 	id = KMT_Burma_50s
 	country = {
 		factor = 0
-
+		modifier = {
+			add = 10
+			tag = YAN
+		}
 	}
 	default = no
 	focus = {
 		id = YAN_The_Restoration_Army
-		icon = GFX_goal_unknown
+		icon = GFX_focus_burning_kmt
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = 19
@@ -33,7 +36,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_The_Outbreak_of_the_Korean_War
-		icon = GFX_goal_unknown
+		icon = GFX_focus_korean_war
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = 19
@@ -47,7 +50,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_YANSA
-		icon = GFX_goal_unknown
+		icon = GFX_Republic_of_China_Pennant
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = 6
@@ -59,7 +62,7 @@ focus_tree = {
 	}	
 	focus = {
 		id = YAN_Friends_in_the_Thai_Police
-		icon = GFX_goal_unknown
+		icon = GFX_Thai_Pennant
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -79,7 +82,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Establish_the_Overseas_Chinese_161st_Division
-		icon = GFX_goal_unknown
+		icon = GFX_Recruitment
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -100,7 +103,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Weapon_Smuggling
-		icon = GFX_goal_unknown
+		icon = GFX_FocusM16s
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -114,7 +117,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Thai_Officers
-		icon = GFX_goal_unknown
+		icon = GFX_Thai_Armed_Forces
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -132,7 +135,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Trade_Opium_for_Weaponry
-		icon = GFX_goal_unknown
+		icon = GFX_South_East_Asian_Drug_Smuggling
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -152,7 +155,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_CIA_Weapon_Shipments
-		icon = GFX_goal_unknown
+		icon = GFX_cia
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -172,7 +175,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Surplus_Infantry_Weapons
-		icon = GFX_goal_unknown
+		icon = GFX_goal_BEL_WW2Weapons
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -192,7 +195,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Light_Artillery_Shipments
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_army_artillery2
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -212,7 +215,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_CIA_Advisors
-		icon = GFX_goal_unknown
+		icon = GFX_American_Influence_Asia
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -232,7 +235,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Additional_Infantry_Weapons
-		icon = GFX_goal_unknown
+		icon = GFX_Increase_Taiwanese_Support 
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -250,7 +253,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Reorganizing_from_the_Yunnan_Diaster
-		icon = GFX_goal_unknown
+		icon = GFX_HeavyStrike
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -274,7 +277,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Remnants_from_the_Eighth_Army
-		icon = GFX_goal_unknown
+		icon = GFX_Rally
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -323,7 +326,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Secure_CIA_Support
-		icon = GFX_goal_unknown
+		icon = GFX_Room_Meeting
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -337,7 +340,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Recruit_Local_Warlords
-		icon = GFX_goal_unknown
+		icon = GFX_Mercenaries
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -352,7 +355,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Clashes_with_Burma
-		icon = GFX_goal_unknown
+		icon = GFX_Crush_Burma
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -383,7 +386,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Thai_Military_Access
-		icon = GFX_goal_unknown
+		icon = GFX_SIA_Crown_Support
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -401,7 +404,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_American_Aid2
-		icon = GFX_goal_unknown
+		icon = GFX_focus_chi_mission_to_the_us 
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -418,7 +421,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Local_Support_from_Kengtung
-		icon = GFX_goal_unknown
+		icon = GFX_Arm_the_Hmong
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -435,7 +438,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Recruit_Private_Financing
-		icon = GFX_goal_unknown
+		icon = GFX_KMT_Currency 
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -450,7 +453,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Solidify_Thai_Support
-		icon = GFX_goal_unknown
+		icon = GFX_UndergroundPolitics
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -479,7 +482,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Regional_Anti_Communist_Propaganda
-		icon = GFX_goal_unknown
+		icon = GFX_TheRussianBearCurtailed
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -493,7 +496,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Strike_A_Deal_with_the_Thai_Police
-		icon = GFX_goal_unknown
+		icon = GFX_focus_police
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -526,7 +529,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Hong_Kong_Aid
-		icon = GFX_goal_unknown
+		icon = GFX_Cash_and_Carry
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -544,7 +547,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Rally_Anti_Communist_Militias
-		icon = GFX_goal_unknown
+		icon = GFX_Army_Officers_Coup_Attempt
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -564,7 +567,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Occupy_the_Golden_Triangle
-		icon = GFX_goal_unknown
+		icon = GFX_Golden_Triangle_Opium_Flower
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -584,7 +587,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Continue_Negotiations_with_America
-		icon = GFX_goal_unknown
+		icon = GFX_goal_USA_deal
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -613,7 +616,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Centralize_Organization_Efforts
-		icon = GFX_goal_unknown
+		icon = GFX_focus_chi_army_reform
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -627,7 +630,7 @@ focus_tree = {
 	}	
 	focus = {
 		id = YAN_Utilize_Opium_Commerce
-		icon = GFX_goal_unknown
+		icon = GFX_Gold
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -644,7 +647,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Black_Market_Weapons
-		icon = GFX_goal_unknown
+		icon = GFX_integrate_the_black_market
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -668,7 +671,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Relocate_to_Mong_Hsat
-		icon = GFX_goal_unknown
+		icon = GFX_KMT_develop_taipei
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -685,7 +688,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Develop_Mong_Hsat
-		icon = GFX_goal_unknown
+		icon = GFX_Focus_RuralHousing
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -711,7 +714,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Recruit_Local_Mapang
-		icon = GFX_goal_unknown
+		icon = GFX_support_tribal_farmer
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -726,7 +729,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Request_Release_of_Interned_Chinese_Troops_in_French_Inodchina
-		icon = GFX_goal_unknown
+		icon = GFX_goal_FRA_deal
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -770,7 +773,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Operation_Paper
-		icon = GFX_goal_unknown
+		icon = GFX_TheBigPush
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -782,7 +785,7 @@ focus_tree = {
 		x = 19
 		y = 16
 		completion_reward = {
-			news_event = Operation_Paper
+			country_event = KMT_BURMA.1
 		}
 	}
 	focus = {
@@ -804,16 +807,16 @@ focus_tree = {
 				attacker = {
 					state = 788
 					num_provinces = 2
-					on_win = YANSA_border_conflict.5
-					on_lose = YANSA_border_conflict.6
+					on_win = KMT_BURMA.2
+					on_lose = KMT_BURMA.3
 					on_cancel = Indochina_War.4
 				}
 							
 				defender = {
 					state = 1190
 					num_provinces = 2
-					on_win = YANSA_border_conflict.6
-					on_lose = YANSA_border_conflict.5
+					on_win = Indochina_War.4
+					on_lose = Indochina_War.4
 					on_cancel = Indochina_War.4
 				}
 			}		
@@ -821,7 +824,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Victory_In_Yunnan
-		icon = GFX_goal_unknown
+		icon = GFX_TanksAcrosstheBorder
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -838,7 +841,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Failure_in_Yunnan
-		icon = GFX_goal_unknown
+		icon = GFX_Death_Calls
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -855,7 +858,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_The_Twenty_Sixth_Army
-		icon = GFX_goal_unknown
+		icon = GFX_Crush_the_Rebellion
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -878,7 +881,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Establish_the_Yunnan_Anti_Communist_University
-		icon = GFX_goal_unknown
+		icon = GFX_universities
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -892,7 +895,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Reach_an_Agreement_with_Rangoon
-		icon = GFX_goal_unknown
+		icon = GFX_focus_renounce_the_treaty_of_triannon
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -917,7 +920,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Reorganize_the_Officer_Corps
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_military_mission
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -934,7 +937,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Establish_the_Yunnan_Anticommunist_National_Salvation
-		icon = GFX_goal_unknown
+		icon = GFX_IntotheFlames
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -946,12 +949,12 @@ focus_tree = {
 		x = 18
 		y = 15
 		completion_reward = {
-			country_event = YANSA.100
+			country_event = YANSA.101
 		}
 	}
 	focus = {
 		id = YAN_Recruit_More_Overseas_Chinese
-		icon = GFX_goal_unknown
+		icon = GFX_KMT_Soldier_Virtues
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -973,7 +976,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Recruit_Wa_Christians
-		icon = GFX_goal_unknown
+		icon = GFX_protestant
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -992,7 +995,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Bribe_Local_Yunnan_Officials
-		icon = GFX_goal_unknown
+		icon = GFX_Bribery
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1010,7 +1013,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Stay_the_Course
-		icon = GFX_goal_unknown
+		icon = GFX_shadow_government
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1028,7 +1031,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Resist_Taipeis_Orders
-		icon = GFX_goal_unknown
+		icon = GFX_CardTricks
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1056,7 +1059,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Recruit_Shan_Allies
-		icon = GFX_goal_unknown
+		icon = GFX_RecruitmentDrive
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1071,7 +1074,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Accept_Alliance_with_Burmese_Insurgencies
-		icon = GFX_goal_unknown
+		icon = GFX_DeadlyDeal
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1089,7 +1092,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Declare_an_Indpendent_Shan_State
-		icon = GFX_goal_unknown
+		icon = GFX_fist
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1103,12 +1106,12 @@ focus_tree = {
 		completion_reward = {
 			CHI = { set_autonomy = { target = YAN autonomy_state = autonomy_free }	}
 			set_cosmetic_tag = YAN_SHAN
-			news_event = YANSA.100
+			country_event = YANSA.100
 		}
 	}
 	focus = {
 		id = YAN_Press_Censorship
-		icon = GFX_goal_unknown
+		icon = GFX_FocusCensorship
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1122,7 +1125,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Promote_Kuomitang_Identity
-		icon = GFX_goal_unknown
+		icon = GFX_KMT_Repress_Local_Languages
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1143,7 +1146,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Crackdown_on_Former_Seccessionist_Leaders
-		icon = GFX_goal_unknown
+		icon = GFX_CrushResistance
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1160,7 +1163,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Invest_In_Local_Infrastructure
-		icon = GFX_goal_unknown
+		icon = GFX_FocusBuildRoads
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1177,7 +1180,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Begin_Sinification_Campaign
-		icon = GFX_goal_unknown
+		icon = GFX_KMT_Sinification_Campaign
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1197,7 +1200,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_The_Partition_of_Burma
-		icon = GFX_goal_unknown
+		icon = GFX_Backstab
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1209,12 +1212,12 @@ focus_tree = {
 		x = 9
 		y = 25
 		completion_reward = {
-			news_event = Collapse_Burma.1
+			country_event = Collapse_Burma.1
 		}
 	}
 	focus = {
 		id = YAN_Develop_Local_Water_Projects
-		icon = GFX_goal_unknown
+		icon = GFX_Irrigation_Canals
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1231,7 +1234,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Expand_Electrical_Access
-		icon = GFX_goal_unknown
+		icon = GFX_1st_Electric_Program
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1278,7 +1281,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Attract_Chinese_Refugees
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Refugee_Focus
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1297,7 +1300,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Seek_Thai_Recognition
-		icon = GFX_goal_unknown
+		icon = GFX_HiddenPacts
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1314,7 +1317,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Encourage_Free_Market_Economics
-		icon = GFX_goal_unknown
+		icon = GFX_Deregulation
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1334,7 +1337,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_American_Advisors
-		icon = GFX_goal_unknown
+		icon = GFX_focus_american_advisors
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1351,7 +1354,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_American_Aid
-		icon = GFX_goal_unknown
+		icon = GFX_FocusRequestAmericanAid
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1368,7 +1371,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_American_Recognition
-		icon = GFX_goal_unknown
+		icon = GFX_AmericanEagle
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1396,7 +1399,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Join_SEATO
-		icon = GFX_goal_unknown
+		icon = GFX_SEATO
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1413,7 +1416,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Prioritize_Chinese_Minorities
-		icon = GFX_goal_unknown
+		icon = GFX_Aristocracy
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1427,7 +1430,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Promote_Intermarriage
-		icon = GFX_goal_unknown
+		icon = GFX_encourage_higher_birthrates
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1437,19 +1440,19 @@ focus_tree = {
 		y = 23
 		completion_reward = {
 			hidden_effect = {
-				remove_ideas = Oppressive
-				remove_ideas = Repressive
-				remove_ideas = Segregated
-				remove_ideas = Equal_Rights
-				remove_ideas = Affirimative_Action
+				remove_ideas = policy_minorities_temp_0
+				remove_ideas = policy_minorities_temp_1
+				remove_ideas = policy_minorities_temp_2
+				remove_ideas = policy_minorities_temp_3
+				remove_ideas = policy_minorities_temp_3a
 			}
 				
-			add_ideas = Equal_Rights
+			add_ideas = policy_minorities_temp_3
 		}
 	}
 	focus = {
 		id = YAN_Regroup_in_Burma
-		icon = GFX_goal_unknown
+		icon = GFX_Military_Debate 
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1464,7 +1467,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Dealing_with_Logistics
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Arab_Infrastructure
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1478,7 +1481,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Expand_Our_Base_of_Operations
-		icon = GFX_goal_unknown
+		icon = GFX_FortificationEffort
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1495,7 +1498,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Ally_with_the_Karen
-		icon = GFX_goal_unknown
+		icon = GFX_Bribery_Alt
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1512,7 +1515,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Establish_an_Air_Bridge_Between_Mong_Hsat_and_Taipei
-		icon = GFX_goal_unknown
+		icon = GFX_douglas_a_20_transports
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1529,7 +1532,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Seize_Rice_Production
-		icon = GFX_goal_unknown
+		icon = GFX_Seize_Industry
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1550,7 +1553,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Operation_Earth
-		icon = GFX_goal_unknown
+		icon = GFX_Expand_Airfields
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1567,7 +1570,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Recruit_FFL_Deserters
-		icon = GFX_goal_unknown
+		icon = GFX_European_Soldiers
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1582,7 +1585,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Embrace_The_Opium_Trade
-		icon = GFX_goal_unknown
+		icon = GFX_ReopentheStockMarkets
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1599,7 +1602,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Fake_Evacuations_to_the_UN
-		icon = GFX_goal_unknown
+		icon = GFX_un
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1608,12 +1611,12 @@ focus_tree = {
 		x = 26
 		y = 25
 		completion_reward = {
-			news_event = Operation_Heaven.1
+			country_event = KMT_BURMA.10
 		}
 	}
 	focus = {
 		id = YAN_SS_Haitien_Gamble
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Maritime_Trade
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1627,7 +1630,7 @@ focus_tree = {
 		completion_reward = {
 			random_list = {
 				50 = {
-					country_event = SS_HATIEN.1a
+					country_event = SS_HATIEN.1
 					add_war_support = -0.05
 				}
 				50 = {
@@ -1645,7 +1648,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Give_into_Operation_Heaven
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Airline_Industry
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1692,7 +1695,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Operation_Monsoon
-		icon = GFX_goal_unknown
+		icon = GFX_Crush_PRC
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1709,16 +1712,16 @@ focus_tree = {
 				attacker = {
 					state = 788
 					num_provinces = 2
-					on_win = YANSA_border_conflict.7
-					on_lose = YANSA_border_conflict.8
+					on_win = KMT_BURMA.4
+					on_lose = KMT_BURMA.5
 					on_cancel = Indochina_War.4
 				}
 				
 				defender = {
 					state = 1190
 					num_provinces = 2
-					on_win = YANSA_border_conflict.8
-					on_lose = YANSA_border_conflict.7
+					on_win = Indochina_War.4
+					on_lose = Indochina_War.4
 					on_cancel = Indochina_War.4
 				}
 			}		
@@ -1726,7 +1729,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Pillage_Burma
-		icon = GFX_goal_unknown
+		icon = GFX_focus_urban_warfare
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1738,7 +1741,7 @@ focus_tree = {
 		x = 21
 		y = 26
 		completion_reward = {
-			news_event = KMT_BURMA.10
+			news_event = KMT_BURMA.11
 			add_to_variable = { currentMoney = 25 }
 			BRM = {
 				add_stability = -0.10
@@ -1777,7 +1780,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Further_Aid_From_Taipei
-		icon = GFX_goal_unknown
+		icon = GFX_Subterfuge
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1797,7 +1800,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Extort_Taxes_From_Locals
-		icon = GFX_goal_unknown
+		icon = GFX_Money
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1806,19 +1809,18 @@ focus_tree = {
 		x = 20
 		y = 23
 		completion_reward = {
-			remove_ideas = Austrian_Taxation
-			remove_ideas = Light_Taxation
-			remove_ideas = Moderate_Taxation
-			remove_ideas = Progressive_Taxation
-			remove_ideas = Heavy_Taxation
-			remove_ideas = Marxist_Taxation
-			add_ideas = Heavy_Taxation
+			remove_ideas = policy_taxrate_temp_1
+			remove_ideas = policy_taxrate_temp_2
+			remove_ideas = policy_taxrate_temp_3
+			remove_ideas = policy_taxrate_temp_4
+			remove_ideas = policy_taxrate_temp_5
+			add_ideas = policy_taxrate_temp_4
 			tax_rate = yes		
 		}
 	}
 	focus = {
 		id = YAN_Forced_Labor
-		icon = GFX_goal_unknown
+		icon = GFX_Prison_Camps
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1849,7 +1851,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Build_Ties_with_Laos
-		icon = GFX_goal_unknown
+		icon = GFX_goal_LAO_Proclamation
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1878,7 +1880,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Laotian_Cooperation
-		icon = GFX_goal_unknown
+		icon = GFX_Arm_Laos
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1903,7 +1905,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Reinforcements_from_the_Mainland
-		icon = GFX_goal_unknown
+		icon = GFX_DarkArms
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1926,7 +1928,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Expand_Air_Infrastructure
-		icon = GFX_goal_unknown
+		icon = GFX_Travel_Modernization
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1946,7 +1948,7 @@ focus_tree = {
 	}	
 	focus = {
 		id = YAN_Opiate_Fueled_Economy
-		icon = GFX_goal_unknown
+		icon = GFX_Drug_Fueled_Jihad
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1963,7 +1965,7 @@ focus_tree = {
 	}
 	focus = {
 		id = YAN_Relations_with_Laos_and_Vietnam
-		icon = GFX_goal_unknown
+		icon = GFX_goal_VIE_Proclamation
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {

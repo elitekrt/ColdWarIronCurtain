@@ -36,9 +36,6 @@ ideas = {
 				infantry_equipment = {
 					build_cost_ic = -0.1 instant = yes
 				}
-				lmg_infantry_equipment = {
-					build_cost_ic = -0.1 instant = yes
-				}
 			}
 
 			picture = generic_manpower_bonus
@@ -133,7 +130,7 @@ ideas = {
 			picture = desert_officers_2
 
 			allowed = { 
-				always =  yes 
+				always = yes 
 		}
 
             allowed_civil_war = { 

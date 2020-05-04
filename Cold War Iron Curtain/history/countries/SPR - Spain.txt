@@ -31,7 +31,7 @@ if = {
 		subkiller_0 = 1
 		subkiller_1 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ta_fcs_0 = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
@@ -41,9 +41,9 @@ if = {
 		ship_armament_heavy_0 = 1
 		
 		ww_capitals = 1
-		capital_hull_0 = 1
+		battle_hull_medium_0 = 1
 		ww_carriers = 1
-		capital_hull_0 = 1
+		battle_hull_medium_0 = 1
 		carrier_hull_0 = 1
 		
 		ww_submarines = 1
@@ -52,9 +52,9 @@ if = {
 		sub_hull_small_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
+		screen_hull_heavy_0 = 1
 		screen_hull_medium_0 = 1
-		screen_hull_small_0 = 1
-		screen_hull_large_0 = 1
+		battle_hull_light_0 = 1
 	}
 }
 
@@ -209,6 +209,8 @@ add_ideas = {
 	SOV_government_corruption
 	ddr_idea_industrial_corruption
 	closed_economy
+	SYR_autarky
+	neutrality_idea
 }
 
 
@@ -265,7 +267,7 @@ if = {
 		target = EQG
 		autonomous_state = autonomy_colony
 		freedom_level = 0.4
-	}	
+	}
 	
 	else = {
 		puppet = WES
@@ -301,7 +303,7 @@ if = {
 			last_election = "1945.1.1"
 			election_frequency = 48
 			elections_allowed = no
-		}	
+		}
 	}
 }
 
@@ -337,7 +339,7 @@ if = {
 			last_election = "1945.1.1"
 			election_frequency = 48
 			elections_allowed = no
-		}	
+		}
 	}
 }
 1968.1.1 = {
@@ -380,7 +382,7 @@ create_country_leader = {
 	name = "Francisco Franco"
 	desc = "POLITICS_FRANCISCO_FRANCO_DESC"
 	picture = "franco.dds"
-	expire = "1960.1.1"
+	expire = "1975.11.20"
 	ideology = falangism
 	traits = {
 		Caudillo
@@ -390,6 +392,19 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Francisco Franco"
+	desc = "POLITICS_FRANCISCO_FRANCO_DESC"
+	picture = "franco.dds"
+	expire = "1975.11.20"
+	ideology = nationalist_ideology
+	traits = {
+		Caudillo
+		Generalisimo
+		Communist_Vanquisher
+		Una_Grande_y_Libre
+	}
+}
 
 create_country_leader = {
 	name = "Doroteo de Ziáurriz"
@@ -552,5 +567,5 @@ create_corps_commander = {
 		name = "Adolfo Suarez"
 		picture = "gfx/leaders/SPR/Adolfo.dds"
 		ideology = christian_democracy
-	}	
+	}
 }

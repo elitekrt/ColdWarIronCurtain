@@ -42,6 +42,9 @@ set_variable = { centre_seats = 69 }
 set_variable = { libertarian_seats = 10 }
 
 set_variable = { segregationValue = -0.20 }
+set_variable = { efficiency_cpi = 0.2 }
+set_variable = { efficiency_education = 0.1 }
+
 add_dynamic_modifier = {
 	modifier = segregation_dynamic_modifier
 }
@@ -153,14 +156,14 @@ add_ideas = {
 	defcon_system_5
 	Major_Power_Spy_Bonus
 
-	Moderate_Taxation
+	policy_taxrate_temp_2
 	
-	Restricted_Voting
-	Free_Press
-	Womens_Rights_Policy
-	Segregated
-	pluarlism
-	gen_notsaga_2
+	policy_union_temp_2
+	policy_media_temp_3
+	policy_women_temp_3
+	policy_minorities_temp_2
+	policy_religion_temp_3
+	policy_saga_temp_1
 }
 if = {
 	limit = {
@@ -383,7 +386,7 @@ create_country_leader = {
 }
 
 1952.11.4 = {
-	set_autonomy = { target = JAP autonomy_state = autonomy_free }	
+	set_autonomy = { target = JAP autonomy_state = autonomy_free }
 	
 
 		set_popularities = { 
@@ -421,6 +424,7 @@ create_country_leader = {
 	create_country_leader = {
 		name = "Dwight D. Eisenhower"
 		picture = "Dwight_D_Eisenhower.dds"
+		desc = "POL_EISENHOWER"
 		ideology = republican
 		traits = {
 			World_War_II_Hero
@@ -517,13 +521,13 @@ complete_national_focus = USA_EISENHOWER56_The_Eisenhower_Administration_1956
 		set_variable = { senate_total_voting_support = 0 }
 		
 		set_variable = { democratic_total_representatives = 0 }
-		set_variable = { democratic_supportive_representatives = 0 }	
+		set_variable = { democratic_supportive_representatives = 0 }
 
 		set_variable = { american_independent_total_representatives = 0 }
 		set_variable = { american_independent_supportive_representatives = 0 }
 
 		set_variable = { socialist_workers_total_senators = 0 }
-		set_variable = { socialist_workers_supportive_senators = 0 }		
+		set_variable = { socialist_workers_supportive_senators = 0 }
 	}
 }
 
@@ -1046,19 +1050,84 @@ create_navy_leader = {
 	}
 
 ### Ship Variants ###
+if = {
+	limit = { NOT = { has_dlc = "Man the Guns" } } 
+	
+	create_equipment_variant = {
+		name = "PC-461-class"
+		type = frigate_ww
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Town-Class"
+		type = destroyer_ww
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Juneau-class"
+		type = cruiser_ww
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Alaska-class"
+		type = battlecruiser_ww
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Iowa-class"
+		type = battleship_ww
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Balao-class"
+		type = attack_submarine_ww
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Independence-class"
+		type = carrier_ww
+		obsolete = yes
+	}
+	
+	create_equipment_variant = {
+		name = "Tacoma-class"
+		type = frigate_1
+	}
+	create_equipment_variant = {
+		name = "Gearing-class"
+		type = destroyer_1
+	}
+	create_equipment_variant = {
+		name = "Oregon City-class"
+		type = cruiser_1
+	}
+	create_equipment_variant = {
+		name = "Worcester-class"
+		type = battlecruiser_1
+	}
+	create_equipment_variant = {
+		name = "Tench-class"
+		type = attack_submarine_1
+	}
+	create_equipment_variant = {
+		name = "Essex-class"
+		type = carrier_1
+	}
+}
 
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	create_equipment_variant = {
 		name = "Town-class" # Destroyer (Antisub)
-		type = ww_screen_hull_medium
+		type = screen_hull_heavy_ww
 		parent_version = 0
+		name_group = MTG_PLACEHOLDER
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			mid_1_custom_slot = torpedo_ww
 			rear_1_custom_slot = ship_subkiller_0
@@ -1068,6 +1137,7 @@ if = {
         name = "Essex-class"	##0 not WW
         type = carrier_hull_0
         parent_version = 0
+		name_group = MTG_PLACEHOLDER
         modules = {
 			fixed_ship_anti_air_slot = ship_AA_gun_1
 			fixed_maritime_slot = maritime_sonar_0
@@ -1078,42 +1148,45 @@ if = {
 			rear_1_custom_slot = carrier_deck_light_0
 
         }
-    }		
+    }
 
 	create_equipment_variant = {
         name = "Yorktown-class"
         type = carrier_hull_ww
         parent_version = 0
+		name_group = MTG_PLACEHOLDER
         modules = {
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_sonar
-			fixed_maritime_slot_2 = ww_detection
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = sonar_ww
+			fixed_maritime_slot_2 = detection_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_countermeasures_slot = countermeasures_0
 			mid_1_custom_slot = carrier_deck_heavy_ww
 			rear_1_custom_slot = carrier_deck_light_ww
         }
-    }	
+    }
 	
 	create_equipment_variant = {
         name = "Independence-class"
         type = carrier_hull_ww
         parent_version = 0
+		name_group = MTG_PLACEHOLDER
         modules = {
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_sonar
-			fixed_maritime_slot_2 = ww_detection
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = sonar_ww
+			fixed_maritime_slot_2 = detection_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_countermeasures_slot = countermeasures_0
 			mid_1_custom_slot = carrier_deck_light_ww
 			
         }
-    }	
+    }
 		
 	create_equipment_variant = {
         name = "Commencement Bay-class"	##0 not WW
         type = carrier_hull_light
         parent_version = 0
+		name_group = MTG_PLACEHOLDER
         modules = {
 			fixed_ship_anti_air_slot = ship_AA_gun_1
 			fixed_maritime_slot = maritime_sonar_0
@@ -1123,30 +1196,32 @@ if = {
 			mid_1_custom_slot = carrier_deck_light_0
 
         }
-    }	
+    }
 	create_equipment_variant = {
         name = "Casablanca-class"
         type = carrier_hull_ww
         parent_version = 0
+		name_group = MTG_PLACEHOLDER
         modules = {
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_sonar
-			fixed_maritime_slot_2 = ww_detection
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = sonar_ww
+			fixed_maritime_slot_2 = detection_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_countermeasures_slot = countermeasures_0
 			mid_1_custom_slot = carrier_deck_light_ww
         }
-    }	
+    }
 	create_equipment_variant = {
         name = "Iowa-class"
-        type = capital_hull_large_0
+        type = battle_hull_heavy_0
         parent_version = 0
+		name_group = MTG_PLACEHOLDER
         modules = {
 			fixed_ship_battery_slot = ship_armament_heavy_1
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_sonar
-			fixed_maritime_slot_2 = ww_detection
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = sonar_ww
+			fixed_maritime_slot_2 = detection_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_ship_torpedo_slot = ship_torpedo_medium_0
 			front_1_custom_slot = ship_armament_medium_1
 			mid_1_custom_slot = ship_armament_heavy_1
@@ -1154,17 +1229,18 @@ if = {
 			mid_3_custom_slot = ship_AA_gun_1
 			rear_1_custom_slot = ship_armament_medium_1
         }
-    }	
+    }
 	create_equipment_variant = {
         name = "South Dakota-class"
-        type = ww_capital_hull_large
+        type = battle_hull_heavy_ww
         parent_version = 0
+		name_group = MTG_PLACEHOLDER
         modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_sonar
-			fixed_maritime_slot_2 = ww_detection
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = sonar_ww
+			fixed_maritime_slot_2 = detection_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_medium_ww
 			mid_1_custom_slot = ship_AA_gun_1
@@ -1175,42 +1251,45 @@ if = {
     }
 	create_equipment_variant = {
         name = "North Carolina-class"
-        type = ww_capital_hull_large
+        type = battle_hull_heavy_ww
         parent_version = 0
+		name_group = MTG_PLACEHOLDER
         modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_sonar
-			fixed_maritime_slot_2 = ww_detection
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = sonar_ww
+			fixed_maritime_slot_2 = detection_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			front_1_custom_slot = ship_armament_medium_ww
 			mid_1_custom_slot = ship_AA_gun_1
 			mid_2_custom_slot = ship_AA_gun_1
 			mid_3_custom_slot = ship_armament_medium_ww
 			rear_1_custom_slot = ship_armament_medium_ww
         }
-    }		
+    }
 	create_equipment_variant = {
         name = "Allen M. Sumner-class"
-        type = screen_hull_medium_0
+        type = screen_hull_heavy_0
         parent_version = 0
+		name_group = MTG_PLACEHOLDER
         modules = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
             fixed_ship_battery_slot = ship_armament_medium_0
-            fixed_maritime_slot = ww_sonar 
-            fixed_maritime_slot_2 = ww_detection 
-            fixed_ship_engine_slot = ww_screen_engine
+            fixed_maritime_slot = sonar_ww 
+            fixed_maritime_slot_2 = detection_ww 
+            fixed_ship_engine_slot = screen_engine_ww
             fixed_ship_torpedo_slot = ship_torpedo_medium_0
 			front_2_custom_slot = countermeasures_0
             mid_1_custom_slot = ship_subkiller_0
             rear_1_custom_slot = ship_AA_gun_1
         }
-    }	
+    }
 	
 	create_equipment_variant = {
         name = "Gearing-class"
-        type = screen_hull_medium_0
+        type = screen_hull_heavy_0
         parent_version = 0
+		name_group = MTG_PLACEHOLDER
         modules = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
             fixed_ship_battery_slot = ship_armament_medium_0
@@ -1222,18 +1301,19 @@ if = {
             mid_1_custom_slot = ship_subkiller_0
             rear_1_custom_slot = ship_AA_gun_1
         }
-    }		
+    }
 	
 	create_equipment_variant = {
         name = "Fletcher-class"
-        type = ww_screen_hull_medium
+        type = screen_hull_heavy_ww
         parent_version = 0
+		name_group = MTG_PLACEHOLDER
         modules = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
             fixed_ship_battery_slot = ship_armament_medium_ww
-            fixed_maritime_slot = ww_sonar 
-            fixed_maritime_slot_2 = ww_detection 
-            fixed_ship_engine_slot = ww_screen_engine
+            fixed_maritime_slot = sonar_ww 
+            fixed_maritime_slot_2 = detection_ww 
+            fixed_ship_engine_slot = screen_engine_ww
             fixed_ship_torpedo_slot = torpedo_ww
             mid_1_custom_slot = ship_subkiller_0
             rear_1_custom_slot = ship_armament_light_ww
@@ -1242,14 +1322,15 @@ if = {
 	
 	create_equipment_variant = {
         name = "Gleaves-class"
-        type = ww_screen_hull_medium
+        type = screen_hull_heavy_ww
         parent_version = 0
+		name_group = MTG_PLACEHOLDER
         modules = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
             fixed_ship_battery_slot = ship_armament_medium_ww
-            fixed_maritime_slot = ww_sonar 
-            fixed_maritime_slot_2 = ww_detection 
-            fixed_ship_engine_slot = ww_screen_engine
+            fixed_maritime_slot = sonar_ww 
+            fixed_maritime_slot_2 = detection_ww 
+            fixed_ship_engine_slot = screen_engine_ww
             fixed_ship_torpedo_slot = torpedo_ww
             mid_1_custom_slot = ship_AA_gun_1
             rear_1_custom_slot = ship_armament_light_ww
@@ -1257,46 +1338,49 @@ if = {
     }
 	create_equipment_variant = {
 		name = "Baltimore-class"
-		type = ww_capital_hull  
+		type = battle_hull_medium_ww  
 		parent_version = 0
+		name_group = MTG_PLACEHOLDER
 		modules = {
-			fixed_maritime_slot = ww_sonar 
-			fixed_maritime_slot_2 = ww_detection
+			fixed_maritime_slot = sonar_ww 
+			fixed_maritime_slot_2 = detection_ww
 			
 			fixed_ship_battery_slot = ship_armament_medium_ww
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_AA_gun_1
 			mid_1_custom_slot = torpedo_ww
 			mid_2_custom_slot = ship_armament_light_ww
 			rear_1_custom_slot = ship_AA_gun_1
 		}
-	}	
+	}
 		
 	create_equipment_variant = {
 		name = "Alaska-class"
-		type = ww_capital_hull  
+		type = battle_hull_medium_ww  
 		parent_version = 0
+		name_group = MTG_PLACEHOLDER
 		modules = {
-			fixed_maritime_slot = ww_sonar 
-			fixed_maritime_slot_2 = ww_detection
+			fixed_maritime_slot = sonar_ww 
+			fixed_maritime_slot_2 = detection_ww
 			
 			fixed_ship_battery_slot = ship_armament_medium_ww
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_light_ww
 			mid_1_custom_slot = torpedo_ww
 			mid_2_custom_slot = ship_armament_light_ww
 			rear_1_custom_slot = ship_AA_gun_1
 		}
-	}	
+	}
 	
 	create_equipment_variant = {
 		name = "Oregon City-class"
-		type = capital_hull_0  
+		type = battle_hull_medium_0  
 		parent_version = 0
+		name_group = MTG_PLACEHOLDER
 		modules = {
-			fixed_ship_battery_slot = ship_armament_medium_1
+			fixed_ship_battery_slot = ship_armament_heavy_1
             fixed_maritime_slot = maritime_sonar_0 
             fixed_maritime_slot_2 = maritime_ew_ss_0 
 			fixed_ship_engine_slot = capital_engine_0
@@ -1307,12 +1391,13 @@ if = {
 			mid_2_custom_slot = ship_AA_gun_1
 			rear_1_custom_slot = ship_subkiller_0
 		}
-	}	
+	}
 	
 	create_equipment_variant = {
 		name = "Des Moines-class"
-		type = capital_hull_0  
+		type = battle_hull_medium_0  
 		parent_version = 0
+		name_group = MTG_PLACEHOLDER
 		modules = {
 			fixed_ship_battery_slot = ship_armament_heavy_1
             fixed_maritime_slot = maritime_sonar_0 
@@ -1325,41 +1410,44 @@ if = {
 			mid_2_custom_slot = ship_armament_medium_1
 			rear_1_custom_slot = ship_subkiller_0
 		}
-	}	
+	}
 	create_equipment_variant = {
 		name = "Juneau-class"
-		type = ww_screen_hull_large  
+		type = battle_hull_light_ww  
 		parent_version = 0
+		name_group = MTG_PLACEHOLDER
 		modules = {
-			fixed_maritime_slot = ww_sonar 
-			fixed_maritime_slot_2 = ww_detection
+			fixed_maritime_slot = sonar_ww 
+			fixed_maritime_slot_2 = detection_ww
 			fixed_ship_battery_slot = ship_armament_medium_ww
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			mid_1_custom_slot = ship_AA_gun_1
 			rear_1_custom_slot = ship_AA_gun_1
 		}
-	}	
+	}
 	
 	create_equipment_variant = {
-		name = "Cleveland-class	"
-		type = ww_screen_hull_large  
+		name = "Cleveland-class"
+		type = battle_hull_light_ww  
 		parent_version = 0
+		name_group = MTG_PLACEHOLDER
 		modules = {
-			fixed_maritime_slot = ww_sonar 
-			fixed_maritime_slot_2 = ww_detection
+			fixed_maritime_slot = sonar_ww 
+			fixed_maritime_slot_2 = detection_ww
 			fixed_ship_battery_slot = ship_armament_medium_ww
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			mid_1_custom_slot = ship_AA_gun_1
 			rear_1_custom_slot = ship_armament_light_ww
 		}
-	}	
+	}
 	
 	create_equipment_variant = {
 		name = "Worcester-class"
-		type = screen_hull_large_0  
+		type = battle_hull_light_0  
 		parent_version = 0
+		name_group = MTG_PLACEHOLDER
 		modules = {			
 			fixed_ship_battery_slot = ship_armament_medium_1
             fixed_maritime_slot = maritime_sonar_0 
@@ -1371,35 +1459,38 @@ if = {
 			mid_1_custom_slot = ship_torpedo_medium_0
 			rear_1_custom_slot = ship_AA_gun_1
 		}
-	}	
+	}
 	create_equipment_variant = {
 		name = "Balao-class"
 		type = sub_hull_ww  
 		parent_version = 0
+		name_group = MTG_PLACEHOLDER
 		modules = {
 			fixed_sub_torpedo_slot = torpedo_ww
-			fixed_sub_engine_slot = ww_sub_engine
-			fixed_maritime_slot = ww_sonar 
+			fixed_sub_engine_slot = sub_engine_ww
+			fixed_maritime_slot = sonar_ww 
 			mid_1_custom_slot = torpedo_ww
 		}
-	}	
+	}
 	
 	create_equipment_variant = {
 		name = "Tench-class"
 		type = sub_hull_large_single_0  
 		parent_version = 0
+		name_group = MTG_PLACEHOLDER
 		modules = {
-			fixed_maritime_slot = ww_sonar
-			fixed_sub_engine_slot = ww_sub_engine
+			fixed_maritime_slot = sonar_ww
+			fixed_sub_engine_slot = sub_engine_ww
 			fixed_sub_torpedo_slot = sub_torpedo_medium_0
 			front_1_custom_slot = sub_torpedo_small_0
 			mid_1_custom_slot = sub_torpedo_small_0
 		}
-	}		
+	}
 	create_equipment_variant = {
 		name = "Tang-class"
 		type = sub_hull_large_single_0  
 		parent_version = 0
+		name_group = MTG_PLACEHOLDER
 		modules = {
 			fixed_maritime_slot = maritime_sonar_0
 			fixed_sub_engine_slot = sub_engine_alpha_0
@@ -1407,30 +1498,32 @@ if = {
 			front_1_custom_slot = sub_torpedo_small_0
 			mid_1_custom_slot = sub_torpedo_small_0
 		}
-	}	
+	}
 	create_equipment_variant = {	#ww
 		name = "Buckley-class"
-		type = ww_screen_hull_small  
+		type = screen_hull_medium_ww  
 		parent_version = 0
+		name_group = MTG_PLACEHOLDER
 		modules = {	
 			fixed_ship_battery_slot = ship_armament_light_ww
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_sonar 
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = sonar_ww 
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			mid_1_custom_slot = ship_subkiller_0
 			rear_1_custom_slot = ship_armament_light_ww
 		}
-	}	
+	}
 	create_equipment_variant = {	#ww
 		name = "Cannon-class"
-		type = ww_screen_hull_small  
+		type = screen_hull_medium_ww  
 		parent_version = 0
+		name_group = MTG_PLACEHOLDER
 		modules = {	
 			fixed_ship_battery_slot = ship_armament_light_ww
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_sonar 
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = sonar_ww 
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			mid_1_custom_slot = ship_subkiller_0
 			rear_1_custom_slot = ship_AA_gun_1
@@ -1440,8 +1533,9 @@ if = {
 		
 	create_equipment_variant = {	
 		name = "John C. Butler-class"
-		type = screen_hull_small_0
+		type = screen_hull_medium_0
 		parent_version = 0
+		name_group = MTG_PLACEHOLDER
 		modules = {	
 			fixed_ship_battery_slot = ship_armament_light_0 
             fixed_maritime_slot = maritime_ew_ss_0
@@ -1451,12 +1545,13 @@ if = {
 			mid_1_custom_slot = ship_subkiller_0
 			rear_1_custom_slot = ship_AA_gun_1
 		}
-	}	
+	}
 	
 	create_equipment_variant = {	
 		name = "Tacoma-class"
-		type = screen_hull_small_0  
+		type = screen_hull_medium_0  
 		parent_version = 0
+		name_group = MTG_PLACEHOLDER
 		modules = {	
 			fixed_ship_battery_slot = ship_armament_light_0 
             fixed_maritime_slot = maritime_ew_ss_0
@@ -1466,12 +1561,13 @@ if = {
 			mid_1_custom_slot = ship_AA_gun_1
 			rear_1_custom_slot = ship_armament_light_0
 		}
-	}	
+	}
 	### Variants ###
 	create_equipment_variant = {
         name = "PC-461-class"
-        type = ww_screen_hull_small
+        type = screen_hull_medium_ww
         parent_version = 0
+		name_group = MTG_PLACEHOLDER
         modules = {
 			fixed_ship_battery_slot = ship_armament_light_0 
             fixed_maritime_slot = maritime_sonar_0
@@ -1516,7 +1612,7 @@ if = {
 		subkiller_0 = 1
 		subkiller_1 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ta_fcs_0 = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
@@ -1526,7 +1622,7 @@ if = {
 		ship_armament_heavy_0 = 1
 		
 		ww_capitals = 1
-		capital_hull_0 = 1
+		battle_hull_medium_0 = 1
 		ww_carriers = 1
 		carrier_hull_0 = 1
 		
@@ -1536,9 +1632,9 @@ if = {
 		sub_hull_small_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
+		screen_hull_heavy_0 = 1
 		screen_hull_medium_0 = 1
-		screen_hull_small_0 = 1
-		screen_hull_large_0 = 1
+		battle_hull_light_0 = 1
 	}
 }
 
@@ -1703,7 +1799,7 @@ set_technology = {
 	atomic_research = 1
 	atomic_reactor_0 = 1
 	atomic_reactor_fission_0 = 1
-	atomic_weapon_armament_0
+	atomic_weapons_armament_0 = 1
 	atomic_weapons = 1
 	NBC_research = 1
 	nbc_nerve_weapon_0 = 1
@@ -1727,9 +1823,9 @@ if = {
 if = {
 	limit = { has_dlc = "Man the Guns"}
 	set_technology = {
-		screen_hull_small_1 = 1
 		screen_hull_medium_1 = 1
-		screen_hull_large_1 = 1
+		screen_hull_heavy_1 = 1
+		battle_hull_light_1 = 1
 		screen_aviation_1 = 1
 		sub_hull_large_double_0 = 1
 		sub_hull_large_single_1 = 1

@@ -1,0 +1,246 @@
+scripted_gui = {
+	sd_window_access = {
+		context_type = selected_state_context
+		
+		window_name = "sd_window_access"
+		parent_window_token = selected_state_view
+		
+		ai_enabled = {
+			always = no
+		}
+		visible = {
+			always = yes
+		}
+		
+		effects = {
+			sd_open_click = {
+
+				if = {
+					limit = {
+						OR = {
+							has_state_category = pop1
+							has_state_category = pop2
+							has_state_category = pop3
+							has_state_category = pop4
+							has_state_category = pop5
+							has_state_category = pop7
+							has_state_category = pop10
+							has_state_category = pop15
+							has_state_category = pop20
+						}
+					}
+					Upgrade_Preindustrial_State_effect = yes
+				}
+				else_if = {
+					limit = {
+						OR = {
+							has_state_category = pop1dev1
+							has_state_category = pop2dev1
+							has_state_category = pop3dev1
+							has_state_category = pop4dev1
+							has_state_category = pop5dev1
+							has_state_category = pop7dev1
+							has_state_category = pop10dev1
+							has_state_category = pop15dev1
+							has_state_category = pop20dev1
+						}
+					}
+					Upgrade_Undeveloped_State_effect = yes
+				}
+				else_if = {
+					limit = {
+						OR = {
+							has_state_category = pop1dev2
+							has_state_category = pop2dev2
+							has_state_category = pop3dev2
+							has_state_category = pop4dev2
+							has_state_category = pop5dev2
+							has_state_category = pop7dev2
+							has_state_category = pop10dev2
+							has_state_category = pop15dev2
+							has_state_category = pop20dev2
+						}
+					}
+					Upgrade_Developed_State_effect = yes
+				}
+				else_if = {
+					limit = {
+						OR = {
+							has_state_category = pop1dev3
+							has_state_category = pop2dev3
+							has_state_category = pop3dev3
+							has_state_category = pop4dev3
+							has_state_category = pop5dev3
+							has_state_category = pop7dev3
+							has_state_category = pop10dev3
+							has_state_category = pop15dev3
+							has_state_category = pop20dev3
+						}
+					}
+					Upgrade_Modern_State_effect = yes
+				}
+			}
+		}
+		triggers = {
+			sd_open_click_enabled = {
+				is_owned_by = ROOT
+				is_controlled_by = ROOT
+				OR = {
+						OR = {
+							has_state_category = pop1
+							has_state_category = pop2
+							has_state_category = pop3
+							has_state_category = pop5
+							has_state_category = pop7
+							has_state_category = pop10
+							has_state_category = pop15
+							has_state_category = pop20
+						}
+					AND = {
+						OR = {
+							has_state_category = pop1dev1
+							has_state_category = pop2dev1
+							has_state_category = pop3dev1
+							has_state_category = pop5dev1
+							has_state_category = pop7dev1
+							has_state_category = pop10dev1
+							has_state_category = pop15dev1
+							has_state_category = pop20dev1
+						}
+						AND = {
+							ROOT = {
+								has_tech = logistics_I
+								has_tech = production_efficiency_I
+								has_tech = management_I
+								has_tech = materials_I
+								has_tech = chemistry_I
+								has_tech = grid_I
+								has_tech = consumer_electronics_I
+							}
+						}
+					}
+					AND = {
+						OR = {
+							has_state_category = pop1dev2
+							has_state_category = pop2dev2
+							has_state_category = pop3dev2
+							has_state_category = pop5dev2
+							has_state_category = pop7dev2
+							has_state_category = pop10dev2
+							has_state_category = pop15dev2
+							has_state_category = pop20dev2
+						}
+						AND = {
+							ROOT = {
+								has_tech = logistics_VI
+								has_tech = production_efficiency_I
+								has_tech = industrial_robots_I
+								OR = {
+									has_tech = management_V_A
+									has_tech = management_V_B
+								}
+								has_tech = materials_III
+								has_tech = chemistry_III
+								has_tech = plastics_II
+								has_tech = water_III
+								has_tech = grid_III
+								has_tech = consumer_electronics_III
+							}
+						}
+					}
+					AND = {
+						OR = {
+							has_state_category = pop1dev3
+							has_state_category = pop2dev3
+							has_state_category = pop3dev3
+							has_state_category = pop5dev3
+							has_state_category = pop7dev3
+							has_state_category = pop10dev3
+							has_state_category = pop15dev3
+							has_state_category = pop20dev3
+						}
+						AND = {
+							ROOT = {
+								has_tech = logistics_X
+								has_tech = production_efficiency_X
+								has_tech = industrial_robots_V
+								has_tech = management_VIII
+								has_tech = materials_V
+								has_tech = chemistry_V
+								has_tech = plastics_IV
+								has_tech = water_V
+								has_tech = grid_V
+								has_tech = consumer_electronics_V
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+	
+	sd_window = {
+		context_type = selected_state_context
+		
+		window_name = "sd_window"
+		parent_window_token = selected_state_view
+		ai_enabled = {
+			always = no
+		}		
+		visible = {
+			ROOT = {
+				check_variable = { sd_menu = 1 }
+			}
+		}
+		
+		effects = {
+			sd_exit_button_click = {
+				ROOT = {
+					set_variable = { ROOT.sd_menu = 0 }
+				}
+			}
+			decision_button_click = {
+				sd_complete_effect = yes
+			}
+		}
+		
+		triggers = {
+			decision_background_not_available_visible = {
+				NOT = { sd_complete_check_conditions = yes }
+				NOT = { sd_available_conditions = yes }
+			}
+			decision_background_available_visible = {
+				NOT = { sd_complete_check_conditions = yes }
+				sd_available_conditions = yes
+			}
+			decision_background_completed_visible = {
+				sd_complete_check_conditions = yes
+			}
+			decision_button_visible = {
+				NOT = { sd_complete_check_conditions = yes }
+			}
+			decision_button_click_enabled = {
+				sd_available_conditions = yes
+			}
+			decision_button_completed_icon_visible = {
+				sd_complete_check_conditions = yes
+			}
+		}
+		
+		properties = {
+			decision_background = {
+				frame = decision_background_frame
+			}
+		}
+		
+		dynamic_lists = {
+			sd_gridbox = {
+				array = global.sd_array
+				entry_container = sd_array_container
+			}
+		}
+	}
+}
+	
+

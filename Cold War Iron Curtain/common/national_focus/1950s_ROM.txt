@@ -469,10 +469,17 @@ focus_tree = {
 		y = 13
 		completion_reward = {
 			news_event = Romania_Purge.3
+			retire_country_leader = yes
+			retire_country_leader = yes
 			create_country_leader = {
 				name = "Miron Constantinescu" 
 				picture = "Miron_Constantinescu.dds"
 				ideology = marxism_leninism 
+				traits = {
+					reputed_academician
+					revisionism_sympathizer
+					politics_chameleon
+				}
 			}	
 		}
 	}
@@ -525,7 +532,7 @@ focus_tree = {
 							name = agri_tech_bonus
 							bonus = 1
 							uses = 2
-							category = agri_tech
+							category = agriculture
 						}
 				}
 	}
@@ -1000,10 +1007,16 @@ focus_tree = {
 		y = 6
 		completion_reward = {
 			news_event = Romania_Purge.2
+			retire_country_leader = yes
 			create_country_leader = {
 				name = "Ana Pauker" 
 				picture = "Ana_Pauker.dds"
 				ideology = marxism_leninism 
+				traits = {
+					stalin_worshipper
+					communism_broadening_partisan
+					alleged_cosmopolitan
+				}
 			}	
 		}
 	}
@@ -1536,7 +1549,7 @@ focus_tree = {
 				name = agri_tech_bonus
 				bonus = 0.75
 				uses = 1
-				category = agri_tech
+				category = agriculture
 			}		
 		}
 	}
@@ -1788,7 +1801,7 @@ focus_tree = {
 				name = agri_tech_bonus
 				bonus = 0.75
 				uses = 1
-				category = agri_tech
+				category = agriculture
 			}
 		}
 	}

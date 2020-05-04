@@ -79,7 +79,7 @@ Laotion_Civil_War_Decisions_category = {
 	Increase_LOS_Funding = {
 				
 		visible = {
-			country_exists  = LOS
+			country_exists = LOS
 			country_exists = LAO
 			OR = {
 				NOT = { has_government = communism }
@@ -88,7 +88,7 @@ Laotion_Civil_War_Decisions_category = {
 			}
 		}
 		available = {
-			country_exists  = LOS
+			country_exists = LOS
 			country_exists = LAO
 			NOT = { has_government = communism }
 			NOT = { has_government = maoism }
@@ -103,7 +103,7 @@ Laotion_Civil_War_Decisions_category = {
 	Decrease_LOS_Funding = {
 				
 		visible = {
-			country_exists  = LOS
+			country_exists = LOS
 			country_exists = LAO
 			OR = {
 				NOT = { has_government = communism }
@@ -113,7 +113,7 @@ Laotion_Civil_War_Decisions_category = {
 		}
 		available = {
 			check_variable = { los_funding > 0 }
-			country_exists  = LOS
+			country_exists = LOS
 			country_exists = LAO
 			NOT = { has_government = communism }
 			NOT = { has_government = maoism }
@@ -207,17 +207,9 @@ Vietnam_War_Decisions_category = {
 	Increase_NLF_Funding = {
 				
 		visible = {
-			country_exists  = VIE
+			country_exists = VIE
 			country_exists = NLF
-			OR = {
-				has_government = communism
-				has_government = maoism
-				has_government = trotskyism
-			}
-		}
-		available = {
-			country_exists  = VIE
-			country_exists = NLF
+			NOT = { tag = VIE }
 			OR = {
 				has_government = communism
 				has_government = maoism
@@ -232,24 +224,16 @@ Vietnam_War_Decisions_category = {
 	Decrease_NLF_Funding = {
 				
 		visible = {
-			country_exists  = VIE
+			country_exists = VIE
 			country_exists = NLF
+			NOT = { tag = VIE }
 			OR = {
 				has_government = communism
 				has_government = maoism
 				has_government = trotskyism
 			}
 		}
-		available = {
-			check_variable = { nlf_funding > 0 }
-			country_exists  = VIE
-			country_exists = NLF
-			OR = {
-				has_government = communism
-				has_government = maoism
-				has_government = trotskyism
-			}
-		}
+
 		days_re_enable = 60
 		complete_effect = {
 			add_to_variable = { nlf_funding = -1 }
@@ -346,22 +330,16 @@ Vietnam_War_Decisions_category = {
 	Increase_VIE_Funding = {
 				
 		visible = {
-			country_exists  = VIE
+			country_exists = VIE
 			country_exists = NLF
+			NOT = { tag = NLF }
 			OR = {
 				NOT = { has_government = communism }
 				NOT = { has_government = maoism }
 				NOT = { has_government = trotskyism }
 			}
 		}
-		available = {
-			country_exists  = VIE
-			country_exists = NLF
-			NOT = { has_government = communism }
-			NOT = { has_government = maoism }
-			NOT = { has_government = trotskyism }
-			
-		}
+
 		complete_effect = {
 			add_to_variable = { vie_funding = 1 }
 			custom_effect_tooltip = insurgency_funding_inc_tt
@@ -370,22 +348,16 @@ Vietnam_War_Decisions_category = {
 	Decrease_VIE_Funding = {
 				
 		visible = {
-			country_exists  = VIE
+			country_exists = VIE
 			country_exists = NLF
+			NOT = { tag = NLF }
 			OR = {
 				NOT = { has_government = communism }
 				NOT = { has_government = maoism }
 				NOT = { has_government = trotskyism }
 			}
 		}
-		available = {
-			check_variable = { vie_funding > 0 }
-			country_exists  = VIE
-			country_exists = NLF
-			NOT = { has_government = communism }
-			NOT = { has_government = maoism }
-			NOT = { has_government = trotskyism }
-		}
+
 		days_re_enable = 60
 		complete_effect = {
 			add_to_variable = { vie_funding = -1 }
@@ -399,7 +371,7 @@ Guinea_Bissau_War_of_Independence_category = {
 	Increase_PAIGC_Funding = {
 				
 		visible = {
-			country_exists  = GNB
+			country_exists = GNB
 			OR = {
 				tag = SOV
 				tag = PRC
@@ -410,7 +382,7 @@ Guinea_Bissau_War_of_Independence_category = {
 			NOT = { has_country_flag = GNB_Established_State }
 		}
 		available = {
-			country_exists  = GNB
+			country_exists = GNB
 			OR = {
 				tag = SOV
 				tag = PRC
@@ -428,7 +400,7 @@ Guinea_Bissau_War_of_Independence_category = {
 	Decrease_PAIGC_Funding = {
 				
 		visible = {
-			country_exists  = GNB
+			country_exists = GNB
 			OR = {
 				tag = SOV
 				tag = PRC
@@ -440,7 +412,7 @@ Guinea_Bissau_War_of_Independence_category = {
 		}
 		available = {
 			check_variable = { paigc_funding > 0 }
-			country_exists  = GNB
+			country_exists = GNB
 			OR = {
 				tag = SOV
 				tag = PRC
@@ -461,7 +433,7 @@ Guinea_Bissau_War_of_Independence_category = {
 	Expel_PAIGC_Camps = {
 				
 		visible = {
-			country_exists  = GNB
+			country_exists = GNB
 			OR = {
 				AND = {
 					tag = GNA
@@ -479,7 +451,7 @@ Guinea_Bissau_War_of_Independence_category = {
 			NOT = { has_country_flag = GNB_Established_State }
 		}
 		available = {
-			country_exists  = GNB
+			country_exists = GNB
 			OR = {
 				AND = {
 					tag = GNA

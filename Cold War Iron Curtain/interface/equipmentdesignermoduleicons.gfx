@@ -110,6 +110,10 @@ spriteTypes = {
 		textureFile = "gfx/interface/equipmentdesigner/modules/armament_heavy_0.dds"
 	}
 	spriteType = {
+		name = "GFX_SMI_ship_armament_heavy_ww"
+		textureFile = "gfx/interface/equipmentdesigner/modules/armament_heavy_0.dds"
+	}
+	spriteType = {
 		name = "GFX_SMI_ship_armament_heavy_0"
 		textureFile = "gfx/interface/equipmentdesigner/modules/armament_heavy_0.dds"
 	}
@@ -138,6 +142,10 @@ spriteTypes = {
 		textureFile = "gfx/interface/equipmentdesigner/modules/armament_medium_0.dds"
 	}
 	spriteType = {
+		name = "GFX_SMI_ship_armament_medium_ww"
+		textureFile = "gfx/interface/equipmentdesigner/modules/armament_medium_0.dds"
+	}
+	spriteType = {
 		name = "GFX_SMI_ship_armament_medium_0"
 		textureFile = "gfx/interface/equipmentdesigner/modules/armament_medium_0.dds"
 	}
@@ -163,6 +171,10 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_SMI_ship_armament_light"
+		textureFile = "gfx/interface/equipmentdesigner/modules/armament_light_0.dds"
+	}
+	spriteType = {
+		name = "GFX_SMI_ship_armament_light_ww"
 		textureFile = "gfx/interface/equipmentdesigner/modules/armament_light_0.dds"
 	}
 	spriteType = {
@@ -313,7 +325,7 @@ spriteTypes = {
 		textureFile = "gfx/interface/equipmentdesigner/modules/maritime_ew_ss_0.dds"
 	}
 	spriteType = {
-		name = "GFX_SMI_ww_detection"
+		name = "GFX_SMI_detection_ww"
 		textureFile = "gfx/interface/equipmentdesigner/modules/maritime_ew_ss_0.dds"
 	}
 	spriteType = {
@@ -385,7 +397,7 @@ spriteTypes = {
 		textureFile = "gfx/interface/equipmentdesigner/modules/maritime_sonar_0.dds"
 	}
 	spriteType = {
-		name = "GFX_SMI_ww_sonar"
+		name = "GFX_SMI_sonar_ww"
 		textureFile = "gfx/interface/equipmentdesigner/modules/maritime_sonar_0.dds"
 	}
 	spriteType = {
@@ -409,6 +421,30 @@ spriteTypes = {
 		textureFile = "gfx/interface/equipmentdesigner/modules/maritime_sonar_5.dds"
 	}
 # ANTI-AIR
+	spriteType = {
+		name = "GFX_SMI_ship_AA_gun"
+		textureFile = "gfx/interface/equipmentdesigner/modules/AA_gun.dds"
+	}
+	spriteType = {
+		name = "GFX_SMI_ship_AA_gun_1"
+		textureFile = "gfx/interface/equipmentdesigner/modules/AA_gun_1.dds"
+	}
+	spriteType = {
+		name = "GFX_SMI_ship_AA_gun_2"
+		textureFile = "gfx/interface/equipmentdesigner/modules/AA_gun_2.dds"
+	}
+	spriteType = {
+		name = "GFX_SMI_ship_AA_gun_3"
+		textureFile = "gfx/interface/equipmentdesigner/modules/AA_gun_3.dds"
+	}
+	spriteType = {
+		name = "GFX_SMI_ship_AA_gun_4"
+		textureFile = "gfx/interface/equipmentdesigner/modules/AA_gun_4.dds"
+	}
+	spriteType = {
+		name = "GFX_SMI_ship_AA_gun_5"
+		textureFile = "gfx/interface/equipmentdesigner/modules/AA_gun_5.dds"
+	}
 	spriteType = {
 		name = "GFX_SMI_ship_SAM_long_range"
 		textureFile = "gfx/interface/equipmentdesigner/modules/ship_SAM_long_range_0.dds"
@@ -489,6 +525,10 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_SMI_torpedo_ww"
+		textureFile = "gfx/interface/equipmentdesigner/modules/torpedo_small_0.dds"
+	}
+	spriteType = {
+		name = "GFX_SMI_ww_torpedo"
 		textureFile = "gfx/interface/equipmentdesigner/modules/torpedo_small_0.dds"
 	}
 	spriteType = {
@@ -586,32 +626,32 @@ spriteTypes = {
 ##### ENGINES #####
 # LIGHT SCREEN
 	spriteType = {
-		name = "GFX_SMI_light_screen_engine"
-		textureFile = "gfx/interface/equipmentdesigner/modules/light_screen_engine_0.dds"
+		name = "GFX_SMI_screen_engine_light"
+		textureFile = "gfx/interface/equipmentdesigner/modules/screen_engine_light_0.dds"
 	}
 	spriteType = {
-		name = "GFX_SMI_ww_screen_engine_small"
-		textureFile = "gfx/interface/equipmentdesigner/modules/light_screen_engine_0.dds"
+		name = "GFX_SMI_screen_engine_light_ww"
+		textureFile = "gfx/interface/equipmentdesigner/modules/screen_engine_light_0.dds"
 	}
 	spriteType = {
-		name = "GFX_SMI_light_screen_engine_0"
-		textureFile = "gfx/interface/equipmentdesigner/modules/light_screen_engine_1.dds"
+		name = "GFX_SMI_screen_engine_light_0"
+		textureFile = "gfx/interface/equipmentdesigner/modules/screen_engine_light_1.dds"
 	}
 	spriteType = {
-		name = "GFX_SMI_light_screen_engine_1"
-		textureFile = "gfx/interface/equipmentdesigner/modules/light_screen_engine_2.dds"
+		name = "GFX_SMI_screen_engine_light_1"
+		textureFile = "gfx/interface/equipmentdesigner/modules/screen_engine_light_2.dds"
 	}
 	spriteType = {
-		name = "GFX_SMI_light_screen_engine_2"
-		textureFile = "gfx/interface/equipmentdesigner/modules/light_screen_engine_3.dds"
+		name = "GFX_SMI_screen_engine_light_2"
+		textureFile = "gfx/interface/equipmentdesigner/modules/screen_engine_light_3.dds"
 	}
 	spriteType = {
-		name = "GFX_SMI_light_screen_engine_3"
-		textureFile = "gfx/interface/equipmentdesigner/modules/light_screen_engine_4.dds"
+		name = "GFX_SMI_screen_engine_light_3"
+		textureFile = "gfx/interface/equipmentdesigner/modules/screen_engine_light_4.dds"
 	}
 	spriteType = {
-		name = "GFX_SMI_light_screen_engine_4"
-		textureFile = "gfx/interface/equipmentdesigner/modules/light_screen_engine_5.dds"
+		name = "GFX_SMI_screen_engine_light_4"
+		textureFile = "gfx/interface/equipmentdesigner/modules/screen_engine_light_5.dds"
 	}
 # SCREEN
 	spriteType = {
@@ -619,7 +659,7 @@ spriteTypes = {
 		textureFile = "gfx/interface/equipmentdesigner/modules/screen_engine_0.dds"
 	}
 	spriteType = {
-		name = "GFX_SMI_ww_screen_engine"
+		name = "GFX_SMI_screen_engine_ww"
 		textureFile = "gfx/interface/equipmentdesigner/modules/screen_engine_0.dds"
 	}
 	spriteType = {
@@ -648,7 +688,7 @@ spriteTypes = {
 		textureFile = "gfx/interface/equipmentdesigner/modules/capital_engine_0.dds"
 	}
 	spriteType = {
-		name = "GFX_SMI_ww_capital_engine"
+		name = "GFX_SMI_capital_engine_ww"
 		textureFile = "gfx/interface/equipmentdesigner/modules/capital_engine_0.dds"
 	}
 	spriteType = {
@@ -750,7 +790,7 @@ spriteTypes = {
 		textureFile = "gfx/interface/equipmentdesigner/modules/sub_engine_alpha_0.dds"
 	}
 	spriteType = {
-		name = "GFX_SMI_ww_sub_engine"
+		name = "GFX_SMI_sub_engine_ww"
 		textureFile = "gfx/interface/equipmentdesigner/modules/sub_engine_alpha_0.dds"
 	}
 	spriteType = {

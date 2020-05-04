@@ -11,7 +11,7 @@ oob = "SIE_1949"
 if = {
 	limit = { has_dlc = "Man the Guns"}
 	set_technology = {
-		ww_detection = 1
+		detection_ww = 1
 		ww_armaments = 1
 
 		ww_screens = 1
@@ -180,4 +180,9 @@ create_country_leader = {
 		picture = "Ahmad_Tejan_Kabbah.dds"
 		ideology = reactionary
 	}
+	create_country_leader = {
+	name = "Foday Kallay"
+	picture = "Foday_Kallay.dds"
+	ideology = fascism_ideology
+}
 }

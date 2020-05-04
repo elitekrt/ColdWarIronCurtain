@@ -1,0 +1,139 @@
+edict_ideas_calc = {
+specific_corruption_efficiency_calc = yes
+edict_ideas_calc_plus = yes
+#########################
+##### DEBIT FACTORS #####
+#########################
+###MILITARY###
+
+###HEALTHCARE###
+
+###EDUCATION###
+
+###WELFARE###
+
+###CPI###
+	if = {
+		limit = {
+			has_country_flag = CPI_Discount
+		}
+		add_to_variable = { cpi_edict_debit_factor = -0.15 }
+	}
+	if = {
+		limit = {
+			has_idea = policy_media_temp_0
+		}
+		subtract_from_variable = { efficiency_cpi_check = 0.2 }
+	}
+	else_if = {
+		limit = {
+			has_idea = policy_media_temp_1
+		}
+		subtract_from_variable = { efficiency_cpi_check = 0.1 }
+	}
+###PUBLIC###
+
+### EFFICIENCY ###
+	if = {
+		limit = {
+			check_variable = { efficiency_military_check < 0.2 }
+		}
+		subtract_from_variable = { military_edict_debit_factor = efficiency_military_check }
+		else = {
+			subtract_from_variable = { military_edict_debit_factor = 0.2 }
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { efficiency_healthcare_check < 0.2 }
+		}
+		subtract_from_variable = { healthcare_edict_debit_factor = efficiency_healthcare_check }
+		else = {
+			subtract_from_variable = { healthcare_edict_debit_factor = 0.2 }
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { efficiency_education_check < 0.2 }
+		}
+		subtract_from_variable = { education_edict_debit_factor = efficiency_education_check }
+		else = {
+			subtract_from_variable = { education_edict_debit_factor = 0.2 }
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { efficiency_welfare_check < 0.2 }
+		}
+		subtract_from_variable = { welfare_edict_debit_factor = efficiency_welfare_check }
+		else = {
+			subtract_from_variable = { welfare_edict_debit_factor = 0.2 }
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { efficiency_cpi_check < 0.2 }
+		}
+		subtract_from_variable = { cpi_edict_debit_factor = efficiency_cpi_check }
+		else = {
+			subtract_from_variable = { cpi_edict_debit_factor = 0.2 }
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { efficiency_public_check < 0.2 }
+		}
+		subtract_from_variable = { public_edict_debit_factor = efficiency_public_check }
+		else = {
+			subtract_from_variable = { public_edict_debit_factor = 0.2 }
+		}
+	}
+#######################
+##### DEBIT GAINS #####
+#######################
+###MILITARY###
+
+###HEALTHCARE###
+
+###EDUCATION###
+
+###WELFARE###
+
+###CPI###
+
+###PUBLIC###
+
+##########################
+##### CREDIT FACTORS #####
+##########################
+###TRADE###
+
+#COMMON MARKETS AND CURRENCIES#
+	if = { #COMMON CURRENCY
+		limit = {
+			has_country_flag = EEC_Currency
+		}
+		add_to_variable = { trade_credit_factor = 0.1 }
+	}
+	if = { #COMMON MARKET
+		limit = {
+			has_country_flag = european_free_trade_association
+		}
+		add_to_variable = { trade_credit_factor = 0.25 }
+	}
+
+###TAX###
+
+###OFFICE PARK/COMMERCE###
+
+###REFINERY###
+
+###AGRICULTURE###
+
+###INDUSTRY###
+
+}
+specific_corruption_efficiency_calc = {
+}
+edict_ideas_calc_plus = {
+}

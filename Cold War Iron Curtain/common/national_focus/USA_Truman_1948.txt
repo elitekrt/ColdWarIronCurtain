@@ -26,7 +26,7 @@ focus_tree = {
 		#		type = missile
 		#	}
 		#}
-		completion_reward = {
+		completion_reward = { 
 			add_political_power = 200
 		}
 	}

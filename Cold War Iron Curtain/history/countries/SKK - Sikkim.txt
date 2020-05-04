@@ -5,7 +5,7 @@ oob = "SKK_1949"
 if = {
 	limit = { has_dlc = "Man the Guns"}
 	set_technology = {
-		ww_detection = 1
+		detection_ww = 1
 		ww_armaments = 1
 
 		ww_screens = 1
@@ -153,7 +153,7 @@ create_country_leader = {
 		name = "Palden Thondup Namgyal"
 		picture = "Palden_Thondup_Namgyal.dds"
 		ideology = monarchy
-	}	
+	}
 }
 
 1975.1.1 = {

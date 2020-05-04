@@ -15,6 +15,10 @@ technologies = {
 		
 		start_year = 1940
 		research_cost = 7
+		
+		dependencies = {
+			ww_pc = 1
+		}
 		folder = {
 			name = wmd_folder
 			position = { x = 0 y = 0 }
@@ -69,13 +73,13 @@ technologies = {
 		
 		start_year = 1945
 		research_cost = 5
+		
+		dependencies = {
+			hardware_I = 1
+		}
 		folder = {
 			name = wmd_folder
 			position = { x = -6 y = 4 }
-		}
-		
-		on_research_complete = {
-			custom_effect_tooltip = atomic_weapons_armament_tt
 		}
 		
 		ai_will_do = {
@@ -98,13 +102,17 @@ technologies = {
 		
 		start_year = 1955
 		research_cost = 5
+		
+		dependencies = {
+			hardware_III = 1
+		}
 		folder = {
 			name = wmd_folder
 			position = { x = -6 y = 8 }
 		}
 		
 		on_research_complete = {
-			custom_effect_tooltip = atomic_weapons_armament_tt
+			custom_effect_tooltip = atomic_weapons_armament_I_tt
 		}
 		
 		ai_will_do = {
@@ -127,13 +135,17 @@ technologies = {
 		
 		start_year = 1965
 		research_cost = 5
+		
+		dependencies = {
+			hardware_V = 1
+		}
 		folder = {
 			name = wmd_folder
 			position = { x = -6 y = 12 }
 		}
 		
 		on_research_complete = {
-			custom_effect_tooltip = atomic_weapons_armament_tt
+			custom_effect_tooltip = atomic_weapons_armament_II_tt
 		}
 		
 		ai_will_do = {
@@ -158,15 +170,19 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		start_year = 1960
+		start_year = 1955
 		research_cost = 5
+		
+		dependencies = {
+			hardware_IV = 1
+		}
 		folder = {
 			name = wmd_folder
 			position = { x = -12 y = 8 }
 		}
 		
 		on_research_complete = {
-			custom_effect_tooltip = atomic_weapons_delivery_tt
+			custom_effect_tooltip = atomic_weapons_delivery_I_tt
 		}
 		
 		ai_will_do = {
@@ -181,15 +197,19 @@ technologies = {
 	
 	atomic_weapons_delivery_Ia = {
 		
-		start_year = 1955
+		start_year = 1960
 		research_cost = 5
+		
+		dependencies = {
+			hardware_V = 1
+		}
 		folder = {
 			name = wmd_folder
 			position = { x = -9 y = 10 }
 		}
 		
 		on_research_complete = {
-			custom_effect_tooltip = atomic_weapons_delivery_a_tt
+			custom_effect_tooltip = atomic_weapons_delivery_tt
 		}
 		
 		ai_will_do = {
@@ -212,13 +232,17 @@ technologies = {
 		
 		start_year = 1965
 		research_cost = 5
+		
+		dependencies = {
+			hardware_V = 1
+		}
 		folder = {
 			name = wmd_folder
 			position = { x = -12 y = 12 }
 		}
 		
 		on_research_complete = {
-			custom_effect_tooltip = atomic_weapons_delivery_tt
+			custom_effect_tooltip = atomic_weapons_delivery_II_tt
 		}
 		
 		ai_will_do = {
@@ -241,6 +265,10 @@ technologies = {
 		
 		start_year = 1975
 		research_cost = 5
+		
+		dependencies = {
+			hardware_VII = 1
+		}
 		folder = {
 			name = wmd_folder
 			position = { x = -12 y = 16 }
@@ -270,6 +298,10 @@ technologies = {
 		
 		start_year = 1990
 		research_cost = 5
+		
+		dependencies = {
+			hardware_X = 1
+		}
 		folder = {
 			name = wmd_folder
 			position = { x = -12 y = 22 }
@@ -294,6 +326,10 @@ technologies = {
 		
 		start_year = 2005
 		research_cost = 5
+		
+		dependencies = {
+			hardware_XIII = 1
+		}
 		folder = {
 			name = wmd_folder
 			position = { x = -12 y = 28 }
@@ -370,6 +406,10 @@ technologies = {
 		
 		start_year = 1960
 		research_cost = 5
+		
+		dependencies = {
+			hardware_IV = 1
+		}
 		folder = {
 			name = wmd_folder
 			position = { x = 9 y = 10 }
@@ -392,6 +432,10 @@ technologies = {
 		
 		start_year = 1980
 		research_cost = 5
+		
+		dependencies = {
+			hardware_VIII = 1
+		}
 		folder = {
 			name = wmd_folder
 			position = { x = 9 y = 18 }
@@ -424,7 +468,13 @@ technologies = {
 		}
 		
 		start_year = 1950
-		research_cost = 5
+		research_cost = 7
+		
+		dependencies = {
+			hardware_II = 1
+			supercomputer_I = 1
+			grid_I = 1
+		}
 		folder = {
 			name = wmd_folder
 			position = { x = 12 y = 6 }
@@ -461,15 +511,19 @@ technologies = {
 		}
 		
 		start_year = 1970
-		research_cost = 5
+		research_cost = 7
+		
 		folder = {
 			name = wmd_folder
 			position = { x = 12 y = 14 }
 		}
 		
 		dependencies = {
-			atomic_reactor_fission_I = 1
+			atomic_reactor_fission_0 = 1
 			atomic_reactor_II = 1
+			hardware_VI = 1
+			supercomputer_II = 1
+			grid_III = 1
 		}
 		
 		ai_will_do = {
@@ -499,7 +553,13 @@ technologies = {
 		}
 		
 		start_year = 1995
-		research_cost = 5
+		research_cost = 7
+		
+		dependencies = {
+			hardware_XI = 1
+			supercomputer_V = 1
+			grid_V = 1
+		}
 		folder = {
 			name = wmd_folder
 			position = { x = 12 y = 24 }
@@ -525,6 +585,11 @@ technologies = {
 		
 		start_year = 1975
 		research_cost = 12
+		
+		dependencies = {
+			hardware_VII = 1
+			supercomputer_III = 1
+		}
 		folder = {
 			name = wmd_folder
 			position = { x = 15 y = 16 }
@@ -554,6 +619,11 @@ technologies = {
 		
 		start_year = 1985
 		research_cost = 12
+		
+		dependencies = {
+			hardware_IX = 1
+			supercomputer_VI = 1
+		}
 		folder = {
 			name = wmd_folder
 			position = { x = 15 y = 20 }
@@ -583,6 +653,11 @@ technologies = {
 		
 		start_year = 1995
 		research_cost = 12
+		
+		dependencies = {
+			hardware_XI = 1
+			supercomputer_V = 1
+		}
 		folder = {
 			name = wmd_folder
 			position = { x = 15 y = 24 }
@@ -612,6 +687,11 @@ technologies = {
 		
 		start_year = 2005
 		research_cost = 12
+		
+		dependencies = {
+			hardware_XIII = 1
+			supercomputer_VI = 1
+		}
 		folder = {
 			name = wmd_folder
 			position = { x = 15 y = 28 }
@@ -654,6 +734,10 @@ technologies = {
 		
 		start_year = 1950
 		research_cost = 5
+		
+		dependencies = {
+			hardware_II = 1
+		}
 		folder = {
 			name = wmd_folder
 			position = { x = 6 y = 6 }
@@ -693,6 +777,10 @@ technologies = {
 		
 		start_year = 1965
 		research_cost = 5
+		
+		dependencies = {
+			hardware_V = 1
+		}
 		folder = {
 			name = wmd_folder
 			position = { x = 6 y = 12 }
@@ -732,6 +820,10 @@ technologies = {
 		
 		start_year = 1980
 		research_cost = 5
+		
+		dependencies = {
+			hardware_VIII = 1
+		}
 		folder = {
 			name = wmd_folder
 			position = { x = 6 y = 18 }
@@ -766,6 +858,10 @@ technologies = {
 		
 		start_year = 1995
 		research_cost = 5
+		
+		dependencies = {
+			hardware_XI = 1
+		}
 		folder = {
 			name = wmd_folder
 			position = { x = 6 y = 24 }
@@ -811,6 +907,10 @@ technologies = {
 		
 		start_year = 1940
 		research_cost = 7
+		
+		dependencies = {
+			ww_pc = 1
+		}
 		folder = {
 			name = wmd_folder
 			position = { x = 0 y = 0 }

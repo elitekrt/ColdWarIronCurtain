@@ -9,6 +9,16 @@ generic_militia = {
 
 	fallback_name = "National Militia Organization"
 }
+generic_militia_independent = {
+	name = "Regional Militia"
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+
+	fallback_name = "Regional Militia Organization"
+}
 
 generic_infantry = {
 	name = "Infantry"
@@ -96,6 +106,50 @@ generic_armor_heavy = {
 
 
 	fallback_name = "Shock Armor Division"
+}
+
+generic_marine = {
+	name = "Marines"
+
+	can_use = { always = yes }
+
+	division_types = { "marine" }
+
+
+	fallback_name = "Marine Unit"
+}
+
+generic_airborne = {
+	name = "Airborne"
+
+	can_use = { always = yes }
+
+	division_types = { "airborne" }
+
+
+	fallback_name = "Airborne Unit"
+}
+
+generic_mountaineer = {
+	name = "Mountaineer"
+
+	can_use = { always = yes }
+
+	division_types = { "mountaineering" }
+
+
+	fallback_name = "Mountaineer Unit"
+}
+
+generic_garrison = {
+	name = "Security"
+
+	can_use = { always = yes }
+
+	division_types = { "garrison" }
+
+
+	fallback_name = "Security Unit"
 }
 
 un_peacekeepers_names = {

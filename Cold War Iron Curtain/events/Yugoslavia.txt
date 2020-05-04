@@ -1,9 +1,61 @@
-﻿#####################
+#####################
 # Yugoslavia Events
 #####################
 
 add_namespace = yug
 add_namespace = cominplot
+add_namespace = YUG_INTEGRATION
+add_namespace = YUG_GREEK_CIVIL_WAR
+add_namespace = YUG_1950s
+add_namespace = YUG_NATO
+news_event = {
+	id = YUG_GREEK_CIVIL_WAR.1
+	title = "[GetNewspaperHeader]Yugoslavian Intervention in Greece"
+	desc = YUG_GREEK_CIVIL_WAR.1.d
+	picture = GFX_YUG_GREEK_CIVIL_WAR_1
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "A bold move by the Marshal"
+	}
+}
+news_event = {
+	id = YUG_INTEGRATION.1
+	title = "[GetNewspaperHeader]Greece Joins Yugoslavia"
+	desc = YUG_INTEGRATION.1.d
+	picture = GFX_YUG_INTEGRATION_1
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "Tito's gambit paid off"
+	}
+}
+news_event = {
+	id = YUG_INTEGRATION.2
+	title = "[GetNewspaperHeader]Albania Joins Yugoslavia"
+	desc = YUG_INTEGRATION.2.d
+	picture = GFX_YUG_INTEGRATION_2
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "An end to Hoxha's brutal reign"
+	}
+}
+news_event = {
+	id = YUG_INTEGRATION.3
+	title = "[GetNewspaperHeader]Bulgaria Joins Yugoslavia"
+	desc = YUG_INTEGRATION.3.d
+	picture = GFX_YUG_INTEGRATION_3
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "Interesting"
+	}
+}
 
 
 #Titos Death Hidden Trigger
@@ -22,10 +74,10 @@ country_event = {
 	id = cominplot.1
 	title = "The Cominformists"
 	desc = cominplot.1.d
-	
+
 	is_triggered_only = yes
 
-	option = { 
+	option = {
 		name = "Tito Betrayed The Ideas of Marx"
 		add_popularity = {
 			ideology = communism
@@ -38,10 +90,10 @@ country_event = {
 	id = cominplot.2
 	title = "Assasination of Tito"
 	desc = cominplot.2.d
-	
+
 	is_triggered_only = yes
 
-	option = { 
+	option = {
 		name = "His Sacrifice Will be Remembered"
 		news_event = { id = cominplot.3 days = 1 }
 		kill_country_leader = yes
@@ -61,7 +113,7 @@ news_event = {
 	is_triggered_only = yes
 	major = yes
 
-	option = { 
+	option = {
 		name = "This Will Shake Yugoslavia Badly"
 	}
 
@@ -70,14 +122,16 @@ country_event = {
 	id = cominplot.4
 	title = "Aleksandar Rankovic Perishes"
 	desc = cominplot.4.d
-	
+
 	is_triggered_only = yes
 	immediate = {
-		set_country_flag = rankovic_dead
-		remove_ideas = Aleksandar_Rankovic
+		YUG = {
+			set_country_flag = rankovic_dead
+			remove_ideas = Aleksandar_Rankovic
+		}
 	}
 
-	option = { 
+	option = {
 		name = "Good"
 	}
 
@@ -86,10 +140,10 @@ country_event = {
 	id = cominplot.5
 	title = "Cominformist Revolution a Success"
 	desc = cominplot.5.d
-	
+
 	is_triggered_only = yes
 
-	option = { 
+	option = {
 		name = "Forwards To A New Future!"
 		news_event = { id = cominplot.6 days = 1 }
 	}
@@ -103,7 +157,7 @@ news_event = {
 	is_triggered_only = yes
 	major = yes
 
-	option = { 
+	option = {
 		name = "What Happens Next?"
 	}
 
@@ -207,7 +261,7 @@ country_event = {
 		}
 		effect_tooltip = {
 			create_country_leader = {
-				name = "Lazar Koliševski"
+				name = "Lazar Koli�evski"
 				picture = "Portrait_Yugoslavia_Lazar_Kolisevski.dds"
 				ideology = stalinism
 			}
@@ -220,19 +274,19 @@ country_event = {
 			factor = 5
 		}
 		create_country_leader = {
-			name = "Ante Marković"
+			name = "Ante Markovic"
 			picture = "Portrait_Yugoslavia_Ante_Markovic.dds"
 			ideology = stalinism
 		}
 	}
 
-	option = { # Appoint Head of SR Serbia 
+	option = { # Appoint Head of SR Serbia
 		name = yug.7.c
 		ai_chance = {
 			factor = 5
 		}
 		create_country_leader = {
-			name = "Ivan Stambolić"
+			name = "Ivan Stambolic"
 			picture = "Portrait_Yugoslavia_Ivan_Stambolic.dds"
 			ideology = stalinism
 		}
@@ -405,7 +459,7 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { 
+	option = {
 		name = yug.13.a
 		add_stability = -0.10
 	}
@@ -419,7 +473,7 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { 
+	option = {
 		name = yug.14.a
 		add_political_power = 150
 	}
@@ -433,7 +487,7 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { 
+	option = {
 		name = yug.15.a
 		BUL = { country_event = yug.16 }
 	}
@@ -447,7 +501,7 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { 
+	option = {
 		name = yug.16.a
 		ai_chance = {
 			factor = 20
@@ -458,7 +512,7 @@ country_event = {
 		}
 		YUG = { annex_country = { target = ROOT } }
 	}
-	option = { 
+	option = {
 		name = yug.16.b
 		ai_chance = {
 			factor = 80
@@ -480,7 +534,7 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { 
+	option = {
 		name = yug.17.a
 		ALB = { country_event = yug.16 }
 	}
@@ -495,7 +549,7 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { 
+	option = {
 		name = yug.18.a
 		ROM = { country_event = yug.16 }
 	}
@@ -509,7 +563,7 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { 
+	option = {
 		name = yug.19.a
 		ai_chance = {
 			factor = 40
@@ -520,7 +574,7 @@ country_event = {
 		}
 		YUG = { annex_country = { target = ROOT } }
 	}
-	option = { 
+	option = {
 		name = yug.19.b
 		ai_chance = {
 			factor = 60
@@ -541,7 +595,7 @@ news_event = {
 
 	is_triggered_only = yes
 
-	option = { 
+	option = {
 		name = yug.20.a
 	}
 }
@@ -554,7 +608,7 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { 
+	option = {
 		name = yug.21.a
 		create_wargoal = {
 			target = ROM
@@ -571,7 +625,7 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { 
+	option = {
 		name = yug.22.a
 		GRE = { country_event = yug.19 }
 	}
@@ -585,7 +639,7 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { 
+	option = {
 		name = yug.23.a
 		add_manpower = 25000
 	}
@@ -599,7 +653,7 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { 
+	option = {
 		name = yug.24.a
 		RAJ = { country_event = yug.25 }
 		INO = { country_event = yug.25 }
@@ -615,14 +669,14 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { 
+	option = {
 		name = yug.25.a
 		ai_chance = {
 			factor = 5
 		}
 		YUG = { add_to_faction = ROOT }
 	}
-	option = { 
+	option = {
 		name = yug.25.a
 		ai_chance = {
 			factor = 5
@@ -638,7 +692,7 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { 
+	option = {
 		name = yug.26.a
 		TUN = { country_event = yug.25 }
 		LBA = { country_event = yug.25 }
@@ -654,7 +708,7 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { 
+	option = {
 		name = yug.27.a
 		IRQ = { country_event = yug.25 }
 		SAU = { country_event = yug.25 }
@@ -671,7 +725,7 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { 
+	option = {
 		name = yug.28.a
 		CAM = { country_event = yug.25 }
 		BHU = { country_event = yug.25 }
@@ -687,7 +741,7 @@ country_event = {
 	desc = "Who will be the future leader?"
 
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "Josip Broz Tito (SKJ)"
 
@@ -701,14 +755,14 @@ country_event = {
 		}
 	}
 	option = {
-		name = "Vladko Maček (HSS)"
+		name = "Vladko Macek (HSS)"
 
 		set_politics = {
 			ruling_party = liberal
 			elections_allowed = yes
 		}
 		create_country_leader = {
-			name = "Juraj Krnjević"
+			name = "Juraj Krnjevic"
 			picture = "Juraj.dds"
 			expire = "1988.12.14"
 			ideology = libertarianism
@@ -719,14 +773,14 @@ country_event = {
 		}
 	}
 	option = {
-		name = "Milan Stojadinović (JRZ)"
+		name = "Milan Stojadinovic (JRZ)"
 
 		set_politics = {
 			ruling_party = nationalism
 			elections_allowed = yes
 		}
 		create_country_leader = {
-			name = "Milan Stojadinović"
+			name = "Milan Stojadinovic"
 			picture = "Milan.dds"
 			expire = "1962.3.26"
 			ideology = nationalist_ideology
@@ -747,11 +801,11 @@ country_event = {
 	id = yug.30
 	title = "Transformation To Communism"
 	desc = yug.30.d
-	
+
 	picture = GFX_report_event_tito_speech
 
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "A Surprise, To Be Sure"
 
@@ -769,18 +823,18 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = { 
+	option = {
 		name = "Our disappointment is immeasurable"
 		ai_chance = {
 			factor = 80
 		}
 	}
-	option = { 
+	option = {
 		name = "Lets Fight Them"
 		ai_chance = {
 			factor = 20
 		}
-		 declare_war_on = { target = BUL type = annex_everything } 
+		 declare_war_on = { target = BUL type = annex_everything }
 	}
 }
 
@@ -790,8 +844,8 @@ news_event = {
 	desc = yug.32.d
 	picture = roosevelt_tito
 	is_triggered_only = yes
-	
-	option = { 
+
+	option = {
 		name = "Well then"
 	}
 }
@@ -803,8 +857,8 @@ country_event = {
 	picture = GFX_report_event_cazin_rebellion
 	is_triggered_only = yes
 	fire_only_once = yes
-	
-	option = { 
+
+	option = {
 		name = "Break Them Up"
 		country_event = { id = yug.34 days = 30 }
 	}
@@ -816,11 +870,206 @@ country_event = {
 	desc = yug.34.d
 	picture = GFX_report_event_cazin_rebellion
 	is_triggered_only = yes
-	
-	option = { 
+
+	option = {
 		name = "A clear message"
 		add_stability = -0.05
 		 add_war_support = -0.02
 		 add_political_power = -50
 	}
 }
+
+country_event = {
+	id = yug.35
+	title = "Sesti Kongres Komunisticke partije Jugoslavije"
+	desc = yug.35.d
+	picture = GFX_yug_six_cong
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Another Succesfull Congress"
+		set_party_name = { 
+			ideology = trotskyism 
+			long_name = "Savez komunista Jugoslavije" 
+			name = "SKJ" 
+		}
+	}
+}
+add_namespace = Informbiro
+add_namespace = Yug_1950s
+add_namespace = AntiSovYug
+add_namespace = Diljas
+add_namespace = YUG_NATO
+add_namespace = YUG_50s
+add_namespace = HungarianRevYug
+country_event = {
+	id = Informbiro.1
+	title = "The Informbiro Period"
+	desc = Informbiro.1.d
+	picture = GFX_Informbiro_1
+	is_triggered_only = yes
+
+	option = {
+		name = "We must preserve our soveriegnty"
+	}
+}
+country_event = {
+	id = Yug_1950s.1
+	title = "The Establishment of Yugoslav Radio Television"
+	desc = Yug_1950s.1.d
+	picture = GFX_Yug_1950s_1
+	is_triggered_only = yes
+
+	option = {
+		name = "Good news"
+	}
+}
+country_event = {
+	id = AntiSovYug.1
+	title = "The Death of Andrija Hebrang"
+	desc = AntiSovYug.1.d
+	picture = GFX_AntiSovYug_1
+	is_triggered_only = yes
+
+	option = {
+		name = "He will not be missed"
+	}
+}
+country_event = {
+	id = Diljas.1
+	title = "Milovan Djilas Appointed President of Yugoslavia"
+	desc = Diljas.1.d
+	picture = GFX_Diljas_1
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "Interesting"
+	}
+}
+country_event = {
+	id = Diljas.2
+	title = "Tito Embraces Djilas's Critiques"
+	desc = Diljas.2.d
+	picture = GFX_Diljas_2
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "What will come of this?"
+	}
+}
+country_event = {
+	id = Diljas.3
+	title = "Milovan Djilas Purged"
+	desc = Diljas.3.d
+	picture = GFX_Diljas_3
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "Interesting"
+	}
+}
+country_event = {
+	id = Diljas.4
+	title = "Milovan Djilas Critique of Soviet Bureacraticism"
+	desc = Diljas.4.d
+	picture = GFX_Diljas_4
+	is_triggered_only = yes
+
+	option = {
+		name = "Interesting"
+	}
+}
+country_event = {
+	id = YUG_1950s.2
+	title = "Constitutional Reform"
+	desc = YUG_1950s.2.d
+	picture = GFX_YUG_1950s_2
+	is_triggered_only = yes
+
+	option = {
+		name = "Long live Marshal Tito"
+	}
+}
+country_event = {
+	id = YUG_NATO.1
+	title = "Constitutional Reform"
+	desc = YUG_NATO.1.d
+	picture = GFX_YUG_NATO_1
+	is_triggered_only = yes
+
+	option = {
+		name = "Accept the proposal"
+		YUG = {
+			transfer_state = 756
+		}
+		news_event = YUG_NATO.2
+	}
+	option = {
+		name = "Reject the proposal"
+		YUG = { country_event = YUG_NATO.3 }
+	}	
+}
+country_event = {
+	id = YUG_NATO.3.d
+	title = "Constitutional Reform"
+	desc = YUG_NATO.3.d
+	picture = GFX_YUG_NATO_3
+	is_triggered_only = yes
+
+	option = {
+		name = "Unfortunate"
+	}
+}
+news_event = {
+	id = HungarianRevYug.1
+	title = "[GetNewspaperHeader]Yugoslavia Endorses Soviet Intervention in Hungary"
+	desc = HungarianRevYug.1.d
+	picture = GFX_HungarianRevYug_1
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "Interesting"
+	}
+} 
+news_event = {
+	id = HungarianRevYug.2
+	title = "[GetNewspaperHeader]Yugoslavia Endorses the Hungarian Revolution"
+	desc = HungarianRevYug.2.d
+	picture = GFX_HungarianRevYug_2
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "Interesting"
+	}
+}
+news_event = {
+	id = YUG_NATO.2
+	title = "[GetNewspaperHeader]Yugoslavia Joins NATO"
+	desc = YUG_NATO.2.d
+	picture = GFX_YUG_NATO_2
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "A Major Shift in the Balance of Power"
+	}
+} 
+news_event = {
+	id = YUG_50s.1
+	title = "[GetNewspaperHeader]Yugoslavia's Positive Neutrality"
+	desc = YUG_50s.1.d
+	picture = GFX_YUG_50s_1
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = "Interesting"
+	}
+}  
+ 

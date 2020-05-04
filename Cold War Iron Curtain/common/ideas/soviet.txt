@@ -1,6 +1,291 @@
 ideas = {
 	country = {
 	    
+		
+		
+		sov_agr_mach = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+
+		}
+		
+		sov_agr_subs = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+
+		}
+		
+		sov_crop_rotation = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+
+		}
+		
+		sov_eff_labor_use = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+
+			}
+
+		}
+		
+		soviet_natalism = {
+			removal_cost = -1
+
+			picture = generic_communism_drift_bonus
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			
+			allowed_civil_war = {
+				has_government = communism
+			}
+		
+
+			modifier = {
+				MONTHLY_POPULATION = 0.05
+			}
+		}
+		
+		sov_computers_to_companies = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+
+			}
+
+		}
+		
+		sov_reward_private_dis = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				research_speed_factor = 0.01
+
+			}
+
+		}
+		
+		sov_rular_attr = { 
+			removal_cost = -1
+			
+			picture = generic_communism_drift_bonus
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				production_speed_agri_industrial_complex_factor = 0.1
+
+			}
+
+		}
+		
+		sov_eco_export = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				min_export = 0.05
+				trade_opinion_factor = 0.25
+			}
+		}
+		
+		sov_eco_decentr = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+			    political_power_factor = -0.05
+				production_speed_buildings_factor = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				base_fuel_gain_factor = 0.05
+			}
+		}
+		
+		sov_eco_infla = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+			    stability_factor = -0.025
+				supply_consumption_factor = 0.1
+				production_speed_buildings_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+				min_export = -0.05
+				base_fuel_gain_factor = -0.1
+			}
+		}
+		
+		sov_eco_mil_cuts = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = -0.025
+				production_speed_buildings_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				research_speed_factor = 0.01
+				army_morale_factor = -0.1
+
+			}
+		}
+		
+		sov_labor_short = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.2
+				base_fuel_gain_factor = -0.1
+			}
+		}
+		
+		sov_labor_short_1 = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			picture = generic_communism_drift_bonus
+			
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.1
+				base_fuel_gain_factor = -0.05
+			}
+		}
+		
 		gossnab = {
 			removal_cost = -1
 			
@@ -455,7 +740,7 @@ ideas = {
 			}
 			
 			modifier = {
-				production_factory_max_efficiency_factor = 0.2
+				production_factory_max_efficiency_factor = 0.075
 				political_power_gain = -0.15
 				stability_factor = -0.03
 			}
@@ -1482,8 +1767,9 @@ ideas = {
 			}
 			
 			modifier = {
-				stability_factor = 0.2
+				stability_factor = -0.2
 				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = 0.3
 			}
 
 		}
@@ -1812,10 +2098,682 @@ ideas = {
 				stability_factor = 0.1
 				MONTHLY_POPULATION = 0.01
 			}
-
-
 		}
+		recently_nationalized_industry = {
+			removal_cost = -1
 
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = maoism
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.04
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		controlled_financial_fluxes = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = maoism
+			}
+
+			modifier = {
+				local_resources_factor = 0.10
+				consumer_goods_factor = -0.03
+			}
+		}
+		agrarian_bourgeoisie_1 = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = maoism
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = -0.3
+				political_power_factor = -0.5
+			}
+		}
+		agrarian_bourgeoisie_2 = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = maoism
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = -0.22
+				political_power_factor = -0.35
+			}
+		}
+		agrarian_bourgeoisie_3 = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = maoism
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = -0.15
+				political_power_factor = -0.20
+			}
+		}
+		agrarian_bourgeoisie_4 = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = maoism
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = -0.08
+				political_power_factor = -0.1
+			}
+		}
+		agrarian_bourgeoisie_5 = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = maoism
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		agrarian_collectivization_process_1 = {
+		removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = maoism
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.10
+				production_speed_buildings_factor = 0.05
+				political_power_gain = 0.05
+			}	
+		}
+		agrarian_collectivization_process_2 = {
+		removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = maoism
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.075
+				production_speed_buildings_factor = 0.10
+				political_power_gain = 0.10
+			}	
+		}
+		agrarian_collectivization_process_3 = {
+		removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = maoism
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = 0.15
+				political_power_gain = 0.15
+			}	
+		}
+		agrarian_collectivization_process_4 = {
+		removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = maoism
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.025
+				production_speed_buildings_factor = 0.20
+				political_power_gain = 0.20
+			}	
+		}
+		agrarian_collectivization_process_5 = {
+		removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = maoism
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.20
+				political_power_gain = 0.40
+			}	
+		}
+		protected_landlords = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = maoism
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = -0.15
+				political_power_gain = -0.50
+			}
+		}
+		mixed_economy = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = maoism
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = 0.10
+				political_power_gain = 0.10
+			}
+		}
+		expanded_universities = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = maoism
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.01
+				research_speed_factor = 0.05
+			}
+		}
+		international_credibility_1 = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			modifier = {
+				political_power_gain = -0.5
+			}
+		}
+		international_credibility_2 = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			modifier = {
+				political_power_gain = -1
+			}
+		}
+		international_credibility_3 = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			modifier = {
+				political_power_gain = -1.5
+			}
+		}
+		eastern_bloc_integration_7 = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			targeted_modifier = {
+				tag = POL 
+				trade_cost_for_target_factor = -0.35
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.35
+				tag = BUL 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.35
+				tag = SOV
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.35
+				tag = DDR 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.35
+				tag = MON 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.35
+				tag = HUN 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.35
+				tag = CZH 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.35
+				tag = ROM 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.35
+				tag = ALB 
+			}
+		}
+		eastern_bloc_integration_6 = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			targeted_modifier = {
+				tag = POL 
+				trade_cost_for_target_factor = -0.30
+			}
+			targeted_modifier = {
+				tag = BUL 
+				trade_cost_for_target_factor = -0.3
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.30
+				tag = SOV
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.30
+				tag = DDR 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.30
+				tag = MON 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.30
+				tag = HUN 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.30
+				tag = CZH 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.30
+				tag = ROM 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.30
+				tag = ALB 
+			}
+		}
+		eastern_bloc_integration_5 = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			targeted_modifier = {
+				tag = POL 
+				trade_cost_for_target_factor = -0.25
+			}
+			targeted_modifier = {
+				tag = BUL 
+				trade_cost_for_target_factor = -0.25
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.25
+				tag = SOV
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.25
+				tag = DDR 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.25
+				tag = MON 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.25
+				tag = HUN 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.25
+				tag = CZH 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.25
+				tag = ROM 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.25
+				tag = ALB 
+			}
+		}
+		eastern_bloc_integration_4 = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			targeted_modifier = {
+				tag = POL 
+				trade_cost_for_target_factor = -0.2
+			}
+			targeted_modifier = {
+				tag = BUL 
+				trade_cost_for_target_factor = -0.2
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.2
+				tag = SOV
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.2
+				tag = DDR 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.2
+				tag = MON 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.2
+				tag = HUN 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.2
+				tag = CZH 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.2
+				tag = ROM 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.2
+				tag = ALB 
+			}
+		}
+		eastern_bloc_integration_3 = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			targeted_modifier = {
+				tag = POL 
+				trade_cost_for_target_factor = -0.15
+			}
+			targeted_modifier = {
+				tag = BUL 
+				trade_cost_for_target_factor = -0.15
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.15
+				tag = SOV
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.15
+				tag = DDR 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.15
+				tag = MON 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.15
+				tag = HUN 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.15
+				tag = CZH 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.15
+				tag = ROM 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.15
+				tag = ALB 
+			}
+		}
+		eastern_bloc_integration_2 = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			targeted_modifier = {
+				tag = POL 
+				trade_cost_for_target_factor = -0.1
+			}
+			targeted_modifier = {
+				tag = BUL 
+				trade_cost_for_target_factor = -0.1
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.1
+				tag = SOV
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.1
+				tag = DDR 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.1
+				tag = MON 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.1
+				tag = HUN 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.1
+				tag = CZH 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.1
+				tag = ROM 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.1
+				tag = ALB 
+			}
+		}
+		eastern_bloc_integration_1 = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			targeted_modifier = {
+				tag = POL 
+				trade_cost_for_target_factor = -0.05
+			}
+			targeted_modifier = {
+				tag = BUL 
+				trade_cost_for_target_factor = -0.05
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.05
+				tag = SOV
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.05
+				tag = DDR 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.05
+				tag = MON 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.05
+				tag = HUN 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.05
+				tag = CZH 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.05
+				tag = ROM 
+			}
+			targeted_modifier = {
+				trade_cost_for_target_factor = -0.05
+				tag = ALB 
+			}
+		}
+		non_prc_eastern_bloc_1 = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			targeted_modifier = {
+				tag = PRC 
+				trade_cost_for_target_factor = -0.05
+			}
+		}
+		non_prc_eastern_bloc_2 = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			targeted_modifier = {
+				tag = PRC 
+				trade_cost_for_target_factor = -0.1
+			}
+		}
+		non_prc_eastern_bloc_3 = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			targeted_modifier = {
+				tag = PRC 
+				trade_cost_for_target_factor = -0.15
+			}
+		}
+		non_prc_eastern_bloc_4 = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			targeted_modifier = {
+				tag = PRC 
+				trade_cost_for_target_factor = -0.2
+			}
+		}
+		non_prc_eastern_bloc_5 = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			targeted_modifier = {
+				tag = PRC 
+				trade_cost_for_target_factor = -0.25
+			}
+		}
+		non_prc_eastern_bloc_6 = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			targeted_modifier = {
+				tag = PRC 
+				trade_cost_for_target_factor = -0.30
+			}
+		}
+		non_prc_eastern_bloc_7 = {
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			targeted_modifier = {
+				tag = PRC 
+				trade_cost_for_target_factor = -0.35
+			}
+		}
+		
 #######ARMY########
 
 		ground_froces_expenditure = { 
@@ -2113,7 +3071,6 @@ ideas = {
 				naval = 0.07
 			}			
 		}
-
 	}
 
 

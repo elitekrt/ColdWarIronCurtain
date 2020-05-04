@@ -113,7 +113,7 @@ focus_tree = {
 	}
 	focus = {
 		id = WGR_Norske_Skog_Walsum_Paper_Mill
-		icon = GFX_goal_unknown
+		icon = GFX_Lumber_Industry
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -158,7 +158,7 @@ focus_tree = {
 	}
 	focus = {
 		id = WGR_North_German_Port_Expansions
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Maritime_Trade
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -366,7 +366,7 @@ focus_tree = {
 	}
 	focus = {
 		id = WGR_Cosntruct_the_Stammheim_Supermax_Prison
-		icon = GFX_goal_unknown
+		icon = GFX_Prison_Camps
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1135,7 +1135,7 @@ focus_tree = {
 		x = 31
 		y = 3
 		completion_reward = {
-			add_ideas = gen_pro_union_2
+			add_ideas = policy_union_temp_5
 		}
 	}
 	focus = {
@@ -1285,7 +1285,20 @@ focus_tree = {
 		x = 29
 		y = 17
 		completion_reward = {
-			country_event = Ostpolitik.1
+			add_political_power = 50
+			add_threat = -5
+			SOV = {
+				add_opinion_modifier = {
+					target = WGR
+					modifier = small_increase
+				}
+			}
+			WGR = {
+				add_opinion_modifier = {
+					target = SOV
+					modifier = small_increase
+				}
+			}		
 		}
 	}
 	focus = {
@@ -1346,7 +1359,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = dd_bonus
-				category = screen_hull_medium
+				category = screen_hull_heavy
 				bonus = 1.75
 				uses = 1
 			}
@@ -1419,7 +1432,7 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = dd_bonus
-				category = screen_hull_small
+				category = screen_hull_medium
 				bonus = 2
 				uses = 1
 			}
@@ -1795,7 +1808,7 @@ focus_tree = {
 		x = 13
 		y = 17
 		completion_reward = {
-			add_ideas = gen_notsaga_2
+			add_ideas = policy_saga_temp_0
 		}
 	}
 	focus = {
@@ -1972,7 +1985,7 @@ focus_tree = {
 		x = 28
 		y = 19
 		completion_reward = {
-			add_ideas = gen_ghey_1
+			add_ideas = policy_saga_temp_4
 		}
 	}
 	focus = {
@@ -1987,6 +2000,7 @@ focus_tree = {
 		y = 18
 		completion_reward = {
 			country_event = Ostpolitik.4
+
 		}
 	}
 	focus = {

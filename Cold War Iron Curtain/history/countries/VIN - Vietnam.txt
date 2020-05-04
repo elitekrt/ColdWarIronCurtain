@@ -18,7 +18,7 @@ if = {
 	set_technology = {
 		subkiller_0 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
 		ship_armament_light_0 = 1
@@ -31,8 +31,8 @@ if = {
 		sub_hull_large_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
-		screen_hull_small_0 = 1
 		screen_hull_medium_0 = 1
+		screen_hull_heavy_0 = 1
 	}
 }
 
@@ -155,7 +155,6 @@ set_technology = {
 
 set_convoys = 50
 
-set_cosmetic_tag = VIN_FRA
 
 give_military_access = PRC
 give_military_access = NLF
@@ -208,6 +207,7 @@ add_ideas = {
 
 create_country_leader = {
 	name = "Ho Chi Minh"
+	desc = "pol_desc_minh"
 	picture = "Ho_Chi_Minh.dds"
 	ideology = marxism_leninism
 }
@@ -232,10 +232,10 @@ add_to_array = { influence_array_val = 500 }
 
 
 #Dynamic Modifier Section
-set_variable = { gulag_factor = 0.02 }					
-set_variable = { gulag_factor_neg = -0.02 }		
-set_variable = { gulag_factor_five = 0.10 }			
-set_variable = { gulag_factor_five_neg = -0.10 }			
+set_variable = { gulag_factor = 0.02 }
+set_variable = { gulag_factor_neg = -0.02 }
+set_variable = { gulag_factor_five = 0.10 }
+set_variable = { gulag_factor_five_neg = -0.10 }
 
 
 add_dynamic_modifier = {

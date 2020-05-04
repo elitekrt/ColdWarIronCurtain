@@ -234,7 +234,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = PER_Introduce_Progressive_Taxation
+		id = PER_Introduce_policy_taxrate_temp_3
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -256,7 +256,7 @@ focus_tree = {
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
-			focus = PER_Introduce_Progressive_Taxation
+			focus = PER_Introduce_policy_taxrate_temp_3
 		}
 		x = 12
 		y = 2
@@ -273,7 +273,7 @@ focus_tree = {
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
-			focus = PER_Urbanization_Campaign
+			focus = PER_60s_Urbanization_Campaign
 		}
 		x = 9
 		y = 3
@@ -292,7 +292,7 @@ focus_tree = {
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
-			focus = PER_Urbanization_Campaign
+			focus = PER_60s_Urbanization_Campaign
 		}
 		x = 12
 		y = 3
@@ -318,7 +318,7 @@ focus_tree = {
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
-			focus = PER_Urbanization_Campaign
+			focus = PER_60s_Urbanization_Campaign
 		}
 		x = 15
 		y = 3
@@ -904,13 +904,12 @@ focus_tree = {
 		x = 31
 		y = 8
 		completion_reward = {
-			remove_ideas = Austrian_Taxation
-			remove_ideas = Light_Taxation
-			remove_ideas = Moderate_Taxation
-			remove_ideas = Progressive_Taxation
-			remove_ideas = Heavy_Taxation
-			remove_ideas = Marxist_Taxation
-			add_ideas = Marxist_Taxation
+			remove_ideas = policy_taxrate_temp_1
+			remove_ideas = policy_taxrate_temp_2
+			remove_ideas = policy_taxrate_temp_3
+			remove_ideas = policy_taxrate_temp_4
+			remove_ideas = policy_taxrate_temp_5
+			add_ideas = policy_taxrate_temp_5
 			tax_rate = yes		
 		}
 	}
@@ -1408,7 +1407,7 @@ focus_tree = {
 		x = 40
 		y = 8
 		completion_reward = {
-			add_ideas = gen_pro_employer_2
+			add_ideas = policy_union_temp_0
 		}
 	}
 	focus = {
@@ -1456,14 +1455,14 @@ focus_tree = {
 		x = 44
 		y = 7
 		completion_reward = {
-			remove_ideas = Patriarchy
-			remove_ideas = Cognitive_Patriarchy
-			remove_ideas = Traditional
-			remove_ideas = Womens_Rights_Policy
-			remove_ideas = Equality
-			remove_ideas = Positive_Action
+			remove_ideas = policy_women_temp_0
+			remove_ideas = policy_women_temp_1
+			remove_ideas = policy_women_temp_2
+			remove_ideas = policy_women_temp_3
+			remove_ideas = policy_women_temp_4
+			remove_ideas = policy_women_temp_4a
 			
-			add_ideas = Traditional
+			add_ideas = policy_women_temp_2
 		
 		}
 	}
@@ -1745,7 +1744,7 @@ focus_tree = {
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
-			focus = PER_Expand_Womens_Rights
+			focus = PER_60s_Expand_Womens_Rights
 		}
 		x = 47
 		y = 8
@@ -2155,13 +2154,13 @@ focus_tree = {
 		x = 55
 		y = 21
 		completion_reward = {
-			remove_ideas = state_religion
-			remove_ideas = moralism
-			remove_ideas = pluarlism
-			remove_ideas = secularism
-			remove_ideas = atheist_state
-			remove_ideas = State_Theocracy
-			add_ideas = secularism		
+			remove_ideas = policy_religion_temp_1
+			remove_ideas = policy_religion_temp_2
+			remove_ideas = policy_religion_temp_3
+			remove_ideas = policy_religion_temp_3a
+			remove_ideas = policy_religion_temp_0a
+			remove_ideas = policy_religion_temp_0
+			add_ideas = policy_religion_temp_3a		
 		}
 	}
 	focus = {
@@ -2207,7 +2206,7 @@ focus_tree = {
 			remove_ideas = policy_military_temp_5
 			
 			add_ideas = policy_military_temp_4
-			miitary_expenditure = yes		
+			military_expenditure = yes		
 		}
 	}
 	focus = {

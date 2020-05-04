@@ -15,7 +15,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_decision_category_War_Crime_decisions"
 		texturefile = "gfx/interface/decisions/decision_category_war_crimes.tga"
-	}	
+	}
 	
 	
 	spriteType = {
@@ -56,7 +56,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_decision_category_ger_mefo_bills"
 		texturefile = "gfx/interface/decisions/decision_category_ger_mefo_bills.dds"
-	}	
+	}
 	
 	spriteType = {
 		name = "GFX_decision_category_ger_reichskommissariats"
@@ -76,7 +76,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_decision_category_generic_crisis"
 		texturefile = "gfx/interface/decisions/decision_category_generic_crisis.dds"
-	}	
+	}
 	
 	spriteType = {
 		name = "GFX_decision_category_military_operation"
@@ -141,6 +141,26 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_decision_category_generic_formable_nations"
 		texturefile = "gfx/interface/decisions/decision_category_generic_formable_nations.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_category_RGO_picture"
+		texturefile = "gfx/interface/decisions/decision_category_RGO_picture.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_category_economic_investment"
+		texturefile = "gfx/interface/decisions/decision_category_economic_investment.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_category_mercenaries"
+		texturefile = "gfx/interface/decisions/decision_category_mercenaries.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_category_influence"
+		texturefile = "gfx/interface/decisions/decision_category_influence.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_category_equipment_purchasing"
+		texturefile = "gfx/interface/decisions/decision_category_equipment_purchasing.dds"
 	}
 	
 	### category pictures
@@ -274,7 +294,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_decision_PAIGC_Flag"
 		texturefile = "gfx/interface/decisions/PAIGC_Flag.tga"
-	}	
+	}
 	
 
 	spriteType = {
@@ -508,6 +528,10 @@ spriteTypes = {
 		name = "GFX_decision_cat_picture_inf"
 		texturefile = "gfx/interface/decisions/inf_equip.dds"
 	}
+	spriteType = {
+		name = "GFX_decision_tutor"
+		texturefile = "gfx/interface/decisions/decision_tutor.dds"
+	}
 	
 #WarCrimes
 	spriteType = {
@@ -537,6 +561,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_decision_tac_nuke"
 		texturefile = "gfx/interface/decisions/tac_nuke.tga"
-	}	
+	}
 	
 }

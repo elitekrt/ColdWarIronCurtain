@@ -92,18 +92,6 @@ buildings = {
 		value = 3
 		infrastructure_construction_effect = yes
 	}
-
-	rocket_site = {
-		show_on_map = 1
-		base_cost = 20000
-		icon_frame = 15
-		rocket_production = 0
-		rocket_launch_capacity = 0
-		max_level = 10
-		shares_slots = no
-		value = 1
-		infrastructure_construction_effect = yes
-	}
 	
 	fuel_silo = {
 		show_on_map = 1
@@ -126,8 +114,6 @@ buildings = {
 		icon_frame = 7
 		nuclear_reactor = yes
 		nuclear_production_factor = 2
-		local_resources_chromium = -2
-		local_resources_electricity = -2
 		max_level = 2 # This is the max unlock level
 		shares_slots = yes
 		damage_factor = 0.5

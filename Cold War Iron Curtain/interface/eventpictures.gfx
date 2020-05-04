@@ -1,9 +1,1182 @@
 spriteTypes = {
-	spriteType = {
-		name = "GFX_End_of_French_India"
-		texturefile = "gfx/event_pictures/End_of_French_India.tga"
+	spriteType = { 
+		name = "GFX_contra_insurgency_1"
+		texturefile = "gfx/event_pictures/contra_insurgency_1.tga"
+	}
+	spriteType = { 
+		name = "GFX_contra_insurgency_2"
+		texturefile = "gfx/event_pictures/contra_insurgency_2.tga"
+	}
+	spriteType = { 
+		name = "GFX_contra_insurgency_3"
+		texturefile = "gfx/event_pictures/contra_insurgency_3.tga"
+	}
+	spriteType = { 
+		name = "GFX_contra_insurgency_4"
+		texturefile = "gfx/event_pictures/contra_insurgency_4.tga"
+	}
+	spriteType = { 
+		name = "GFX_contra_insurgency_5"
+		texturefile = "gfx/event_pictures/contra_insurgency_5.tga"
+	}
+	spriteType = { 
+		name = "GFX_contra_insurgency_6"
+		texturefile = "gfx/event_pictures/contra_insurgency_6.tga"
 	}
 
+	spriteType = { 
+		name = "GFX_contra_insurgency_10"
+		texturefile = "gfx/event_pictures/contra_insurgency_10.tga"
+	}
+	spriteType = { 
+		name = "GFX_contra_insurgency_11"
+		texturefile = "gfx/event_pictures/contra_insurgency_11.tga"
+	}
+	spriteType = { 
+		name = "GFX_suezcrisisnews_1"
+		texturefile = "gfx/event_pictures/suezcrisisnews_1.tga"
+	}
+	spriteType = { 
+		name = "GFX_suezcrisisnews_2"
+		texturefile = "gfx/event_pictures/suezcrisisnews_2.tga"
+	}
+	spriteType = { 
+		name = "GFX_Lebanon_Crisis_0"
+		texturefile = "gfx/event_pictures/Lebanon_Crisis_0.tga"
+	}
+	spriteType = { 
+		name = "GFX_Lebanon_Crisis_1"
+		texturefile = "gfx/event_pictures/Lebanon_Crisis_1.tga"
+	}
+	spriteType = { 
+		name = "GFX_Lebanon_Crisis_2"
+		texturefile = "gfx/event_pictures/Lebanon_Crisis_2.tga"
+	}
+	spriteType = { 
+		name = "GFX_Lebanon_Crisis_3"
+		texturefile = "gfx/event_pictures/Lebanon_Crisis_3.tga"
+	}
+	spriteType = { 
+		name = "GFX_Lebanon_Crisis_4"
+		texturefile = "gfx/event_pictures/Lebanon_Crisis_4.tga"
+	}
+	spriteType = { 
+		name = "GFX_al_nakba"
+		texturefile = "gfx/event_pictures/al_nakba.tga"
+	}
+	spriteType = { 
+		name = "GFX_LEB_ISR_1"
+		texturefile = "gfx/event_pictures/LEB_ISR_1.tga"
+	}
+	spriteType = { 
+		name = "GFX_Lebanon_Pol_3"
+		texturefile = "gfx/event_pictures/Lebanon_Pol_3.tga"
+	}
+	spriteType = { 
+		name = "GFX_SSNP_Focus_11"
+		texturefile = "gfx/event_pictures/SSNP_Focus_11.tga"
+	}
+	spriteType = { 
+		name = "GFX_LEB_Assasination_1"
+		texturefile = "gfx/event_pictures/LEB_Assasination_1.tga"
+	}
+	spriteType = { 
+		name = "GFX_SSNP_Focus_10"
+		texturefile = "gfx/event_pictures/SSNP_Focus_10.tga"
+	}
+	spriteType = { 
+		name = "GFX_Lebanon_Pol_2"
+		texturefile = "gfx/event_pictures/Lebanon_Pol_2.tga"
+	}
+	spriteType = { 
+		name = "GFX_Lebanon_Pol_1"
+		texturefile = "gfx/event_pictures/Lebanon_Pol_1.tga"
+	}
+	spriteType = { 
+		name = "GFX_Lebanon_Pol_4"
+		texturefile = "gfx/event_pictures/Lebanon_Pol_4.tga"
+	}
+	spriteType = { 
+		name = "GFX_Lebanon_Pol_5"
+		texturefile = "gfx/event_pictures/Lebanon_Pol_5.tga"
+	}
+	spriteType = { 
+		name = "GFX_SSNP_Focus_2"
+		texturefile = "gfx/event_pictures/SSNP_Focus_2.tga"
+	}
+	spriteType = { 
+		name = "GFX_SSNP_Focus_1"
+		texturefile = "gfx/event_pictures/SSNP_Focus_1.tga"
+	}
+	spriteType = { 
+		name = "GFX_Clerical_Opposition_1"
+		texturefile = "gfx/event_pictures/Clerical_Opposition_1.tga"
+	}
+	spriteType = { 
+		name = "GFX_Iran60_1"
+		texturefile = "gfx/event_pictures/Iran60_1.tga"
+	}
+	spriteType = { 
+		name = "GFX_Iran60_10"
+		texturefile = "gfx/event_pictures/Iran60_10.tga"
+	}
+	spriteType = { 
+		name = "GFX_Iran60_5"
+		texturefile = "gfx/event_pictures/Iran60_5.tga"
+	}
+	spriteType = { 
+		name = "GFX_Iran60_6"
+		texturefile = "gfx/event_pictures/Iran60_6.tga"
+	}
+	spriteType = { 
+		name = "GFX_Cyrus_1"
+		texturefile = "gfx/event_pictures/Cyrus_1.tga"
+	}
+	spriteType = { 
+		name = "GFX_NF_Iran"
+		texturefile = "gfx/event_pictures/NF_Iran.tga"
+	}
+	spriteType = { 
+		name = "GFX_Khomenei_1"
+		texturefile = "gfx/event_pictures/Khomenei_1.tga"
+	}
+	spriteType = { 
+		name = "GFX_Iran_Coronation_1"
+		texturefile = "gfx/event_pictures/Iran_Coronation_1.tga"
+	}
+##### TUTORIAL #####
+	spriteType = { #TUTORIAL
+		name = "GFX_TUTOR_0"
+		texturefile = "gfx/event_pictures/TUTOR_0.tga"
+	}
+	spriteType = { #TUTORIAL
+		name = "GFX_TUTOR_666"
+		texturefile = "gfx/event_pictures/TUTOR_666.tga"
+	}
+	
+	spriteType = { 
+		name = "GFX_TUTOR_101"
+		texturefile = "gfx/event_pictures/TUTOR_101.tga"
+	}
+	spriteType = { 
+		name = "GFX_TUTOR_102"
+		texturefile = "gfx/event_pictures/TUTOR_102.tga"
+	}
+	spriteType = { 
+		name = "GFX_TUTOR_103"
+		texturefile = "gfx/event_pictures/TUTOR_103.tga"
+	}
+	spriteType = { 
+		name = "GFX_TUTOR_104"
+		texturefile = "gfx/event_pictures/TUTOR_104.tga"
+	}
+	spriteType = { 
+		name = "GFX_TUTOR_105"
+		texturefile = "gfx/event_pictures/TUTOR_105.tga"
+	}
+	spriteType = { 
+		name = "GFX_TUTOR_106"
+		texturefile = "gfx/event_pictures/TUTOR_106.tga"
+	}
+	spriteType = { 
+		name = "GFX_TUTOR_107"
+		texturefile = "gfx/event_pictures/TUTOR_107.tga"
+	}
+	spriteType = { 
+		name = "GFX_TUTOR_108"
+		texturefile = "gfx/event_pictures/TUTOR_108.tga"
+	}
+	
+	spriteType = { 
+		name = "GFX_TUTOR_201"
+		texturefile = "gfx/event_pictures/TUTOR_201.tga"
+	}
+	spriteType = { 
+		name = "GFX_TUTOR_202"
+		texturefile = "gfx/event_pictures/TUTOR_202.tga"
+	}
+	spriteType = { 
+		name = "GFX_TUTOR_203"
+		texturefile = "gfx/event_pictures/TUTOR_203.tga"
+	}
+	spriteType = { 
+		name = "GFX_TUTOR_204"
+		texturefile = "gfx/event_pictures/TUTOR_204.tga"
+	}
+	spriteType = { 
+		name = "GFX_TUTOR_205"
+		texturefile = "gfx/event_pictures/TUTOR_205.tga"
+	}
+	spriteType = { 
+		name = "GFX_TUTOR_206"
+		texturefile = "gfx/event_pictures/TUTOR_206.tga"
+	}
+	spriteType = { 
+		name = "GFX_TUTOR_207"
+		texturefile = "gfx/event_pictures/TUTOR_207.tga"
+	}
+	spriteType = { 
+		name = "GFX_TUTOR_208"
+		texturefile = "gfx/event_pictures/TUTOR_208.tga"
+	}
+	spriteType = { 
+		name = "GFX_TUTOR_209"
+		texturefile = "gfx/event_pictures/TUTOR_209.tga"
+	}
+	spriteType = { 
+		name = "GFX_TUTOR_210"
+		texturefile = "gfx/event_pictures/TUTOR_210.tga"
+	}
+	
+	spriteType = { 
+		name = "GFX_TUTOR_301"
+		texturefile = "gfx/event_pictures/TUTOR_301.tga"
+	}
+	spriteType = { 
+		name = "GFX_TUTOR_302"
+		texturefile = "gfx/event_pictures/TUTOR_302.tga"
+	}
+	spriteType = { 
+		name = "GFX_TUTOR_303"
+		texturefile = "gfx/event_pictures/TUTOR_303.tga"
+	}
+	spriteType = { 
+		name = "GFX_TUTOR_304"
+		texturefile = "gfx/event_pictures/TUTOR_304.tga"
+	}
+	
+### USA ###
+	spriteType = {
+		name = "GFX_NIC_USA_1"
+		texturefile = "gfx/event_pictures/NIC_USA_1.tga"
+	}
+	spriteType = {
+		name = "GFX_NIC_USA_2"
+		texturefile = "gfx/event_pictures/NIC_USA_2.tga"
+	}
+	spriteType = {
+		name = "GFX_NIC_USA_3"
+		texturefile = "gfx/event_pictures/NIC_USA_3.tga"
+	}
+	spriteType = {
+		name = "GFX_NIC_USA_5"
+		texturefile = "gfx/event_pictures/NIC_USA_5.tga"
+	}			
+	spriteType = {
+		name = "GFX_USA_NIC_WAR_1"
+		texturefile = "gfx/event_pictures/USA_NIC_WAR_1.tga"
+	}
+	spriteType = {
+		name = "GFX_contra_2"
+		texturefile = "gfx/event_pictures/contra_2.tga"
+	}
+	spriteType = {
+		name = "GFX_USA_NIC_50"
+		texturefile = "gfx/event_pictures/USA_NIC_50.tga"
+	}
+	spriteType = {
+		name = "GFX_NIC_USA_4"
+		texturefile = "gfx/event_pictures/NIC_USA_4.tga"
+	}
+	spriteType = {
+		name = "GFX_contra_1"
+		texturefile = "gfx/event_pictures/contra_1.tga"
+	}
+
+	spriteType = {
+		name = "GFX_AST_CIA_1"
+		texturefile = "gfx/event_pictures/AST_CIA_1.tga"
+	}
+	spriteType = {
+		name = "GFX_AST_CIA_3"
+		texturefile = "gfx/event_pictures/AST_CIA_3.tga"
+	}
+	spriteType = {
+		name = "GFX_Rouge_Insurgency_Options_1"
+		texturefile = "gfx/event_pictures/Rouge_Insurgency_Options_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Rouge_Insurgency_Options_2"
+		texturefile = "gfx/event_pictures/Rouge_Insurgency_Options_2.tga"
+	}
+	spriteType = {
+		name = "GFX_Rouge_Insurgency_Options_3"
+		texturefile = "gfx/event_pictures/Rouge_Insurgency_Options_3.tga"
+	}
+	spriteType = {
+		name = "GFX_Rouge_Insurgency_Options_4"
+		texturefile = "gfx/event_pictures/Rouge_Insurgency_Options_4.tga"
+	}
+	spriteType = {
+		name = "GFX_Rouge_Insurgency_Options_5"
+		texturefile = "gfx/event_pictures/Rouge_Insurgency_Options_5.tga"
+	}
+	spriteType = {
+		name = "GFX_Rouge_Insurgency_Options_6"
+		texturefile = "gfx/event_pictures/Rouge_Insurgency_Options_6.tga"
+	}
+	spriteType = {
+		name = "GFX_Rouge_Insurgency_Options_15"
+		texturefile = "gfx/event_pictures/Rouge_Insurgency_Options_15.tga"
+	}
+	spriteType = {
+		name = "GFX_Rouge_Insurgency_Options_16"
+		texturefile = "gfx/event_pictures/Rouge_Insurgency_Options_16.tga"
+	}
+	spriteType = {
+		name = "GFX_CAM_Insurgency_Options_1"
+		texturefile = "gfx/event_pictures/CAM_Insurgency_Options_1.tga"
+	}
+	spriteType = {
+		name = "GFX_CAM_Insurgency_Options_2"
+		texturefile = "gfx/event_pictures/CAM_Insurgency_Options_2.tga"
+	}
+	spriteType = {
+		name = "GFX_CAM_Insurgency_Options_3"
+		texturefile = "gfx/event_pictures/CAM_Insurgency_Options_3.tga"
+	}  
+	spriteType = {
+		name = "GFX_CAM_Insurgency_Options_4"
+		texturefile = "gfx/event_pictures/CAM_Insurgency_Options_4.tga"
+	}
+	spriteType = {
+		name = "GFX_CAM_Insurgency_Options_5"
+		texturefile = "gfx/event_pictures/CAM_Insurgency_Options_5.tga"
+	}
+	spriteType = {
+		name = "GFX_CAM_Insurgency_Options_6"
+		texturefile = "gfx/event_pictures/CAM_Insurgency_Options_6.tga"
+	}
+	spriteType = {
+		name = "GFX_CAM_Insurgency_Options_10"
+		texturefile = "gfx/event_pictures/CAM_Insurgency_Options_10.tga"
+	}		
+	spriteType = {
+		name = "GFX_CAM_Insurgency_Options_11"
+		texturefile = "gfx/event_pictures/CAM_Insurgency_Options_11.tga"
+	}
+	spriteType = {
+		name = "GFX_CAM_Insurgency_Options_15"
+		texturefile = "gfx/event_pictures/CAM_Insurgency_Options_15.tga"
+	}
+	spriteType = {
+		name = "GFX_CAM_Insurgency_Options_16"
+		texturefile = "gfx/event_pictures/CAM_Insurgency_Options_16.tga"
+	}
+	spriteType = {
+		name = "GFX_SIA_Insurgency_Options_3"
+		texturefile = "gfx/event_pictures/SIA_Insurgency_Options_3.tga"
+	}
+	spriteType = {
+		name = "GFX_SIA_Insurgency_Options_4"
+		texturefile = "gfx/event_pictures/SIA_Insurgency_Options_4.tga"
+	}
+	spriteType = {
+		name = "GFX_SIA_Insurgency_Options_5"
+		texturefile = "gfx/event_pictures/SIA_Insurgency_Options_5.tga"
+	}
+	spriteType = {
+		name = "GFX_SIA_Insurgency_Options_6"
+		texturefile = "gfx/event_pictures/SIA_Insurgency_Options_6.tga"
+	}
+	spriteType = {
+		name = "GFX_VIE_Insurgency_Options_3"
+		texturefile = "gfx/event_pictures/VIE_Insurgency_Options_3.tga"
+	}
+	spriteType = {
+		name = "GFX_VIE_Insurgency_Options_4"
+		texturefile = "gfx/event_pictures/VIE_Insurgency_Options_4.tga"
+	}
+	spriteType = {
+		name = "GFX_VIE_Insurgency_Options_5"
+		texturefile = "gfx/event_pictures/VIE_Insurgency_Options_5.tga"
+	}
+	spriteType = {
+		name = "GFX_VIE_Insurgency_Options_6"
+		texturefile = "gfx/event_pictures/VIE_Insurgency_Options_6.tga"
+	}
+	spriteType = {
+		name = "GFX_USA_CAM_Inusrgency_Options_5"
+		texturefile = "gfx/event_pictures/USA_CAM_Inusrgency_Options_5.tga"
+	}
+	spriteType = {
+		name = "GFX_CAM_Insurgency_Options_0"
+		texturefile = "gfx/event_pictures/CAM_Insurgency_Options_0.tga"
+	}
+	spriteType = {
+		name = "GFX_CAM_Insurgency_Options_100"
+		texturefile = "gfx/event_pictures/CAM_Insurgency_Options_100.tga"
+	}
+	#Brezhnev Event Pics
+	spriteType = {
+		name = "GFX_Solzhenitsyn_1"
+		texturefile = "gfx/event_pictures/Solzhenitsyn_1.tga"
+	}
+	spriteType = {
+		name = "GFX_DevSocialism_1"
+		texturefile = "gfx/event_pictures/DevSocialism_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Brezhnev_Constitution_1"
+		texturefile = "gfx/event_pictures/Brezhnev_Constitution_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Brezhnev_Pol_100"
+		texturefile = "gfx/event_pictures/Brezhnev_Pol_100.tga"
+	}
+	spriteType = {
+		name = "GFX_SOV_AFG_1"
+		texturefile = "gfx/event_pictures/SOV_AFG_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Brezhnev_POL_1"
+		texturefile = "gfx/event_pictures/Brezhnev_POL_1.tga"
+	}
+	spriteType = {
+		name = "GFX_SOV_Detente_1"
+		texturefile = "gfx/event_pictures/SOV_Detente_1.tga"
+	}
+	spriteType = {
+		name = "GFX_SOV_VIN_20"
+		texturefile = "gfx/event_pictures/SOV_VIN_20.tga"
+	}
+	spriteType = {
+		name = "GFX_SOV_Mid_FP_1"
+		texturefile = "gfx/event_pictures/SOV_Mid_FP_1.tga"
+	}
+	spriteType = {
+		name = "GFX_ABMT_2"
+		texturefile = "gfx/event_pictures/ABMT_2.tga"
+	}
+	spriteType = {
+		name = "GFX_ABMT_3"
+		texturefile = "gfx/event_pictures/ABMT_3.tga"
+	}
+	spriteType = {
+		name = "GFX_SALT_II_2"
+		texturefile = "gfx/event_pictures/SALT_II_2.tga"
+	}
+	spriteType = {
+		name = "GFX_SALT_II_3"
+		texturefile = "gfx/event_pictures/SALT_II_3.tga"
+	}
+	spriteType = {
+		name = "GFX_Sov_FP_125"
+		texturefile = "gfx/event_pictures/Sov_FP_125.tga"
+	}
+	spriteType = {
+		name = "GFX_Brezhnev_1"
+		texturefile = "gfx/event_pictures/Brezhnev_1.tga"
+	}
+	spriteType = {
+		name = "GFX_ROM_NORMALIZATION_4"
+		texturefile = "gfx/event_pictures/ROM_NORMALIZATION_4.tga"
+	}
+	spriteType = {
+		name = "GFX_ROM_NORMALIZATION_5"
+		texturefile = "gfx/event_pictures/ROM_NORMALIZATION_5.tga"
+	}
+	spriteType = {
+		name = "GFX_SOV_Kashmir_1"
+		texturefile = "gfx/event_pictures/SOV_Kashmir_1.tga"
+	}
+	spriteType = {
+		name = "GFX_SOV_PAL_1"
+		texturefile = "gfx/event_pictures/SOV_PAL_1.tga"
+	}
+
+	spriteType = {
+		name = "GFX_Brezhnev_Pol_10"
+		texturefile = "gfx/event_pictures/Brezhnev_Pol_10.tga"
+	}
+	spriteType = {
+		name = "GFX_Brezhnev_Pol_2"
+		texturefile = "gfx/event_pictures/Brezhnev_Pol_2.tga"
+	}
+	spriteType = {
+		name = "GFX_Brezhnev_Pol_3"
+		texturefile = "gfx/event_pictures/Brezhnev_Pol_3.tga"
+	}
+	spriteType = {
+		name = "GFX_Destalinization_49"
+		texturefile = "gfx/event_pictures/Destalinization_49.tga"
+	}
+	spriteType = {
+		name = "GFX_Destalinization_50"
+		texturefile = "gfx/event_pictures/Destalinization_50.tga"
+	}
+	spriteType = {
+		name = "GFX_Maoism_SU_1"
+		texturefile = "gfx/event_pictures/Maoism_SU_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Sakharov_1"
+		texturefile = "gfx/event_pictures/Sakharov_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Sakharov_HRC_1"
+		texturefile = "gfx/event_pictures/Sakharov_HRC_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Brezhnev_Ethniciy_1"
+		texturefile = "gfx/event_pictures/Brezhnev_Ethniciy_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Brezhnev_Ethniciy_3"
+		texturefile = "gfx/event_pictures/Brezhnev_Ethniciy_3.tga"
+	}
+	spriteType = {
+		name = "GFX_Brezhnev_Ethniciy_2"
+		texturefile = "gfx/event_pictures/Brezhnev_Ethniciy_2.tga"
+	}
+	spriteType = {
+		name = "GFX_ABMT_1"
+		texturefile = "gfx/event_pictures/ABMT_1.tga"
+	}
+	spriteType = {
+		name = "GFX_SALT_II_1"
+		texturefile = "gfx/event_pictures/SALT_II_1.tga"
+	}
+	spriteType = {
+		name = "GFX_SOV_PLO_1"
+		texturefile = "gfx/event_pictures/SOV_PLO_1.tga"
+	}
+	spriteType = {
+		name = "GFX_ROM_NORMALIZATION_1"
+		texturefile = "gfx/event_pictures/ROM_NORMALIZATION_1.tga"
+	}
+	spriteType = {
+		name = "GFX_ROM_NORMALIZATION_2"
+		texturefile = "gfx/event_pictures/ROM_NORMALIZATION_2.tga"
+	}
+	spriteType = {
+		name = "GFX_ROM_NORMALIZATION_3"
+		texturefile = "gfx/event_pictures/ROM_NORMALIZATION_3.tga"
+	}
+	spriteType = {
+		name = "GFX_Gulf_of_Tonkin"
+		texturefile = "gfx/event_pictures/Gulf_of_Tonkin.dds"
+	}
+	spriteType = {
+		name = "GFX_Polish_October_0"
+		texturefile = "gfx/event_pictures/Polish_October_0.tga"
+	}
+
+	spriteType = {
+		name = "GFX_SSNP_insurgency_options_1"
+		texturefile = "gfx/event_pictures/SSNP_insurgency_options_1.tga"
+	}
+	spriteType = {
+		name = "GFX_SSNP_insurgency_options_2"
+		texturefile = "gfx/event_pictures/SSNP_insurgency_options_2.tga"
+	}
+	spriteType = {
+		name = "GFX_SSNP_insurgency_options_3"
+		texturefile = "gfx/event_pictures/SSNP_insurgency_options_3.tga"
+	}
+	spriteType = {
+		name = "GFX_SSNP_insurgency_options_4"
+		texturefile = "gfx/event_pictures/SSNP_insurgency_options_4.tga"
+	}
+	spriteType = {
+		name = "GFX_SSNP_insurgency_options_5"
+		texturefile = "gfx/event_pictures/SSNP_insurgency_options_5.tga"
+	}
+	spriteType = {
+		name = "GFX_SSNP_insurgency_options_6"
+		texturefile = "gfx/event_pictures/SSNP_insurgency_options_6.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_1"
+		texturefile = "gfx/event_pictures/watergate_1.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_2"
+		texturefile = "gfx/event_pictures/watergate_2.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_3"
+		texturefile = "gfx/event_pictures/watergate_3.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_alt_1"
+		texturefile = "gfx/event_pictures/watergate_alt_1.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_4"
+		texturefile = "gfx/event_pictures/watergate_4.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_5"
+		texturefile = "gfx/event_pictures/watergate_5.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_6"
+		texturefile = "gfx/event_pictures/watergate_6.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_7"
+		texturefile = "gfx/event_pictures/watergate_7.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_8"
+		texturefile = "gfx/event_pictures/watergate_8.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_9"
+		texturefile = "gfx/event_pictures/watergate_9.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_10"
+		texturefile = "gfx/event_pictures/watergate_10.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_11"
+		texturefile = "gfx/event_pictures/watergate_11.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_12"
+		texturefile = "gfx/event_pictures/watergate_12.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_13"
+		texturefile = "gfx/event_pictures/watergate_13.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_14"
+		texturefile = "gfx/event_pictures/watergate_14.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_15"
+		texturefile = "gfx/event_pictures/watergate_15.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_16"
+		texturefile = "gfx/event_pictures/watergate_16.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_26"
+		texturefile = "gfx/event_pictures/watergate_26.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_17"
+		texturefile = "gfx/event_pictures/watergate_17.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_18"
+		texturefile = "gfx/event_pictures/watergate_18.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_19"
+		texturefile = "gfx/event_pictures/watergate_19.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_22"
+		texturefile = "gfx/event_pictures/watergate_22.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_25"
+		texturefile = "gfx/event_pictures/watergate_25.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_20"
+		texturefile = "gfx/event_pictures/watergate_20.tga"
+	}
+	spriteType = {
+		name = "GFX_watergate_21"
+		texturefile = "gfx/event_pictures/watergate_21.tga"
+	}
+	#End of Watergate
+	spriteType = {
+		name = "GFX_SSNP_insurgency_options_10"
+		texturefile = "gfx/event_pictures/SSNP_insurgency_options_10.tga"
+	}
+	spriteType = {
+		name = "GFX_SSNP_insurgency_options_11"
+		texturefile = "gfx/event_pictures/SSNP_insurgency_options_11.tga"
+	}
+	spriteType = {
+		name = "GFX_YANSA_100"
+		texturefile = "gfx/event_pictures/YANSA_100.tga"
+	}
+	spriteType = {
+		name = "GFX_Collapse_Burma_1"
+		texturefile = "gfx/event_pictures/Collapse_Burma_1.tga"
+	}
+	spriteType = {
+		name = "GFX_SS_HAITEN_1"
+		texturefile = "gfx/event_pictures/SS_HAITEN_1.tga"
+	}
+	spriteType = {
+		name = "GFX_SS_HAITEN_2"
+		texturefile = "gfx/event_pictures/SS_HAITEN_2.tga"
+	}
+	spriteType = {
+		name = "GFX_YANSA_101"
+		texturefile = "gfx/event_pictures/YANSA_101.tga"
+	}
+	spriteType = {
+		name = "GFX_YANSA_200"
+		texturefile = "gfx/event_pictures/YANSA_200.tga"
+	}
+
+	spriteType = {
+		name = "GFX_KMT_BURMA_11"
+		texturefile = "gfx/event_pictures/KMT_BURMA_11.tga"
+	}
+	spriteType = {
+		name = "GFX_Shan_Recognition_1"
+		texturefile = "gfx/event_pictures/Shan_Recognition_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Operation_Heaven_2"
+		texturefile = "gfx/event_pictures/Operation_Heaven_2.tga"
+	}
+
+	spriteType = {
+		name = "GFX_huks_insurgency_1"
+		texturefile = "gfx/event_pictures/huks_insurgency_1.tga"
+	}
+	spriteType = {
+		name = "GFX_huks_insurgency_2"
+		texturefile = "gfx/event_pictures/huks_insurgency_2.tga"
+	}
+	spriteType = {
+		name = "GFX_huks_insurgency_3"
+		texturefile = "gfx/event_pictures/huks_insurgency_3.tga"
+	}
+	spriteType = {
+		name = "GFX_huks_insurgency_4"
+		texturefile = "gfx/event_pictures/huks_insurgency_4.tga"
+	}
+	spriteType = {
+		name = "GFX_huks_insurgency_5"
+		texturefile = "gfx/event_pictures/huks_insurgency_5.tga"
+	}
+	spriteType = {
+		name = "GFX_huks_insurgency_6"
+		texturefile = "gfx/event_pictures/huks_insurgency_6.tga"
+	}
+
+	spriteType = {
+		name = "GFX_huks_insurgency_10"
+		texturefile = "gfx/event_pictures/huks_insurgency_10.tga"
+	}
+	spriteType = {
+		name = "GFX_huks_insurgency_11"
+		texturefile = "gfx/event_pictures/huks_insurgency_11.tga"
+	}
+
+	spriteType = {
+		name = "GFX_Ramon_Magsaysay_1"
+		texturefile = "gfx/event_pictures/Ramon_Magsaysay_1.tga"
+	}
+	spriteType = {
+		name = "GFX_CPSU_VIN_1"
+		texturefile = "gfx/event_pictures/CPSU_VIN_1.tga" 
+	}
+	spriteType = {
+		name = "GFX_VIN_Geneva_1"
+		texturefile = "gfx/event_pictures/VIN_Geneva_1.tga" 
+	}
+	spriteType = {
+		name = "GFX_VIN_Geneva_2"
+		texturefile = "gfx/event_pictures/VIN_Geneva_2.tga" 
+	}
+	spriteType = {
+		name = "GFX_VWP_1"
+		texturefile = "gfx/event_pictures/VWP_1.tga" 
+	}
+	spriteType = {
+		name = "GFX_Le_Duan_1"
+		texturefile = "gfx/event_pictures/Le_Duan_1.tga" 
+	}
+	spriteType = {
+		name = "GFX_VIN_Bao_Dai_1"
+		texturefile = "gfx/event_pictures/VIN_Bao_Dai_1.tga" 
+	}
+	spriteType = {
+		name = "GFX_Vietnam_America_1"
+		texturefile = "gfx/event_pictures/Vietnam_America_1.tga" 
+	}		
+	spriteType = {
+		name = "GFX_WGR_Anti_Vietnam_War"
+		texturefile = "gfx/event_pictures/WGR_Anti_Vietnam_War.tga"
+	}
+	spriteType = {
+		name = "GFX_NLF_1"
+		texturefile = "gfx/event_pictures/NLF_1.tga"
+	}
+	spriteType = {
+		name = "GFX_NLF_2"
+		texturefile = "gfx/event_pictures/NLF_2.tga"
+	}	
+	
+	spriteType = {
+		name = "GFX_Erfurt_Summit"
+		texturefile = "gfx/event_pictures/Erfurt_Summit.tga"
+	}
+	spriteType = {
+		name = "GFX_Spiegal_Affair"
+		texturefile = "gfx/event_pictures/Spiegal_Affair.tga"
+	}
+	spriteType = {
+		name = "GFX_European_Space_Center"
+		texturefile = "gfx/event_pictures/European_Space_Center.tga"
+	}
+	spriteType = {
+		name = "GFX_Adeneaur_1960s"
+		texturefile = "gfx/event_pictures/Adeneaur_1960s.tga"
+	}
+	spriteType = {
+		name = "GFX_Generic_WGR_Parliament"
+		texturefile = "gfx/event_pictures/Generic_WGR_Parliament.tga"
+	}
+	spriteType = {
+		name = "GFX_Moscow_Treaty"
+		texturefile = "gfx/event_pictures/Moscow_Treaty.tga"
+	}
+	spriteType = {
+		name = "GFX_Die_Warschauer_Vertrag"
+		texturefile = "gfx/event_pictures/Die_Warschauer_Vertrag.tga"
+	}
+	spriteType = {
+		name = "GFX_Evacuation_of_East_Prussia"
+		texturefile = "gfx/event_pictures/Evacuation_of_East_Prussia.tga"
+	}
+	spriteType = {
+		name = "GFX_Basic_Principles_Report"
+		texturefile = "gfx/event_pictures/Basic_Principles_Report.tga"
+	}
+	spriteType = {
+		name = "GFX_Assasination_Pakistan"
+		texturefile = "gfx/event_pictures/Assasination_Pakistan.tga"
+	}
+	spriteType = {
+		name = "GFX_Nazimuddin_1"
+		texturefile = "gfx/event_pictures/Nazimuddin_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Lahore_Riots_1"
+		texturefile = "gfx/event_pictures/Lahore_Riots_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Ahmedi_1"
+		texturefile = "gfx/event_pictures/Ahmedi_1.tga"
+	}
+	spriteType = {
+		name = "GFX_PAK_REl_1"
+		texturefile = "gfx/event_pictures/PAK_REl_1.tga"
+	}
+	spriteType = {
+		name = "GFX_PAK_Military_0"
+		texturefile = "gfx/event_pictures/PAK_Military_0.tga"
+	}
+	spriteType = {
+		name = "GFX_PAK_Military_1"
+		texturefile = "gfx/event_pictures/PAK_Military_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Ayub_Khan_1"
+		texturefile = "gfx/event_pictures/Ayub_Khan_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Ayub_Khan_Coup"
+		texturefile = "gfx/event_pictures/Ayub_Khan_Coup.tga"
+	}
+	spriteType = {
+		name = "GFX_Language_Debate_1"
+		texturefile = "gfx/event_pictures/Language_Debate_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Language_Debate_2"
+		texturefile = "gfx/event_pictures/Language_Debate_2.tga"
+	}
+	spriteType = {
+		name = "GFX_COMPAK_Kashmir_1"
+		texturefile = "gfx/event_pictures/COMPAK_Kashmir_1.tga"
+	}
+	spriteType = {
+		name = "GFX_COMPAK_Kashmir_2"
+		texturefile = "gfx/event_pictures/COMPAK_Kashmir_2.tga"
+	}
+	spriteType = {
+		name = "GFX_COMPAK_Kashmir_3"
+		texturefile = "gfx/event_pictures/COMPAK_Kashmir_3.tga"
+	}
+	spriteType = {
+		name = "GFX_PAK_1955_1"
+		texturefile = "gfx/event_pictures/PAK_1955_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Lahore_Riots_2"
+		texturefile = "gfx/event_pictures/Lahore_Riots_2.tga"
+	}
+	spriteType = {
+		name = "GFX_Bogra_1"
+		texturefile = "gfx/event_pictures/Bogra_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Bogra_2"
+		texturefile = "gfx/event_pictures/Bogra_2.tga"
+	}
+	spriteType = {
+		name = "GFX_Bogra_3"
+		texturefile = "gfx/event_pictures/Bogra_3.tga"
+	}
+	spriteType = {
+		name = "GFX_Bogra_4"
+		texturefile = "gfx/event_pictures/Bogra_4.tga"
+	}
+	spriteType = {
+		name = "GFX_PAK_Constitution_1"
+		texturefile = "gfx/event_pictures/PAK_Constitution_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Rawalpindi_2"
+		texturefile = "gfx/event_pictures/Rawalpindi_2.tga"
+	}
+	spriteType = {
+		name = "GFX_Rawalpindi_1"
+		texturefile = "gfx/event_pictures/Rawalpindi_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Jute_1"
+		texturefile = "gfx/event_pictures/Jute_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Pakistan_national_bank"
+		texturefile = "gfx/event_pictures/Pakistan_national_bank.tga"
+	}
+	spriteType = {
+		name = "GFX_Pak_Econ_3"
+		texturefile = "gfx/event_pictures/Pak_Econ_3.tga"
+	}
+	spriteType = {
+		name = "GFX_Pak_Econ_4"
+		texturefile = "gfx/event_pictures/Pak_Econ_4.tga"
+	}
+	spriteType = {
+		name = "GFX_Pak_Econ_5"
+		texturefile = "gfx/event_pictures/Pak_Econ_5.tga"
+	}
+	spriteType = {
+		name = "GFX_Bangladesh_Independence_2"
+		texturefile = "gfx/event_pictures/Bangladesh_Independence_2.tga"
+	}
+	spriteType = {
+		name = "GFX_Bangladesh_Independence_1"
+		texturefile = "gfx/event_pictures/Bangladesh_Independence_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Bengal_Question"
+		texturefile = "gfx/event_pictures/Bengal_Question.tga"
+	}
+	spriteType = {
+		name = "GFX_Generic_Cuba_Courthouse"
+		texturefile = "gfx/event_pictures/Generic_Cuba_Courthouse.tga"
+	}
+	spriteType = {
+		name = "GFX_Meyer_Lansky"
+		texturefile = "gfx/event_pictures/Meyer_Lansky.tga"
+	}
+	spriteType = {
+		name = "GFX_Meyer_Lansky_2"
+		texturefile = "gfx/event_pictures/Meyer_Lansky_2.tga"
+	}
+	spriteType = {
+		name = "GFX_Cuban_Tourism_1"
+		texturefile = "gfx/event_pictures/Cuban_Tourism_1.tga"
+	}
+	spriteType = {
+		name = "GFX_CubaRepression_5"
+		texturefile = "gfx/event_pictures/CubaRepression_5.tga"
+	}
+	spriteType = {
+		name = "GFX_Batista_1"
+		texturefile = "gfx/event_pictures/Batista_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Cuban_Revolution_0"
+		texturefile = "gfx/event_pictures/Cuban_Revolution_0.tga"
+	}
+	spriteType = {
+		name = "GFX_Ramon_Barquin_Oust"
+		texturefile = "gfx/event_pictures/Ramon_Barquin_Oust.tga"
+	}
+	spriteType = {
+		name = "GFX_Havana_Riviera"
+		texturefile = "gfx/event_pictures/Havana_Riviera.tga"
+	}
+
+	spriteType = {
+		name = "GFX_CubaRepression_1"
+		texturefile = "gfx/event_pictures/CubaRepression_1.tga"
+	}
+	spriteType = {
+		name = "GFX_USA_COUP_1"
+		texturefile = "gfx/event_pictures/USA_COUP_1.tga"
+	}
+	spriteType = {
+		name = "GFX_latam_coup_1"
+		texturefile = "gfx/event_pictures/latam_coup_1.tga"
+	}
+	spriteType = {
+		name = "GFX_CIA_60s_3"
+		texturefile = "gfx/event_pictures/CIA_60s_3.tga"
+	}
+	spriteType = {
+		name = "GFX_SOVUSA_1"
+		texturefile = "gfx/event_pictures/SOVUSA_1.tga"
+	}
+	spriteType = {
+		name = "GFX_SOVUSA_2"
+		texturefile = "gfx/event_pictures/SOVUSA_2.tga"
+	}
+	spriteType = {
+		name = "GFX_SOVUSA_4"
+		texturefile = "gfx/event_pictures/SOVUSA_4.tga"
+	}
+	spriteType = {
+		name = "GFX_USA_Rhodesia_2"
+		texturefile = "gfx/event_pictures/USA_Rhodesia_2.tga"
+	}
+	spriteType = {
+		name = "GFX_USA_Rhodesia_1"
+		texturefile = "gfx/event_pictures/USA_Rhodesia_1.tga"
+	}
+	spriteType = {
+		name = "GFX_PAEC"
+		texturefile = "gfx/event_pictures/PAEC.tga"
+	}
+	spriteType = {
+		name = "GFX_PAK_ASSASIN_2"
+		texturefile = "gfx/event_pictures/PAK_ASSASIN_2.tga"
+	}
+	spriteType = {
+		name = "GFX_Afghan_PAK_20"
+		texturefile = "gfx/event_pictures/Afghan_PAK_20.tga"
+	}
+	spriteType = {
+		name = "GFX_Gwadar"
+		texturefile = "gfx/event_pictures/Gwadar.tga"
+	}
+	spriteType = {
+		name = "GFX_Generic_UN_1950s"
+		texturefile = "gfx/event_pictures/Generic_UN_1950s.tga"
+	}
+	spriteType = {
+		name = "GFX_Gilgit_Baltistan"
+		texturefile = "gfx/event_pictures/Gilgit_Baltistan.tga"
+	}
+	spriteType = {
+		name = "GFX_INDIA_PAK_COM_1"
+		texturefile = "gfx/event_pictures/INDIA_PAK_COM_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Bangladesh_Independence_3"
+		texturefile = "gfx/event_pictures/Bangladesh_Independence_3.tga"
+	}
+	spriteType = {
+		name = "GFX_Bangladesh_Independence_4"
+		texturefile = "gfx/event_pictures/Bangladesh_Independence_4.tga"
+	}
+	spriteType = {
+		name = "GFX_USA_PAK_1"
+		texturefile = "gfx/event_pictures/USA_PAK_1.tga"
+	}
+	spriteType = {
+		name = "GFX_PAK_INDIA_10"
+		texturefile = "gfx/event_pictures/PAK_INDIA_10.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_Rawalpindi_3"
+		texturefile = "gfx/event_pictures/Rawalpindi_3.tga"
+	}
+	spriteType = {
+		name = "GFX_Rawalpindi_4"
+		texturefile = "gfx/event_pictures/Rawalpindi_4.tga"
+	}
+	spriteType = {
+		name = "GFX_M267_insurgency_options_1"
+		texturefile = "gfx/event_pictures/M267_insurgency_options_1.tga"
+	} 
+	spriteType = {
+		name = "GFX_M267_insurgency_options_2"
+		texturefile = "gfx/event_pictures/M267_insurgency_options_2.tga"
+	}
+	spriteType = {
+		name = "GFX_M267_insurgency_options_3"
+		texturefile = "gfx/event_pictures/M267_insurgency_options_3.tga"
+	}
+	spriteType = {
+		name = "GFX_M267_insurgency_options_4"
+		texturefile = "gfx/event_pictures/M267_insurgency_options_4.tga"
+	}
+	spriteType = {
+		name = "GFX_M267_insurgency_options_5"
+		texturefile = "gfx/event_pictures/M267_insurgency_options_5.tga"
+	}
+	spriteType = {
+		name = "GFX_M267_insurgency_options_6"
+		texturefile = "gfx/event_pictures/M267_insurgency_options_6.tga"
+	}
+
+	spriteType = {
+		name = "GFX_Cuban_Revolution_1"
+		texturefile = "gfx/event_pictures/Cuban_Revolution_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Cuban_Revolution_10"
+		texturefile = "gfx/event_pictures/Cuban_Revolution_10.tga"
+	}
+	spriteType = {
+		name = "GFX_CubaRepression_10"
+		texturefile = "gfx/event_pictures/CubaRepression_10.tga"
+	}
+	spriteType = {
+		name = "GFX_CubaSterling_1"
+		texturefile = "gfx/event_pictures/CubaSterling_1.tga"
+	}
+	spriteType = {
+		name = "GFX_VFX_1"
+		texturefile = "gfx/event_pictures/VFX_Program.tga"
+	}
+	spriteType = {
+		name = "GFX_VFX_2"
+		texturefile = "gfx/event_pictures/VFX_2.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_VFX_3"
+		texturefile = "gfx/event_pictures/VFX_3.tga"
+	}	
+	spriteType = {
+		name = "GFX_VFX_4"
+		texturefile = "gfx/event_pictures/VFX_4.tga"
+	}	
+	spriteType = {
+		name = "GFX_YUG_GREEK_CIVIL_WAR_1"
+		texturefile = "gfx/event_pictures/YUG_GREEK_CIVIL_WAR_1.tga"
+	}
+	spriteType = {
+		name = "GFX_YUG_INTEGRATION_1"
+		texturefile = "gfx/event_pictures/YUG_INTEGRATION_1.tga"
+	}
+	spriteType = {
+		name = "GFX_YUG_INTEGRATION_2"
+		texturefile = "gfx/event_pictures/YUG_INTEGRATION_2.tga"
+	}
+
+	spriteType = {
+		name = "GFX_YUG_INTEGRATION_3"
+		texturefile = "gfx/event_pictures/YUG_INTEGRATION_3.tga"
+	}
+	spriteType = {
+		name = "GFX_yug_six_cong"
+		texturefile = "gfx/event_pictures/yug_six_cong.tga"
+	}
 	spriteType = {
 		name = "GFX_Queen_Elizabeth_Kenya"
 		texturefile = "gfx/event_pictures/Quen_Elizabeth_Kenya.tga"
@@ -11,7 +1184,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_IMF_Generic_Event"
 		texturefile = "gfx/event_pictures/IMF_Generic_Event.tga"
-	}	
+	}
 	spriteType = {
 		name = "GFX_winds_of_change"
 		texturefile = "gfx/event_pictures/winds_of_change.tga"
@@ -55,6 +1228,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_kuusinen2"
 		texturefile = "gfx/event_pictures/kuusinen.tga"
+	}
+	spriteType = {
+		name = "GFX_kekko_n_khru"
+		texturefile = "gfx/event_pictures/kekko_n_khru.tga"
 	}
 	spriteType = {
 		name = "GFX_sdp_nuclear_protest"
@@ -161,7 +1338,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Operation_Harpoon_Fascist"
 		texturefile = "gfx/event_pictures/Operation_Harpoon_Fascist.tga"
-	}	
+	}
 	spriteType = {
 		name = "GFX_RamadanRevolution1"
 		texturefile = "gfx/event_pictures/RamadanRevolution1.tga"
@@ -235,7 +1412,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_SAU_Focus_Events.15"
 		texturefile = "gfx/event_pictures/Nasser_Assasination_Attempt.tga"
-	}	
+	}
 	spriteType = {
 		name = "GFX_BlackRiver2"
 		texturefile = "gfx/event_pictures/BlackRiver2.tga"
@@ -280,7 +1457,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_PCF_NATO"
 		texturefile = "gfx/event_pictures/PCF_NATO.tga"
-	}	
+	}
 
 	spriteType = {
 		name = "GFX_Golpe_Borghesse_News"
@@ -407,11 +1584,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Mau_Mau_End"
 		texturefile = "gfx/event_pictures/Mau_Mau_End.tga"
-	}	
+	}
 	spriteType = {
 		name = "GFX_Mau_Mau_Victory"
 		texturefile = "gfx/event_pictures/Mau_Mau_Victory.tga"
-	}		
+	}
 	
 	spriteType = {
 		name = "GFX_UIA_Crushed"
@@ -471,19 +1648,19 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_an_Naksah"
 		texturefile = "gfx/event_pictures/an_Naksah.tga"
-	}	
+	}
 	spriteType = {
 		name = "GFX_Rogers_Plan"
 		texturefile = "gfx/event_pictures/Rogers_Plan.tga"
-	}		
+	}
 	spriteType = {
 		name = "GFX_Execution_of_Sayyed_Qutb"
 		texturefile = "gfx/event_pictures/Execution_of_Sayyed_Qutb.tga"
-	}		
+	}
 	spriteType = {
 		name = "GFX_UAR_Marshal_Amer"
 		texturefile = "gfx/event_pictures/UAR_Marshal_Amer.tga"
-	}			
+	}
 	spriteType = {
 		name = "GFX_Jewish_Anti_Fascist_Purge"
 		texturefile = "gfx/event_pictures/Jewish_Anti_Fascist_Purge.tga"
@@ -539,7 +1716,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Turkey_Soviet_4"
 		texturefile = "gfx/event_pictures/Turkey_Soviet_4.tga"
-	}	
+	}
 		
 	
 	spriteType = {
@@ -554,11 +1731,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_UAR_Soldiers"
 		texturefile = "gfx/event_pictures/UAR_Soldiers.tga"
-	}	
+	}
 	spriteType = {
 		name = "GFX_Guinea_Bissau_War_Start"
 		texturefile = "gfx/event_pictures/Guinea_Bissau_War_Start.tga"
-	}		
+	}
 	
 	spriteType = {
 		name = "GFX_Portugese_Colonial_War_1"
@@ -690,7 +1867,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Portugese_Colonial_War_Helicoptor_5"
 		texturefile = "gfx/event_pictures/Portugese_Colonial_War_Helicoptor_5.tga"
-	}	
+	}
 
 	spriteType = {
 		name = "GFX_End_of_Huk_Insurgency"
@@ -758,29 +1935,29 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Mao_Funeral"
 		texturefile = "gfx/event_pictures/Mao_Funeral.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_KMT_Generic_Soldiers"
 		texturefile = "gfx/event_pictures/KMT_Generic_Soldiers.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_PRC_Tibetan_Uprising"
 		texturefile = "gfx/event_pictures/PRC_Tibetan_Uprising.dds"
-	}		
+	}
 	spriteType = {
 		name = "news_event_Martial_Law_USA"
 		texturefile = "gfx/event_pictures/Martial_Law_USA.dds"
-	}		
+	}
 	
 	
 	spriteType = {
 		name = "GFX_Tibetan_Uprising"
 		texturefile = "gfx/event_pictures/Tibetan_Uprising.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_PRC_Landlord_Classicide"
 		texturefile = "gfx/event_pictures/PRC_Landlord_Classicide.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_PRC_Congress"
 		texturefile = "gfx/event_pictures/PRC_Congress.dds"
@@ -788,158 +1965,158 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Coloniale_Route_4_FRA"
 		texturefile = "gfx/event_pictures/Coloniale_Route_4_FRA.tga"
-	}	
+	}
 	spriteType = {
 		name = "GFX_Coloniale_Route_4_VIN"
 		texturefile = "gfx/event_pictures/Coloniale_Route_4_VIN.tga"
-	}				
+	}
 
 	spriteType = {
 		name = "GFX_Batle_of_Dong_Khe_VIN"
 		texturefile = "gfx/event_pictures/Batle_of_Dong_Khe_VIN.tga"
-	}	
+	}
 	spriteType = {
 		name = "GFX_Batle_of_Dong_Khe_FRA"
 		texturefile = "gfx/event_pictures/Batle_of_Dong_Khe_FRA.tga"
-	}		
+	}
 
 	spriteType = {
 		name = "GFX_Battle_of_Dien_Bien_Phu_FRA"
 		texturefile = "gfx/event_pictures/Battle_of_Dien_Bien_Phu_FRA.tga"
-	}	
+	}
 	spriteType = {
 		name = "GFX_Battle_of_Dien_Bien_Phu_VIN"
 		texturefile = "gfx/event_pictures/Battle_of_Dien_Bien_Phu_VIN.tga"
-	}	
+	}
 	spriteType = {
 		name = "GFX_Battle_of_the_Day_River_FRA"
 		texturefile = "gfx/event_pictures/Battle_of_the_Day_River_FRA.tga"
-	}	
+	}
 	spriteType = {
 		name = "GFX_Battle_of_the_Day_River_VIN"
 		texturefile = "gfx/event_pictures/Battle_of_the_Day_River_VIN.tga"
-	}	
+	}
 	spriteType = {
 		name = "GFX_Trujillo_Assasinated"
 		texturefile = "gfx/event_pictures/Trujillo_Assasinated.tga"
-	}	
+	}
 
 
 	spriteType = {
 		name = "GFX_Batle_of_Mao_Khe_VIN"
 		texturefile = "gfx/event_pictures/Batle_of_Mao_Khe_VIN.tga"
-	}		
+	}
 
 	spriteType = {
 		name = "GFX_Batle_of_Mao_Khe_FRA"
 		texturefile = "gfx/event_pictures/Batle_of_Mao_Khe_FRA.tga"
-	}		
+	}
 
 	spriteType = {
 		name = "GFX_Batle_of_Vinh_Yen_FRA"
 		texturefile = "gfx/event_pictures/Batle_of_Vinh_Yen_FRA.tga"
-	}		
+	}
 
 	spriteType = {
 		name = "GFX_Batle_of_Vinh_Yen_VIN"
 		texturefile = "gfx/event_pictures/Batle_of_Vinh_Yen_VIN.tga"
-	}		
+	}
 	spriteType = {
 		name = "GFX_Mongols_United"
 		texturefile = "gfx/event_pictures/Mongols_United.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_mongol_one"
 		texturefile = "gfx/event_pictures/mongol_one.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_mongol_two"
 		texturefile = "gfx/event_pictures/mongol_two.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_mongol_three"
 		texturefile = "gfx/event_pictures/mongol_three.dds"
-	}		
+	}
 	
 	
 	spriteType = {
 		name = "GFX_mongol_foura"
 		texturefile = "gfx/event_pictures/mongol_foura.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_Greater_Mongolia"
 		texturefile = "gfx/event_pictures/Greater_Mongolia.dds"
-	}		
+	}
 	
 	
 	spriteType = {
 		name = "GFX_PRC_Legitimacy_of_the_Regime"
 		texturefile = "gfx/event_pictures/PRC_Legitimacy_of_the_Regime.dds"
-	}				
+	}
 	spriteType = {
 		name = "GFX_PRC_Mao_Taiwan"
 		texturefile = "gfx/event_pictures/PRC_Mao_Taiwan.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_PRC_Lushan_Conference"
 		texturefile = "gfx/event_pictures/PRC_Lushan_Conference.dds"
-	}		
+	}
 	
 	spriteType = {
 		name = "GFX_Invasion_of_Tibet"
 		texturefile = "gfx/event_pictures/Invasion_of_Tibet.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_Four_Pests_Campaign"
 		texturefile = "gfx/event_pictures/Four_Pests_Campaign.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_Thai_One"
 		texturefile = "gfx/event_pictures/Thai_One.dds"
-	}		
+	}
 	spriteType = {		#Manhattan Rebellion
 		name = "GFX_Thai_Two"
 		texturefile = "gfx/event_pictures/Thai_Two.dds"
-	}	
+	}
 	spriteType = {		
 		name = "GFX_Thai_Three"
 		texturefile = "gfx/event_pictures/Thai_Three.dds"
-	}	
+	}
 	spriteType = {		#Silent Coup Fail
 		name = "GFX_Thai_Four"
 		texturefile = "gfx/event_pictures/Thai_Four.dds"
-	}	
+	}
 	spriteType = {		#Silent Coup
 		name = "GFX_Thai_Five"
 		texturefile = "gfx/event_pictures/Thai_Five.dds"
-	}		
+	}
 	
 	spriteType = {		
 		name = "GFX_PRC_Korea"
 		texturefile = "gfx/event_pictures/PRC_Korea.dds"
-	}			
+	}
 	spriteType = {		
 		name = "GFX_PRC_Korea_Two"
 		texturefile = "gfx/event_pictures/PRC_Korea_Two.dds"
-	}		
+	}
 	
 	
 	spriteType = {		
 		name = "GFX_PRC_Suppression_of_Cults"
 		texturefile = "gfx/event_pictures/PRC_Suppression_of_Cults.dds"
-	}		
+	}
 	spriteType = {		
 		name = "GFX_PRC_Foriegn"
 		texturefile = "gfx/event_pictures/PRC_Foriegn_Asia.dds"
-	}		
+	}
 	spriteType = {		
 		name = "GFX_PRC_Great_Leap_Forward"
 		texturefile = "gfx/event_pictures/PRC_Great_Leap_Forward.dds"
-	}		
+	}
 	spriteType = {		
 		name = "GFX_Bandung_Conference"
 		texturefile = "gfx/event_pictures/Bandung_Conference.dds"
-	}			
+	}
 	
 	spriteType = {
 		name = "GFX_Bangkok_Plot_Success"
@@ -956,19 +2133,19 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Dap_Chhuon_Assasination"
 		texturefile = "gfx/event_pictures/Dap_Chhuon_Assasination.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_Nop_Bophann_Assasination"
 		texturefile = "gfx/event_pictures/Nop_Bophann_Assasination.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_Tou_Samouth_Assasination"
 		texturefile = "gfx/event_pictures/Tou_Samouth_Assasination.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_Pathet_Lao"
 		texturefile = "gfx/event_pictures/Pathet_Lao.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_Anti_Rightist_Campaign"
 		texturefile = "gfx/event_pictures/Anti_Rightist_Campaign.dds"
@@ -980,11 +2157,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Anti_Rightist_Campaign3"
 		texturefile = "gfx/event_pictures/Anti_Rightist_Campaign3.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_Anti_Rightist_Campaign4"
 		texturefile = "gfx/event_pictures/Anti_Rightist_Campaign4.dds"
-	}		
+	}
 	
 	
 	spriteType = {
@@ -998,11 +2175,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Three_Anti_Campaign"
 		texturefile = "gfx/event_pictures/Three_Anti_Campaign.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_Five_Anti_Campaign"
 		texturefile = "gfx/event_pictures/Five_Anti_Campaign.dds"
-	}		
+	}
 
 	spriteType = {
 		name = "GFX_burma_communist"
@@ -1027,15 +2204,15 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_PRC_Burma_1"
 		texturefile = "gfx/event_pictures/PRC_Burma_1.tga"
-	}	
+	}
 	spriteType = {
 		name = "GFX_PRC_Burma_2"
 		texturefile = "gfx/event_pictures/PRC_Burma_2.tga"
-	}	
+	}
 	spriteType = {
 		name = "GFX_VIN_Land_Reform_Aftermath"
 		texturefile = "gfx/event_pictures/VIN_Land_Reform_Aftermath.tga"
-	}		
+	}
 	
 
 	spriteType = {
@@ -1073,11 +2250,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_kef_mafia_hearing"
 		texturefile = "gfx/event_pictures/kef_mafia_hearing.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_yellow_river_flood"
 		texturefile = "gfx/event_pictures/yellow_river_flood.dds"
-	}	
+	}
 	
 	spriteType = {
 		name = "GFX_north_sea_flood"
@@ -1086,23 +2263,23 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_wp"
 		texturefile = "gfx/event_pictures/wp.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_rosenberg"
 		texturefile = "gfx/event_pictures/rosenberg.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_ddr_palace_two"
 		texturefile = "gfx/event_pictures/ddr_palace_two.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_foley_trial"
 		texturefile = "gfx/event_pictures/foley_trial.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_humani_generis"
 		texturefile = "gfx/event_pictures/humani_generis.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_assam_eq"
 		texturefile = "gfx/event_pictures/assam_eq.dds"
@@ -1110,19 +2287,19 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_soviet_crash"
 		texturefile = "gfx/event_pictures/soviet_crash.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_dalai_lama"
 		texturefile = "gfx/event_pictures/dalai_lama.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_ddr_airliner_closure"
 		texturefile = "gfx/event_pictures/ddr_airliner_closure.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_ddr_palace"
 		texturefile = "gfx/event_pictures/ddr_palace.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_adlai_civil_two"
 		texturefile = "gfx/event_pictures/adlai_civil_two.dds"
@@ -1134,43 +2311,43 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_murdered_poets"
 		texturefile = "gfx/event_pictures/murdered_poets.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_un_dag"
 		texturefile = "gfx/event_pictures/un_dag.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_usa_baseball"
 		texturefile = "gfx/event_pictures/usa_baseball.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_usa_commie_trials"
 		texturefile = "gfx/event_pictures/usa_commie_trials.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_man_will_conquer_space_Soon"
 		texturefile = "gfx/event_pictures/man_will_conquer_space_Soon.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_1952_steel_strikes"
 		texturefile = "gfx/event_pictures/1952_steel_strikes.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_youngstown_steel"
 		texturefile = "gfx/event_pictures/youngstown_steel.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_kern_Country_quake"
 		texturefile = "gfx/event_pictures/kern_Country_quake.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_treaty_of_taipei"
 		texturefile = "gfx/event_pictures/treaty_of_taipei.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_iraqi_intifada"
 		texturefile = "gfx/event_pictures/iraqi_intifada.dds"
-	}	
+	}
 	
 	spriteType = {
 		name = "GFX_news_kef_civil_rights"
@@ -1183,7 +2360,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_news_comic_book_hearings"
 		texturefile = "gfx/event_pictures/comic_book_hearings.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_news_Alan_Turing"
 		texturefile = "gfx/event_pictures/Alan_Turing.dds"
@@ -1191,7 +2368,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_dictatorman_dead"
 		texturefile = "gfx/event_pictures/report_event_dictatorman_dead.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_news_kef_congress"
 		texturefile = "gfx/event_pictures/kef_congress.dds"
@@ -1203,7 +2380,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_news_ferdinand_marcos_martial_law"
 		texturefile = "gfx/event_pictures/ferdinand_marcos_martial_law.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_news_event_army_mccarthy_hearings"
 		texturefile = "gfx/event_pictures/army_mccarthy_hearings.dds"
@@ -1385,9 +2562,9 @@ spriteTypes = {
 	}
 
 	 spriteType = {
-        name = "GFX_report_event_tanks_mexico_city"
-        texturefile = "gfx/event_pictures/report_event_tanks_mexico_city.dds"
-    }
+		name = "GFX_report_event_tanks_mexico_city"
+		texturefile = "gfx/event_pictures/report_event_tanks_mexico_city.dds"
+	}
 
 	spriteType = {
 		name = "GFX_news_event_first_soviet_nuke"
@@ -1787,7 +2964,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_gathering_protest"
 		texturefile = "gfx/event_pictures/report_event_gathering_protest.dds"
-	}	
+	}
 
 	spriteType = {
 		name = "GFX_report_event_fascist_gathering"
@@ -1807,7 +2984,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_airplane_factory"
 		texturefile = "gfx/event_pictures/report_event_airplane_factory.dds"
-	}	
+	}
 
 	spriteType = {
 		name = "GFX_report_event_tank_factory"
@@ -2533,11 +3710,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ITA_COM_ONE"
 		texturefile = "gfx/event_pictures/ITA_COM_ONE.tga"
-	}	
+	}
 	spriteType = {
 		name = "GFX_ITA_COM_TWO"
 		texturefile = "gfx/event_pictures/ITA_COM_TWO.tga"
-	}		
+	}
 
 	spriteType = {
 		name = "GFX_news_event_churchill_ruins"
@@ -3431,59 +4608,59 @@ spriteTypes = {
 		name = "GFX_report_event_notecrisis1"
 		texturefile = "gfx/event_pictures/report_event_notecrisis1.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_report_event_notecrisis2"
 		texturefile = "gfx/event_pictures/report_event_notecrisis2.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_report_event_notecrisis3"
 		texturefile = "gfx/event_pictures/report_event_notecrisis3.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_report_event_notecrisis4"
 		texturefile = "gfx/event_pictures/report_event_notecrisis4.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_report_event_notecrisis5"
 		texturefile = "gfx/event_pictures/report_event_notecrisis5.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_report_event_notecrisis6"
 		texturefile = "gfx/event_pictures/report_event_notecrisis6.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_report_event_notecrisis7"
 		texturefile = "gfx/event_pictures/report_event_notecrisis7.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_report_event_notecrisis8"
 		texturefile = "gfx/event_pictures/report_event_notecrisis8.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_report_event_notecrisis9"
 		texturefile = "gfx/event_pictures/report_event_notecrisis9.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_report_event_notecrisis10"
 		texturefile = "gfx/event_pictures/report_event_notecrisis10.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_report_event_notecrisis11"
 		texturefile = "gfx/event_pictures/report_event_notecrisis11.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_report_event_notecrisis12"
 		texturefile = "gfx/event_pictures/report_event_notecrisis12.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_report_event_notecrisis13"
 		texturefile = "gfx/event_pictures/report_event_notecrisis13.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_report_event_notecrisis14"
 		texturefile = "gfx/event_pictures/report_event_notecrisis14.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_report_event_notecrisis15"
 		texturefile = "gfx/event_pictures/report_event_notecrisis15.dds"
 	}
@@ -3947,15 +5124,15 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_brez_assasin"
 		texturefile = "gfx/event_pictures/brez_assasin.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_glassboro_summit"
 		texturefile = "gfx/event_pictures/glassboro_summit.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_Korean_Airlines_Flight_007"
 		texturefile = "gfx/event_pictures/Korean_Airlines_Flight_007.dds"
-	}			
+	}
 	spriteType = {
 		name = "GFX_news_Okinawa_Plane_Crash"
 		texturefile = "gfx/event_pictures/news_Okinawa_Plane_Crash.dds"
@@ -3963,44 +5140,44 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_El_Al_Flight_402"
 		texturefile = "gfx/event_pictures/El_Al_Flight_402.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_mcarthur_dissmissal"
 		texturefile = "gfx/event_pictures/mcarthur_dissmissal.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_Llandow_disaster"
 		texturefile = "gfx/event_pictures/Llandow_disaster.dds"
-	}			
+	}
 	spriteType = {
 		name = "GFX_Llandow_disaster"
 		texturefile = "gfx/event_pictures/Llandow_disaster.dds"
-	}				
+	}
 	spriteType = {
 		name = "GFX_Tenerifedisaster"
 		texturefile = "gfx/event_pictures/Tenerifedisaster.dds"
-	}			
+	}
 	spriteType = {
 		name = "GFX_nineteeneightyfour"
 		texturefile = "gfx/event_pictures/nineteeneightyfour.dds"
-	}			
+	}
 	spriteType = {
 		name = "GFX_TheDayTheMusicDied"
 		texturefile = "gfx/event_pictures/TheDayTheMusicDied.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_Hawaii_five_o"
 		texturefile = "gfx/event_pictures/Hawaii_five_o.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_ny_blackout"
 		texturefile = "gfx/event_pictures/ny_blackout.dds"
-	}	
+	}
 	
 	spriteType = {
 		name = "GFX_Battle_of_hayes_pond"
 		texturefile = "gfx/event_pictures/Battle_of_hayes_pond.dds"
-	}			
+	}
 	spriteType = {
 		name = "GFX_kebaka_exile"
 		texturefile = "gfx/event_pictures/kebaka_exile.dds"
@@ -4008,7 +5185,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_kebaka_crisis"
 		texturefile = "gfx/event_pictures/Mutea_exile_fifty_three.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_Return_of_Kebaka"
 		texturefile = "gfx/event_pictures/Return_of_Kebaka.dds"
@@ -4016,76 +5193,76 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_later_exile_mutesa"
 		texturefile = "gfx/event_pictures/later_exile_mutesa.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_bunyuro_crisis"
 		texturefile = "gfx/event_pictures/bunyuro_crisis.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_later_kebaka_crisis"
 		texturefile = "gfx/event_pictures/later_kebaka_crisis.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_Sartre_funeral"
 		texturefile = "gfx/event_pictures/Sartre_funeral.dds"
-	}			
+	}
 	spriteType = {
 		name = "GFX_Cambodian_Civil_War"
 		texturefile = "gfx/event_pictures/Cambodian_Civil_War.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_july_revolution_irq"
 		texturefile = "gfx/event_pictures/july_revolution_irq.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_iranian_oil"
 		texturefile = "gfx/event_pictures/iranian_oil.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_hashemite_iraq"
 		texturefile = "gfx/event_pictures/hashemite_iraq.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_atari_2600_release"
 		texturefile = "gfx/event_pictures/atari_2600_release.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_famicom_release"
 		texturefile = "gfx/event_pictures/famicom_release.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_nes_release"
 		texturefile = "gfx/event_pictures/news_release.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_end_of_arab_federation"
 		texturefile = "gfx/event_pictures/end_of_arab_federation.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_grounding_planes"
 		texturefile = "gfx/event_pictures/grounding_planes.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_Onoda_surrender"
 		texturefile = "gfx/event_pictures/Onoda_surrender.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_Blue_House_Raid"
 		texturefile = "gfx/event_pictures/Onoda_surrender.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_park_assasinated"
 		texturefile = "gfx/event_pictures/Onoda_surrender.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_adlai_civil"
 		texturefile = "gfx/event_pictures/adlai_civil.dds"
-	}	
+	}
 	
 	spriteType = {
 		name = "GFX_Unit_684"
 		texturefile = "gfx/event_pictures/Onoda_surrender.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_safavi_execution"
 		texturefile = "gfx/event_pictures/safavi_execution.dds"
@@ -4093,97 +5270,97 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_Abdolhossein_assasination"
 		texturefile = "gfx/event_pictures/Abdolhossein_assasination.dds"
-	}	
+	}
 	spriteType = {
 		name = "GFX_tudeh_tehran"
 		texturefile = "gfx/event_pictures/tudeh_tehran.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_iranian_pahalvi_execution"
 		texturefile = "gfx/event_pictures/iranian_pahalvi_execution.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_exiled_pahalvi"
 		texturefile = "gfx/event_pictures/exiled_pahalvi.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_iranian_trials"
 		texturefile = "gfx/event_pictures/iranian_trials.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_early_islamic_revolution"
 		texturefile = "gfx/event_pictures/early_islamic_revolution.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_mossadegh_victory"
 		texturefile = "gfx/event_pictures/mossadegh_victory.dds"
-	}		
+	}
 	spriteType = {
 		name = "GFX_operation_ajax_fail"
 		texturefile = "gfx/event_pictures/operation_ajax_fail.dds"
-	}			
+	}
 	spriteType = {
 		name = "GFX_royal_iran_divorce"
 		texturefile = "gfx/event_pictures/royal_iran_divorce.dds"
-	}	
+	}
 	SpriteType = {
 		name = "GFX_assasination_of_ninoy"
 		texturefile = "gfx/event_pictures/assasination_of_ninoy.dds"
-	}		
+	}
 	SpriteType = {
 		name = "GFX_brown_vs_board"
 		texturefile = "gfx/event_pictures/brown_vs_board.dds"
-	}			
+	}
 	SpriteType = {
 		name = "GFX_Kef_Microphone"
 		texturefile = "gfx/event_pictures/Kef_Microphone.dds"
-	}		
+	}
 	
 	SpriteType = {
 		name = "GFX_dmz_conflict"
 		texturefile = "gfx/event_pictures/dmz_conflict.dds"
-	}		
+	}
 	SpriteType = {
 		name = "GFX_kim_il_sung_assasination_fail"
 		texturefile = "gfx/event_pictures/kim_il_sung_assasination_fail.dds"
-	}		
+	}
 	SpriteType = {
 		name = "GFX_korean_war_two"
 		texturefile = "gfx/event_pictures/korean_war_two.dds"
-	}	
+	}
 	SpriteType = {
 		name = "GFX_stalemate_at_dmz"
 		texturefile = "gfx/event_pictures/stalemate_at_dmz.dds"
-	}		
+	}
 	SpriteType = {
 		name = "GFX_kpa_victory_dmz"
 		texturefile = "gfx/event_pictures/kpa_victory_dmz.dds"
-	}	
+	}
 	#Real Korean War
 	SpriteType = {
 		name = "GFX_first_Battle_of_Seoul"
 		texturefile = "gfx/event_pictures/first_Battle_of_Seoul.dds"
-	}		
+	}
 	SpriteType = {
 		name = "GFX_second_Battle_of_Seoul"
 		texturefile = "gfx/event_pictures/second_Battle_of_Seoul.dds"
-	}			
+	}
 	SpriteType = {
 		name = "GFX_third_Battle_of_seoul"
 		texturefile = "gfx/event_pictures/third_Battle_of_seoul.dds"
-	}		
+	}
 	SpriteType = {
 		name = "GFX_Operation_Ripper"
 		texturefile = "gfx/event_pictures/Operation_Ripper.dds"
-	}		
+	}
 	SpriteType = {
 		name = "GFX_fall_of_pusan"
 		texturefile = "gfx/event_pictures/fall_of_pusan.dds"
-	}			
+	}
 	SpriteType = {
 		name = "GFX_inchon_landing"
 		texturefile = "gfx/event_pictures/inchon_landing.dds"
-	}			
+	}
 	SpriteType = {
 		name = "GFX_fall_of_pyeongyang"
 		texturefile = "gfx/event_pictures/fall_of_pyeongyang.dds" 
@@ -4196,13 +5373,13 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_report_event_sofoulis_thanatos"
 		texturefile = "gfx/event_pictures/report_event_sofoulis_thanatos.dds"
-	}	
+	}
 	
 	spriteType = {
 		name = "GFX_report_event_alexandros_diomidis"
 		texturefile = "gfx/event_pictures/report_event_alexandros_diomidis.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_report_event_Plastiras1"
 		texturefile = "gfx/event_pictures/report_event_Plastiras1.dds"
 	}
@@ -4219,35 +5396,35 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/report_event_Papagos_funeral.dds"
 	}
 
-    spriteType = {
+	spriteType = {
 		name = "GFX_report_event_greek_election_1950"
 		texturefile = "gfx/event_pictures/report_event_greek_election_1950.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_report_event_Casablanca"
 		texturefile = "gfx/event_pictures/Casablanca.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_report_event_Hungarian_Revolution_One"
 		texturefile = "gfx/event_pictures/Hungarian_Revolution_One.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_report_event_Hungarian_Revolution_Two"
 		texturefile = "gfx/event_pictures/Hungarian_Revolution_Two.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_report_event_Hungarian_Revolution_Three"
 		texturefile = "gfx/event_pictures/Hungarian_Revolution_Three.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_report_event_Hungarian_Revolution_Four"
 		texturefile = "gfx/event_pictures/Hungarian_Revolution_Four.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_chups_news"
 		texturefile = "gfx/event_pictures/NewsChupaChups.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_chups_country"
 		texturefile = "gfx/event_pictures/EventChupaChups.dds"
 	}
@@ -4267,115 +5444,115 @@ spriteTypes = {
 		name = "GFX_rho_black_white"
 		texturefile = "gfx/event_pictures/rhodie_black_and_white.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_jerusalem"
 		texturefile = "gfx/event_pictures/jerusalem.tga"
-	}	
-    spriteType = {
+	}
+	spriteType = {
 		name = "GFX_news_event_cypriot_referendum"
 		texturefile = "gfx/event_pictures/news_event_cypriot_referendum.dds"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_israel_fashion"
 		texturefile = "gfx/event_pictures/israeli_fashion.tga"
 	}
 
-    spriteType = {
+	spriteType = {
 		name = "GFX_israeli_troops"
 		texturefile = "gfx/event_pictures/israeli_troops.tga"
-	}	
+	}
 
-    spriteType = {
+	spriteType = {
 		name = "GFX_rho_artillery"
 		texturefile = "gfx/event_pictures/rho_artillery.tga"
-	}		
+	}
 
-    spriteType = {
+	spriteType = {
 		name = "GFX_convoy"
 		texturefile = "gfx/event_pictures/convoy.tga"
-	}		
+	}
 
-    spriteType = {
+	spriteType = {
 		name = "GFX_hebrew"
 		texturefile = "gfx/event_pictures/hebrew.tga"
-	}		
-    spriteType = {
+	}
+	spriteType = {
 		name = "GFX_politics"
 		texturefile = "gfx/event_pictures/politics.tga"
-	}		
-    spriteType = {
+	}
+	spriteType = {
 		name = "GFX_may_day_protest"
 		texturefile = "gfx/event_pictures/may_day_protest.tga"
-	}	
-    spriteType = {
+	}
+	spriteType = {
 		name = "GFX_Ben_Gurion_posing"
 		texturefile = "gfx/event_pictures/Ben_Gurion_posing.tga"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_Delattre_death"
 		texturefile = "gfx/event_pictures/Delattre_death.tga"
-	}		
-    spriteType = {
+	}
+	spriteType = {
 		name = "GFX_Vietminhlaos"
 		texturefile = "gfx/event_pictures/Vietminhlaos.tga"
-	}		
-    spriteType = {
+	}
+	spriteType = {
 		name = "GFX_goa_preparation_for_invasion"
 		texturefile = "gfx/event_pictures/goa_preparation_for_invasion.tga"
-	}		
-    spriteType = {
+	}
+	spriteType = {
 		name = "GFX_goa_invasion"
 		texturefile = "gfx/event_pictures/goa_invasion.tga"
-	}		
-    spriteType = {
+	}
+	spriteType = {
 		name = "GFX_goa_war_news"
 		texturefile = "gfx/event_pictures/goa_war_news.tga"
-	}		
-    spriteType = {
+	}
+	spriteType = {
 		name = "GFX_goa_negotiations"
 		texturefile = "gfx/event_pictures/goa_negotiations.tga"
-	}		
-    spriteType = {
+	}
+	spriteType = {
 		name = "GFX_riots_in_portugal"
 		texturefile = "gfx/event_pictures/riots_in_portugal.tga"
-	}	
-    spriteType = {
+	}
+	spriteType = {
 		name = "GFX_PRC_negotiations"
 		texturefile = "gfx/event_pictures/PRC_negotiations.tga"
-	}	
-    spriteType = {
+	}
+	spriteType = {
 		name = "GFX_PRC_invades"
 		texturefile = "gfx/event_pictures/PRC_invades.tga"
-	}	
-    spriteType = {
+	}
+	spriteType = {
 		name = "GFX_123_incident_news"
 		texturefile = "gfx/event_pictures/123_incident_news.tga"
-	}	
-    spriteType = {
+	}
+	spriteType = {
 		name = "GFX_death_of_carmona"
 		texturefile = "gfx/event_pictures/death_of_carmona.tga"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_salazar_dead_news"
 		texturefile = "gfx/event_pictures/salazar_dead_news.tga"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_salazar_country_event"
 		texturefile = "gfx/event_pictures/salazar_country_event.tga"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_generic_earthquake_country"
 		texturefile = "gfx/event_pictures/generic_earthquake_country.tga"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_dendy_boys"
 		texturefile = "gfx/event_pictures/dendy_boys.tga"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_Coup_in_Burma"
 		texturefile = "gfx/event_pictures/Coup_in_Burma.tga"
 	}
-    spriteType = {
+	spriteType = {
 		name = "GFX_Coup_in_Burma_news"
 		texturefile = "gfx/event_pictures/Coup_in_Burma_news.tga"
 	}
@@ -4461,446 +5638,446 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/IRQ.9991.tga"
 	}
 	SpriteType = {
-	    name = "GFX_report_event_George_VI"
+		name = "GFX_report_event_George_VI"
 		texturefile = "gfx/event_pictures/report_event_George_VI.tga"
-	}	
+	}
 	
 	#Cyprus
 
 	SpriteType = {
-	    name = "GFX_cyprus_london_failure"
+		name = "GFX_cyprus_london_failure"
 		texturefile = "gfx/event_pictures/Cypriot_Emergency.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Cypriot_Emergency"
+		name = "GFX_Cypriot_Emergency"
 		texturefile = "gfx/event_pictures/Cypriot_Emergency.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_CYP_Insurgency_2"
+		name = "GFX_CYP_Insurgency_2"
 		texturefile = "gfx/event_pictures/CYP_Insurgency_2.tga"
 	}
 	SpriteType = {
-	    name = "GFX_UN_Cyprus_1"
+		name = "GFX_UN_Cyprus_1"
 		texturefile = "gfx/event_pictures/UN_Cyprus_1.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_UN_Cyprus_2"
+		name = "GFX_UN_Cyprus_2"
 		texturefile = "gfx/event_pictures/UN_Cyprus_2.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_UN_Cyprus_3"
+		name = "GFX_UN_Cyprus_3"
 		texturefile = "gfx/event_pictures/UN_Cyprus_3.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_EOKA_insurgency_1"
+		name = "GFX_EOKA_insurgency_1"
 		texturefile = "gfx/event_pictures/EOKA_insurgency_1.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_EOKA_insurgency_2"
+		name = "GFX_EOKA_insurgency_2"
 		texturefile = "gfx/event_pictures/EOKA_insurgency_2.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_EOKA_insurgency_3"
+		name = "GFX_EOKA_insurgency_3"
 		texturefile = "gfx/event_pictures/EOKA_insurgency_3.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_EOKA_insurgency_4"
+		name = "GFX_EOKA_insurgency_4"
 		texturefile = "gfx/event_pictures/EOKA_insurgency_4.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_EOKA_insurgency_5"
+		name = "GFX_EOKA_insurgency_5"
 		texturefile = "gfx/event_pictures/EOKA_insurgency_5.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_EOKA_insurgency_6"
+		name = "GFX_EOKA_insurgency_6"
 		texturefile = "gfx/event_pictures/EOKA_insurgency_6.tga"
 	}
 	SpriteType = {
-	    name = "GFX_TMT_Victory"
+		name = "GFX_TMT_Victory"
 		texturefile = "gfx/event_pictures/TMT_Victory.tga"
 	}
 	SpriteType = {
-	    name = "GFX_EOKA_Victory"
+		name = "GFX_EOKA_Victory"
 		texturefile = "gfx/event_pictures/EOKA_Victory.tga"
-	}	
+	}
 	
 	SpriteType = {
-	    name = "GFX_EOKA_Defeat"
+		name = "GFX_EOKA_Defeat"
 		texturefile = "gfx/event_pictures/EOKA_Defeat.tga"
 	}
 	SpriteType = {
-	    name = "GFX_TMT_Defeat"
+		name = "GFX_TMT_Defeat"
 		texturefile = "gfx/event_pictures/TMT_Defeat.tga"
 	}
 
 
 	SpriteType = {
-	    name = "GFX_Zurich_1"
+		name = "GFX_Zurich_1"
 		texturefile = "gfx/event_pictures/Zurich_1.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Zurich_2"
+		name = "GFX_Zurich_2"
 		texturefile = "gfx/event_pictures/Zurich_2.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Zurich_3"
+		name = "GFX_Zurich_3"
 		texturefile = "gfx/event_pictures/Zurich_3.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Zurich_4"
+		name = "GFX_Zurich_4"
 		texturefile = "gfx/event_pictures/Zurich_4.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Zurich_5"
+		name = "GFX_Zurich_5"
 		texturefile = "gfx/event_pictures/Zurich_5.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_CYP_Enosis"
+		name = "GFX_CYP_Enosis"
 		texturefile = "gfx/event_pictures/CYP_Enosis.tga"
-	}	
+	}
 	
 	SpriteType = {
-	    name = "GFX_Operation_Northwoods"
+		name = "GFX_Operation_Northwoods"
 		texturefile = "gfx/event_pictures/Operation_Northwoods.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_Operation_Northwoods_News"
+		name = "GFX_Operation_Northwoods_News"
 		texturefile = "gfx/event_pictures/Operation_Northwoods_News.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Cyprus_TUR_Invasion_1"
+		name = "GFX_Cyprus_TUR_Invasion_1"
 		texturefile = "gfx/event_pictures/Cyprus_TUR_Invasion_1.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Cyprus_TUR_Invasion_2"
+		name = "GFX_Cyprus_TUR_Invasion_2"
 		texturefile = "gfx/event_pictures/Cyprus_TUR_Invasion_2.tga"
-	}	
+	}
 
 
 	SpriteType = {
-	    name = "GFX_TMT_insurgency_1"
+		name = "GFX_TMT_insurgency_1"
 		texturefile = "gfx/event_pictures/TMT_insurgency_1.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_TMT_insurgency_2"
+		name = "GFX_TMT_insurgency_2"
 		texturefile = "gfx/event_pictures/TMT_insurgency_2.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_TMT_insurgency_3"
+		name = "GFX_TMT_insurgency_3"
 		texturefile = "gfx/event_pictures/TMT_insurgency_3.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_TMT_insurgency_4"
+		name = "GFX_TMT_insurgency_4"
 		texturefile = "gfx/event_pictures/TMT_insurgency_4.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_TMT_Insurgency_5"
+		name = "GFX_TMT_Insurgency_5"
 		texturefile = "gfx/event_pictures/TMT_Insurgency_5.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_TMT_insurgency_6"
+		name = "GFX_TMT_insurgency_6"
 		texturefile = "gfx/event_pictures/TMT_insurgency_6.tga"
 	}
 	#New PRC 60s
 	SpriteType = {
-	    name = "GFX_Sino_Indian_War_Begin"
+		name = "GFX_Sino_Indian_War_Begin"
 		texturefile = "gfx/event_pictures/Sino_Indian_War_Begin.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Sino_Indian_War_PRC_Victory"
+		name = "GFX_Sino_Indian_War_PRC_Victory"
 		texturefile = "gfx/event_pictures/Sino_Indian_War_PRC_Victory.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Sino_Indian_War_India_Victory"
+		name = "GFX_Sino_Indian_War_India_Victory"
 		texturefile = "gfx/event_pictures/Sino_Indian_War_India_Victory.tga"
 	}
 	
 
 	SpriteType = {
-	    name = "GFX_Sino_India_Conflict1"
+		name = "GFX_Sino_India_Conflict1"
 		texturefile = "gfx/event_pictures/Sino_India_Conflict.1.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Sino_India_Conflict2"
+		name = "GFX_Sino_India_Conflict2"
 		texturefile = "gfx/event_pictures/Sino_India_Conflict.2.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Sino_India_Conflict3"
+		name = "GFX_Sino_India_Conflict3"
 		texturefile = "gfx/event_pictures/Sino_India_Conflict.3.tga"
 	}
 	SpriteType = {
-	    name = "GFX_American_Mars_1"
+		name = "GFX_American_Mars_1"
 		texturefile = "gfx/event_pictures/American_Mars_1.tga"
 	}
 	SpriteType = {
-	    name = "GFX_American_Mars_2"
+		name = "GFX_American_Mars_2"
 		texturefile = "gfx/event_pictures/American_Mars_2.tga"
 	}
 	SpriteType = {
-	    name = "GFX_American_Mars_Landing"
+		name = "GFX_American_Mars_Landing"
 		texturefile = "gfx/event_pictures/American_Mars_Landing.tga"
 	}
 	SpriteType = {
-	    name = "GFX_American_Mars_4"
+		name = "GFX_American_Mars_4"
 		texturefile = "gfx/event_pictures/American_Mars_4.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Sudan_Civil_War_Start"
+		name = "GFX_Sudan_Civil_War_Start"
 		texturefile = "gfx/event_pictures/Sudan_Civil_War_Start.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Addis_Abbaba_Agreement"
+		name = "GFX_Addis_Abbaba_Agreement"
 		texturefile = "gfx/event_pictures/Addis_Abbaba_Agreement.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Anyanya_Victory"
+		name = "GFX_Anyanya_Victory"
 		texturefile = "gfx/event_pictures/Anyanya_Victory.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Anyanya_Exiled"
+		name = "GFX_Anyanya_Exiled"
 		texturefile = "gfx/event_pictures/Anyanya_Exiled.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_SSU_Insurgency_1"
+		name = "GFX_SSU_Insurgency_1"
 		texturefile = "gfx/event_pictures/SSU_Insurgency_1.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_SSU_Insurgency_2"
+		name = "GFX_SSU_Insurgency_2"
 		texturefile = "gfx/event_pictures/SSU_Insurgency_2.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_SSU_Insurgency_3"
+		name = "GFX_SSU_Insurgency_3"
 		texturefile = "gfx/event_pictures/SSU_Insurgency_3.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_SSU_Insurgency_4"
+		name = "GFX_SSU_Insurgency_4"
 		texturefile = "gfx/event_pictures/SSU_Insurgency_4.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_SSU_Insurgency_5"
+		name = "GFX_SSU_Insurgency_5"
 		texturefile = "gfx/event_pictures/SSU_Insurgency_5.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_SSU_Insurgency_6"
+		name = "GFX_SSU_Insurgency_6"
 		texturefile = "gfx/event_pictures/SSU_Insurgency_6.tga"
 	}
  
 	SpriteType = {
-	    name = "GFX_Sino_India_Conflict4"
+		name = "GFX_Sino_India_Conflict4"
 		texturefile = "gfx/event_pictures/Sino_India_Conflict.4.tga"
 	}
 	SpriteType = {
-	    name = "GFX_PRC_Invade_India"
+		name = "GFX_PRC_Invade_India"
 		texturefile = "gfx/event_pictures/PRC_Invade_India.tga"
 	}
 	SpriteType = {
-	    name = "GFX_PRC_Invade_India_News"
+		name = "GFX_PRC_Invade_India_News"
 		texturefile = "gfx/event_pictures/PRC_Invade_India_News.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Mao_Retired_News"
+		name = "GFX_Mao_Retired_News"
 		texturefile = "gfx/event_pictures/Mao_Retired_News.tga"
-	}	
+	}
 	#USA 60s
 
 	SpriteType = {
-	    name = "GFX_Vietnam_War_Crackdown"
+		name = "GFX_Vietnam_War_Crackdown"
 		texturefile = "gfx/event_pictures/Vietnam_War_Crackdown.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Klan_1960s"
+		name = "GFX_Klan_1960s"
 		texturefile = "gfx/event_pictures/Klan_1960s.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Anti_Bussing"
+		name = "GFX_Anti_Bussing"
 		texturefile = "gfx/event_pictures/Anti_Bussing.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Ole_Miss_Riot"
+		name = "GFX_Ole_Miss_Riot"
 		texturefile = "gfx/event_pictures/Ole_Miss_Riot.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Equal_Rights_Amendment"
+		name = "GFX_Equal_Rights_Amendment"
 		texturefile = "gfx/event_pictures/Equal_Rights_Amendment.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_Resistance_to_Desegregation"
+		name = "GFX_Resistance_to_Desegregation"
 		texturefile = "gfx/event_pictures/Resistance_to_Desegregation.tga"
-	}		
+	}
 	SpriteType = {
-	    name = "GFX_Operation_Firebird"
+		name = "GFX_Operation_Firebird"
 		texturefile = "gfx/event_pictures/Operation_Firebird.tga"
-	}		
+	}
 	
 	
 
 	SpriteType = {
-	    name = "GFX_Black_Nationalism"
+		name = "GFX_Black_Nationalism"
 		texturefile = "gfx/event_pictures/Black_Nationalism.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Rockefeller_1"
+		name = "GFX_Rockefeller_1"
 		texturefile = "gfx/event_pictures/Rockefeller_1.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Rockefeller_2"
+		name = "GFX_Rockefeller_2"
 		texturefile = "gfx/event_pictures/Rockefeller_2.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Generic_American_Political_1960s"
+		name = "GFX_Generic_American_Political_1960s"
 		texturefile = "gfx/event_pictures/Generic_American_Political_1960s.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_JFK_Mafia"
+		name = "GFX_JFK_Mafia"
 		texturefile = "gfx/event_pictures/JFK_Mafia.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Nixon_Native"
+		name = "GFX_Nixon_Native"
 		texturefile = "gfx/event_pictures/Nixon_Native.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Dixiecrats"
+		name = "GFX_Dixiecrats"
 		texturefile = "gfx/event_pictures/Dixiecrats.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Undermining_Civil_Rights_Act"
+		name = "GFX_Undermining_Civil_Rights_Act"
 		texturefile = "gfx/event_pictures/Undermining_Civil_Rights_Act.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Restore_Order_to_Urban_Areas"
+		name = "GFX_Restore_Order_to_Urban_Areas"
 		texturefile = "gfx/event_pictures/Restore_Order_to_Urban_Areas.tga"
-	}	
+	}
 	#Angolan Civil War
 	
 
 	SpriteType = {
-	    name = "GFX_Fall_of_Luanda"
+		name = "GFX_Fall_of_Luanda"
 		texturefile = "gfx/event_pictures/Fall_of_Luanda.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Angolan_Civil_War"
+		name = "GFX_Angolan_Civil_War"
 		texturefile = "gfx/event_pictures/Angolan_Civil_War.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Quifangondo_1"
+		name = "GFX_Quifangondo_1"
 		texturefile = "gfx/event_pictures/Quifangondo_1.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Quifangondo_2"
+		name = "GFX_Quifangondo_2"
 		texturefile = "gfx/event_pictures/Quifangondo_2.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Operation_Savannah_Start"
+		name = "GFX_Operation_Savannah_Start"
 		texturefile = "gfx/event_pictures/Operation_Savannah_Start.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Operation_Savannah_Failure"
+		name = "GFX_Operation_Savannah_Failure"
 		texturefile = "gfx/event_pictures/Operation_Savannah_Failure.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_MKUltra"
+		name = "GFX_MKUltra"
 		texturefile = "gfx/event_pictures/MKUltra.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_Power_Pack_2"
+		name = "GFX_Power_Pack_2"
 		texturefile = "gfx/event_pictures/Power_Pack_2.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_CIA_Generic"
+		name = "GFX_CIA_Generic"
 		texturefile = "gfx/event_pictures/CIA_Generic.tga"
-	}		
+	}
 	SpriteType = {
-	    name = "GFX_CIA_Generic_2"
+		name = "GFX_CIA_Generic_2"
 		texturefile = "gfx/event_pictures/CIA_Generic_2.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_CIA_Generic_3"
+		name = "GFX_CIA_Generic_3"
 		texturefile = "gfx/event_pictures/CIA_Generic_3.tga"
-	}		
+	}
 	SpriteType = {
-	    name = "GFX_War_on_Drugs"
+		name = "GFX_War_on_Drugs"
 		texturefile = "gfx/event_pictures/War_on_Drugs.tga"
-	}		
+	}
 	
 	SpriteType = {
-	    name = "GFX_CIA_Laos"
+		name = "GFX_CIA_Laos"
 		texturefile = "gfx/event_pictures/CIA_Laos.tga"
-	}			
+	}
 	SpriteType = {
-	    name = "GFX_Operation_Shock"
+		name = "GFX_Operation_Shock"
 		texturefile = "gfx/event_pictures/Operation_Shock.tga"
-	}				
+	}
 	SpriteType = {
-	    name = "GFX_Operation_Midnight_Climax"
+		name = "GFX_Operation_Midnight_Climax"
 		texturefile = "gfx/event_pictures/Operation_Midnight_Climax.tga"
-	}					
+	}
 	
 	SpriteType = {
-	    name = "GFX_Sov_Missle_Forces"
+		name = "GFX_Sov_Missle_Forces"
 		texturefile = "gfx/event_pictures/Sov_Missle_Forces.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Malenkov_Resignation"
+		name = "GFX_Malenkov_Resignation"
 		texturefile = "gfx/event_pictures/Malenkov_Resignation.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Tblisi_Riots"
+		name = "GFX_Tblisi_Riots"
 		texturefile = "gfx/event_pictures/Tblisi_Riots.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Tblisi_Riots_2"
+		name = "GFX_Tblisi_Riots_2"
 		texturefile = "gfx/event_pictures/Tblisi_Riots_2.tga"
 	}
 	
@@ -4908,1202 +6085,2262 @@ spriteTypes = {
 	
 	
 	SpriteType = {
-	    name = "GFX_Operation_MKNAOMI"
+		name = "GFX_Operation_MKNAOMI"
 		texturefile = "gfx/event_pictures/Operation_MKNAOMI.tga"
-	}	
+	}
 
 
 	SpriteType = {
-	    name = "GFX_Operation_Savannah_Success"
+		name = "GFX_Operation_Savannah_Success"
 		texturefile = "gfx/event_pictures/Operation_Savannah_Success.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_FLEC_Independence"
+		name = "GFX_FLEC_Independence"
 		texturefile = "gfx/event_pictures/FLEC_Independence.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_Cuban_Intervention"
+		name = "GFX_Cuban_Intervention"
 		texturefile = "gfx/event_pictures/Cuban_Intervention.tga"
-	}		
+	}
 	SpriteType = {
-	    name = "GFX_Zaire_Luanda"
+		name = "GFX_Zaire_Luanda"
 		texturefile = "gfx/event_pictures/Zaire_Luanda.tga"
-	}		
+	}
 	SpriteType = {
-	    name = "GFX_Savimbi_Victorious"
+		name = "GFX_Savimbi_Victorious"
 		texturefile = "gfx/event_pictures/Savimbi_Victorious.tga"
-	}		
+	}
 	SpriteType = {
-	    name = "GFX_FNLA_Retreat"
+		name = "GFX_FNLA_Retreat"
 		texturefile = "gfx/event_pictures/FNLA_Retreat.tga"
 	}
 	SpriteType = {
-	    name = "GFX_FNLA_Victory"
+		name = "GFX_FNLA_Victory"
 		texturefile = "gfx/event_pictures/FNLA_Victory.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Ban_Crabs"
+		name = "GFX_Ban_Crabs"
 		texturefile = "gfx/event_pictures/Ban_Crabs.tga"
-	}	
+	}
 	#Uyghur Events
 	
 
 	SpriteType = {
-	    name = "GFX_Uyghur_1"
+		name = "GFX_Uyghur_1"
 		texturefile = "gfx/event_pictures/Uyghur_1.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Uyghur_2"
+		name = "GFX_Uyghur_2"
 		texturefile = "gfx/event_pictures/Uyghur_2.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Uyghur_3"
+		name = "GFX_Uyghur_3"
 		texturefile = "gfx/event_pictures/Uyghur_3.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Uyghur_4"
+		name = "GFX_Uyghur_4"
 		texturefile = "gfx/event_pictures/Uyghur_4.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Uyghur_5"
+		name = "GFX_Uyghur_5"
 		texturefile = "gfx/event_pictures/Uyghur_5.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Uyghur_6"
+		name = "GFX_Uyghur_6"
 		texturefile = "gfx/event_pictures/Uyghur_6.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_Uyghur_7"
+		name = "GFX_Uyghur_7"
 		texturefile = "gfx/event_pictures/Uyghur_7.tga"
 	}
 	
 
 	SpriteType = {
-	    name = "GFX_Uyghur_Independence"
+		name = "GFX_Uyghur_Independence"
 		texturefile = "gfx/event_pictures/Uyghur_Independence.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_Soviet_Xinjiang_Intervention"
+		name = "GFX_Soviet_Xinjiang_Intervention"
 		texturefile = "gfx/event_pictures/Soviet_Xinjiang_Intervention.tga"
-	}	
+	}
 	
 	#Eritrean Insurgency
 
 	SpriteType = {
-	    name = "GFX_ERI_Insurgency_1"
+		name = "GFX_ERI_Insurgency_1"
 		texturefile = "gfx/event_pictures/ERI_insurgency_1.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_ERI_Insurgency_2"
+		name = "GFX_ERI_Insurgency_2"
 		texturefile = "gfx/event_pictures/ERI_insurgency_2.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_ERI_Insurgency_3"
+		name = "GFX_ERI_Insurgency_3"
 		texturefile = "gfx/event_pictures/ERI_insurgency_3.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_ERI_Insurgency_4"
+		name = "GFX_ERI_Insurgency_4"
 		texturefile = "gfx/event_pictures/ERI_insurgency_4.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_ERI_Insurgency_5"
+		name = "GFX_ERI_Insurgency_5"
 		texturefile = "gfx/event_pictures/ERI_insurgency_5.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_ERI_Insurgency_6"
+		name = "GFX_ERI_Insurgency_6"
 		texturefile = "gfx/event_pictures/ERI_insurgency_6.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Eritrean_Independence_War"
+		name = "GFX_Eritrean_Independence_War"
 		texturefile = "gfx/event_pictures/Eritrean_Independence_War.tga"
 	}
 
 	
 	SpriteType = {
-	    name = "GFX_Eritrean_Independence"
+		name = "GFX_Eritrean_Independence"
 		texturefile = "gfx/event_pictures/Eritrean_Independence.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Ethiopia_Crush_Eritrea"
+		name = "GFX_Ethiopia_Crush_Eritrea"
 		texturefile = "gfx/event_pictures/Ethiopia_Crush_Eritrea.tga"
 	}
 
 
 	SpriteType = {
-	    name = "GFX_ETH_Insurgency_1"
+		name = "GFX_ETH_Insurgency_1"
 		texturefile = "gfx/event_pictures/ETH_Insurgency_1.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_ETH_Insurgency_2"
+		name = "GFX_ETH_Insurgency_2"
 		texturefile = "gfx/event_pictures/ETH_Insurgency_2.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_ETH_Insurgency_3"
+		name = "GFX_ETH_Insurgency_3"
 		texturefile = "gfx/event_pictures/ETH_insurgency_3.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_ETH_Insurgency_4"
+		name = "GFX_ETH_Insurgency_4"
 		texturefile = "gfx/event_pictures/ETH_insurgency_4.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_ETH_Insurgency_5"
+		name = "GFX_ETH_Insurgency_5"
 		texturefile = "gfx/event_pictures/ETH_Insurgency_5.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_ETH_Insurgency_6"
+		name = "GFX_ETH_Insurgency_6"
 		texturefile = "gfx/event_pictures/ETH_insurgency_6.tga"
 	}
 	#Omani War
 	SpriteType = {
-	    name = "GFX_Jebel_Adkhar_War_Start"
+		name = "GFX_Jebel_Adkhar_War_Start"
 		texturefile = "gfx/event_pictures/Jebel_Adkhar_War_Start.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Jebel_Adkhar_War_British_Victory"
+		name = "GFX_Jebel_Adkhar_War_British_Victory"
 		texturefile = "gfx/event_pictures/Jebel_Adkhar_War_British_Victory.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Jebel_Adkhar_War_Imamate_Victory"
+		name = "GFX_Jebel_Adkhar_War_Imamate_Victory"
 		texturefile = "gfx/event_pictures/Jebel_Adkhar_War_Imamate_Victory.tga"
 	}
 
 
 	SpriteType = {
-	    name = "GFX_OMA_Insurgency_1"
+		name = "GFX_OMA_Insurgency_1"
 		texturefile = "gfx/event_pictures/OMA_Insurgency_1.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_OMA_Insurgency_2"
+		name = "GFX_OMA_Insurgency_2"
 		texturefile = "gfx/event_pictures/OMA_Insurgency_2.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_OMA_Insurgency_3"
+		name = "GFX_OMA_Insurgency_3"
 		texturefile = "gfx/event_pictures/OMA_Insurgency_3.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_OMA_Insurgency_4"
+		name = "GFX_OMA_Insurgency_4"
 		texturefile = "gfx/event_pictures/OMA_Insurgency_4.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_OMA_Insurgency_5"
+		name = "GFX_OMA_Insurgency_5"
 		texturefile = "gfx/event_pictures/OMA_Insurgency_5.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_OMA_Insurgency_6"
+		name = "GFX_OMA_Insurgency_6"
 		texturefile = "gfx/event_pictures/OMA_insurgency_6.tga"
 	}
 	#Event Pictures for Afghanistan
 	
 	SpriteType = {
-	    name = "GFX_Helmand_Valley_Authority"
+		name = "GFX_Helmand_Valley_Authority"
 		texturefile = "gfx/event_pictures/Helmand_Valley_Authority.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_Durrand_Line_Country"
+		name = "GFX_Durrand_Line_Country"
 		texturefile = "gfx/event_pictures/Durrand_Line_Country.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_andrey_vyshinsky_event"
+		name = "GFX_andrey_vyshinsky_event"
 		texturefile = "gfx/event_pictures/andrey_vyshinsky_event.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_US_Afghan"
+		name = "GFX_US_Afghan"
 		texturefile = "gfx/event_pictures/US_Afghan.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_Afghan_Cabinet_Meeting"
+		name = "GFX_Afghan_Cabinet_Meeting"
 		texturefile = "gfx/event_pictures/Afghan_Cabinet_Meeting.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_Afghan_Army"
+		name = "GFX_Afghan_Army"
 		texturefile = "gfx/event_pictures/Afghan_Army.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_Abdul_Ghaffar_Khan_Released"
+		name = "GFX_Abdul_Ghaffar_Khan_Released"
 		texturefile = "gfx/event_pictures/Abdul_Ghaffar_Khan_Released.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_Afghan_Army_2"
+		name = "GFX_Afghan_Army_2"
 		texturefile = "gfx/event_pictures/Afghan_Army_2.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_Afghan_Army_3"
+		name = "GFX_Afghan_Army_3"
 		texturefile = "gfx/event_pictures/Afghan_Army_3.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_Shah_Mahmud_Khan_AFG"
+		name = "GFX_Shah_Mahmud_Khan_AFG"
 		texturefile = "gfx/event_pictures/Shah_Mahmud_Khan_AFG.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_Generic_AFG_Political"
+		name = "GFX_Generic_AFG_Political"
 		texturefile = "gfx/event_pictures/Generic_AFG_Political.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_Generic_AFG_Political_2"
+		name = "GFX_Generic_AFG_Political_2"
 		texturefile = "gfx/event_pictures/Generic_AFG_Political_2.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_Generic_AFG_Political_3"
+		name = "GFX_Generic_AFG_Political_3"
 		texturefile = "gfx/event_pictures/Generic_AFG_Political_3.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_Afghan_Radio"
+		name = "GFX_Afghan_Radio"
 		texturefile = "gfx/event_pictures/Afghan_Radio.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_Pashtunistan_Pak_Army"
+		name = "GFX_Pashtunistan_Pak_Army"
 		texturefile = "gfx/event_pictures/Pashtunistan_Pak_Army.tga"
 	}
 	
 	#Afghan News Events
 	
 	SpriteType = {
-	    name = "GFX_Afghanistan_Pakistan_War"
+		name = "GFX_Afghanistan_Pakistan_War"
 		texturefile = "gfx/event_pictures/Afghanistan_Pakistan_War.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_Kabul_1950s_Generic"
+		name = "GFX_Kabul_1950s_Generic"
 		texturefile = "gfx/event_pictures/Kabul_1950s_Generic.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_Afghan_Coup"
+		name = "GFX_Afghan_Coup"
 		texturefile = "gfx/event_pictures/Afghan_Coup.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_India_AFG_PAK_War"
+		name = "GFX_India_AFG_PAK_War"
 		texturefile = "gfx/event_pictures/India_AFG_PAK_War.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_Cento_News"
+		name = "GFX_Cento_News"
 		texturefile = "gfx/event_pictures/Cento_News.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_Afghan_Exile"
+		name = "GFX_Afghan_Exile"
 		texturefile = "gfx/event_pictures/Afghan_Exile.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_Afghan_Army_News"
+		name = "GFX_Afghan_Army_News"
 		texturefile = "gfx/event_pictures/Afghan_Army_News.tga"
 	}
 	#RoC Events 1950s
 	SpriteType = {
-	    name = "GFX_RoC_Intervention_Korea"
+		name = "GFX_RoC_Intervention_Korea"
 		texturefile = "gfx/event_pictures/RoC_Intervention_Korea.tga"
 	}
 	SpriteType = {
-	    name = "GFX_RoC_Legislative_Yuan_Country_Event"
+		name = "GFX_RoC_Legislative_Yuan_Country_Event"
 		texturefile = "gfx/event_pictures/RoC_Legislative_Yuan_Country_Event.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Generic_White_House_1950s"
+		name = "GFX_Generic_White_House_1950s"
 		texturefile = "gfx/event_pictures/Generic_White_House_1950s.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Korean_War_Taiwan_Yes"
+		name = "GFX_Korean_War_Taiwan_Yes"
 		texturefile = "gfx/event_pictures/Korean_War_Taiwan_Yes.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Korean_War_Taiwan_No"
+		name = "GFX_Korean_War_Taiwan_No"
 		texturefile = "gfx/event_pictures/Korean_War_Taiwan_No.tga"
 	}
 	#Canadaian Event Pictures
 
 	SpriteType = {
-	    name = "GFX_Generic_Common_Market"
+		name = "GFX_Generic_Common_Market"
 		texturefile = "gfx/event_pictures/Generic_Common_Market.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_London_Decleration"
+		name = "GFX_London_Decleration"
 		texturefile = "gfx/event_pictures/London_Decleration.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Avro_Arrow_Funded"
+		name = "GFX_Avro_Arrow_Funded"
 		texturefile = "gfx/event_pictures/Avro_Arrow_Funded.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Avro_Arrow_Cancelled"
+		name = "GFX_Avro_Arrow_Cancelled"
 		texturefile = "gfx/event_pictures/Avro_Arrow_Cancelled.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Winninpeg_Decleration"
+		name = "GFX_Winninpeg_Decleration"
 		texturefile = "gfx/event_pictures/Winninpeg_Decleration.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Senator_James_Gladstone"
+		name = "GFX_Senator_James_Gladstone"
 		texturefile = "gfx/event_pictures/Senator_James_Gladstone.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Organization_of_American_States"
+		name = "GFX_Organization_of_American_States"
 		texturefile = "gfx/event_pictures/Organization_of_American_States.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Commonwealth_Generic"
+		name = "GFX_Commonwealth_Generic"
 		texturefile = "gfx/event_pictures/Commonwealth_Generic.tga"
 	}
 	#US 70s
 
 	SpriteType = {
-	    name = "GFX_George_Romney"
+		name = "GFX_George_Romney"
 		texturefile = "gfx/event_pictures/George_Romney.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Gerlad_Ford_VP"
+		name = "GFX_Gerlad_Ford_VP"
 		texturefile = "gfx/event_pictures/Gerlad_Ford_VP.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Whip_Inflation_Now"
+		name = "GFX_Whip_Inflation_Now"
 		texturefile = "gfx/event_pictures/Whip_Inflation_Now.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_Rockefeller_VP"
+		name = "GFX_Rockefeller_VP"
 		texturefile = "gfx/event_pictures/Rockefeller_VP.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Spiro_Agnew_Pardons_Nixon"
+		name = "GFX_Spiro_Agnew_Pardons_Nixon"
 		texturefile = "gfx/event_pictures/Spiro_Agnew_Pardons_Nixon.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Ford_Pardons_Nixon"
+		name = "GFX_Ford_Pardons_Nixon"
 		texturefile = "gfx/event_pictures/Ford_Pardons_Nixon.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Nixon_Guilty"
+		name = "GFX_Nixon_Guilty"
 		texturefile = "gfx/event_pictures/Nixon_Guilty.tga"
 	}
 	#More US 70s
 	SpriteType = {
-	    name = "GFX_ERA_5"
+		name = "GFX_ERA_5"
 		texturefile = "gfx/event_pictures/ERA_5.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_JCAE_Congress"
+		name = "GFX_JCAE_Congress"
 		texturefile = "gfx/event_pictures/JCAE_Congress.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_Department_of_Energy"
+		name = "GFX_Department_of_Energy"
 		texturefile = "gfx/event_pictures/Department_of_Energy.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_Amnesty_for_Draft_Dodgers"
+		name = "GFX_Amnesty_for_Draft_Dodgers"
 		texturefile = "gfx/event_pictures/Amnesty_for_Draft_Dodgers.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_Clark_Amendment"
+		name = "GFX_Clark_Amendment"
 		texturefile = "gfx/event_pictures/Clark_Amendment.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_Marijuana"
+		name = "GFX_Marijuana"
 		texturefile = "gfx/event_pictures/Marijuana.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_El_Salvador_Coup"
+		name = "GFX_El_Salvador_Coup"
 		texturefile = "gfx/event_pictures/El_Salvador_Coup.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_Assasination_of_Archbishop_Romero"
+		name = "GFX_Assasination_of_Archbishop_Romero"
 		texturefile = "gfx/event_pictures/Assasination_of_Archbishop_Romero.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Ford_Assasination_Attempt"
+		name = "GFX_Ford_Assasination_Attempt"
 		texturefile = "gfx/event_pictures/Ford_Assasination_Attempt.tga"
-	}	
+	}
 	
 	SpriteType = {
-	    name = "GFX_Ford_Failed_Assasination"
+		name = "GFX_Ford_Failed_Assasination"
 		texturefile = "gfx/event_pictures/Ford_Failed_Assasination.tga"
 	}
 	
 
 	SpriteType = {
-	    name = "GFX_War_Powers_Act"
+		name = "GFX_War_Powers_Act"
 		texturefile = "gfx/event_pictures/War_Powers_Act.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Allende_1"
+		name = "GFX_Allende_1"
 		texturefile = "gfx/event_pictures/Allende_1.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Allende_2"
+		name = "GFX_Allende_2"
 		texturefile = "gfx/event_pictures/Allende_2.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Allende_3"
+		name = "GFX_Allende_3"
 		texturefile = "gfx/event_pictures/Allende_3.tga"
 	}
 	
 	SpriteType = {
-	    name = "GFX_President_Rockefeller"
+		name = "GFX_President_Rockefeller"
 		texturefile = "gfx/event_pictures/President_Rockefeller.tga"
 	}
 	#France 50s Part 2
 
 	SpriteType = {
-	    name = "GFX_Indochinese_Liberation_Generic"
+		name = "GFX_Indochinese_Liberation_Generic"
 		texturefile = "gfx/event_pictures/Indochinese_Liberation_Generic.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Douaumont_Necropolis"
+		name = "GFX_Douaumont_Necropolis"
 		texturefile = "gfx/event_pictures/Douaumont_Necropolis.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Algerian_Crackdown"
+		name = "GFX_Algerian_Crackdown"
 		texturefile = "gfx/event_pictures/Algerian_Crackdown.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Algerian_Com_Freedom"
+		name = "GFX_Algerian_Com_Freedom"
 		texturefile = "gfx/event_pictures/Algerian_Com_Freedom.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_French_Eurocom_Turn"
+		name = "GFX_French_Eurocom_Turn"
 		texturefile = "gfx/event_pictures/French_Eurocom_Turn.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_France_Anarchist_Turn"
+		name = "GFX_France_Anarchist_Turn"
 		texturefile = "gfx/event_pictures/France_Anarchist_Turn.tga"
 	}
 	#Yemen Events
 	SpriteType = {
-	    name = "GFX_Operation_Magic_Carpet"
+		name = "GFX_Operation_Magic_Carpet"
 		texturefile = "gfx/event_pictures/Operation_Magic_Carpet.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Yem_14"
+		name = "GFX_Yem_14"
 		texturefile = "gfx/event_pictures/Yem_14.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Yem_13"
+		name = "GFX_Yem_13"
 		texturefile = "gfx/event_pictures/Yem_13.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Yem_10"
+		name = "GFX_Yem_10"
 		texturefile = "gfx/event_pictures/Yem_10.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Yem_12"
+		name = "GFX_Yem_12"
 		texturefile = "gfx/event_pictures/Yem_12.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Yem_20"
+		name = "GFX_Yem_20"
 		texturefile = "gfx/event_pictures/Yem_20.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Aden_1"
+		name = "GFX_Aden_1"
 		texturefile = "gfx/event_pictures/Aden_1.tga"
 	}
 	SpriteType = {
-	    name = "GFX_UAS_1"
+		name = "GFX_UAS_1"
 		texturefile = "gfx/event_pictures/UAS_1.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Yem_5"
+		name = "GFX_Yem_5"
 		texturefile = "gfx/event_pictures/Yem_5.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Yem_6"
+		name = "GFX_Yem_6"
 		texturefile = "gfx/event_pictures/Yem_6.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Yem_15"
+		name = "GFX_Yem_15"
 		texturefile = "gfx/event_pictures/Yem_15.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Yem_16"
+		name = "GFX_Yem_16"
 		texturefile = "gfx/event_pictures/Yem_16.tga"
 	}
 	
 	#Cambodian Event Pictures
 	SpriteType = {
-	    name = "GFX_Cambodia_Event_1"
+		name = "GFX_Cambodia_Event_1"
 		texturefile = "gfx/event_pictures/Cambodia_Event_1.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Cambodia_Event_2"
+		name = "GFX_Cambodia_Event_2"
 		texturefile = "gfx/event_pictures/Cambodia_Event_2.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Cam_Exile_1"
+		name = "GFX_Cam_Exile_1"
 		texturefile = "gfx/event_pictures/Cam_Exile_1.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Cam_Exile_2"
+		name = "GFX_Cam_Exile_2"
 		texturefile = "gfx/event_pictures/Cam_Exile_2.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Republic_of_Camobdia_Declared"
+		name = "GFX_Republic_of_Camobdia_Declared"
 		texturefile = "gfx/event_pictures/Republic_of_Camobdia_Declared.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Generic_1950s_Cambodia"
+		name = "GFX_Generic_1950s_Cambodia"
 		texturefile = "gfx/event_pictures/Generic_1950s_Cambodia.tga"
 	}
 	SpriteType = {
-	    name = "GFX_VIE_CAM_1"
+		name = "GFX_VIE_CAM_1"
 		texturefile = "gfx/event_pictures/VIE_CAM_1.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Bangkok_Coup_1"
+		name = "GFX_Bangkok_Coup_1"
 		texturefile = "gfx/event_pictures/Bangkok_Coup_1.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Bangkok_Coup_2"
+		name = "GFX_Bangkok_Coup_2"
 		texturefile = "gfx/event_pictures/Bangkok_Coup_2.tga"
 	}
 	#Bulgarian Event Pictures
 	SpriteType = {
-	    name = "GFX_AntiRevBul_1"
+		name = "GFX_AntiRevBul_1"
 		texturefile = "gfx/event_pictures/AntiRevBul_1.tga"
 	}
 	SpriteType = {
-	    name = "GFX_AntiRevBul_2"
+		name = "GFX_AntiRevBul_2"
 		texturefile = "gfx/event_pictures/AntiRevBul_2.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Bul_Purge_1"
+		name = "GFX_Bul_Purge_1"
 		texturefile = "gfx/event_pictures/Bul_Purge_1.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Bul_Purge_2"
+		name = "GFX_Bul_Purge_2"
 		texturefile = "gfx/event_pictures/Bul_Purge_2.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Bul_Purge_3"
+		name = "GFX_Bul_Purge_3"
 		texturefile = "gfx/event_pictures/Bul_Purge_3.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Bul_Purge_4"
+		name = "GFX_Bul_Purge_4"
 		texturefile = "gfx/event_pictures/Bul_Purge_4.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Bul_Purge_5"
+		name = "GFX_Bul_Purge_5"
 		texturefile = "gfx/event_pictures/Bul_Purge_5.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Bul_Purge_10"
+		name = "GFX_Bul_Purge_10"
 		texturefile = "gfx/event_pictures/Bul_Purge_10.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Bul_Purge_11"
+		name = "GFX_Bul_Purge_11"
 		texturefile = "gfx/event_pictures/Bul_Purge_11.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Protivobalgarska_1"
+		name = "GFX_Protivobalgarska_1"
 		texturefile = "gfx/event_pictures/Protivobalgarska_1.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Yugov_1"
+		name = "GFX_Yugov_1"
 		texturefile = "gfx/event_pictures/Yugov_1.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Zhivkov_1"
+		name = "GFX_Zhivkov_1"
 		texturefile = "gfx/event_pictures/Zhivkov_1.tga"
 	}
 	#Polish 1950s Events
 
 	SpriteType = {
-	    name = "GFX_Polish_October_1"
+		name = "GFX_Polish_October_1"
 		texturefile = "gfx/event_pictures/Polish_October_1.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Polish_October_2"
+		name = "GFX_Polish_October_2"
 		texturefile = "gfx/event_pictures/Polish_October_2.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Polish_October_3"
+		name = "GFX_Polish_October_3"
 		texturefile = "gfx/event_pictures/Polish_October_3.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Gomulka_1"
+		name = "GFX_Gomulka_1"
 		texturefile = "gfx/event_pictures/Gomulka_1.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Gomulka_2"
+		name = "GFX_Gomulka_2"
 		texturefile = "gfx/event_pictures/Gomulka_2.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_Gomulka_3"
+		name = "GFX_Gomulka_3"
 		texturefile = "gfx/event_pictures/Gomulka_3.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_ZSL_1"
+		name = "GFX_ZSL_1"
 		texturefile = "gfx/event_pictures/ZSL_1.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_ZSL_2"
+		name = "GFX_ZSL_2"
 		texturefile = "gfx/event_pictures/ZSL_2.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Wyszynski_1"
+		name = "GFX_Wyszynski_1"
 		texturefile = "gfx/event_pictures/Wyszynski_1.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_POL_NATOLIN_1"
+		name = "GFX_POL_NATOLIN_1"
 		texturefile = "gfx/event_pictures/POL_NATOLIN_1.tga"
 	}
 	SpriteType = {
-	    name = "GFX_POL_NATOLIN_2"
+		name = "GFX_POL_NATOLIN_2"
 		texturefile = "gfx/event_pictures/POL_NATOLIN_2.tga"
 	}
 	#Indian Event GFX
 	SpriteType = {
-	    name = "GFX_Dalit_Buddhism"
+		name = "GFX_Dalit_Buddhism"
 		texturefile = "gfx/event_pictures/Dalit_Buddhism.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Andaman_Islands"
+		name = "GFX_Andaman_Islands"
 		texturefile = "gfx/event_pictures/Andaman_Islands.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Asian_Games"
+		name = "GFX_Asian_Games"
 		texturefile = "gfx/event_pictures/Asian_Games.tga"
 	}
 	SpriteType = {
-	    name = "GFX_COM_Hyderabad_1"
+		name = "GFX_COM_Hyderabad_1"
 		texturefile = "gfx/event_pictures/COM_Hyderabad_1.tga"
 	}
 	SpriteType = {
-	    name = "GFX_COM_Hyderabad_2"
+		name = "GFX_COM_Hyderabad_2"
 		texturefile = "gfx/event_pictures/COM_Hyderabad_2.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Backwards_Classes_Commission"
+		name = "GFX_Backwards_Classes_Commission"
 		texturefile = "gfx/event_pictures/Backwards_Classes_Commission.tga"
 	}
 	SpriteType = {
-	    name = "GFX_kashmir_100"
+		name = "GFX_kashmir_100"
 		texturefile = "gfx/event_pictures/kashmir_100.tga"
 	}
 	SpriteType = {
-	    name = "GFX_kashmir_101"
+		name = "GFX_kashmir_101"
 		texturefile = "gfx/event_pictures/kashmir_101.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Negar_1"
+		name = "GFX_Negar_1"
 		texturefile = "gfx/event_pictures/Negar_1.tga"
 	}
 	SpriteType = {
-	    name = "GFX_IndiaPuppet_1"
+		name = "GFX_IndiaPuppet_1"
 		texturefile = "gfx/event_pictures/IndiaPuppet_1.tga"
 	}
 	SpriteType = {
-	    name = "GFX_IndiaPuppet_2"
+		name = "GFX_IndiaPuppet_2"
 		texturefile = "gfx/event_pictures/IndiaPuppet_2.tga"
 	}
 	SpriteType = {
-	    name = "GFX_IndiaPuppet_3"
+		name = "GFX_IndiaPuppet_3"
 		texturefile = "gfx/event_pictures/IndiaPuppet_3.tga"
 	}
 	#
 	SpriteType = {
-	    name = "GFX_KMT_10"
+		name = "GFX_KMT_10"
 		texturefile = "gfx/event_pictures/KMT_10.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Formosa_10"
+		name = "GFX_Formosa_10"
 		texturefile = "gfx/event_pictures/Formosa_10.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Formosa_11"
+		name = "GFX_Formosa_11"
 		texturefile = "gfx/event_pictures/Formosa_11.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Formosa_12"
+		name = "GFX_Formosa_12"
 		texturefile = "gfx/event_pictures/Formosa_12.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Formosa_100"
+		name = "GFX_Formosa_100"
 		texturefile = "gfx/event_pictures/Formosa_100.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Sun_Li_Jen_Coup"
+		name = "GFX_Sun_Li_Jen_Coup"
 		texturefile = "gfx/event_pictures/Sun_Li_Jen_Coup.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Sun_Li_Jen_Arrested"
+		name = "GFX_Sun_Li_Jen_Arrested"
 		texturefile = "gfx/event_pictures/Sun_Li_Jen_Arrested.tga"
 	}
 	SpriteType = {
-	    name = "GFX_KMT_110"
+		name = "GFX_KMT_110"
 		texturefile = "gfx/event_pictures/KMT_110.tga"
-	}	
+	}
 	
 	#South Vietnam GFX
 	SpriteType = {
-	    name = "GFX_Ba_Cut_Execution"
+		name = "GFX_Ba_Cut_Execution"
 		texturefile = "gfx/event_pictures/Ba_Cut_Execution.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Sect_Crisis_1"
+		name = "GFX_Sect_Crisis_1"
 		texturefile = "gfx/event_pictures/Sect_Crisis_1.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Sect_Crisis_2"
+		name = "GFX_Sect_Crisis_2"
 		texturefile = "gfx/event_pictures/Sect_Crisis_2.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Sect_Crisis_3"
+		name = "GFX_Sect_Crisis_3"
 		texturefile = "gfx/event_pictures/Sect_Crisis_3.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Diem_12"
+		name = "GFX_Diem_12"
 		texturefile = "gfx/event_pictures/Diem_12.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_Tay_Ninh"
+		name = "GFX_Tay_Ninh"
 		texturefile = "gfx/event_pictures/Tay_Ninh.tga"
-	}		
+	}
 	SpriteType = {
-	    name = "GFX_Diem_11"
+		name = "GFX_Diem_11"
 		texturefile = "gfx/event_pictures/Diem_11.tga"
-	}		
+	}
 	SpriteType = {
-	    name = "GFX_Diem_10"
+		name = "GFX_Diem_10"
 		texturefile = "gfx/event_pictures/Diem_10.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_Operation_Passage_to_Freedom"
+		name = "GFX_Operation_Passage_to_Freedom"
 		texturefile = "gfx/event_pictures/Operation_Passage_to_Freedom.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_Return_of_Diem"
+		name = "GFX_Return_of_Diem"
 		texturefile = "gfx/event_pictures/Return_of_Diem.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_Saigon_Trials"
+		name = "GFX_Saigon_Trials"
 		texturefile = "gfx/event_pictures/Saigon_Trials.tga"
-	}	
+	}
 	
 	SpriteType = {
-	    name = "GFX_Diem_Exiled"
+		name = "GFX_Diem_Exiled"
 		texturefile = "gfx/event_pictures/Diem_Exiled.tga"
-	}	
+	}
 	
 	SpriteType = {
-	    name = "GFX_Coronation_of_Cuong_De"
+		name = "GFX_Coronation_of_Cuong_De"
 		texturefile = "gfx/event_pictures/Coronation_of_Cuong_De.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_Purge_General_Vy"
+		name = "GFX_Purge_General_Vy"
 		texturefile = "gfx/event_pictures/Purge_General_Vy.tga"
-	}		
+	}
 	SpriteType = {
-	    name = "GFX_Generic_1950s_Saigon"
+		name = "GFX_Generic_1950s_Saigon"
 		texturefile = "gfx/event_pictures/Generic_1950s_Saigon.tga"
-	}		
+	}
 	SpriteType = {
-	    name = "GFX_Anti_Vietnam_Refferendum_1950s"
+		name = "GFX_Anti_Vietnam_Refferendum_1950s"
 		texturefile = "gfx/event_pictures/Anti_Vietnam_Refferendum_1950s.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_Can_Lao_Party_Formation"
+		name = "GFX_Can_Lao_Party_Formation"
 		texturefile = "gfx/event_pictures/Can_Lao_Party_Formation.tga"
-	}	
+	}
 	#New Khruschev Events
 	SpriteType = {
-	    name = "GFX_destalinization_0"
+		name = "GFX_destalinization_0"
 		texturefile = "gfx/event_pictures/Khruschev_Thaw.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_Khruschev_100"
+		name = "GFX_Khruschev_100"
 		texturefile = "gfx/event_pictures/Khruschev_100.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_Lysenko_1"
+		name = "GFX_Lysenko_1"
 		texturefile = "gfx/event_pictures/Lysenko_1.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_Virgin_Lands_Campaign"
+		name = "GFX_Virgin_Lands_Campaign"
 		texturefile = "gfx/event_pictures/Virgin_Lands_Campaign.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_destalinization_1"
+		name = "GFX_destalinization_1"
 		texturefile = "gfx/event_pictures/destalinization_1.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_destalinization_2"
+		name = "GFX_destalinization_2"
 		texturefile = "gfx/event_pictures/destalinization_2.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_Baikonur_1"
+		name = "GFX_Baikonur_1"
 		texturefile = "gfx/event_pictures/Baikonur_1.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_KGB_1"
+		name = "GFX_KGB_1"
 		texturefile = "gfx/event_pictures/KGB_1.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_SOV_COL_1"
+		name = "GFX_SOV_COL_1"
 		texturefile = "gfx/event_pictures/SOV_COL_1.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_SOV_ALG"
+		name = "GFX_SOV_ALG"
 		texturefile = "gfx/event_pictures/SOV_ALG.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_SovFlySub_1"
+		name = "GFX_SovFlySub_1"
 		texturefile = "gfx/event_pictures/SovFlySub_1.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_TU_114"
+		name = "GFX_TU_114"
 		texturefile = "gfx/event_pictures/TU_114.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_Khruschev_Agri_1"
+		name = "GFX_Khruschev_Agri_1"
 		texturefile = "gfx/event_pictures/Khruschev_Agri_1.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_CPSU_20"
+		name = "GFX_CPSU_20"
 		texturefile = "gfx/event_pictures/CPSU_20.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_Doctors_Plot_10"
+		name = "GFX_Doctors_Plot_10"
 		texturefile = "gfx/event_pictures/Doctors_Plot_10.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_APG_Fail_1"
+		name = "GFX_APG_Fail_1"
 		texturefile = "gfx/event_pictures/APG_Fail_1.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_APG_Fail_2"
+		name = "GFX_APG_Fail_2"
 		texturefile = "gfx/event_pictures/APG_Fail_2.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_APG_Fail_3"
+		name = "GFX_APG_Fail_3"
 		texturefile = "gfx/event_pictures/APG_Fail_3.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_KhruschevRel_1"
+		name = "GFX_KhruschevRel_1"
 		texturefile = "gfx/event_pictures/KhruschevRel_1.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_KhruschevRel_2"
+		name = "GFX_KhruschevRel_2"
 		texturefile = "gfx/event_pictures/KhruschevRel_2.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_Khruschev_yug_1"
+		name = "GFX_Khruschev_yug_1"
 		texturefile = "gfx/event_pictures/Khruschev_yug_1.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_sinosovietsplit_1"
+		name = "GFX_sinosovietsplit_1"
 		texturefile = "gfx/event_pictures/sinosovietsplit_1.tga"
-	}	
+	}
 	#
 	SpriteType = {
-	    name = "GFX_Diem_Coup_1"
+		name = "GFX_Diem_Coup_1"
 		texturefile = "gfx/event_pictures/Diem_Coup_1.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_Secret_War"
+		name = "GFX_Secret_War"
 		texturefile = "gfx/event_pictures/Secret_War.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_PRC_UN_Generic"
+		name = "GFX_PRC_UN_Generic"
 		texturefile = "gfx/event_pictures/PRC_UN_Generic.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_PRC_UN_Generic_2"
+		name = "GFX_PRC_UN_Generic_2"
 		texturefile = "gfx/event_pictures/PRC_UN_Generic_2.tga"
-	}	
+	}
 
 	SpriteType = {
-	    name = "GFX_CIA_7"
+		name = "GFX_CIA_7"
 		texturefile = "gfx/event_pictures/CIA_7.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_Castro_1"
+		name = "GFX_Castro_1"
 		texturefile = "gfx/event_pictures/Castro_1.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_Castro_2"
+		name = "GFX_Castro_2"
 		texturefile = "gfx/event_pictures/Castro_2.tga"
-	}	
+	}
 	SpriteType = {
-	    name = "GFX_Castro_3"
+		name = "GFX_Castro_3"
 		texturefile = "gfx/event_pictures/Castro_3.tga"
 	}
 	#October War Events
 	SpriteType = {
-	    name = "News_1973_Arab-Israeli_war_start"
+		name = "News_1973_Arab-Israeli_war_start"
 		texturefile = "gfx/event_pictures/News_1973_Arab-Israeli_war_start.dds"
 	}
 	SpriteType = {
-	    name = "News_1973_Arab-Israeli_war_US_intervention"
+		name = "News_1973_Arab-Israeli_war_US_intervention"
 		texturefile = "gfx/event_pictures/News_1973_Arab-Israeli_war_US_intervention.dds"
 	}
 	SpriteType = {
-	    name = "News_1973_Arab-Israeli_war_Soviet_intervention"
+		name = "News_1973_Arab-Israeli_war_Soviet_intervention"
 		texturefile = "gfx/event_pictures/News_1973_Arab-Israeli_war_Soviet_intervention.dds"
 	}
 	SpriteType = {
-	    name = "News_1973_Arab-Israeli_war_Israel_victory"
+		name = "News_1973_Arab-Israeli_war_Israel_victory"
 		texturefile = "gfx/event_pictures/News_1973_Arab-Israeli_war_Israel_victory.dds"
 	}
 	SpriteType = {
-	    name = "News_1973_Arab-Israeli_war_Egypt_victory"
+		name = "News_1973_Arab-Israeli_war_Egypt_victory"
 		texturefile = "gfx/event_pictures/News_1973_Arab-Israeli_war_Egypt_victory.dds"
 	}
 	SpriteType = {
-	    name = "News_1973_Arab-Israeli_war_Syria_victory"
+		name = "News_1973_Arab-Israeli_war_Syria_victory"
 		texturefile = "gfx/event_pictures/News_1973_Arab-Israeli_war_Syria_victory.dds"
 	}
 	SpriteType = {
-	    name = "GFX_Egypt_crossing_into_Israel"
+		name = "GFX_Egypt_crossing_into_Israel"
 		texturefile = "gfx/event_pictures/Egypt_crossing_into_Israel.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Egypt_retakes_Sinai"
+		name = "GFX_Egypt_retakes_Sinai"
 		texturefile = "gfx/event_pictures/Egypt_retakes_Sinai.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Egypt_surrender"
+		name = "GFX_Egypt_surrender"
 		texturefile = "gfx/event_pictures/Egypt_surrender.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Israel_crossing_into_Egypt"
+		name = "GFX_Israel_crossing_into_Egypt"
 		texturefile = "gfx/event_pictures/Israel_crossing_into_Egypt.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Israel_crossing_into_Syria"
+		name = "GFX_Israel_crossing_into_Syria"
 		texturefile = "gfx/event_pictures/Israel_crossing_into_Syria.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Israel_holds_Golan"
+		name = "GFX_Israel_holds_Golan"
 		texturefile = "gfx/event_pictures/Israel_holds_Golan.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Israel_holds_Sinai"
+		name = "GFX_Israel_holds_Sinai"
 		texturefile = "gfx/event_pictures/Israel_holds_Sinai.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Israel_surrender"
+		name = "GFX_Israel_surrender"
 		texturefile = "gfx/event_pictures/Israel_surrender.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Soviet_warning_October_War"
+		name = "GFX_Soviet_warning_October_War"
 		texturefile = "gfx/event_pictures/Soviet_warning_October_War.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Start_Syria"
+		name = "GFX_Start_Syria"
 		texturefile = "gfx/event_pictures/Start_Syria.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Syria_crossing_into_Israel"
+		name = "GFX_Syria_crossing_into_Israel"
 		texturefile = "gfx/event_pictures/Syria_crossing_into_Israel.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Syria_retakes_Golan"
+		name = "GFX_Syria_retakes_Golan"
 		texturefile = "gfx/event_pictures/Syria_retakes_Golan.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Syria_surrender"
+		name = "GFX_Syria_surrender"
 		texturefile = "gfx/event_pictures/Syria_surrender.tga"
 	}
 	SpriteType = {
-	    name = "GFX_USA_warning_October_War"
+		name = "GFX_USA_warning_October_War"
 		texturefile = "gfx/event_pictures/USA_warning_October_War.tga"
 	}
 	SpriteType = {
-	    name = "GFX_stonewall_riot"
+		name = "GFX_stonewall_riot"
 		texturefile = "gfx/event_pictures/stonewall_riot.tga"
 	}
 	#Currency Flavor
 	SpriteType = {
-	    name = "GFX_Jordanian_Dinar"
+		name = "GFX_Jordanian_Dinar"
 		texturefile = "gfx/event_pictures/Jordanian_Dinar.tga"
 	}
 	#Fusion Events
 	SpriteType = {
-	    name = "GFX_event_fusion_0"
+		name = "GFX_event_fusion_0"
 		texturefile = "gfx/event_pictures/event_fusion_0.tga"
 	}
 	SpriteType = {
-	    name = "GFX_event_fusion_1"
+		name = "GFX_event_fusion_1"
 		texturefile = "gfx/event_pictures/event_fusion_1.tga"
 	}
 	#Czech Event Pics
 	SpriteType = {
-	    name = "GFX_Purge_Gottwald_1"
+		name = "GFX_Purge_Gottwald_1"
 		texturefile = "gfx/event_pictures/Purge_Gottwald_1.tga"
 	}
 	SpriteType = {
-	    name = "GFX_event_Czechoslovakia_Purge_1"
+		name = "GFX_event_Czechoslovakia_Purge_1"
 		texturefile = "gfx/event_pictures/Czechoslovakia_Purge_1.tga"
 	}
 
 
 	SpriteType = {
-	    name = "GFX_event_Czechoslovakia_1"
+		name = "GFX_event_Czechoslovakia_1"
 		texturefile = "gfx/event_pictures/Czechoslovakia_1.tga"
 	}
 	SpriteType = {
-	    name = "GFX_event_Czechoslovakia_Purge_3"
+		name = "GFX_event_Czechoslovakia_Purge_3"
 		texturefile = "gfx/event_pictures/Czechoslovakia_Purge_3.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_event_toufar_1"
+		name = "GFX_event_toufar_1"
 		texturefile = "gfx/event_pictures/toufar_1.tga"
 	}
 	SpriteType = {
-	    name = "GFX_event_toufar_2"
+		name = "GFX_event_toufar_2"
 		texturefile = "gfx/event_pictures/toufar_2.tga"
 	}
 	SpriteType = {
-	    name = "GFX_event_toufar_3"
+		name = "GFX_event_toufar_3"
 		texturefile = "gfx/event_pictures/toufar_3.tga"
 	}
 	SpriteType = {
-	    name = "GFX_event_toufar_4"
+		name = "GFX_event_toufar_4"
 		texturefile = "gfx/event_pictures/toufar_4.tga"
 	}
 	SpriteType = {
-	    name = "GFX_event_toufar_5"
+		name = "GFX_event_toufar_5"
 		texturefile = "gfx/event_pictures/toufar_5.tga"
 	}
 	#North Yemen Civil War
 	SpriteType = {
-	    name = "GFX_UAR_Insurgency_Options_1"
+		name = "GFX_UAR_Insurgency_Options_1"
 		texturefile = "gfx/event_pictures/UAR_Insurgency_Options_1.tga"
 	}
 	SpriteType = {
-	    name = "GFX_UAR_Insurgency_Options_2"
+		name = "GFX_UAR_Insurgency_Options_2"
 		texturefile = "gfx/event_pictures/UAR_Insurgency_Options_2.tga"
 	}
 	SpriteType = {
-	    name = "GFX_UAR_Insurgency_Options_3"
+		name = "GFX_UAR_Insurgency_Options_3"
 		texturefile = "gfx/event_pictures/UAR_Insurgency_Options_3.tga"
 	}
 	SpriteType = {
-	    name = "GFX_UAR_Insurgency_Options_4"
+		name = "GFX_UAR_Insurgency_Options_4"
 		texturefile = "gfx/event_pictures/UAR_Insurgency_Options_4.tga"
 	}
 	SpriteType = {
-	    name = "GFX_UAR_Insurgency_Options_5"
+		name = "GFX_UAR_Insurgency_Options_5"
 		texturefile = "gfx/event_pictures/UAR_Insurgency_Options_5.tga"
 	}
 	SpriteType = {
-	    name = "GFX_UAR_Insurgency_Options_6"
+		name = "GFX_UAR_Insurgency_Options_6"
 		texturefile = "gfx/event_pictures/UAR_Insurgency_Options_6.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_MUK_Insurgency_Options_1"
+		name = "GFX_MUK_Insurgency_Options_1"
 		texturefile = "gfx/event_pictures/MUK_Insurgency_Options_1.tga"
 	}
 	SpriteType = {
-	    name = "GFX_MUK_Insurgency_Options_2"
+		name = "GFX_MUK_Insurgency_Options_2"
 		texturefile = "gfx/event_pictures/MUK_Insurgency_Options_2.tga"
 	}
 	SpriteType = {
-	    name = "GFX_MUK_Insurgency_Options_3"
+		name = "GFX_MUK_Insurgency_Options_3"
 		texturefile = "gfx/event_pictures/MUK_Insurgency_Options_3.tga"
 	}
 	SpriteType = {
-	    name = "GFX_MUK_Insurgency_Options_4"
+		name = "GFX_MUK_Insurgency_Options_4"
 		texturefile = "gfx/event_pictures/MUK_Insurgency_Options_4.tga"
 	}
 	SpriteType = {
-	    name = "GFX_MUK_Insurgency_Options_5"
+		name = "GFX_MUK_Insurgency_Options_5"
 		texturefile = "gfx/event_pictures/MUK_Insurgency_Options_5.tga"
 	}
 	SpriteType = {
-	    name = "GFX_MUK_Insurgency_Options_6"
+		name = "GFX_MUK_Insurgency_Options_6"
 		texturefile = "gfx/event_pictures/MUK_Insurgency_Options_6.tga"
 	}
 	SpriteType = {
-	    name = "GFX_NYCW_1"
+		name = "GFX_NYCW_1"
 		texturefile = "gfx/event_pictures/North_Yemen_Civil_War.tga"
 	}
 
 	SpriteType = {
-	    name = "GFX_NYCW_10"
+		name = "GFX_NYCW_10"
 		texturefile = "gfx/event_pictures/NYCW_10.tga"
 	}
 	SpriteType = {
-	    name = "GFX_NYCW_11"
+		name = "GFX_NYCW_11"
 		texturefile = "gfx/event_pictures/NYCW_11.tga"
 	}
 	SpriteType = {
-	    name = "GFX_Yemeni_Coup_1"
+		name = "GFX_Yemeni_Coup_1"
 		texturefile = "gfx/event_pictures/Yemeni_Coup_1.tga"
+	}
+	#First Kurdish-Iraqi War
+	SpriteType = {
+		name = "GFX_Iraqi_Kurdish_War_0"
+		texturefile = "gfx/event_pictures/Iraqi_Kurdish_War_0.tga"
+	}
+	SpriteType = {
+		name = "GFX_Iraqi_Kurdish_War_1"
+		texturefile = "gfx/event_pictures/Iraqi_Kurdish_War_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_Iraqi_Kurdish_War_2"
+		texturefile = "gfx/event_pictures/Iraqi_Kurdish_War_2.tga"
+	}
+	SpriteType = {
+		name = "GFX_Iraqi_Kurdish_War_3"
+		texturefile = "gfx/event_pictures/Iraqi_Kurdish_War_3.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_KUR_Insurgency_Options_3"
+		texturefile = "gfx/event_pictures/KUR_Insurgency_Options_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_KUR_Insurgency_Options_4"
+		texturefile = "gfx/event_pictures/KUR_Insurgency_Options_2.tga"
+	}
+	SpriteType = {
+		name = "GFX_KUR_Insurgency_Options_1"
+		texturefile = "gfx/event_pictures/KUR_Insurgency_Options_3.tga"
+	}
+	SpriteType = {
+		name = "GFX_KUR_Insurgency_Options_2"
+		texturefile = "gfx/event_pictures/KUR_Insurgency_Options_4.tga"
+	}
+	SpriteType = {
+		name = "GFX_KUR_Insurgency_Options_5"
+		texturefile = "gfx/event_pictures/KUR_Insurgency_Options_5.tga"
+	}
+	SpriteType = {
+		name = "GFX_KUR_Insurgency_Options_6"
+		texturefile = "gfx/event_pictures/KUR_Insurgency_Options_6.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_IRQ_Insurgency_Options_3"
+		texturefile = "gfx/event_pictures/IRQ_Insurgency_Options_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_IRQ_Insurgency_Options_4"
+		texturefile = "gfx/event_pictures/IRQ_Insurgency_Options_2.tga"
+	}
+	SpriteType = {
+		name = "GFX_IRQ_Insurgency_Options_1"
+		texturefile = "gfx/event_pictures/IRQ_Insurgency_Options_3.tga"
+	}
+	SpriteType = {
+		name = "GFX_IRQ_Insurgency_Options_2"
+		texturefile = "gfx/event_pictures/IRQ_Insurgency_Options_4.tga"
+	}
+	SpriteType = {
+		name = "GFX_IRQ_Insurgency_Options_5"
+		texturefile = "gfx/event_pictures/IRQ_Insurgency_Options_5.tga"
+	}
+	SpriteType = {
+		name = "GFX_IRQ_Insurgency_Options_6"
+		texturefile = "gfx/event_pictures/IRQ_Insurgency_Options_6.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_Rawanduz_Campaign_1"
+		texturefile = "gfx/event_pictures/Rawanduz_Campaign_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_Rawanduz_Campaign_2"
+		texturefile = "gfx/event_pictures/Rawanduz_Campaign_2.tga"
+	}
+	SpriteType = {
+		name = "GFX_Rawanduz_Campaign_3"
+		texturefile = "gfx/event_pictures/Rawanduz_Campaign_3.tga"
+	}
+
+
+	SpriteType = {
+		name = "GFX_Kurdish_Syrian_Six_Days_War_1"
+		texturefile = "gfx/event_pictures/Kurdish_Syrian_Six_Days_War_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_Kurdish_Syrian_Six_Days_War_2"
+		texturefile = "gfx/event_pictures/Kurdish_Syrian_Six_Days_War_2.tga"
+	}
+	SpriteType = {
+		name = "GFX_Kurdish_Syrian_Six_Days_War_3"
+		texturefile = "gfx/event_pictures/Kurdish_Syrian_Six_Days_War_3.tga"
+	}
+	SpriteType = {
+		name = "GFX_Israel_offensive_failed"
+		texturefile = "gfx/event_pictures/Israel_offensive_failed.tga"
+	}
+	#Bahrain and Qatar
+	spriteType = {
+		name = "GFX_Qatar_Pol_1"
+		texturefile = "gfx/event_pictures/Qatar_Pol_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Qatar_Pol_4"
+		texturefile = "gfx/event_pictures/Qatar_Pol_4.tga"
+	}
+	spriteType = {
+		name = "GFX_Qatar_Pol_2"
+		texturefile = "gfx/event_pictures/Qatar_Pol_2.tga"
+	}
+	spriteType = {
+		name = "GFX_QAT_Suez_Crisis_1"
+		texturefile = "gfx/event_pictures/QAT_Suez_Crisis_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Qatar_Pol_3"
+		texturefile = "gfx/event_pictures/Qatar_Pol_3.tga"
+	}
+	spriteType = {
+		name = "GFX_QAT_Arab_Federation_1"
+		texturefile = "gfx/event_pictures/QAT_Arab_Federation_1.tga"
+	}
+	spriteType = {
+		name = "GFX_QAT_Arab_Federation_2"
+		texturefile = "gfx/event_pictures/QAT_Arab_Federation_2.tga"
+	}
+	spriteType = {
+		name = "GFX_QAT_Arab_Federation_3"
+		texturefile = "gfx/event_pictures/QAT_Arab_Federation_3.tga"
+	}
+	spriteType = {
+		name = "GFX_QAT_Arab_Federation_4"
+		texturefile = "gfx/event_pictures/QAT_Arab_Federation_4.tga"
+	}		
+	spriteType = {
+		name = "GFX_QAT_Coronation_1"
+		texturefile = "gfx/event_pictures/QAT_Coronation_1.tga"
+	}
+
+	spriteType = {
+		name = "GFX_QATAR_UAS_1"
+		texturefile = "gfx/event_pictures/QATAR_UAS_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Mesaieed_1"
+		texturefile = "gfx/event_pictures/Mesaieed_1.tga"
+	}
+	spriteType = {
+		name = "GFX_QATAR_UAR_1"
+		texturefile = "gfx/event_pictures/QATAR_UAR_1.tga"
+	}
+	spriteType = {
+		name = "GFX_QATAR_IND_1"
+		texturefile = "gfx/event_pictures/QATAR_IND_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Suez_Crisis_Gulf_50"
+		texturefile = "gfx/event_pictures/Suez_Crisis_Gulf_50.tga"
+	}
+	spriteType = {
+		name = "GFX_Suez_Crisis_Gulf_51"
+		texturefile = "gfx/event_pictures/Suez_Crisis_Gulf_51.tga"
+	}
+	spriteType = {
+		name = "GFX_NUC_5"
+		texturefile = "gfx/event_pictures/NUC_5.tga"
+	}
+	spriteType = {
+		name = "GFX_BAH_FEDERATION_1"
+		texturefile = "gfx/event_pictures/BAH_FEDERATION_1.tga"
+	}
+	spriteType = {
+		name = "GFX_BAH_FEDERATION_2"
+		texturefile = "gfx/event_pictures/BAH_FEDERATION_2.tga"
+	}
+	spriteType = {
+		name = "GFX_BAH_FEDERATION_3"
+		texturefile = "gfx/event_pictures/BAH_FEDERATION_3.tga"
+	}
+	spriteType = {
+		name = "GFX_BAH_FEDERATION_4"
+		texturefile = "gfx/event_pictures/BAH_FEDERATION_4.tga"
+	}		
+	spriteType = {
+		name = "GFX_Bab_Al_Bahrain_1"
+		texturefile = "gfx/event_pictures/Bab_Al_Bahrain_1.tga"
+	}
+	spriteType = {
+		name = "GFX_General_Strike_2"
+		texturefile = "gfx/event_pictures/General_Strike_2.tga"
+	}
+	spriteType = {
+		name = "GFX_NUC_10"
+		texturefile = "gfx/event_pictures/NUC_10.tga"
+	}
+
+###Six-Day War###
+	spriteType = {
+		name = "GFX_Egyptian_Communications"
+		texturefile = "gfx/event_pictures/Egyptian_Communications.tga"
+	}
+	spriteType = {
+		name = "GFX_Informing_Jordan_and_Syria"
+		texturefile = "gfx/event_pictures/Informing Jordan and Syria.tga"
+	}
+	spriteType = {
+		name = "GFX_Offensives_Launched_Against_Israel"
+		texturefile = "gfx/event_pictures/Offensives_Launched_Against_Israel.tga"
+	}
+	spriteType = {
+		name = "GFX_Failed_Anti-Israeli Counter_Offensive"
+		texturefile = "gfx/event_pictures/Failed_Anti-Israeli_Counter_Offensive.tga"
+	}
+	spriteType = {
+		name = "GFX_Launch_Offensive into_Israel"
+		texturefile = "gfx/event_pictures/Launch_Offensive into_Israel.tga"
+	}
+		spriteType = {
+		name = "GFX_Egypt_Occupies_Eilat"
+		texturefile = "gfx/event_pictures/Egypt_Occupies_Eilat.tga"
+	}
+		spriteType = {
+		name = "GFX_Egyptian_Victory_Six_Day_War"
+		texturefile = "gfx/event_pictures/News_Egyptian_Victory_Six_Day_War.tga"
+	}
+		spriteType = {
+		name = "GFX_Jordanian_Victory_Six_Day_War"
+		texturefile = "gfx/event_pictures/News_Jordanian_Victory_Six_Day_War.tga"
+	}
+
+	spriteType = {
+		name = "GFX_Israel_General_Strike_1"
+		texturefile = "gfx/event_pictures/General_Strike_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Bahrainian_Revolution_1"
+		texturefile = "gfx/event_pictures/Bahrainian_Revolution_1.tga"
+	}
+	spriteType = {
+		name = "GFX_Bahrainian_Revolution_2"
+		texturefile = "gfx/event_pictures/Bahrainian_Revolution_2.tga"
+	}
+	spriteType = {
+		name = "GFX_Bahrainian_Revolution_3"
+		texturefile = "gfx/event_pictures/Bahrainian_Revolution_3.tga"
+	}
+
+	
+##### WEAPON PURCHASING #####
+	SpriteType = {
+		name = "GFX_weapon_purchase.0"
+		texturefile = "gfx/event_pictures/weapon_purchase.tga"
+	}
+	SpriteType = {
+		name = "GFX_weapon_purchase.CAP"
+		texturefile = "gfx/event_pictures/weapon_purchase_CAP.tga"
+	}
+	SpriteType = {
+		name = "GFX_weapon_purchase.CUM"
+		texturefile = "gfx/event_pictures/weapon_purchase_CUM.tga"
+	}
+	SpriteType = {
+		name = "GFX_weapon_purchase.MAO"
+		texturefile = "gfx/event_pictures/weapon_purchase_MAO.tga"
+	}
+	SpriteType = {
+		name = "GFX_weapon_purchase.IND"
+		texturefile = "gfx/event_pictures/weapon_purchase_IND.tga"
+	}
+	#Spanish News Event
+	SpriteType = {
+		name = "GFX_Falange_1"
+		texturefile = "gfx/event_pictures/Falange_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_Opus_Dei_1"
+		texturefile = "gfx/event_pictures/Opus_Dei_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_Cape_Juby"
+		texturefile = "gfx/event_pictures/Cape_Juby.tga"
+	}
+	SpriteType = {
+		name = "GFX_IC_Franco_1"
+		texturefile = "gfx/event_pictures/IC_Franco_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_SPR_ISR_1"
+		texturefile = "gfx/event_pictures/SPR_ISR_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_SPA_MOR_1"
+		texturefile = "gfx/event_pictures/SPA_MOR_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_SPA_MOR_2"
+		texturefile = "gfx/event_pictures/SPA_MOR_2.tga"
+	}
+	#Yugoslavian Events
+	SpriteType = {
+		name = "GFX_Informbiro_1"
+		texturefile = "gfx/event_pictures/Informbiro_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_YUG_1950s_1"
+		texturefile = "gfx/event_pictures/YUG_1950s_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_AntiSovYug_1"
+		texturefile = "gfx/event_pictures/AntiSovYug_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_Diljas_1"
+		texturefile = "gfx/event_pictures/Diljas_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_Diljas_2"
+		texturefile = "gfx/event_pictures/Diljas_2.tga"
+	}
+	SpriteType = {
+		name = "GFX_Diljas_3"
+		texturefile = "gfx/event_pictures/Diljas_3.tga"
+	}
+	SpriteType = {
+		name = "GFX_YUG_1950s_2"
+		texturefile = "gfx/event_pictures/YUG_1950s_2.tga"
+	}
+	SpriteType = {
+		name = "GFX_Diljas_4"
+		texturefile = "gfx/event_pictures/Diljas_4.tga"
+	}
+	SpriteType = {
+		name = "GFX_YUG_NATO_1"
+		texturefile = "gfx/event_pictures/YUG_NATO_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_YUG_NATO_3"
+		texturefile = "gfx/event_pictures/YUG_NATO_3.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_YUG_NATO_2"
+		texturefile = "gfx/event_pictures/YUG_NATO_2.tga"
+	}
+	SpriteType = {
+		name = "GFX_YUG_50s_1"
+		texturefile = "gfx/event_pictures/YUG_50s_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_HungarianRevYug_1"
+		texturefile = "gfx/event_pictures/HungarianRevYug_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_HungarianRevYug_2"
+		texturefile = "gfx/event_pictures/HungarianRevYug_2.tga"
+	}
+	#PRC
+	SpriteType = {
+		name = "GFX_CulRevPurge_1"
+		texturefile = "gfx/event_pictures/CulRevPurge_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_Enlais_Tour_1"
+		texturefile = "gfx/event_pictures/Enlais_Tour_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_PRCUN_1"
+		texturefile = "gfx/event_pictures/PRCUN_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_CulRev_11"
+		texturefile = "gfx/event_pictures/CulRev_11.tga"
+	}
+	SpriteType = {
+		name = "GFX_CulRev_12"
+		texturefile = "gfx/event_pictures/CulRev_12.tga"
+	}
+	SpriteType = {
+		name = "GFX_CulRevPurge_4"
+		texturefile = "gfx/event_pictures/CulRevPurge_4.tga"
+	}
+	SpriteType = {
+		name = "GFX_PLA_CulRev_1"
+		texturefile = "gfx/event_pictures/PLA_CulRev_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_HyperCulRev_1"
+		texturefile = "gfx/event_pictures/HyperCulRev_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_HyperCulRev_2"
+		texturefile = "gfx/event_pictures/HyperCulRev_2.tga"
+	}
+	SpriteType = {
+		name = "GFX_HyperCulRev_6"
+		texturefile = "gfx/event_pictures/HyperCulRev_6.tga"
+	}
+	SpriteType = {
+		name = "GFX_PRC_Congress_1"
+		texturefile = "gfx/event_pictures/PRC_Congress_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_PRC_Congress_2"
+		texturefile = "gfx/event_pictures/PRC_Congress_2.tga"
+	}
+	SpriteType = {
+		name = "GFX_PRC_Congress_3"
+		texturefile = "gfx/event_pictures/PRC_Congress_3.tga"
+	}
+	SpriteType = {
+		name = "GFX_ZhenbaoConflict_1"
+		texturefile = "gfx/event_pictures/ZhenbaoConflict_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_ZhenbaoConflict_10"
+		texturefile = "gfx/event_pictures/ZhenbaoConflict_10.tga"
+	}
+	SpriteType = {
+		name = "GFX_ZhenbaoConflict_30"
+		texturefile = "gfx/event_pictures/ZhenbaoConflict_30.tga"
+	}
+	SpriteType = {
+		name = "GFX_ZhenbaoConflict_25"
+		texturefile = "gfx/event_pictures/ZhenbaoConflict_25.tga"
+	}
+	SpriteType = {
+		name = "GFX_ZhenbaoConflict_31"
+		texturefile = "gfx/event_pictures/ZhenbaoConflict_31.tga"
+	}
+	SpriteType = {
+		name = "GFX_Cultural_Rev_2"
+		texturefile = "gfx/event_pictures/Cultural_Rev_2.tga"
+	}
+	SpriteType = {
+		name = "GFX_BeijingSpring_1"
+		texturefile = "gfx/event_pictures/BeijingSpring_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_Waldheimer_Prozzesse"
+		texturefile = "gfx/event_pictures/Waldheimer_Prozzesse.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_Deng_Purged"
+		texturefile = "gfx/event_pictures/Deng_Purged.tga"
+	}
+	SpriteType = {
+		name = "GFX_Expel_Japanese"
+		texturefile = "gfx/event_pictures/Expel_Japanese.tga"
+	}
+	SpriteType = {
+		name = "GFX_Great_Leap_Forward_Failure"
+		texturefile = "gfx/event_pictures/Great_Leap_Forward_Failure.tga"
+	}
+	SpriteType = {
+		name = "GFX_ZhenbaoConflict_China"
+		texturefile = "gfx/event_pictures/ZhenbaoConflict_China.tga"
+	}
+	SpriteType = {
+		name = "GFX_ZhenbaoConflict_Soviet"
+		texturefile = "gfx/event_pictures/ZhenbaoConflict_Soviet.tga"
+	}
+	SpriteType = {
+		name = "GFX_Mao_Return_3"
+		texturefile = "gfx/event_pictures/Mao_Return_3.tga"
+	}
+	SpriteType = {
+		name = "GFX_Mao_Return_4"
+		texturefile = "gfx/event_pictures/Mao_Return_4.tga"
+	}
+	SpriteType = {
+		name = "GFX_Mao_Return_2"
+		texturefile = "gfx/event_pictures/Mao_Return_2.tga"
+	}
+	SpriteType = {
+		name = "GFX_Mao_Return_1"
+		texturefile = "gfx/event_pictures/Mao_Return_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_Cultural_Rev_4"
+		texturefile = "gfx/event_pictures/Cultural_Rev_4.tga"
+	}
+	SpriteType = {
+		name = "GFX_Cultural_Rev_200"
+		texturefile = "gfx/event_pictures/Cultural_Rev_200.tga"
+	}
+	SpriteType = {
+		name = "GFX_Cultural_Rev_1"
+		texturefile = "gfx/event_pictures/Cultural_Rev_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_Cultural_Rev_3"
+		texturefile = "gfx/event_pictures/Cultural_Rev_3.tga"
+	}
+	SpriteType = {
+		name = "GFX_BeijingSpring_6"
+		texturefile = "gfx/event_pictures/BeijingSpring_6.tga"
+	}
+	SpriteType = {
+		name = "GFX_BeijingSpring_4"
+		texturefile = "gfx/event_pictures/BeijingSpring_4.tga"
+	}
+	SpriteType = {
+		name = "GFX_BeijingSpring_2"
+		texturefile = "gfx/event_pictures/BeijingSpring_2.tga"
+	}
+	SpriteType = {
+		name = "GFX_CulRevPurge_3"
+		texturefile = "gfx/event_pictures/CulRevPurge_3.tga"
+	}
+	SpriteType = {
+		name = "GFX_HyperCulRev_4"
+		texturefile = "gfx/event_pictures/HyperCulRev_4.tga"
+	}
+	SpriteType = {
+		name = "GFX_HyperCulRev_3"
+		texturefile = "gfx/event_pictures/HyperCulRev_3.tga"
+	}
+	SpriteType = {
+		name = "GFX_Paris_Peace_Accords"
+		texturefile = "gfx/event_pictures/Paris_Peace_Accords.tga"
+	}
+	SpriteType = {
+		name = "GFX_USA_Portugal_1"
+		texturefile = "gfx/event_pictures/USA_Portugal_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_Camp_David_1"
+		texturefile = "gfx/event_pictures/Camp_David_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_Vietnam_War_2_1"
+		texturefile = "gfx/event_pictures/Vietnam_War_2_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_SEATO_4"
+		texturefile = "gfx/event_pictures/SEATO_4.tga"
+	}
+	SpriteType = {
+		name = "GFX_SEATO_5"
+		texturefile = "gfx/event_pictures/SEATO_5.tga"
+	}
+	SpriteType = {
+		name = "GFX_US_Taiwan_10"
+		texturefile = "gfx/event_pictures/US_Taiwan_10.tga"
+	}
+	SpriteType = {
+		name = "GFX_USA_Afghanistan_1"
+		texturefile = "gfx/event_pictures/USA_Afghanistan_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_Grain_Embargo_1"
+		texturefile = "gfx/event_pictures/Grain_Embargo_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_US_Olympics_1"
+		texturefile = "gfx/event_pictures/US_Olympics_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_Khomenei_Assasinated_1"
+		texturefile = "gfx/event_pictures/Khomenei_Assasinated_1.tga"
+	}
+	SpriteType = {
+		name = "GFX_USA_Rhodesia_3"
+		texturefile = "gfx/event_pictures/USA_Rhodesia_3.tga"
+	}	
+	#Iranian Hostage Crisis Event Pics
+	SpriteType = {
+		name = "GFX_IHC_1"
+		texturefile = "gfx/event_pictures/IHC_1.tga"
+	}	
+	SpriteType = {
+		name = "GFX_IHC_5"
+		texturefile = "gfx/event_pictures/IHC_5.tga"
+	}	
+	SpriteType = {
+		name = "GFX_IHC_20"
+		texturefile = "gfx/event_pictures/IHC_20.tga"
+	}	
+	SpriteType = {
+		name = "GFX_IHC_16"
+		texturefile = "gfx/event_pictures/IHC_16.tga"
+	}	
+	SpriteType = {
+		name = "GFX_IHC_17"
+		texturefile = "gfx/event_pictures/IHC_17.tga"
+	}	
+	SpriteType = {
+		name = "GFX_IHC_10"
+		texturefile = "gfx/event_pictures/IHC_10.tga"
+	}	
+	SpriteType = {
+		name = "GFX_IHC_2"
+		texturefile = "gfx/event_pictures/IHC_2.tga"
+	}	
+	SpriteType = {
+		name = "GFX_IHC_3"
+		texturefile = "gfx/event_pictures/IHC_3.tga"
+	}	
+	SpriteType = {
+		name = "GFX_IHC_15"
+		texturefile = "gfx/event_pictures/IHC_15.tga"
+	}	
+	#Crusader Insurgency
+	spriteType = {
+		name = "GFX_crusader_insurgency_0"
+		texturefile = "gfx/event_pictures/crusader_insurgency_0.tga" 
+	}
+	spriteType = {
+		name = "GFX_crusader_insurgency_1"
+		texturefile = "gfx/event_pictures/crusader_insurgency_1.tga" 
+	}
+	spriteType = {
+		name = "GFX_crusader_insurgency_2"
+		texturefile = "gfx/event_pictures/crusader_insurgency_2.tga" 
+	}
+	spriteType = {
+		name = "GFX_crusader_insurgency_3"
+		texturefile = "gfx/event_pictures/crusader_insurgency_3.tga" 
+	}
+	spriteType = {
+		name = "GFX_crusader_insurgency_4"
+		texturefile = "gfx/event_pictures/crusader_insurgency_4.tga" 
+	}
+	spriteType = {
+		name = "GFX_crusader_insurgency_5"
+		texturefile = "gfx/event_pictures/crusader_insurgency_5.tga" 
+	}
+	spriteType = {
+		name = "GFX_crusader_insurgency_6"
+		texturefile = "gfx/event_pictures/crusader_insurgency_6.tga" 
+	}
+	spriteType = {
+		name = "GFX_crusader_insurgency_10"
+		texturefile = "gfx/event_pictures/crusader_insurgency_10.tga" 
+	}
+	spriteType = {
+		name = "GFX_crusader_insurgency_11"
+		texturefile = "gfx/event_pictures/crusader_insurgency_11.tga" 
+	}
+	#BRITISH EVENTS#
+	#1950s#
+	
+	spriteType = { #RECONSTRUCTION COMPLETE #COUNTRY
+		name = "GFX_ENG_event_1"
+		texturefile = "gfx/event_pictures/ENG_event_1.tga"
+	}
+	spriteType = { #TANGANYIKA GROUNDNUT EPIC FAIL XD #COUNTRY
+		name = "GFX_ENG_event_2"
+		texturefile = "gfx/event_pictures/ENG_event_2.tga"
+	}
+	spriteType = { #JEBEL WAR #COUNTRY
+		name = "GFX_ENG_event_3"
+		texturefile = "gfx/event_pictures/ENG_event_3.tga"
+	}
+	spriteType = { #WINDS OF CHANGE SPEECH #NEWS
+		name = "GFX_ENG_event_4"
+		texturefile = "gfx/event_pictures/ENG_event_4.tga"
+	}
+	spriteType = { #CRACKDOWN ON ADEN #COUNTRY
+		name = "GFX_ENG_event_5"
+		texturefile = "gfx/event_pictures/ENG_event_5.dds"
+	}
+	spriteType = { #WITHDRAW FROM ADEN #COUNTRY
+		name = "GFX_ENG_event_6"
+		texturefile = "gfx/event_pictures/ENG_event_6.dds"
+	}
+	spriteType = { #HOLD FAST IN THE ARABIAN GULF #COUNTRY
+		name = "GFX_ENG_event_7"
+		texturefile = "gfx/event_pictures/ENG_event_7.dds"
+	}
+	spriteType = { #WITHDRAWL FROM ARABIAN GULF #COUNTRY
+		name = "GFX_ENG_event_8"
+		texturefile = "gfx/event_pictures/ENG_event_8.dds"
+	}
+	spriteType = { #BALANCE OF PAYMENTS CRISIS #COUNTRY
+		name = "GFX_ENG_event_9"
+		texturefile = "gfx/event_pictures/ENG_event_9.dds"
+	}
+	spriteType = { #ABOLITION OF THE DEATH PENALTY #COUNTRY
+		name = "GFX_ENG_event_10"
+		texturefile = "gfx/event_pictures/ENG_event_10.dds"
+	}
+	spriteType = { #INVESTIGATE THE RAILWAY REFORM #COUNTRY
+		name = "GFX_ENG_event_11"
+		texturefile = "gfx/event_pictures/ENG_event_11.dds"
+	}
+	spriteType = { #THE BEACHING AXE #COUNTRY
+		name = "GFX_ENG_event_12"
+		texturefile = "gfx/event_pictures/ENG_event_12.dds"
+	}
+	spriteType = { #NIGHT OF LONG ASS KNIVES #COUNTRY
+		name = "GFX_ENG_event_13"
+		texturefile = "gfx/event_pictures/ENG_event_13.dds"
+	}
+	spriteType = { #VASSALL TRIBUNAL #COUNTRY
+		name = "GFX_ENG_event_14"
+		texturefile = "gfx/event_pictures/ENG_event_14.dds"
+	}
+	spriteType = { #PROFUMO AFFAIR #COUNTRY
+		name = "GFX_ENG_event_15"
+		texturefile = "gfx/event_pictures/ENG_event_15.dds"
+	}
+	spriteType = { #OPERATION BANNER #COUNTRY
+		name = "GFX_ENG_event_16"
+		texturefile = "gfx/event_pictures/ENG_event_16.dds"
+	}
+	spriteType = { #BEGIN EEC NEGOTIATIONS #COUNTRY
+		name = "GFX_ENG_event_17"
+		texturefile = "gfx/event_pictures/ENG_event_17.dds"
+	}
+	spriteType = { #CAMPAIGN AGAINST EUROSKEPTICISM #COUNTRY
+		name = "GFX_ENG_event_18"
+		texturefile = "gfx/event_pictures/ENG_event_18.dds"
+	}
+	
+	spriteType = { #EAST AFRICAN FEDERATION #NEWS
+		name = "GFX_WhitehallFederation_1"
+		texturefile = "gfx/event_pictures/WhitehallFederation_1.tga"
+	}
+	spriteType = { #CENTRAL AFRICAN FEDERATION #NEWS
+		name = "GFX_WhitehallFederation_2"
+		texturefile = "gfx/event_pictures/WhitehallFederation_2.tga"
+	}
+	
+	spriteType = { #OPERATION HURRICANE #COUNTRY
+		name = "GFX_ENG_nuclear_1"
+		texturefile = "gfx/event_pictures/ENG_nuclear_1.tga"
+	}
+	spriteType = { #UK US MUTUAL DEFENCE AGREEMENT #COUNTRY
+		name = "GFX_ENG_nuclear_2"
+		texturefile = "gfx/event_pictures/ENG_nuclear_2.tga"
+	}
+	spriteType = { #COMMONWEALTH NUCLEAR #COUNTRY
+		name = "GFX_ENG_nuclear_3"
+		texturefile = "gfx/event_pictures/ENG_nuclear_3.tga"
+	}
+	spriteType = { #OPERATION GRAPPLE #COUNTRY
+		name = "GFX_ENG_nuclear_4"
+		texturefile = "gfx/event_pictures/ENG_nuclear_4.tga"
+	}
+	
+	spriteType = { #CONDEMN RHODESIAN UDI #COUNTRY
+		name = "GFX_ENG_RHO_1"
+		texturefile = "gfx/event_pictures/ENG_RHO_1.dds"
+	}
+	spriteType = { #RHODESIAN NEGOTIATION BREAKDOWN #COUNTRY
+		name = "GFX_ENG_RHO_2"
+		texturefile = "gfx/event_pictures/ENG_RHO_2.dds"
+	}
+	spriteType = { #RECOGNIZE RHODESIA #NEWS
+		name = "GFX_ENG_RHO_3"
+		texturefile = "gfx/event_pictures/ENG_RHO_3.tga"
+	}
+	
+	spriteType = { #EFTA INVITE #COUNTRY
+		name = "GFX_EFTA_1"
+		texturefile = "gfx/event_pictures/EFTA_1.dds"
+	}
+	##### FRENCH EVENTS #####
+	
+	spriteType = { #TRENTES GLORIEUSES END #COUNTRY
+		name = "GFX_FRA_event_1"
+		texturefile = "gfx/event_pictures/FRA_event_1.dds"
+	}
+	spriteType = { #MAOISTS ARRESTED #COUNTRY
+		name = "GFX_FRA_event_2"
+		texturefile = "gfx/event_pictures/FRA_event_2.dds"
+	}
+	spriteType = { #EXTEND LARZAC CAMP #COUNTRY
+		name = "GFX_FRA_event_3"
+		texturefile = "gfx/event_pictures/FRA_event_3.dds"
+	}
+	spriteType = { #FRANCE LEAVES NATO #NEWS
+		name = "GFX_FRA_event_4"
+		texturefile = "gfx/event_pictures/FRA_event_4.tga"
+	}
+	spriteType = { #FRANCE DENUCLEARIZES #COUNTRY
+		name = "GFX_FRA_event_5"
+		texturefile = "gfx/event_pictures/FRA_event_5.dds"
+	}
+	spriteType = { #END OF ATMOSPHERIC NUCLEAR TESTS #COUNTRY
+		name = "GFX_FRA_event_6"
+		texturefile = "gfx/event_pictures/FRA_event_6.dds"
+	}
+	spriteType = { #SUPPORT THE PLO #COUNTRY
+		name = "GFX_FRA_event_7"
+		texturefile = "gfx/event_pictures/FRA_event_7.dds"
+	}
+	spriteType = { #ESTABLISH THE UDF #COUNTRY
+		name = "GFX_FRA_event_8"
+		texturefile = "gfx/event_pictures/FRA_event_8.dds"
+	}
+	
+	spriteType = { #THE EURO #COUNTRY
+		name = "GFX_EEC_event_1"
+		texturefile = "gfx/event_pictures/EEC_event_1.dds"
+	}
+	spriteType = { #LEAVE SNAKE IN THE TUNNEL #COUNTRY
+		name = "GFX_EEC_event_3"
+		texturefile = "gfx/event_pictures/EEC_event_3.dds"
+	}
+	
+	spriteType = { #EUROPEAN SPACE AGENCY #NEWS
+		name = "GFX_EUROPE_space_1"
+		texturefile = "gfx/event_pictures/EUROPE_space_1.tga"
+	}
+	
+	##### PRAGUE SPRING #####
+	spriteType = { #WRITERS DISCIPLINED #COUNTRY
+		name = "GFX_prague_spring_1"
+		texturefile = "gfx/event_pictures/prague_spring_1.dds"
+	}
+	spriteType = { #Brezhnev Attends Prague Meeting #COUNTRY
+		name = "GFX_prague_spring_2"
+		texturefile = "gfx/event_pictures/prague_spring_2.dds"
+	}
+	spriteType = { #Brezhnev backs Novotny #NEWS
+		name = "GFX_prague_spring_3"
+		texturefile = "gfx/event_pictures/prague_spring_3.tga"
+	}
+	spriteType = { #Brezhnev backs Dubcek #NEWS
+		name = "GFX_prague_spring_4"
+		texturefile = "gfx/event_pictures/prague_spring_4.tga"
+	}
+	spriteType = { #Response to Media Criticism of President Novotny #COUNTRY
+		name = "GFX_prague_spring_5"
+		texturefile = "gfx/event_pictures/prague_spring_5.dds"
+	}
+	spriteType = { #End Censorship Laws #COUNTRY
+		name = "GFX_prague_spring_6"
+		texturefile = "gfx/event_pictures/prague_spring_6.dds"
+	}
+	spriteType = { #President Novotny Resigns #COUNTRY
+		name = "GFX_prague_spring_7"
+		texturefile = "gfx/event_pictures/prague_spring_7.dds"
+	}
+	spriteType = { #Dubcek unveils Action Programme #NEWS
+		name = "GFX_prague_spring_8"
+		texturefile = "gfx/event_pictures/prague_spring_8.tga"
+	}
+	spriteType = { #Enthusiastic May Day Celebration #NEWS
+		name = "GFX_prague_spring_9"
+		texturefile = "gfx/event_pictures/prague_spring_9.tga"
+	}
+	spriteType = { #Dubcek visits Moscow #NEWS
+		name = "GFX_prague_spring_10"
+		texturefile = "gfx/event_pictures/prague_spring_10.tga"
+	}
+	spriteType = { #Censorship Officially Abolished #NEWS
+		name = "GFX_prague_spring_11"
+		texturefile = "gfx/event_pictures/prague_spring_11.tga"
+	}
+	spriteType = { #Publication of Manifesto #NEWS
+		name = "GFX_prague_spring_12"
+		texturefile = "gfx/event_pictures/prague_spring_12.tga"
+	}
+	spriteType = { #Soviet Military Exercises near Border #COUNTRY
+		name = "GFX_prague_spring_13"
+		texturefile = "gfx/event_pictures/prague_spring_13.dds"
+	}
+	spriteType = { #Meeting with Czechoslovakian Leaders #COUNTRY
+		name = "GFX_prague_spring_14"
+		texturefile = "gfx/event_pictures/prague_spring_14.dds"
+	}
+	spriteType = { #Results of Soviet Meeting #COUNTRY
+		name = "GFX_prague_spring_15"
+		texturefile = "gfx/event_pictures/prague_spring_15.dds"
+	}
+	spriteType = { #Brezhnev Doctrine and Invasion Approval #COUNTRY
+		name = "GFX_prague_spring_16"
+		texturefile = "gfx/event_pictures/prague_spring_16.dds"
+	}
+	spriteType = { #End of the Spring #NEWS
+		name = "GFX_prague_spring_17"
+		texturefile = "gfx/event_pictures/prague_spring_17.tga"
+	}
+	spriteType = { #Invasion of Czechoslovakia #COUNTRY
+		name = "GFX_prague_spring_18"
+		texturefile = "gfx/event_pictures/prague_spring_18.dds"
+	}
+	spriteType = { #Censorship Reintroduced #COUNTRY
+		name = "GFX_prague_spring_19"
+		texturefile = "gfx/event_pictures/prague_spring_19.dds"
+	}
+	spriteType = { #Czechoslovakia becomes Federal Republic #COUNTRY
+		name = "GFX_prague_spring_20"
+		texturefile = "gfx/event_pictures/prague_spring_20.dds"
+	}
+	spriteType = { #Dubcek Replaced as First Secretary #COUNTRY
+		name = "GFX_prague_spring_21"
+		texturefile = "gfx/event_pictures/prague_spring_21.dds"
+	}
+##### SAF #####
+	spriteType = { #Simonstown Agreement #NEWS
+		name = "GFX_SAF_event_1"
+		texturefile = "gfx/event_pictures/SAF_event_1.tga"
+	}
+	spriteType = { #Republic of South Africa #COUNTRY
+		name = "GFX_SAF_event_2"
+		texturefile = "gfx/event_pictures/SAF_event_2.dds"
+	}
+	
+	spriteType = { #Namibian Question #COUNTRY
+		name = "GFX_Namibia_1"
+		texturefile = "gfx/event_pictures/Namibia_1.dds"
+	}
+	spriteType = { #Bring Problem to UN #COUNTRY
+		name = "GFX_Namibia_10"
+		texturefile = "gfx/event_pictures/Namibia_10.dds"
+	}
+	spriteType = { #10-year Trustee #NEWS
+		name = "GFX_Namibia_11"
+		texturefile = "gfx/event_pictures/Namibia_11.tga"
+	}
+	spriteType = { #Independent Namibia #NEWS
+		name = "GFX_Namibia_12"
+		texturefile = "gfx/event_pictures/Namibia_12.tga"
+	}
+	spriteType = { #Annex South-West Africa #NEWS
+		name = "GFX_Namibia_2"
+		texturefile = "gfx/event_pictures/Namibia_2.tga"
+	}
+	spriteType = { #End of 10-year Trusteeship #NEWS
+		name = "GFX_Namibia_13"
+		texturefile = "gfx/event_pictures/Namibia_13.tga"
+	}
+##### HUNGARIAN REVOLUTION #####
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_1"
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_1.dds"
+	}
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_2"
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_2.dds"
+	}
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_3"
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_3.dds"
+	}
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_4"
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_4.dds"
+	}
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_5"
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_5.dds"
+	}
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_6"
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_6.dds"
+	}
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_7"
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_7.dds"
+	}
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_8" #NEWS
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_8.tga"
+	}
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_9"
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_9.dds"
+	}
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_10" #NEWS
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_10.tga"
+	}
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_11"
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_11.dds"
+	}
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_12"
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_12.dds"
+	}
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_13"
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_13.dds"
+	}
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_14"
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_14.dds"
+	}
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_15"
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_15.dds"
+	}
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_16" #NEWS
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_16.tga"
+	}
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_17"
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_17.dds"
+	}
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_18"
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_18.dds"
+	}
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_19"
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_19.dds"
+	}
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_20"
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_20.dds"
+	}
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_21" #NEWS
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_21.tga"
+	}
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_22"
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_22.dds"
+	}
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_23" #NEWS
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_23.tga"
+	}
+	spriteType = {
+		name = "GFX_HUNGARIAN_REV_24" #NEWS
+		texturefile = "gfx/event_pictures/HUNGARIAN_REV_24.tga"
+	}
+	
+##### PARLIAMENT EVENTS #####
+	
+	spriteType = {
+		name = "GFX_RAC_POL_2"
+		texturefile = "gfx/event_pictures/RAC_POL_2.tga"
+	}
+	spriteType = {
+		name = "GFX_WOM_POL_2"
+		texturefile = "gfx/event_pictures/WOM_POL_2.tga"
+	}
+	spriteType = {
+		name = "GFX_SAGA_POL_2"
+		texturefile = "gfx/event_pictures/SAGA_POL_2.tga"
+	}
+	spriteType = {
+		name = "GFX_UNION_POL_1"
+		texturefile = "gfx/event_pictures/UNION_POL_1.tga"
+	}
+	spriteType = {
+		name = "GFX_REL_POL_1"
+		texturefile = "gfx/event_pictures/REL_POL_1.tga"
+	}
+	spriteType = {
+		name = "GFX_REL_POL_2"
+		texturefile = "gfx/event_pictures/REL_POL_2.tga"
+	}
+	spriteType = {
+		name = "GFX_REL_POL_3"
+		texturefile = "gfx/event_pictures/REL_POL_3.tga"
+	}
+	spriteType = {
+		name = "GFX_REL_POL_4"
+		texturefile = "gfx/event_pictures/REL_POL_4.tga"
 	}
 }

@@ -20,7 +20,7 @@ if = {
 	set_technology = {
 		subkiller_0 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
 		ship_armament_light_0 = 1
@@ -33,8 +33,8 @@ if = {
 		sub_hull_large_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
-		screen_hull_small_0 = 1
 		screen_hull_medium_0 = 1
+		screen_hull_heavy_0 = 1
 	}
 }
 
@@ -93,8 +93,11 @@ set_technology = {
 	sp_artillery_1 = 1
 	light_artillery_1 = 1
 	light_sp_artillery_1 = 1
+	heavy_artillery_1 = 1
+	heavy_sp_artillery_1 = 1
 	
 	direct_fire_gun_1 = 1
+	tank_destroyer_1 = 1
 	
 ##Land Doc##
 	
@@ -191,7 +194,16 @@ add_to_array = { influence_array_val = 400 }
 	election_frequency = 48
 	elections_allowed = no
 }
-
+create_country_leader = {
+	name = "Huseyn Shaheed Suhrawardy"
+	picture = "Suhrawardy.dds"
+	ideology = progressive
+}
+create_country_leader = {
+	name = "Faiz Ahmed Faiz"
+	picture = "Faiz_Ahmed_Faiz.dds"
+	ideology = stalinism
+}
 create_country_leader = {
 	name = "Liaquat Ali Khan"
 	picture = "Liaquat_Ali_Khan.dds"

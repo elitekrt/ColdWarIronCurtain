@@ -26,7 +26,7 @@ if = {
 		subkiller_0 = 1
 		subkiller_1 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ta_fcs_0 = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
@@ -36,9 +36,9 @@ if = {
 		ship_armament_heavy_0 = 1
 		
 		ww_capitals = 1
-		capital_hull_0 = 1
+		battle_hull_medium_0 = 1
 		ww_carriers = 1
-		capital_hull_0 = 1
+		battle_hull_medium_0 = 1
 		carrier_hull_0 = 1
 		
 		ww_submarines = 1
@@ -47,9 +47,9 @@ if = {
 		sub_hull_small_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
+		screen_hull_heavy_0 = 1
 		screen_hull_medium_0 = 1
-		screen_hull_small_0 = 1
-		screen_hull_large_0 = 1
+		battle_hull_light_0 = 1
 	}
 }
 
@@ -235,8 +235,8 @@ create_country_leader = {
 	
 1949.12.1 = {
 	capital = 842
-	#white_peace  = INS
-	#white_peace  = HOL
+	#white_peace = INS
+	#white_peace = HOL
 	remove_ideas = {
 		cold_war_civil_war_ideological_idea
 	}
@@ -263,7 +263,7 @@ create_country_leader = {
 }
 
 1963.1.1 = {
-	#white_peace  = SMK
+	#white_peace = SMK
 }
 
 1966.1.1 = {

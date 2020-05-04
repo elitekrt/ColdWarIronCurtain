@@ -68,7 +68,7 @@ NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 1 -- This many divisons are 
 NDefines.NDiplomacy.VOLUNTEERS_PER_COUNTRY_ARMY = 0.10 -- Each army unit owned by the source country contributes this amount of volunteers to the limit.
 NDefines.NDiplomacy.VOLUNTEERS_PER_TARGET_PROVINCE = 0.10 -- Each province owned by the target country contributes this amount of volunteers to the limit.
 
-NDefines.NDiplomacy.VOLUNTEERS_TRANSFER_SPEED = 7
+NDefines.NDiplomacy.VOLUNTEERS_TRANSFER_SPEED = 14
 
 NDefines.NGame.END_DATE = "2050.5.23.12"
 NDefines.NGame.START_DATE = "1945.5.23.12"
@@ -127,3 +127,7 @@ NDefines.NAI.ROCKET_MIN_PRIO_ASSIGN_SCORE = 0
 NDefines.NAI.ROCKET_ASSIGN_SCORE_REDUCTION_PER_ASSIGNMENT = 0
 NDefines.NAI.ROCKETSITE_CAPACITY_MULT = 0
 NDefines.NAI.NUM_SILOS_PER_CIVILIAN_FACTORIES = 0.1
+
+NDefines.NOperatives.AGENCY_CREATION_DAYS = 150
+NDefines.NOperatives.AGENCY_UPGRADE_DAYS = 150
+NDefines.NOperatives.AGENCY_OPERATIVE_RECRUITMENT_TIME = 60

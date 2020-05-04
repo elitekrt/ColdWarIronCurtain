@@ -10,7 +10,7 @@ focus_tree = {
 	default = no
 	focus = {
 		id = ENG_Continue_Reconstruction
-		icon = GFX_goal_unknown
+		icon = GFX_Economic_Reconstruction_Generic
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = 5
@@ -24,7 +24,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Economic_Prosperity
-		icon = GFX_goal_unknown
+		icon = GFX_Gold
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = 5
@@ -41,7 +41,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Expand_the_BBC
-		icon = GFX_goal_unknown
+		icon = GFX_BBC_Icon
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -55,7 +55,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Expand_Auto_Usage
-		icon = GFX_goal_unknown
+		icon = GFX_focus_auto_industry
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -78,7 +78,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Increase_Taxes_on_the_Gentry
-		icon = GFX_goal_unknown
+		icon = GFX_Money
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -111,7 +111,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Devalue_the_Pound
-		icon = GFX_goal_unknown
+		icon = GFX_Cash_and_Carry
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -144,7 +144,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Invest_in_Northern_English_Industry
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Arab_Industry
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -178,7 +178,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Increase_Exports
-		icon = GFX_goal_unknown
+		icon = GFX_Market_Liberalization
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -192,7 +192,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Welsh_Industrial_Investments
-		icon = GFX_goal_unknown
+		icon = GFX_Mining_Pits
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -225,7 +225,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Declare_Reconsruction_Completed
-		icon = GFX_goal_unknown
+		icon = GFX_Economic_Reconstruction_Generic
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -237,13 +237,13 @@ focus_tree = {
 		x = 5
 		y = 3
 		completion_reward = {
-			country_event = ENGRecon.1
+			country_event = ENG_event.1
 			remove_ideas = FRA_Reconstruction_Striking_Rights
 		}
 	}
 	focus = {
 		id = ENG_Expand_NHS_Funding
-		icon = GFX_goal_unknown
+		icon = GFX_healthcare
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -298,7 +298,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Industrial_Subsidies_for_Scotland
-		icon = GFX_goal_unknown
+		icon = GFX_industrial_subsidies
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -324,7 +324,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Increase_Living_Standards
-		icon = GFX_goal_unknown
+		icon = GFX_ISR_Focus_Increase_Living_Standards
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -364,7 +364,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_End_the_Greenbelt
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Arab_Infrastructure
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -407,7 +407,7 @@ focus_tree = {
 		x = 14
 		y = 1
 		completion_reward = {
-			country_event = Tanganyika.1
+			country_event = ENG_event.2
 			remove_ideas = tanganyika_groundnut_scheme
 		}
 	}
@@ -422,8 +422,7 @@ focus_tree = {
 		x = 12
 		y = 2
 		completion_reward = {
-			country_event = WhitehallFederaiton.1
-			set_global_flag = east_african_federation_enabled
+			news_event = WhitehallFederation.1
 		}
 	}
 	focus = {
@@ -437,13 +436,12 @@ focus_tree = {
 		x = 16
 		y = 2
 		completion_reward = {
-			country_event = WhitehallFederaiton.2
-			set_global_flag = central_african_federation_enabled
+			news_event = WhitehallFederation.2
 		}
 	}
 	focus = {
 		id = ENG_Reinforce_Kenya
-		icon = GFX_goal_unknown
+		icon = GFX_Kenya_State_of_Emergency
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -463,7 +461,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Increase_Colonial_Autonomy
-		icon = GFX_goal_unknown
+		icon = GFX_Freedom
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -484,7 +482,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_The_Colonial_Loans_Act
-		icon = GFX_goal_unknown
+		icon = GFX_International_Monetary_Fund
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -562,7 +560,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_The_Colonial_Development_and_Welfare_Act
-		icon = GFX_goal_unknown
+		icon = GFX_Colonial_exploration
 		search_filters = {IC_FILTER}
 		cost = 10.00
 
@@ -588,7 +586,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Fortify_Hong_Kong
-		icon = GFX_goal_unknown
+		icon = GFX_British_Defence_Hong_Kong
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -636,7 +634,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Strike_the_Immamate_of_Oman
-		icon = GFX_goal_unknown
+		icon = GFX_HeavyStrike
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -645,11 +643,13 @@ focus_tree = {
 		x = 21
 		y = 4
 		completion_reward = {
-			declare_war_on = {
-				target = SMI
-				type = annex_everything
-			}		
-			country_event = JebelWar.1
+			country_event = ENG_event.3
+			OMA = {
+				add_manpower = 25000
+				add_war_support = 0.10
+				army_experience = 25
+				air_experience = 25
+			}
 		}
 	}
 	focus = {
@@ -683,7 +683,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Rally_the_Commonwealth
-		icon = GFX_goal_unknown
+		icon = GFX_Commonwealth_Military_Collaboration
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -701,7 +701,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Introduce_New_Tactics
-		icon = GFX_goal_unknown
+		icon = GFX_Counter_Insurgency
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -720,7 +720,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Invest_in_Chemical_Warfare
-		icon = GFX_goal_unknown
+		icon = GFX_Chemical_Warfare
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -742,7 +742,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Seek_Thai_Cooperation
-		icon = GFX_goal_unknown
+		icon = GFX_Thai_Pennant
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -883,7 +883,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Develop_Counter_Insurgency_Tactics
-		icon = GFX_goal_unknown
+		icon = GFX_Counter_Insurgency
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -930,10 +930,10 @@ focus_tree = {
 		completion_reward = {
 			navy_experience = 20
 			add_tech_bonus = {
-				name = screen_hull_medium_bonus
+				name = screen_hull_heavy_bonus
 				bonus = 2
 				uses = 1
-				category = screen_hull_medium
+				category = screen_hull_heavy
 			}		
 		}
 	}
@@ -960,7 +960,7 @@ focus_tree = {
 	}	
 	focus = {
 		id = ENG_Invest_in_Nuclear_Reactor_Research
-		icon = GFX_goal_unknown
+		icon = GFX_uranium_fever
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -996,14 +996,14 @@ focus_tree = {
 			add_tech_bonus = {
 				name = cruiser_bonus
 				bonus = 1.75
-				category = screen_hull_large
+				category = battle_hull_light
 				uses = 1
 			}		
 		}
 	}
 	focus = {
 		id = ENG_The_Nuclear_Program
-		icon = GFX_goal_unknown
+		icon = GFX_nuclear_detonation
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1053,12 +1053,12 @@ focus_tree = {
 		y = 2
 		relative_position_id = ENG_The_British_Armed_Forces
 		completion_reward = {
-			country_event = ENG_Nuke_Test.1
+			country_event = ENG_nuclear.1
 		}
 	}
 	focus = {
 		id = ENG_The_Thermonuclear_Weapon_Program
-		icon = GFX_goal_unknown
+		icon = GFX_hydrogen_bomb
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1081,7 +1081,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Seek_American_Cooperation
-		icon = GFX_goal_unknown
+		icon = GFX_goal_USA_deal
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1095,13 +1095,13 @@ focus_tree = {
 		relative_position_id = ENG_The_British_Armed_Forces
 		completion_reward = {
 			USA = {
-				country_event = USENGNuclear.1
+				country_event = ENG_nuclear.2
 			}
 		}
 	}
 	focus = {
 		id = ENG_Commonwealth_Collaboration
-		icon = GFX_goal_unknown
+		icon = GFX_Commonwealth_Collaboration
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1114,7 +1114,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = ENG_The_British_Armed_Forces
 		completion_reward = {
-			country_event = COMMONWEALTH_NUCLEAR.1
+			country_event = ENG_nuclear.3
 			add_to_tech_sharing_group = COMMONWEALTH_NUCLEAR
 			SAF = { add_to_tech_sharing_group = COMMONWEALTH_NUCLEAR }
 			CAN = { add_to_tech_sharing_group = COMMONWEALTH_NUCLEAR }
@@ -1234,7 +1234,7 @@ focus_tree = {
 		y = 5
 		relative_position_id = ENG_The_British_Armed_Forces
 		completion_reward = {
-			country_event = OperationGrapple.1
+			country_event = ENG_nuclear.4
 		}
 	}
 
@@ -1290,7 +1290,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Labour_Victory_1955
-		icon = GFX_focus_generic_the_giant_wakes
+		icon = GFX_UK_Labour_Party
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1321,7 +1321,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Labour_Victory_1959
-		icon = GFX_focus_generic_the_giant_wakes
+		icon = GFX_UK_Labour_Party
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1493,14 +1493,14 @@ focus_tree = {
 					add_tech_bonus = {
 							name = agri_tech_bonus
 							bonus = 1
-							category = agri_tech
+							category = agriculture
 						}
 				}
 
 	}
 	focus = {
 		id = ENG_Labour_Victory
-		icon = GFX_focus_generic_the_giant_wakes
+		icon = GFX_UK_Labour_Party
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1531,7 +1531,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Atlee_Ministry
-		icon = GFX_focus_generic_the_giant_wakes
+		icon = GFX_UK_Labour_Party
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1822,7 +1822,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Liberal_Victory
-		icon = GFX_goal_BEL_FederalParliament
+		icon = GFX_UK_Liberal_Party
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1867,7 +1867,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Liberal_Victory_51
-		icon = GFX_goal_BEL_FederalParliament
+		icon = GFX_UK_Liberal_Party
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2179,7 +2179,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Liberal_55
-		icon = GFX_goal_BEL_FederalParliament
+		icon = GFX_UK_Liberal_Party
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2213,7 +2213,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Liberal_1959
-		icon = GFX_goal_BEL_FederalParliament
+		icon = GFX_UK_Liberal_Party
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2244,7 +2244,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Conservative_Victory
-		icon = GFX_CollaboratewithLocalElites
+		icon = GFX_UK_Conservative
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2275,7 +2275,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Churchill_Returns_to_Power
-		icon = GFX_CollaboratewithLocalElites
+		icon = GFX_UK_Conservative
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2471,7 +2471,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Conservative_Victory_1955
-		icon = GFX_CollaboratewithLocalElites
+		icon = GFX_UK_Conservative
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2506,7 +2506,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_Conservative_Victory_1959
-		icon = GFX_CollaboratewithLocalElites
+		icon = GFX_UK_Conservative
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {

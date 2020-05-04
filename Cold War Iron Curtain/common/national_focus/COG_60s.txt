@@ -43,8 +43,8 @@ focus_tree = {
 				skill = 1
 				attack_skill = 1
 				defense_skill = 1
-				#planning_skill = 1
-				#logistics_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
 				traits = {
 					politically_connected
 				}
@@ -723,7 +723,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = DOC_PM_Joseph_Iléo
+		id = DOC_PM_Joseph_Ileo
 		icon = GFX_
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -1022,7 +1022,7 @@ focus_tree = {
 			focus = DOC_Extradite_Lumumba_to_Katanga
 		}
 		prerequisite = {
-			focus = DOC_PM_Joseph_Iléo
+			focus = DOC_PM_Joseph_Ileo
 		}
 		x = 11
 		y = 14
@@ -1827,8 +1827,8 @@ focus_tree = {
 					skill = 1
 					attack_skill = 1
 					defense_skill = 1
-					#planning_skill = 1
-					#logistics_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
 					traits = {
 						career_officer
 					}
@@ -1839,8 +1839,8 @@ focus_tree = {
 					skill = 1
 					attack_skill = 1
 					defense_skill = 1
-					#planning_skill = 1
-					#logistics_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
 					traits = {
 						career_officer
 						trait_reckless
@@ -1852,8 +1852,8 @@ focus_tree = {
 					skill = 1
 					attack_skill = 1
 					defense_skill = 1
-					#planning_skill = 1
-					#logistics_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
 					traits = {
 						politically_connected
 						career_officer
@@ -2503,7 +2503,7 @@ focus_tree = {
 					add_tech_bonus = {
 							name = agri_tech_bonus
 							bonus = 0.10
-							category = agri_tech
+							category = agriculture
 						}
 						add_stability = 0.05
 				}
@@ -2564,7 +2564,7 @@ focus_tree = {
 					add_tech_bonus = {
 							name = agri_tech_bonus
 							bonus = 0.10
-							category = agri_tech
+							category = agriculture
 						}
 				}
 	}

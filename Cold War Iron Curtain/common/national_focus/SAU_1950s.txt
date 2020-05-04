@@ -46,6 +46,11 @@ focus_tree = {
 				name = "Saud bin Abdulaziz Al Saud"
 				picture = "Saud_bin_Abdulaziz_Al_Saud.dds"
 				ideology = islamic_monarchy
+				traits = {
+					champion_of_the_muslim_cause
+					non_aligned_leader
+					education_promotor
+				}
 			}
 		}
 	}
@@ -87,8 +92,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			create_country_leader = {
-				name = "Abdul Karim Ahmed Al-Qahtani"
-				picture = "Abdul_Karim_Ahmed_Al_Qahtani.dds"
+				name = "Nasser Al-Saeed"	
+				picture = "Nasser_Al_Saeed.dds"
 				ideology = pan_arabism
 			}
 			set_politics = {
@@ -272,7 +277,7 @@ focus_tree = {
 		x = 3
 		y = 12
 		completion_reward = {
-			add_ideas = gen_pro_union_2
+			add_ideas = policy_union_temp_5
 		}
 	}
 	focus = {
@@ -884,7 +889,7 @@ focus_tree = {
 		x = 19
 		y = 11
 		completion_reward = {
-			add_ideas = gen_pro_union_1
+			add_ideas = policy_union_temp_4
 		}
 	}
 	focus = {
@@ -2133,7 +2138,7 @@ focus_tree = {
 		x = 9
 		y = 12
 		completion_reward = {
-			add_ideas = gen_pro_employer_2
+			add_ideas = policy_union_temp_0
 		}
 	}
 	focus = {

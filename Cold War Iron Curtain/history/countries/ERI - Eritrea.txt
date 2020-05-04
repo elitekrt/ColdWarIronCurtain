@@ -11,7 +11,7 @@ oob = "ERI_1949"
 if = {
 	limit = { has_dlc = "Man the Guns"}
 	set_technology = {
-		ww_detection = 1
+		detection_ww = 1
 		ww_armaments = 1
 
 		ww_screens = 1
@@ -226,8 +226,12 @@ set_cosmetic_tag = ERI_ETH
 		ideology = marxism_leninism
 	}
 	drop_cosmetic_tag = yes
+	set_cosmetic_tag = ELF_ERI
 }
-1981.4.21 = {
+1962.5.27 = {
+
+}
+1981.1.1 = {
 	create_country_leader = {
 		name = "Isaias Afwerki"
 		picture = "Isaias_Afwerki.dds"
@@ -235,6 +239,7 @@ set_cosmetic_tag = ERI_ETH
 	}
 }
 1991.4.21 = {
+	drop_cosmetic_tag = yes
 	create_country_leader = {
 		name = "Isaias Afwerki"
 		picture = "Isaias_Afwerki.dds"

@@ -90,7 +90,7 @@ focus_tree = {
 				name = agri_tech_bonus
 				bonus = 1.75
 				uses = 1
-				category = agri_tech
+				category = agriculture
 			}
 		}
 	}
@@ -1181,7 +1181,7 @@ focus_tree = {
 		x = 25
 		y = 10
 		completion_reward = {
-			add_ideas = gen_pro_union_1
+			add_ideas = policy_union_temp_4
 		}
 	}
 	focus = {

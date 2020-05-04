@@ -435,14 +435,14 @@ scripted_gui = {
 
 		visible = {
 			always = yes
-		}	
+		}
 		effects = {
 			legislation_menu_open_click = {
 				set_temp_variable = { show = 1 }
 				subtract_from_temp_variable = { show = legislation_menu_show }
 				set_variable = { legislation_menu_show = show }
 				set_variable = { policy_legislation = 1 }
-			}	
+			}
 		}
 	}
 		
@@ -451,14 +451,16 @@ scripted_gui = {
 		context_type = player_context
 
 		window_name = "legislation_menu"
-
+		ai_enabled = {
+			always = no
+		}
 		visible = {
 			check_variable = { legislation_menu_show = 1 }
-		}	
+		}
 		effects = {
 			exitbutton_legislation_click = {
 				set_variable = { legislation_menu_show = 0 } 
-			}		
+			}
 			policy_switch_click = {
 				set_variable = { policy_legislation = 1 }
 			}
@@ -506,149 +508,457 @@ scripted_gui = {
 			}
 		}
 	}
-	rel_pol_tab_menu = {
+	REL_POL_tab_menu = {
 
 		context_type = player_context
-
-		window_name = "rel_pol_tab"
+		ai_enabled = {
+			always = no
+		}
+		window_name = "REL_POL_tab"
 		parent_window_name = legislation_menu
 		visible = {
 			check_variable = { policy_legislation = 2 }
-		}	
+		}
 
 		effects = {
-			policy_rel_pol_level_0_click = {
+			policy_REL_POL_regression_reaction_icon_click = {
+				news_event = REL_POL.1
+			}
+			policy_REL_POL_regression_reaction_atheist_icon_click = {
+				news_event = REL_POL.4
+			}
+			policy_REL_POL_regression_reaction_moderate_icon_click = {
+				news_event = REL_POL.2
+			}
+			policy_REL_POL_regression_reaction_minor_icon_click = {
+				news_event = REL_POL.3
+			}
+			policy_REL_POL_level_0_click = {
+				add_political_power = -600
 				set_variable = { legislation_support = 0 }
 				
-				remove_ideas = state_religion
-				remove_ideas = moralism
-				remove_ideas = pluarlism
-				remove_ideas = secularism
-				remove_ideas = atheist_state
-				remove_ideas = State_Theocracy
+				remove_ideas = policy_religion_temp_1
+				remove_ideas = policy_religion_temp_2
+				remove_ideas = policy_religion_temp_3
+				remove_ideas = policy_religion_temp_3a
+				remove_ideas = policy_religion_temp_0a
+				remove_ideas = policy_religion_temp_0
 				
-				add_ideas = State_Theocracy
+				add_ideas = policy_religion_temp_0
 				add_timed_idea = {
 					idea = rel_cooldown
-					days = 1
+					days = 1095
+				}
+				add_timed_idea = {
+					idea = rel_instability_cooldown
+					days = 1095
 				}
 			}
-			policy_rel_pol_level_1_click = {
-				set_variable = { legislation_support = 0 }				
-				remove_ideas = state_religion
-				remove_ideas = moralism
-				remove_ideas = pluarlism
-				remove_ideas = secularism
-				remove_ideas = atheist_state
-				remove_ideas = State_Theocracy
+			policy_REL_POL_level_1_click = {
+				add_political_power = -300
+				set_variable = { legislation_support = 0 }
+				remove_ideas = policy_religion_temp_1
+				remove_ideas = policy_religion_temp_2
+				remove_ideas = policy_religion_temp_3
+				remove_ideas = policy_religion_temp_3a
+				remove_ideas = policy_religion_temp_0a
+				remove_ideas = policy_religion_temp_0
 				
-				add_ideas = state_religion
+				add_ideas = policy_religion_temp_1
 				add_timed_idea = {
 					idea = rel_cooldown
-					days = 1
+					days = 730
+				}
+				add_timed_idea = {
+					idea = rel_instability_cooldown_moderate
+					days = 730
 				}
 			}
-			policy_rel_pol_level_2_click = {
+			policy_REL_POL_level_2_click = {
+				if = {
+					limit = {
+						OR = {
+							has_idea = policy_religion_temp_3
+							has_idea = policy_religion_temp_3a
+						}
+					}
+					add_timed_idea = {
+						idea = rel_instability_cooldown_minor
+						days = 365
+					}
+				}
+				add_political_power = -150
 				set_variable = { legislation_support = 0 }
 				
-				remove_ideas = state_religion
-				remove_ideas = moralism
-				remove_ideas = pluarlism
-				remove_ideas = secularism
-				remove_ideas = atheist_state
-				remove_ideas = State_Theocracy
+				remove_ideas = policy_religion_temp_1
+				remove_ideas = policy_religion_temp_2
+				remove_ideas = policy_religion_temp_3
+				remove_ideas = policy_religion_temp_3a
+				remove_ideas = policy_religion_temp_0a
+				remove_ideas = policy_religion_temp_0
 				
-				add_ideas = moralism
+				add_ideas = policy_religion_temp_2
 				add_timed_idea = {
 					idea = rel_cooldown
-					days = 1
+					days = 365
 				}
 			}
-			policy_rel_pol_level_3_click = {
+			policy_REL_POL_level_3_click = {
+				add_political_power = -150
 				set_variable = { legislation_support = 0 }
 				
-				remove_ideas = state_religion
-				remove_ideas = moralism
-				remove_ideas = pluarlism
-				remove_ideas = secularism
-				remove_ideas = atheist_state
-				remove_ideas = State_Theocracy
+				remove_ideas = policy_religion_temp_1
+				remove_ideas = policy_religion_temp_2
+				remove_ideas = policy_religion_temp_3
+				remove_ideas = policy_religion_temp_3a
+				remove_ideas = policy_religion_temp_0a
+				remove_ideas = policy_religion_temp_0
 				
-				add_ideas = pluarlism
+				add_ideas = policy_religion_temp_3
 				add_timed_idea = {
 					idea = rel_cooldown
-					days = 1
+					days = 365
 				}
 			}
-			policy_rel_pol_level_4_click = {
+			policy_REL_POL_level_3a_click = {
+				add_political_power = -150
 				set_variable = { legislation_support = 0 }
-				remove_ideas = state_religion
-				remove_ideas = moralism
-				remove_ideas = pluarlism
-				remove_ideas = secularism
-				remove_ideas = atheist_state
-				remove_ideas = State_Theocracy
-				add_ideas = secularism
+				remove_ideas = policy_religion_temp_1
+				remove_ideas = policy_religion_temp_2
+				remove_ideas = policy_religion_temp_3
+				remove_ideas = policy_religion_temp_3a
+				remove_ideas = policy_religion_temp_0a
+				remove_ideas = policy_religion_temp_0
+				add_ideas = policy_religion_temp_3a
 				add_timed_idea = {
 					idea = rel_cooldown
-					days = 1
+					days = 365
 				}
-			}			
-			policy_rel_pol_level_5_click = {
+			}
+			policy_REL_POL_level_0a_click = {
+				add_political_power = -600
 				set_variable = { legislation_support = 0 }
-				remove_ideas = state_religion
-				remove_ideas = moralism
-				remove_ideas = pluarlism
-				remove_ideas = secularism
-				remove_ideas = atheist_state
-				remove_ideas = State_Theocracy
-				add_ideas = atheist_state
+				remove_ideas = policy_religion_temp_1
+				remove_ideas = policy_religion_temp_2
+				remove_ideas = policy_religion_temp_3
+				remove_ideas = policy_religion_temp_3a
+				remove_ideas = policy_religion_temp_0a
+				remove_ideas = policy_religion_temp_0
+				add_ideas = policy_religion_temp_0a
 				add_timed_idea = {
 					idea = rel_cooldown
-					days = 1
+					days = 1095
 				}
-			}					
+				add_timed_idea = {
+					idea = rel_instability_cooldown_atheist
+					days = 1095
+				}
+			}
 		}
 		triggers = {
-			policy_rel_pol_level_0_click_enabled = {
-				NOT = { has_idea = State_Theocracy }
+			policy_REL_POL_level_0_click_enabled = {
+				has_political_power > 589
+				OR = {
+					has_idea = policy_religion_temp_1
+				}
+				NOT = { has_idea = rel_cooldown }
+				OR = {
+					has_government = monarchism
+					has_government = Salafism
+					has_government = radical_shiaism
+				}
+			}
+				policy_REL_POL_level_0_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_religion_temp_1
+						}
+						has_idea = rel_cooldown
+						NOT = { 
+							OR = {
+								has_government = monarchism
+								has_government = Salafism
+								has_government = radical_shiaism
+							} 
+						}
+					}
+				}
+				policy_REL_POL_level_0_unaffordable_visible = {
+					NOT = { has_political_power > 589 }
+					OR = {
+						has_idea = policy_religion_temp_1
+					}
+					NOT = { has_idea = rel_cooldown }
+					OR = {
+						has_government = monarchism
+						has_government = Salafism
+						has_government = radical_shiaism
+					}
+				}
+				policy_REL_POL_level_0_completed_visible = {
+					has_idea = policy_religion_temp_0
+				}
+			policy_REL_POL_level_1_click_enabled = {
+				has_political_power > 339
+				OR = {
+					has_idea = policy_religion_temp_2
+					has_idea = policy_religion_temp_0
+				}
+				NOT = { has_idea = rel_cooldown }
+				OR = {
+					has_government = monarchism
+					has_government = Salafism
+					has_government = radical_shiaism
+					has_government = islamism
+					has_government = Christian_Democratic
+				}
+			}
+				policy_REL_POL_level_1_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_religion_temp_0
+							has_idea = policy_religion_temp_2
+						}
+						has_idea = rel_cooldown
+						NOT = { 
+							OR = {
+								has_government = monarchism
+								has_government = Salafism
+								has_government = radical_shiaism
+								has_government = islamism
+								has_government = Christian_Democratic
+							} 
+						}
+					}
+				}
+				policy_REL_POL_level_1_unaffordable_visible = {
+					NOT = { has_political_power > 339 }
+					OR = {
+						has_idea = policy_religion_temp_0
+						has_idea = policy_religion_temp_2
+					}
+					NOT = { has_idea = rel_cooldown }
+					OR = {
+						has_government = monarchism
+						has_government = Salafism
+						has_government = radical_shiaism
+						has_government = islamism
+						has_government = Christian_Democratic
+					}
+				}
+				policy_REL_POL_level_1_completed_visible = {
+					has_idea = policy_religion_temp_1
+				}
+			policy_REL_POL_level_2_click_enabled = {
+				has_political_power > 139
+				OR = {
+					has_idea = policy_religion_temp_1
+					has_idea = policy_religion_temp_3
+					has_idea = policy_religion_temp_3a
+					
+					has_government = fascism
+					has_government = neutrality
+				}
+				NOT = { has_idea = rel_cooldown }
+				
+			}
+				policy_REL_POL_level_2_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_religion_temp_1
+							has_idea = policy_religion_temp_3
+							has_idea = policy_religion_temp_3a
+							has_government = fascism
+							has_government = neutrality
+						}
+						has_idea = rel_cooldown
+					}
+				}
+				policy_REL_POL_level_2_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					OR = {
+						has_idea = policy_religion_temp_1
+						has_idea = policy_religion_temp_3
+						has_idea = policy_religion_temp_3a
+						has_government = fascism
+						has_government = neutrality
+					}
+					NOT = { has_idea = rel_cooldown }
+				}
+				policy_REL_POL_level_2_completed_visible = {
+					has_idea = policy_religion_temp_2
+				}
+			policy_REL_POL_level_3_click_enabled = {
+				has_political_power > 139
+				OR = {
+					has_idea = policy_religion_temp_2
+					has_idea = policy_religion_temp_3a
+				}
+				NOT = { has_idea = rel_cooldown }
+				NOT = {
+					has_government = Salafism
+					has_government = radical_shiaism
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+				policy_REL_POL_level_3_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_religion_temp_2
+							has_idea = policy_religion_temp_3a
+						}
+						has_idea = rel_cooldown
+						has_government = Salafism
+						has_government = radical_shiaism
+						has_government = fascism
+						has_government = neutrality
+					}
+				}
+				policy_REL_POL_level_3_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					OR = {
+						has_idea = policy_religion_temp_2
+						has_idea = policy_religion_temp_3a
+					}
+					NOT = { has_idea = rel_cooldown }
+				}
+				policy_REL_POL_level_3_completed_visible = {
+					has_idea = policy_religion_temp_3
+				}
+			policy_REL_POL_level_3a_click_enabled = {
+				has_political_power > 139
+				OR = {
+					has_idea = policy_religion_temp_0a
+					has_idea = policy_religion_temp_3
+					has_idea = policy_religion_temp_2
+				}
+				NOT = { has_idea = rel_cooldown }
+				NOT = {
+					has_government = Salafism
+					has_government = radical_shiaism
+					has_government = islamism
+					has_government = Christian_Democratic
+				}
+			}
+				policy_REL_POL_level_3a_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_religion_temp_2
+							has_idea = policy_religion_temp_0a
+							has_idea = policy_religion_temp_3
+						}
+						has_idea = rel_cooldown
+						has_government = Salafism
+						has_government = radical_shiaism
+						has_government = islamism
+						has_government = Christian_Democratic
+					}
+				}
+				policy_REL_POL_level_3a_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					OR = {
+						has_idea = policy_religion_temp_2
+						has_idea = policy_religion_temp_0a
+						has_idea = policy_religion_temp_3
+					}
+					NOT = { has_idea = rel_cooldown }
+				}
+				policy_REL_POL_level_3a_completed_visible = {
+					has_idea = policy_religion_temp_3a
+				}
+			policy_REL_POL_level_0a_click_enabled = {
+				has_political_power > 589
+				OR = {
+					has_idea = policy_religion_temp_3a
+					has_government = communism
+					has_government = maoism
+					has_government = trotskyism
+					has_government = neutrality
+					has_government = nationalism
+				}
 				NOT = { has_idea = rel_cooldown }
 			}
-			policy_rel_pol_level_1_click_enabled = {
-				NOT = { has_idea = state_religion }
-				NOT = { has_idea = rel_cooldown }
-			}
-			policy_rel_pol_level_2_click_enabled = {
-				NOT = { has_idea = moralism }
-				NOT = { has_idea = rel_cooldown }
-			}
-			policy_rel_pol_level_3_click_enabled = {
-				NOT = { has_idea = pluarlism }
-				NOT = { has_idea = rel_cooldown }
-			}
-			policy_rel_pol_level_4_click_enabled = {
-				NOT = { has_idea = secularism }
-				NOT = { has_idea = rel_cooldown }
-			}
-			policy_rel_pol_level_5_click_enabled = {
-				NOT = { has_idea = atheist_state }
-				NOT = { has_idea = rel_cooldown }
-			}
+				policy_REL_POL_level_0a_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_religion_temp_3a
+						}
+						has_idea = rel_cooldown
+						has_government = communism
+						has_government = maoism
+						has_government = trotskyism
+						has_government = neutrality
+						has_government = nationalism
+					}
+				}
+				policy_REL_POL_level_0a_unaffordable_visible = {
+					NOT = { has_political_power > 589 }
+					OR = {
+						has_idea = policy_religion_temp_3a
+						has_government = communism
+						has_government = maoism
+						has_government = trotskyism
+						has_government = neutrality
+						has_government = nationalism
+					}
+					NOT = { has_idea = rel_cooldown }
+				}
+				policy_REL_POL_level_0a_completed_visible = {
+					has_idea = policy_religion_temp_0a
+				}
 
+			policy_REL_POL_cooldown_icon_visible = {
+				has_idea = rel_cooldown
+			}
+			policy_REL_POL_regression_reaction_minor_icon_visible = {
+				has_idea = rel_instability_cooldown_minor
+			}
+			policy_REL_POL_regression_reaction_moderate_icon_visible = {
+				has_idea = rel_instability_cooldown_moderate
+			}
+			policy_REL_POL_regression_reaction_icon_visible = {
+				has_idea = rel_instability_cooldown
+			}
+			policy_REL_POL_regression_reaction_atheist_icon_visible = {
+				has_idea = rel_instability_cooldown_atheist
+			}
 		}
 	}
 
 	public_policy_tab_menu = {
-
+		ai_enabled = {
+			always = no
+		}
 		context_type = player_context
 
 		window_name = "public_policy_tab"
 		parent_window_name = legislation_menu
 		visible = {
 			check_variable = { policy_legislation = 1 }
-		}	
+		}
 		effects = {
-			policy_services_level_0_click = {
+			policy_PUB_POL_level_0_click = {
+				if = {
+					limit = { NOT = { has_idea = pub_expansion_cooldown } }
+					add_political_power = -150
+				}
+				if = {
+					limit = {
+						has_idea = policy_services_temp_1
+						NOT = {
+							has_idea = policy_services_temp_1_preserved
+							has_idea = policy_services_temp_2_preserved
+							has_idea = policy_services_temp_3_preserved
+							has_idea = pub_expansion_cooldown
+						}
+					}
+					add_timed_idea = { idea = policy_services_temp_1_preserved days = 730 }
+				}
+				if = {
+					limit = { has_idea = pub_expansion_cooldown }
+					remove_ideas = pub_expansion_cooldown
+				}
 				set_variable = { legislation_support = 0 }
 				remove_ideas = policy_services_temp_0
 				remove_ideas = policy_services_temp_1
@@ -658,12 +968,56 @@ scripted_gui = {
 				add_ideas = policy_services_temp_0
 				
 				public_expenditure = yes
-				add_timed_idea = {
-					idea = pol_cooldown
-					days = 1
-				}
 			}
-			policy_services_level_1_click = {
+			policy_PUB_POL_level_1_click = {
+				if = {
+					limit = { 
+						NOT = { 
+							OR = { 
+								has_idea = policy_services_temp_1_preserved 
+								has_idea = pub_expansion_cooldown 
+							}
+						} 
+					}
+					add_political_power = -150
+				}
+				if = {
+					limit = {
+						OR = {
+							has_idea = policy_services_temp_1_preserved 
+							has_idea = pub_expansion_cooldown 
+						}
+					}
+					remove_ideas = policy_services_temp_1_preserved
+					remove_ideas = pub_expansion_cooldown
+					add_ideas = cooldown_void
+				}
+				if = {
+					limit = {
+						has_idea = policy_services_temp_2
+						NOT = {
+							has_idea = policy_services_temp_1_preserved
+							has_idea = policy_services_temp_2_preserved
+							has_idea = policy_services_temp_3_preserved
+							has_idea = pub_expansion_cooldown
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = { idea = policy_services_temp_2_preserved days = 730 }
+				}
+				if = {
+					limit = {
+						has_idea = policy_services_temp_0
+						NOT = {
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = {
+						idea = pub_expansion_cooldown
+						days = 730
+					}
+				}
+				remove_ideas = cooldown_void
 				set_variable = { legislation_support = 0 }
 				
 				remove_ideas = policy_services_temp_0
@@ -673,12 +1027,56 @@ scripted_gui = {
 				
 				add_ideas = policy_services_temp_1
 				public_expenditure = yes
-				add_timed_idea = {
-					idea = pol_cooldown
-					days = 1
-				}
 			}
-			policy_services_level_2_click = {
+			policy_PUB_POL_level_2_click = {
+				if = {
+					limit = { 
+						NOT = { 
+							OR = { 
+								has_idea = policy_services_temp_2_preserved 
+								has_idea = pub_expansion_cooldown 
+							} 
+						} 
+					}
+					add_political_power = -150
+				}
+				if = {
+					limit = { 
+						OR = { 
+							has_idea = policy_services_temp_2_preserved 
+							has_idea = pub_expansion_cooldown 
+						} 
+					}
+					remove_ideas = policy_services_temp_2_preserved
+					remove_ideas = pub_expansion_cooldown
+					add_ideas = cooldown_void
+				}
+				if = {
+					limit = {
+						has_idea = policy_services_temp_3
+						NOT = {
+							has_idea = policy_services_temp_1_preserved
+							has_idea = policy_services_temp_2_preserved
+							has_idea = policy_services_temp_3_preserved
+							has_idea = pub_expansion_cooldown
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = { idea = policy_services_temp_3_preserved days = 730 }
+				}
+				if = {
+					limit = {
+						has_idea = policy_services_temp_1
+						NOT = {
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = {
+						idea = pub_expansion_cooldown
+						days = 730
+					}
+				}
+				remove_ideas = cooldown_void
 				set_variable = { legislation_support = 0 }
 				
 				remove_ideas = policy_services_temp_0
@@ -688,12 +1086,37 @@ scripted_gui = {
 				
 				add_ideas = policy_services_temp_2
 				public_expenditure = yes
-				add_timed_idea = {
-					idea = pol_cooldown
-					days = 1
-				}
 			}
-			policy_services_level_3_click = {
+			policy_PUB_POL_level_3_click = {
+				if = {
+					limit = { 
+						NOT = {
+							OR = {
+								has_idea = policy_services_temp_3_preserved
+								has_idea = pub_expansion_cooldown
+							}
+						}
+					}
+					add_political_power = -150
+				}
+				if = {
+					limit = { has_idea = policy_services_temp_3_preserved }
+					remove_ideas = policy_services_temp_3_preserved
+					add_ideas = cooldown_void
+				}
+				if = {
+					limit = {
+						has_idea = policy_services_temp_2
+						NOT = {
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = {
+						idea = pub_expansion_cooldown
+						days = 730
+					}
+				}
+				remove_ideas = cooldown_void
 				set_variable = { legislation_support = 0 }
 				
 				remove_ideas = policy_services_temp_0
@@ -703,49 +1126,206 @@ scripted_gui = {
 				
 				add_ideas = policy_services_temp_3
 				public_expenditure = yes
-				add_timed_idea = {
-					idea = pol_cooldown
-					days = 1
-				}
 			}
-			
 		}
 		triggers = {
-			policy_services_level_0_click_enabled = {
-				NOT = { has_idea = policy_services_temp_0 }
-				NOT = { has_idea = pol_cooldown }
-				
+			policy_PUB_POL_level_0_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = pub_expansion_cooldown
+				}
+				OR = {
+					has_idea = policy_services_temp_1
+				}
 			}
-			policy_services_level_1_click_enabled = {
-				NOT = { has_idea = policy_services_temp_1 }
+				policy_PUB_POL_level_0_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_services_temp_1
+						}
+					}
+				}
+				policy_PUB_POL_level_0_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					OR = {
+						has_idea = policy_services_temp_1
+					}
+				}
+				policy_PUB_POL_level_0_completed_visible = {
+					has_idea = policy_services_temp_0
+				}
+			policy_PUB_POL_level_1_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = pub_expansion_cooldown
+					has_idea = policy_services_temp_1_preserved
+				}
+				OR = {
+					has_idea = policy_services_temp_0
+					has_idea = policy_services_temp_2
+					has_idea = policy_services_temp_1_preserved
+				}
 				NOT = { has_country_flag = IMF_SAP_ENACTED }
-				NOT = { has_idea = pol_cooldown }
+				OR = {
+					NOT = { has_idea = pub_expansion_cooldown }
+					has_idea = policy_services_temp_2
+				}
 			}
-			policy_services_level_2_click_enabled = {
-				NOT = { has_idea = policy_services_temp_2 }
+				policy_PUB_POL_level_1_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_services_temp_0
+							has_idea = policy_services_temp_2
+							has_idea = policy_services_temp_1_preserved
+						}
+						has_country_flag = IMF_SAP_ENACTED
+						has_idea = pub_expansion_cooldown
+						has_idea = policy_services_temp_2_preserved
+						has_idea = policy_services_temp_3_preserved
+					}
+					NOT = {
+						has_idea = policy_services_temp_2
+					}
+				}
+				policy_PUB_POL_level_1_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					NOT = { has_idea = policy_services_temp_1_preserved }
+					OR = {
+						has_idea = policy_services_temp_0
+						has_idea = policy_services_temp_2
+					}
+					NOT = { has_idea = pub_expansion_cooldown }
+				}
+				policy_PUB_POL_level_1_completed_visible = {
+					has_idea = policy_services_temp_1
+				}
+			policy_PUB_POL_level_2_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = pub_expansion_cooldown
+					has_idea = policy_services_temp_2_preserved
+				}
+				OR = {
+					has_idea = policy_services_temp_1
+					has_idea = policy_services_temp_3
+					has_idea = policy_services_temp_2_preserved
+				}
 				NOT = { has_country_flag = IMF_SAP_ENACTED }
-				NOT = { has_idea = pol_cooldown }
+				OR = {
+					NOT = { has_idea = pub_expansion_cooldown }
+					has_idea = policy_services_temp_3
+				}
 			}
-			policy_services_level_3_click_enabled = {
-				NOT = { has_idea = policy_services_temp_3 }
+				policy_PUB_POL_level_2_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_services_temp_1
+							has_idea = policy_services_temp_2_preserved
+						}
+						has_country_flag = IMF_SAP_ENACTED
+						has_idea = pub_expansion_cooldown
+						has_idea = policy_services_temp_3_preserved
+					}
+					NOT = {
+						has_idea = policy_services_temp_3
+					}
+				}
+				policy_PUB_POL_level_2_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					NOT = { has_idea = policy_services_temp_2_preserved }
+					OR = {
+						has_idea = policy_services_temp_1
+						has_idea = policy_services_temp_3
+					}
+					NOT = { has_idea = pub_expansion_cooldown }
+				}
+				policy_PUB_POL_level_2_completed_visible = {
+					has_idea = policy_services_temp_2
+				}
+			policy_PUB_POL_level_3_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = policy_services_temp_3_preserved
+				}
+				OR = {
+					has_idea = policy_services_temp_2
+					has_idea = policy_services_temp_3_preserved
+				}
 				NOT = { has_country_flag = IMF_SAP_ENACTED }
-				NOT = { has_idea = pol_cooldown }
+				NOT = { has_idea = pub_expansion_cooldown }
 			}
-
+				policy_PUB_POL_level_3_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_services_temp_2
+							has_idea = policy_services_temp_3_preserved
+						}
+						has_country_flag = IMF_SAP_ENACTED
+						has_idea = pub_expansion_cooldown
+					}
+				}
+				policy_PUB_POL_level_3_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					NOT = { has_idea = policy_services_temp_3_preserved }
+					OR = {
+						has_idea = policy_services_temp_2
+					}
+					NOT = { has_idea = pub_expansion_cooldown }
+				}
+				policy_PUB_POL_level_3_completed_visible = {
+					has_idea = policy_services_temp_3
+				}
+			
+			policy_services_pub_expansion_cooldown_icon_visible = {
+				has_idea = pub_expansion_cooldown
+			}
+			policy_services_temp_1_preserved_icon_visible = {
+				has_idea = policy_services_temp_1_preserved
+			}
+			policy_services_temp_2_preserved_icon_visible = {
+				has_idea = policy_services_temp_2_preserved
+			}
+			policy_services_temp_3_preserved_icon_visible = {
+				has_idea = policy_services_temp_3_preserved
+			}
 		}
-	}	
+	}
 
 	health_policy_tab_menu = {
-
+		ai_enabled = {
+			always = no
+		}
 		context_type = player_context
 
 		window_name = "health_policy_tab"
 		parent_window_name = legislation_menu
 		visible = {
 			check_variable = { policy_legislation = 1 }
-		}	
+		}
 		effects = {
-			policy_healthcare_level_0_click = {
+			policy_HEALTH_POL_level_0_click = {
+				if = {
+					limit = { NOT = { has_idea = health_expansion_cooldown } }
+					add_political_power = -150
+				}
+				if = {
+					limit = {
+						has_idea = policy_healthcare_temp_1
+						NOT = {
+							has_idea = policy_healthcare_temp_1_preserved
+							has_idea = policy_healthcare_temp_2_preserved
+							has_idea = policy_healthcare_temp_3_preserved
+							has_idea = policy_healthcare_temp_4_preserved
+							has_idea = policy_healthcare_temp_5_preserved
+							has_idea = health_expansion_cooldown
+						}
+					}
+					add_timed_idea = { idea = policy_healthcare_temp_1_preserved days = 730 }
+				}
+				if = {
+					limit = { has_idea = health_expansion_cooldown }
+					remove_ideas = health_expansion_cooldown
+				}
 				set_variable = { legislation_support = 0 }
 				remove_ideas = policy_healthcare_temp_0
 				remove_ideas = policy_healthcare_temp_1
@@ -755,13 +1335,60 @@ scripted_gui = {
 				remove_ideas = policy_healthcare_temp_5
 				
 				add_ideas = policy_healthcare_temp_0
+				
 				health_expenditure = yes
-				add_timed_idea = {
-					idea = hel_cooldown
-					days = 1
-				}
 			}
-			policy_healthcare_level_1_click = {
+			policy_HEALTH_POL_level_1_click = {
+				if = {
+					limit = { 
+						NOT = { 
+							OR = { 
+								has_idea = policy_healthcare_temp_1_preserved 
+								has_idea = health_expansion_cooldown 
+							}
+						} 
+					}
+					add_political_power = -150
+				}
+				if = {
+					limit = {
+						OR = {
+							has_idea = policy_healthcare_temp_1_preserved 
+							has_idea = health_expansion_cooldown 
+						}
+					}
+					remove_ideas = policy_healthcare_temp_1_preserved
+					remove_ideas = health_expansion_cooldown
+					add_ideas = cooldown_void
+				}
+				if = {
+					limit = {
+						has_idea = policy_healthcare_temp_2
+						NOT = {
+							has_idea = policy_healthcare_temp_1_preserved
+							has_idea = policy_healthcare_temp_2_preserved
+							has_idea = policy_healthcare_temp_3_preserved
+							has_idea = policy_healthcare_temp_4_preserved
+							has_idea = policy_healthcare_temp_5_preserved
+							has_idea = health_expansion_cooldown
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = { idea = policy_healthcare_temp_2_preserved days = 730 }
+				}
+				if = {
+					limit = {
+						has_idea = policy_healthcare_temp_0
+						NOT = {
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = {
+						idea = health_expansion_cooldown
+						days = 730
+					}
+				}
+				remove_ideas = cooldown_void
 				set_variable = { legislation_support = 0 }
 				
 				remove_ideas = policy_healthcare_temp_0
@@ -773,12 +1400,58 @@ scripted_gui = {
 				
 				add_ideas = policy_healthcare_temp_1
 				health_expenditure = yes
-				add_timed_idea = {
-					idea = hel_cooldown
-					days = 1
-				}
 			}
-			policy_healthcare_level_2_click = {
+			policy_HEALTH_POL_level_2_click = {
+				if = {
+					limit = { 
+						NOT = { 
+							OR = { 
+								has_idea = policy_healthcare_temp_2_preserved 
+								has_idea = health_expansion_cooldown 
+							} 
+						} 
+					}
+					add_political_power = -150
+				}
+				if = {
+					limit = { 
+						OR = { 
+							has_idea = policy_healthcare_temp_2_preserved 
+							has_idea = health_expansion_cooldown 
+						} 
+					}
+					remove_ideas = policy_healthcare_temp_2_preserved
+					remove_ideas = health_expansion_cooldown
+					add_ideas = cooldown_void
+				}
+				if = {
+					limit = {
+						has_idea = policy_healthcare_temp_3
+						NOT = {
+							has_idea = policy_healthcare_temp_1_preserved
+							has_idea = policy_healthcare_temp_2_preserved
+							has_idea = policy_healthcare_temp_3_preserved
+							has_idea = policy_healthcare_temp_4_preserved
+							has_idea = policy_healthcare_temp_5_preserved
+							has_idea = health_expansion_cooldown
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = { idea = policy_healthcare_temp_3_preserved days = 730 }
+				}
+				if = {
+					limit = {
+						has_idea = policy_healthcare_temp_1
+						NOT = {
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = {
+						idea = health_expansion_cooldown
+						days = 730
+					}
+				}
+				remove_ideas = cooldown_void
 				set_variable = { legislation_support = 0 }
 				
 				remove_ideas = policy_healthcare_temp_0
@@ -790,12 +1463,58 @@ scripted_gui = {
 				
 				add_ideas = policy_healthcare_temp_2
 				health_expenditure = yes
-				add_timed_idea = {
-					idea = hel_cooldown
-					days = 1
-				}
 			}
-			policy_healthcare_level_3_click = {
+			policy_HEALTH_POL_level_3_click = {
+				if = {
+					limit = { 
+						NOT = { 
+							OR = { 
+								has_idea = policy_healthcare_temp_3_preserved 
+								has_idea = health_expansion_cooldown 
+							} 
+						} 
+					}
+					add_political_power = -150
+				}
+				if = {
+					limit = {
+						OR = { 
+							has_idea = policy_healthcare_temp_3_preserved 
+							has_idea = health_expansion_cooldown 
+						} 
+					}
+					remove_ideas = policy_healthcare_temp_3_preserved
+					remove_ideas = health_expansion_cooldown
+					add_ideas = cooldown_void
+				}
+				if = {
+					limit = {
+						has_idea = policy_healthcare_temp_4
+						NOT = {
+							has_idea = policy_healthcare_temp_1_preserved
+							has_idea = policy_healthcare_temp_2_preserved
+							has_idea = policy_healthcare_temp_3_preserved
+							has_idea = policy_healthcare_temp_4_preserved
+							has_idea = policy_healthcare_temp_5_preserved
+							has_idea = health_expansion_cooldown
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = { idea = policy_healthcare_temp_3_preserved days = 730 }
+				}
+				if = {
+					limit = {
+						has_idea = policy_healthcare_temp_2
+						NOT = {
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = {
+						idea = health_expansion_cooldown
+						days = 730
+					}
+				}
+				remove_ideas = cooldown_void
 				set_variable = { legislation_support = 0 }
 				
 				remove_ideas = policy_healthcare_temp_0
@@ -807,12 +1526,58 @@ scripted_gui = {
 				
 				add_ideas = policy_healthcare_temp_3
 				health_expenditure = yes
-				add_timed_idea = {
-					idea = hel_cooldown
-					days = 1
-				}
 			}
-			policy_healthcare_level_4_click = {
+			policy_HEALTH_POL_level_4_click = {
+				if = {
+					limit = { 
+						NOT = { 
+							OR = { 
+								has_idea = policy_healthcare_temp_4_preserved 
+								has_idea = health_expansion_cooldown 
+							} 
+						} 
+					}
+					add_political_power = -150
+				}
+				if = {
+					limit = { 
+						OR = { 
+							has_idea = policy_healthcare_temp_4_preserved 
+							has_idea = health_expansion_cooldown 
+						} 
+					}
+					remove_ideas = policy_healthcare_temp_4_preserved
+					remove_ideas = health_expansion_cooldown
+					add_ideas = cooldown_void
+				}
+				if = {
+					limit = {
+						has_idea = policy_healthcare_temp_5
+						NOT = {
+							has_idea = policy_healthcare_temp_1_preserved
+							has_idea = policy_healthcare_temp_2_preserved
+							has_idea = policy_healthcare_temp_3_preserved
+							has_idea = policy_healthcare_temp_4_preserved
+							has_idea = policy_healthcare_temp_5_preserved
+							has_idea = health_expansion_cooldown
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = { idea = policy_healthcare_temp_4_preserved days = 730 }
+				}
+				if = {
+					limit = {
+						has_idea = policy_healthcare_temp_3
+						NOT = {
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = {
+						idea = health_expansion_cooldown
+						days = 730
+					}
+				}
+				remove_ideas = cooldown_void
 				set_variable = { legislation_support = 0 }
 				
 				remove_ideas = policy_healthcare_temp_0
@@ -824,12 +1589,37 @@ scripted_gui = {
 				
 				add_ideas = policy_healthcare_temp_4
 				health_expenditure = yes
-				add_timed_idea = {
-					idea = hel_cooldown
-					days = 1
+			}
+			policy_HEALTH_POL_level_5_click = {
+				if = {
+					limit = { 
+						NOT = {
+							OR = {
+								has_idea = policy_healthcare_temp_5_preserved
+								has_idea = health_expansion_cooldown
+							}
+						}
+					}
+					add_political_power = -150
 				}
-			}			
-			policy_healthcare_level_5_click = {
+				if = {
+					limit = { has_idea = policy_healthcare_temp_5_preserved }
+					remove_ideas = policy_healthcare_temp_5_preserved
+					add_ideas = cooldown_void
+				}
+				if = {
+					limit = {
+						has_idea = policy_healthcare_temp_4
+						NOT = {
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = {
+						idea = health_expansion_cooldown
+						days = 730
+					}
+				}
+				remove_ideas = cooldown_void
 				set_variable = { legislation_support = 0 }
 				
 				remove_ideas = policy_healthcare_temp_0
@@ -841,55 +1631,300 @@ scripted_gui = {
 				
 				add_ideas = policy_healthcare_temp_5
 				health_expenditure = yes
-				add_timed_idea = {
-					idea = hel_cooldown
-					days = 1
-				}
-			}					
+			}
 		}
 		triggers = {
-			policy_healthcare_level_0_click_enabled = {
-				NOT = { has_idea = policy_healthcare_temp_0 }
-				NOT = { has_idea = hel_cooldown }
+			policy_HEALTH_POL_level_0_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = health_expansion_cooldown
+				}
+				OR = {
+					has_idea = policy_healthcare_temp_1
+				}
 			}
-			policy_healthcare_level_1_click_enabled = {
-				NOT = { has_idea = policy_healthcare_temp_1 }
-				NOT = { has_idea = hel_cooldown }
-			}
-			policy_healthcare_level_2_click_enabled = {
-				NOT = { has_idea = policy_healthcare_temp_2 }
+				policy_HEALTH_POL_level_0_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_healthcare_temp_1
+						}
+					}
+				}
+				policy_HEALTH_POL_level_0_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					OR = {
+						has_idea = policy_healthcare_temp_1
+					}
+				}
+				policy_HEALTH_POL_level_0_completed_visible = {
+					has_idea = policy_healthcare_temp_0
+				}
+			policy_HEALTH_POL_level_1_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = health_expansion_cooldown
+					has_idea = policy_healthcare_temp_1_preserved
+				}
+				OR = {
+					has_idea = policy_healthcare_temp_0
+					has_idea = policy_healthcare_temp_2
+					has_idea = policy_healthcare_temp_1_preserved
+				}
 				NOT = { has_country_flag = IMF_SAP_ENACTED }
-				NOT = { has_idea = hel_cooldown }
+				OR = {
+					NOT = { has_idea = health_expansion_cooldown }
+					has_idea = policy_healthcare_temp_2
+				}
 			}
-			policy_healthcare_level_3_click_enabled = {
-				NOT = { has_idea = policy_healthcare_temp_3 }
+				policy_HEALTH_POL_level_1_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_healthcare_temp_0
+							has_idea = policy_healthcare_temp_1_preserved
+						}
+						has_country_flag = IMF_SAP_ENACTED
+						has_idea = health_expansion_cooldown
+						has_idea = policy_healthcare_temp_2_preserved
+						has_idea = policy_healthcare_temp_3_preserved
+						has_idea = policy_healthcare_temp_4_preserved
+						has_idea = policy_healthcare_temp_5_preserved
+					}
+					NOT = {
+						has_idea = policy_healthcare_temp_2
+					}
+				}
+				policy_HEALTH_POL_level_1_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					NOT = { has_idea = policy_healthcare_temp_1_preserved }
+					OR = {
+						has_idea = policy_healthcare_temp_0
+						has_idea = policy_healthcare_temp_2
+					}
+					NOT = { has_idea = health_expansion_cooldown }
+				}
+				policy_HEALTH_POL_level_1_completed_visible = {
+					has_idea = policy_healthcare_temp_1
+				}
+			policy_HEALTH_POL_level_2_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = health_expansion_cooldown
+					has_idea = policy_healthcare_temp_2_preserved
+				}
+				OR = {
+					has_idea = policy_healthcare_temp_1
+					has_idea = policy_healthcare_temp_3
+					has_idea = policy_healthcare_temp_2_preserved
+				}
 				NOT = { has_country_flag = IMF_SAP_ENACTED }
-				NOT = { has_idea = hel_cooldown }
+				OR = {
+					NOT = { has_idea = health_expansion_cooldown }
+					has_idea = policy_healthcare_temp_3
+				}
 			}
-			policy_healthcare_level_4_click_enabled = {
-				NOT = { has_idea = policy_healthcare_temp_4 }
+				policy_HEALTH_POL_level_2_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_healthcare_temp_1
+							has_idea = policy_healthcare_temp_2_preserved
+						}
+						has_country_flag = IMF_SAP_ENACTED
+						has_idea = health_expansion_cooldown
+						has_idea = policy_healthcare_temp_3_preserved
+						has_idea = policy_healthcare_temp_4_preserved
+						has_idea = policy_healthcare_temp_5_preserved
+					}
+					NOT = {
+						has_idea = policy_healthcare_temp_3
+					}
+				}
+				policy_HEALTH_POL_level_2_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					NOT = { has_idea = policy_healthcare_temp_2_preserved }
+					OR = {
+						has_idea = policy_healthcare_temp_1
+						has_idea = policy_healthcare_temp_3
+					}
+					NOT = { has_idea = health_expansion_cooldown }
+				}
+				policy_HEALTH_POL_level_2_completed_visible = {
+					has_idea = policy_healthcare_temp_2
+				}
+			policy_HEALTH_POL_level_3_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = health_expansion_cooldown
+					has_idea = policy_healthcare_temp_3_preserved
+				}
+				OR = {
+					has_idea = policy_healthcare_temp_2
+					has_idea = policy_healthcare_temp_4
+					has_idea = policy_healthcare_temp_3_preserved
+				}
 				NOT = { has_country_flag = IMF_SAP_ENACTED }
-				NOT = { has_idea = hel_cooldown }
+				OR = {
+					NOT = { has_idea = health_expansion_cooldown }
+					has_idea = policy_healthcare_temp_4
+				}
 			}
-			policy_healthcare_level_5_click_enabled = {
-				NOT = { has_idea = policy_healthcare_temp_5 }
+				policy_HEALTH_POL_level_3_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_healthcare_temp_2
+							has_idea = policy_healthcare_temp_3_preserved
+						}
+						has_country_flag = IMF_SAP_ENACTED
+						has_idea = health_expansion_cooldown
+						has_idea = policy_healthcare_temp_4_preserved
+						has_idea = policy_healthcare_temp_5_preserved
+					}
+					NOT = {
+						has_idea = policy_healthcare_temp_4
+					}
+				}
+				policy_HEALTH_POL_level_3_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					NOT = { has_idea = policy_healthcare_temp_3_preserved }
+					OR = {
+						has_idea = policy_healthcare_temp_2
+						has_idea = policy_healthcare_temp_4
+					}
+					NOT = { has_idea = health_expansion_cooldown }
+				}
+				policy_HEALTH_POL_level_3_completed_visible = {
+					has_idea = policy_healthcare_temp_3
+				}
+			policy_HEALTH_POL_level_4_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = health_expansion_cooldown
+					has_idea = policy_healthcare_temp_4_preserved
+				}
+				OR = {
+					has_idea = policy_healthcare_temp_3
+					has_idea = policy_healthcare_temp_5
+					has_idea = policy_healthcare_temp_4_preserved
+				}
 				NOT = { has_country_flag = IMF_SAP_ENACTED }
-				NOT = { has_idea = hel_cooldown }
+				OR = {
+					NOT = { has_idea = health_expansion_cooldown }
+					has_idea = policy_healthcare_temp_5
+				}
 			}
-
+				policy_HEALTH_POL_level_4_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_healthcare_temp_3
+							has_idea = policy_healthcare_temp_4_preserved
+						}
+						has_country_flag = IMF_SAP_ENACTED
+						has_idea = health_expansion_cooldown
+						has_idea = policy_healthcare_temp_5_preserved
+					}
+					NOT = {
+						has_idea = policy_healthcare_temp_5
+					}
+				}
+				policy_HEALTH_POL_level_4_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					NOT = { has_idea = policy_healthcare_temp_3_preserved }
+					OR = {
+						has_idea = policy_healthcare_temp_3
+						has_idea = policy_healthcare_temp_5
+					}
+					NOT = { has_idea = health_expansion_cooldown }
+				}
+				policy_HEALTH_POL_level_4_completed_visible = {
+					has_idea = policy_healthcare_temp_4
+				}
+			policy_HEALTH_POL_level_5_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = policy_healthcare_temp_5_preserved
+				}
+				OR = {
+					has_idea = policy_healthcare_temp_4
+					has_idea = policy_healthcare_temp_5_preserved
+				}
+				NOT = { has_country_flag = IMF_SAP_ENACTED }
+				NOT = { has_idea = health_expansion_cooldown }
+			}
+				policy_HEALTH_POL_level_5_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_healthcare_temp_4
+							has_idea = policy_healthcare_temp_5_preserved
+						}
+						has_country_flag = IMF_SAP_ENACTED
+						has_idea = health_expansion_cooldown
+					}
+				}
+				policy_HEALTH_POL_level_5_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					NOT = { has_idea = policy_healthcare_temp_5_preserved }
+					OR = {
+						has_idea = policy_healthcare_temp_4
+					}
+					NOT = { has_idea = health_expansion_cooldown }
+				}
+				policy_HEALTH_POL_level_5_completed_visible = {
+					has_idea = policy_healthcare_temp_5
+				}
+			
+			policy_healthcare_expansion_cooldown_icon_visible = {
+				has_idea = health_expansion_cooldown
+			}
+			policy_healthcare_temp_1_preserved_icon_visible = {
+				has_idea = policy_healthcare_temp_1_preserved
+			}
+			policy_healthcare_temp_2_preserved_icon_visible = {
+				has_idea = policy_healthcare_temp_2_preserved
+			}
+			policy_healthcare_temp_3_preserved_icon_visible = {
+				has_idea = policy_healthcare_temp_3_preserved
+			}
+			policy_healthcare_temp_4_preserved_icon_visible = {
+				has_idea = policy_healthcare_temp_4_preserved
+			}
+			policy_healthcare_temp_5_preserved_icon_visible = {
+				has_idea = policy_healthcare_temp_5_preserved
+			}
 		}
-	}	
+	}
 	edu_policy_tab_menu = {
-
+		ai_enabled = {
+			always = no
+		}
 		context_type = player_context
 
 		window_name = "edu_policy_tab"
 		parent_window_name = legislation_menu
 		visible = {
 			check_variable = { policy_legislation = 1 }
-		}	
+		}
 		effects = {
-			policy_education_level_0_click = {
+			policy_EDU_POL_level_0_click = {
+				if = {
+					limit = { NOT = { has_idea = edu_expansion_cooldown } }
+					add_political_power = -150
+				}
+				if = {
+					limit = {
+						has_idea = policy_education_temp_1
+						NOT = {
+							has_idea = policy_education_temp_1_preserved
+							has_idea = policy_education_temp_2_preserved
+							has_idea = policy_education_temp_3_preserved
+							has_idea = policy_education_temp_4_preserved
+							has_idea = edu_expansion_cooldown
+						}
+					}
+					add_timed_idea = { idea = policy_education_temp_1_preserved days = 730 }
+				}
+				if = {
+					limit = { has_idea = edu_expansion_cooldown }
+					remove_ideas = edu_expansion_cooldown
+				}
 				set_variable = { legislation_support = 0 }
 				remove_ideas = policy_education_temp_0
 				remove_ideas = policy_education_temp_1
@@ -898,13 +1933,59 @@ scripted_gui = {
 				remove_ideas = policy_education_temp_4
 				
 				add_ideas = policy_education_temp_0
+				
 				edu_expenditure = yes
-				add_timed_idea = {
-					idea = edu_cooldown
-					days = 1
-				}
 			}
-			policy_education_level_1_click = {
+			policy_EDU_POL_level_1_click = {
+				if = {
+					limit = { 
+						NOT = { 
+							OR = { 
+								has_idea = policy_education_temp_1_preserved 
+								has_idea = edu_expansion_cooldown 
+							}
+						} 
+					}
+					add_political_power = -150
+				}
+				if = {
+					limit = {
+						OR = {
+							has_idea = policy_education_temp_1_preserved 
+							has_idea = edu_expansion_cooldown 
+						}
+					}
+					remove_ideas = policy_education_temp_1_preserved
+					remove_ideas = edu_expansion_cooldown
+					add_ideas = cooldown_void
+				}
+				if = {
+					limit = {
+						has_idea = policy_education_temp_2
+						NOT = {
+							has_idea = policy_education_temp_1_preserved
+							has_idea = policy_education_temp_2_preserved
+							has_idea = policy_education_temp_3_preserved
+							has_idea = policy_education_temp_4_preserved
+							has_idea = edu_expansion_cooldown
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = { idea = policy_education_temp_2_preserved days = 730 }
+				}
+				if = {
+					limit = {
+						has_idea = policy_education_temp_0
+						NOT = {
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = {
+						idea = edu_expansion_cooldown
+						days = 730
+					}
+				}
+				remove_ideas = cooldown_void
 				set_variable = { legislation_support = 0 }
 				
 				remove_ideas = policy_education_temp_0
@@ -915,12 +1996,57 @@ scripted_gui = {
 				
 				add_ideas = policy_education_temp_1
 				edu_expenditure = yes
-				add_timed_idea = {
-					idea = edu_cooldown
-					days = 1
-				}
 			}
-			policy_education_level_2_click = {
+			policy_EDU_POL_level_2_click = {
+				if = {
+					limit = { 
+						NOT = { 
+							OR = { 
+								has_idea = policy_education_temp_2_preserved 
+								has_idea = edu_expansion_cooldown 
+							} 
+						} 
+					}
+					add_political_power = -150
+				}
+				if = {
+					limit = { 
+						OR = { 
+							has_idea = policy_education_temp_2_preserved 
+							has_idea = edu_expansion_cooldown 
+						} 
+					}
+					remove_ideas = policy_education_temp_2_preserved
+					remove_ideas = edu_expansion_cooldown
+					add_ideas = cooldown_void
+				}
+				if = {
+					limit = {
+						has_idea = policy_education_temp_3
+						NOT = {
+							has_idea = policy_education_temp_1_preserved
+							has_idea = policy_education_temp_2_preserved
+							has_idea = policy_education_temp_3_preserved
+							has_idea = policy_education_temp_4_preserved
+							has_idea = edu_expansion_cooldown
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = { idea = policy_education_temp_3_preserved days = 730 }
+				}
+				if = {
+					limit = {
+						has_idea = policy_education_temp_1
+						NOT = {
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = {
+						idea = edu_expansion_cooldown
+						days = 730
+					}
+				}
+				remove_ideas = cooldown_void
 				set_variable = { legislation_support = 0 }
 				
 				remove_ideas = policy_education_temp_0
@@ -931,12 +2057,57 @@ scripted_gui = {
 				
 				add_ideas = policy_education_temp_2
 				edu_expenditure = yes
-				add_timed_idea = {
-					idea = edu_cooldown
-					days = 1
-				}
 			}
-			policy_education_level_3_click = {
+			policy_EDU_POL_level_3_click = {
+				if = {
+					limit = { 
+						NOT = { 
+							OR = { 
+								has_idea = policy_education_temp_3_preserved 
+								has_idea = edu_expansion_cooldown 
+							} 
+						} 
+					}
+					add_political_power = -150
+				}
+				if = {
+					limit = { 
+						OR = { 
+							has_idea = policy_education_temp_3_preserved 
+							has_idea = edu_expansion_cooldown 
+						} 
+					}
+					remove_ideas = policy_education_temp_3_preserved
+					remove_ideas = edu_expansion_cooldown
+					add_ideas = cooldown_void
+				}
+				if = {
+					limit = {
+						has_idea = policy_education_temp_4
+						NOT = {
+							has_idea = policy_education_temp_1_preserved
+							has_idea = policy_education_temp_2_preserved
+							has_idea = policy_education_temp_3_preserved
+							has_idea = policy_education_temp_4_preserved
+							has_idea = edu_expansion_cooldown
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = { idea = policy_education_temp_3_preserved days = 730 }
+				}
+				if = {
+					limit = {
+						has_idea = policy_education_temp_2
+						NOT = {
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = {
+						idea = edu_expansion_cooldown
+						days = 730
+					}
+				}
+				remove_ideas = cooldown_void
 				set_variable = { legislation_support = 0 }
 				
 				remove_ideas = policy_education_temp_0
@@ -947,12 +2118,37 @@ scripted_gui = {
 				
 				add_ideas = policy_education_temp_3
 				edu_expenditure = yes
-				add_timed_idea = {
-					idea = edu_cooldown
-					days = 1
-				}
 			}
-			policy_education_level_4_click = {
+			policy_EDU_POL_level_4_click = {
+				if = {
+					limit = { 
+						NOT = {
+							OR = {
+								has_idea = policy_education_temp_4_preserved
+								has_idea = edu_expansion_cooldown
+							}
+						}
+					}
+					add_political_power = -150
+				}
+				if = {
+					limit = { has_idea = policy_education_temp_4_preserved }
+					remove_ideas = policy_education_temp_4_preserved
+					add_ideas = cooldown_void
+				}
+				if = {
+					limit = {
+						has_idea = policy_education_temp_3
+						NOT = {
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = {
+						idea = edu_expansion_cooldown
+						days = 730
+					}
+				}
+				remove_ideas = cooldown_void
 				set_variable = { legislation_support = 0 }
 				
 				remove_ideas = policy_education_temp_0
@@ -963,158 +2159,603 @@ scripted_gui = {
 				
 				add_ideas = policy_education_temp_4
 				edu_expenditure = yes
-				add_timed_idea = {
-					idea = edu_cooldown
-					days = 1
-				}
-			}			
-			
+			}
 		}
 		triggers = {
-			policy_education_level_0_click_enabled = {
-				NOT = { has_idea = policy_education_temp_0 }
-				NOT = { has_idea = edu_cooldown }
+			policy_EDU_POL_level_0_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = edu_expansion_cooldown
+				}
+				OR = {
+					has_idea = policy_education_temp_1
+				}
 			}
-			policy_education_level_1_click_enabled = {
-				NOT = { has_idea = policy_education_temp_1 }
-				NOT = { has_idea = edu_cooldown }
-			}
-			policy_education_level_2_click_enabled = {
-				NOT = { has_idea = policy_education_temp_2 }
+				policy_EDU_POL_level_0_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_education_temp_1
+						}
+					}
+				}
+				policy_EDU_POL_level_0_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					OR = {
+						has_idea = policy_education_temp_1
+					}
+				}
+				policy_EDU_POL_level_0_completed_visible = {
+					has_idea = policy_education_temp_0
+				}
+			policy_EDU_POL_level_1_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = edu_expansion_cooldown
+					has_idea = policy_education_temp_1_preserved
+				}
+				OR = {
+					has_idea = policy_education_temp_0
+					has_idea = policy_education_temp_2
+					has_idea = policy_education_temp_1_preserved
+				}
 				NOT = { has_country_flag = IMF_SAP_ENACTED }
-				NOT = { has_idea = edu_cooldown }
+				OR = {
+					NOT = { has_idea = edu_expansion_cooldown }
+					has_idea = policy_education_temp_2
+				}
 			}
-			policy_education_level_3_click_enabled = {
-				NOT = { has_idea = policy_education_temp_3 }
+				policy_EDU_POL_level_1_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_education_temp_0
+							has_idea = policy_education_temp_2
+						}
+						has_country_flag = IMF_SAP_ENACTED
+						has_idea = edu_expansion_cooldown
+						has_idea = policy_education_temp_2_preserved
+						has_idea = policy_education_temp_3_preserved
+						has_idea = policy_education_temp_4_preserved
+					}
+					NOT = {
+						has_idea = policy_education_temp_2
+						has_idea = policy_education_temp_1_preserved
+					}
+				}
+				policy_EDU_POL_level_1_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					NOT = { has_idea = policy_education_temp_1_preserved }
+					OR = {
+						has_idea = policy_education_temp_0
+						has_idea = policy_education_temp_2
+					}
+					NOT = { has_idea = edu_expansion_cooldown }
+				}
+				policy_EDU_POL_level_1_completed_visible = {
+					has_idea = policy_education_temp_1
+				}
+			policy_EDU_POL_level_2_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = edu_expansion_cooldown
+					has_idea = policy_education_temp_2_preserved
+				}
+				OR = {
+					has_idea = policy_education_temp_1
+					has_idea = policy_education_temp_3
+					has_idea = policy_education_temp_2_preserved
+				}
 				NOT = { has_country_flag = IMF_SAP_ENACTED }
-				NOT = { has_idea = edu_cooldown }
+				OR = {
+					NOT = { has_idea = edu_expansion_cooldown }
+					has_idea = policy_education_temp_3
+				}
 			}
-			policy_education_level_4_click_enabled = {
-				NOT = { has_idea = policy_education_temp_4 }
+				policy_EDU_POL_level_2_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_education_temp_1
+						}
+						has_country_flag = IMF_SAP_ENACTED
+						has_idea = edu_expansion_cooldown
+						has_idea = policy_education_temp_3_preserved
+						has_idea = policy_education_temp_4_preserved
+					}
+					NOT = {
+						has_idea = policy_education_temp_3
+						has_idea = policy_education_temp_2_preserved
+					}
+				}
+				policy_EDU_POL_level_2_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					NOT = { has_idea = policy_education_temp_2_preserved }
+					OR = {
+						has_idea = policy_education_temp_1
+						has_idea = policy_education_temp_3
+					}
+					NOT = { has_idea = edu_expansion_cooldown }
+				}
+				policy_EDU_POL_level_2_completed_visible = {
+					has_idea = policy_education_temp_2
+				}
+			policy_EDU_POL_level_3_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = edu_expansion_cooldown
+					has_idea = policy_education_temp_3_preserved
+				}
+				OR = {
+					has_idea = policy_education_temp_2
+					has_idea = policy_education_temp_4
+					has_idea = policy_education_temp_3_preserved
+				}
 				NOT = { has_country_flag = IMF_SAP_ENACTED }
-				NOT = { has_idea = edu_cooldown }
+				OR = {
+					NOT = { has_idea = edu_expansion_cooldown }
+					has_idea = policy_education_temp_4
+				}
 			}
-
+				policy_EDU_POL_level_3_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_education_temp_2
+						}
+						has_country_flag = IMF_SAP_ENACTED
+						has_idea = edu_expansion_cooldown
+						has_idea = policy_education_temp_4_preserved
+					}
+					NOT = {
+						has_idea = policy_education_temp_4
+						has_idea = policy_education_temp_3_preserved
+					}
+				}
+				policy_EDU_POL_level_3_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					NOT = { has_idea = policy_education_temp_3_preserved }
+					OR = {
+						has_idea = policy_education_temp_2
+						has_idea = policy_education_temp_4
+					}
+					NOT = { has_idea = edu_expansion_cooldown }
+				}
+				policy_EDU_POL_level_3_completed_visible = {
+					has_idea = policy_education_temp_3
+				}
+			policy_EDU_POL_level_4_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = policy_education_temp_4_preserved
+				}
+				OR = {
+					has_idea = policy_education_temp_3
+					has_idea = policy_education_temp_4_preserved
+				}
+				NOT = { has_country_flag = IMF_SAP_ENACTED }
+				NOT = { has_idea = edu_expansion_cooldown }
+			}
+				policy_EDU_POL_level_4_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_education_temp_3
+							has_idea = policy_education_temp_4_preserved
+						}
+						has_country_flag = IMF_SAP_ENACTED
+						has_idea = edu_expansion_cooldown
+					}
+				}
+				policy_EDU_POL_level_4_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					NOT = { has_idea = policy_education_temp_4_preserved }
+					OR = {
+						has_idea = policy_education_temp_3
+					}
+					NOT = { has_idea = edu_expansion_cooldown }
+				}
+				policy_EDU_POL_level_4_completed_visible = {
+					has_idea = policy_education_temp_4
+				}
+			
+			policy_education_expansion_cooldown_icon_visible = {
+				has_idea = edu_expansion_cooldown
+			}
+			policy_education_temp_1_preserved_icon_visible = {
+				has_idea = policy_education_temp_1_preserved
+			}
+			policy_education_temp_2_preserved_icon_visible = {
+				has_idea = policy_education_temp_2_preserved
+			}
+			policy_education_temp_3_preserved_icon_visible = {
+				has_idea = policy_education_temp_3_preserved
+			}
+			policy_education_temp_4_preserved_icon_visible = {
+				has_idea = policy_education_temp_4_preserved
+			}
 		}
-	}	
+	}
 
 	army_policy_tab_menu = {
-
+		ai_enabled = {
+			always = no
+		}
 		context_type = player_context
 
 		window_name = "army_policy_tab"
 		parent_window_name = legislation_menu
 		visible = {
 			check_variable = { policy_legislation = 1 }
-		}	
+		}
 		effects = {
-			policy_military_level_1_click = {
+			policy_MIL_POL_level_1_click = {
+				if = {
+					limit = { NOT = { has_idea = mil_expansion_cooldown } }
+					add_political_power = -150
+				}
+				if = {
+					limit = {
+						has_idea = policy_military_temp_2
+						NOT = {
+							has_idea = policy_military_temp_2_preserved
+							has_idea = policy_military_temp_3_preserved
+							has_idea = policy_military_temp_4_preserved
+							has_idea = mil_expansion_cooldown
+						}
+					}
+					add_timed_idea = { idea = policy_military_temp_2_preserved days = 730 }
+				}
+				if = {
+					limit = { has_idea = mil_expansion_cooldown }
+					remove_ideas = mil_expansion_cooldown
+				}
 				set_variable = { legislation_support = 0 }
-				remove_ideas = policy_military_temp_0
 				remove_ideas = policy_military_temp_1
 				remove_ideas = policy_military_temp_2
 				remove_ideas = policy_military_temp_3
 				remove_ideas = policy_military_temp_4
-				remove_ideas = policy_military_temp_5
-
+				
 				add_ideas = policy_military_temp_1
-				miitary_expenditure = yes
-				add_timed_idea = {
-					idea = mil_cooldown
-					days = 1
-				}
+				
+				military_expenditure = yes
 			}
-			policy_military_level_2_click = {
-				set_variable = { legislation_support = 0 }
-				remove_ideas = policy_military_temp_0
-				remove_ideas = policy_military_temp_1
-				remove_ideas = policy_military_temp_2
-				remove_ideas = policy_military_temp_3
-				remove_ideas = policy_military_temp_4
-				remove_ideas = policy_military_temp_5
-
-				add_ideas = policy_military_temp_2
-				miitary_expenditure = yes
-				add_timed_idea = {
-					idea = mil_cooldown
-					days = 1
+			policy_MIL_POL_level_2_click = {
+				if = {
+					limit = { 
+						NOT = { 
+							OR = { 
+								has_idea = policy_military_temp_2_preserved 
+								has_idea = mil_expansion_cooldown 
+							}
+						} 
+					}
+					add_political_power = -150
 				}
-			}
-			policy_military_level_3_click = {
+				if = {
+					limit = {
+						OR = {
+							has_idea = policy_military_temp_2_preserved 
+							has_idea = mil_expansion_cooldown 
+						}
+					}
+					remove_ideas = policy_military_temp_2_preserved
+					remove_ideas = mil_expansion_cooldown
+					add_ideas = cooldown_void
+				}
+				if = {
+					limit = {
+						has_idea = policy_military_temp_3
+						NOT = {
+							has_idea = policy_military_temp_2_preserved
+							has_idea = policy_military_temp_3_preserved
+							has_idea = policy_military_temp_4_preserved
+							has_idea = mil_expansion_cooldown
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = { idea = policy_military_temp_3_preserved days = 730 }
+				}
+				if = {
+					limit = {
+						has_idea = policy_military_temp_1
+						NOT = {
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = {
+						idea = mil_expansion_cooldown
+						days = 730
+					}
+				}
+				remove_ideas = cooldown_void
 				set_variable = { legislation_support = 0 }
 				
-				remove_ideas = policy_military_temp_0
 				remove_ideas = policy_military_temp_1
 				remove_ideas = policy_military_temp_2
 				remove_ideas = policy_military_temp_3
 				remove_ideas = policy_military_temp_4
-				remove_ideas = policy_military_temp_5
+				
+				add_ideas = policy_military_temp_2
+				military_expenditure = yes
+			}
+			policy_MIL_POL_level_3_click = {
+				if = {
+					limit = { 
+						NOT = { 
+							OR = { 
+								has_idea = policy_military_temp_3_preserved 
+								has_idea = mil_expansion_cooldown 
+							} 
+						} 
+					}
+					add_political_power = -150
+				}
+				if = {
+					limit = { 
+						OR = { 
+							has_idea = policy_military_temp_3_preserved 
+							has_idea = mil_expansion_cooldown 
+						} 
+					}
+					remove_ideas = policy_military_temp_3_preserved
+					remove_ideas = mil_expansion_cooldown
+					add_ideas = cooldown_void
+				}
+				if = {
+					limit = {
+						has_idea = policy_military_temp_4
+						NOT = {
+							has_idea = policy_military_temp_2_preserved
+							has_idea = policy_military_temp_3_preserved
+							has_idea = policy_military_temp_4_preserved
+							has_idea = mil_expansion_cooldown
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = { idea = policy_military_temp_4_preserved days = 730 }
+				}
+				if = {
+					limit = {
+						has_idea = policy_military_temp_2
+						NOT = {
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = {
+						idea = mil_expansion_cooldown
+						days = 730
+					}
+				}
+				remove_ideas = cooldown_void
+				set_variable = { legislation_support = 0 }
+				
+				remove_ideas = policy_military_temp_1
+				remove_ideas = policy_military_temp_2
+				remove_ideas = policy_military_temp_3
+				remove_ideas = policy_military_temp_4
 				
 				add_ideas = policy_military_temp_3
-				miitary_expenditure = yes
-				add_timed_idea = {
-					idea = mil_cooldown
-					days = 1
-				}
+				military_expenditure = yes
 			}
-			policy_military_level_4_click = {
+			policy_MIL_POL_level_4_click = {
+				if = {
+					limit = { 
+						NOT = {
+							OR = {
+								has_idea = policy_military_temp_4_preserved
+								has_idea = mil_expansion_cooldown
+							}
+						}
+					}
+					add_political_power = -150
+				}
+				if = {
+					limit = { has_idea = policy_military_temp_4_preserved }
+					remove_ideas = policy_military_temp_4_preserved
+					add_ideas = cooldown_void
+				}
+				if = {
+					limit = {
+						has_idea = policy_military_temp_3
+						NOT = {
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = {
+						idea = mil_expansion_cooldown
+						days = 730
+					}
+				}
+				remove_ideas = cooldown_void
 				set_variable = { legislation_support = 0 }
 				
-				remove_ideas = policy_military_temp_0
 				remove_ideas = policy_military_temp_1
 				remove_ideas = policy_military_temp_2
 				remove_ideas = policy_military_temp_3
 				remove_ideas = policy_military_temp_4
-				remove_ideas = policy_military_temp_5
 				
 				add_ideas = policy_military_temp_4
-				miitary_expenditure = yes
-				add_timed_idea = {
-					idea = mil_cooldown
-					days = 1
-				}
-
-			}				
+				military_expenditure = yes
+			}
 		}
 		triggers = {
-			policy_military_level_0_click_enabled = {
-				NOT = { has_idea = policy_military_temp_0 }
-				NOT = { has_idea = mil_cooldown }
+			policy_MIL_POL_level_1_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = mil_expansion_cooldown
+				}
+				OR = {
+					has_idea = policy_military_temp_2
+				}
 			}
-			policy_military_level_1_click_enabled = {
-				NOT = { has_idea = policy_military_temp_1 }
-				NOT = { has_idea = mil_cooldown }
+				policy_MIL_POL_level_1_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_military_temp_2
+						}
+					}
+				}
+				policy_MIL_POL_level_1_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					OR = {
+						has_idea = policy_military_temp_2
+					}
+				}
+				policy_MIL_POL_level_1_completed_visible = {
+					has_idea = policy_military_temp_1
+				}
+			policy_MIL_POL_level_2_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = mil_expansion_cooldown
+					has_idea = policy_military_temp_2_preserved
+				}
+				OR = {
+					has_idea = policy_military_temp_1
+					has_idea = policy_military_temp_3
+					has_idea = policy_military_temp_2_preserved
+				}
+				NOT = { has_country_flag = IMF_SAP_ENACTED }
+				OR = {
+					NOT = { has_idea = mil_expansion_cooldown }
+					has_idea = policy_military_temp_3
+				}
 			}
-			policy_military_level_2_click_enabled = {
-				NOT = { has_idea = policy_military_temp_2 }
-				NOT = { has_idea = mil_cooldown }
+				policy_MIL_POL_level_2_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_military_temp_1
+							has_idea = policy_military_temp_3
+							has_idea = policy_military_temp_2_preserved
+						}
+						has_country_flag = IMF_SAP_ENACTED
+						has_idea = mil_expansion_cooldown
+						has_idea = policy_military_temp_3_preserved
+						has_idea = policy_military_temp_4_preserved
+					}
+					NOT = {
+						has_idea = policy_military_temp_3
+					}
+				}
+				policy_MIL_POL_level_2_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					NOT = { has_idea = policy_military_temp_2_preserved }
+					OR = {
+						has_idea = policy_military_temp_1
+						has_idea = policy_military_temp_3
+					}
+					NOT = { has_idea = mil_expansion_cooldown }
+				}
+				policy_MIL_POL_level_2_completed_visible = {
+					has_idea = policy_military_temp_2
+				}
+			policy_MIL_POL_level_3_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = mil_expansion_cooldown
+					has_idea = policy_military_temp_3_preserved
+				}
+				OR = {
+					has_idea = policy_military_temp_2
+					has_idea = policy_military_temp_4
+					has_idea = policy_military_temp_3_preserved
+				}
+				NOT = { has_country_flag = IMF_SAP_ENACTED }
+				OR = {
+					NOT = { has_idea = mil_expansion_cooldown }
+					has_idea = policy_military_temp_4
+				}
 			}
-			policy_military_level_3_click_enabled = {
-				NOT = { has_idea = policy_military_temp_3 }
-				NOT = { has_idea = mil_cooldown }
+				policy_MIL_POL_level_3_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_military_temp_2
+							has_idea = policy_military_temp_3_preserved
+						}
+						has_country_flag = IMF_SAP_ENACTED
+						has_idea = mil_expansion_cooldown
+						has_idea = policy_military_temp_4_preserved
+					}
+					NOT = {
+						has_idea = policy_military_temp_4
+					}
+				}
+				policy_MIL_POL_level_3_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					NOT = { has_idea = policy_military_temp_3_preserved }
+					OR = {
+						has_idea = policy_military_temp_2
+						has_idea = policy_military_temp_4
+					}
+					NOT = { has_idea = mil_expansion_cooldown }
+				}
+				policy_MIL_POL_level_3_completed_visible = {
+					has_idea = policy_military_temp_3
+				}
+			policy_MIL_POL_level_4_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = policy_military_temp_4_preserved
+				}
+				OR = {
+					has_idea = policy_military_temp_3
+					has_idea = policy_military_temp_4_preserved
+				}
+				NOT = { has_country_flag = IMF_SAP_ENACTED }
+				NOT = { has_idea = mil_expansion_cooldown }
 			}
-			policy_military_level_4_click_enabled = {
-				NOT = { has_idea = policy_military_temp_4 }
-				NOT = { has_idea = mil_cooldown }
+				policy_MIL_POL_level_4_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_military_temp_3
+							has_idea = policy_military_temp_4_preserved
+						}
+						has_country_flag = IMF_SAP_ENACTED
+						has_idea = mil_expansion_cooldown
+					}
+				}
+				policy_MIL_POL_level_4_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					NOT = { has_idea = policy_military_temp_4_preserved }
+					OR = {
+						has_idea = policy_military_temp_3
+					}
+					NOT = { has_idea = mil_expansion_cooldown }
+				}
+				policy_MIL_POL_level_4_completed_visible = {
+					has_idea = policy_military_temp_4
+				}
+			
+			policy_military_mil_expansion_cooldown_icon_visible = {
+				has_idea = mil_expansion_cooldown
 			}
-			policy_military_level_5_click_enabled = {
-				NOT = { has_idea = policy_military_temp_5 }
-				NOT = { has_idea = mil_cooldown }
+			policy_military_temp_2_preserved_icon_visible = {
+				has_idea = policy_military_temp_2_preserved
 			}
-
+			policy_military_temp_3_preserved_icon_visible = {
+				has_idea = policy_military_temp_3_preserved
+			}
+			policy_military_temp_4_preserved_icon_visible = {
+				has_idea = policy_military_temp_4_preserved
+			}
 		}
-	}	
+	}
 	welfare_policy_tab_menu = {
-
+		ai_enabled = {
+			always = no
+		}
 		context_type = player_context
 
 		window_name = "welfare_policy_tab"
 		parent_window_name = legislation_menu
 		visible = {
 			check_variable = { policy_legislation = 1 }
-		}	
+		}
 		effects = {
-			policy_welfare_level_0_click = {
+			policy_WEL_POL_level_0_click = {
+				if = {
+					limit = {
+						has_idea = policy_welfare_temp_1
+					}
+					remove_ideas = wel_cooldown
+				}
+				add_political_power = -150
 				set_variable = { legislation_support = 0 }
 				remove_ideas = policy_welfare_temp_0
 				remove_ideas = policy_welfare_temp_1
@@ -1126,12 +2767,24 @@ scripted_gui = {
 				add_ideas = policy_welfare_temp_0
 				welfare_expenditure = yes
 				
-				add_timed_idea = {
-					idea = wel_cooldown
-					days = 1
-				}
 			}
-			policy_welfare_level_1_click = {
+			policy_WEL_POL_level_1_click = {
+				if = {
+					limit = {
+						has_idea = policy_welfare_temp_0
+					}
+					add_timed_idea = {
+						idea = wel_cooldown
+						days = 720
+					}
+				}
+				if = {
+					limit = {
+						has_idea = policy_welfare_temp_2
+					}
+					remove_ideas = wel_cooldown
+				}
+				add_political_power = -150
 				set_variable = { legislation_support = 0 }
 				remove_ideas = policy_welfare_temp_0
 				remove_ideas = policy_welfare_temp_1
@@ -1142,12 +2795,24 @@ scripted_gui = {
 				
 				add_ideas = policy_welfare_temp_1
 				welfare_expenditure = yes
-				add_timed_idea = {
-					idea = wel_cooldown
-					days = 1
-				}
 			}
-			policy_welfare_level_2_click = {
+			policy_WEL_POL_level_2_click = {
+				if = {
+					limit = {
+						has_idea = policy_welfare_temp_1
+					}
+					add_timed_idea = {
+						idea = wel_cooldown
+						days = 720
+					}
+				}
+				if = {
+					limit = {
+						has_idea = policy_welfare_temp_3
+					}
+					remove_ideas = wel_cooldown
+				}
+				add_political_power = -150
 				set_variable = { legislation_support = 0 }
 				remove_ideas = policy_welfare_temp_0
 				remove_ideas = policy_welfare_temp_1
@@ -1158,12 +2823,24 @@ scripted_gui = {
 				
 				add_ideas = policy_welfare_temp_2
 				welfare_expenditure = yes
-				add_timed_idea = {
-					idea = wel_cooldown
-					days = 1
-				}
 			}
-			policy_welfare_level_3_click = {
+			policy_WEL_POL_level_3_click = {
+				if = {
+					limit = {
+						has_idea = policy_welfare_temp_2
+					}
+					add_timed_idea = {
+						idea = wel_cooldown
+						days = 720
+					}
+				}
+				if = {
+					limit = {
+						has_idea = policy_welfare_temp_4
+					}
+					remove_ideas = wel_cooldown
+				}
+				add_political_power = -150
 				set_variable = { legislation_support = 0 }
 				remove_ideas = policy_welfare_temp_0
 				remove_ideas = policy_welfare_temp_1
@@ -1174,12 +2851,24 @@ scripted_gui = {
 				
 				add_ideas = policy_welfare_temp_3
 				welfare_expenditure = yes
-				add_timed_idea = {
-					idea = wel_cooldown
-					days = 1
-				}
 			}
-			policy_welfare_level_4_click = {
+			policy_WEL_POL_level_4_click = {
+				if = {
+					limit = {
+						has_idea = policy_welfare_temp_3
+					}
+					add_timed_idea = {
+						idea = wel_cooldown
+						days = 720
+					}
+				}
+				if = {
+					limit = {
+						has_idea = policy_welfare_temp_5
+					}
+					remove_ideas = wel_cooldown
+				}
+				add_political_power = -150
 				set_variable = { legislation_support = 0 }
 				remove_ideas = policy_welfare_temp_0
 				remove_ideas = policy_welfare_temp_1
@@ -1190,12 +2879,18 @@ scripted_gui = {
 				
 				add_ideas = policy_welfare_temp_4
 				welfare_expenditure = yes
-				add_timed_idea = {
-					idea = wel_cooldown
-					days = 1
+			}
+			policy_WEL_POL_level_5_click = {
+				if = {
+					limit = {
+						has_idea = policy_welfare_temp_4
+					}
+					add_timed_idea = {
+						idea = wel_cooldown
+						days = 720
+					}
 				}
-			}			
-			policy_welfare_level_5_click = {
+				add_political_power = -150
 				set_variable = { legislation_support = 0 }
 				remove_ideas = policy_welfare_temp_0
 				remove_ideas = policy_welfare_temp_1
@@ -1206,55 +2901,241 @@ scripted_gui = {
 				
 				add_ideas = policy_welfare_temp_5
 				welfare_expenditure = yes
-				add_timed_idea = {
-					idea = wel_cooldown
-					days = 1
-				}
-			}					
+			}
 		}
 		triggers = {
-			policy_welfare_level_0_click_enabled = {
-				NOT = { has_idea = policy_welfare_temp_0 }
+			policy_WEL_POL_level_0_click_enabled = {
+				has_political_power > 139
+				OR = {
+					has_idea = policy_welfare_temp_1
+				}
+				OR = {
+					NOT = { has_idea = wel_cooldown }
+					has_idea = policy_welfare_temp_1
+				}
+			}
+				policy_WEL_POL_level_0_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_welfare_temp_1
+						}
+					}
+				}
+				policy_WEL_POL_level_0_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					OR = {
+						has_idea = policy_welfare_temp_1
+					}
+					NOT = { has_idea = wel_cooldown }
+				}
+				policy_WEL_POL_level_0_completed_visible = {
+					has_idea = policy_welfare_temp_0
+				}
+				
+			policy_WEL_POL_level_1_click_enabled = {
+				has_political_power > 139
+				OR = {
+					has_idea = policy_welfare_temp_0
+					has_idea = policy_welfare_temp_2
+				}
+				OR = {
+					NOT = { has_idea = wel_cooldown }
+					has_idea = policy_welfare_temp_2
+				}
+			}
+				policy_WEL_POL_level_1_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_welfare_temp_0
+							has_idea = policy_welfare_temp_2
+						}
+						AND = {
+							has_idea = wel_cooldown
+							has_idea = policy_welfare_temp_0
+						}
+					}
+				}
+				policy_WEL_POL_level_1_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					OR = {
+						has_idea = policy_welfare_temp_0
+						has_idea = policy_welfare_temp_2
+					}
+					NOT = { has_idea = wel_cooldown }
+				}
+				policy_WEL_POL_level_1_completed_visible = {
+					has_idea = policy_welfare_temp_1
+				}
+			policy_WEL_POL_level_2_click_enabled = {
+				has_political_power > 139
+				OR = {
+					has_idea = policy_welfare_temp_1
+					has_idea = policy_welfare_temp_3
+				}
+				OR = {
+					NOT = { has_idea = wel_cooldown }
+					has_idea = policy_welfare_temp_3
+				}
+			}
+				policy_WEL_POL_level_2_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_welfare_temp_1
+							has_idea = policy_welfare_temp_3
+						}
+						AND = {
+							has_idea = wel_cooldown
+							has_idea = policy_welfare_temp_1
+						}
+					}
+				}
+				policy_WEL_POL_level_2_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					OR = {
+						has_idea = policy_welfare_temp_1
+						has_idea = policy_welfare_temp_3
+					}
+					NOT = { has_idea = wel_cooldown }
+				}
+				policy_WEL_POL_level_2_completed_visible = {
+					has_idea = policy_welfare_temp_2
+				}
+			policy_WEL_POL_level_3_click_enabled = {
+				has_political_power > 139
+				OR = {
+					has_idea = policy_welfare_temp_2
+					has_idea = policy_welfare_temp_4
+				}
+				OR = {
+					NOT = { has_idea = wel_cooldown }
+					has_idea = policy_welfare_temp_2
+				}
+			}
+				policy_WEL_POL_level_3_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_welfare_temp_2
+							has_idea = policy_welfare_temp_4
+						}
+						AND = {
+							has_idea = wel_cooldown
+							has_idea = policy_welfare_temp_2
+						}
+					}
+				}
+				policy_WEL_POL_level_3_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					OR = {
+						has_idea = policy_welfare_temp_2
+						has_idea = policy_welfare_temp_4
+					}
+					NOT = { has_idea = wel_cooldown }
+				}
+				policy_WEL_POL_level_3_completed_visible = {
+					has_idea = policy_welfare_temp_3
+				}
+			policy_WEL_POL_level_4_click_enabled = {
+				has_political_power > 139
+				OR = {
+					has_idea = policy_welfare_temp_3
+					has_idea = policy_welfare_temp_5
+				}
+				OR = {
+					NOT = { has_idea = wel_cooldown }
+					has_idea = policy_welfare_temp_5
+				}
+			}
+				policy_WEL_POL_level_4_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_welfare_temp_3
+							has_idea = policy_welfare_temp_5
+						}
+						AND = {
+							has_idea = wel_cooldown
+							has_idea = policy_welfare_temp_3
+						}
+					}
+				}
+				policy_WEL_POL_level_4_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					OR = {
+						has_idea = policy_welfare_temp_3
+						has_idea = policy_welfare_temp_5
+					}
+					NOT = { has_idea = wel_cooldown }
+				}
+				policy_WEL_POL_level_4_completed_visible = {
+					has_idea = policy_welfare_temp_4
+				}
+			policy_WEL_POL_level_5_click_enabled = {
+				has_political_power > 139
+				OR = {
+					has_idea = policy_welfare_temp_4
+				}
 				NOT = { has_idea = wel_cooldown }
 			}
-			policy_welfare_level_1_click_enabled = {
-				NOT = { has_idea = policy_welfare_temp_1 }
-				NOT = { has_idea = wel_cooldown }
+				policy_WEL_POL_level_5_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_welfare_temp_4
+						}
+						AND = {
+							has_idea = wel_cooldown
+							has_idea = policy_welfare_temp_4
+						}
+					}
+				}
+				policy_WEL_POL_level_5_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					OR = {
+						has_idea = policy_welfare_temp_4
+					}
+					NOT = { has_idea = wel_cooldown }
+				}
+				policy_WEL_POL_level_5_completed_visible = {
+					has_idea = policy_welfare_temp_5
+				}
+			policy_welfare_cooldown_icon_visible = {
+				has_idea = wel_cooldown
 			}
-			policy_welfare_level_2_click_enabled = {
-				NOT = { has_idea = policy_welfare_temp_2 }
-				NOT = { has_country_flag = IMF_SAP_ENACTED }
-				NOT = { has_idea = wel_cooldown }
-			}
-			policy_welfare_level_3_click_enabled = {
-				NOT = { has_idea = policy_welfare_temp_3 }
-				NOT = { has_country_flag = IMF_SAP_ENACTED }
-				NOT = { has_idea = wel_cooldown }
-			}
-			policy_welfare_level_4_click_enabled = {
-				NOT = { has_idea = policy_welfare_temp_4 }
-				NOT = { has_country_flag = IMF_SAP_ENACTED }
-				NOT = { has_idea = wel_cooldown }
-			}
-			policy_welfare_level_5_click_enabled = {
-				NOT = { has_idea = policy_welfare_temp_5 }
-				NOT = { has_idea = wel_cooldown }
-				NOT = { has_country_flag = IMF_SAP_ENACTED }
-			}
-
 		}
-	}	
+	}
 	cpi_policy_tab_menu = {
-
+ 		ai_enabled = {
+			always = no
+		}
 		context_type = player_context
 
 		window_name = "cpi_policy_tab"
 		parent_window_name = legislation_menu
 		visible = {
 			check_variable = { policy_legislation = 1 }
-		}	
+		}
 		effects = {
-			policy_cpi_level_0_click = {
+			policy_CPI_POL_level_0_click = {
+				if = {
+					limit = { NOT = { has_idea = cpi_expansion_cooldown } }
+					add_political_power = -150
+				}
+				if = {
+					limit = {
+						has_idea = policy_cpi_temp_1
+						NOT = {
+							has_idea = policy_cpi_temp_1_preserved
+							has_idea = policy_cpi_temp_2_preserved
+							has_idea = policy_cpi_temp_3_preserved
+							has_idea = policy_cpi_temp_4_preserved
+							has_idea = policy_cpi_temp_5_preserved
+							has_idea = cpi_expansion_cooldown
+						}
+					}
+					add_timed_idea = { idea = policy_cpi_temp_1_preserved days = 730 }
+				}
+				if = {
+					limit = { has_idea = cpi_expansion_cooldown }
+					remove_ideas = cpi_expansion_cooldown
+				}
 				set_variable = { legislation_support = 0 }
 				remove_ideas = policy_cpi_temp_0
 				remove_ideas = policy_cpi_temp_1
@@ -1264,14 +3145,62 @@ scripted_gui = {
 				remove_ideas = policy_cpi_temp_5
 				
 				add_ideas = policy_cpi_temp_0
+				
 				cpi_expenditure = yes
-				add_timed_idea = {
-					idea = cpi_cooldown
-					days = 1
-				}
 			}
-			policy_cpi_level_1_click = {
+			policy_CPI_POL_level_1_click = {
+				if = {
+					limit = { 
+						NOT = { 
+							OR = { 
+								has_idea = policy_cpi_temp_1_preserved 
+								has_idea = cpi_expansion_cooldown 
+							}
+						} 
+					}
+					add_political_power = -150
+				}
+				if = {
+					limit = {
+						OR = {
+							has_idea = policy_cpi_temp_1_preserved 
+							has_idea = cpi_expansion_cooldown 
+						}
+					}
+					remove_ideas = policy_cpi_temp_1_preserved
+					remove_ideas = cpi_expansion_cooldown
+					add_ideas = cooldown_void
+				}
+				if = {
+					limit = {
+						has_idea = policy_cpi_temp_2
+						NOT = {
+							has_idea = policy_cpi_temp_1_preserved
+							has_idea = policy_cpi_temp_2_preserved
+							has_idea = policy_cpi_temp_3_preserved
+							has_idea = policy_cpi_temp_4_preserved
+							has_idea = policy_cpi_temp_5_preserved
+							has_idea = cpi_expansion_cooldown
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = { idea = policy_cpi_temp_2_preserved days = 730 }
+				}
+				if = {
+					limit = {
+						has_idea = policy_cpi_temp_0
+						NOT = {
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = {
+						idea = cpi_expansion_cooldown
+						days = 730
+					}
+				}
+				remove_ideas = cooldown_void
 				set_variable = { legislation_support = 0 }
+				
 				remove_ideas = policy_cpi_temp_0
 				remove_ideas = policy_cpi_temp_1
 				remove_ideas = policy_cpi_temp_2
@@ -1281,13 +3210,60 @@ scripted_gui = {
 				
 				add_ideas = policy_cpi_temp_1
 				cpi_expenditure = yes
-				add_timed_idea = {
-					idea = cpi_cooldown
-					days = 1
-				}
 			}
-			policy_cpi_level_2_click = {
+			policy_CPI_POL_level_2_click = {
+				if = {
+					limit = { 
+						NOT = { 
+							OR = { 
+								has_idea = policy_cpi_temp_2_preserved 
+								has_idea = cpi_expansion_cooldown 
+							} 
+						} 
+					}
+					add_political_power = -150
+				}
+				if = {
+					limit = { 
+						OR = { 
+							has_idea = policy_cpi_temp_2_preserved 
+							has_idea = cpi_expansion_cooldown 
+						} 
+					}
+					remove_ideas = policy_cpi_temp_2_preserved
+					remove_ideas = cpi_expansion_cooldown
+					add_ideas = cooldown_void
+				}
+				if = {
+					limit = {
+						has_idea = policy_cpi_temp_3
+						NOT = {
+							has_idea = policy_cpi_temp_1_preserved
+							has_idea = policy_cpi_temp_2_preserved
+							has_idea = policy_cpi_temp_3_preserved
+							has_idea = policy_cpi_temp_4_preserved
+							has_idea = policy_cpi_temp_5_preserved
+							has_idea = cpi_expansion_cooldown
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = { idea = policy_cpi_temp_3_preserved days = 730 }
+				}
+				if = {
+					limit = {
+						has_idea = policy_cpi_temp_1
+						NOT = {
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = {
+						idea = cpi_expansion_cooldown
+						days = 730
+					}
+				}
+				remove_ideas = cooldown_void
 				set_variable = { legislation_support = 0 }
+				
 				remove_ideas = policy_cpi_temp_0
 				remove_ideas = policy_cpi_temp_1
 				remove_ideas = policy_cpi_temp_2
@@ -1297,13 +3273,60 @@ scripted_gui = {
 				
 				add_ideas = policy_cpi_temp_2
 				cpi_expenditure = yes
-				add_timed_idea = {
-					idea = cpi_cooldown
-					days = 1
-				}
 			}
-			policy_cpi_level_3_click = {
+			policy_CPI_POL_level_3_click = {
+				if = {
+					limit = { 
+						NOT = { 
+							OR = { 
+								has_idea = policy_cpi_temp_3_preserved 
+								has_idea = cpi_expansion_cooldown 
+							} 
+						} 
+					}
+					add_political_power = -150
+				}
+				if = {
+					limit = {
+						OR = { 
+							has_idea = policy_cpi_temp_3_preserved 
+							has_idea = cpi_expansion_cooldown 
+						} 
+					}
+					remove_ideas = policy_cpi_temp_3_preserved
+					remove_ideas = cpi_expansion_cooldown
+					add_ideas = cooldown_void
+				}
+				if = {
+					limit = {
+						has_idea = policy_cpi_temp_4
+						NOT = {
+							has_idea = policy_cpi_temp_1_preserved
+							has_idea = policy_cpi_temp_2_preserved
+							has_idea = policy_cpi_temp_3_preserved
+							has_idea = policy_cpi_temp_4_preserved
+							has_idea = policy_cpi_temp_5_preserved
+							has_idea = cpi_expansion_cooldown
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = { idea = policy_cpi_temp_3_preserved days = 730 }
+				}
+				if = {
+					limit = {
+						has_idea = policy_cpi_temp_2
+						NOT = {
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = {
+						idea = cpi_expansion_cooldown
+						days = 730
+					}
+				}
+				remove_ideas = cooldown_void
 				set_variable = { legislation_support = 0 }
+				
 				remove_ideas = policy_cpi_temp_0
 				remove_ideas = policy_cpi_temp_1
 				remove_ideas = policy_cpi_temp_2
@@ -1313,13 +3336,60 @@ scripted_gui = {
 				
 				add_ideas = policy_cpi_temp_3
 				cpi_expenditure = yes
-				add_timed_idea = {
-					idea = cpi_cooldown
-					days = 1
-				}
 			}
-			policy_cpi_level_4_click = {
+			policy_CPI_POL_level_4_click = {
+				if = {
+					limit = { 
+						NOT = { 
+							OR = { 
+								has_idea = policy_cpi_temp_4_preserved 
+								has_idea = cpi_expansion_cooldown 
+							} 
+						} 
+					}
+					add_political_power = -150
+				}
+				if = {
+					limit = { 
+						OR = { 
+							has_idea = policy_cpi_temp_4_preserved 
+							has_idea = cpi_expansion_cooldown 
+						} 
+					}
+					remove_ideas = policy_cpi_temp_4_preserved
+					remove_ideas = cpi_expansion_cooldown
+					add_ideas = cooldown_void
+				}
+				if = {
+					limit = {
+						has_idea = policy_cpi_temp_5
+						NOT = {
+							has_idea = policy_cpi_temp_1_preserved
+							has_idea = policy_cpi_temp_2_preserved
+							has_idea = policy_cpi_temp_3_preserved
+							has_idea = policy_cpi_temp_4_preserved
+							has_idea = policy_cpi_temp_5_preserved
+							has_idea = cpi_expansion_cooldown
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = { idea = policy_cpi_temp_4_preserved days = 730 }
+				}
+				if = {
+					limit = {
+						has_idea = policy_cpi_temp_3
+						NOT = {
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = {
+						idea = cpi_expansion_cooldown
+						days = 730
+					}
+				}
+				remove_ideas = cooldown_void
 				set_variable = { legislation_support = 0 }
+				
 				remove_ideas = policy_cpi_temp_0
 				remove_ideas = policy_cpi_temp_1
 				remove_ideas = policy_cpi_temp_2
@@ -1329,13 +3399,39 @@ scripted_gui = {
 				
 				add_ideas = policy_cpi_temp_4
 				cpi_expenditure = yes
-				add_timed_idea = {
-					idea = cpi_cooldown
-					days = 1
+			}
+			policy_CPI_POL_level_5_click = {
+				if = {
+					limit = { 
+						NOT = {
+							OR = {
+								has_idea = policy_cpi_temp_5_preserved
+								has_idea = cpi_expansion_cooldown
+							}
+						}
+					}
+					add_political_power = -150
 				}
-			}			
-			policy_cpi_level_5_click = {
+				if = {
+					limit = { has_idea = policy_cpi_temp_5_preserved }
+					remove_ideas = policy_cpi_temp_5_preserved
+					add_ideas = cooldown_void
+				}
+				if = {
+					limit = {
+						has_idea = policy_cpi_temp_4
+						NOT = {
+							has_idea = cooldown_void
+						}
+					}
+					add_timed_idea = {
+						idea = cpi_expansion_cooldown
+						days = 730
+					}
+				}
+				remove_ideas = cooldown_void
 				set_variable = { legislation_support = 0 }
+				
 				remove_ideas = policy_cpi_temp_0
 				remove_ideas = policy_cpi_temp_1
 				remove_ideas = policy_cpi_temp_2
@@ -1345,40 +3441,266 @@ scripted_gui = {
 				
 				add_ideas = policy_cpi_temp_5
 				cpi_expenditure = yes
-				add_timed_idea = {
-					idea = cpi_cooldown
-					days = 1
-				}
-			}					
+			}
 		}
 		triggers = {
-			policy_cpi_level_0_click_enabled = {
-				NOT = { has_idea = policy_cpi_temp_0 }
-				NOT = { has_idea = cpi_cooldown }
+			policy_CPI_POL_level_0_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = cpi_expansion_cooldown
+				}
+				OR = {
+					has_idea = policy_cpi_temp_1
+				}
 			}
-			policy_cpi_level_1_click_enabled = {
-				NOT = { has_idea = policy_cpi_temp_1 }
-				NOT = { has_idea = cpi_cooldown }
+				policy_CPI_POL_level_0_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_cpi_temp_1
+						}
+					}
+				}
+				policy_CPI_POL_level_0_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					OR = {
+						has_idea = policy_cpi_temp_1
+					}
+				}
+				policy_CPI_POL_level_0_completed_visible = {
+					has_idea = policy_cpi_temp_0
+				}
+			policy_CPI_POL_level_1_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = cpi_expansion_cooldown
+					has_idea = policy_cpi_temp_1_preserved
+				}
+				OR = {
+					has_idea = policy_cpi_temp_0
+					has_idea = policy_cpi_temp_2
+					has_idea = policy_cpi_temp_1_preserved
+				}
+				NOT = { has_country_flag = IMF_SAP_ENACTED }
+				OR = {
+					NOT = { has_idea = cpi_expansion_cooldown }
+					has_idea = policy_cpi_temp_2
+				}
 			}
-			policy_cpi_level_2_click_enabled = {
-				NOT = { has_idea = policy_cpi_temp_2 }
-				NOT = { has_idea = cpi_cooldown }
+				policy_CPI_POL_level_1_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_cpi_temp_0
+							has_idea = policy_cpi_temp_1_preserved
+						}
+						has_country_flag = IMF_SAP_ENACTED
+						has_idea = cpi_expansion_cooldown
+						has_idea = policy_cpi_temp_2_preserved
+						has_idea = policy_cpi_temp_3_preserved
+						has_idea = policy_cpi_temp_4_preserved
+						has_idea = policy_cpi_temp_5_preserved
+					}
+					NOT = {
+						has_idea = policy_cpi_temp_2
+					}
+				}
+				policy_CPI_POL_level_1_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					NOT = { has_idea = policy_cpi_temp_1_preserved }
+					OR = {
+						has_idea = policy_cpi_temp_0
+						has_idea = policy_cpi_temp_2
+					}
+					NOT = { has_idea = cpi_expansion_cooldown }
+				}
+				policy_CPI_POL_level_1_completed_visible = {
+					has_idea = policy_cpi_temp_1
+				}
+			policy_CPI_POL_level_2_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = cpi_expansion_cooldown
+					has_idea = policy_cpi_temp_2_preserved
+				}
+				OR = {
+					has_idea = policy_cpi_temp_1
+					has_idea = policy_cpi_temp_3
+					has_idea = policy_cpi_temp_2_preserved
+				}
+				NOT = { has_country_flag = IMF_SAP_ENACTED }
+				OR = {
+					NOT = { has_idea = cpi_expansion_cooldown }
+					has_idea = policy_cpi_temp_3
+				}
 			}
-			policy_cpi_level_3_click_enabled = {
-				NOT = { has_idea = policy_cpi_temp_3 }
-				NOT = { has_idea = cpi_cooldown }
+				policy_CPI_POL_level_2_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_cpi_temp_1
+							has_idea = policy_cpi_temp_2_preserved
+						}
+						has_country_flag = IMF_SAP_ENACTED
+						has_idea = cpi_expansion_cooldown
+						has_idea = policy_cpi_temp_3_preserved
+						has_idea = policy_cpi_temp_4_preserved
+						has_idea = policy_cpi_temp_5_preserved
+					}
+					NOT = {
+						has_idea = policy_cpi_temp_3
+					}
+				}
+				policy_CPI_POL_level_2_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					NOT = { has_idea = policy_cpi_temp_2_preserved }
+					OR = {
+						has_idea = policy_cpi_temp_1
+						has_idea = policy_cpi_temp_3
+					}
+					NOT = { has_idea = cpi_expansion_cooldown }
+				}
+				policy_CPI_POL_level_2_completed_visible = {
+					has_idea = policy_cpi_temp_2
+				}
+			policy_CPI_POL_level_3_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = cpi_expansion_cooldown
+					has_idea = policy_cpi_temp_3_preserved
+				}
+				OR = {
+					has_idea = policy_cpi_temp_2
+					has_idea = policy_cpi_temp_4
+					has_idea = policy_cpi_temp_3_preserved
+				}
+				NOT = { has_country_flag = IMF_SAP_ENACTED }
+				OR = {
+					NOT = { has_idea = cpi_expansion_cooldown }
+					has_idea = policy_cpi_temp_4
+				}
 			}
-			policy_cpi_level_4_click_enabled = {
-				NOT = { has_idea = policy_cpi_temp_4 }
-				NOT = { has_idea = cpi_cooldown }
+				policy_CPI_POL_level_3_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_cpi_temp_2
+							has_idea = policy_cpi_temp_3_preserved
+						}
+						has_country_flag = IMF_SAP_ENACTED
+						has_idea = cpi_expansion_cooldown
+						has_idea = policy_cpi_temp_4_preserved
+						has_idea = policy_cpi_temp_5_preserved
+					}
+					NOT = {
+						has_idea = policy_cpi_temp_4
+					}
+				}
+				policy_CPI_POL_level_3_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					NOT = { has_idea = policy_cpi_temp_3_preserved }
+					OR = {
+						has_idea = policy_cpi_temp_2
+						has_idea = policy_cpi_temp_4
+					}
+					NOT = { has_idea = cpi_expansion_cooldown }
+				}
+				policy_CPI_POL_level_3_completed_visible = {
+					has_idea = policy_cpi_temp_3
+				}
+			policy_CPI_POL_level_4_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = cpi_expansion_cooldown
+					has_idea = policy_cpi_temp_4_preserved
+				}
+				OR = {
+					has_idea = policy_cpi_temp_3
+					has_idea = policy_cpi_temp_5
+					has_idea = policy_cpi_temp_4_preserved
+				}
+				NOT = { has_country_flag = IMF_SAP_ENACTED }
+				OR = {
+					NOT = { has_idea = cpi_expansion_cooldown }
+					has_idea = policy_cpi_temp_5
+				}
 			}
-			policy_cpi_level_5_click_enabled = {
-				NOT = { has_idea = policy_cpi_temp_5 }
-				NOT = { has_idea = cpi_cooldown }
+				policy_CPI_POL_level_4_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_cpi_temp_3
+							has_idea = policy_cpi_temp_4_preserved
+						}
+						has_country_flag = IMF_SAP_ENACTED
+						has_idea = cpi_expansion_cooldown
+						has_idea = policy_cpi_temp_5_preserved
+					}
+					NOT = {
+						has_idea = policy_cpi_temp_5
+					}
+				}
+				policy_CPI_POL_level_4_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					NOT = { has_idea = policy_cpi_temp_3_preserved }
+					OR = {
+						has_idea = policy_cpi_temp_3
+						has_idea = policy_cpi_temp_5
+					}
+					NOT = { has_idea = cpi_expansion_cooldown }
+				}
+				policy_CPI_POL_level_4_completed_visible = {
+					has_idea = policy_cpi_temp_4
+				}
+			policy_CPI_POL_level_5_click_enabled = {
+				OR = {
+					has_political_power > 139
+					has_idea = policy_cpi_temp_5_preserved
+				}
+				OR = {
+					has_idea = policy_cpi_temp_4
+					has_idea = policy_cpi_temp_5_preserved
+				}
+				NOT = { has_country_flag = IMF_SAP_ENACTED }
+				NOT = { has_idea = cpi_expansion_cooldown }
 			}
-
+				policy_CPI_POL_level_5_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_cpi_temp_4
+							has_idea = policy_cpi_temp_5_preserved
+						}
+						has_country_flag = IMF_SAP_ENACTED
+						has_idea = cpi_expansion_cooldown
+					}
+				}
+				policy_CPI_POL_level_5_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					NOT = { has_idea = policy_cpi_temp_5_preserved }
+					OR = {
+						has_idea = policy_cpi_temp_4
+					}
+					NOT = { has_idea = cpi_expansion_cooldown }
+				}
+				policy_CPI_POL_level_5_completed_visible = {
+					has_idea = policy_cpi_temp_5
+				}
+			
+			policy_cpi_expansion_cooldown_icon_visible = {
+				has_idea = cpi_expansion_cooldown
+			}
+			policy_cpi_temp_1_preserved_icon_visible = {
+				has_idea = policy_cpi_temp_1_preserved
+			}
+			policy_cpi_temp_2_preserved_icon_visible = {
+				has_idea = policy_cpi_temp_2_preserved
+			}
+			policy_cpi_temp_3_preserved_icon_visible = {
+				has_idea = policy_cpi_temp_3_preserved
+			}
+			policy_cpi_temp_4_preserved_icon_visible = {
+				has_idea = policy_cpi_temp_4_preserved
+			}
+			policy_cpi_temp_5_preserved_icon_visible = {
+				has_idea = policy_cpi_temp_5_preserved
+			}
 		}
-	}		
+	}
 	gen_fin_info_tab_menu = {
 
 		context_type = player_context
@@ -1387,7 +3709,7 @@ scripted_gui = {
 		parent_window_name = legislation_menu
 		visible = {
 			check_variable = { policy_legislation = 3 }
-		}	
+		}
 		
 	}
 	debt_fin_info_tab_menu = {
@@ -1398,7 +3720,7 @@ scripted_gui = {
 		parent_window_name = legislation_menu
 		visible = {
 			check_variable = { policy_legislation = 3 }
-		}	
+		}
 		
 	}
 	policy_cost_info_tab_menu = {
@@ -1409,7 +3731,7 @@ scripted_gui = {
 		parent_window_name = legislation_menu
 		visible = {
 			check_variable = { policy_legislation = 3 }
-		}	
+		}
 		
 	}
 	income_info_tab_menu = {
@@ -1420,8 +3742,8 @@ scripted_gui = {
 		parent_window_name = legislation_menu
 		visible = {
 			check_variable = { policy_legislation = 3 }
-		}	
-		
+		}
+
 	}
 	corruption_info_tab_menu = {
 
@@ -1431,691 +3753,1658 @@ scripted_gui = {
 		parent_window_name = legislation_menu
 		visible = {
 			check_variable = { policy_legislation = 3 }
-		}	
+		}
 		
 	}
 	tax_info_tab_menu = {
-
+		ai_enabled = {
+			always = no
+		}
 		context_type = player_context
 
 		window_name = "tax_info_tab"
 		parent_window_name = legislation_menu
 		visible = {
 			check_variable = { policy_legislation = 3 }
-		}	
+		}
 		effects = {
-			policy_tax_level_0_click = {
+			policy_TAX_POL_level_1_click = {
+				add_political_power = -450
 				set_variable = { legislation_support = 0 }
-				remove_ideas = Austrian_Taxation
-				remove_ideas = Light_Taxation
-				remove_ideas = Moderate_Taxation
-				remove_ideas = Progressive_Taxation
-				remove_ideas = Heavy_Taxation
-				remove_ideas = Marxist_Taxation
+				remove_ideas = policy_taxrate_temp_1
+				remove_ideas = policy_taxrate_temp_2
+				remove_ideas = policy_taxrate_temp_3
+				remove_ideas = policy_taxrate_temp_4
+				remove_ideas = policy_taxrate_temp_5
 				
-				add_ideas = Austrian_Taxation
+				add_ideas = policy_taxrate_temp_1
 				tax_rate = yes
-				add_timed_idea = {
-					idea = tax_cooldown
-					days = 1
-				}
 			}
-			policy_tax_level_1_click = {
+			
+			policy_TAX_POL_level_2_click = {
+				add_political_power = -450
 				set_variable = { legislation_support = 0 }
-				remove_ideas = Austrian_Taxation
-				remove_ideas = Light_Taxation
-				remove_ideas = Moderate_Taxation
-				remove_ideas = Progressive_Taxation
-				remove_ideas = Heavy_Taxation
-				remove_ideas = Marxist_Taxation
+				remove_ideas = policy_taxrate_temp_1
+				remove_ideas = policy_taxrate_temp_2
+				remove_ideas = policy_taxrate_temp_3
+				remove_ideas = policy_taxrate_temp_4
+				remove_ideas = policy_taxrate_temp_5
 				
-				add_ideas = Light_Taxation
+				add_ideas = policy_taxrate_temp_2
 				tax_rate = yes
-				add_timed_idea = {
-					idea = tax_cooldown
-					days = 1
-				}
 			}
-			policy_tax_level_2_click = {
+			policy_TAX_POL_level_3_click = {
+				add_political_power = -450
 				set_variable = { legislation_support = 0 }
-				remove_ideas = Austrian_Taxation
-				remove_ideas = Light_Taxation
-				remove_ideas = Moderate_Taxation
-				remove_ideas = Progressive_Taxation
-				remove_ideas = Heavy_Taxation
-				remove_ideas = Marxist_Taxation
+				remove_ideas = policy_taxrate_temp_1
+				remove_ideas = policy_taxrate_temp_2
+				remove_ideas = policy_taxrate_temp_3
+				remove_ideas = policy_taxrate_temp_4
+				remove_ideas = policy_taxrate_temp_5
 				
-				add_ideas = Moderate_Taxation
+				add_ideas = policy_taxrate_temp_3
 				tax_rate = yes
-				add_timed_idea = {
-					idea = tax_cooldown
-					days = 1
-				}
 			}
-			policy_tax_level_3_click = {
+			policy_TAX_POL_level_4_click = {
+				add_political_power = -450
 				set_variable = { legislation_support = 0 }
-				remove_ideas = Austrian_Taxation
-				remove_ideas = Light_Taxation
-				remove_ideas = Moderate_Taxation
-				remove_ideas = Progressive_Taxation
-				remove_ideas = Heavy_Taxation
-				remove_ideas = Marxist_Taxation
+				remove_ideas = policy_taxrate_temp_1
+				remove_ideas = policy_taxrate_temp_2
+				remove_ideas = policy_taxrate_temp_3
+				remove_ideas = policy_taxrate_temp_4
+				remove_ideas = policy_taxrate_temp_5
 				
-				add_ideas = Progressive_Taxation
+				add_ideas = policy_taxrate_temp_4
 				tax_rate = yes
-				add_timed_idea = {
-					idea = tax_cooldown
-					days = 1
-				}
 			}
-			policy_tax_level_4_click = {
+			policy_TAX_POL_level_5_click = {
+				add_political_power = -450
 				set_variable = { legislation_support = 0 }
-				remove_ideas = Austrian_Taxation
-				remove_ideas = Light_Taxation
-				remove_ideas = Moderate_Taxation
-				remove_ideas = Progressive_Taxation
-				remove_ideas = Heavy_Taxation
-				remove_ideas = Marxist_Taxation
-				
-				add_ideas = Heavy_Taxation
+				remove_ideas = policy_taxrate_temp_1
+				remove_ideas = policy_taxrate_temp_2
+				remove_ideas = policy_taxrate_temp_3
+				remove_ideas = policy_taxrate_temp_4
+				remove_ideas = policy_taxrate_temp_5
+				add_ideas = policy_taxrate_temp_5
 				tax_rate = yes
-				add_timed_idea = {
-					idea = tax_cooldown
-					days = 1
-				}
-			}			
-			policy_tax_level_5_click = {
-				set_variable = { legislation_support = 0 }
-				remove_ideas = Austrian_Taxation
-				remove_ideas = Light_Taxation
-				remove_ideas = Moderate_Taxation
-				remove_ideas = Progressive_Taxation
-				remove_ideas = Heavy_Taxation
-				remove_ideas = Marxist_Taxation
-				add_ideas = Marxist_Taxation
-				tax_rate = yes
-				add_timed_idea = {
-					idea = tax_cooldown
-					days = 1
-				}
-			}					
+			}
 		}
 		triggers = {
-			policy_tax_level_0_click_enabled = {
-				NOT = { has_idea = Austrian_Taxation }
-				NOT = { has_idea = tax_cooldown }
+			policy_TAX_POL_level_1_click_enabled = {
+				has_political_power > 439
+				OR = {
+					has_idea = policy_taxrate_temp_2
+				}
 			}
-			policy_tax_level_1_click_enabled = {
-				NOT = { has_idea = Light_Taxation }
-				NOT = { has_idea = tax_cooldown }
+				policy_TAX_POL_level_1_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_taxrate_temp_2
+						}
+					}
+				}
+				policy_TAX_POL_level_1_unaffordable_visible = {
+					NOT = { has_political_power > 439 }
+					OR = {
+						has_idea = policy_taxrate_temp_2
+					}
+				}
+				policy_TAX_POL_level_1_completed_visible = {
+					has_idea = policy_taxrate_temp_1
+				}
+			policy_TAX_POL_level_2_click_enabled = {
+				has_political_power > 439
+				OR = {
+					has_idea = policy_taxrate_temp_1
+					has_idea = policy_taxrate_temp_3
+				}
 			}
-			policy_tax_level_2_click_enabled = {
-				NOT = { has_idea = tax_cooldown }
-				NOT = { has_idea = Moderate_Taxation }
+				policy_TAX_POL_level_2_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_taxrate_temp_1
+							has_idea = policy_taxrate_temp_3
+						}
+					}
+				}
+				policy_TAX_POL_level_2_unaffordable_visible = {
+					NOT = { has_political_power > 439 }
+					OR = {
+						has_idea = policy_taxrate_temp_1
+						has_idea = policy_taxrate_temp_3
+					}
+				}
+				policy_TAX_POL_level_2_completed_visible = {
+					has_idea = policy_taxrate_temp_2
+				}
+			policy_TAX_POL_level_3_click_enabled = {
+				has_political_power > 439
+				OR = {
+					has_idea = policy_taxrate_temp_2
+					has_idea = policy_taxrate_temp_4
+				}
 			}
-			policy_tax_level_3_click_enabled = {
-				NOT = { has_idea = Progressive_Taxation }
-				NOT = { has_country_flag = IMF_SAP_ENACTED }
-				NOT = { has_idea = tax_cooldown }
+				policy_TAX_POL_level_3_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_taxrate_temp_2
+							has_idea = policy_taxrate_temp_4
+						}
+					}
+				}
+				policy_TAX_POL_level_3_unaffordable_visible = {
+					NOT = { has_political_power > 439 }
+					OR = {
+						has_idea = policy_taxrate_temp_2
+						has_idea = policy_taxrate_temp_4
+					}
+				}
+				policy_TAX_POL_level_3_completed_visible = {
+					has_idea = policy_taxrate_temp_3
+				}
+			policy_TAX_POL_level_4_click_enabled = {
+				has_political_power > 439
+				OR = {
+					has_idea = policy_taxrate_temp_3
+					has_idea = policy_taxrate_temp_5
+				}
 			}
-			policy_tax_level_4_click_enabled = {
-				NOT = { has_idea = Heavy_Taxation }
-				NOT = { has_country_flag = IMF_SAP_ENACTED }
-				NOT = { has_idea = tax_cooldown }
+				policy_TAX_POL_level_4_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_taxrate_temp_3
+							has_idea = policy_taxrate_temp_5
+						}
+					}
+				}
+				policy_TAX_POL_level_4_unaffordable_visible = {
+					NOT = { has_political_power > 439 }
+					OR = {
+						has_idea = policy_taxrate_temp_3
+						has_idea = policy_taxrate_temp_5
+					}
+				}
+				policy_TAX_POL_level_4_completed_visible = {
+					has_idea = policy_taxrate_temp_4
+				}
+			policy_TAX_POL_level_5_click_enabled = {
+				has_political_power > 439
+				OR = {
+					has_idea = policy_taxrate_temp_4
+				}
 			}
-			policy_tax_level_5_click_enabled = {
-				NOT = { has_idea = Marxist_Taxation }
-				NOT = { has_country_flag = IMF_SAP_ENACTED }
-				NOT = { has_idea = tax_cooldown }
-			}
-
+				policy_TAX_POL_level_5_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_taxrate_temp_4
+						}
+					}
+				}
+				policy_TAX_POL_level_5_unaffordable_visible = {
+					NOT = { has_political_power > 439 }
+					OR = {
+						has_idea = policy_taxrate_temp_4
+					}
+				}
+				policy_TAX_POL_level_5_completed_visible = {
+					has_idea = policy_taxrate_temp_5
+				}
 		}
 	}
 	SAGA_POL_tab_menu = {
-
+		ai_enabled = {
+			always = no
+		}
 		context_type = player_context
 
 		window_name = "SAGA_POL_tab"
 		parent_window_name = legislation_menu
 		visible = {
 			check_variable = { policy_legislation = 2 }
-		}	
+		}
 
 		effects = {
+			policy_SAGA_POL_promotion_reaction_icon_click = {
+				news_event = SAGA_POL.1
+			}
+			policy_SAGA_POL_regression_reaction_icon_click = {
+				news_event = SAGA_POL.2
+			}
 			policy_SAGA_POL_level_0_click = {
+				add_political_power = -300
 				set_variable = { legislation_support = 0 }
-				remove_ideas = gen_notsaga_1
-				remove_ideas = gen_notsaga_2
-				remove_ideas = gen_semighey_1
-				remove_ideas = gen_semighey_2
-				remove_ideas = gen_ghey_1
-				remove_ideas = gen_ghey_2
+				remove_ideas = policy_saga_temp_1
+				remove_ideas = policy_saga_temp_0
+				remove_ideas = policy_saga_temp_2
+				remove_ideas = policy_saga_temp_3
+				remove_ideas = policy_saga_temp_4
+				remove_ideas = policy_saga_temp_4a
 				
-				add_ideas = gen_notsaga_1
+				add_ideas = policy_saga_temp_0
 				add_timed_idea = {
 					idea = saga_cooldown
-					days = 1
+					days = 730
 				}
 			}
 			policy_SAGA_POL_level_1_click = {
+				if = {
+					limit = {
+						has_idea = policy_saga_temp_2
+					}
+					add_timed_idea = {
+						idea = saga_instability_cooldown
+						days = 1095
+					}
+				}
+				add_political_power = -300
 				set_variable = { legislation_support = 0 }
-				remove_ideas = gen_notsaga_1
-				remove_ideas = gen_notsaga_2
-				remove_ideas = gen_semighey_1
-				remove_ideas = gen_semighey_2
-				remove_ideas = gen_ghey_1
-				remove_ideas = gen_ghey_2
+				remove_ideas = policy_saga_temp_1
+				remove_ideas = policy_saga_temp_0
+				remove_ideas = policy_saga_temp_2
+				remove_ideas = policy_saga_temp_3
+				remove_ideas = policy_saga_temp_4
+				remove_ideas = policy_saga_temp_4a
 				
-				add_ideas = gen_notsaga_2
+				add_ideas = policy_saga_temp_1
 				add_timed_idea = {
 					idea = saga_cooldown
-					days = 1
+					days = 730
 				}
 			}
 			policy_SAGA_POL_level_2_click = {
-				set_variable = { legislation_support = 0 }
-				remove_ideas = gen_notsaga_1
-				remove_ideas = gen_notsaga_2
-				remove_ideas = gen_semighey_1
-				remove_ideas = gen_semighey_2
-				remove_ideas = gen_ghey_1
-				remove_ideas = gen_ghey_2
-				
-				add_ideas = gen_semighey_1
-				add_timed_idea = {
-					idea = saga_cooldown
-					days = 1
+				if = {
+					limit = {
+						has_idea = policy_saga_temp_4
+					}
+					add_timed_idea = {
+						idea = saga_instability_cooldown
+						days = 180
+					}
 				}
-			}
-			policy_SAGA_POL_level_3_click = {
+				add_political_power = -300
 				set_variable = { legislation_support = 0 }
-				remove_ideas = gen_notsaga_1
-				remove_ideas = gen_notsaga_2
-				remove_ideas = gen_semighey_1
-				remove_ideas = gen_semighey_2
-				remove_ideas = gen_ghey_1
-				remove_ideas = gen_ghey_2
+				remove_ideas = policy_saga_temp_1
+				remove_ideas = policy_saga_temp_0
+				remove_ideas = policy_saga_temp_2
+				remove_ideas = policy_saga_temp_3
+				remove_ideas = policy_saga_temp_4
+				remove_ideas = policy_saga_temp_4a
 				
-				add_ideas = gen_semighey_2
+				add_ideas = policy_saga_temp_2
 				add_timed_idea = {
 					idea = saga_cooldown
-					days = 1
+					days = 730
 				}
 			}
 			policy_SAGA_POL_level_4_click = {
+				add_political_power = -300
 				set_variable = { legislation_support = 0 }
-				remove_ideas = gen_notsaga_1
-				remove_ideas = gen_notsaga_2
-				remove_ideas = gen_semighey_1
-				remove_ideas = gen_semighey_2
-				remove_ideas = gen_ghey_1
-				remove_ideas = gen_ghey_2
+				remove_ideas = policy_saga_temp_1
+				remove_ideas = policy_saga_temp_0
+				remove_ideas = policy_saga_temp_2
+				remove_ideas = policy_saga_temp_3
+				remove_ideas = policy_saga_temp_4
+				remove_ideas = policy_saga_temp_4a
 				
-				add_ideas = gen_ghey_1
+				add_ideas = policy_saga_temp_4
 				add_timed_idea = {
 					idea = saga_cooldown
-					days = 1
+					days = 730
 				}
-			}			
+			}
+			policy_SAGA_POL_level_4a_click = {
+				add_political_power = -300
+				set_variable = { legislation_support = 0 }
+				remove_ideas = policy_saga_temp_1
+				remove_ideas = policy_saga_temp_0
+				remove_ideas = policy_saga_temp_2
+				remove_ideas = policy_saga_temp_3
+				remove_ideas = policy_saga_temp_4
+				remove_ideas = policy_saga_temp_4a
+				
+				add_ideas = policy_saga_temp_4a
+				add_timed_idea = {
+					idea = saga_cooldown
+					days = 730
+				}
+			}
 
 		}
 		triggers = {
 			policy_SAGA_POL_level_0_click_enabled = {
-				NOT = { has_idea = gen_notsaga_1 }
+				has_political_power > 289
+				OR = {
+					has_idea = policy_saga_temp_1
+				}
 				NOT = { has_idea = saga_cooldown }
 			}
+				policy_SAGA_POL_level_0_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_saga_temp_1
+						}
+						has_idea = saga_cooldown
+					}
+				}
+				policy_SAGA_POL_level_0_unaffordable_visible = {
+					NOT = { has_political_power > 289 }
+					OR = {
+						has_idea = policy_saga_temp_1
+					}
+					NOT = { has_idea = saga_cooldown }
+				}
+				policy_SAGA_POL_level_0_completed_visible = {
+					has_idea = policy_saga_temp_0
+				}
 			policy_SAGA_POL_level_1_click_enabled = {
-				NOT = { has_idea = gen_notsaga_2 }
+				has_political_power > 289
+				OR = {
+					has_idea = policy_saga_temp_0
+					has_idea = policy_saga_temp_2
+				}
 				NOT = { has_idea = saga_cooldown }
 			}
+				policy_SAGA_POL_level_1_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_saga_temp_0
+							has_idea = policy_saga_temp_2
+						}
+						has_idea = saga_cooldown
+					}
+				}
+				policy_SAGA_POL_level_1_unaffordable_visible = {
+					NOT = { has_political_power > 289 }
+					OR = {
+						has_idea = policy_saga_temp_0
+						has_idea = policy_saga_temp_2
+					}
+					NOT = { has_idea = saga_cooldown }
+				}
+				policy_SAGA_POL_level_1_completed_visible = {
+					has_idea = policy_saga_temp_1
+				}
+				
 			policy_SAGA_POL_level_2_click_enabled = {
-				NOT = { has_idea = gen_semighey_1 }
+				has_political_power > 289
+				OR = {
+					has_idea = policy_saga_temp_1
+					has_idea = policy_saga_temp_3
+					has_idea = policy_saga_temp_4
+				}
 				NOT = { has_idea = saga_cooldown }
 			}
-			policy_SAGA_POL_level_3_click_enabled = {
-				NOT = { has_idea = gen_semighey_2 }
-				NOT = { has_idea = saga_cooldown }
-			}
+				policy_SAGA_POL_level_2_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_saga_temp_1
+							has_idea = policy_saga_temp_3
+							has_idea = policy_saga_temp_4
+						}
+						has_idea = saga_cooldown
+					}
+				}
+				policy_SAGA_POL_level_2_unaffordable_visible = {
+					NOT = { has_political_power > 289 }
+					OR = {
+						has_idea = policy_saga_temp_1
+						has_idea = policy_saga_temp_3
+						has_idea = policy_saga_temp_4
+					}
+					NOT = { has_idea = saga_cooldown }
+				}
+				policy_SAGA_POL_level_2_completed_visible = {
+					has_idea = policy_saga_temp_2
+				}
 			policy_SAGA_POL_level_4_click_enabled = {
-				NOT = { has_idea = gen_ghey_1 }
+				has_political_power > 289
+				OR = {
+					has_idea = policy_saga_temp_2
+					has_idea = policy_saga_temp_4a
+				}
 				NOT = { has_idea = saga_cooldown }
 			}
-			policy_SAGA_POL_level_5_click_enabled = {
-				NOT = { has_idea = gen_ghey_2 }
+				policy_SAGA_POL_level_4_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_saga_temp_2
+							has_idea = policy_saga_temp_4a
+						}
+						has_idea = saga_cooldown
+					}
+				}
+				policy_SAGA_POL_level_4_unaffordable_visible = {
+					NOT = { has_political_power > 289 }
+					OR = {
+						has_idea = policy_saga_temp_2
+						has_idea = policy_saga_temp_4a
+					}
+					NOT = { has_idea = saga_cooldown }
+				}
+				policy_SAGA_POL_level_4_completed_visible = {
+					has_idea = policy_saga_temp_4
+				}
+			policy_SAGA_POL_level_4a_click_enabled = {
+				has_political_power > 289
+				OR = {
+					has_idea = policy_saga_temp_4
+				}
 				NOT = { has_idea = saga_cooldown }
 			}
-
+				policy_SAGA_POL_level_4a_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_saga_temp_4
+						}
+						has_idea = saga_cooldown
+					}
+				}
+				policy_SAGA_POL_level_4a_unaffordable_visible = {
+					NOT = { has_political_power > 289 }
+					OR = {
+						has_idea = policy_saga_temp_4
+					}
+					NOT = { has_idea = saga_cooldown }
+				}
+				policy_SAGA_POL_level_4a_completed_visible = {
+					has_idea = policy_saga_temp_4a
+				}
+			
+			policy_SAGA_POL_cooldown_icon_visible = {
+				has_idea = saga_cooldown
+			}
+			policy_SAGA_POL_promotion_reaction_icon_visible = {
+				has_idea = saga_reactionary_cooldown
+			}
+			policy_SAGA_POL_regression_reaction_icon_visible = {
+				has_idea = saga_instability_cooldown
+			}
 		}
-	}	
+	}
 	RAC_POL_tab_menu = {
-
+		ai_enabled = {
+			always = no
+		}
 		context_type = player_context
 
 		window_name = "RAC_POL_tab"
 		parent_window_name = legislation_menu
 		visible = {
 			check_variable = { policy_legislation = 2 }
-		}	
+		}
 
 		effects = {
+			policy_RAC_POL_promotion_reaction_icon_click = {
+				news_event = RAC_POL.1
+			}
+			policy_RAC_POL_regression_reaction_icon_click = {
+				news_event = RAC_POL.2
+			}
 			policy_RAC_POL_level_0_click = {
+				if = {
+					limit = {
+						has_idea = policy_minorities_temp_1
+					}
+					add_timed_idea = {
+						idea = rac_instability_cooldown
+						days = 1095
+					}
+					set_country_flag = RAC_POL_1-0
+					clr_country_flag = RAC_POL_2-1
+					clr_country_flag = RAC_POL_3-2
+				}
+				add_political_power = -450
 				set_variable = { legislation_support = 0 }
-				remove_ideas = Oppressive
-				remove_ideas = Repressive
-				remove_ideas = Segregated
-				remove_ideas = Equal_Rights
-				remove_ideas = Affirimative_Action
+				remove_ideas = policy_minorities_temp_0
+				remove_ideas = policy_minorities_temp_1
+				remove_ideas = policy_minorities_temp_2
+				remove_ideas = policy_minorities_temp_3
+				remove_ideas = policy_minorities_temp_3a
 				
-				add_ideas = Oppressive
+				add_ideas = policy_minorities_temp_0
 				add_timed_idea = {
 					idea = rac_cooldown
-					days = 1
+					days = 1095
 				}
 			}
 			policy_RAC_POL_level_1_click = {
+				if = {
+					limit = {
+						has_idea = policy_minorities_temp_2
+					}
+					add_timed_idea = {
+						idea = rac_instability_cooldown
+						days = 1095
+					}
+					clr_country_flag = RAC_POL_1-0
+					set_country_flag = RAC_POL_2-1
+					clr_country_flag = RAC_POL_3-2
+				}
+				add_political_power = -450
 				set_variable = { legislation_support = 0 }
-				remove_ideas = Oppressive
-				remove_ideas = Repressive
-				remove_ideas = Segregated
-				remove_ideas = Equal_Rights
-				remove_ideas = Affirimative_Action
+				remove_ideas = policy_minorities_temp_0
+				remove_ideas = policy_minorities_temp_1
+				remove_ideas = policy_minorities_temp_2
+				remove_ideas = policy_minorities_temp_3
+				remove_ideas = policy_minorities_temp_3a
 				
-				add_ideas = Repressive
+				add_ideas = policy_minorities_temp_1
 				add_timed_idea = {
 					idea = rac_cooldown
-					days = 1
+					days = 1095
 				}
 			}
 			policy_RAC_POL_level_2_click = {
+				if = {
+					limit = {
+						has_idea = policy_minorities_temp_3
+					}
+					add_timed_idea = {
+						idea = rac_instability_cooldown
+						days = 1095
+					}
+					clr_country_flag = RAC_POL_1-0
+					clr_country_flag = RAC_POL_2-1
+					set_country_flag = RAC_POL_3-2
+				}
+				add_political_power = -450
 				set_variable = { legislation_support = 0 }
-				remove_ideas = Oppressive
-				remove_ideas = Repressive
-				remove_ideas = Segregated
-				remove_ideas = Equal_Rights
-				remove_ideas = Affirimative_Action
+				remove_ideas = policy_minorities_temp_0
+				remove_ideas = policy_minorities_temp_1
+				remove_ideas = policy_minorities_temp_2
+				remove_ideas = policy_minorities_temp_3
+				remove_ideas = policy_minorities_temp_3a
 				
-				add_ideas = Segregated
+				add_ideas = policy_minorities_temp_2
 				add_timed_idea = {
 					idea = rac_cooldown
-					days = 1
+					days = 1095
 				}
 			}
 			policy_RAC_POL_level_3_click = {
+				add_political_power = -450
 				set_variable = { legislation_support = 0 }
-				remove_ideas = Oppressive
-				remove_ideas = Repressive
-				remove_ideas = Segregated
-				remove_ideas = Equal_Rights
-				remove_ideas = Affirimative_Action
+				remove_ideas = policy_minorities_temp_0
+				remove_ideas = policy_minorities_temp_1
+				remove_ideas = policy_minorities_temp_2
+				remove_ideas = policy_minorities_temp_3
+				remove_ideas = policy_minorities_temp_3a
 				
-				add_ideas = Equal_Rights
+				add_ideas = policy_minorities_temp_3
 				add_timed_idea = {
 					idea = rac_cooldown
-					days = 1
+					days = 1095
 				}
 			}
-			policy_RAC_POL_level_4_click = {
+			policy_RAC_POL_level_3a_click = {
+				add_political_power = -450
 				set_variable = { legislation_support = 0 }
-				remove_ideas = Oppressive
-				remove_ideas = Repressive
-				remove_ideas = Segregated
-				remove_ideas = Equal_Rights
-				remove_ideas = Affirimative_Action
+				remove_ideas = policy_minorities_temp_0
+				remove_ideas = policy_minorities_temp_1
+				remove_ideas = policy_minorities_temp_2
+				remove_ideas = policy_minorities_temp_3
+				remove_ideas = policy_minorities_temp_3a
 				
-				add_ideas = Affirimative_Action
+				add_ideas = policy_minorities_temp_3a
 				add_timed_idea = {
 					idea = rac_cooldown
-					days = 1
+					days = 1095
 				}
-			}			
+			}
 				
 		}
 		triggers = {
 			policy_RAC_POL_level_0_click_enabled = {
-				NOT = { has_idea = Oppressive }
+				has_political_power > 439
+				OR = {
+					has_idea = policy_minorities_temp_1
+				}
 				NOT = { has_idea = rac_cooldown }
 			}
+				policy_RAC_POL_level_0_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_minorities_temp_1
+						}
+						has_idea = rac_cooldown
+					}
+				}
+				policy_RAC_POL_level_0_unaffordable_visible = {
+					NOT = { has_political_power > 439 }
+					OR = {
+						has_idea = policy_minorities_temp_1
+					}
+					NOT = { has_idea = rac_cooldown }
+				}
+				policy_RAC_POL_level_0_completed_visible = {
+					has_idea = policy_minorities_temp_0
+				}
 			policy_RAC_POL_level_1_click_enabled = {
-				NOT = { has_idea = Repressive }
+				has_political_power > 439
+				OR = {
+					has_idea = policy_minorities_temp_0
+					has_idea = policy_minorities_temp_2
+				}
 				NOT = { has_idea = rac_cooldown }
 			}
+				policy_RAC_POL_level_1_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_minorities_temp_0
+							has_idea = policy_minorities_temp_2
+						}
+						has_idea = rac_cooldown
+					}
+				}
+				policy_RAC_POL_level_1_unaffordable_visible = {
+					NOT = { has_political_power > 439 }
+					OR = {
+						has_idea = policy_minorities_temp_0
+						has_idea = policy_minorities_temp_2
+					}
+					NOT = { has_idea = rac_cooldown }
+				}
+				policy_RAC_POL_level_1_completed_visible = {
+					has_idea = policy_minorities_temp_1
+				}
 			policy_RAC_POL_level_2_click_enabled = {
-				NOT = { has_idea = Segregated }
+				has_political_power > 439
+				OR = {
+					has_idea = policy_minorities_temp_1
+					has_idea = policy_minorities_temp_3
+				}
 				NOT = { has_idea = rac_cooldown }
 			}
+				policy_RAC_POL_level_2_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_minorities_temp_1
+							has_idea = policy_minorities_temp_3
+						}
+						has_idea = rac_cooldown
+					}
+				}
+				policy_RAC_POL_level_2_unaffordable_visible = {
+					NOT = { has_political_power > 439 }
+					OR = {
+						has_idea = policy_minorities_temp_1
+						has_idea = policy_minorities_temp_3
+					}
+					NOT = { has_idea = rac_cooldown }
+				}
+				policy_RAC_POL_level_2_completed_visible = {
+					has_idea = policy_minorities_temp_2
+				}
 			policy_RAC_POL_level_3_click_enabled = {
-				NOT = { has_idea = Equal_Rights }
+				has_political_power > 439
+				OR = {
+					has_idea = policy_minorities_temp_2
+					has_idea = policy_minorities_temp_3a
+				}
 				NOT = { has_idea = rac_cooldown }
 			}
-			policy_RAC_POL_level_4_click_enabled = {
-				NOT = { has_idea = Affirimative_Action }
+				policy_RAC_POL_level_3_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_minorities_temp_2
+							has_idea = policy_minorities_temp_3a
+						}
+						has_idea = rac_cooldown
+					}
+				}
+				policy_RAC_POL_level_3_unaffordable_visible = {
+					NOT = { has_political_power > 439 }
+					OR = {
+						has_idea = policy_minorities_temp_2
+						has_idea = policy_minorities_temp_3a
+					}
+					NOT = { has_idea = rac_cooldown }
+				}
+				policy_RAC_POL_level_3_completed_visible = {
+					has_idea = policy_minorities_temp_3
+				}
+			policy_RAC_POL_level_3a_click_enabled = {
+				has_political_power > 439
+				OR = {
+					has_idea = policy_minorities_temp_3
+				}
 				NOT = { has_idea = rac_cooldown }
+			}
+				policy_RAC_POL_level_3a_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_minorities_temp_3
+						}
+						has_idea = rac_cooldown
+					}
+				}
+				policy_RAC_POL_level_3a_unaffordable_visible = {
+					NOT = { has_political_power > 439 }
+					OR = {
+						has_idea = policy_minorities_temp_3
+					}
+					NOT = { has_idea = rac_cooldown }
+				}
+				policy_RAC_POL_level_3a_completed_visible = {
+					has_idea = policy_minorities_temp_3a
+				}
+			
+			policy_RAC_POL_cooldown_icon_visible = {
+				has_idea = rac_cooldown
+			}
+			policy_RAC_POL_promotion_reaction_icon_visible = {
+				has_idea = rac_reactionary_cooldown
+			}
+			policy_RAC_POL_regression_reaction_icon_visible = {
+				has_idea = rac_instability_cooldown
 			}
 		}
-	}		
+	}
 	WOM_POL_tab_menu = {
-
+		ai_enabled = {
+			always = no
+		}
 		context_type = player_context
 
 		window_name = "WOM_POL_tab"
 		parent_window_name = legislation_menu
 		visible = {
 			check_variable = { policy_legislation = 2 }
-		}	
+		}
 
 		effects = {
+			policy_WOM_POL_promotion_reaction_icon_click = {
+				news_event = WOM_POL.1
+			}
+			policy_WOM_POL_regression_reaction_icon_click = {
+				news_event = WOM_POL.2
+			}
 			policy_WOM_POL_level_0_click = {
+				add_political_power = -300
 				set_variable = { legislation_support = 0 }
-				remove_ideas = Patriarchy
-				remove_ideas = Cognitive_Patriarchy
-				remove_ideas = Traditional
-				remove_ideas = Womens_Rights_Policy
-				remove_ideas = Equality
-				remove_ideas = Positive_Action
+				remove_ideas = policy_women_temp_1
+				remove_ideas = policy_women_temp_0
+				remove_ideas = policy_women_temp_2
+				remove_ideas = policy_women_temp_3
+				remove_ideas = policy_women_temp_4
+				remove_ideas = policy_women_temp_4a
 				
-				add_ideas = Patriarchy
+				add_ideas = policy_women_temp_1
 				add_timed_idea = {
 					idea = wom_cooldown
-					days = 1
+					days = 1095
 				}
 			}
 			policy_WOM_POL_level_1_click = {
+				if = {
+					limit = {
+						has_idea = policy_women_temp_2
+					}
+					add_timed_idea = {
+						idea = wom_instability_cooldown
+						days = 1095
+					}
+				}
+				add_political_power = -300
 				set_variable = { legislation_support = 0 }
-				remove_ideas = Patriarchy
-				remove_ideas = Cognitive_Patriarchy
-				remove_ideas = Traditional
-				remove_ideas = Womens_Rights_Policy
-				remove_ideas = Equality
-				remove_ideas = Positive_Action
+				remove_ideas = policy_women_temp_1
+				remove_ideas = policy_women_temp_0
+				remove_ideas = policy_women_temp_2
+				remove_ideas = policy_women_temp_3
+				remove_ideas = policy_women_temp_4
+				remove_ideas = policy_women_temp_4a
 				
-				add_ideas = Cognitive_Patriarchy
+				add_ideas = policy_women_temp_0
 				add_timed_idea = {
 					idea = wom_cooldown
-					days = 1
+					days = 1095
 				}
 			}
 			policy_WOM_POL_level_2_click = {
+				if = {
+					limit = {
+						has_idea = policy_women_temp_3
+					}
+					add_timed_idea = {
+						idea = wom_instability_cooldown
+						days = 1095
+					}
+				}
+				add_political_power = -300
 				set_variable = { legislation_support = 0 }
-				remove_ideas = Patriarchy
-				remove_ideas = Cognitive_Patriarchy
-				remove_ideas = Traditional
-				remove_ideas = Womens_Rights_Policy
-				remove_ideas = Equality
-				remove_ideas = Positive_Action
+				remove_ideas = policy_women_temp_1
+				remove_ideas = policy_women_temp_0
+				remove_ideas = policy_women_temp_2
+				remove_ideas = policy_women_temp_3
+				remove_ideas = policy_women_temp_4
+				remove_ideas = policy_women_temp_4a
 				
-				add_ideas = Traditional
+				add_ideas = policy_women_temp_2
 				add_timed_idea = {
 					idea = wom_cooldown
-					days = 1
+					days = 1095
 				}
 			}
 			policy_WOM_POL_level_3_click = {
+				if = {
+					limit = {
+						has_idea = policy_women_temp_4
+					}
+					add_timed_idea = {
+						idea = wom_instability_cooldown
+						days = 1095
+					}
+				}
+				add_political_power = -300
 				set_variable = { legislation_support = 0 }
-				remove_ideas = Patriarchy
-				remove_ideas = Cognitive_Patriarchy
-				remove_ideas = Traditional
-				remove_ideas = Womens_Rights_Policy
-				remove_ideas = Equality
-				remove_ideas = Positive_Action
+				remove_ideas = policy_women_temp_1
+				remove_ideas = policy_women_temp_0
+				remove_ideas = policy_women_temp_2
+				remove_ideas = policy_women_temp_3
+				remove_ideas = policy_women_temp_4
+				remove_ideas = policy_women_temp_4a
 				
-				add_ideas = Womens_Rights_Policy
+				add_ideas = policy_women_temp_3
 				add_timed_idea = {
 					idea = wom_cooldown
-					days = 1
+					days = 1095
 				}
 			}
 			policy_WOM_POL_level_4_click = {
+				add_political_power = -300
 				set_variable = { legislation_support = 0 }
-				remove_ideas = Patriarchy
-				remove_ideas = Cognitive_Patriarchy
-				remove_ideas = Traditional
-				remove_ideas = Womens_Rights_Policy
-				remove_ideas = Equality
-				remove_ideas = Positive_Action
+				remove_ideas = policy_women_temp_1
+				remove_ideas = policy_women_temp_0
+				remove_ideas = policy_women_temp_2
+				remove_ideas = policy_women_temp_3
+				remove_ideas = policy_women_temp_4
+				remove_ideas = policy_women_temp_4a
 				
-				add_ideas = Equality
+				add_ideas = policy_women_temp_4
 				add_timed_idea = {
 					idea = wom_cooldown
-					days = 1
+					days = 1095
 				}
-			}			
-			policy_WOM_POL_level_5_click = {
+			}
+			policy_WOM_POL_level_4a_click = {
+				add_political_power = -300
 				set_variable = { legislation_support = 0 }
-				remove_ideas = Patriarchy
-				remove_ideas = Cognitive_Patriarchy
-				remove_ideas = Traditional
-				remove_ideas = Womens_Rights_Policy
-				remove_ideas = Equality
-				remove_ideas = Positive_Action
+				remove_ideas = policy_women_temp_1
+				remove_ideas = policy_women_temp_0
+				remove_ideas = policy_women_temp_2
+				remove_ideas = policy_women_temp_3
+				remove_ideas = policy_women_temp_4
+				remove_ideas = policy_women_temp_4a
 				
-				add_ideas = Positive_Action	
+				add_ideas = policy_women_temp_4a	
 				add_timed_idea = {
 					idea = wom_cooldown
-					days = 1
+					days = 1095
 				}
 				
-			}					
+			}
 		}
 		triggers = {
 			policy_WOM_POL_level_0_click_enabled = {
-				NOT = { has_idea = Patriarchy }
+				has_political_power > 289
+				OR = {
+					has_idea = policy_women_temp_1
+				}
 				NOT = { has_idea = wom_cooldown }
 			}
+				policy_WOM_POL_level_0_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_women_temp_1
+						}
+						has_idea = wom_cooldown
+					}
+				}
+				policy_WOM_POL_level_0_unaffordable_visible = {
+					NOT = { has_political_power > 289 }
+					OR = {
+						has_idea = policy_women_temp_1
+					}
+					NOT = { has_idea = wom_cooldown }
+				}
+				policy_WOM_POL_level_0_completed_visible = {
+					has_idea = policy_women_temp_0
+				}
+				
 			policy_WOM_POL_level_1_click_enabled = {
-				NOT = { has_idea = Cognitive_Patriarchy }
+				has_political_power > 289
+				OR = {
+					has_idea = policy_women_temp_0
+					has_idea = policy_women_temp_2
+				}
 				NOT = { has_idea = wom_cooldown }
 			}
+				policy_WOM_POL_level_1_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_women_temp_0
+							has_idea = policy_women_temp_2
+						}
+						has_idea = wom_cooldown
+					}
+				}
+				policy_WOM_POL_level_1_unaffordable_visible = {
+					NOT = { has_political_power > 289 }
+					OR = {
+						has_idea = policy_women_temp_0
+						has_idea = policy_women_temp_2
+					}
+					NOT = { has_idea = wom_cooldown }
+				}
+				policy_WOM_POL_level_1_completed_visible = {
+					has_idea = policy_women_temp_1
+				}
 			policy_WOM_POL_level_2_click_enabled = {
-				NOT = { has_idea = Traditional }
+				has_political_power > 289
+				OR = {
+					has_idea = policy_women_temp_1
+					has_idea = policy_women_temp_3
+				}
 				NOT = { has_idea = wom_cooldown }
 			}
+				policy_WOM_POL_level_2_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_women_temp_1
+							has_idea = policy_women_temp_3
+						}
+						has_idea = wom_cooldown
+					}
+				}
+				policy_WOM_POL_level_2_unaffordable_visible = {
+					NOT = { has_political_power > 289 }
+					OR = {
+						has_idea = policy_women_temp_1
+						has_idea = policy_women_temp_3
+					}
+					NOT = { has_idea = wom_cooldown }
+				}
+				policy_WOM_POL_level_2_completed_visible = {
+					has_idea = policy_women_temp_2
+				}
 			policy_WOM_POL_level_3_click_enabled = {
-				NOT = { has_idea = Womens_Rights_Policy }
+				has_political_power > 289
+				OR = {
+					has_idea = policy_women_temp_2
+					has_idea = policy_women_temp_4
+				}
 				NOT = { has_idea = wom_cooldown }
 			}
+				policy_WOM_POL_level_3_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_women_temp_2
+							has_idea = policy_women_temp_4
+						}
+						has_idea = wom_cooldown
+					}
+				}
+				policy_WOM_POL_level_3_unaffordable_visible = {
+					NOT = { has_political_power > 289 }
+					OR = {
+						has_idea = policy_women_temp_2
+						has_idea = policy_women_temp_4
+					}
+					NOT = { has_idea = wom_cooldown }
+				}
+				policy_WOM_POL_level_3_completed_visible = {
+					has_idea = policy_women_temp_3
+				}
 			policy_WOM_POL_level_4_click_enabled = {
-				NOT = { has_idea = Equality }
+				has_political_power > 289
+				OR = {
+					has_idea = policy_women_temp_3
+					has_idea = policy_women_temp_4a
+				}
 				NOT = { has_idea = wom_cooldown }
 			}
-			policy_WOM_POL_level_5_click_enabled = {
-				NOT = { has_idea = Positive_Action }
+				policy_WOM_POL_level_4_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_women_temp_3
+							has_idea = policy_women_temp_4a
+						}
+						has_idea = wom_cooldown
+					}
+				}
+				policy_WOM_POL_level_4_unaffordable_visible = {
+					NOT = { has_political_power > 289 }
+					OR = {
+						has_idea = policy_women_temp_3
+						has_idea = policy_women_temp_4a
+					}
+					NOT = { has_idea = wom_cooldown }
+				}
+				policy_WOM_POL_level_4_completed_visible = {
+					has_idea = policy_women_temp_4
+				}
+			policy_WOM_POL_level_4a_click_enabled = {
+				has_political_power > 289
+				OR = {
+					has_idea = policy_women_temp_4
+				}
 				NOT = { has_idea = wom_cooldown }
 			}
-
+				policy_WOM_POL_level_4a_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_women_temp_4
+						}
+						has_idea = wom_cooldown
+					}
+				}
+				policy_WOM_POL_level_4a_unaffordable_visible = {
+					NOT = { has_political_power > 289 }
+					OR = {
+						has_idea = policy_women_temp_4
+					}
+					NOT = { has_idea = wom_cooldown }
+				}
+				policy_WOM_POL_level_4a_completed_visible = {
+					has_idea = policy_women_temp_4a
+				}
+			policy_WOM_POL_cooldown_icon_visible = {
+				has_idea = wom_cooldown
+			}
+			policy_WOM_POL_promotion_reaction_icon_visible = {
+				has_idea = wom_reactionary_cooldown
+			}
+			policy_WOM_POL_regression_reaction_icon_visible = {
+				has_idea = wom_instability_cooldown
+			}
 		}
-	}		
+	}
 
-	VOT_POL_tab_menu = {
-
+	UNION_POL_tab_menu = {
+		ai_enabled = {
+			always = no
+		}
 		context_type = player_context
 
-		window_name = "VOT_POL_tab"
+		window_name = "UNION_POL_tab"
 		parent_window_name = legislation_menu
 		visible = {
 			check_variable = { policy_legislation = 2 }
-		}	
+		}
 
 		effects = {
-			VOT_POL_level_0_click = {
+			policy_UNION_POL_regression_reaction_icon_click = {
+				news_event = UNION_POL.1
+			}
+			policy_UNION_POL_level_0_click = {
+				add_political_power = -450
 				set_variable = { legislation_support = 0 }
-				remove_ideas = No_Voting
-				remove_ideas = Elites_Only
-				remove_ideas = Restricted_Voting
-				remove_ideas = Universal_Sufferage
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
 				
-				add_ideas = No_Voting
+				add_ideas = policy_union_temp_0
 				add_timed_idea = {
-					idea = vot_cooldown
-					days = 1
+					idea = union_cooldown
+					days = 1095
+				}
+				add_timed_idea = {
+					idea = union_instability_cooldown
+					days = 1095
 				}
 			}
-			VOT_POL_level_1_click = {
+			policy_UNION_POL_level_1_click = {
+				if = {
+					limit = {
+						has_idea = policy_union_temp_2
+					}
+					add_timed_idea = {
+						idea = union_instability_cooldown
+						days = 185
+					}
+				}
+				add_political_power = -150
 				set_variable = { legislation_support = 0 }
-				remove_ideas = No_Voting
-				remove_ideas = Elites_Only
-				remove_ideas = Restricted_Voting
-				remove_ideas = Universal_Sufferage
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
 				
-				add_ideas = Elites_Only
+				add_ideas = policy_union_temp_1
 				add_timed_idea = {
-					idea = vot_cooldown
-					days = 1
+					idea = union_cooldown
+					days = 365
 				}
 			}
-			VOT_POL_level_2_click = {
+			policy_UNION_POL_level_2_click = {
+				add_political_power = -150
 				set_variable = { legislation_support = 0 }
-				remove_ideas = No_Voting
-				remove_ideas = Elites_Only
-				remove_ideas = Restricted_Voting
-				remove_ideas = Universal_Sufferage
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
 				
-				add_ideas = Restricted_Voting
+				add_ideas = policy_union_temp_2
 				add_timed_idea = {
-					idea = vot_cooldown
-					days = 1
+					idea = union_cooldown
+					days = 365
 				}
 			}
-			VOT_POL_level_3_click = {
+			policy_UNION_POL_level_3_click = {
+				add_political_power = -150
 				set_variable = { legislation_support = 0 }
-				remove_ideas = No_Voting
-				remove_ideas = Elites_Only
-				remove_ideas = Restricted_Voting
-				remove_ideas = Universal_Sufferage
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
 				
-				add_ideas = Universal_Sufferage
+				add_ideas = policy_union_temp_3
 				add_timed_idea = {
-					idea = vot_cooldown
-					days = 1
+					idea = union_cooldown
+					days = 365
 				}
 			}
-					
+			policy_UNION_POL_level_4_click = {
+				add_political_power = -150
+				set_variable = { legislation_support = 0 }
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
+				
+				add_ideas = policy_union_temp_4
+				add_timed_idea = {
+					idea = union_cooldown
+					days = 365
+				}
+			}
+			policy_UNION_POL_level_5_click = {
+				add_political_power = -450
+				set_variable = { legislation_support = 0 }
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
+				
+				add_ideas = policy_union_temp_5
+				add_timed_idea = {
+					idea = union_cooldown
+					days = 365
+				}
+			}
 		}
 		triggers = {
-			VOT_POL_level_0_click_enabled = {
-				NOT = { has_idea = No_Voting }
-				NOT = { has_idea = vot_cooldown }
+			policy_UNION_POL_level_0_click_enabled = {
+				has_political_power > 439
+				OR = {
+					has_idea = policy_union_temp_1
+				}
+				NOT = { has_idea = union_cooldown }
 			}
-			VOT_POL_level_1_click_enabled = {
-				NOT = { has_idea = Elites_Only }
-				NOT = { has_idea = vot_cooldown }
+				policy_UNION_POL_level_0_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_union_temp_1
+						}
+						has_idea = union_cooldown
+					}
+				}
+				policy_UNION_POL_level_0_unaffordable_visible = {
+					NOT = { has_political_power > 439 }
+					OR = {
+						has_idea = policy_union_temp_1
+					}
+					NOT = { has_idea = union_cooldown }
+				}
+				policy_UNION_POL_level_0_completed_visible = {
+					has_idea = policy_union_temp_0
+				}
+			policy_UNION_POL_level_1_click_enabled = {
+				has_political_power > 139
+				OR = {
+					has_idea = policy_union_temp_0
+					has_idea = policy_union_temp_2
+				}
+				NOT = { has_idea = union_cooldown }
 			}
-			VOT_POL_level_2_click_enabled = {
-				NOT = { has_idea = Restricted_Voting }
-				NOT = { has_idea = vot_cooldown }
+				policy_UNION_POL_level_1_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_union_temp_0
+							has_idea = policy_union_temp_2
+						}
+						has_idea = union_cooldown
+					}
+				}
+				policy_UNION_POL_level_1_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					OR = {
+						has_idea = policy_union_temp_0
+						has_idea = policy_union_temp_2
+					}
+					NOT = { has_idea = union_cooldown }
+				}
+				policy_UNION_POL_level_1_completed_visible = {
+					has_idea = policy_union_temp_1
+				}
+			policy_UNION_POL_level_2_click_enabled = {
+				has_political_power > 139
+				OR = {
+					has_idea = policy_union_temp_1
+					has_idea = policy_union_temp_3
+				}
+				NOT = { has_idea = union_cooldown }
 			}
-			VOT_POL_level_3_click_enabled = {
-				NOT = { has_idea = Universal_Sufferage }
-				NOT = { has_idea = vot_cooldown }
+				policy_UNION_POL_level_2_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_union_temp_1
+							has_idea = policy_union_temp_3
+						}
+						has_idea = union_cooldown
+					}
+				}
+				policy_UNION_POL_level_2_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					OR = {
+						has_idea = policy_union_temp_1
+						has_idea = policy_union_temp_3
+					}
+					NOT = { has_idea = union_cooldown }
+				}
+				policy_UNION_POL_level_2_completed_visible = {
+					has_idea = policy_union_temp_2
+				}
+			policy_UNION_POL_level_3_click_enabled = {
+				has_political_power > 139
+				OR = {
+					has_idea = policy_union_temp_2
+					has_idea = policy_union_temp_4
+				}
+				NOT = { has_idea = union_cooldown }
 			}
-
+				policy_UNION_POL_level_3_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_union_temp_2
+							has_idea = policy_union_temp_4
+						}
+						has_idea = union_cooldown
+					}
+				}
+				policy_UNION_POL_level_3_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					OR = {
+						has_idea = policy_union_temp_2
+						has_idea = policy_union_temp_4
+					}
+					NOT = { has_idea = union_cooldown }
+				}
+				policy_UNION_POL_level_3_completed_visible = {
+					has_idea = policy_union_temp_3
+				}
+			policy_UNION_POL_level_4_click_enabled = {
+				has_political_power > 139
+				OR = {
+					has_idea = policy_union_temp_3
+					has_idea = policy_union_temp_5
+				}
+				NOT = { has_idea = union_cooldown }
+			}
+				policy_UNION_POL_level_4_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_union_temp_3
+							has_idea = policy_union_temp_5
+						}
+						has_idea = union_cooldown
+					}
+				}
+				policy_UNION_POL_level_4_unaffordable_visible = {
+					NOT = { has_political_power > 139 }
+					OR = {
+						has_idea = policy_union_temp_3
+						has_idea = policy_union_temp_5
+					}
+					NOT = { has_idea = union_cooldown }
+				}
+				policy_UNION_POL_level_4_completed_visible = {
+					has_idea = policy_union_temp_4
+				}
+			policy_UNION_POL_level_5_click_enabled = {
+				has_political_power > 439
+				OR = {
+					has_idea = policy_union_temp_4
+				}
+				NOT = { has_idea = union_cooldown }
+			}
+				policy_UNION_POL_level_5_unavailable_visible = {
+					OR = {
+						NOT = {
+							has_idea = policy_union_temp_4
+						}
+						has_idea = union_cooldown
+					}
+				}
+				policy_UNION_POL_level_5_unaffordable_visible = {
+					NOT = { has_political_power > 439 }
+					OR = {
+						has_idea = policy_union_temp_4
+					}
+					NOT = { has_idea = union_cooldown }
+				}
+				policy_UNION_POL_level_5_completed_visible = {
+					has_idea = policy_union_temp_5
+				}
+			
+			policy_UNION_POL_cooldown_icon_visible = {
+				has_idea = union_cooldown
+			}
+			policy_UNION_POL_regression_reaction_icon_visible = {
+				has_idea = union_instability_cooldown
+			}
+			
 		}
-	}	
+	}
 	MEDIA_POL_tab_menu = {
-
+		ai_enabled = {
+			always = no
+		}
 		context_type = player_context
 
 		window_name = "MEDIA_POL_tab"
 		parent_window_name = legislation_menu
 		visible = {
 			check_variable = { policy_legislation = 2 }
-		}	
+		}
 
 		effects = {
 			policy_MEDIA_POL_level_0_click = {
+				add_political_power = -300
 				set_variable = { legislation_support = 0 }
-				remove_ideas = State_Press
-				remove_ideas = Regulated_Press
-				remove_ideas = State_Shareholder
-				remove_ideas = Free_Press
-				remove_ideas = Corporate_Press
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
 				
-				add_ideas = State_Press
+				add_ideas = policy_media_temp_0
 				add_timed_idea = {
 					idea = media_cooldown
-					days = 1
+					days = 180
 				}
 			}
 			policy_MEDIA_POL_level_1_click = {
+				add_political_power = -300
 				set_variable = { legislation_support = 0 }
-				remove_ideas = State_Press
-				remove_ideas = Regulated_Press
-				remove_ideas = State_Shareholder
-				remove_ideas = Free_Press
-				remove_ideas = Corporate_Press
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
 				
-				add_ideas = Regulated_Press
+				add_ideas = policy_media_temp_1
 				add_timed_idea = {
 					idea = media_cooldown
-					days = 1
+					days = 180
 				}
 			}
 			policy_MEDIA_POL_level_2_click = {
+				add_political_power = -300
 				set_variable = { legislation_support = 0 }
-				remove_ideas = State_Press
-				remove_ideas = Regulated_Press
-				remove_ideas = State_Shareholder
-				remove_ideas = Free_Press
-				remove_ideas = Corporate_Press
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
 				
-				add_ideas = State_Shareholder
+				add_ideas = policy_media_temp_2
 				add_timed_idea = {
 					idea = media_cooldown
-					days = 1
+					days = 180
 				}
 			}
 			policy_MEDIA_POL_level_3_click = {
+				add_political_power = -300
 				set_variable = { legislation_support = 0 }
-				remove_ideas = State_Press
-				remove_ideas = Regulated_Press
-				remove_ideas = State_Shareholder
-				remove_ideas = Free_Press
-				remove_ideas = Corporate_Press
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
 				
-				add_ideas = Free_Press
+				add_ideas = policy_media_temp_3
 				add_timed_idea = {
 					idea = media_cooldown
-					days = 1
+					days = 180
 				}
 			}
-			policy_MEDIA_POL_level_4_click = {
+			policy_MEDIA_POL_level_3a_click = {
+				add_political_power = -300
 				set_variable = { legislation_support = 0 }
-				remove_ideas = State_Press
-				remove_ideas = Regulated_Press
-				remove_ideas = State_Shareholder
-				remove_ideas = Free_Press
-				remove_ideas = Corporate_Press
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
 				
-				add_ideas = Corporate_Press
+				add_ideas = policy_media_temp_3a
 				add_timed_idea = {
 					idea = media_cooldown
-					days = 1
+					days = 180
 				}
-			}			
+			}
 				
 		}
 		triggers = {
 			policy_MEDIA_POL_level_0_click_enabled = {
-				NOT = { has_idea = State_Press }
+				has_political_power > 289
+				OR = {
+					has_idea = policy_media_temp_1
+					has_idea = policy_media_temp_2
+				}
 				NOT = { has_idea = media_cooldown }
+				NOT = { has_government = liberal }
 			}
+				policy_MEDIA_POL_level_0_unavailable_visible = {
+					OR = {
+						NOT = {
+							OR = {
+								has_idea = policy_media_temp_1
+								has_idea = policy_media_temp_2
+							}
+						}
+						has_idea = media_cooldown
+						has_government = liberal
+					}
+				}
+				policy_MEDIA_POL_level_0_unaffordable_visible = {
+					NOT = { has_political_power > 289 }
+					OR = {
+						has_idea = policy_media_temp_1
+						has_idea = policy_media_temp_2
+					}
+					NOT = { has_idea = media_cooldown }
+					NOT = { has_government = liberal }
+				}
+				policy_MEDIA_POL_level_0_completed_visible = {
+					has_idea = policy_media_temp_0
+				}
 			policy_MEDIA_POL_level_1_click_enabled = {
-				NOT = { has_idea = Regulated_Press }
+				has_political_power > 289
+				OR = {
+					has_idea = policy_media_temp_0
+					has_idea = policy_media_temp_3
+					has_idea = policy_media_temp_2
+				}
 				NOT = { has_idea = media_cooldown }
+				NOT = { has_government = liberal }
 			}
+				policy_MEDIA_POL_level_1_unavailable_visible = {
+					OR = {
+						NOT = {
+							OR = {
+								has_idea = policy_media_temp_0
+								has_idea = policy_media_temp_3
+								has_idea = policy_media_temp_2
+							}
+						}
+						has_idea = media_cooldown
+						has_government = liberal
+					}
+				}
+				policy_MEDIA_POL_level_1_unaffordable_visible = {
+					NOT = { has_political_power > 289 }
+					OR = {
+						has_idea = policy_media_temp_0
+						has_idea = policy_media_temp_3
+						has_idea = policy_media_temp_2
+					}
+					NOT = { has_idea = media_cooldown }
+					NOT = { has_government = liberal }
+				}
+				policy_MEDIA_POL_level_1_completed_visible = {
+					has_idea = policy_media_temp_1
+				}
 			policy_MEDIA_POL_level_2_click_enabled = {
-				NOT = { has_idea = State_Shareholder }
+				has_political_power > 289
+				OR = {
+					has_idea = policy_media_temp_0
+					has_idea = policy_media_temp_3
+					has_idea = policy_media_temp_1
+				}
 				NOT = { has_idea = media_cooldown }
+				NOT = { has_government = liberal }
 			}
+				policy_MEDIA_POL_level_2_unavailable_visible = {
+					OR = {
+						NOT = {
+							OR = {
+								has_idea = policy_media_temp_0
+								has_idea = policy_media_temp_3
+								has_idea = policy_media_temp_1
+							}
+						}
+						has_idea = media_cooldown
+						has_government = liberal
+					}
+				}
+				policy_MEDIA_POL_level_2_unaffordable_visible = {
+					NOT = { has_political_power > 289 }
+					OR = {
+						has_idea = policy_media_temp_0
+						has_idea = policy_media_temp_3
+						has_idea = policy_media_temp_1
+					}
+					NOT = { has_idea = media_cooldown }
+					NOT = { has_government = liberal }
+				}
+				policy_MEDIA_POL_level_2_completed_visible = {
+					has_idea = policy_media_temp_2
+				}
 			policy_MEDIA_POL_level_3_click_enabled = {
-				NOT = { has_idea = Free_Press }
+				has_political_power > 289
+				OR = {
+					has_idea = policy_media_temp_2
+					has_idea = policy_media_temp_1
+					has_idea = policy_media_temp_3a
+					
+					has_government = liberal
+				}
 				NOT = { has_idea = media_cooldown }
 			}
-			policy_MEDIA_POL_level_4_click_enabled = {
-				NOT = { has_idea = Corporate_Press }
+				policy_MEDIA_POL_level_3_unavailable_visible = {
+					OR = {
+						NOT = {
+							OR = {
+								has_idea = policy_media_temp_1
+								has_idea = policy_media_temp_2
+							}
+						}
+						has_idea = media_cooldown
+						NOT = { has_government = liberal }
+					}
+				}
+				policy_MEDIA_POL_level_3_unaffordable_visible = {
+					NOT = { has_political_power > 289 }
+					OR = {
+						has_idea = policy_media_temp_2
+						has_idea = policy_media_temp_1
+						has_idea = policy_media_temp_3a
+						has_government = liberal
+					}
+					NOT = { has_idea = media_cooldown }
+				}
+				policy_MEDIA_POL_level_3_completed_visible = {
+					has_idea = policy_media_temp_3
+				}
+			policy_MEDIA_POL_level_3a_click_enabled = {
+				has_political_power > 289
+				OR = {
+					has_idea = policy_media_temp_3
+					has_idea = policy_media_temp_2
+					
+					has_government = liberal
+				}
 				NOT = { has_idea = media_cooldown }
 			}
-
+				policy_MEDIA_POL_level_3a_unavailable_visible = {
+					OR = {
+						NOT = {
+							OR = {
+								has_idea = policy_media_temp_3
+								has_idea = policy_media_temp_2
+							}
+						}
+						has_idea = media_cooldown
+						NOT = { has_government = liberal }
+					}
+				}
+				policy_MEDIA_POL_level_3a_unaffordable_visible = {
+					NOT = { has_political_power > 289 }
+					OR = {
+						has_idea = policy_media_temp_2
+						has_idea = policy_media_temp_3
+						has_government = liberal
+					}
+					NOT = { has_idea = media_cooldown }
+				}
+				policy_MEDIA_POL_level_3a_completed_visible = {
+					has_idea = policy_media_temp_3a
+				}
+			policy_MEDIA_POL_cooldown_icon_visible = {
+				has_idea = media_cooldown
+			}
+			policy_MEDIA_POL_change_reaction_icon_visible = {
+				has_idea = media_cooldown
+			}
 		}
-	}		
-
+	}
+	
+	current_money_gui = {
+		window_name = "current_money_container"
+		triggers = {
+			omnom_warning_visible = {
+				OR = {
+					has_country_flag = food_famine_extreme
+					has_country_flag = food_famine
+					has_country_flag = food_shortages
+					has_country_flag = food_highprices
+				}
+			}
+		}
+	}
 }

@@ -36,7 +36,7 @@ if = {
 	set_technology = {
 		subkiller_0 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
 		ship_armament_light_0 = 1
@@ -49,8 +49,8 @@ if = {
 		sub_hull_large_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
-		screen_hull_small_0 = 1
 		screen_hull_medium_0 = 1
+		screen_hull_heavy_0 = 1
 	}
 }
 
@@ -150,7 +150,8 @@ set_war_support = 0.9
 
 
 	set_popularities = { 
-		communism = 100
+		communism = 90
+		trotskyism = 10
 	}
 
 	set_politics = {
@@ -165,6 +166,12 @@ create_country_leader = {
 	name = "Dimitrios Partsalidis"
 	picture = "Portrait_Greece_Dimitrios_Partsalidis.dds"
 	ideology = stalinism
+}
+
+create_country_leader = {
+	name = "Markos Vafeiadis"
+	picture = "Markos_Vafeiadis.dds"
+	ideology = titoism
 }
 
 1949.12.31 = {

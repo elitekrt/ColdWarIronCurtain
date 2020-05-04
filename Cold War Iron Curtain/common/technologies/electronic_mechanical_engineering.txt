@@ -45,7 +45,7 @@ technologies = {
 		categories = {
 			electronics
 			computing_tech
-		}	
+		}
 	}
 	
 ###Hardware 	
@@ -469,7 +469,7 @@ technologies = {
 	
 	software_I = { #Early Computer Theory
 		
-		global_building_slots_factor = 0.04
+		research_speed_factor = 0.02
 	
 		path = {
 			leads_to_tech = software_II
@@ -657,7 +657,7 @@ technologies = {
 	
 	software_VII = { #Massively Parallel Supercomputing
 	
-		global_building_slots_factor = 0.04
+		research_speed_factor = 0.02
 	
 		path = {
 			leads_to_tech = software_VIII
@@ -950,7 +950,6 @@ technologies = {
 
 	radar_II = { #Monopulse Radar - Commercial applications and logistics
 	
-		global_building_slots_factor = 0.05
 		industrial_capacity_factory = 0.04
 		industrial_capacity_dockyard = 0.04
 		equipment_conversion_speed = 0.10
@@ -1269,6 +1268,7 @@ technologies = {
 		dependencies = {
 			hardware_I = 1
 			software_I = 1
+			transistor_I = 1
 		}
 		
 		on_research_complete = {
@@ -1314,6 +1314,7 @@ technologies = {
 		dependencies = {
 			hardware_III = 1
 			software_III = 1
+			transistor_III = 1
 		}
 
 		research_cost = 4
@@ -1355,6 +1356,7 @@ technologies = {
 		dependencies = {
 			hardware_V = 1
 			software_V = 1
+			transistor_V = 1
 		}
 		
 		research_cost = 4
@@ -1396,6 +1398,7 @@ technologies = {
 		dependencies = {
 			hardware_VII = 1
 			software_VII = 1
+			transistor_VII = 1
 			interwebs_II = 1
 		}
 		
@@ -1438,6 +1441,7 @@ technologies = {
 		dependencies = {
 			hardware_IX = 1
 			software_IX = 1
+			transistor_IX = 1
 			interwebs_III = 1
 			plastics_IV = 1
 		}
@@ -1481,6 +1485,7 @@ technologies = {
 		dependencies = {
 			hardware_XI = 1
 			software_XI = 1
+			transistor_XI = 1
 			interwebs_V = 1
 			chemistry_VI = 1
 		}
@@ -1508,6 +1513,7 @@ technologies = {
 	decryption_I = {
 		
 		decryption = 1
+		intel_network_gain_factor = 0.1
 		on_research_complete = {
 			add_to_variable = { decryptTotal = 0.20 }
 		}
@@ -1532,6 +1538,7 @@ technologies = {
 	decryption_II = {
 		
 		decryption = 1
+		intel_network_gain_factor = 0.1
 		on_research_complete = {
 			add_to_variable = { decryptTotal = 0.20 }
 		}
@@ -1555,6 +1562,7 @@ technologies = {
 	decryption_III = {
 		
 		decryption = 1
+		intel_network_gain_factor = 0.1
 		on_research_complete = {
 			add_to_variable = { decryptTotal = 0.20 }
 		}
@@ -1578,6 +1586,7 @@ technologies = {
 	decryption_IV = {
 		
 		decryption = 1
+		intel_network_gain_factor = 0.1
 		on_research_complete = {
 			add_to_variable = { decryptTotal = 0.20 }
 		}
@@ -1601,6 +1610,7 @@ technologies = {
 	decryption_V = {
 		
 		decryption = 1
+		intel_network_gain_factor = 0.1
 		on_research_complete = {
 			add_to_variable = { decryptTotal = 0.20 }
 		}
@@ -1624,6 +1634,7 @@ technologies = {
 	decryption_VI = {
 		
 		decryption = 1
+		intel_network_gain_factor = 0.1
 		on_research_complete = {
 			add_to_variable = { decryptTotal = 0.20 }
 		}
@@ -1648,7 +1659,8 @@ technologies = {
 	
 	enc_I = {
 		
-		encryption = 1  
+		encryption = 1
+		intelligence_agency_defense = 1
 		on_research_complete = {
 			add_to_variable = { encryptTotal = 0.20 }
 		}
@@ -1673,6 +1685,7 @@ technologies = {
 	enc_II = {
 		
 		encryption = 1
+		intelligence_agency_defense = 1
 		on_research_complete = {
 			add_to_variable = { encryptTotal = 0.20 }
 		}
@@ -1698,6 +1711,7 @@ technologies = {
 	enc_III = {
 		
 		encryption = 1
+		intelligence_agency_defense = 1
 		on_research_complete = {
 			add_to_variable = { encryptTotal = 0.20 }
 		}
@@ -1723,6 +1737,7 @@ technologies = {
 	enc_IV = {
 		
 		encryption = 1
+		intelligence_agency_defense = 1
 		on_research_complete = {
 			add_to_variable = { encryptTotal = 0.20 }
 		}
@@ -1748,6 +1763,7 @@ technologies = {
 	enc_V = {
 		
 		encryption = 1
+		intelligence_agency_defense = 1
 		on_research_complete = {
 			add_to_variable = { encryptTotal = 0.20 }
 		}
@@ -1768,11 +1784,12 @@ technologies = {
 			electronics
 			encryption_tech
 		}
-	}	
+	}
 	
 	enc_VI = {
 		
 		encryption = 1
+		intelligence_agency_defense = 1
 		on_research_complete = {
 			add_to_variable = { encryptTotal = 0.20 }
 		}
@@ -1800,7 +1817,9 @@ technologies = {
 	interwebs_I = {
 		
 		max_command_power = 50
-	
+		intel_from_operatives_factor = 0.05
+		new_operative_slot_bonus = 2
+		
 		path = {
 			leads_to_tech = interwebs_II
 			research_cost_coeff = 1
@@ -1832,6 +1851,7 @@ technologies = {
 	interwebs_II = {
 		
 		max_command_power = 50
+		intel_from_operatives_factor = 0.05
 	
 		path = {
 			leads_to_tech = interwebs_III
@@ -1860,6 +1880,8 @@ technologies = {
 	interwebs_III = {
 		
 		max_command_power = 50
+		intel_from_operatives_factor = 0.05
+		new_operative_slot_bonus = 1
 	
 		path = {
 			leads_to_tech = interwebs_IV
@@ -1892,6 +1914,7 @@ technologies = {
 	interwebs_IV = {
 		
 		max_command_power = 50
+		intel_from_operatives_factor = 0.05
 	
 		path = {
 			leads_to_tech = interwebs_V
@@ -1923,6 +1946,8 @@ technologies = {
 	interwebs_V = {
 		
 		max_command_power = 50
+		intel_from_operatives_factor = 0.05
+		new_operative_slot_bonus = 1
 	
 		path = {
 			leads_to_tech = interwebs_VI
@@ -1950,6 +1975,7 @@ technologies = {
 	interwebs_VI = {
 		
 		max_command_power = 50
+		intel_from_operatives_factor = 0.05
 	
 		path = {
 			leads_to_tech = interwebs_VII
@@ -1981,6 +2007,8 @@ technologies = {
 	interwebs_VII = {
 		
 		max_command_power = 50
+		intel_from_operatives_factor = 0.05
+		new_operative_slot_bonus = 1
 	
 		path = {
 			leads_to_tech = interwebs_VIII
@@ -2008,6 +2036,7 @@ technologies = {
 	interwebs_VIII = {
 		
 		max_command_power = 50
+		intel_from_operatives_factor = 0.05
 		
 		path = {
 			leads_to_tech = interwebs_IX

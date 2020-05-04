@@ -7,11 +7,11 @@ country_event = {
 	picture = GFX_ETH_Insurgency_1
 
 	is_triggered_only = yes
-	
+
 
 	option = {
 		name = "Great News"
-		add_to_variable = { ETH.ERITREA_insurgency = -1 }
+		add_to_variable = { ERI.ERITREA_insurgency = -5 }
 		1000 = {
 			set_state_flag = insurgency_infilitrated
 		}
@@ -25,11 +25,11 @@ country_event = {
 	picture = GFX_ETH_Insurgency_2
 
 	is_triggered_only = yes
-	
+
 
 	option = {
 		name = "Dreadful"
-		add_to_variable = { ERI.ERITREA_insurgency = 1 }
+		add_to_variable = { ETH.ERITREA_insurgency = 5 }
 	}
 }
 
@@ -40,11 +40,11 @@ country_event = {
 	picture = GFX_ETH_Insurgency_3
 
 	is_triggered_only = yes
-	
+
 
 	option = {
 		name = "Great News"
-		add_to_variable = { ETH.ERITREA_insurgency = -1 }
+		add_to_variable = { ERI.ERITREA_insurgency = -5 }
 		army_experience = 5
 	}
 }
@@ -56,11 +56,11 @@ country_event = {
 	picture = GFX_ETH_Insurgency_4
 
 	is_triggered_only = yes
-	
+
 
 	option = {
 		name = "Terrible"
-		add_to_variable = { ERI.ERITREA_insurgency = 1 }
+		add_to_variable = { ERI.ERITREA_insurgency = 5 }
 		add_manpower = -100
 	}
 }
@@ -71,11 +71,11 @@ country_event = {
 	picture = GFX_ETH_Insurgency_5
 
 	is_triggered_only = yes
-	
+
 
 	option = {
 		name = "Great News"
-		add_to_variable = { ETH.ERITREA_insurgency = -2 }
+		add_to_variable = { ERI.ERITREA_insurgency = -8 }
 		air_experience = 5
 	}
 }
@@ -87,15 +87,15 @@ country_event = {
 	picture = GFX_ETH_Insurgency_6
 
 	is_triggered_only = yes
-	
+
 
 	option = {
 		name = "This will only embolden them..,"
-		add_to_variable = { ERI.ERITREA_insurgency = 1 }
+		add_to_variable = { ERI.ERITREA_insurgency = 5 }
 		add_equipment_to_stockpile = {
-			type = cas
+			type = jet_light_equipment
 			amount = -1
-		}		
+		}
 	}
 }
 country_event = {
@@ -105,11 +105,11 @@ country_event = {
 	picture = GFX_ERI_Insurgency_1
 
 	is_triggered_only = yes
-	
+
 
 	option = {
 		name = "Great News"
-		add_to_variable = { ETH.ERITREA_insurgency = -1 }
+		add_to_variable = { ETH.ERITREA_insurgency = -5 }
 		1304 = {
 			set_state_flag = insurgency_infilitrated
 		}
@@ -123,11 +123,11 @@ country_event = {
 	picture = GFX_ERI_Insurgency_2
 
 	is_triggered_only = yes
-	
+
 
 	option = {
 		name = "Dreadful"
-		add_to_variable = { ERI.ERITREA_insurgency = 1 }
+		add_to_variable = { ETH.ERITREA_insurgency = 5 }
 	}
 }
 
@@ -138,11 +138,11 @@ country_event = {
 	picture = GFX_ERI_Insurgency_3
 
 	is_triggered_only = yes
-	
+
 
 	option = {
 		name = "Great News"
-		add_to_variable = { ETH.ERITREA_insurgency = -1 }
+		add_to_variable = { ETH.ERITREA_insurgency = -5 }
 		army_experience = 5
 	}
 }
@@ -154,11 +154,11 @@ country_event = {
 	picture = GFX_ERI_Insurgency_4
 
 	is_triggered_only = yes
-	
+
 
 	option = {
 		name = "Terrible"
-		add_to_variable = { ERI.ERITREA_insurgency = 1 }
+		add_to_variable = { ETH.ERITREA_insurgency = 5 }
 		add_manpower = -100
 	}
 }
@@ -169,11 +169,11 @@ country_event = {
 	picture = GFX_ERI_Insurgency_5
 
 	is_triggered_only = yes
-	
+
 
 	option = {
 		name = "Great News"
-		add_to_variable = { ETH.ERITREA_insurgency = -2 }
+		add_to_variable = { ETH.ERITREA_insurgency = -8 }
 		air_experience = 5
 	}
 }
@@ -185,15 +185,15 @@ country_event = {
 	picture = GFX_ERI_Insurgency_6
 
 	is_triggered_only = yes
-	
+
 
 	option = {
 		name = "This will only embolden them..,"
-		add_to_variable = { ERI.ERITREA_insurgency = 1 }
+		add_to_variable = { ETH.ERITREA_insurgency = 5 }
 		add_equipment_to_stockpile = {
-			type = cas
+			type = jet_light_equipment
 			amount = -1
-		}		
+		}
 	}
 }
 
@@ -205,7 +205,7 @@ news_event = {
 
 	is_triggered_only = yes
 	major = yes
-	
+
 
 	option = {
 		name = "Interesting"
@@ -219,7 +219,7 @@ news_event = {
 
 	is_triggered_only = yes
 	major = yes
-	
+
 
 	option = {
 		name = "Another new post-colonial state"
@@ -234,7 +234,7 @@ news_event = {
 
 	is_triggered_only = yes
 	major = yes
-	
+
 
 	option = {
 		name = "Another conflict in Africa...."

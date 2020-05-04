@@ -29,7 +29,7 @@ if = {
 		subkiller_0 = 1
 		subkiller_1 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ta_fcs_0 = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
@@ -39,9 +39,9 @@ if = {
 		ship_armament_heavy_0 = 1
 		
 		ww_capitals = 1
-		capital_hull_0 = 1
+		battle_hull_medium_0 = 1
 		ww_carriers = 1
-		capital_hull_0 = 1
+		battle_hull_medium_0 = 1
 		carrier_hull_0 = 1
 		
 		ww_submarines = 1
@@ -50,9 +50,9 @@ if = {
 		sub_hull_small_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
+		screen_hull_heavy_0 = 1
 		screen_hull_medium_0 = 1
-		screen_hull_small_0 = 1
-		screen_hull_large_0 = 1
+		battle_hull_light_0 = 1
 	}
 }
 
@@ -374,6 +374,12 @@ create_country_leader = {
 	desc = "pol_desc_konrad"
 	picture = "Konrad_Adenauer.dds"
 	ideology = christian_democracy
+	traits = {
+		staunch_atlanticist
+		european_union_believer
+		rearmament_proponent
+		german_sovereignty_guarantor
+	}
 }
 
 create_country_leader = {
@@ -410,13 +416,13 @@ create_country_leader = {
 	name = "Max Reimann"
 	picture = "Max_Reimann.dds"
 	ideology = marxism_leninism
-}	
+}
 
 create_country_leader = {
 	name = "Andreas Baader"
 	picture = "Anders_Baader.dds"
 	ideology = maoist
-}	
+}
 
 }
 1956.1.1 = {
@@ -622,59 +628,60 @@ create_field_marshal = {
 	}
 
 	set_politics = {
-	ruling_party = Christian_Democratic
-	last_election = "1957.9.17"
-	election_frequency = 48
-	elections_allowed = yes
+		ruling_party = Christian_Democratic
+		last_election = "1957.9.17"
+		election_frequency = 48
+		elections_allowed = yes
+	}
 	
 	if = {
-	limit = {
-		not = { has_dlc = "Man the Guns"}
+		limit = {
+			NOT = { has_dlc = "Man the Guns" }
+		}
+		set_technology = {
+			ww_screens_proletariat = 1
+			frigate_0 = 1
+			destroyer_0 = 1
+			cruiser_0 = 1
+			ww_capitals_proletariat = 1
+			carrier_0 = 1
+			ww_submarines_proletariat = 1
+			attack_submarine_0 = 1
+		}
 	}
-	set_technology = {
-		ww_screens_proletariat = 1
-		frigate_0 = 1
-		destroyer_0 = 1
-		cruiser_0 = 1
-		ww_capitals_proletariat = 1
-		carrier_0 = 1
-		ww_submarines_proletariat = 1
-		attack_submarine_0 = 1
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+		set_technology = {
+			countermeasures_0 = 1
+			subkiller_0 = 1
+			subkiller_1 = 1
+			maritime_sonar_0 = 1
+			detection_ww = 1
+			maritime_ta_fcs_0 = 1
+			maritime_ew_ss_0 = 1
+			ww_armaments = 1
+			ship_armament_light_0 = 1
+			ship_armament_light_1 = 1
+			ship_armament_medium_0 = 1
+			ship_armament_heavy_0 = 1
+			
+			ww_capitals = 1
+			battle_hull_medium_0 = 1
+			ww_carriers = 1
+			battle_hull_medium_0 = 1
+			carrier_hull_0 = 1
+			
+			ww_submarines = 1
+			torpedo_ww = 1
+			sub_hull_large_single_0 = 1
+			sub_hull_small_single_0 = 1
+			torpedo_small_0 = 1
+			ww_screens = 1
+			screen_hull_heavy_0 = 1
+			screen_hull_medium_0 = 1
+			battle_hull_light_0 = 1
+		}
 	}
-}
-if = {
-	limit = { has_dlc = "Man the Guns"}
-	set_technology = {
-		countermeasures_0 = 1
-		subkiller_0 = 1
-		subkiller_1 = 1
-		maritime_sonar_0 = 1
-		ww_detection = 1
-		maritime_ta_fcs_0 = 1
-		maritime_ew_ss_0 = 1
-		ww_armaments = 1
-		ship_armament_light_0 = 1
-		ship_armament_light_1 = 1
-		ship_armament_medium_0 = 1
-		ship_armament_heavy_0 = 1
-		
-		ww_capitals = 1
-		capital_hull_0 = 1
-		ww_carriers = 1
-		capital_hull_0 = 1
-		carrier_hull_0 = 1
-		
-		ww_submarines = 1
-		torpedo_ww = 1
-		sub_hull_large_single_0 = 1
-		sub_hull_small_single_0 = 1
-		torpedo_small_0 = 1
-		ww_screens = 1
-		screen_hull_medium_0 = 1
-		screen_hull_small_0 = 1
-		screen_hull_large_0 = 1
-	}
-}
 
 set_technology = {
 
@@ -1217,8 +1224,8 @@ if = {
 		parent_version = 0
 		modules = {
 			fixed_sub_torpedo_slot = torpedo_ww
-			fixed_sub_engine_slot = ww_sub_engine
-			fixed_maritime_slot = ww_sonar 
+			fixed_sub_engine_slot = sub_engine_ww
+			fixed_maritime_slot = sonar_ww 
 			mid_1_custom_slot = torpedo_ww
 		}
 	}

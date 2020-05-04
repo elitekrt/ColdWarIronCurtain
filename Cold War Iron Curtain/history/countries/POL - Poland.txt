@@ -31,7 +31,7 @@ if = {
 		subkiller_0 = 1
 		subkiller_1 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ta_fcs_0 = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
@@ -41,9 +41,9 @@ if = {
 		ship_armament_heavy_0 = 1
 		
 		ww_capitals = 1
-		capital_hull_0 = 1
+		battle_hull_medium_0 = 1
 		ww_carriers = 1
-		capital_hull_0 = 1
+		battle_hull_medium_0 = 1
 		carrier_hull_0 = 1
 		
 		ww_submarines = 1
@@ -52,9 +52,9 @@ if = {
 		sub_hull_small_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
+		screen_hull_heavy_0 = 1
 		screen_hull_medium_0 = 1
-		screen_hull_small_0 = 1
-		screen_hull_large_0 = 1
+		battle_hull_light_0 = 1
 	}
 }
 
@@ -179,10 +179,10 @@ add_ideas = {
 	enforce_collecticization
 	FRA_Reconstruction_Budget_Reorganized
 }
-set_variable = { gulag_factor = 0.02 }					
-set_variable = { gulag_factor_neg = -0.02 }		
-set_variable = { gulag_factor_five = 0.10 }			
-set_variable = { gulag_factor_five_neg = -0.10 }			
+set_variable = { gulag_factor = 0.02 }
+set_variable = { gulag_factor_neg = -0.02 }
+set_variable = { gulag_factor_five = 0.10 }
+set_variable = { gulag_factor_five_neg = -0.10 }
 
 
 add_dynamic_modifier = {
@@ -247,6 +247,10 @@ create_country_leader = {
 	name = "Boleslaw Bierut"
 	picture = "Portrait_POL_Boleslaw_Bierut.dds"
 	ideology = stalinism
+	traits = {
+		unrivalled_iron_leader
+		follow_moscow_lead
+	}
 }
 
 create_country_leader = {
@@ -536,7 +540,7 @@ set_cosmetic_tag = POL_90
 
 2000.1.1 = {
 drop_cosmetic_tag = yes
-set_party_name = { ideology = Christian_Democratic long_name = "Akcja Wyborcza Solidarność" name = AWS }	
+set_party_name = { ideology = Christian_Democratic long_name = "Akcja Wyborcza Solidarność" name = AWS }
 
 
 	set_popularities = { 

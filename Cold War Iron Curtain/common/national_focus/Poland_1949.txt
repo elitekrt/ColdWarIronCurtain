@@ -44,10 +44,7 @@
 		x = 22
 		y = 0
 		completion_reward = {
-			add_timed_idea = {
-				idea = POL_idea_first_three_year_plan
-				days = 600
-			}
+			add_ideas = POL_idea_first_three_year_plan
 		}
 	}
 	focus = {
@@ -142,7 +139,7 @@
 				name = agri_tech_bonus
 				bonus = 1.75
 				uses = 1
-				category = agri_tech
+				category = agriculture
 			}
 		}
 	}
@@ -178,6 +175,7 @@
 			country_event = Wyszynski.1
 			add_to_variable = { clergy_persecution_factor = 0.05 }
 			add_to_variable = { clergy_persecution_negative = -0.05  }
+			custom_effect_tooltip = clergy_persecution_increase_TT
 		}
 	}
 	focus = {
@@ -213,6 +211,7 @@
 			add_to_variable = { gulag_factor_neg = -0.01 }		
 			add_to_variable = { gulag_factor_five = 0.05 }			
 			add_to_variable = { gulag_factor_five_neg = -0.05 }
+			custom_effect_tooltip = gulag_factor_increase_TT
 		}
 	}
 	focus = {
@@ -262,6 +261,7 @@
 		y = 9
 		completion_reward = {
 			add_to_variable = { cpsu_strength = 0.05 }
+			custom_effect_tooltip = cpsu_strength_increase_TT
 		}
 	}	
 	focus = {
@@ -322,6 +322,7 @@
 		completion_reward = {
 			add_to_variable = { clergy_persecution_factor = -0.05 }
 			add_to_variable = { clergy_persecution_negative = 0.05  }
+			custom_effect_tooltip = clergy_persecution_decrease_TT
 		}
 	}
 	focus = {
@@ -342,6 +343,7 @@
 		y = 4
 		completion_reward = {
 			add_to_variable = { cpsu_strength = 0.05 }
+			custom_effect_tooltip = cpsu_strength_increase_TT
 		}
 	}
 	focus = {
@@ -434,7 +436,7 @@
 		y = 6
 		completion_reward = {
 			random_owned_controlled_state = {
-				limit =  { region = 210 }
+				limit = { region = 210 }
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = synthetic_refinery
@@ -487,7 +489,7 @@
 				name = agri_tech_bonus
 				bonus = 1.75
 				uses = 1
-				category = agri_tech
+				category = agriculture
 			}
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
@@ -606,10 +608,8 @@
 		y = 6
 		completion_reward = {
 			remove_ideas = famine
-			add_timed_idea = {
-				idea = fra_rationing
-				days = 1250
-			}
+			add_ideas = fra_rationing
+
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -680,7 +680,10 @@
 		x = 22
 		y = 3
 		completion_reward = {
-			remove_ideas = FRA_Reconstruction_Budget_Reorganized
+			remove_ideas = {
+				FRA_Reconstruction_Budget_Reorganized
+				POL_idea_first_three_year_plan
+			}
 		}
 	}
 	focus = {
@@ -717,6 +720,7 @@
 				idea = high_quotas
 				days = 1500
 			}
+			remove_ideas = fra_rationing
 		}
 	}
 	focus = {
@@ -954,7 +958,7 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = dd_bonus
-				category = screen_hull_medium
+				category = screen_hull_heavy
 				bonus = 1.75
 				uses = 2
 			}
@@ -1224,6 +1228,7 @@
 		completion_reward = {
 			add_to_variable = { cpsu_strength = 0.05 }
 			add_political_power = 50
+			custom_effect_tooltip = cpsu_strength_increase_TT
 		}
 	}
 	focus = {
@@ -1328,6 +1333,7 @@
 			add_to_variable = { gulag_factor_neg = 0.01 }		
 			add_to_variable = { gulag_factor_five = -0.05 }			
 			add_to_variable = { gulag_factor_five_neg = 0.05 }
+			custom_effect_tooltip = gulag_factor_decrease_TT
 		}
 	}
 	focus = {
@@ -1345,6 +1351,7 @@
 			add_to_variable = { gulag_factor_neg = 0.01 }		
 			add_to_variable = { gulag_factor_five = -0.05 }			
 			add_to_variable = { gulag_factor_five_neg = 0.05 }
+			custom_effect_tooltip = gulag_factor_decrease_TT
 		}
 	}
 	focus = {
@@ -1484,7 +1491,8 @@
 		y = 21
 		completion_reward = {
 			add_to_variable = { clergy_persecution_factor = -0.05 }
-			add_to_variable = { clergy_persecution_negative = 0.05  }		
+			add_to_variable = { clergy_persecution_negative = 0.05  }	
+			custom_effect_tooltip = clergy_persecution_decrease_TT
 		}
 	}
 	focus = {
@@ -1537,6 +1545,7 @@
 			add_to_variable = { gulag_factor_neg = 0.01 }		
 			add_to_variable = { gulag_factor_five = -0.05 }			
 			add_to_variable = { gulag_factor_five_neg = 0.05 }
+			custom_effect_tooltip = gulag_factor_decrease_TT
 		}
 	}
 	focus = {
@@ -1670,6 +1679,7 @@
 			add_to_variable = { gulag_factor_neg = 0.01 }		
 			add_to_variable = { gulag_factor_five = -0.05 }			
 			add_to_variable = { gulag_factor_five_neg = 0.05 }
+			custom_effect_tooltip = gulag_factor_decrease_TT
 
 			add_to_variable = { var = domestic_influence_amount value = 100 }
 			recalculate_influence = yes					
@@ -1778,6 +1788,7 @@
 			add_to_variable = { gulag_factor_neg = -0.01 }		
 			add_to_variable = { gulag_factor_five = 0.05 }			
 			add_to_variable = { gulag_factor_five_neg = -0.05 }
+			custom_effect_tooltip = gulag_factor_increase_TT
 		}
 	}
 	focus = {
@@ -1795,6 +1806,7 @@
 			add_to_variable = { gulag_factor_neg = -0.01 }		
 			add_to_variable = { gulag_factor_five = 0.05 }			
 			add_to_variable = { gulag_factor_five_neg = -0.05 }
+			custom_effect_tooltip = gulag_factor_increase_TT
 		}
 	}
 	focus = {
@@ -1934,6 +1946,7 @@
 			add_to_variable = { gulag_factor_neg = -0.01 }		
 			add_to_variable = { gulag_factor_five = 0.05 }			
 			add_to_variable = { gulag_factor_five_neg = -0.05 }
+			custom_effect_tooltip = gulag_factor_increase_TT
 		}
 	}
 	focus = {

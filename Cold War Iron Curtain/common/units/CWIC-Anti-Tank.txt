@@ -20,7 +20,7 @@ sub_units = {
 			category_line_artillery
 			category_artillery_antitank
 			category_towed
-		}		
+		}
 		
 		manpower = 500
 		training_time = 120
@@ -34,11 +34,13 @@ sub_units = {
 		
 		essential = {
 			direct_fire_gun_equipment
-		}				
+		}
 
 		need = {
 			direct_fire_gun_equipment = 36
+			motorized_equipment = 18
 		}
+		transport = motorized_equipment
 
 		forest = {
 			attack = -0.2
@@ -114,10 +116,10 @@ sub_units = {
 		
 		essential = {
 			medium_tank_destroyer_equipment
-		}						
+		}
 
 		need = {
-			medium_tank_destroyer_equipment = 40
+			medium_tank_destroyer_equipment = 36
 		}
 
 		forest = {
@@ -175,7 +177,7 @@ sub_units = {
 			category_artillery_antitank
 			category_rockets
 			category_towed
-		}		
+		}
 		
 		manpower = 500
 		training_time = 120
@@ -189,11 +191,13 @@ sub_units = {
 		
 		essential = {
 			atgm_equipment
-		}			
+		}
 
 		need = {
 			atgm_equipment = 36
+			motorized_equipment = 9
 		}
+		transport = motorized_equipment
 
 		forest = {
 			attack = -0.2
@@ -232,7 +236,7 @@ sub_units = {
 		}
 		
 		can_be_parachuted = yes
-	}	
+	}
 	
 	atgm_carrier = {
 		sprite = "medium_armor"
@@ -270,10 +274,10 @@ sub_units = {
 		
 		essential = {
 			atgm_carrier_equipment
-		}			
+		}
 
 		need = {
-			atgm_carrier_equipment = 40
+			atgm_carrier_equipment = 36
 		}
 
 		forest = {
@@ -308,73 +312,5 @@ sub_units = {
 		}
 	}
 	
-	attack_helicopter_support = {
-		sprite = infantry
-		map_icon_category = infantry
-
-		priority = 500
-		ai_priority = 200
-		active = no
-
-		type = {
-			mechanized
-			support			
-		}
-		
-		group = support
-		
-		categories = {
-			category_artillery_antitank
-			category_support_battalions
-			category_army
-			category_helicopters
-			category_rockets
-		}
-
-		manpower = 500
-		training_time = 180
-		supply_consumption = 0.5
-		weight = 1.5
-		combat_width = 0		
-		max_organisation = 0	
-		default_morale = 0.2		
-		max_strength = 0.6
-		suppression = 0	
-
-		# this is what moves us and sets speed
-		transport = attack_helicopter_equipment
-
-		need = {
-			attack_helicopter_equipment = 20
-			support_equipment = 20	
-		}
-		forest = {
-			attack = -0.1
-			defence = -0.2
-		}
-		mountain = {
-			attack = -0.05
-			defence = -0.2
-		}
-		jungle = {
-			attack = -0.1
-			defence = -0.2
-		}
-		marsh = {
-			attack = -0.1
-			defence = -0.2
-		}		
-		urban = {
-			attack = -0.1
-			defence = -0.2
-		}
-		river = {
-			defence = -0.2
-		}
-		amphibious = {
-			attack = -0.05
-			defence = -0.2
-		}
-
-	}
+	
 }

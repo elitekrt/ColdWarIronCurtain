@@ -661,7 +661,7 @@ focus_tree = {
 				name = agri_tech_bonus
 				bonus = 1.75
 				uses = 1
-				category = agri_tech
+				category = agriculture
 			}
 		}
 	}
@@ -843,6 +843,12 @@ focus_tree = {
 				name = "Liri Belishova" 
 				picture = "Liri_Belishova.dds"
 				ideology = marxism_leninism 
+				traits = {
+					understands_youth
+					herald_of_the_farming_community
+					consensus_seeker
+					khrushchev_one_eyed_friend
+				}
 			}	
 		}
 	}
@@ -1482,7 +1488,7 @@ focus_tree = {
 				name = agri_tech_bonus
 				bonus = 0.75
 				uses = 1
-				category = agri_tech
+				category = agriculture
 			}
 		}
 	}
@@ -1789,7 +1795,7 @@ focus_tree = {
 				name = agri_tech_bonus
 				bonus = 0.75
 				uses = 1
-				category = agri_tech
+				category = agriculture
 			}		
 				SOV = {
 					ALB = {

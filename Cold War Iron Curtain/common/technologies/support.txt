@@ -9,12 +9,12 @@ technologies = {
 		path = {
 			leads_to_tech = combat_support
 			research_cost_coeff = 1
-		}	
+		}
 			
 		path = {
 			leads_to_tech = combat_service_support
 			research_cost_coeff = 1
-		}					
+		}
 
 		research_cost = 1.0
 		start_year = 1935
@@ -77,7 +77,10 @@ technologies = {
 	tech_armor_engineers = {
 
 		enable_subunits = {
-			armored_engineers
+			engineer_armored
+		}
+		enable_subunits = {
+			engineer_mechanized
 		}
 		
 		path = {
@@ -109,7 +112,14 @@ technologies = {
 	
 	tech_armor_engineers2 = {
 
-		armored_engineers = {
+		engineer_armored = {
+			entrenchment = 1
+			fort = {
+				defence = 0.1
+				attack = 0.2
+			}
+		}
+		engineer_mechanized = {
 			entrenchment = 1
 			fort = {
 				defence = 0.1
@@ -148,7 +158,15 @@ technologies = {
 	
 	tech_armor_engineers3 = {
 
-		armored_engineers = {
+		engineer_armored = {
+			entrenchment = 1
+			river = {
+				attack = 0.1	
+				defence = 0.1
+				movement = 0.1
+			}
+		}
+		engineer_mechanized = {
 			entrenchment = 1
 			river = {
 				attack = 0.1	
@@ -159,7 +177,7 @@ technologies = {
 		path = {
 			leads_to_tech = tech_armor_engineers4
 			research_cost_coeff = 1
-		}		
+		}
 
 		research_cost = 1.5
 		start_year = 1960
@@ -186,7 +204,15 @@ technologies = {
 	
 	tech_armor_engineers4 = {
 
-		armored_engineers = {
+		engineer_armored = {
+			entrenchment = 1
+			jungle = {
+				attack = 0.05
+				defence = 0.05
+				movement = 0.05
+			}
+		}
+		engineer_mechanized = {
 			entrenchment = 1
 			jungle = {
 				attack = 0.05
@@ -198,7 +224,7 @@ technologies = {
 		path = {
 			leads_to_tech = tech_armor_engineers5
 			research_cost_coeff = 1
-		}	
+		}
 		
 		research_cost = 1.5
 		start_year = 1970
@@ -225,7 +251,14 @@ technologies = {
 	
 	tech_armor_engineers5 = {
 
-		armored_engineers = {
+		engineer_armored = {
+			entrenchment = 1
+			urban = {
+				attack = 0.1	
+				defence = 0.2
+			}
+		}
+		engineer_mechanized = {
 			entrenchment = 1
 			urban = {
 				attack = 0.1	
@@ -236,7 +269,7 @@ technologies = {
 		path = {
 			leads_to_tech = tech_armor_engineers6
 			research_cost_coeff = 1
-		}	
+		}
 		
 		research_cost = 1.5
 		start_year = 1980
@@ -259,11 +292,38 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 		}
-	}	
+	}
 	
 	tech_armor_engineers6 = {
 
-		armored_engineers = {
+		engineer_armored = {
+			entrenchment = 1
+			forest = {
+				movement = 0.15
+			}
+			hills = {
+				movement = 0.15
+			}
+			mountain = {
+				movement = 0.15
+			}
+			jungle = {
+				movement = 0.15
+			}
+			marsh = {
+				movement = 0.15
+			}
+			plains = {
+				movement = 0.15
+			}
+			desert = {
+				movement = 0.15
+			}
+			river = {
+				movement = 0.15
+			}
+		}
+		engineer_mechanized = {
 			entrenchment = 1
 			forest = {
 				movement = 0.15
@@ -294,7 +354,7 @@ technologies = {
 		path = {
 			leads_to_tech = tech_armor_engineers7
 			research_cost_coeff = 1
-		}	
+		}
 		
 		research_cost = 1.5
 		start_year = 1990
@@ -321,7 +381,14 @@ technologies = {
 	
 	tech_armor_engineers7 = {
 
-		armored_engineers = {
+		engineer_armored = {
+			entrenchment = 2
+			urban = {
+				attack = 0.2
+				defence = 0.2
+			}
+		}
+		engineer_mechanized = {
 			entrenchment = 2
 			urban = {
 				attack = 0.2
@@ -529,7 +596,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 		}
-	}	
+	}
 	
 	tech_engineers6 = {
 
@@ -625,6 +692,9 @@ technologies = {
 		enable_subunits = {
 			recon
 		}
+		enable_subunits = {
+			recon_motorized
+		}
 		
 		path = {
 			leads_to_tech = tech_recon2
@@ -655,6 +725,9 @@ technologies = {
 	tech_recon2 = {
 
 		recon = {
+			recon = 1
+		}
+		recon_motorized = {
 			recon = 1
 		}
 		
@@ -689,6 +762,9 @@ technologies = {
 		recon = {
 			recon = 1
 		}
+		recon_motorized = {
+			recon = 1
+		}
 		
 		path = {
 			leads_to_tech = tech_recon4
@@ -719,6 +795,9 @@ technologies = {
 	tech_recon4 = {
 
 		recon = {
+			recon = 1
+		}
+		recon_motorized = {
 			recon = 1
 		}
 
@@ -753,6 +832,9 @@ technologies = {
 		recon = {
 			recon = 1
 		}
+		recon_motorized = {
+			recon = 1
+		}
 		
 		path = {
 			leads_to_tech = tech_recon6
@@ -785,6 +867,9 @@ technologies = {
 		recon = {
 			recon = 1
 		}
+		recon_motorized = {
+			recon = 1
+		}
 		
 		path = {
 			leads_to_tech = tech_recon7
@@ -815,6 +900,9 @@ technologies = {
 	tech_recon7 = {
 
 		recon = {
+			recon = 1
+		}
+		recon_motorized = {
 			recon = 1
 		}
 		
@@ -1335,6 +1423,7 @@ technologies = {
 		enable_subunits = {
 			military_police
 		}
+		root_out_resistance_effectiveness_factor = 0.05
 		
 		path = {
 			leads_to_tech = tech_military_police2
@@ -1361,9 +1450,9 @@ technologies = {
 	tech_military_police2 = {
 
 		military_police = {
-			suppression_factor = 0.1
+			suppression_factor = 0.05
 		}
-		
+		root_out_resistance_effectiveness_factor = 0.1
 		
 		path = {
 			leads_to_tech = tech_military_police3
@@ -1390,11 +1479,16 @@ technologies = {
 	tech_military_police3 = {
 
 		military_police = {
-			suppression_factor = 0.1
+			suppression_factor = 0.05
 		}
+		root_out_resistance_effectiveness_factor = 0.1
 		path = {
 			leads_to_tech = tech_military_police4
 			research_cost_coeff = 1
+		}
+		
+		on_research_complete = {
+			custom_effect_tooltip = support_tech_military_police3_tt
 		}
 
 		research_cost = 1.5
@@ -1417,8 +1511,9 @@ technologies = {
 	tech_military_police4 = {
 
 		military_police = {
-			suppression_factor = 0.1
+			suppression_factor = 0.05
 		}
+		root_out_resistance_effectiveness_factor = 0.05
 
 		path = {
 			leads_to_tech = tech_military_police5
@@ -1445,8 +1540,9 @@ technologies = {
 	tech_military_police5 = {
 
 		military_police = {
-			suppression_factor = 0.1
+			suppression_factor = 0.05
 		}
+		root_out_resistance_effectiveness_factor = 0.05
 		
 		path = {
 			leads_to_tech = tech_military_police6
@@ -1473,8 +1569,9 @@ technologies = {
 	tech_military_police6 = {
 
 		military_police = {
-			suppression_factor = 0.1
+			suppression_factor = 0.05
 		}
+		root_out_resistance_effectiveness_factor = 0.1
 		
 		path = {
 			leads_to_tech = tech_military_police7
@@ -1501,8 +1598,9 @@ technologies = {
 	tech_military_police7 = {
 
 		military_police = {
-			suppression_factor = 0.1
+			suppression_factor = 0.05
 		}
+		root_out_resistance_effectiveness_factor = 0.05
 
 		research_cost = 1.5
 		start_year = 2000
@@ -1530,7 +1628,7 @@ technologies = {
 		path = {
 			leads_to_tech = tech_field_hospital
 			research_cost_coeff = 1
-		}					
+		}
 
 		path = {
 			leads_to_tech = tech_logistics_company
@@ -2188,7 +2286,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 		}
-	}	
+	}
 
 	tech_maintenance_company7 = {
 
@@ -2216,7 +2314,7 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 		}
-	}	
+	}
 
 ###MEDICAL
 
@@ -2224,6 +2322,9 @@ technologies = {
 
 		enable_subunits = {
 			field_hospital
+		}
+		enable_subunits = {
+			field_hospital_mechanized
 		}
 		
 		path = {
@@ -2259,6 +2360,10 @@ technologies = {
 			casualty_trickleback = 0.03
 			experience_loss_factor = -0.03
 		}
+		field_hospital_mechanized = {
+			casualty_trickleback = 0.03
+			experience_loss_factor = -0.03
+		}
 		
 		path = {
 			leads_to_tech = tech_field_hospital3
@@ -2290,6 +2395,10 @@ technologies = {
 	tech_field_hospital3 = {
 
 		field_hospital = {
+			casualty_trickleback = 0.03
+			experience_loss_factor = -0.03
+		}
+		field_hospital_mechanized = {
 			casualty_trickleback = 0.03
 			experience_loss_factor = -0.03
 		}
@@ -2331,6 +2440,10 @@ technologies = {
 			casualty_trickleback = 0.03
 			experience_loss_factor = -0.03
 		}
+		field_hospital_mechanized = {
+			casualty_trickleback = 0.03
+			experience_loss_factor = -0.03
+		}
 
 		path = {
 			leads_to_tech = tech_field_hospital_helicopter4
@@ -2366,6 +2479,10 @@ technologies = {
 	tech_field_hospital5 = {
 
 		field_hospital = {
+			casualty_trickleback = 0.03
+			experience_loss_factor = -0.03
+		}
+		field_hospital_mechanized = {
 			casualty_trickleback = 0.03
 			experience_loss_factor = -0.03
 		}
@@ -2407,6 +2524,10 @@ technologies = {
 			casualty_trickleback = 0.03
 			experience_loss_factor = -0.03
 		}
+		field_hospital_mechanized = {
+			casualty_trickleback = 0.03
+			experience_loss_factor = -0.03
+		}
 		
 		path = {
 			leads_to_tech = tech_field_hospital_helicopter6
@@ -2437,11 +2558,15 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 		}
-	}	
+	}
 	
 	tech_field_hospital7 = {
 
 		field_hospital = {
+			casualty_trickleback = 0.03
+			experience_loss_factor = -0.03
+		}
+		field_hospital_mechanized = {
 			casualty_trickleback = 0.03
 			experience_loss_factor = -0.03
 		}
@@ -2475,13 +2600,13 @@ technologies = {
 	
 	tech_field_hospital_helicopter3 = {
 
-		helicopter_medical_support = {
+		field_hospital_helicopter = {
 			casualty_trickleback = 0.04
 			experience_loss_factor = -0.04
 		}
 		
 		enable_subunits = {
-			helicopter_medical_support
+			field_hospital_helicopter
 		}
 		
 		path = {
@@ -2515,7 +2640,7 @@ technologies = {
 	
 	tech_field_hospital_helicopter4 = {
 
-		helicopter_medical_support = {
+		field_hospital_helicopter = {
 			casualty_trickleback = 0.04
 			experience_loss_factor = -0.04
 		}
@@ -2552,7 +2677,7 @@ technologies = {
 
 	tech_field_hospital_helicopter5 = {
 
-		helicopter_medical_support = {
+		field_hospital_helicopter = {
 			casualty_trickleback = 0.04
 			experience_loss_factor = -0.04
 		}
@@ -2589,7 +2714,7 @@ technologies = {
 
 	tech_field_hospital_helicopter6 = {
 
-		helicopter_medical_support = {
+		field_hospital_helicopter = {
 			casualty_trickleback = 0.04
 			experience_loss_factor = -0.04
 		}
@@ -2622,11 +2747,11 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 		}
-	}	
+	}
 	
 	tech_field_hospital_helicopter7 = {
 
-		helicopter_medical_support = {
+		field_hospital_helicopter = {
 			casualty_trickleback = 0.04
 			experience_loss_factor = -0.04
 		}

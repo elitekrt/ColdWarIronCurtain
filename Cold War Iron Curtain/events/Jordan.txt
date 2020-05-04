@@ -1,19 +1,19 @@
-﻿add_namespace = jordan
+add_namespace = jordan
 
 country_event = {
 	id = jordan.1
 	title = "King Abdullah I Assassinated"
-	desc = Jor.1.d 
-	
+	desc = Jor.1.d
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = {
 		name = "Why would they do this?"
 		kill_country_leader = yes
 		create_country_leader = {
 			name = "Talal"
-			picture = "Talal.dds"
+			picture = "Talal_of_Jordan.dds"
 			ideology = monarchy
 		}
 	}
@@ -22,17 +22,17 @@ country_event = {
 country_event = {
 	id = jordan.2
 	title = "King Talal Abdicates"
-	desc = Jor.2.d 
-	
+	desc = Jor.2.d
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = {
 		name = "Good riddance!"
 		retire_country_leader = yes
 		create_country_leader = {
 			name = "Hussein"
-			picture = "Hussein.dds"
+			picture = "Hussein_of_Jordan_1950.dds"
 			ideology = monarchy
 		}
 	}
@@ -41,11 +41,11 @@ country_event = {
 country_event = {
 	id = jordan.3
 	title = "Death of King Hussein"
-	desc = Jor.3.d 
-	
+	desc = Jor.3.d
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = {
 		name = "Rest in peace!"
 		kill_country_leader = yes
@@ -59,11 +59,11 @@ country_event = {
 country_event = {
 	id = jordan.4
 	title = "Talal Reaffirms Control"
-	desc = Jor.4.d 
-	
+	desc = Jor.4.d
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = {
 		name = "We will wait and see"
 	}
@@ -73,10 +73,10 @@ country_event = {
 	title = "Crabs Banned"
 	desc = Jor.5.d
 	picture = GFX_Ban_Crabs
-	
+
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = {
 		name = "The Crabs will pay...."
 	}
@@ -84,11 +84,11 @@ country_event = {
 country_event = {
 	id = jordan.6
 	title = "The Second President of Egypt"
-	desc = Jor.6.d 
+	desc = Jor.6.d
 
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	trigger = {
 		tag = JOR
 		EGY = {
@@ -98,8 +98,8 @@ country_event = {
 			}
 		}
 	}
-	
-	
+
+
 	option = {
 		name = "We'll see what his vision for Egypt is"
 	}
@@ -110,7 +110,7 @@ country_event = {
 	desc = Jor.7.d
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = {
 		name = "This will blow over"
 	}
@@ -121,9 +121,14 @@ country_event = {
 	desc = Jor.8.d
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = {
-		name = "A stable Jordan?"
+		name = "Arrest the conspirators!"
+		complete_national_focus = JOR_Hussein_Consolidates_Power
+	}
+	option = {
+		name = "For Arab Unity!"
+		complete_national_focus = JOR_The_Jordanian_Revolution
 	}
 }
 country_event = {
@@ -132,7 +137,7 @@ country_event = {
 	desc = Jor.9.d
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = {
 		name = "A stable Jordan at last"
 	}
@@ -143,7 +148,7 @@ country_event = {
 	desc = Jor.10.d
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = {
 		name = "A modern Jordan will rise"
 	}
@@ -154,8 +159,20 @@ country_event = {
 	desc = Jor.11.d
 	is_triggered_only = yes
 	fire_only_once = yes
-	
+
 	option = {
 		name = "United as brothers"
+	}
+}
+country_event = {
+	id = jordan.12
+	title = "The Arab Federation"
+	desc = Jor.12.d
+	is_triggered_only = yes
+	major = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Will this counter Nasserism?"
 	}
 }

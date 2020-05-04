@@ -1,20 +1,20 @@
-variables_calculation_category = {	
+variables_calculation_category = {
 
 	show_tutorial = {
 
 		icon = generic_industry
 
 		available = {
-			is_ai = no
+			always = yes
 		}
 		visible = {
-			is_ai = no
+			always = yes
 		}
 
 		cost = 0
 
 		complete_effect = {
-			country_event = tutorial.1
+			country_event = TUTOR.1
 		}
 		
 		ai_will_do = {
@@ -23,7 +23,7 @@ variables_calculation_category = {
 	}
 	
 	ic_pulse_one = {
-				
+		
 		available = {
 			has_country_flag = ic_pulse_one_flag
 			is_ai = yes
@@ -46,7 +46,7 @@ variables_calculation_category = {
 		timeout_effect = {
 			clr_country_flag = ic_pulse_one_flag
 			random_country = {
-				limit = { is_ai = yes has_war = no }
+				limit = { tag = VTC }
 				set_country_flag = ic_pulse_one_flag
 				ic_pulse = yes
 			}
@@ -63,7 +63,7 @@ variables_calculation_category = {
 			factor = 100
 		}
 	}
-					
+	
 	
 	transfer_crimea = {
 
@@ -201,6 +201,120 @@ variables_calculation_category = {
 			factor = 1
 		}
 	}	
+	Break_the_Stalemate = {
+		visible = {
+			original_tag = USA
+			KOR = { has_war_with = KPA }
+			date > 1952.01.01
+			date < 1954.01.01
+		}
+
+		fire_only_once = yes
+
+		cost = 0
+		complete_effect = {
+			news_event = Operation_Firebird.1
+			launch_nuke = { 
+				state = 608
+			}
+			launch_nuke = { 
+				state = 609
+			}
+			launch_nuke = { 
+				state = 745
+			}
+			launch_nuke = { 
+				state = 746
+			}
+			launch_nuke = { 
+				state = 747
+			}
+			launch_nuke = { 
+				state = 748
+			}
+			launch_nuke = { 
+				state = 1205
+			}
+			launch_nuke = { 
+				state = 527
+			}
+			launch_nuke = { 
+				state = 748
+			}
+			launch_nuke = { 
+				state = 716
+				province = 6860
+			}
+			launch_nuke = { 
+				state = 716
+				province = 6981
+			}
+			launch_nuke = { 
+				state = 328
+				province = 9848
+			}
+				
+			launch_nuke = { 
+				state = 1326
+				province = 3949
+			}
+			launch_nuke = { 
+				state = 1326
+				province = 9803
+			}
+			launch_nuke = { 
+				state = 1326
+				province = 800
+			}
+			launch_nuke = { 
+				state = 1326
+				province = 11781
+			}
+			launch_nuke = { 
+				state = 1326
+				province = 861
+			}
+			launch_nuke = { 
+				state = 1326
+				province = 11823
+			}
+			launch_nuke = { 
+				state = 1326
+				province = 1326
+			}
+			launch_nuke = { 
+				state = 1325
+				province = 3929
+			}
+			launch_nuke = { 
+				state = 1325
+				province = 944
+			}
+			launch_nuke = { 
+				state = 1325
+				province = 9897
+			}
+			launch_nuke = { 
+				state = 1325
+				province = 3944
+			}
+			CHI = {
+				create_faction = "Anti-Communist Salvation Front"
+				add_to_faction = KOR
+				add_to_faction = USA
+				declare_war_on = {
+					target = PRC
+					type = annex_everything
+				}
+			}
+			load_oob = KMT_FIREBIRD
+
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}	
+
 	unify_korea = {
 
 		icon = generic_industry
@@ -222,54 +336,70 @@ variables_calculation_category = {
 		cost = 0
 
 		complete_effect = {
+			KOR = {
+				every_owned_state = {
+					remove_core_of = KPA
+				}
+			}	
+			every_owned_state = {
+				remove_core_of = KOR
+			}
 			add_named_threat = { 
 				threat = 30
 				name = korean_War
 			}
 			country_event = korea.1
 			add_ideas = korean_war
-			add_ideas = take_the_south
+			add_ideas = kpa_korean_war
+			add_timed_idea = {
+				idea = take_the_south
+				days = 25
+			}
 			create_faction = "People's Defence Coalition"
 			set_global_flag = korean_war
 			hidden_effect = {
+				USA = { add_ideas = korean_war_un }
 				add_manpower = 100000
-				if = {
-					limit = {
-						OR = {
-							tag = AST #does
-							tag = CAN #doesn't
-							tag = SAF #sends 
-							tag = COL #does
-							tag = SIA #sends
-							tag = ETH #sends 
-							tag = JAP #doesn't
-							tag = CHI #sends
-							tag = FRA #sends
-							tag = ENG #sends
-							tag = BEL #doesn't
-							tag = HOL #doesn't
-							tag = LUX #does
-							tag = GRE #doesn't
-							tag = TUR #doesn't
-							tag = SPR #does
-							tag = NZL
-							tag = "PHI"						
+				every_country = {
+					if = {
+						limit = {
+							OR = {
+								tag = AST #does
+								tag = CAN #doesn't
+								tag = SAF #sends 
+								tag = COL #does
+								tag = SIA #sends
+								tag = ETH #sends 
+								tag = JAP #doesn't
+								tag = CHI #sends
+								tag = FRA #sends
+								tag = ENG #sends
+								tag = BEL #doesn't
+								tag = HOL #doesn't
+								tag = LUX #does
+								tag = GRE #doesn't
+								tag = TUR #doesn't
+								tag = SPR #does
+								tag = NZL
+								tag = "PHI"						
+							}
 						}
-					}
-					add_ai_strategy = {
-						type = send_volunteers_desire		
-						id = "KOR"			
-						value = 5000
-					}
-					add_ai_strategy = {
-						type = support
-						id = "KOR"			
-						value = 5000
-					}
-					add_ai_strategy = {
-						type = befriend
-						id = "KOR"			
-						value = 5000
+						add_ideas = korean_war_un
+						add_ai_strategy = {
+							type = send_volunteers_desire		
+							id = "KOR"			
+							value = 5000
+						}
+						add_ai_strategy = {
+							type = support
+							id = "KOR"			
+							value = 5000
+						}
+						add_ai_strategy = {
+							type = befriend
+							id = "KOR"			
+							value = 5000
+						}
 					}
 				}
 			}
@@ -473,11 +603,24 @@ operations = {
 		}
 
 		timeout_effect = {
-			white_peace = CHI
-			CHI = {
-				complete_national_focus = CHI_Victory_in_Hainan
+			if = {
+				limit = {
+					591 = { is_fully_controlled_by = PRC  } 
+				}
+				transfer_state = 591
+				news_event = PRC_Hainan.1
+				white_peace = CHI
+				CHI = {
+					complete_national_focus = CHI_Fall_of_Hainan
+				}
 			}
-			news_event = ROC_Hainan.1
+			else = {
+				CHI = {
+					complete_national_focus = CHI_Victory_in_Hainan
+				}
+				news_event = ROC_Hainan.1
+			}
+			white_peace = CHI
 		}
 
 		ai_will_do = {
@@ -1217,13 +1360,89 @@ war_measures = {
 
 		}
 	}
+	Declare_Victory_Against_Communists_KOR = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+		allowed = {
+			tag = KOR
+		}
+		available = {
+			has_full_control_of_state = 866
+			has_full_control_of_state = 920
+			has_full_control_of_state = 1131
+			has_full_control_of_state = 745
+			has_full_control_of_state = 746
+			has_full_control_of_state = 747
+			has_full_control_of_state = 1205
+			has_full_control_of_state = 527
+			has_full_control_of_state = 748
+			has_full_control_of_state = 1325
+			has_full_control_of_state = 1326
+		}
+	
+		visible = {
+			KOR = { has_war_with = KPA }
+		}
+	
+		fire_only_once = no
+	
+		days_remove = 90
+	
+		cost = 50
+	
+
+		complete_effect = {
+
+		}
+	
+		remove_effect = {
+			if = {
+				limit = {
+					has_full_control_of_state = 866
+					has_full_control_of_state = 920
+					has_full_control_of_state = 1131
+					has_full_control_of_state = 745
+					has_full_control_of_state = 746
+					has_full_control_of_state = 747
+					has_full_control_of_state = 1205
+					has_full_control_of_state = 527
+					has_full_control_of_state = 748
+					has_full_control_of_state = 1325
+					has_full_control_of_state = 1326
+				}
+				dismantle_faction = yes
+				CHI = { dismantle_faction = yes }
+				annex_country = {
+					target = KPA
+					transfer_troops = no
+				}
+				transfer_state = 1325
+				transfer_state = 1326
+				every_owned_state = {
+					add_core_of = KOR
+				}
+				PRC = {
+					white_peace = KOR
+					white_peace = USA
+				}
+				news_event = Korean_War.50
+			}
+
+		}
+		ai_will_do = {
+			factor = 1
+			
+		}
+	}
+
+
+
 
 	women_in_the_workforce = {
 
 		icon = generic_industry
 
 		allowed = {
-			
 		}
 
 		available = {

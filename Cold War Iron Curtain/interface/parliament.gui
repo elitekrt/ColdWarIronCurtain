@@ -13,9 +13,10 @@ guiTypes = {
 			spriteType = "" position = { x = 0 y = 0 } 
 		} 
 	}
+	
 	containerWindowType = {
 		name = "debt_fin_info_tab"
-		position = { x = 0 y = 0 }	
+		position = { x = 0 y = 0 }
 		show_position = { x = 50%% y = 580 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
@@ -42,7 +43,7 @@ guiTypes = {
 			name = "total_debt"
 			position = { x = 15 y = 45 }
 			font = "hoi_24header"
-			text = "Total Outstanding Debt: [?currentDebt|R2]M"
+			text = "Total Outstanding Debt: [?currentDebt|R2]B"
 			maxWidth = 400
 			maxHeight = 20
 			fixedsize = no
@@ -53,13 +54,13 @@ guiTypes = {
 			name = "monthly_payments"
 			position = { x = 15 y = 80 }
 			font = "hoi_24header"
-			text = "Monthly Debt Payments: [?currentDebtPayments|R2]M"
+			text = "Monthly Debt Payments: [?currentDebtPayments|R2]B"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		instantTextBoxType = {
 			name = "austerity_level"
 			position = { x = 15 y = 115 }
@@ -70,7 +71,7 @@ guiTypes = {
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		instantTextBoxType = {
 			name = "default_level"
 			position = { x = 15 y = 150 }
@@ -81,7 +82,7 @@ guiTypes = {
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		iconType = { 
 			name = "pic2"  
 			spriteType = "GFX_menu_shadow" 
@@ -89,12 +90,11 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			scale = 10
 			alwaystransparent = yes
-		} 	
-	}	
+		}
+	}
 	containerWindowType = {
 		name = "parliament_window_container"
-		position = { x = 1 y = 0 }	
-		show_position = { x = 0%% y = 500 }
+		position = { x = 0 y = 494 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		animation_time = 0
@@ -295,8 +295,6 @@ guiTypes = {
 			format = left
 			Orientation = "UPPER_LEFT"
 		}
-
-			
 		instantTextBoxType = {
 			name = "Christian_Democratic_popularity"
 			position = { x = 20 y = 320 }
@@ -447,7 +445,7 @@ guiTypes = {
 		#	fixedsize = yes
 		#	format = left
 		#	Orientation = "UPPER_LEFT"
-		#}		
+		#}
 		instantTextBoxType = {
 			name = "hog"
 			position = { x = 20 y = 445 }
@@ -458,13 +456,13 @@ guiTypes = {
 			fixedsize = yes
 			format = left
 			Orientation = "UPPER_LEFT"
-		}				
+		}
 
 	}
 
 	containerWindowType = {
 		name = "legislation_menu_button"
-		position = { x = 364 y = 428 }
+		position = { x = 364 y = 422 }
 		size = { width = 50 height = 50 }
 
 		buttonType = {
@@ -482,7 +480,7 @@ guiTypes = {
 	}
 	containerWindowType = {
 		name = "legislation_menu"
-		position = { x = 1 y = 0 }	
+		position = { x = 1 y = 0 }
 		show_position = { x = 750 y = 80 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
@@ -518,11 +516,11 @@ guiTypes = {
 
 		buttonType = {
 			name = "exitbutton_legislation" 
-			position = {x=-44 y=7}	
+			position = {x=-44 y=7}
 			Orientation = "UPPER_RIGHT"
 			spriteType = "GFX_closebutton"
 			shortcut = "ESCAPE"
-		}		
+		}
 
 		
 		################ Seat Representation
@@ -547,14 +545,14 @@ guiTypes = {
 			fixedsize = no
 			format = centre
 			Orientation = "UPPER_RIGHT"
-		}	
+		}
 		buttonType = {
 			name = "policy_switch"
 			position = { x = 100 y = 50 }
 			spriteType = "GFX_button_148x34"
 			buttonFont = "hoi_16mbs"
 			Orientation = "UPPER_LEFT"
-			text = "Fiscal Policies"
+			text = "Fiscal Systems"
 			Orientation = "UPPER_LEFT"
 			clicksound = click_open
 			clicksound = click_default
@@ -590,7 +588,7 @@ guiTypes = {
 	}
 	containerWindowType = {
 		name = "health_policy_tab"
-		position = { x = 0 y = 0 }	
+		position = { x = 0 y = 0 }
 		show_position = { x = 0%% y = 580 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
@@ -606,79 +604,374 @@ guiTypes = {
 			name = "legislation_menu_open_text"
 			position = { x = 75 y = 15 }
 			font = "hoi_24header"
-			text = "Healthcare Funding - $[?health_cost_display|2]M"
+			text = "Healthcare System - $[?health_cost_display|2]B"
 			maxWidth = 300
 			maxHeight = 20
 			fixedsize = no
 			format = centre
 			Orientation = "UPPER_LEFT"
 		}
-		buttonType = {
-			name = "policy_healthcare_level_0"
+		containerWindowType = {
+			name = "HEALTH_POL_level_0_tab"
 			position = { x = 19 y = 50 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_healthcare_temp_0"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "HEALTH_POL_0_desc"
-		}	
-		buttonType = {
-			name = "policy_healthcare_level_1"
+			buttonType = {
+				name = "policy_HEALTH_POL_level_0"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "HEALTH_POL_0_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_HEALTH_POL_level_0_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "HEALTH_POL_0_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_HEALTH_POL_level_0_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "HEALTH_POL_0_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_HEALTH_POL_level_0_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "HEALTH_POL_0_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_0_desc_full"
+			}
+			#iconType = {
+			#	name ="HEALTH_POL_temp_0_icon"
+			#	spriteType = "GFX_HEALTH_POL_temp_0_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_HEALTH_POL_level_0_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_healthcare_temp_0"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "HEALTH_POL_level_1_tab"
 			position = { x = 19 y = 75 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_healthcare_temp_1"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "HEALTH_POL_1_desc"
-		}	
-		buttonType = {
-			name = "policy_healthcare_level_2"
+			buttonType = {
+				name = "policy_HEALTH_POL_level_1"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "HEALTH_POL_1_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_HEALTH_POL_level_1_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "HEALTH_POL_1_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_HEALTH_POL_level_1_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "HEALTH_POL_1_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_HEALTH_POL_level_1_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "HEALTH_POL_1_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_1_desc_full"
+			}
+			#iconType = {
+			#	name ="HEALTH_POL_temp_1_icon"
+			#	spriteType = "GFX_HEALTH_POL_temp_1_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_HEALTH_POL_level_1_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_healthcare_temp_1"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "HEALTH_POL_level_2_tab"
 			position = { x = 19 y = 100 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_healthcare_temp_2"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "HEALTH_POL_2_desc"
-		}	
-		buttonType = {
-			name = "policy_healthcare_level_3"
+			buttonType = {
+				name = "policy_HEALTH_POL_level_2"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "HEALTH_POL_2_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_HEALTH_POL_level_2_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "HEALTH_POL_2_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_HEALTH_POL_level_2_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "HEALTH_POL_2_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_HEALTH_POL_level_2_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "HEALTH_POL_2_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_2_desc_full"
+			}
+			#iconType = {
+			#	name ="HEALTH_POL_temp_2_icon"
+			#	spriteType = "GFX_HEALTH_POL_temp_2_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_HEALTH_POL_level_2_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_healthcare_temp_2"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "HEALTH_POL_level_3_tab"
 			position = { x = 19 y = 125 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_healthcare_temp_3"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "HEALTH_POL_3_desc"
-		}	
-		buttonType = {
-			name = "policy_healthcare_level_4"
+			buttonType = {
+				name = "policy_HEALTH_POL_level_3"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "HEALTH_POL_3_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_HEALTH_POL_level_3_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "HEALTH_POL_3_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_HEALTH_POL_level_3_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "HEALTH_POL_3_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_HEALTH_POL_level_3_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "HEALTH_POL_3_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_3_desc_full"
+			}
+			#iconType = {
+			#	name ="HEALTH_POL_temp_3_icon"
+			#	spriteType = "GFX_HEALTH_POL_temp_3_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_HEALTH_POL_level_3_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_healthcare_temp_3"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "HEALTH_POL_level_4_tab"
 			position = { x = 19 y = 150 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_healthcare_temp_4"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "HEALTH_POL_4_desc"
-		}	
-		buttonType = {
-			name = "policy_healthcare_level_5"
+			buttonType = {
+				name = "policy_HEALTH_POL_level_4"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "HEALTH_POL_4_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_HEALTH_POL_level_4_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "HEALTH_POL_4_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_HEALTH_POL_level_4_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "HEALTH_POL_4_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_HEALTH_POL_level_4_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "HEALTH_POL_4_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_4_desc_full"
+			}
+			#iconType = {
+			#	name ="HEALTH_POL_temp_4_icon"
+			#	spriteType = "GFX_HEALTH_POL_temp_4_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_HEALTH_POL_level_4_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_healthcare_temp_4"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "HEALTH_POL_level_5_tab"
 			position = { x = 19 y = 175 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
+			buttonType = {
+				name = "policy_HEALTH_POL_level_5"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "HEALTH_POL_5_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_5_desc_full"
+			}
+			iconType = {
+				name = "policy_HEALTH_POL_level_5_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "HEALTH_POL_5_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_5_desc_full"
+			}
+			iconType = {
+				name = "policy_HEALTH_POL_level_5_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "HEALTH_POL_5_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_5_desc_full"
+			}
+			iconType = {
+				name = "policy_HEALTH_POL_level_5_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "HEALTH_POL_5_desc"
+				pdx_tooltip_delayed = "HEALTH_POL_5_desc_full"
+			}
+			#iconType = {
+			#	name ="HEALTH_POL_temp_5_icon"
+			#	spriteType = "GFX_HEALTH_POL_temp_5_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_HEALTH_POL_level_5_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_healthcare_temp_5"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		
+		iconType = {
+			name = "policy_healthcare_expansion_cooldown_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_expansion_cooldown_icon"
 			Orientation = "UPPER_LEFT"
-			text = "policy_healthcare_temp_5"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "HEALTH_POL_5_desc"
-		}	
+			pdx_tooltip = "health_expansion_cooldown_desc"
+		}
+		iconType = {
+			name = "policy_healthcare_temp_1_preserved_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_healthcare_preserved_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "policy_healthcare_temp_1_preserved_desc"
+		}
+		iconType = {
+			name = "policy_healthcare_temp_2_preserved_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_healthcare_preserved_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "policy_healthcare_temp_2_preserved_desc"
+		}
+		iconType = {
+			name = "policy_healthcare_temp_3_preserved_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_healthcare_preserved_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "policy_healthcare_temp_3_preserved_desc"
+		}
+		iconType = {
+			name = "policy_healthcare_temp_4_preserved_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_healthcare_preserved_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "policy_healthcare_temp_4_preserved_desc"
+		}
+		iconType = {
+			name = "policy_healthcare_temp_5_preserved_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_healthcare_preserved_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "policy_healthcare_temp_5_preserved_desc"
+		}
 		instantTextBoxType = {
 			name = "policy_healthcare_level_id"
 			position = { x = 50 y = 215 }
@@ -700,7 +993,7 @@ guiTypes = {
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		iconType = { 
 			name = "pic22"  
 			spriteType = "GFX_menu_shadow" 
@@ -709,11 +1002,11 @@ guiTypes = {
 			scale = 10
 			alwaystransparent = yes
 			
-		} 			
+		}		
 	}
 	containerWindowType = {
 		name = "RAC_POL_tab"
-		position = { x = 0 y = 0 }	
+		position = { x = 0 y = 0 }
 		show_position = { x = 50%% y = 580 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
@@ -729,71 +1022,302 @@ guiTypes = {
 			name = "legislation_menu_open_text"
 			position = { x = 75 y = 15 }
 			font = "hoi_24header"
-			text = "Minority Rights"
+			text = "Minority Rights (450 PP)"
 			maxWidth = 300
 			maxHeight = 20
 			fixedsize = no
 			format = centre
 			Orientation = "UPPER_LEFT"
 		}
-		buttonType = {
-			name = "policy_RAC_POL_level_0"
+		containerWindowType = {
+			name = "RAC_POL_level_0_tab"
 			position = { x = 19 y = 50 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_RAC_POL_temp_0"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "RAC_POL_0_desc"
-		}	
-		buttonType = {
-			name = "policy_RAC_POL_level_1"
+			buttonType = {
+				name = "policy_RAC_POL_level_0"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "RAC_POL_0_desc"
+				pdx_tooltip_delayed = "RAC_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_RAC_POL_level_0_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "RAC_POL_0_desc"
+				pdx_tooltip_delayed = "RAC_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_RAC_POL_level_0_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "RAC_POL_0_desc"
+				pdx_tooltip_delayed = "RAC_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_RAC_POL_level_0_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_450"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "RAC_POL_0_desc"
+				pdx_tooltip_delayed = "RAC_POL_0_desc_full"
+			}
+			#iconType = {
+			#	name ="RAC_POL_temp_0_icon"
+			#	spriteType = "GFX_RAC_POL_temp_0_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_RAC_POL_level_0_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_minorities_temp_0"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "RAC_POL_level_1_tab"
 			position = { x = 19 y = 75 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_RAC_POL_temp_1"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "RAC_POL_1_desc"
-		}	
-		buttonType = {
-			name = "policy_RAC_POL_level_2"
+			buttonType = {
+				name = "policy_RAC_POL_level_1"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "RAC_POL_1_desc"
+				pdx_tooltip_delayed = "RAC_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_RAC_POL_level_1_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "RAC_POL_1_desc"
+				pdx_tooltip_delayed = "RAC_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_RAC_POL_level_1_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "RAC_POL_1_desc"
+				pdx_tooltip_delayed = "RAC_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_RAC_POL_level_1_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_450"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "RAC_POL_1_desc"
+				pdx_tooltip_delayed = "RAC_POL_1_desc_full"
+			}
+			#iconType = {
+			#	name ="RAC_POL_temp_1_icon"
+			#	spriteType = "GFX_RAC_POL_temp_1_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_RAC_POL_level_1_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_minorities_temp_1"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "RAC_POL_level_2_tab"
 			position = { x = 19 y = 100 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
+			buttonType = {
+				name = "policy_RAC_POL_level_2"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "RAC_POL_2_desc"
+				pdx_tooltip_delayed = "RAC_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_RAC_POL_level_2_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "RAC_POL_2_desc"
+				pdx_tooltip_delayed = "RAC_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_RAC_POL_level_2_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "RAC_POL_2_desc"
+				pdx_tooltip_delayed = "RAC_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_RAC_POL_level_2_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_450"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "RAC_POL_2_desc"
+				pdx_tooltip_delayed = "RAC_POL_2_desc_full"
+			}
+			#iconType = {
+			#	name ="RAC_POL_temp_2_icon"
+			#	spriteType = "GFX_RAC_POL_temp_2_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_RAC_POL_level_2_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_minorities_temp_2"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "RAC_POL_level_3_tab"
+			position = { x = 19 y = 135 }
+			buttonType = {
+				name = "policy_RAC_POL_level_3"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "RAC_POL_3_desc"
+				pdx_tooltip_delayed = "RAC_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_RAC_POL_level_3_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "RAC_POL_3_desc"
+				pdx_tooltip_delayed = "RAC_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_RAC_POL_level_3_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "RAC_POL_3_desc"
+				pdx_tooltip_delayed = "RAC_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_RAC_POL_level_3_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_450"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "RAC_POL_3_desc"
+				pdx_tooltip_delayed = "RAC_POL_3_desc_full"
+			}
+			#iconType = {
+			#	name ="RAC_POL_temp_3_icon"
+			#	spriteType = "GFX_RAC_POL_temp_3_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_RAC_POL_level_3_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_minorities_temp_3"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "RAC_POL_level_3a_tab"
+			position = { x = 19 y = 160 }
+			buttonType = {
+				name = "policy_RAC_POL_level_3a"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "RAC_POL_3a_desc"
+				pdx_tooltip_delayed = "RAC_POL_3a_desc_full"
+			}
+			iconType = {
+				name = "policy_RAC_POL_level_3a_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "RAC_POL_3a_desc"
+				pdx_tooltip_delayed = "RAC_POL_3a_desc_full"
+			}
+			iconType = {
+				name = "policy_RAC_POL_level_3a_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "RAC_POL_3a_desc"
+				pdx_tooltip_delayed = "RAC_POL_3a_desc_full"
+			}
+			iconType = {
+				name = "policy_RAC_POL_level_3a_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_450"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "RAC_POL_3a_desc"
+				pdx_tooltip_delayed = "RAC_POL_3a_desc_full"
+			}
+			#iconType = {
+			#	name ="RAC_POL_temp_3a_icon"
+			#	spriteType = "GFX_RAC_POL_temp_3a_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_RAC_POL_level_3a_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_minorities_temp_3a"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		iconType = {
+			name = "policy_RAC_POL_cooldown_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_cooldown_icon"
 			Orientation = "UPPER_LEFT"
-			text = "policy_RAC_POL_temp_2"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "RAC_POL_2_desc"
-		}	
+			pdx_tooltip = "cooldown_desc"
+		}
 		buttonType = {
-			name = "policy_RAC_POL_level_3"
-			position = { x = 19 y = 125 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
+			name = "policy_RAC_POL_regression_reaction_icon"
+			position = {x=49 y=15}
+			spriteType = "GFX_regression_reaction_death_icon"
 			Orientation = "UPPER_LEFT"
-			text = "policy_RAC_POL_temp_3"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "RAC_POL_3_desc"
-		}	
+			pdx_tooltip = "RAC_POL_regression_reaction_desc"
+		}
 		buttonType = {
-			name = "policy_RAC_POL_level_4"
-			position = { x = 19 y = 150 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
+			name = "policy_RAC_POL_promotion_reaction_icon"
+			position = {x=79 y=15}
+			spriteType = "GFX_promotion_reaction_death_icon"
 			Orientation = "UPPER_LEFT"
-			text = "policy_RAC_POL_temp_4"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "RAC_POL_4_desc"
-		}	
+			pdx_tooltip = "RAC_POL_promotion_reaction_desc"
+		}
 
 		instantTextBoxType = {
-			name = "policy_RAC_POL_level_6"
+			name = "policy_RAC_POL_label"
 			position = { x = 50 y = 215 }
 			font = "hoi_24header"
 			text = [RAC_POLICY]
@@ -813,7 +1337,7 @@ guiTypes = {
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		iconType = { 
 			name = "pic23"  
 			spriteType = "GFX_menu_shadow" 
@@ -821,12 +1345,12 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			scale = 10
 			alwaystransparent = yes
-		} 			
+		}		
 	}
 
 	containerWindowType = {
 		name = "SAGA_POL_tab"
-		position = { x = 0 y = 0 }	
+		position = { x = 0 y = 0 }
 		show_position = { x = 50%% y = 100 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
@@ -842,71 +1366,281 @@ guiTypes = {
 			name = "legislation_menu_open_text"
 			position = { x = 75 y = 15 }
 			font = "hoi_24header"
-			text = "Sexuality and Gender Acceptance"
+			text = "Sexuality and Gender Acceptance (300 PP)"
 			maxWidth = 300
 			maxHeight = 20
 			fixedsize = no
 			format = centre
 			Orientation = "UPPER_LEFT"
 		}
-		buttonType = {
-			name = "policy_SAGA_POL_level_0"
+		containerWindowType = {
+			name = "SAGA_POL_level_0_tab"
 			position = { x = 19 y = 50 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_SAGA_POL_temp_0"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "SAGA_POL_0_desc"
-		}	
-		buttonType = {
-			name = "policy_SAGA_POL_level_1"
+			buttonType = {
+				name = "policy_SAGA_POL_level_0"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "SAGA_POL_0_desc"
+				pdx_tooltip_delayed = "SAGA_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_SAGA_POL_level_0_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "SAGA_POL_0_desc"
+				pdx_tooltip_delayed = "SAGA_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_SAGA_POL_level_0_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "SAGA_POL_0_desc"
+				pdx_tooltip_delayed = "SAGA_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_SAGA_POL_level_0_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_300"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "SAGA_POL_0_desc"
+				pdx_tooltip_delayed = "SAGA_POL_0_desc_full"
+			}
+			#iconType = {
+			#	name ="SAGA_POL_temp_0_icon"
+			#	spriteType = "GFX_SAGA_POL_temp_0_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_SAGA_POL_level_0_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_saga_temp_0"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "SAGA_POL_level_1_tab"
 			position = { x = 19 y = 75 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_SAGA_POL_temp_1"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "SAGA_POL_1_desc"
-		}	
-		buttonType = {
-			name = "policy_SAGA_POL_level_2"
+			buttonType = {
+				name = "policy_SAGA_POL_level_1"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "SAGA_POL_1_desc"
+				pdx_tooltip_delayed = "SAGA_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_SAGA_POL_level_1_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "SAGA_POL_1_desc"
+				pdx_tooltip_delayed = "SAGA_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_SAGA_POL_level_1_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "SAGA_POL_1_desc"
+				pdx_tooltip_delayed = "SAGA_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_SAGA_POL_level_1_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_300"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "SAGA_POL_1_desc"
+				pdx_tooltip_delayed = "SAGA_POL_1_desc_full"
+			}
+			#iconType = {
+			#	name ="SAGA_POL_temp_1_icon"
+			#	spriteType = "GFX_SAGA_POL_temp_1_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_SAGA_POL_level_1_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_saga_temp_1"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "SAGA_POL_level_2_tab"
 			position = { x = 19 y = 100 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_SAGA_POL_temp_2"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "SAGA_POL_2_desc"
-		}	
-		buttonType = {
-			name = "policy_SAGA_POL_level_3"
-			position = { x = 19 y = 125 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_SAGA_POL_temp_3"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "SAGA_POL_3_desc"
-		}	
-		buttonType = {
-			name = "policy_SAGA_POL_level_4"
-			position = { x = 19 y = 150 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_SAGA_POL_temp_4"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "SAGA_POL_4_desc"
-		}	
+			buttonType = {
+				name = "policy_SAGA_POL_level_2"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "SAGA_POL_2_desc"
+				pdx_tooltip_delayed = "SAGA_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_SAGA_POL_level_2_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "SAGA_POL_2_desc"
+				pdx_tooltip_delayed = "SAGA_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_SAGA_POL_level_2_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "SAGA_POL_2_desc"
+				pdx_tooltip_delayed = "SAGA_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_SAGA_POL_level_2_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_300"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "SAGA_POL_2_desc"
+				pdx_tooltip_delayed = "SAGA_POL_2_desc_full"
+			}
+			#iconType = {
+			#	name ="SAGA_POL_temp_2_icon"
+			#	spriteType = "GFX_SAGA_POL_temp_2_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_SAGA_POL_level_2_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_saga_temp_2"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "SAGA_POL_level_4_tab"
+			position = { x = 19 y = 160 }
+			buttonType = {
+				name = "policy_SAGA_POL_level_4"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "SAGA_POL_4_desc"
+				pdx_tooltip_delayed = "SAGA_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_SAGA_POL_level_4_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "SAGA_POL_4_desc"
+				pdx_tooltip_delayed = "SAGA_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_SAGA_POL_level_4_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "SAGA_POL_4_desc"
+				pdx_tooltip_delayed = "SAGA_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_SAGA_POL_level_4_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_300"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "SAGA_POL_4_desc"
+				pdx_tooltip_delayed = "SAGA_POL_4_desc_full"
+			}
+			#iconType = {
+			#	name ="SAGA_POL_temp_4_icon"
+			#	spriteType = "GFX_SAGA_POL_temp_4_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_SAGA_POL_level_4_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_saga_temp_4"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "SAGA_POL_level_4a_tab"
+			position = { x = 19 y = 185 }
+			buttonType = {
+				name = "policy_SAGA_POL_level_4a"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "SAGA_POL_4a_desc"
+				pdx_tooltip_delayed = "SAGA_POL_4a_desc_full"
+			}
+			iconType = {
+				name = "policy_SAGA_POL_level_4a_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "SAGA_POL_4a_desc"
+				pdx_tooltip_delayed = "SAGA_POL_4a_desc_full"
+			}
+			iconType = {
+				name = "policy_SAGA_POL_level_4a_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "SAGA_POL_4a_desc"
+				pdx_tooltip_delayed = "SAGA_POL_4a_desc_full"
+			}
+			iconType = {
+				name = "policy_SAGA_POL_level_4a_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_300"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "SAGA_POL_4a_desc"
+				pdx_tooltip_delayed = "SAGA_POL_4a_desc_full"
+			}
+			#iconType = {
+			#	name ="SAGA_POL_temp_4a_icon"
+			#	spriteType = "GFX_SAGA_POL_temp_4a_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_SAGA_POL_level_4a_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_saga_temp_4a"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
 
 		instantTextBoxType = {
-			name = "policy_SAGA_POL_leel_6"
+			name = "policy_SAGA_POL_label"
 			position = { x = 50 y = 215 }
 			font = "hoi_24header"
 			text = [SAGA_POLICY]
@@ -915,6 +1649,27 @@ guiTypes = {
 			fixedsize = no
 			format = centre
 			Orientation = "UPPER_LEFT"
+		}
+		iconType = {
+			name = "policy_SAGA_POL_cooldown_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_cooldown_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "cooldown_desc"
+		}
+		buttonType = {
+			name = "policy_SAGA_POL_regression_reaction_icon"
+			position = {x=49 y=15}
+			spriteType = "GFX_regression_reaction_riot_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "SAGA_POL_regression_reaction_desc"
+		}
+		buttonType = {
+			name = "policy_SAGA_POL_promotion_reaction_icon"
+			position = {x=79 y=15}
+			spriteType = "GFX_promotion_reaction_riot_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "SAGA_POL_promotion_reaction_desc"
 		}
 		instantTextBoxType = {
 			name = "policy_SAGA_level_desc"
@@ -926,7 +1681,7 @@ guiTypes = {
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		iconType = { 
 			name = "pic24"  
 			spriteType = "GFX_menu_shadow" 
@@ -934,11 +1689,11 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			scale = 10
 			alwaystransparent = yes
-		} 			
+		}		
 	}
 	containerWindowType = {
 		name = "WOM_POL_tab"
-		position = { x = 0 y = 0 }	
+		position = { x = 0 y = 0 }
 		show_position = { x = 0%% y = 340 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
@@ -954,81 +1709,366 @@ guiTypes = {
 			name = "legislation_menu_open_text"
 			position = { x = 75 y = 15 }
 			font = "hoi_24header"
-			text = "Womens's Rights"
+			text = "Womens's Rights (300 PP)"
 			maxWidth = 300
 			maxHeight = 20
 			fixedsize = no
 			format = centre
 			Orientation = "UPPER_LEFT"
 		}
-		buttonType = {
-			name = "policy_WOM_POL_level_0"
+		
+		containerWindowType = {
+			name = "WOM_POL_level_0_tab"
 			position = { x = 19 y = 50 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_WOM_POL_temp_0"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "WOM_POL_0_desc"
-		}	
-		buttonType = {
-			name = "policy_WOM_POL_level_1"
+			buttonType = {
+				name = "policy_WOM_POL_level_0"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "WOM_POL_0_desc"
+				pdx_tooltip_delayed = "WOM_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_WOM_POL_level_0_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WOM_POL_0_desc"
+				pdx_tooltip_delayed = "WOM_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_WOM_POL_level_0_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WOM_POL_0_desc"
+				pdx_tooltip_delayed = "WOM_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_WOM_POL_level_0_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_300"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WOM_POL_0_desc"
+				pdx_tooltip_delayed = "WOM_POL_0_desc_full"
+			}
+			#iconType = {
+			#	name ="WOM_POL_temp_0_icon"
+			#	spriteType = "GFX_WOM_POL_temp_0_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_WOM_POL_level_0_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_women_temp_0"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "WOM_POL_level_1_tab"
 			position = { x = 19 y = 75 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_WOM_POL_temp_1"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "WOM_POL_1_desc"
-		}	
-		buttonType = {
-			name = "policy_WOM_POL_level_2"
+			buttonType = {
+				name = "policy_WOM_POL_level_1"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "WOM_POL_1_desc"
+				pdx_tooltip_delayed = "WOM_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_WOM_POL_level_1_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WOM_POL_1_desc"
+				pdx_tooltip_delayed = "WOM_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_WOM_POL_level_1_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WOM_POL_1_desc"
+				pdx_tooltip_delayed = "WOM_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_WOM_POL_level_1_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_300"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WOM_POL_1_desc"
+				pdx_tooltip_delayed = "WOM_POL_1_desc_full"
+			}
+			#iconType = {
+			#	name ="WOM_POL_temp_1_icon"
+			#	spriteType = "GFX_WOM_POL_temp_1_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_WOM_POL_level_1_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_women_temp_1"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "WOM_POL_level_2_tab"
 			position = { x = 19 y = 100 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_WOM_POL_temp_2"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "WOM_POL_2_desc"
-		}	
-		buttonType = {
-			name = "policy_WOM_POL_level_3"
+			buttonType = {
+				name = "policy_WOM_POL_level_2"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "WOM_POL_2_desc"
+				pdx_tooltip_delayed = "WOM_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_WOM_POL_level_2_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WOM_POL_2_desc"
+				pdx_tooltip_delayed = "WOM_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_WOM_POL_level_2_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WOM_POL_2_desc"
+				pdx_tooltip_delayed = "WOM_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_WOM_POL_level_2_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_300"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WOM_POL_2_desc"
+				pdx_tooltip_delayed = "WOM_POL_2_desc_full"
+			}
+			#iconType = {
+			#	name ="WOM_POL_temp_2_icon"
+			#	spriteType = "GFX_WOM_POL_temp_2_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_WOM_POL_level_2_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_women_temp_2"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "WOM_POL_level_3_tab"
 			position = { x = 19 y = 125 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_WOM_POL_temp_3"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "WOM_POL_3_desc"
-		}	
-		buttonType = {
-			name = "policy_WOM_POL_level_4"
-			position = { x = 19 y = 150 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_WOM_POL_temp_4"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "WOM_POL_4_desc"
-		}	
-		buttonType = {
-			name = "policy_WOM_POL_level_5"
-			position = { x = 19 y = 175 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_WOM_POL_temp_5"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "WOM_POL_5_desc"
-		}	
+			buttonType = {
+				name = "policy_WOM_POL_level_3"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "WOM_POL_3_desc"
+				pdx_tooltip_delayed = "WOM_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_WOM_POL_level_3_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WOM_POL_3_desc"
+				pdx_tooltip_delayed = "WOM_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_WOM_POL_level_3_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WOM_POL_3_desc"
+				pdx_tooltip_delayed = "WOM_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_WOM_POL_level_3_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_300"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WOM_POL_3_desc"
+				pdx_tooltip_delayed = "WOM_POL_3_desc_full"
+			}
+			#iconType = {
+			#	name ="WOM_POL_temp_3_icon"
+			#	spriteType = "GFX_WOM_POL_temp_3_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_WOM_POL_level_3_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_women_temp_3"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "WOM_POL_level_4_tab"
+			position = { x = 19 y = 160 }
+			buttonType = {
+				name = "policy_WOM_POL_level_4"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "WOM_POL_4_desc"
+				pdx_tooltip_delayed = "WOM_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_WOM_POL_level_4_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WOM_POL_4_desc"
+				pdx_tooltip_delayed = "WOM_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_WOM_POL_level_4_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WOM_POL_4_desc"
+				pdx_tooltip_delayed = "WOM_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_WOM_POL_level_4_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_300"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WOM_POL_4_desc"
+				pdx_tooltip_delayed = "WOM_POL_4_desc_full"
+			}
+			#iconType = {
+			#	name ="WOM_POL_temp_4_icon"
+			#	spriteType = "GFX_WOM_POL_temp_4_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_WOM_POL_level_4_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_women_temp_4"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "WOM_POL_level_4a_tab"
+			position = { x = 19 y = 185 }
+			buttonType = {
+				name = "policy_WOM_POL_level_4a"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "WOM_POL_4a_desc"
+				pdx_tooltip_delayed = "WOM_POL_4a_desc_full"
+			}
+			iconType = {
+				name = "policy_WOM_POL_level_4a_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WOM_POL_4a_desc"
+				pdx_tooltip_delayed = "WOM_POL_4a_desc_full"
+			}
+			iconType = {
+				name = "policy_WOM_POL_level_4a_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WOM_POL_4a_desc"
+				pdx_tooltip_delayed = "WOM_POL_4a_desc_full"
+			}
+			iconType = {
+				name = "policy_WOM_POL_level_4a_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_300"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WOM_POL_4a_desc"
+				pdx_tooltip_delayed = "WOM_POL_4a_desc_full"
+			}
+			#iconType = {
+			#	name ="WOM_POL_temp_4a_icon"
+			#	spriteType = "GFX_WOM_POL_temp_4a_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_WOM_POL_level_4a_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_women_temp_4a"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
 		instantTextBoxType = {
-			name = "policy_WOM_POL_level_6"
+			name = "policy_WOM_POL_level_desc"
+			position = { x = 180%% y = 50 }
+			font = "hoi_24header"
+			text = [WOM_POLICY_EFFECT]
+			maxWidth = 350
+			maxHeight = 20
+			fixedsize = no
+			format = left
+			Orientation = "UPPER_LEFT"
+		}
+		iconType = {
+			name = "policy_WOM_POL_cooldown_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_cooldown_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "cooldown_desc"
+		}
+		buttonType = {
+			name = "policy_WOM_POL_regression_reaction_icon"
+			position = {x=49 y=15}
+			spriteType = "GFX_regression_reaction_riot_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "WOM_POL_regression_reaction_desc"
+		}
+		buttonType = {
+			name = "policy_WOM_POL_promotion_reaction_icon"
+			position = {x=79 y=15}
+			spriteType = "GFX_promotion_reaction_riot_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "WOM_POL_promotion_reaction_desc"
+		}
+		instantTextBoxType = {
+			name = "policy_WOM_POL_LABEL"
 			position = { x = 50 y = 215 }
 			font = "hoi_24header"
 			text = [WOM_POLICY]
@@ -1038,17 +2078,8 @@ guiTypes = {
 			format = centre
 			Orientation = "UPPER_LEFT"
 		}
-		instantTextBoxType = {
-			name = "policy_SAGA_level_desc"
-			position = { x = 180%% y = 50 }
-			font = "hoi_24header"
-			text = [WOM_POLICY_EFFECT]
-			maxWidth = 350
-			maxHeight = 20
-			fixedsize = no
-			format = left
-			Orientation = "UPPER_LEFT"
-		}		
+		
+	}
 		iconType = { 
 			name = "pic25"  
 			spriteType = "GFX_menu_shadow" 
@@ -1056,12 +2087,11 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			scale = 10
 			alwaystransparent = yes
-		} 			
-	}
+		}
 
 	containerWindowType = {
 		name = "MEDIA_POL_tab"
-		position = { x = 0 y = 0 }	
+		position = { x = 0 y = 0 }
 		show_position = { x = 0%% y = 580 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
@@ -1077,71 +2107,289 @@ guiTypes = {
 			name = "legislation_menu_open_text"
 			position = { x = 75 y = 15 }
 			font = "hoi_24header"
-			text = "Media Laws"
+			text = "Media Laws (300 PP)"
 			maxWidth = 300
 			maxHeight = 20
 			fixedsize = no
 			format = centre
 			Orientation = "UPPER_LEFT"
 		}
-		buttonType = {
-			name = "policy_MEDIA_POL_level_0"
+		containerWindowType = {
+			name = "MEDIA_POL_level_0_tab"
 			position = { x = 19 y = 50 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_MEDIA_POL_temp_0"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "MEDIA_POL_0_desc"
-		}	
-		buttonType = {
-			name = "policy_MEDIA_POL_level_1"
+			buttonType = {
+				name = "policy_MEDIA_POL_level_0"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "MEDIA_POL_0_desc"
+				pdx_tooltip_delayed = "MEDIA_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_MEDIA_POL_level_0_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MEDIA_POL_0_desc"
+				pdx_tooltip_delayed = "MEDIA_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_MEDIA_POL_level_0_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MEDIA_POL_0_desc"
+				pdx_tooltip_delayed = "MEDIA_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_MEDIA_POL_level_0_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_450"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MEDIA_POL_0_desc"
+				pdx_tooltip_delayed = "MEDIA_POL_0_desc_full"
+			}
+			#iconType = {
+			#	name ="MEDIA_POL_temp_0_icon"
+			#	spriteType = "GFX_MEDIA_POL_temp_0_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_MEDIA_POL_level_0_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_media_temp_0"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "MEDIA_POL_level_1_tab"
 			position = { x = 19 y = 75 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_MEDIA_POL_temp_1"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "MEDIA_POL_1_desc"
-		}	
-		buttonType = {
-			name = "policy_MEDIA_POL_level_2"
+			buttonType = {
+				name = "policy_MEDIA_POL_level_1"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "MEDIA_POL_1_desc"
+				pdx_tooltip_delayed = "MEDIA_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_MEDIA_POL_level_1_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MEDIA_POL_1_desc"
+				pdx_tooltip_delayed = "MEDIA_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_MEDIA_POL_level_1_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MEDIA_POL_1_desc"
+				pdx_tooltip_delayed = "MEDIA_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_MEDIA_POL_level_1_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_450"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MEDIA_POL_1_desc"
+				pdx_tooltip_delayed = "MEDIA_POL_1_desc_full"
+			}
+			#iconType = {
+			#	name ="MEDIA_POL_temp_1_icon"
+			#	spriteType = "GFX_MEDIA_POL_temp_1_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_MEDIA_POL_level_1_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_media_temp_1"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "MEDIA_POL_level_2_tab"
 			position = { x = 19 y = 100 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_MEDIA_POL_temp_2"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "MEDIA_POL_2_desc"
-		}	
-		buttonType = {
-			name = "policy_MEDIA_POL_level_3"
+			buttonType = {
+				name = "policy_MEDIA_POL_level_2"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "MEDIA_POL_2_desc"
+				pdx_tooltip_delayed = "MEDIA_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_MEDIA_POL_level_2_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MEDIA_POL_2_desc"
+				pdx_tooltip_delayed = "MEDIA_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_MEDIA_POL_level_2_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MEDIA_POL_2_desc"
+				pdx_tooltip_delayed = "MEDIA_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_MEDIA_POL_level_2_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_450"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MEDIA_POL_2_desc"
+				pdx_tooltip_delayed = "MEDIA_POL_2_desc_full"
+			}
+			#iconType = {
+			#	name ="MEDIA_POL_temp_2_icon"
+			#	spriteType = "GFX_MEDIA_POL_temp_2_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_MEDIA_POL_level_2_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_media_temp_2"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "MEDIA_POL_level_3_tab"
 			position = { x = 19 y = 125 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_MEDIA_POL_temp_3"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "MEDIA_POL_3_desc"
-		}	
-		buttonType = {
-			name = "policy_MEDIA_POL_level_4"
+			buttonType = {
+				name = "policy_MEDIA_POL_level_3"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "MEDIA_POL_3_desc"
+				pdx_tooltip_delayed = "MEDIA_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_MEDIA_POL_level_3_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MEDIA_POL_3_desc"
+				pdx_tooltip_delayed = "MEDIA_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_MEDIA_POL_level_3_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MEDIA_POL_3_desc"
+				pdx_tooltip_delayed = "MEDIA_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_MEDIA_POL_level_3_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_450"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MEDIA_POL_3_desc"
+				pdx_tooltip_delayed = "MEDIA_POL_3_desc_full"
+			}
+			#iconType = {
+			#	name ="MEDIA_POL_temp_3_icon"
+			#	spriteType = "GFX_MEDIA_POL_temp_3_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_MEDIA_POL_level_3_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_media_temp_3"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "MEDIA_POL_level_3a_tab"
 			position = { x = 19 y = 150 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
+			buttonType = {
+				name = "policy_MEDIA_POL_level_3a"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "MEDIA_POL_3a_desc"
+				pdx_tooltip_delayed = "MEDIA_POL_3a_desc_full"
+			}
+			iconType = {
+				name = "policy_MEDIA_POL_level_3a_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MEDIA_POL_3a_desc"
+				pdx_tooltip_delayed = "MEDIA_POL_3a_desc_full"
+			}
+			iconType = {
+				name = "policy_MEDIA_POL_level_3a_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MEDIA_POL_3a_desc"
+				pdx_tooltip_delayed = "MEDIA_POL_3a_desc_full"
+			}
+			iconType = {
+				name = "policy_MEDIA_POL_level_3a_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_450"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MEDIA_POL_3a_desc"
+				pdx_tooltip_delayed = "MEDIA_POL_3a_desc_full"
+			}
+			#iconType = {
+			#	name ="MEDIA_POL_temp_3a_icon"
+			#	spriteType = "GFX_MEDIA_POL_temp_3a_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_MEDIA_POL_level_3a_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_media_temp_3a"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		
+		iconType = {
+			name = "policy_MEDIA_POL_cooldown_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_cooldown_icon"
 			Orientation = "UPPER_LEFT"
-			text = "policy_MEDIA_POL_temp_4"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "MEDIA_POL_4_desc"
-		}	
+			pdx_tooltip = "cooldown_desc"
+		}
 
 		instantTextBoxType = {
-			name = "policy_MEDIA_POL_level_6"
+			name = "policy_MEDIA_POL_label"
 			position = { x = 50 y = 215 }
 			font = "hoi_24header"
 			text = [MEDIA_POLICY]
@@ -1152,7 +2400,7 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 		}
 		instantTextBoxType = {
-			name = "policy_SAGA_level_desc"
+			name = "policy_MEDIA_level_desc"
 			position = { x = 180%% y = 50 }
 			font = "hoi_24header"
 			text = [MEDIA_POLICY_EFFECT]
@@ -1161,7 +2409,7 @@ guiTypes = {
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		iconType = { 
 			name = "pic27"  
 			spriteType = "GFX_menu_shadow" 
@@ -1169,11 +2417,11 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			scale = 10
 			alwaystransparent = yes
-		} 			
+		}	
 	}
 	containerWindowType = {
-		name = "VOT_POL_tab"
-		position = { x = 0 y = 0 }	
+		name = "UNION_POL_tab"
+		position = { x = 0 y = 0 }
 		show_position = { x = 50%% y = 340 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
@@ -1189,80 +2437,368 @@ guiTypes = {
 			name = "legislation_menu_open_text"
 			position = { x = 75 y = 15 }
 			font = "hoi_24header"
-			text = "Voting Rights"
+			text = "Labor Laws (450 PP)"
 			maxWidth = 300
 			maxHeight = 20
 			fixedsize = no
 			format = centre
 			Orientation = "UPPER_LEFT"
 		}
-		buttonType = {
-			name = "VOT_POL_level_0"
+		containerWindowType = {
+			name = "UNION_POL_level_0_tab"
 			position = { x = 19 y = 50 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "VOT_POL_temp_0"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "VOT_POL_0_desc"
-		}	
-		buttonType = {
-			name = "VOT_POL_level_1"
-			position = { x = 19 y = 75 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "VOT_POL_temp_1"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "VOT_POL_1_desc"
-		}	
-		buttonType = {
-			name = "VOT_POL_level_2"
-			position = { x = 19 y = 100 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "VOT_POL_temp_2"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "VOT_POL_2_desc"
-		}	
-		buttonType = {
-			name = "VOT_POL_level_3"
-			position = { x = 19 y = 125 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "VOT_POL_temp_3"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "VOT_POL_3_desc"
-		}	
+			buttonType = {
+				name = "policy_UNION_POL_level_0"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "UNION_POL_0_desc"
+				pdx_tooltip_delayed = "UNION_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_UNION_POL_level_0_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "UNION_POL_0_desc"
+				pdx_tooltip_delayed = "UNION_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_UNION_POL_level_0_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "UNION_POL_0_desc"
+				pdx_tooltip_delayed = "UNION_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_UNION_POL_level_0_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_300"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "UNION_POL_0_desc"
+				pdx_tooltip_delayed = "UNION_POL_0_desc_full"
+			}
+			#iconType = {
+			#	name ="UNION_POL_temp_0_icon"
+			#	spriteType = "GFX_UNION_POL_temp_0_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_UNION_POL_level_0_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_union_temp_0"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "UNION_POL_level_1_tab"
+			position = { x = 19 y = 85 }
+			buttonType = {
+				name = "policy_UNION_POL_level_1"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "UNION_POL_1_desc"
+				pdx_tooltip_delayed = "UNION_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_UNION_POL_level_1_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "UNION_POL_1_desc"
+				pdx_tooltip_delayed = "UNION_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_UNION_POL_level_1_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "UNION_POL_1_desc"
+				pdx_tooltip_delayed = "UNION_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_UNION_POL_level_1_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_300"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "UNION_POL_1_desc"
+				pdx_tooltip_delayed = "UNION_POL_1_desc_full"
+			}
+			#iconType = {
+			#	name ="UNION_POL_temp_1_icon"
+			#	spriteType = "GFX_UNION_POL_temp_1_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_UNION_POL_level_1_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_union_temp_1"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "UNION_POL_level_2_tab"
+			position = { x = 19 y = 110 }
+			buttonType = {
+				name = "policy_UNION_POL_level_2"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "UNION_POL_2_desc"
+				pdx_tooltip_delayed = "UNION_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_UNION_POL_level_2_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "UNION_POL_2_desc"
+				pdx_tooltip_delayed = "UNION_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_UNION_POL_level_2_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "UNION_POL_2_desc"
+				pdx_tooltip_delayed = "UNION_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_UNION_POL_level_2_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_300"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "UNION_POL_2_desc"
+				pdx_tooltip_delayed = "UNION_POL_2_desc_full"
+			}
+			#iconType = {
+			#	name ="UNION_POL_temp_2_icon"
+			#	spriteType = "GFX_UNION_POL_temp_2_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_UNION_POL_level_2_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_union_temp_2"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "UNION_POL_level_3_tab"
+			position = { x = 19 y = 135 }
+			buttonType = {
+				name = "policy_UNION_POL_level_3"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "UNION_POL_3_desc"
+				pdx_tooltip_delayed = "UNION_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_UNION_POL_level_3_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "UNION_POL_3_desc"
+				pdx_tooltip_delayed = "UNION_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_UNION_POL_level_3_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "UNION_POL_3_desc"
+				pdx_tooltip_delayed = "UNION_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_UNION_POL_level_3_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_300"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "UNION_POL_3_desc"
+				pdx_tooltip_delayed = "UNION_POL_3_desc_full"
+			}
+			#iconType = {
+			#	name ="UNION_POL_temp_3_icon"
+			#	spriteType = "GFX_UNION_POL_temp_3_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_UNION_POL_level_3_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_union_temp_3"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "UNION_POL_level_4_tab"
+			position = { x = 19 y = 160 }
+			buttonType = {
+				name = "policy_UNION_POL_level_4"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "UNION_POL_4_desc"
+				pdx_tooltip_delayed = "UNION_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_UNION_POL_level_4_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "UNION_POL_4_desc"
+				pdx_tooltip_delayed = "UNION_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_UNION_POL_level_4_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "UNION_POL_4_desc"
+				pdx_tooltip_delayed = "UNION_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_UNION_POL_level_4_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_300"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "UNION_POL_4_desc"
+				pdx_tooltip_delayed = "UNION_POL_4_desc_full"
+			}
+			#iconType = {
+			#	name ="UNION_POL_temp_4_icon"
+			#	spriteType = "GFX_UNION_POL_temp_4_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_UNION_POL_level_4_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_union_temp_4"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "UNION_POL_level_5_tab"
+			position = { x = 19 y = 195 }
+			buttonType = {
+				name = "policy_UNION_POL_level_5"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "UNION_POL_5_desc"
+				pdx_tooltip_delayed = "UNION_POL_5_desc_full"
+			}
+			iconType = {
+				name = "policy_UNION_POL_level_5_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "UNION_POL_5_desc"
+				pdx_tooltip_delayed = "UNION_POL_5_desc_full"
+			}
+			iconType = {
+				name = "policy_UNION_POL_level_5_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "UNION_POL_5_desc"
+				pdx_tooltip_delayed = "UNION_POL_5_desc_full"
+			}
+			iconType = {
+				name = "policy_UNION_POL_level_5_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_300"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "UNION_POL_5_desc"
+				pdx_tooltip_delayed = "UNION_POL_5_desc_full"
+			}
+			#iconType = {
+			#	name ="UNION_POL_temp_5_icon"
+			#	spriteType = "GFX_UNION_POL_temp_5_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_UNION_POL_level_5_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_union_temp_5"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
 		instantTextBoxType = {
-			name = "VOT_POL_level_6"
+			name = "UNION_POL_label"
 			position = { x = 50 y = 215 }
 			font = "hoi_24header"
-			text = [VOT_POLICY]
+			text = [UNION_POLICY]
 			maxWidth = 400
 			maxHeight = 20
 			fixedsize = no
 			format = centre
 			Orientation = "UPPER_LEFT"
 		}
+		iconType = {
+			name = "policy_UNION_POL_cooldown_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_cooldown_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "cooldown_desc"
+		}
+		buttonType = {
+			name = "policy_UNION_POL_regression_reaction_icon"
+			position = {x=49 y=15}
+			spriteType = "GFX_regression_reaction_strike_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "UNION_POL_regression_reaction_desc"
+		}
 
 		instantTextBoxType = {
-			name = "policy_VOT_POL_level_desc"
+			name = "policy_UNION_POL_level_desc"
 			position = { x = 180%% y = 50 }
 			font = "hoi_24header"
-			text = [VOT_POLICY_EFFECT]
+			text = [UNION_POLICY_EFFECT]
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		iconType = { 
 			name = "pic2"  
 			spriteType = "GFX_menu_shadow" 
@@ -1270,11 +2806,11 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			scale = 10
 			alwaystransparent = yes
-		} 			
+		}		
 	}
 	containerWindowType = {
 		name = "public_policy_tab"
-		position = { x = 0 y = 0 }	
+		position = { x = 0 y = 0 }
 		show_position = { x = 50%% y = 580 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
@@ -1290,57 +2826,253 @@ guiTypes = {
 			name = "legislation_menu_open_text"
 			position = { x = 75 y = 15 }
 			font = "hoi_24header"
-			text = "Public Services Funding - $[?pub_cost_display|2]M"
+			text = "Public Services Policy - $[?pub_cost_display|2]B"
 			maxWidth = 300
 			maxHeight = 20
 			fixedsize = no
 			format = centre
 			Orientation = "UPPER_LEFT"
 		}
-		buttonType = {
-			name = "policy_services_level_0"
+		containerWindowType = {
+			name = "PUB_POL_level_0_tab"
 			position = { x = 19 y = 50 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_services_temp_0"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "PUB_POL_0_desc"
-		}	
-		buttonType = {
-			name = "policy_services_level_1"
+			buttonType = {
+				name = "policy_PUB_POL_level_0"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "PUB_POL_0_desc"
+				pdx_tooltip_delayed = "PUB_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_PUB_POL_level_0_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "PUB_POL_0_desc"
+				pdx_tooltip_delayed = "PUB_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_PUB_POL_level_0_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "PUB_POL_0_desc"
+				pdx_tooltip_delayed = "PUB_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_PUB_POL_level_0_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "PUB_POL_0_desc"
+				pdx_tooltip_delayed = "PUB_POL_0_desc_full"
+			}
+			#iconType = {
+			#	name ="PUB_POL_temp_0_icon"
+			#	spriteType = "GFX_PUB_POL_temp_0_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_PUB_POL_level_0_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_services_temp_0"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "PUB_POL_level_1_tab"
 			position = { x = 19 y = 75 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_services_temp_1"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "PUB_POL_1_desc"
-		}	
-		buttonType = {
-			name = "policy_services_level_2"
+			buttonType = {
+				name = "policy_PUB_POL_level_1"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "PUB_POL_1_desc"
+				pdx_tooltip_delayed = "PUB_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_PUB_POL_level_1_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "PUB_POL_1_desc"
+				pdx_tooltip_delayed = "PUB_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_PUB_POL_level_1_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "PUB_POL_1_desc"
+				pdx_tooltip_delayed = "PUB_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_PUB_POL_level_1_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "PUB_POL_1_desc"
+				pdx_tooltip_delayed = "PUB_POL_1_desc_full"
+			}
+			#iconType = {
+			#	name ="PUB_POL_temp_1_icon"
+			#	spriteType = "GFX_PUB_POL_temp_1_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_PUB_POL_level_1_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_services_temp_1"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "PUB_POL_level_2_tab"
 			position = { x = 19 y = 100 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_services_temp_2"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "PUB_POL_2_desc"
-		}	
-		buttonType = {
-			name = "policy_services_level_3"
+			buttonType = {
+				name = "policy_PUB_POL_level_2"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "PUB_POL_2_desc"
+				pdx_tooltip_delayed = "PUB_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_PUB_POL_level_2_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "PUB_POL_2_desc"
+				pdx_tooltip_delayed = "PUB_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_PUB_POL_level_2_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "PUB_POL_2_desc"
+				pdx_tooltip_delayed = "PUB_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_PUB_POL_level_2_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "PUB_POL_2_desc"
+				pdx_tooltip_delayed = "PUB_POL_2_desc_full"
+			}
+			#iconType = {
+			#	name ="PUB_POL_temp_2_icon"
+			#	spriteType = "GFX_PUB_POL_temp_2_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_PUB_POL_level_2_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_services_temp_2"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "PUB_POL_level_3_tab"
 			position = { x = 19 y = 125 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
+			buttonType = {
+				name = "policy_PUB_POL_level_3"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "PUB_POL_3_desc"
+				pdx_tooltip_delayed = "PUB_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_PUB_POL_level_3_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "PUB_POL_3_desc"
+				pdx_tooltip_delayed = "PUB_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_PUB_POL_level_3_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "PUB_POL_3_desc"
+				pdx_tooltip_delayed = "PUB_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_PUB_POL_level_3_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "PUB_POL_3_desc"
+				pdx_tooltip_delayed = "PUB_POL_3_desc_full"
+			}
+			#iconType = {
+			#	name ="PUB_POL_temp_3_icon"
+			#	spriteType = "GFX_PUB_POL_temp_3_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_PUB_POL_level_3_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_services_temp_3"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		iconType = {
+			name = "policy_services_temp_1_preserved_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_services_preserved_icon"
 			Orientation = "UPPER_LEFT"
-			text = "policy_services_temp_3"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "PUB_POL_3_desc"
-		}	
+			pdx_tooltip = "policy_services_temp_1_preserved_desc"
+		}
+		iconType = {
+			name = "policy_services_temp_2_preserved_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_services_preserved_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "policy_services_temp_2_preserved_desc"
+		}
+		iconType = {
+			name = "policy_services_temp_3_preserved_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_services_preserved_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "policy_services_temp_3_preserved_desc"
+		}
+		iconType = {
+			name = "policy_services_pub_expansion_cooldown_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_expansion_cooldown_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "pub_expansion_cooldown_desc"
+		}
 		instantTextBoxType = {
 			name = "policy_services_level_id"
 			position = { x = 50 y = 215 }
@@ -1362,7 +3094,7 @@ guiTypes = {
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		iconType = { 
 			name = "pic2"  
 			spriteType = "GFX_menu_shadow" 
@@ -1370,11 +3102,11 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			scale = 10
 			alwaystransparent = yes
-		} 			
+		}		
 	}
 	containerWindowType = {
 		name = "edu_policy_tab"
-		position = { x = 50%% y = 0 }	
+		position = { x = 50%% y = 0 }
 		show_position = { x = 50%%  y = 340 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
@@ -1390,68 +3122,314 @@ guiTypes = {
 			name = "legislation_menu_open_text"
 			position = { x = 75 y = 15 }
 			font = "hoi_24header"
-			text = "Education Funding - $[?edu_cost_display|2]M"
+			text = "Public Education Policy - $[?edu_cost_display|2]B"
 			maxWidth = 300
 			maxHeight = 20
 			fixedsize = no
 			format = centre
 			Orientation = "UPPER_LEFT"
 		}
-		buttonType = {
-			name = "policy_education_level_0"
+		containerWindowType = {
+			name = "EDU_POL_level_0_tab"
 			position = { x = 19 y = 50 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_education_temp_0"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "EDU_POL_0_desc"
-		}	
-		buttonType = {
-			name = "policy_education_level_1"
+			buttonType = {
+				name = "policy_EDU_POL_level_0"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "EDU_POL_0_desc"
+				pdx_tooltip_delayed = "EDU_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_EDU_POL_level_0_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "EDU_POL_0_desc"
+				pdx_tooltip_delayed = "EDU_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_EDU_POL_level_0_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "EDU_POL_0_desc"
+				pdx_tooltip_delayed = "EDU_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_EDU_POL_level_0_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "EDU_POL_0_desc"
+				pdx_tooltip_delayed = "EDU_POL_0_desc_full"
+			}
+			#iconType = {
+			#	name ="EDU_POL_temp_0_icon"
+			#	spriteType = "GFX_EDU_POL_temp_0_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_EDU_POL_level_0_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_education_temp_0"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "EDU_POL_level_1_tab"
 			position = { x = 19 y = 75 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_education_temp_1"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "EDU_POL_1_desc"
-		}	
-		buttonType = {
-			name = "policy_education_level_2"
+			buttonType = {
+				name = "policy_EDU_POL_level_1"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "EDU_POL_1_desc"
+				pdx_tooltip_delayed = "EDU_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_EDU_POL_level_1_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "EDU_POL_1_desc"
+				pdx_tooltip_delayed = "EDU_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_EDU_POL_level_1_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "EDU_POL_1_desc"
+				pdx_tooltip_delayed = "EDU_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_EDU_POL_level_1_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "EDU_POL_1_desc"
+				pdx_tooltip_delayed = "EDU_POL_1_desc_full"
+			}
+			#iconType = {
+			#	name ="EDU_POL_temp_1_icon"
+			#	spriteType = "GFX_EDU_POL_temp_1_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_EDU_POL_level_1_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_education_temp_1"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "EDU_POL_level_2_tab"
 			position = { x = 19 y = 100 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_education_temp_2"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "EDU_POL_2_desc"
-		}	
-		buttonType = {
-			name = "policy_education_level_3"
+			buttonType = {
+				name = "policy_EDU_POL_level_2"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "EDU_POL_2_desc"
+				pdx_tooltip_delayed = "EDU_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_EDU_POL_level_2_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "EDU_POL_2_desc"
+				pdx_tooltip_delayed = "EDU_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_EDU_POL_level_2_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "EDU_POL_2_desc"
+				pdx_tooltip_delayed = "EDU_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_EDU_POL_level_2_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "EDU_POL_2_desc"
+				pdx_tooltip_delayed = "EDU_POL_2_desc_full"
+			}
+			#iconType = {
+			#	name ="EDU_POL_temp_2_icon"
+			#	spriteType = "GFX_EDU_POL_temp_2_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_EDU_POL_level_2_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_education_temp_2"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "EDU_POL_level_3_tab"
 			position = { x = 19 y = 125 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_education_temp_3"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "EDU_POL_3_desc"
-		}	
-		buttonType = {
-			name = "policy_education_level_4"
+			buttonType = {
+				name = "policy_EDU_POL_level_3"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "EDU_POL_3_desc"
+				pdx_tooltip_delayed = "EDU_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_EDU_POL_level_3_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "EDU_POL_3_desc"
+				pdx_tooltip_delayed = "EDU_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_EDU_POL_level_3_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "EDU_POL_3_desc"
+				pdx_tooltip_delayed = "EDU_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_EDU_POL_level_3_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "EDU_POL_3_desc"
+				pdx_tooltip_delayed = "EDU_POL_3_desc_full"
+			}
+			#iconType = {
+			#	name ="EDU_POL_temp_3_icon"
+			#	spriteType = "GFX_EDU_POL_temp_3_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_EDU_POL_level_3_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_education_temp_3"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "EDU_POL_level_4_tab"
 			position = { x = 19 y = 150 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
+			buttonType = {
+				name = "policy_EDU_POL_level_4"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "EDU_POL_4_desc"
+				pdx_tooltip_delayed = "EDU_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_EDU_POL_level_4_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "EDU_POL_4_desc"
+				pdx_tooltip_delayed = "EDU_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_EDU_POL_level_4_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "EDU_POL_4_desc"
+				pdx_tooltip_delayed = "EDU_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_EDU_POL_level_4_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "EDU_POL_4_desc"
+				pdx_tooltip_delayed = "EDU_POL_4_desc_full"
+			}
+			#iconType = {
+			#	name ="EDU_POL_temp_4_icon"
+			#	spriteType = "GFX_EDU_POL_temp_4_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_EDU_POL_level_4_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_education_temp_4"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		
+		iconType = {
+			name = "policy_education_expansion_cooldown_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_expansion_cooldown_icon"
 			Orientation = "UPPER_LEFT"
-			text = "policy_education_temp_4"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "EDU_POL_4_desc"
-		}	
+			pdx_tooltip = "edu_expansion_cooldown_desc"
+		}
+		iconType = {
+			name = "policy_education_temp_1_preserved_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_education_preserved_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "policy_education_temp_1_preserved_desc"
+		}
+		iconType = {
+			name = "policy_education_temp_2_preserved_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_education_preserved_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "policy_education_temp_2_preserved_desc"
+		}
+		iconType = {
+			name = "policy_education_temp_3_preserved_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_education_preserved_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "policy_education_temp_3_preserved_desc"
+		}
+		iconType = {
+			name = "policy_education_temp_4_preserved_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_education_preserved_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "policy_education_temp_4_preserved_desc"
+		}
 		instantTextBoxType = {
 			name = "policy_education_level_id"
 			position = { x = 50 y = 190 }
@@ -1473,7 +3451,7 @@ guiTypes = {
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		iconType = { 
 			name = "pic2"  
 			spriteType = "GFX_menu_shadow" 
@@ -1481,11 +3459,11 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			scale = 10
 			alwaystransparent = yes
-		} 			
+		}		
 	}
 	containerWindowType = {
 		name = "army_policy_tab"
-		position = { x = 0 y = 0 }	
+		position = { x = 0 y = 0 }
 		show_position = { x = 0%% y = 100 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
@@ -1499,58 +3477,254 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "legislation_menu_open_text"
-			position = { x = 75 y = 15 }
+			position = { x = 50 y = 15 }
 			font = "hoi_24header"
-			text = "Military Funding - $[?mil_expend|2]M"
-			maxWidth = 300
+			text = "Military Networks/Maintenance - $[?mil_expend_display|2]B"
+			maxWidth = 360
 			maxHeight = 20
 			fixedsize = no
 			format = centre
 			Orientation = "UPPER_LEFT"
 		}
-		buttonType = {
-			name = "policy_military_level_1"
+		containerWindowType = {
+			name = "MIL_POL_level_1_tab"
 			position = { x = 19 y = 50 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_military_temp_1"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "MIL_POL_1_desc"
-		}	
-		buttonType = {
-			name = "policy_military_level_2"
+			buttonType = {
+				name = "policy_MIL_POL_level_1"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "MIL_POL_1_desc"
+				pdx_tooltip_delayed = "MIL_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_MIL_POL_level_1_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MIL_POL_1_desc"
+				pdx_tooltip_delayed = "MIL_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_MIL_POL_level_1_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MIL_POL_1_desc"
+				pdx_tooltip_delayed = "MIL_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_MIL_POL_level_1_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MIL_POL_1_desc"
+				pdx_tooltip_delayed = "MIL_POL_1_desc_full"
+			}
+			#iconType = {
+			#	name ="MIL_POL_temp_1_icon"
+			#	spriteType = "GFX_MIL_POL_temp_1_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_MIL_POL_level_1_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_military_temp_1"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "MIL_POL_level_2_tab"
 			position = { x = 19 y = 75 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_military_temp_2"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "MIL_POL_2_desc"
-		}	
-		buttonType = {
-			name = "policy_military_level_3"
+			buttonType = {
+				name = "policy_MIL_POL_level_2"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "MIL_POL_2_desc"
+				pdx_tooltip_delayed = "MIL_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_MIL_POL_level_2_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MIL_POL_2_desc"
+				pdx_tooltip_delayed = "MIL_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_MIL_POL_level_2_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MIL_POL_2_desc"
+				pdx_tooltip_delayed = "MIL_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_MIL_POL_level_2_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MIL_POL_2_desc"
+				pdx_tooltip_delayed = "MIL_POL_2_desc_full"
+			}
+			#iconType = {
+			#	name ="MIL_POL_temp_2_icon"
+			#	spriteType = "GFX_MIL_POL_temp_2_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_MIL_POL_level_2_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_military_temp_2"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "MIL_POL_level_3_tab"
 			position = { x = 19 y = 100 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_military_temp_3"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "MIL_POL_3_desc"
-		}	
-		buttonType = {
-			name = "policy_military_level_4"
+			buttonType = {
+				name = "policy_MIL_POL_level_3"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "MIL_POL_3_desc"
+				pdx_tooltip_delayed = "MIL_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_MIL_POL_level_3_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MIL_POL_3_desc"
+				pdx_tooltip_delayed = "MIL_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_MIL_POL_level_3_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MIL_POL_3_desc"
+				pdx_tooltip_delayed = "MIL_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_MIL_POL_level_3_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MIL_POL_3_desc"
+				pdx_tooltip_delayed = "MIL_POL_3_desc_full"
+			}
+			#iconType = {
+			#	name ="MIL_POL_temp_3_icon"
+			#	spriteType = "GFX_MIL_POL_temp_3_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_MIL_POL_level_3_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_military_temp_3"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "MIL_POL_level_4_tab"
 			position = { x = 19 y = 125 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
+			buttonType = {
+				name = "policy_MIL_POL_level_4"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "MIL_POL_4_desc"
+				pdx_tooltip_delayed = "MIL_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_MIL_POL_level_4_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MIL_POL_4_desc"
+				pdx_tooltip_delayed = "MIL_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_MIL_POL_level_4_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MIL_POL_4_desc"
+				pdx_tooltip_delayed = "MIL_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_MIL_POL_level_4_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "MIL_POL_4_desc"
+				pdx_tooltip_delayed = "MIL_POL_4_desc_full"
+			}
+			#iconType = {
+			#	name ="MIL_POL_temp_4_icon"
+			#	spriteType = "GFX_MIL_POL_temp_4_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_MIL_POL_level_4_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_military_temp_4"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		iconType = {
+			name = "policy_military_temp_2_preserved_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_military_preserved_icon"
 			Orientation = "UPPER_LEFT"
-			text = "policy_military_temp_4"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "MIL_POL_4_desc"
+			pdx_tooltip = "policy_military_temp_2_preserved_desc"
+		}
+		iconType = {
+			name = "policy_military_temp_3_preserved_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_military_preserved_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "policy_military_temp_3_preserved_desc"
+		}
+		iconType = {
+			name = "policy_military_temp_4_preserved_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_military_preserved_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "policy_military_temp_4_preserved_desc"
+		}
+		iconType = {
+			name = "policy_military_mil_expansion_cooldown_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_expansion_cooldown_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "mil_expansion_cooldown_desc"
 		}
 		instantTextBoxType = {
 			name = "policy_military_level_id"
@@ -1573,7 +3747,7 @@ guiTypes = {
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		iconType = { 
 			name = "pic2"  
 			spriteType = "GFX_menu_shadow" 
@@ -1581,11 +3755,11 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			scale = 10
 			alwaystransparent = yes
-		} 			
+		}		
 	}
 	containerWindowType = {
 		name = "welfare_policy_tab"
-		position = { x = 0 y = 0 }	
+		position = { x = 0 y = 0 }
 		show_position = { x = 50%% y = 100 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
@@ -1601,79 +3775,339 @@ guiTypes = {
 			name = "legislation_menu_open_text"
 			position = { x = 75 y = 15 }
 			font = "hoi_24header"
-			text = "Welfare Funding - $[?welfare_cost_display|2]M"
+			text = "Welfare Policy - $[?welfare_cost_display|2]B"
 			maxWidth = 300
 			maxHeight = 20
 			fixedsize = no
 			format = centre
 			Orientation = "UPPER_LEFT"
 		}
-		buttonType = {
-			name = "policy_welfare_level_0"
+		containerWindowType = { 
+			name = "WEL_POL_level_0_tab"
 			position = { x = 19 y = 50 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_welfare_temp_0"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "WEL_POL_0_desc"
-		}	
-		buttonType = {
-			name = "policy_welfare_level_1"
+			buttonType = {
+				name = "policy_WEL_POL_level_0"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "WEL_POL_0_desc"
+				pdx_tooltip_delayed = "WEL_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_WEL_POL_level_0_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WEL_POL_0_desc"
+				pdx_tooltip_delayed = "WEL_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_WEL_POL_level_0_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WEL_POL_0_desc"
+				pdx_tooltip_delayed = "WEL_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_WEL_POL_level_0_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WEL_POL_0_desc"
+				pdx_tooltip_delayed = "WEL_POL_0_desc_full"
+			}
+			#iconType = {
+			#	name ="WEL_POL_temp_0_icon"
+			#	spriteType = "GFX_WEL_POL_temp_0_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_WEL_POL_level_0_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_welfare_temp_0"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "WEL_POL_level_1_tab"
 			position = { x = 19 y = 75 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_welfare_temp_1"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "WEL_POL_1_desc"
-		}	
-		buttonType = {
-			name = "policy_welfare_level_2"
+			buttonType = {
+				name = "policy_WEL_POL_level_1"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "WEL_POL_1_desc"
+				pdx_tooltip_delayed = "WEL_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_WEL_POL_level_1_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WEL_POL_1_desc"
+				pdx_tooltip_delayed = "WEL_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_WEL_POL_level_1_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WEL_POL_1_desc"
+				pdx_tooltip_delayed = "WEL_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_WEL_POL_level_1_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WEL_POL_1_desc"
+				pdx_tooltip_delayed = "WEL_POL_1_desc_full"
+			}
+			#iconType = {
+			#	name ="WEL_POL_temp_1_icon"
+			#	spriteType = "GFX_WEL_POL_temp_1_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_WEL_POL_level_1_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_welfare_temp_1"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "WEL_POL_level_2_tab"
 			position = { x = 19 y = 100 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_welfare_temp_2"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "WEL_POL_2_desc"
-		}	
-		buttonType = {
-			name = "policy_welfare_level_3"
+			buttonType = {
+				name = "policy_WEL_POL_level_2"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "WEL_POL_2_desc"
+				pdx_tooltip_delayed = "WEL_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_WEL_POL_level_2_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WEL_POL_2_desc"
+				pdx_tooltip_delayed = "WEL_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_WEL_POL_level_2_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WEL_POL_2_desc"
+				pdx_tooltip_delayed = "WEL_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_WEL_POL_level_2_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WEL_POL_2_desc"
+				pdx_tooltip_delayed = "WEL_POL_2_desc_full"
+			}
+			#iconType = {
+			#	name ="WEL_POL_temp_2_icon"
+			#	spriteType = "GFX_WEL_POL_temp_2_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_WEL_POL_level_2_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_welfare_temp_2"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "WEL_POL_level_3_tab"
 			position = { x = 19 y = 125 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_welfare_temp_3"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "WEL_POL_3_desc"
-		}	
-		buttonType = {
-			name = "policy_welfare_level_4"
+			buttonType = {
+				name = "policy_WEL_POL_level_3"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "WEL_POL_3_desc"
+				pdx_tooltip_delayed = "WEL_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_WEL_POL_level_3_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WEL_POL_3_desc"
+				pdx_tooltip_delayed = "WEL_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_WEL_POL_level_3_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WEL_POL_3_desc"
+				pdx_tooltip_delayed = "WEL_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_WEL_POL_level_3_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WEL_POL_3_desc"
+				pdx_tooltip_delayed = "WEL_POL_3_desc_full"
+			}
+			#iconType = {
+			#	name ="WEL_POL_temp_3_icon"
+			#	spriteType = "GFX_WEL_POL_temp_3_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_WEL_POL_level_3_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_welfare_temp_3"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "WEL_POL_level_4_tab"
 			position = { x = 19 y = 150 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_welfare_temp_4"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "WEL_POL_4_desc"
-		}	
-		buttonType = {
-			name = "policy_welfare_level_5"
+			buttonType = {
+				name = "policy_WEL_POL_level_4"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "WEL_POL_4_desc"
+				pdx_tooltip_delayed = "WEL_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_WEL_POL_level_4_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WEL_POL_4_desc"
+				pdx_tooltip_delayed = "WEL_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_WEL_POL_level_4_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WEL_POL_4_desc"
+				pdx_tooltip_delayed = "WEL_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_WEL_POL_level_4_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WEL_POL_4_desc"
+				pdx_tooltip_delayed = "WEL_POL_4_desc_full"
+			}
+			#iconType = {
+			#	name ="WEL_POL_temp_4_icon"
+			#	spriteType = "GFX_WEL_POL_temp_4_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_WEL_POL_level_4_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_welfare_temp_4"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "WEL_POL_level_5_tab"
 			position = { x = 19 y = 175 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
+			buttonType = {
+				name = "policy_WEL_POL_level_5"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "WEL_POL_5_desc"
+				pdx_tooltip_delayed = "WEL_POL_5_desc_full"
+			}
+			iconType = {
+				name = "policy_WEL_POL_level_5_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WEL_POL_5_desc"
+				pdx_tooltip_delayed = "WEL_POL_5_desc_full"
+			}
+			iconType = {
+				name = "policy_WEL_POL_level_5_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WEL_POL_5_desc"
+				pdx_tooltip_delayed = "WEL_POL_5_desc_full"
+			}
+			iconType = {
+				name = "policy_WEL_POL_level_5_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "WEL_POL_5_desc"
+				pdx_tooltip_delayed = "WEL_POL_5_desc_full"
+			}
+			#iconType = {
+			#	name ="WEL_POL_temp_5_icon"
+			#	spriteType = "GFX_WEL_POL_temp_5_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_WEL_POL_level_5_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_welfare_temp_5"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		
+		iconType = {
+			name = "policy_welfare_cooldown_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_cooldown_icon"
 			Orientation = "UPPER_LEFT"
-			text = "policy_welfare_temp_5"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "WEL_POL_5_desc"
-		}	
+			pdx_tooltip = "wel_cooldown_desc"
+		}
 		instantTextBoxType = {
 			name = "policy_welfare_level_id"
 			position = { x = 50 y = 215 }
@@ -1695,7 +4129,7 @@ guiTypes = {
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		iconType = { 
 			name = "pic2"  
 			spriteType = "GFX_menu_shadow" 
@@ -1703,11 +4137,11 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			scale = 10
 			alwaystransparent = yes
-		} 			
+		}		
 	}
 	containerWindowType = {
 		name = "policy_info_tab"
-		position = { x = 0 y = 0 }	
+		position = { x = 0 y = 0 }
 		show_position = { x = 0%% y = 340 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
@@ -1723,7 +4157,7 @@ guiTypes = {
 			name = "gen_fin_info_tab_menu_open_text"
 			position = { x = 75%% y = 15 }
 			font = "hoi_24header"
-			text = "Fiscal Policy Expenditures"
+			text = "Total Fiscal Expenditures"
 			maxWidth = 300
 			maxHeight = 20
 			fixedsize = no
@@ -1734,7 +4168,7 @@ guiTypes = {
 			name = "policy_edu_level_id"
 			position = { x = 15 y = 45 }
 			font = "hoi_24header"
-			text = "Monthly Education Costs $[?edu_cost_display|2]M"
+			text = "Total Education Costs: [?edu_cost|R2]B"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
@@ -1745,58 +4179,58 @@ guiTypes = {
 			name = "polic_cpi2_level_desc"
 			position = { x = 15 y = 80 }
 			font = "hoi_24header"
-			text = "Monthly Law Enforcement Costs: $[?cpi_cost_display|2]M"
+			text = "Total Civil Protection/Intelligence Costs: [?cpi_cost|R2]B"
 			maxWidth = 500
 			maxHeight = 20
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		instantTextBoxType = {
 			name = "poli_pub_cost_level_desc"
 			position = { x = 15 y = 115 }
 			font = "hoi_24header"
-			text = "Monthly Public Services Costs: $[?pub_cost_display|2]M"
+			text = "Total Public Services Costs: [?pub_cost|R2]B"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		instantTextBoxType = {
 			name = "monthly_imp_resource_cost"
 			position = { x = 15 y = 150 }
 			font = "hoi_24header"
-			text = "Monthly Healthcare Costs: $[?health_cost_display|2]M"
+			text = "Total Healthcare Costs: [?health_cost|R2]B"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}			
+		}
 		
 		instantTextBoxType = {
 			name = "picy_wel_level_desc"
 			position = { x = 15 y = 185 }
 			font = "hoi_24header"
-			text = "Monthly Welfare Costs: $[?welfare_cost_display|2]M"
+			text = "Total Welfare Costs: [?welfare_cost|R2]B"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}			
+		}
 		instantTextBoxType = {
 			name = "picy_mil_level_desc"
 			position = { x = 15 y = 220 }
 			font = "hoi_24header"
-			text = "Monthly Military Cost: $[?mil_expend|2]M"
+			text = "Total Military Cost: [?mil_expend|R2]B"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}					
+		}
 		iconType = { 
 			name = "pic2"  
 			spriteType = "GFX_menu_shadow" 
@@ -1804,11 +4238,11 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			scale = 10
 			alwaystransparent = yes
-		} 			
-	}	
+		}		
+	}
 	containerWindowType = {
 		name = "corruption_info_tab"
-		position = { x = 0 y = 0 }	
+		position = { x = 0 y = 0 }
 		show_position = { x = 50%% y = 340 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
@@ -1846,13 +4280,13 @@ guiTypes = {
 			name = "policy_inc_cor_level_desc"
 			position = { x = 15 y = 80 }
 			font = "hoi_24header"
-			text = "Income Lost Due to Corruption: [?CorruptIncomeLoss|R2]M"
+			text = "Income Lost Due to Corruption: [?CorruptIncomeLoss|R2]B"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		instantTextBoxType = {
 			name = "policy_pol_cor_level_desc"
 			position = { x = 15 y = 115 }
@@ -1863,7 +4297,7 @@ guiTypes = {
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		instantTextBoxType = {
 			name = "policy_stab_level_desc"
 			position = { x = 15 y = 150 }
@@ -1874,7 +4308,7 @@ guiTypes = {
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		instantTextBoxType = {
 			name = "policy_enc_level_desc"
 			position = { x = 15 y = 185 }
@@ -1885,7 +4319,7 @@ guiTypes = {
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}			
+		}
 		iconType = { 
 			name = "pic2"  
 			spriteType = "GFX_menu_shadow" 
@@ -1893,11 +4327,11 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			scale = 10
 			alwaystransparent = yes
-		} 	
-	}	
+		}
+	}
 	containerWindowType = {
 		name = "tax_info_tab"
-		position = { x = 0 y = 0 }	
+		position = { x = 0 y = 0 }
 		show_position = { x = 0% y = 580 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
@@ -1913,79 +4347,278 @@ guiTypes = {
 			name = "legislation_menu_open_text"
 			position = { x = 75 y = 15 }
 			font = "hoi_24header"
-			text = "Tax Methodology"
+			text = "Overall Tax Rate (450 PP)"
 			maxWidth = 300
 			maxHeight = 20
 			fixedsize = no
 			format = centre
 			Orientation = "UPPER_LEFT"
 		}
-		buttonType = {
-			name = "policy_tax_level_0"
+		containerWindowType = {
+			name = "TAX_POL_level_1_tab"
 			position = { x = 19 y = 50 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_tax_temp_0"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "TAX_POL_0_desc"
-		}	
-		buttonType = {
-			name = "policy_tax_level_1"
+			buttonType = {
+				name = "policy_TAX_POL_level_1"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "TAX_POL_1_desc"
+				pdx_tooltip_delayed = "TAX_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_TAX_POL_level_1_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "TAX_POL_1_desc"
+				pdx_tooltip_delayed = "TAX_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_TAX_POL_level_1_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "TAX_POL_1_desc"
+				pdx_tooltip_delayed = "TAX_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_TAX_POL_level_1_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "TAX_POL_1_desc"
+				pdx_tooltip_delayed = "TAX_POL_1_desc_full"
+			}
+			#iconType = {
+			#	name ="TAX_POL_temp_1_icon"
+			#	spriteType = "GFX_TAX_POL_temp_1_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_TAX_POL_level_1_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_taxrate_temp_1"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "TAX_POL_level_2_tab"
 			position = { x = 19 y = 75 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_tax_temp_1"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "TAX_POL_1_desc"
-		}	
-		buttonType = {
-			name = "policy_tax_level_2"
-			position = { x = 19 y = 100 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_tax_temp_2"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "TAX_POL_2_desc"
-		}	
-		buttonType = {
-			name = "policy_tax_level_3"
-			position = { x = 19 y = 125 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_tax_temp_3"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "TAX_POL_3_desc"
-		}	
-		buttonType = {
-			name = "policy_tax_level_4"
-			position = { x = 19 y = 150 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_tax_temp_4"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "TAX_POL_4_desc"
-		}	
-		buttonType = {
-			name = "policy_tax_level_5"
-			position = { x = 19 y = 175 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_tax_temp_5"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "TAX_POL_5_desc"
-		}	
+			buttonType = {
+				name = "policy_TAX_POL_level_2"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "TAX_POL_2_desc"
+				pdx_tooltip_delayed = "TAX_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_TAX_POL_level_2_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "TAX_POL_2_desc"
+				pdx_tooltip_delayed = "TAX_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_TAX_POL_level_2_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "TAX_POL_2_desc"
+				pdx_tooltip_delayed = "TAX_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_TAX_POL_level_2_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "TAX_POL_2_desc"
+				pdx_tooltip_delayed = "TAX_POL_2_desc_full"
+			}
+			#iconType = {
+			#	name ="TAX_POL_temp_2_icon"
+			#	spriteType = "GFX_TAX_POL_temp_2_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_TAX_POL_level_2_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_taxrate_temp_2"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "TAX_POL_level_3_tab"
+			position = { x = 19 y = 110 }
+			buttonType = {
+				name = "policy_TAX_POL_level_3"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "TAX_POL_3_desc"
+				pdx_tooltip_delayed = "TAX_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_TAX_POL_level_3_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "TAX_POL_3_desc"
+				pdx_tooltip_delayed = "TAX_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_TAX_POL_level_3_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "TAX_POL_3_desc"
+				pdx_tooltip_delayed = "TAX_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_TAX_POL_level_3_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "TAX_POL_3_desc"
+				pdx_tooltip_delayed = "TAX_POL_3_desc_full"
+			}
+			#iconType = {
+			#	name ="TAX_POL_temp_3_icon"
+			#	spriteType = "GFX_TAX_POL_temp_3_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_TAX_POL_level_3_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_taxrate_temp_3"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "TAX_POL_level_4_tab"
+			position = { x = 19 y = 145 }
+			buttonType = {
+				name = "policy_TAX_POL_level_4"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "TAX_POL_4_desc"
+				pdx_tooltip_delayed = "TAX_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_TAX_POL_level_4_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "TAX_POL_4_desc"
+				pdx_tooltip_delayed = "TAX_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_TAX_POL_level_4_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "TAX_POL_4_desc"
+				pdx_tooltip_delayed = "TAX_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_TAX_POL_level_4_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "TAX_POL_4_desc"
+				pdx_tooltip_delayed = "TAX_POL_4_desc_full"
+			}
+			#iconType = {
+			#	name ="TAX_POL_temp_4_icon"
+			#	spriteType = "GFX_TAX_POL_temp_4_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_TAX_POL_level_4_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_taxrate_temp_4"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "TAX_POL_level_5_tab"
+			position = { x = 19 y = 170 }
+			buttonType = {
+				name = "policy_TAX_POL_level_5"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "TAX_POL_5_desc"
+				pdx_tooltip_delayed = "TAX_POL_5_desc_full"
+			}
+			iconType = {
+				name = "policy_TAX_POL_level_5_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "TAX_POL_5_desc"
+				pdx_tooltip_delayed = "TAX_POL_5_desc_full"
+			}
+			iconType = {
+				name = "policy_TAX_POL_level_5_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "TAX_POL_5_desc"
+				pdx_tooltip_delayed = "TAX_POL_5_desc_full"
+			}
+			iconType = {
+				name = "policy_TAX_POL_level_5_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "TAX_POL_5_desc"
+				pdx_tooltip_delayed = "TAX_POL_5_desc_full"
+			}
+			#iconType = {
+			#	name ="TAX_POL_temp_5_icon"
+			#	spriteType = "GFX_TAX_POL_temp_5_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_TAX_POL_level_5_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_taxrate_temp_5"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
 		instantTextBoxType = {
 			name = "tax_level_title"
 			position = { x = 50 y = 215 }
@@ -1998,7 +4631,7 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 		}
 		instantTextBoxType = {
-			name = "policy_cpi_level_desc"
+			name = "policy_tax_level_desc"
 			position = { x = 180%% y = 50 }
 			font = "hoi_24header"
 			text = [TAX_POLICY_EFFECT]
@@ -2007,7 +4640,7 @@ guiTypes = {
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		iconType = { 
 			name = "pic3"  
 			spriteType = "GFX_menu_shadow" 
@@ -2015,12 +4648,12 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			scale = 10
 			alwaystransparent = yes
-		} 			
+		}		
 	}
 
 	containerWindowType = {
 		name = "cpi_policy_tab"
-		position = { x = 0 y = 0 }	
+		position = { x = 0 y = 0 }
 		show_position = { x = 0%% y = 340 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
@@ -2036,79 +4669,374 @@ guiTypes = {
 			name = "legislation_menu_open_text"
 			position = { x = 75 y = 15 }
 			font = "hoi_24header"
-			text = "CPI Funding - $[?cpi_cost_display|2]M"
+			text = "CPI Level - $[?cpi_cost_display|2]B"
 			maxWidth = 300
 			maxHeight = 20
 			fixedsize = no
 			format = centre
 			Orientation = "UPPER_LEFT"
 		}
-		buttonType = {
-			name = "policy_cpi_level_0"
+		containerWindowType = {
+			name = "CPI_POL_level_0_tab"
 			position = { x = 19 y = 50 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_cpi_temp_0"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "CPI_POL_0_desc"
-		}	
-		buttonType = {
-			name = "policy_cpi_level_1"
+			buttonType = {
+				name = "policy_CPI_POL_level_0"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "CPI_POL_0_desc"
+				pdx_tooltip_delayed = "CPI_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_CPI_POL_level_0_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "CPI_POL_0_desc"
+				pdx_tooltip_delayed = "CPI_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_CPI_POL_level_0_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "CPI_POL_0_desc"
+				pdx_tooltip_delayed = "CPI_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_CPI_POL_level_0_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "CPI_POL_0_desc"
+				pdx_tooltip_delayed = "CPI_POL_0_desc_full"
+			}
+			#iconType = {
+			#	name ="CPI_POL_temp_0_icon"
+			#	spriteType = "GFX_CPI_POL_temp_0_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_CPI_POL_level_0_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_cpi_temp_0"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "CPI_POL_level_1_tab"
 			position = { x = 19 y = 75 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_cpi_temp_1"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "CPI_POL_1_desc"
-		}	
-		buttonType = {
-			name = "policy_cpi_level_2"
+			buttonType = {
+				name = "policy_CPI_POL_level_1"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "CPI_POL_1_desc"
+				pdx_tooltip_delayed = "CPI_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_CPI_POL_level_1_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "CPI_POL_1_desc"
+				pdx_tooltip_delayed = "CPI_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_CPI_POL_level_1_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "CPI_POL_1_desc"
+				pdx_tooltip_delayed = "CPI_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_CPI_POL_level_1_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "CPI_POL_1_desc"
+				pdx_tooltip_delayed = "CPI_POL_1_desc_full"
+			}
+			#iconType = {
+			#	name ="CPI_POL_temp_1_icon"
+			#	spriteType = "GFX_CPI_POL_temp_1_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_CPI_POL_level_1_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_cpi_temp_1"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "CPI_POL_level_2_tab"
 			position = { x = 19 y = 100 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_cpi_temp_2"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "CPI_POL_2_desc"
-		}	
-		buttonType = {
-			name = "policy_cpi_level_3"
+			buttonType = {
+				name = "policy_CPI_POL_level_2"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "CPI_POL_2_desc"
+				pdx_tooltip_delayed = "CPI_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_CPI_POL_level_2_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "CPI_POL_2_desc"
+				pdx_tooltip_delayed = "CPI_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_CPI_POL_level_2_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "CPI_POL_2_desc"
+				pdx_tooltip_delayed = "CPI_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_CPI_POL_level_2_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "CPI_POL_2_desc"
+				pdx_tooltip_delayed = "CPI_POL_2_desc_full"
+			}
+			#iconType = {
+			#	name ="CPI_POL_temp_2_icon"
+			#	spriteType = "GFX_CPI_POL_temp_2_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_CPI_POL_level_2_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_cpi_temp_2"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "CPI_POL_level_3_tab"
 			position = { x = 19 y = 125 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_cpi_temp_3"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "CPI_POL_3_desc"
-		}	
-		buttonType = {
-			name = "policy_cpi_level_4"
+			buttonType = {
+				name = "policy_CPI_POL_level_3"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "CPI_POL_3_desc"
+				pdx_tooltip_delayed = "CPI_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_CPI_POL_level_3_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "CPI_POL_3_desc"
+				pdx_tooltip_delayed = "CPI_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_CPI_POL_level_3_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "CPI_POL_3_desc"
+				pdx_tooltip_delayed = "CPI_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_CPI_POL_level_3_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "CPI_POL_3_desc"
+				pdx_tooltip_delayed = "CPI_POL_3_desc_full"
+			}
+			#iconType = {
+			#	name ="CPI_POL_temp_3_icon"
+			#	spriteType = "GFX_CPI_POL_temp_3_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_CPI_POL_level_3_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_cpi_temp_3"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "CPI_POL_level_4_tab"
 			position = { x = 19 y = 150 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_cpi_temp_4"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "CPI_POL_4_desc"
-		}	
-		buttonType = {
-			name = "policy_cpi_level_5"
+			buttonType = {
+				name = "policy_CPI_POL_level_4"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "CPI_POL_4_desc"
+				pdx_tooltip_delayed = "CPI_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_CPI_POL_level_4_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "CPI_POL_4_desc"
+				pdx_tooltip_delayed = "CPI_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_CPI_POL_level_4_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "CPI_POL_4_desc"
+				pdx_tooltip_delayed = "CPI_POL_4_desc_full"
+			}
+			iconType = {
+				name = "policy_CPI_POL_level_4_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "CPI_POL_4_desc"
+				pdx_tooltip_delayed = "CPI_POL_4_desc_full"
+			}
+			#iconType = {
+			#	name ="CPI_POL_temp_4_icon"
+			#	spriteType = "GFX_CPI_POL_temp_4_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_CPI_POL_level_4_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_cpi_temp_4"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "CPI_POL_level_5_tab"
 			position = { x = 19 y = 175 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
+			buttonType = {
+				name = "policy_CPI_POL_level_5"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "CPI_POL_5_desc"
+				pdx_tooltip_delayed = "CPI_POL_5_desc_full"
+			}
+			iconType = {
+				name = "policy_CPI_POL_level_5_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "CPI_POL_5_desc"
+				pdx_tooltip_delayed = "CPI_POL_5_desc_full"
+			}
+			iconType = {
+				name = "policy_CPI_POL_level_5_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "CPI_POL_5_desc"
+				pdx_tooltip_delayed = "CPI_POL_5_desc_full"
+			}
+			iconType = {
+				name = "policy_CPI_POL_level_5_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "CPI_POL_5_desc"
+				pdx_tooltip_delayed = "CPI_POL_5_desc_full"
+			}
+			#iconType = {
+			#	name ="CPI_POL_temp_5_icon"
+			#	spriteType = "GFX_CPI_POL_temp_5_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_CPI_POL_level_5_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_cpi_temp_5"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		
+		iconType = {
+			name = "policy_cpi_expansion_cooldown_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_expansion_cooldown_icon"
 			Orientation = "UPPER_LEFT"
-			text = "policy_cpi_temp_5"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "CPI_POL_5_desc"
-		}	
+			pdx_tooltip = "cpi_expansion_cooldown_desc"
+		}
+		iconType = {
+			name = "policy_cpi_temp_1_preserved_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_cpi_preserved_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "policy_cpi_temp_1_preserved_desc"
+		}
+		iconType = {
+			name = "policy_cpi_temp_2_preserved_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_cpi_preserved_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "policy_cpi_temp_2_preserved_desc"
+		}
+		iconType = {
+			name = "policy_cpi_temp_3_preserved_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_cpi_preserved_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "policy_cpi_temp_3_preserved_desc"
+		}
+		iconType = {
+			name = "policy_cpi_temp_4_preserved_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_cpi_preserved_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "policy_cpi_temp_4_preserved_desc"
+		}
+		iconType = {
+			name = "policy_cpi_temp_5_preserved_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_policy_cpi_preserved_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "policy_cpi_temp_5_preserved_desc"
+		}
 		instantTextBoxType = {
 			name = "policy_cpi_level_id"
 			position = { x = 50 y = 215 }
@@ -2130,7 +5058,7 @@ guiTypes = {
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		iconType = { 
 			name = "pic4"  
 			spriteType = "GFX_menu_shadow" 
@@ -2139,12 +5067,11 @@ guiTypes = {
 			scale = 10
 			alwaystransparent = yes
 			
-		} 			
+		}		
 	}
 	containerWindowType = {
 		name = "upper_parliament_window_container"
-		position = { x = 1 y = 0 }	
-		show_position = { x = 52%% y = 500 }
+		position = { x = 400 y = 494 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		animation_time = 0
@@ -2428,7 +5355,7 @@ guiTypes = {
 	}
 	containerWindowType = {
 		name = "REL_POL_tab"
-		position = { x = 0 y = 0 }	
+		position = { x = 0 y = 0 }
 		show_position = { x = 0%% y = 100 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
@@ -2444,81 +5371,368 @@ guiTypes = {
 			name = "legislation_menu_open_text"
 			position = { x = 75 y = 15 }
 			font = "hoi_24header"
-			text = "Religous Policies"
+			text = "Religous Policies (150-600 PP)"
 			maxWidth = 300
 			maxHeight = 20
 			fixedsize = no
 			format = centre
 			Orientation = "UPPER_LEFT"
 		}
-		buttonType = {
-			name = "policy_rel_pol_level_0"
+		containerWindowType = {
+			name = "REL_POL_level_0_tab"
 			position = { x = 19 y = 50 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_rel_pol_temp_0"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "REL_POL_0_desc"
-		}	
-		buttonType = {
-			name = "policy_rel_pol_level_1"
+			buttonType = {
+				name = "policy_REL_POL_level_0"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "REL_POL_0_desc"
+				pdx_tooltip_delayed = "REL_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_REL_POL_level_0_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "REL_POL_0_desc"
+				pdx_tooltip_delayed = "REL_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_REL_POL_level_0_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "REL_POL_0_desc"
+				pdx_tooltip_delayed = "REL_POL_0_desc_full"
+			}
+			iconType = {
+				name = "policy_REL_POL_level_0_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_600"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "REL_POL_0_desc"
+				pdx_tooltip_delayed = "REL_POL_0_desc_full"
+			}
+			#iconType = {
+			#	name ="REL_POL_temp_0_icon"
+			#	spriteType = "GFX_REL_POL_temp_0_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_REL_POL_level_0_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_religion_temp_0"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "REL_POL_level_0a_tab"
 			position = { x = 19 y = 75 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_rel_pol_temp_1"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "REL_POL_1_desc"
-		}	
-		buttonType = {
-			name = "policy_rel_pol_level_2"
-			position = { x = 19 y = 135 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_rel_pol_temp_2"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "REL_POL_2_desc"
-		}	
-		buttonType = {
-			name = "policy_rel_pol_level_3"
-			position = { x = 19 y = 160 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_rel_pol_temp_3"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "REL_POL_3_desc"
-		}	
-		buttonType = {
-			name = "policy_rel_pol_level_4"
-			position = { x = 19 y = 185 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
-			Orientation = "UPPER_LEFT"
-			text = "policy_rel_pol_temp_4"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "REL_POL_4_desc"
-		}	
-		buttonType = {
-			name = "policy_rel_pol_level_5"
+			buttonType = {
+				name = "policy_REL_POL_level_0a"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "REL_POL_0a_desc"
+				pdx_tooltip_delayed = "REL_POL_0a_desc_full"
+			}
+			iconType = {
+				name = "policy_REL_POL_level_0a_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "REL_POL_0a_desc"
+				pdx_tooltip_delayed = "REL_POL_0a_desc_full"
+			}
+			iconType = {
+				name = "policy_REL_POL_level_0a_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "REL_POL_0a_desc"
+				pdx_tooltip_delayed = "REL_POL_0a_desc_full"
+			}
+			iconType = {
+				name = "policy_REL_POL_level_0a_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_600"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "REL_POL_0a_desc"
+				pdx_tooltip_delayed = "REL_POL_0a_desc_full"
+			}
+			#iconType = {
+			#	name ="REL_POL_temp_0a_icon"
+			#	spriteType = "GFX_REL_POL_temp_0a_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_REL_POL_level_0a_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_religion_temp_0a"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "REL_POL_level_1_tab"
 			position = { x = 19 y = 100 }
-			spriteType = "GFX_large_button_ic"
-			buttonFont = "Main_16_black"
+			buttonType = {
+				name = "policy_REL_POL_level_1"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "REL_POL_1_desc"
+				pdx_tooltip_delayed = "REL_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_REL_POL_level_1_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "REL_POL_1_desc"
+				pdx_tooltip_delayed = "REL_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_REL_POL_level_1_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "REL_POL_1_desc"
+				pdx_tooltip_delayed = "REL_POL_1_desc_full"
+			}
+			iconType = {
+				name = "policy_REL_POL_level_1_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_300"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "REL_POL_1_desc"
+				pdx_tooltip_delayed = "REL_POL_1_desc_full"
+			}
+			#iconType = {
+			#	name ="REL_POL_temp_1_icon"
+			#	spriteType = "GFX_REL_POL_temp_1_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_REL_POL_level_1_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_religion_temp_1"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "REL_POL_level_2_tab"
+			position = { x = 19 y = 135 }
+			buttonType = {
+				name = "policy_REL_POL_level_2"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "REL_POL_2_desc"
+				pdx_tooltip_delayed = "REL_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_REL_POL_level_2_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "REL_POL_2_desc"
+				pdx_tooltip_delayed = "REL_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_REL_POL_level_2_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "REL_POL_2_desc"
+				pdx_tooltip_delayed = "REL_POL_2_desc_full"
+			}
+			iconType = {
+				name = "policy_REL_POL_level_2_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "REL_POL_2_desc"
+				pdx_tooltip_delayed = "REL_POL_2_desc_full"
+			}
+			#iconType = {
+			#	name ="REL_POL_temp_2_icon"
+			#	spriteType = "GFX_REL_POL_temp_2_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_REL_POL_level_2_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_religion_temp_2"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "REL_POL_level_3_tab"
+			position = { x = 19 y = 160 }
+			buttonType = {
+				name = "policy_REL_POL_level_3"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "REL_POL_3_desc"
+				pdx_tooltip_delayed = "REL_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_REL_POL_level_3_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "REL_POL_3_desc"
+				pdx_tooltip_delayed = "REL_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_REL_POL_level_3_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "REL_POL_3_desc"
+				pdx_tooltip_delayed = "REL_POL_3_desc_full"
+			}
+			iconType = {
+				name = "policy_REL_POL_level_3_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "REL_POL_3_desc"
+				pdx_tooltip_delayed = "REL_POL_3_desc_full"
+			}
+			#iconType = {
+			#	name ="REL_POL_temp_3_icon"
+			#	spriteType = "GFX_REL_POL_temp_3_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_REL_POL_level_3_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_religion_temp_3"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "REL_POL_level_3a_tab"
+			position = { x = 19 y = 185 }
+			buttonType = {
+				name = "policy_REL_POL_level_3a"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_policy_button_ic_available"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_open
+				clicksound = click_default
+				pdx_tooltip = "REL_POL_3a_desc"
+				pdx_tooltip_delayed = "REL_POL_3a_desc_full"
+			}
+			iconType = {
+				name = "policy_REL_POL_level_3a_unavailable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unavailable"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "REL_POL_3a_desc"
+				pdx_tooltip_delayed = "REL_POL_3a_desc_full"
+			}
+			iconType = {
+				name = "policy_REL_POL_level_3a_completed" 
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_completed"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "REL_POL_3a_desc"
+				pdx_tooltip_delayed = "REL_POL_3a_desc_full"
+			}
+			iconType = {
+				name = "policy_REL_POL_level_3a_unaffordable"
+				position = {x=0 y=0}
+				spriteType = "GFX_policy_button_ic_unaffordable_150"
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "REL_POL_3a_desc"
+				pdx_tooltip_delayed = "REL_POL_3a_desc_full"
+			}
+			#iconType = {
+			#	name ="REL_POL_temp_3a_icon"
+			#	spriteType = "GFX_REL_POL_temp_3a_icon"
+			#	position = {x=-9 y=0}
+			#}
+			instantTextboxType = {
+				name = "policy_REL_POL_level_3a_text"
+				position = {x=-9 y=7}
+				font = "Main_16_black"
+				text = "policy_religion_temp_3a"
+				maxWidth = 180
+				maxHeight = 23
+				format = center
+				allwaystransparent = yes
+			}
+		}
+		buttonType = {
+			name = "policy_REL_POL_regression_reaction_icon"
+			position = {x=49 y=15}
+			spriteType = "GFX_regression_reaction_death_icon"
 			Orientation = "UPPER_LEFT"
-			text = "policy_rel_pol_temp_5"
-			clicksound = click_open
-			clicksound = click_default
-			pdx_tooltip = "REL_POL_5_desc"
-		}	
+			pdx_tooltip = "REL_POL_regression_reaction_desc"
+		}
+		buttonType = {
+			name = "policy_REL_POL_regression_reaction_atheist_icon"
+			position = {x=49 y=15}
+			spriteType = "GFX_regression_reaction_death_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "REL_POL_regression_reaction_atheist_desc"
+		}
+		buttonType = {
+			name = "policy_REL_POL_regression_reaction_minor_icon"
+			position = {x=49 y=15}
+			spriteType = "GFX_regression_reaction_riot_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "REL_POL_regression_reaction_minor_desc"
+		}
+		buttonType = {
+			name = "policy_REL_POL_regression_reaction_moderate_icon"
+			position = {x=49 y=15}
+			spriteType = "GFX_regression_reaction_riot_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "REL_POL_regression_reaction_moderate_desc"
+		}
+		iconType = {
+			name = "policy_REL_POL_cooldown_icon"
+			position = {x=19 y=15}
+			spriteType = "GFX_cooldown_icon"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "cooldown_desc"
+		}
 		instantTextBoxType = {
-			name = "rel_pol_level_6"
+			name = "REL_POL_label"
 			position = { x = 50 y = 215 }
 			font = "hoi_24header"
 			text = [REL_POLICY]
@@ -2538,7 +5752,7 @@ guiTypes = {
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		iconType = { 
 			name = "pic7"  
 			spriteType = "GFX_menu_shadow" 
@@ -2546,12 +5760,12 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			scale = 10
 			alwaystransparent = yes
-		} 			
+		}		
 	}
 	#Added Shadow
 	containerWindowType = {
 		name = "income_info_tab"
-		position = { x = 0 y = 0 }	
+		position = { x = 0 y = 0 }
 		show_position = { x = 50%% y = 100 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
@@ -2579,7 +5793,7 @@ guiTypes = {
 			name = "policy_corrupton_level_id"
 			position = { x = 15 y = 45 }
 			font = "hoi_24header"
-			text = "Industrial Income: [?IND_DISPLAY|2]M"
+			text = "Industrial Income: [?IND_DISPLAY|G2]B"
 			maxWidth = 400
 			maxHeight = 20
 			fixedsize = no
@@ -2591,63 +5805,63 @@ guiTypes = {
 			#spriteType = "GFX_menu_shadow" 
 			position = { x = 15 y = 45 }
 			Orientation = "UPPER_LEFT"
-		} 	
+		}
 		instantTextBoxType = {
 			name = "policy_inc_cr_level_desc"
 			position = { x = 15 y = 80 }
 			font = "hoi_24header"
-			text = "Agriculture Income: [?FARM_DISPLAY|2]M"
+			text = "Agriculture Income: [?FARM_DISPLAY|G2]B"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		iconType = { 
 			name = "pic6"  
 			#spriteType = "GFX_menu_shadow" 
 			position = { x = 15 y = 80 }
 			Orientation = "UPPER_LEFT"
-		} 	
+		}
 		instantTextBoxType = {
 			name = "policy_pol_r_level_desc"
 			position = { x = 15 y = 115 }
 			font = "hoi_24header"
-			text = "Refinery Income: [?refinery_total|2]M"
+			text = "Refinery Income: [?refinery_total|G2]B"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		iconType = { 
 			name = "pic5"  
 			#spriteType = "GFX_menu_shadow" 
 			position = { x = 15 y = 115 }
 			Orientation = "UPPER_LEFT"
-		} 	
+		}
 		instantTextBoxType = {
 			name = "policy_stab_leel_desc"
 			position = { x = 15 y = 150 }
 			font = "hoi_24header"
-			text = "Office Park Income: [?OP_Display|2]M"
+			text = "Office Park Income: [?OP_Display|G2]B"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		iconType = { 
 			name = "pic4"  
 			#spriteType = "GFX_menu_shadow" 
 			position = { x = 15 y = 150 }
 			Orientation = "UPPER_LEFT"
-		} 	
+		}
 		instantTextBoxType = {
 			name = "policy_enc_lvel_desc"
 			position = { x = 15 y = 185 }
 			font = "hoi_24header"
-			text = "Dockyard Income: [?DOCK_TOTAL|2]M"
+			text = "Dockyard Income: [?DOCK_TOTAL|G2]B"
 
 			maxWidth = 350
 			maxHeight = 20
@@ -2660,18 +5874,18 @@ guiTypes = {
 			#spriteType = "GFX_menu_shadow" 
 			position = { x = 15 y = 185 }
 			Orientation = "UPPER_LEFT"
-		} 	
+		}
 		instantTextBoxType = {
 			name = "policy_ec_lvel_desc"
 			position = { x = 15 y = 220 }
 			font = "hoi_24header"
-			text = "Resource Export Income: [?resource_income|2]M"
+			text = "Resource Export Income: [?resource_income|G2]B"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}	
+		}
 		iconType = { 
 			name = "pic20"  
 			spriteType = "GFX_menu_shadow" 
@@ -2679,14 +5893,14 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			scale = 10
 			alwaystransparent = yes
-		} 	
+		}
 		
-	}	
+	}
 	
 
 	containerWindowType = {
 		name = "gen_fin_info_tab"
-		position = { x = 0 y = 0 }	
+		position = { x = 0 y = 0 }
 		show_position = { x = 0%% y = 100 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
@@ -2710,14 +5924,11 @@ guiTypes = {
 			format = centre
 			Orientation = "UPPER_LEFT"
 		}
-
-		
-
 		instantTextBoxType = {
 			name = "policy_cpi_level_id"
 			position = { x = 15 y = 45 }
 			font = "hoi_24header"
-			text = "Monthly Balance $[?IncomeCheck|2]M"
+			text = "Monthly Balance: [?IncomeCheck|=+2]B"
 			maxWidth = 400
 			maxHeight = 20
 			fixedsize = no
@@ -2734,13 +5945,13 @@ guiTypes = {
 			name = "polic_cpi_level_desc"
 			position = { x = 15 y = 80 }
 			font = "hoi_24header"
-			text = "Monthly Income: $[?display_income|2]M"
+			text = "Monthly Income: [?display_income|G2]B"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		iconType = { 
 			name = "dynamidtry_tech_bg_icon"  
 			#spriteType = "GFX_menu_shadow" 
@@ -2751,13 +5962,13 @@ guiTypes = {
 			name = "poli_cpi_level_desc"
 			position = { x = 15 y = 115 }
 			font = "hoi_24header"
-			text = "Monthly Corruption Penalty: $[?CorruptLoss|2]M"
+			text = "Monthly Corruption Penalty: [?CorruptLoss|R2]B"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}		
+		}
 		iconType = { 
 			name = "dynamic_ifsdfsdy_tech_bg_icon"  
 			#spriteType = "GFX_menu_shadow" 
@@ -2768,24 +5979,24 @@ guiTypes = {
 			name = "monthly_resource_cost"
 			position = { x = 15 y = 150 }
 			font = "hoi_24header"
-			text = "Monthly Import Costs: $[?resource_cost|2]M"
+			text = "Monthly Import Costs: [?resource_cost|R2]B"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}			
+		}
 		iconType = { 
 			name = "asf_icon"  
 			#spriteType = "GFX_menu_shadow" 
 			position = { x = 15 y = 150 }
 			Orientation = "UPPER_LEFT"
-		} 		
+		}	
 		instantTextBoxType = {
 			name = "picy_cpi_level_desc"
 			position = { x = 15 y = 185 }
 			font = "hoi_24header"
-			text = "Gross Domestic Product: $[?grossdomesticproduct|2]B"   
+			text = "Gross Domestic Product: [?grossdomesticproduct_fake|C2]T"   
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
@@ -2802,13 +6013,13 @@ guiTypes = {
 			name = "picy_cpi3_level_desc"
 			position = { x = 15 y = 220 }
 			font = "hoi_24header"
-			text = "Monthly Tax income: $[?tax_display]M"
+			text = "Monthly Tax income: [?tax_display|G]B"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
 			format = left
 			Orientation = "UPPER_LEFT"
-		}	
+		}
 		iconType = { 
 			name = "pic1"  
 			spriteType = "GFX_menu_shadow" 
@@ -2816,7 +6027,7 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			scale = 10
 			alwaystransparent = yes
-		} 	
-	}	
+		}
+	}
 
-}	
+}

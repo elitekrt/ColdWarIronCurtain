@@ -45,6 +45,11 @@ ability = {
 				attack = 0.05
 				defence = 0.10
 			}
+			fort = {
+				attack = 0.1
+			}
+			fortification_damage = 4
+			fortification_collateral_chance = 4
 		}
 	}
    mustard_gas = {
@@ -147,6 +152,8 @@ ability = {
 				attack = 0.15
 				defence = 0.10
 			}
+			fortification_damage = 4
+			fortification_collateral_chance = 2
 		}
 	}
    agent_orange = {
@@ -221,6 +228,10 @@ ability = {
 			attrition = 0.10
 			heat_attrition_factor = 0.25
 			supply_consumption_factor = 0.50
+			add_temporary_buff_to_units = {
+				str_damage_multiplier = 0.1
+				days = 240
+			}
 		}
 	}
 	nerve_gas1 = {
@@ -247,11 +258,15 @@ ability = {
 		duration = 240
 		
 		unit_modifiers = {
-			offence = 0.175
-			defence = 0.175
+			offence = 0.15
+			defence = 0.15
 			attrition = 0.175
 			heat_attrition_factor = 0.25
 			supply_consumption_factor = 0.50
+			add_temporary_buff_to_units = {
+				str_damage_multiplier = 0.15
+				days = 240
+			}
 		}
 	}
 	nerve_gas2 = {
@@ -278,11 +293,15 @@ ability = {
 		duration = 240
 		
 		unit_modifiers = {
-			offence = 0.25
-			defence = 0.25
+			offence = 0.20
+			defence = 0.20
 			attrition = 0.25
 			heat_attrition_factor = 0.25
 			supply_consumption_factor = 0.50
+			add_temporary_buff_to_units = {
+				str_damage_multiplier = 0.2
+				days = 240
+			}
 		}
 	}
 	nerve_gas3 = {
@@ -309,11 +328,15 @@ ability = {
 		duration = 240
 		
 		unit_modifiers = {
-			offence = 0.325
-			defence = 0.325
+			offence = 0.25
+			defence = 0.25
 			attrition = 0.325
 			heat_attrition_factor = 0.25
 			supply_consumption_factor = 0.50
+			add_temporary_buff_to_units = {
+				str_damage_multiplier = 0.22
+				days = 240
+			}
 		}
 	}
 	nerve_gas4 = {
@@ -340,11 +363,15 @@ ability = {
 		duration = 240
 		
 		unit_modifiers = {
-			offence = 0.40
-			defence = 0.40
+			offence = 0.30
+			defence = 0.30
 			attrition = 0.40
-			heat_attrition_factor = 0.25
+			str_damage_multiplier = 0.3
 			supply_consumption_factor = 0.50
+			add_temporary_buff_to_units = {
+				str_damage_multiplier = 0.3
+				days = 240
+			}
 		}
 	}
 	nerve_gas5 = {
@@ -371,11 +398,15 @@ ability = {
 		duration = 240
 		
 		unit_modifiers = {
-			offence = 0.475
-			defence = 0.475
+			offence = 0.35
+			defence = 0.35
 			attrition = 0.475
 			heat_attrition_factor = 0.25
 			supply_consumption_factor = 0.50
+			add_temporary_buff_to_units = {
+				str_damage_multiplier = 0.35
+				days = 240
+			}
 		}
 	}
 }

@@ -8,11 +8,13 @@ focus_tree = {
 		}
 	}
 	default = no
+	
 	focus = {
 		id = SOV_ECON_Inaugurate_the_Ninth_Five_Year_Plan
-		icon = GFX_Five_Year_Plan
-		cost = 10.00
-		x = 31
+		icon = GFX_SOV_9th_5yp
+		search_filters = {IC_FILTER}
+		cost = 6
+		x = 25
 		y = 15
 		
 		completion_reward = {
@@ -24,8 +26,9 @@ focus_tree = {
 	
 	focus = {
 		id = SOV_ECON_Restrain_the_Military_from_Draining_Highly_Skilled_Personel
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_CIC_rom_geopolitical_independence
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Inaugurate_the_Ninth_Five_Year_Plan
 		}
@@ -39,7 +42,8 @@ focus_tree = {
 	focus = {
 		id = SOV_ECON_Compete_in_International_High_Tech_Competitions
 		icon = GFX_goal_unknown
-		cost = 10.00
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Restrain_the_Military_from_Draining_Highly_Skilled_Personel
 		}
@@ -51,7 +55,8 @@ focus_tree = {
 	focus = {
 		id = SOV_ECON_Prevent_the_Military_from_Rerouting_Modern_Machinery
 		icon = GFX_goal_unknown
-		cost = 10.00
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Compete_in_International_High_Tech_Competitions
 		}
@@ -62,11 +67,20 @@ focus_tree = {
 	
 	focus = {
 		id = SOV_ECON_Increase_Funding_for_Programming_Schools
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_Universities
+		search_filters = {IC_FILTER}
+		cost = 6
 		
 		prerequisite = {
 			focus = SOV_ECON_Prevent_the_Military_from_Rerouting_Modern_Machinery
+		}
+		
+		completion_reward = {			
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 1
+				category = software_tech
+			}
 		}
 		
 		x = 4
@@ -76,7 +90,8 @@ focus_tree = {
 	focus = {
 		id = SOV_ECON_Expand_the_Military_Industrial_Complex
 		icon = GFX_SOV_Army
-		cost = 10.00
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Inaugurate_the_Ninth_Five_Year_Plan
 		}
@@ -90,10 +105,19 @@ focus_tree = {
 	focus = {
 		id = SOV_ECON_Advanced_IT_development
 		icon = GFX_Improved_Electronics
-		cost = 10.00
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Restrain_the_Military_from_Draining_Highly_Skilled_Personel
 			focus = SOV_ECON_Expand_the_Military_Industrial_Complex
+		}
+		
+		completion_reward = {			
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
 		}
 		x = 7
 		y = 17
@@ -102,11 +126,29 @@ focus_tree = {
 	focus = {
 		id = SOV_ECON_Fund_Computer_Producers
 		icon = GFX_goal_generic_computers
-		cost = 10.00
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Expand_the_Military_Industrial_Complex
 			focus = SOV_ECON_Restrain_the_Military_from_Draining_Highly_Skilled_Personel
 		}
+		
+		completion_reward = {			
+			add_tech_bonus = {
+				bonus = 0.7
+				uses = 1
+				category = consumer_electronics_tech
+			}
+		}
+		
+		completion_reward = {			
+			add_tech_bonus = {
+				bonus = 0.7
+				uses = 1
+				category = electronics
+			}
+		}
+		
 		x = 9
 		y = 17
 
@@ -115,13 +157,23 @@ focus_tree = {
 	focus = {
 		id = SOV_ECON_Consequently_Increase_Applied_Research_Funding
 		icon = GFX_Pioneer_Organization
-		cost = 10.00
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Fund_Computer_Producers
 		}
 		prerequisite = {
 			focus = SOV_ECON_Advanced_IT_development
 		}
+		
+		completion_reward = {			
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+		}
+		
 		x = 8
 		y = 18
 
@@ -129,7 +181,8 @@ focus_tree = {
 	focus = {
 		id = SOV_ECON_Steal_Western_Electronics_Blueprints
 		icon = GFX_goal_unknown
-		cost = 10.00
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Expand_the_Military_Industrial_Complex
 		}
@@ -140,8 +193,9 @@ focus_tree = {
 	
 	focus = {
 		id = SOV_ECON_Improve_Radar_Systems
-		icon = GFX_Generic_Radio_Communication
-		cost = 10.00
+		icon = GFX_Anti_Ship_Missles
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Steal_Western_Electronics_Blueprints
 		}
@@ -164,8 +218,9 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_ECON_Advanced_Ballistic_Forces_Buildup
-		icon = GFX_SovietRocketry
-		cost = 10.00
+		icon = GFX_expand_ballistic_missile_funding
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Steal_Western_Electronics_Blueprints
 		}
@@ -183,8 +238,9 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_ECON_Divert_Equipment_and_Personell_to_the_Military
-		icon = GFX_Military_Intervention
-		cost = 10.00
+		icon = GFX_Soviet_SU_9
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Advanced_Ballistic_Forces_Buildup
 		}
@@ -198,7 +254,8 @@ focus_tree = {
 	focus = {
 		id = SOV_ECON_Launch_New_Economic_Reforms
 		icon = GFX_goal_unknown
-		cost = 10.00
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Inaugurate_the_Ninth_Five_Year_Plan
 		}
@@ -210,7 +267,8 @@ focus_tree = {
 	focus = {
 		id = SOV_ECON_Decentralize_the_Reform_Process
 		icon = GFX_goal_unknown
-		cost = 10.00
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Launch_New_Economic_Reforms
 		}
@@ -225,7 +283,8 @@ focus_tree = {
 	focus = {
 		id = SOV_ECON_Transfer_Power_to_Councils
 		icon = GFX_goal_unknown
-		cost = 10.00
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Decentralize_the_Reform_Process
 			focus = SOV_ECON_Use_the_Gossplan_Funds_for_Reform
@@ -239,7 +298,8 @@ focus_tree = {
 	focus = {
 		id = SOV_ECON_Use_the_Gossplan_Funds_for_Reform
 		icon = GFX_goal_unknown
-		cost = 10.00
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Launch_New_Economic_Reforms
 		}
@@ -252,8 +312,9 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_ECON_Compensate_the_CPSU
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_Communist_Get_Rich
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Use_the_Gossplan_Funds_for_Reform
 			focus = SOV_ECON_Decentralize_the_Reform_Process
@@ -270,10 +331,16 @@ focus_tree = {
 	focus = {
 		id = SOV_ECON_Expand_Oil_Production
 		icon = GFX_Oil_Pipelines
-		cost = 10.00
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Inaugurate_the_Ninth_Five_Year_Plan
 		}
+		
+		completion_reward = {			
+			custom_effect_tooltip = SOV_ECON_Expand_Oil_Production_tooltip
+		}
+		
 		x = 28
 		y = 16
 
@@ -281,7 +348,8 @@ focus_tree = {
 	focus = {
 		id = SOV_ECON_Modernize_Electrical_Coal_Plants
 		icon = GFX_2nd_Electric_Program
-		cost = 10.00
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Expand_Oil_Production
 		}
@@ -290,17 +358,18 @@ focus_tree = {
         
 		completion_reward = {			
 			add_tech_bonus = {
-				bonus = 1
+				bonus = 0.7
 				uses = 1
 				category = gas
-				}
 			}
+		}
 	}
 	
 	focus = {
 		id = SOV_ECON_Electrify_the_Remote_Regions
 		icon = GFX_1st_Electric_Program
-		cost = 10.00
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Expand_Oil_Production
 		}
@@ -309,7 +378,7 @@ focus_tree = {
         
 		completion_reward = {			
 			add_tech_bonus = {
-				bonus = 1
+				bonus = 0.7
 				uses = 1
 				category = grid
 				}
@@ -319,7 +388,8 @@ focus_tree = {
 	focus = {
 		id = SOV_ECON_Develop_Liquified_Natural_Gas
 		icon = GFX_SAU_develop_ploesti_oil_fields
-		cost = 10.00
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Modernize_Electrical_Coal_Plants
 		}
@@ -341,24 +411,60 @@ focus_tree = {
 	
 	focus = {
 		id = SOV_ECON_Optimize_Energy_Production
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_Magnets_Electronics
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Develop_Liquified_Natural_Gas
 		}
 		
-		x = 28
+		completion_reward = {			
+			add_tech_bonus = {
+				bonus = 0.6
+				uses = 1
+				category = grid
+				}
+			}
+			
+		x = 30
 		y = 19
 
 	}
 	
 	focus = {
-		id = SOV_ECON_Discourage_Arabian_Oil_Exports_to_the_West
-		icon = GFX_goal_unknown
-		cost = 10.00
+		id = SOV_ECON_Hydrodams
+		icon = GFX_Generic_Hydropower
+		search_filters = {IC_FILTER}
+		cost = 6
+		prerequisite = {
+			focus = SOV_ECON_Develop_Liquified_Natural_Gas
+		}
+		
+		completion_reward = {			
+			custom_effect_tooltip = SOV_ECO_Hydrodams_tooltip
+		}
+		
+		x = 26
+		y = 19
+
+	}
+	
+	focus = {
+		id = SOV_ECON_9th_Nuclear_plants
+		icon = GFX_Fund_Reactors
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Optimize_Energy_Production
 		}
+		prerequisite = {
+			focus = SOV_ECON_Hydrodams
+		}
+		
+		completion_reward = {			
+			custom_effect_tooltip = SOV_ECO_9th_Nuclear_plants_tooltip
+		}
+		
 		x = 28
 		y = 20
 
@@ -366,7 +472,8 @@ focus_tree = {
 	focus = {
 		id = SOV_ECON_Emphasize_Consumer_Goods_Production
 		icon = GFX_CommunistProductionFocus
-		cost = 10.00
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Inaugurate_the_Ninth_Five_Year_Plan
 		}
@@ -382,7 +489,8 @@ focus_tree = {
 	focus = {
 		id = SOV_ECON_Build_Broadcasting_Stations
 		icon = GFX_Generic_Radio_Broadcast
-		cost = 10.00
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Emphasize_Consumer_Goods_Production
 		}
@@ -397,8 +505,9 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_ECON_Increase_Cultural_and_Sports_Infrastructure
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_Soviet_Athelticism
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Emphasize_Consumer_Goods_Production
 		}
@@ -413,14 +522,23 @@ focus_tree = {
 	
 	focus = {
 		id = SOV_ECON_Pro_Natalist_Policies
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_encourage_higher_birthrates
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Build_Broadcasting_Stations
 		}
 		prerequisite = {
 			focus = SOV_ECON_Increase_Cultural_and_Sports_Infrastructure
 		}
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = soviet_natalism
+				days = 1825
+			}
+		}
+		
 		x = 36
 		y = 19
 
@@ -428,7 +546,8 @@ focus_tree = {
 	focus = {
 		id = SOV_ECON_Agricultural_Machinery_Investments
 		icon = GFX_Agricultural_Mech
-		cost = 10.00
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Inaugurate_the_Ninth_Five_Year_Plan
 		}
@@ -436,19 +555,19 @@ focus_tree = {
 		y = 16
 		
 		completion_reward = {
-			add_tech_bonus = {
-				name = agri_tech_bonus
-				bonus = 0.75
-				uses = 1
-				category = agri_tech
+			add_timed_idea = {
+				idea = sov_agr_mach
+				days = 720
 			}
+			custom_effect_tooltip = SOV_ECON_Agricultural_Machinery_Investments_tooltip
 		}
 
 	}
 	focus = {
 		id = SOV_ECON_Increase_Meat_Production
-		icon = GFX_ContinueCollectivizingPastoralEconomies
-		cost = 10.00
+		icon = GFX_livestock_taxes
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Agricultural_Machinery_Investments
 		}
@@ -461,8 +580,9 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_ECON_Expand_Fertilizer_Use_and_Research
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_fertilizer
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Increase_Meat_Production
 		}
@@ -471,7 +591,7 @@ focus_tree = {
 		
         completion_reward = {			
 			add_tech_bonus = {
-				bonus = 1
+				bonus = 0.6
 				uses = 1
 				category = agriculture
 				}
@@ -479,8 +599,9 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_ECON_Decrease_Fodder_Culture
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_AUS_agriculture
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Agricultural_Machinery_Investments
 		}
@@ -493,12 +614,22 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_ECON_Harvest_Storage_Improvements
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_Agrarian_Collectivization
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Decrease_Fodder_Culture
 			focus = SOV_ECON_Increase_Meat_Production
 		}
+		
+		completion_reward = {			
+			add_tech_bonus = {
+				bonus = 0.4
+				uses = 1
+				category = agriculture
+				}
+			}
+			
 		x = 44
 		y = 18
 
@@ -506,7 +637,8 @@ focus_tree = {
 	focus = {
 		id = SOV_ECON_Eradicate_the_Last_Bottlenecks
 		icon = GFX_Generic_Ripping_Papers
-		cost = 10.00
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Decrease_Fodder_Culture
 		}
@@ -517,7 +649,8 @@ focus_tree = {
 	focus = {
 		id = SOV_ECON_Speed_Up_the_Mechanization_Process
 		icon = GFX_Agricultural_Modernization
-		cost = 10.00
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Harvest_Storage_Improvements
 		}
@@ -540,8 +673,9 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_ECON_Socialist_Comfort
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_industrialize_slovakia
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Speed_Up_the_Mechanization_Process
 		}
@@ -564,7 +698,8 @@ focus_tree = {
 	focus = {
 		id = SOV_ECON_Establish_Company_Associations
 		icon = GFX_goal_unknown
-		cost = 10.00
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Compensate_the_CPSU
 		}
@@ -577,8 +712,9 @@ focus_tree = {
 	}
 	focus = {
 		id = SOV_ECON_Defend_Against_Industrial_Espionage
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_kgb
+		search_filters = {IC_FILTER}
+		cost = 6
 		prerequisite = {
 			focus = SOV_ECON_Consequently_Increase_Applied_Research_Funding
 		}
@@ -592,4 +728,5 @@ focus_tree = {
 		y = 20
 
 	}
+	
 }

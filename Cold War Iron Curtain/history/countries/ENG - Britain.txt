@@ -41,7 +41,7 @@ if = {
 		subkiller_0 = 1
 		subkiller_1 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ta_fcs_0 = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
@@ -51,9 +51,9 @@ if = {
 		ship_armament_heavy_0 = 1
 		
 		ww_capitals = 1
-		capital_hull_0 = 1
+		battle_hull_medium_0 = 1
 		ww_carriers = 1
-		capital_hull_0 = 1
+		battle_hull_medium_0 = 1
 		carrier_hull_0 = 1
 		
 		ww_submarines = 1
@@ -62,9 +62,9 @@ if = {
 		sub_hull_small_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
+		screen_hull_heavy_0 = 1
 		screen_hull_medium_0 = 1
-		screen_hull_small_0 = 1
-		screen_hull_large_0 = 1
+		battle_hull_light_0 = 1
 	}
 }
 set_technology = {
@@ -81,13 +81,13 @@ set_technology = {
 	hardware_I = 1
 	radio = 1
 	radar_0 = 1
-sp_artillery_1 = 1	
-sp_rocket1 = 1
-mechanized_heavy_infantry = 1
-sp_artillery_1 = 1
-mechanized_infantry = 1
-main_battle_tanks = 1
-light_sp_artillery_1 = 1
+	sp_artillery_1 = 1
+	sp_rocket1 = 1
+	mechanized_heavy_infantry = 1
+	sp_artillery_1 = 1
+	mechanized_infantry = 1
+	main_battle_tanks = 1
+	light_sp_artillery_1 = 1
 	
 	advanced_rocket_engines = 1
 	liquid_propelled_rocket = 1
@@ -295,12 +295,12 @@ if = {
 		target = JOR
 		autonomous_state = autonomy_protectorate
 		freedom_level = 0.1
-	}	
+	}
 	set_autonomy = {
 		target = OMA
 		autonomous_state = autonomy_protectorate
 		freedom_level = 0.1
-	}	
+	}
 	set_autonomy = {
 		target = PAL
 		autonomous_state = autonomy_protectorate
@@ -554,7 +554,7 @@ add_ai_strategy = {
 }
 
 1946.1.1 = {
-	set_autonomy = { target = SWK autonomy_state = autonomy_free }	
+	set_autonomy = { target = SWK autonomy_state = autonomy_free }
 }
 
 1947.1.1 = {
@@ -631,12 +631,12 @@ add_ai_strategy = {
 }
 
 1949.1.1 = {
-	set_autonomy = { target = JOR autonomy_state = autonomy_free }	
-	set_autonomy = { target = PAL autonomy_state = autonomy_free }	
-	set_autonomy = { target = WGR autonomy_state = autonomy_free }	
-	set_autonomy = { target = NFL autonomy_state = autonomy_free }	
-	set_autonomy = { target = SKK autonomy_state = autonomy_free }	
-	set_autonomy = { target = NZL autonomy_state = autonomy_free }	
+	set_autonomy = { target = JOR autonomy_state = autonomy_free }
+	set_autonomy = { target = PAL autonomy_state = autonomy_free }
+	set_autonomy = { target = WGR autonomy_state = autonomy_free }
+	set_autonomy = { target = NFL autonomy_state = autonomy_free }
+	set_autonomy = { target = SKK autonomy_state = autonomy_free }
+	set_autonomy = { target = NZL autonomy_state = autonomy_free }
 	if = {
 		limit = {
 			has_dlc = "Together for Victory"
@@ -822,17 +822,17 @@ add_ai_strategy = {
 }
 1951.1.1 = {
 	 
-	set_autonomy = { target = RAJ autonomy_state = autonomy_free }		
+	set_autonomy = { target = RAJ autonomy_state = autonomy_free }
 }
 
 1956.1.1 = {
-	set_autonomy = { target = PAK autonomy_state = autonomy_free }	
+	set_autonomy = { target = PAK autonomy_state = autonomy_free }
 	set_autonomy = { target = SUD autonomy_state = autonomy_free }
 }
 
 1957.1.1 = {
-	set_autonomy = { target = MAL autonomy_state = autonomy_free }	
-	set_autonomy = { target = GHA autonomy_state = autonomy_free }	
+	set_autonomy = { target = MAL autonomy_state = autonomy_free }
+	set_autonomy = { target = GHA autonomy_state = autonomy_free }
 }
 
 1960.10.1 = {
@@ -857,8 +857,8 @@ add_ai_strategy = {
 1961.1.1 = {
 	set_autonomy = { target = SAF autonomy_state = autonomy_free } 
 	set_autonomy = { target = SIE autonomy_state = autonomy_free }
-	set_autonomy = { target = KUW autonomy_state = autonomy_free }	
-	set_autonomy = { target = TZN autonomy_state = autonomy_free }	
+	set_autonomy = { target = KUW autonomy_state = autonomy_free }
+	set_autonomy = { target = TZN autonomy_state = autonomy_free }
 }
 
 1962.1.1 = {
@@ -881,19 +881,19 @@ add_ai_strategy = {
 }
 
 1965.11.1 = {
-	set_autonomy = { target = ZIM autonomy_state = autonomy_free }		
+	set_autonomy = { target = ZIM autonomy_state = autonomy_free }
 }
 
 1966.1.1 = {
-	set_autonomy = { target = BOT autonomy_state = autonomy_free }	
+	set_autonomy = { target = BOT autonomy_state = autonomy_free }
 }
 
 1967.1.1 = {
-	set_autonomy = { target = DRY autonomy_state = autonomy_free }	
+	set_autonomy = { target = DRY autonomy_state = autonomy_free }
 }
 
 1968.1.1 = {
-	set_autonomy = { target = SWA autonomy_state = autonomy_free }	
+	set_autonomy = { target = SWA autonomy_state = autonomy_free }
 }
 
 1970.1.1 = {
@@ -903,23 +903,23 @@ add_ai_strategy = {
 1971.1.1 = {
 	set_autonomy = { target = QAT autonomy_state = autonomy_free }
 	set_autonomy = { target = BHR autonomy_state = autonomy_free }
-	set_autonomy = { target = UAE autonomy_state = autonomy_free }		
+	set_autonomy = { target = UAE autonomy_state = autonomy_free }
 }
 
 1972.1.1 = {
-	set_autonomy = { target = SRL autonomy_state = autonomy_free }	
+	set_autonomy = { target = SRL autonomy_state = autonomy_free }
 }
 
 1963.1.1 = {
-	set_autonomy = { target = KEN autonomy_state = autonomy_free }	
+	set_autonomy = { target = KEN autonomy_state = autonomy_free }
 }
 
 1978.1.1 = {
-	set_autonomy = { target = SOL autonomy_state = autonomy_free }	
+	set_autonomy = { target = SOL autonomy_state = autonomy_free }
 }
 
 1982.1.1 = {
-	set_autonomy = { target = CAN autonomy_state = autonomy_free }	
+	set_autonomy = { target = CAN autonomy_state = autonomy_free }
 }
 
 1984.1.1 = {  
@@ -978,10 +978,8 @@ oob = "ENG_1960"
 		atomic_research = 1
 		atomic_reactor_0 = 1
 		atomic_reactor_naval_0 = 1
-		atomic_weapon_armament_0
-		atomic_weapons = 1
-		
 		atomic_weapons_armament_0 = 1
+		atomic_weapons = 1
 		
 	
 		rocket_engines = 1
@@ -1075,40 +1073,6 @@ oob = "ENG_1960"
 		transport4 = 1
 		transport5 = 1
 
-		## Navy ##
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		## Armor ## 
 		iw_armored_vehicles = 1
@@ -1127,9 +1091,6 @@ oob = "ENG_1960"
 		main_battle_tanks_2 = 1
 		main_battle_tanks_3 = 1
 		main_battle_tanks_4 = 1
-		
-		
-		
 		
 		
 		super_heavy_tanks_1 = 1
@@ -1996,14 +1957,14 @@ if = {
 	### Variants ###
 	create_equipment_variant = {
         name = "O-class"
-        type = ww_screen_hull_medium
+        type = screen_hull_heavy_ww
         parent_version = 0
         modules = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
             fixed_ship_battery_slot = ship_armament_medium_ww
-            fixed_maritime_slot = ww_sonar 
-            fixed_maritime_slot_2 = ww_detection 
-            fixed_ship_engine_slot = ww_screen_engine
+            fixed_maritime_slot = sonar_ww 
+            fixed_maritime_slot_2 = detection_ww 
+            fixed_ship_engine_slot = screen_engine_ww
             fixed_ship_torpedo_slot = torpedo_ww
             mid_1_custom_slot = ship_subkiller_0
             rear_1_custom_slot = ship_armament_light_ww
@@ -2015,20 +1976,20 @@ if = {
 		parent_version = 0
 		modules = {
 			fixed_sub_torpedo_slot = torpedo_ww
-			fixed_sub_engine_slot = ww_sub_engine
-			fixed_maritime_slot = ww_sonar 
+			fixed_sub_engine_slot = sub_engine_ww
+			fixed_maritime_slot = sonar_ww 
 			mid_1_custom_slot = torpedo_ww
 		}
 	}
 	create_equipment_variant = {
         name = "Flower-class"
-        type = ww_screen_hull_small
+        type = screen_hull_medium_ww
         parent_version = 0
         modules = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
             fixed_ship_battery_slot = ship_armament_light_ww
-            fixed_maritime_slot = ww_sonar 
-            fixed_ship_engine_slot = ww_screen_engine
+            fixed_maritime_slot = sonar_ww 
+            fixed_ship_engine_slot = screen_engine_ww
             fixed_ship_torpedo_slot = torpedo_ww
             mid_1_custom_slot = ship_subkiller_0
             rear_1_custom_slot = ship_armament_light_ww
@@ -2040,9 +2001,9 @@ if = {
         parent_version = 0
         modules = {
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_sonar
-			fixed_maritime_slot_2 = ww_detection
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = sonar_ww
+			fixed_maritime_slot_2 = detection_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_countermeasures_slot = countermeasures_0
 			mid_1_custom_slot = carrier_deck_light_ww
 			rear_1_custom_slot = carrier_deck_light_ww
@@ -2055,30 +2016,30 @@ if = {
         parent_version = 0
         modules = {
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_sonar
-			fixed_maritime_slot_2 = ww_detection
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = sonar_ww
+			fixed_maritime_slot_2 = detection_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_countermeasures_slot = countermeasures_0
 			mid_1_custom_slot = carrier_deck_light_ww
 			rear_1_custom_slot = carrier_deck_light_ww
 
         }
-    }	
+    }
 	create_equipment_variant = {	#Light
         name = "Unicorn-Class"
         type = carrier_hull_ww
         parent_version = 0
         modules = {
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_sonar
-			fixed_maritime_slot_2 = ww_detection
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = sonar_ww
+			fixed_maritime_slot_2 = detection_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_countermeasures_slot = countermeasures_0
 			mid_1_custom_slot = carrier_deck_light_ww
 			rear_1_custom_slot = carrier_deck_light_ww
 
         }
-    }	
+    }
 	create_equipment_variant = {
 		name = "Illustrious-Class" # Carrier
 		type = carrier_hull_ww
@@ -2086,9 +2047,9 @@ if = {
 		parent_version = 0
 		modules = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			mid_1_custom_slot = carrier_deck_heavy_ww
 			rear_1_custom_slot = carrier_deck_light_ww
 		}
@@ -2100,23 +2061,23 @@ if = {
 		parent_version = 0
 		modules = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			mid_1_custom_slot = carrier_deck_heavy_ww
 			rear_1_custom_slot = carrier_deck_light_ww
 		}
-	}	
+	}
 	create_equipment_variant = {
 		name = "Queen Elizabeth-Class" # Battleship (Firepower)
-		type = ww_capital_hull_large
+		type = battle_hull_heavy_ww
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_heavy_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_medium_ww
 			mid_1_custom_slot = ship_AA_gun_1
@@ -2127,15 +2088,15 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "Revenge-Class" # Battleship (Firepower)
-		type = ww_capital_hull_large
+		type = battle_hull_heavy_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_heavy_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_medium_ww
 			mid_1_custom_slot = ship_AA_gun_1
@@ -2146,15 +2107,15 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "Nelson-Class" # Battleship (Firepower)
-		type = ww_capital_hull_large
+		type = battle_hull_heavy_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_heavy_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_medium_ww
 			mid_1_custom_slot = ship_AA_gun_1
@@ -2165,15 +2126,15 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "King George V-Class" # Battleship (Firepower)
-		type = ww_capital_hull_large
+		type = battle_hull_heavy_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_heavy_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_medium_ww
 			mid_1_custom_slot = ship_AA_gun_1
@@ -2181,18 +2142,18 @@ if = {
 			mid_3_custom_slot = ship_armament_medium_ww
 			rear_1_custom_slot = ship_armament_medium_ww
 		}
-	}	
+	}
 	create_equipment_variant = {
 		name = "Renown-Class" # Battlecruiser (Firepower)
-		type = ww_capital_hull
+		type = battle_hull_medium_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_light_ww
 			mid_1_custom_slot = ship_AA_gun_1
@@ -2202,15 +2163,15 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "Hawkins-Class" # Battlecruiser (Firepower)
-		type = ww_capital_hull
+		type = battle_hull_medium_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_light_ww
 			mid_1_custom_slot = ship_AA_gun_1
@@ -2220,15 +2181,15 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "Kent-Class" # Battlecruiser (Firepower)
-		type = ww_capital_hull
+		type = battle_hull_medium_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_light_ww
 			mid_1_custom_slot = ship_AA_gun_1
@@ -2238,15 +2199,15 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "London-Class" # Battlecruiser (Firepower)
-		type = ww_capital_hull
+		type = battle_hull_medium_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_light_ww
 			mid_1_custom_slot = ship_AA_gun_1
@@ -2260,9 +2221,9 @@ if = {
         parent_version = 0
         modules = {
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_sonar
-			fixed_maritime_slot_2 = ww_detection
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = sonar_ww
+			fixed_maritime_slot_2 = detection_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_countermeasures_slot = countermeasures_0
 			mid_1_custom_slot = carrier_deck_light_ww
 			rear_1_custom_slot = carrier_deck_light_ww
@@ -2271,15 +2232,15 @@ if = {
     }
 	create_equipment_variant = {
 		name = "Ceres-Class" # Cruiser (Antiair/Firepower)
-		type = ww_screen_hull_large
+		type = battle_hull_light_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_light_ww
 			mid_1_custom_slot = ship_AA_gun_1
@@ -2288,15 +2249,15 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "Carlisle-Class" # Cruiser (Antiair/Firepower)
-		type = ww_screen_hull_large
+		type = battle_hull_light_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_light_ww
 			mid_1_custom_slot = ship_AA_gun_1
@@ -2305,15 +2266,15 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "Danae-Class" # Cruiser (Antiair/Firepower)
-		type = ww_screen_hull_large
+		type = battle_hull_light_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_light_ww
 			mid_1_custom_slot = ship_AA_gun_1
@@ -2322,15 +2283,15 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "Emerald-Class" # Cruiser (Antiair/Firepower)
-		type = ww_screen_hull_large
+		type = battle_hull_light_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_light_ww
 			mid_1_custom_slot = ship_AA_gun_1
@@ -2339,15 +2300,15 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "Leander-Class" # Cruiser (Antiair/Firepower)
-		type = ww_screen_hull_large
+		type = battle_hull_light_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_light_ww
 			mid_1_custom_slot = ship_AA_gun_1
@@ -2356,15 +2317,15 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "Arethusa-Class" # Cruiser (Antiair/Firepower)
-		type = ww_screen_hull_large
+		type = battle_hull_light_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_light_ww
 			mid_1_custom_slot = ship_AA_gun_1
@@ -2374,15 +2335,15 @@ if = {
 	
 	create_equipment_variant = {
 		name = "Town-Class" # Cruiser (Antiair/Firepower)
-		type = ww_screen_hull_large
+		type = battle_hull_light_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_light_ww
 			mid_1_custom_slot = ship_AA_gun_1
@@ -2392,15 +2353,15 @@ if = {
 	
 	create_equipment_variant = {
 		name = "Dido-Class" # Cruiser (Antiair/Firepower)
-		type = ww_screen_hull_large
+		type = battle_hull_light_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_light_ww
 			mid_1_custom_slot = ship_AA_gun_1
@@ -2410,15 +2371,15 @@ if = {
 	
 	create_equipment_variant = {
 		name = "Crown-Colony-Class" # Cruiser (Antiair/Firepower)
-		type = ww_screen_hull_large
+		type = battle_hull_light_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_light_ww
 			mid_1_custom_slot = ship_AA_gun_1
@@ -2428,15 +2389,15 @@ if = {
 	
 	create_equipment_variant = {
 		name = "Minotaur-Class" # Cruiser (Antiair/Firepower)
-		type = ww_screen_hull_large
+		type = battle_hull_light_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_light_ww
 			mid_1_custom_slot = ship_AA_gun_1
@@ -2445,15 +2406,15 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "R-Class" # Destroyer (Antisub)
-		type = ww_screen_hull_medium
+		type = screen_hull_heavy_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			mid_1_custom_slot = torpedo_ww
 			rear_1_custom_slot = ship_subkiller_0
@@ -2461,15 +2422,15 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "S-Class" # Destroyer (Antisub)
-		type = ww_screen_hull_medium
+		type = screen_hull_heavy_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			mid_1_custom_slot = torpedo_ww
 			rear_1_custom_slot = ship_subkiller_0
@@ -2477,15 +2438,15 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "V/W-Class" # Destroyer (Antisub)
-		type = ww_screen_hull_medium
+		type = screen_hull_heavy_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			mid_1_custom_slot = torpedo_ww
 			rear_1_custom_slot = ship_subkiller_0
@@ -2493,15 +2454,15 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "A-Class" # Destroyer (Antisub)
-		type = ww_screen_hull_medium
+		type = screen_hull_heavy_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			mid_1_custom_slot = torpedo_ww
 			rear_1_custom_slot = ship_subkiller_0
@@ -2509,15 +2470,15 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "B-Class" # Destroyer (Antisub)
-		type = ww_screen_hull_medium
+		type = screen_hull_heavy_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			mid_1_custom_slot = torpedo_ww
 			rear_1_custom_slot = ship_subkiller_0
@@ -2525,15 +2486,15 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "E/F-Class" # Destroyer (Antisub)
-		type = ww_screen_hull_medium
+		type = screen_hull_heavy_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			mid_1_custom_slot = torpedo_ww
 			rear_1_custom_slot = ship_subkiller_0
@@ -2541,15 +2502,15 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "Hunt-Class" # Destroyer (Antisub)
-		type = ww_screen_hull_medium
+		type = screen_hull_heavy_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			mid_1_custom_slot = torpedo_ww
 			rear_1_custom_slot = ship_subkiller_0
@@ -2557,15 +2518,15 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "M-Class" # Destroyer (Antisub)
-		type = ww_screen_hull_medium
+		type = screen_hull_heavy_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			mid_1_custom_slot = torpedo_ww
 			rear_1_custom_slot = ship_subkiller_0
@@ -2573,15 +2534,15 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "S/T-Class" # Destroyer (Antisub)
-		type = ww_screen_hull_medium
+		type = screen_hull_heavy_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			mid_1_custom_slot = torpedo_ww
 			rear_1_custom_slot = ship_subkiller_0
@@ -2589,7 +2550,7 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "U/V-Class" # Destroyer (Antisub)
-		type = screen_hull_medium_0
+		type = screen_hull_heavy_0
 
 		parent_version = 0
 		modules = {
@@ -2597,7 +2558,7 @@ if = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
 			fixed_maritime_slot = maritime_ew_ss_0
 			fixed_maritime_slot_2 = maritime_sonar_0
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = ship_torpedo_small_0
 			front_2_custom_slot = countermeasures_0
 			mid_1_custom_slot = ship_torpedo_small_0
@@ -2606,7 +2567,7 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "W/Z-Class" # Destroyer (Antisub)
-		type = screen_hull_medium_0
+		type = screen_hull_heavy_0
 
 		parent_version = 0
 		modules = {
@@ -2614,7 +2575,7 @@ if = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
 			fixed_maritime_slot = maritime_ew_ss_0
 			fixed_maritime_slot_2 = maritime_sonar_0
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = ship_torpedo_small_0
 			front_2_custom_slot = countermeasures_0
 			mid_1_custom_slot = ship_torpedo_small_0
@@ -2623,7 +2584,7 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "C-Class" # Destroyer (Antisub)
-		type = screen_hull_medium_0
+		type = screen_hull_heavy_0
 
 		parent_version = 0
 		modules = {
@@ -2631,7 +2592,7 @@ if = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
 			fixed_maritime_slot = maritime_ew_ss_0
 			fixed_maritime_slot_2 = maritime_sonar_0
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = ship_torpedo_small_0
 			front_2_custom_slot = countermeasures_0
 			mid_1_custom_slot = ship_torpedo_small_0
@@ -2640,7 +2601,7 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "Battle-Class" # Destroyer (Antisub)
-		type = screen_hull_medium_0
+		type = screen_hull_heavy_0
 
 		parent_version = 0
 		modules = {
@@ -2648,7 +2609,7 @@ if = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
 			fixed_maritime_slot = maritime_ew_ss_0
 			fixed_maritime_slot_2 = maritime_sonar_0
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = ship_torpedo_small_0
 			front_2_custom_slot = countermeasures_0
 			mid_1_custom_slot = ship_torpedo_small_0
@@ -2657,7 +2618,7 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "Weapon-Class" # Destroyer (Antisub)
-		type = screen_hull_medium_0
+		type = screen_hull_heavy_0
 
 		parent_version = 0
 		modules = {
@@ -2665,7 +2626,7 @@ if = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
 			fixed_maritime_slot = maritime_ew_ss_0
 			fixed_maritime_slot_2 = maritime_sonar_0
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = ship_torpedo_small_0
 			front_2_custom_slot = countermeasures_0
 			mid_1_custom_slot = ship_torpedo_small_0
@@ -2679,8 +2640,8 @@ if = {
 		parent_version = 0
 		modules = {
             fixed_sub_torpedo_slot = sub_torpedo_ww
-			fixed_maritime_slot = ww_sonar
-			fixed_sub_engine_slot = ww_sub_engine
+			fixed_maritime_slot = sonar_ww
+			fixed_sub_engine_slot = sub_engine_ww
 			mid_1_custom_slot = sub_torpedo_ww
 		}
 	}
@@ -2691,8 +2652,8 @@ if = {
 		parent_version = 0
 		modules = {
             fixed_sub_torpedo_slot = sub_torpedo_ww
-			fixed_maritime_slot = ww_sonar
-			fixed_sub_engine_slot = ww_sub_engine
+			fixed_maritime_slot = sonar_ww
+			fixed_sub_engine_slot = sub_engine_ww
 			mid_1_custom_slot = sub_torpedo_ww
 		}
 	}
@@ -2703,8 +2664,8 @@ if = {
 		parent_version = 0
 		modules = {
             fixed_sub_torpedo_slot = sub_torpedo_ww
-			fixed_maritime_slot = ww_sonar
-			fixed_sub_engine_slot = ww_sub_engine
+			fixed_maritime_slot = sonar_ww
+			fixed_sub_engine_slot = sub_engine_ww
 			mid_1_custom_slot = sub_torpedo_ww
 		}
 	}
@@ -2715,8 +2676,8 @@ if = {
 		parent_version = 0
 		modules = {
             fixed_sub_torpedo_slot = sub_torpedo_ww
-			fixed_maritime_slot = ww_sonar
-			fixed_sub_engine_slot = ww_sub_engine
+			fixed_maritime_slot = sonar_ww
+			fixed_sub_engine_slot = sub_engine_ww
 			mid_1_custom_slot = sub_torpedo_ww
 		}
 	}
@@ -2728,35 +2689,50 @@ if = {
 		modules = {
             fixed_sub_torpedo_slot = sub_torpedo_small_0
 			fixed_maritime_slot = maritime_ew_ss_0
-			fixed_sub_engine_slot = ww_sub_engine
+			fixed_sub_engine_slot = sub_engine_ww
 			mid_1_custom_slot = sub_torpedo_small_0
 		}
 	}
 	create_equipment_variant = {
 		name = "Loch-Class" # Frigate (Patrol)
-		type = ww_screen_hull_small
+		type = screen_hull_medium_ww
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
             fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_ship_engine_slot = ww_screen_engine_small
+			fixed_maritime_slot = detection_ww
+			fixed_ship_engine_slot = screen_engine_light_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			mid_1_custom_slot = torpedo_ww
 			rear_1_custom_slot = ship_armament_light_ww
 		}
 	}
 	create_equipment_variant = {
+		name = "River-Class" # Frigate (Patrol/Antisub)
+		type = screen_hull_medium_ww
+
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_armament_medium_ww
+            fixed_ship_anti_air_slot = ship_AA_gun_1
+			fixed_maritime_slot = detection_ww
+			fixed_ship_engine_slot = screen_engine_light_ww
+			fixed_ship_torpedo_slot = torpedo_ww
+			mid_1_custom_slot = ship_subkiller_0
+			rear_1_custom_slot = ship_armament_light_ww
+		}
+	}
+	create_equipment_variant = {
 		name = "Bay-Class" # Frigate (Patrol)
-		type = screen_hull_small_0
+		type = screen_hull_medium_0
 
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_0
             fixed_ship_anti_air_slot = ship_AA_gun_1
 			fixed_maritime_slot = maritime_ew_ss_0
-			fixed_ship_engine_slot = ww_screen_engine_small
+			fixed_ship_engine_slot = screen_engine_light_ww
 			fixed_ship_torpedo_slot = ship_torpedo_small_0
 			front_2_custom_slot = countermeasures_0
 			mid_1_custom_slot = ship_torpedo_small_0

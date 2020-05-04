@@ -24,7 +24,7 @@ if = {
 		subkiller_0 = 1
 		subkiller_1 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ta_fcs_0 = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
@@ -34,9 +34,9 @@ if = {
 		ship_armament_heavy_0 = 1
 		
 		ww_capitals = 1
-		capital_hull_0 = 1
+		battle_hull_medium_0 = 1
 		ww_carriers = 1
-		capital_hull_0 = 1
+		battle_hull_medium_0 = 1
 		carrier_hull_0 = 1
 		
 		ww_submarines = 1
@@ -45,9 +45,9 @@ if = {
 		sub_hull_small_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
+		screen_hull_heavy_0 = 1
 		screen_hull_medium_0 = 1
-		screen_hull_small_0 = 1
-		screen_hull_large_0 = 1
+		battle_hull_light_0 = 1
 	}
 }
 
@@ -186,7 +186,7 @@ create_country_leader = {
 		name = "Hugh Shearer"
 		picture = "Hugh_Shearer.dds"
 		ideology = conservatism
-	}	
+	}
 }
 
 
@@ -195,7 +195,7 @@ create_country_leader = {
 		name = "Michael Manley"
 		picture = "Michael_Manley.dds"
 		ideology = social_democrat
-	}	
+	}
 }
 
 1972.1.1 = {
@@ -238,7 +238,7 @@ create_country_leader = {
 		name = "Edward Seaga"
 		picture = "Edward_Seaga.dds"
 		ideology = conservatism
-	}	
+	}
 }
 
 1992.1.1 = {
@@ -246,7 +246,7 @@ create_country_leader = {
 		name = "P. J. Patterson"
 		picture = "P_J_Patterson.dds"
 		ideology = social_democrat
-	}	
+	}
 }
 
 2005.1.1 = {
@@ -254,7 +254,7 @@ create_country_leader = {
 		name = "Bruce Golding"
 		picture = "Bruce_Golding.dds"
 		ideology = conservatism
-	}	
+	}
 }
 
 2006.1.1 = {
@@ -262,7 +262,7 @@ create_country_leader = {
 		name = "Portia Simpson-Miller"
 		picture = "Portia_Simpson_Miller.dds"
 		ideology = social_democrat
-	}	
+	}
 }
 
 2007.1.1 = {

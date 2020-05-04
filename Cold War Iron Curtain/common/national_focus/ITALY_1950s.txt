@@ -86,7 +86,7 @@ focus_tree = {
 				}
 				create_equipment_variant = {
 					name = "Classe Capitani Romani"
-					type = screen_hull_medium_0
+					type = screen_hull_heavy_0
 					parent_version = 0
 					modules = {
 						fixed_ship_anti_air_slot = ship_AA_gun_1
@@ -1267,7 +1267,7 @@ focus_tree = {
 				name = agri_tech_bonus
 				bonus = 1.75
 				uses = 1
-				category = agri_tech
+				category = agriculture
 			}
         }
 	}
@@ -2517,7 +2517,7 @@ focus_tree = {
 		offset = {	x = 0 y = 8 trigger = { tag = ITA } }
 		completion_reward = {
 			add_political_power = 50
-			add_popularity= {
+			add_popularity = {
 				ideology = socialist
 				popularity = 0.02
 			}
@@ -3432,8 +3432,11 @@ focus_tree = {
 
 		x = 32
 		y = 24
-		available = {
-			always = no
+		completion_reward = {
+			add_timed_idea = {
+				idea = economic_growth
+				days = 750
+			}
 		}
 	}
 	focus = {
@@ -3457,7 +3460,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_Create_the_corte_costituzionale
-		icon = GFX_StolenPapers
+		icon = GFX_focus_renounce_the_treaty_of_triannon
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3466,8 +3469,8 @@ focus_tree = {
 
 		x = 30
 		y = 24
-		available = {
-			always = no
+		completion_reward = {
+			add_political_power = 100
 		}
 	}
 	focus = {
@@ -3487,8 +3490,14 @@ focus_tree = {
 
 		x = 30
 		y = 25
-		available = {
-			always = no
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = office_park
+					level = 2
+					instant_build = yes
+				}	
 		}
 	}
 	focus = {

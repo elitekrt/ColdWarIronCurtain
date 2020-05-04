@@ -1,13 +1,13 @@
-﻿capital = 286
+﻿capital = 296
 
-oob = "NLF_1949"
+oob = "NLF_1960"
 
 set_research_slots = 3
 
 if = {
 	limit = { has_dlc = "Man the Guns"}
 	set_technology = {
-		ww_detection = 1
+		detection_ww = 1
 		ww_armaments = 1
 
 		ww_screens = 1

@@ -24,7 +24,7 @@ if = {
 		subkiller_0 = 1
 		subkiller_1 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ta_fcs_0 = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
@@ -34,9 +34,9 @@ if = {
 		ship_armament_heavy_0 = 1
 		
 		ww_capitals = 1
-		capital_hull_0 = 1
+		battle_hull_medium_0 = 1
 		ww_carriers = 1
-		capital_hull_0 = 1
+		battle_hull_medium_0 = 1
 		carrier_hull_0 = 1
 		
 		ww_submarines = 1
@@ -45,9 +45,9 @@ if = {
 		sub_hull_small_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
+		screen_hull_heavy_0 = 1
 		screen_hull_medium_0 = 1
-		screen_hull_small_0 = 1
-		screen_hull_large_0 = 1
+		battle_hull_light_0 = 1
 	}
 }
 
@@ -104,8 +104,10 @@ set_technology = {
 	sp_artillery_1 = 1
 	light_artillery_1 = 1
 	light_sp_artillery_1 = 1
+	heavy_artillery_1 = 1
 	
 	direct_fire_gun_1 = 1
+	tank_destroyer_1 = 1
 	
 ##Land Doc##
 	
@@ -263,6 +265,12 @@ create_country_leader = {
 	picture = "Jawaharlal_Nehru.dds"
 	desc = "POLITICS_DESC_NEHRU"
 	ideology = social_democrat
+	traits = {
+		big_tent_party_leader
+		non_aligned_promotor
+		father_of_indian_independence
+		first_indian_prime_minister
+	}
  }
  create_country_leader = {
 	name = "Chakravarti Rajagopalachari"
@@ -409,7 +417,7 @@ create_country_leader = {
 	annex_country = {
 	target = SKK
 	transfer_troops = yes
-}	
+}
 }
 
 1980.1.1 = {

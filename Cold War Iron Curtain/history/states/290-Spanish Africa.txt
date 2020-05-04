@@ -7,7 +7,7 @@ state = {
 
 	history = {
 		owner = SPR
-		set_state_flag = lushdesert
+		set_state_flag = desertlush
 		set_state_flag = basic
 		set_state_flag = small
 		set_state_flag = undeveloped
@@ -29,9 +29,6 @@ state = {
 		}
 		1956.1.1 = {
 			owner = MOR
-		}
-		1958.1.1 = {
-			owner = RIF
 		}
 		victory_points = {
 			10113 5

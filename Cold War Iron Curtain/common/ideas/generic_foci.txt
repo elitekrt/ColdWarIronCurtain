@@ -167,6 +167,17 @@ ideas = {
 				political_power_gain = 0.01
 				stability_factor = 0.02
 			}
+		}	
+		european_immigrants = {
+			picture = generic_manpower_bonus
+			removal_cost = -1
+			allowed = { always = no }
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.5
+				political_power_gain = -0.2
+				stability_factor = -0.1
+			}
 		}		
 		military_investments = {
 			removal_cost = -1
@@ -446,31 +457,31 @@ ideas = {
 			removal_cost = -1
 			allowed = { always = no }
 			equipment_bonus = {
-				capital_hull_large = {
+				battle_hull_heavy = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
 			}
 			equipment_bonus = {
-				capital_hull = {
+				battle_hull_medium = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
 			}
 			equipment_bonus = {
-				screen_hull_large = {
-					build_cost_ic = -0.05
-					instant = yes
-				}
-			}
-			equipment_bonus = {
-				screen_hull_small = {
+				battle_hull_light = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
 			}
 			equipment_bonus = {
 				screen_hull_medium = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			equipment_bonus = {
+				screen_hull_heavy = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
@@ -520,31 +531,31 @@ ideas = {
 				research_bonus = { capital_tech = 0.1 }
 				research_bonus = { screen_tech = 0.1 }
 			equipment_bonus = {
-				capital_hull_large = {
+				battle_hull_heavy = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
 			}
 			equipment_bonus = {
-				capital_hull = {
+				battle_hull_medium = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
 			}
 			equipment_bonus = {
-				screen_hull_large = {
-					build_cost_ic = -0.05
-					instant = yes
-				}
-			}
-			equipment_bonus = {
-				screen_hull_small = {
+				battle_hull_light = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
 			}
 			equipment_bonus = {
 				screen_hull_medium = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			equipment_bonus = {
+				screen_hull_heavy = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
@@ -1450,7 +1461,7 @@ ideas = {
 			removal_cost = -1
 			allowed = { always = no }
 			equipment_bonus = {
-				screen_hull_small = {
+				screen_hull_medium = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
@@ -1460,7 +1471,7 @@ ideas = {
 			removal_cost = -1
 			allowed = { always = no }
 			equipment_bonus = {
-				screen_hull_small = {
+				screen_hull_medium = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
@@ -1473,7 +1484,7 @@ ideas = {
 			removal_cost = -1
 			allowed = { always = no }
 			equipment_bonus = {
-				screen_hull_small = {
+				screen_hull_medium = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
@@ -1486,7 +1497,7 @@ ideas = {
 			removal_cost = -1
 			allowed = { always = no }
 			equipment_bonus = {
-				screen_hull_small = {
+				screen_hull_medium = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
@@ -1500,7 +1511,7 @@ ideas = {
 			removal_cost = -1
 			allowed = { always = no }
 			equipment_bonus = {
-				screen_hull_small = {
+				screen_hull_medium = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
@@ -1526,6 +1537,14 @@ ideas = {
 			modifier = {
 				production_speed_naval_base_factor = 0.1
 				production_speed_coastal_bunker_factor = 0.25
+			}
+		}
+		coastal_defense_initiative = {
+			removal_cost = -1
+			allowed = { always = no }
+			modifier = {
+				production_speed_naval_base_factor = 0.15
+				production_speed_coastal_bunker_factor = 0.15
 			}
 		}
 		national_militia = {
@@ -1619,7 +1638,7 @@ ideas = {
 				engineer = {
 					entrenchment = 2
 				}
-				armored_engineers = {
+				engineer_armored = {
 					entrenchment = 2
 				}
 			}
@@ -1641,7 +1660,7 @@ ideas = {
 				engineer = {
 					entrenchment = 2
 				}
-				armored_engineers = {
+				engineer_armored = {
 					entrenchment = 2
 				}
 			}
@@ -1663,14 +1682,14 @@ ideas = {
 				engineer = {
 					entrenchment = 2
 				}
-				armored_engineers = {
+				engineer_armored = {
 					entrenchment = 2
 				}
 				field_hospital = {
 					casualty_trickleback = 0.05
 					experience_loss_factor = -0.05
 				}
-				helicopter_medical_support = {
+				field_hospital_helicopter = {
 					casualty_trickleback = 0.05
 					experience_loss_factor = -0.05
 				}
@@ -1698,14 +1717,14 @@ ideas = {
 				engineer = {
 					entrenchment = 2
 				}
-				armored_engineers = {
+				engineer_armored = {
 					entrenchment = 2
 				}
 				field_hospital = {
 					casualty_trickleback = 0.05
 					experience_loss_factor = -0.05
 				}
-				helicopter_medical_support = {
+				field_hospital_helicopter = {
 					casualty_trickleback = 0.05
 					experience_loss_factor = -0.05
 				}
@@ -1912,6 +1931,23 @@ ideas = {
 				#+20% agri industrial income
 				production_speed_agri_industrial_complex_factor = 0.10
 				production_speed_water_infrastructure_factor = 0.20
+			}
+		}
+		
+		european_free_trade_association = {
+			removal_cost = -1
+			allowed = { always = no }
+			research_bonus = { logistics = 0.15 }
+			research_bonus = { infrastructure = 0.15 }
+			modifier = {
+				#+25% trade income
+				min_export = 0.05
+				production_speed_state_infrastructure_factor = 0.10
+				research_speed_factor = -0.03
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+				civilian_intel_to_others = 20.0
+				navy_intel_to_others = 20.0
 			}
 		}
 	}

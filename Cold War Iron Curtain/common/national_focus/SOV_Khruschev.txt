@@ -53,7 +53,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Consolidate_Khruschevs_Hold_on_Power
-		icon = GFX_goal_unknown
+		icon = GFX_fist
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = 47
@@ -64,7 +64,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_The_Soviet_Armed_Forces
-		icon = GFX_goal_unknown
+		icon = GFX_Emblem_of_the_USSR
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = 76
@@ -98,7 +98,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_The_Khrushchevka
-		icon = GFX_goal_unknown
+		icon = GFX_focus_public_housing
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -114,7 +114,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Expand_City_Limits
-		icon = GFX_goal_unknown
+		icon = GFX_ImproveUrbanConditions
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -128,7 +128,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Every_Man_a_Room_Every_Family_a_House
-		icon = GFX_goal_unknown
+		icon = GFX_Housing_For_All
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -152,7 +152,7 @@ focus_tree = {
 }
 	focus = {
 		id = KHRUSCHEV_Khrushchevite_Architecture
-		icon = GFX_goal_unknown
+		icon = GFX_focus_stalinist_architecture
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -173,7 +173,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Guarentee_Right_to_Work
-		icon = GFX_goal_unknown
+		icon = GFX_WorkersSupport
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -201,7 +201,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Reduce_Legal_Working_Hours
-		icon = GFX_goal_unknown
+		icon = GFX_Communist_Reduce_Working_Hours
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -213,11 +213,12 @@ focus_tree = {
 			add_to_variable = { cg_spend_base_fouralt = 0.02 }
 			add_to_variable = { cg_spend_base_ten = 0.05 }
 			add_to_variable = { cg_spend_base_four = 0.02 }
+			custom_effect_tooltip = cg_spend_increase_TT
 		}
 	}
 	focus = {
 		id = KHRUSCHEV_Increase_Kosomols_Funding
-		icon = GFX_goal_unknown
+		icon = GFX_Pioneer_Organization
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -231,7 +232,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Develop_the_Soviet_Spirit
-		icon = GFX_goal_unknown
+		icon = GFX_Develop_the_Soviet_Spirit
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -280,7 +281,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Ready_for_Labour_and_Defence_of_the_USSR
-		icon = GFX_goal_unknown
+		icon = GFX_Workers_Councils
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -337,7 +338,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Lower_Retirement_Limit
-		icon = GFX_goal_unknown
+		icon = GFX_SOV_Lower_the_Retirement_Age
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -349,6 +350,7 @@ focus_tree = {
 			add_to_variable = { cg_spend_base_ten = 0.05 }
 			add_to_variable = { cg_spend_base_four = 0.02 }
 			add_to_variable = { cg_spend_base_fouralt = 0.02 }
+			custom_effect_tooltip = cg_spend_increase_TT
 		}
 	}
 	focus = {
@@ -420,7 +422,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Expand_Immunization_Campaign
-		icon = GFX_goal_unknown
+		icon = GFX_immunization_campaign
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -467,7 +469,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Extend_Healthcare_Coverage_to_General_Practitioners
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Healthcare
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -578,7 +580,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Extend_Compulsory_School_Attendence
-		icon = GFX_goal_unknown
+		icon = GFX_Literacy_Campaign
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -596,7 +598,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Sharpen_Medical_Education_Programs
-		icon = GFX_goal_unknown
+		icon = GFX_universities
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -646,7 +648,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Raise_Produciton_Quotas
-		icon = GFX_goal_unknown
+		icon = GFX_Raise_Production_Quotas
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -860,7 +862,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Complete_the_Sixth_Five_Year_Plan
-		icon = GFX_goal_unknown
+		icon = GFX_Five_Year_Plan
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -900,7 +902,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Declare_Lysenkos_Theories_Quackery
-		icon = GFX_goal_unknown
+		icon = GFX_purge_lysenko
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -943,7 +945,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_The_Virgin_Lands_Campaign
-		icon = GFX_goal_unknown
+		icon = GFX_virgin_lands_campaign 
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1001,7 +1003,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Reassert_Agricultural_Prices
-		icon = GFX_goal_unknown
+		icon = GFX_agricultural_price_controls
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1015,7 +1017,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Inaugurate_the_Seventh_Five_Year_Plan
-		icon = GFX_goal_unknown
+		icon = GFX_Five_Year_Plan
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1154,7 +1156,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Modernize_Gas_Facilities
-		icon = GFX_goal_unknown
+		icon = GFX_modern_gas_facilities
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1343,7 +1345,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Restore_The_Prominence_of_the_Communist_Party
-		icon = GFX_CommunistLoyalty
+		icon = GFX_SOV_CPSU
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1353,11 +1355,12 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			add_to_variable = { cpsu_strength = 0.05 }
+			custom_effect_tooltip = cpsu_strength_increase_TT
 		}
 	}
 	focus = {
 		id = KHRUSCHEV_Reactivate_the_CPSU_Apparatus
-		icon = GFX_goal_unknown
+		icon = GFX_CommunistLoyalty
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1367,6 +1370,7 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			add_to_variable = { cpsu_strength = 0.05 }
+			custom_effect_tooltip = cpsu_strength_increase_TT
 		}
 	}
 	focus = {
@@ -1386,7 +1390,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Revitilize_Party_Activity
-		icon = GFX_goal_unknown
+		icon = GFX_CommunistPride
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1399,6 +1403,7 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			add_to_variable = { cpsu_strength = 0.05 }
+			custom_effect_tooltip = cpsu_strength_increase_TT
 		}
 	}
 	focus = {
@@ -1413,6 +1418,7 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			add_to_variable = { cpsu_strength = 0.05 }
+			custom_effect_tooltip = cpsu_strength_increase_TT
 		}
 	}
 	focus = {
@@ -1430,6 +1436,7 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			add_to_variable = { cpsu_strength = 0.05 }
+			custom_effect_tooltip = cpsu_strength_increase_TT
 		}
 	}
 	focus = {
@@ -1481,7 +1488,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Clear_Out_the_Gulags
-		icon = GFX_goal_unknown
+		icon = GFX_Close_Exile_Camps
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1491,6 +1498,7 @@ focus_tree = {
 		y = 7
 		completion_reward = {
 			country_event = destalinization.2
+			remove_ideas = Suchyi_voyny
 			hidden_effect = {
 				add_ideas = banditry
 				remove_ideas = black_market3 
@@ -1502,6 +1510,7 @@ focus_tree = {
 			add_to_variable = { gulag_factor_neg = 0.02 }		
 			add_to_variable = { gulag_factor_five = -0.1 }			
 			add_to_variable = { gulag_factor_five_neg = 0.1 }
+			custom_effect_tooltip = gulag_factor_decrease_TT
 		}
 	}
 	focus = {
@@ -1534,7 +1543,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Ensure_Moderate_Support
-		icon = GFX_goal_unknown
+		icon = GFX_Political_Support
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1549,7 +1558,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Establish_a_New_Diplomatic_Stance
-		icon = GFX_goal_unknown
+		icon = GFX_Commie_Treaty
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1563,7 +1572,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Push_for_the_Hydrogen_Bomb
-		icon = GFX_goal_unknown
+		icon = GFX_hydrogen_bomb
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1582,7 +1591,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Establish_the_Strategic_Missle_Forces
-		icon = GFX_goal_unknown
+		icon = GFX_soviet_strategic_missle_forces
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1602,7 +1611,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Heavily_Fund_Ballistic_Programs
-		icon = GFX_goal_unknown
+		icon = GFX_expand_ballistic_missile_funding
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1621,7 +1630,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Create_the_Soviet_Space_Program
-		icon = GFX_goal_unknown
+		icon = GFX_soviet_space_program
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1643,7 +1652,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Build_the_Baikonur_Cosmodrome
-		icon = GFX_goal_unknown
+		icon = GFX_soviet_space_shuttle
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1697,7 +1706,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Fill_the_Missle_Gap
-		icon = GFX_goal_unknown
+		icon = GFX_SovietRocketry
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1733,7 +1742,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Compete_with_American_Scientists
-		icon = GFX_goal_unknown
+		icon = GFX_american_scientific_competition
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1756,7 +1765,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Establish_the_KGB
-		icon = GFX_goal_unknown
+		icon = GFX_kgb
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1771,7 +1780,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Fund_Latin_American_Communist_Movements
-		icon = GFX_goal_unknown
+		icon = GFX_latin_american_communists
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1832,7 +1841,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Help_FARC
-		icon = GFX_goal_unknown
+		icon = GFX_aid_farc
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1853,7 +1862,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Befriend_Castros_Regime
-		icon = GFX_goal_unknown
+		icon = GFX_CUB_fidel_castro
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1879,7 +1888,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Integrate_Cuba_into_the_Eastern_Bloc
-		icon = GFX_Cuba_COMECON
+		icon = GFX_soviet_castro_friendship 
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1895,7 +1904,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Deploy_Ballistic_Forces_to_Cuba
-		icon = GFX_goal_unknown
+		icon = GFX_Cuban_Missle_Crisis 
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1982,7 +1991,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Aid_the_Congolese_Insurgency
-		icon = GFX_goal_unknown
+		icon = GFX_congo_crisis
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2003,7 +2012,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Strengthen_Influence_in_Occidental_French_Africa
-		icon = GFX_goal_unknown
+		icon = GFX_AfricainFlames
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2194,7 +2203,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_The_Soviet_Airforce
-		icon = GFX_goal_unknown
+		icon = GFX_SOV_AF
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2208,7 +2217,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Research_High_Speed_Bombesr
-		icon = GFX_goal_unknown
+		icon = Jet_Engines
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2248,7 +2257,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Invest_in_Traditional_Aircraft
-		icon = GFX_goal_unknown
+		icon = GFX_Travel_Modernization
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2270,7 +2279,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Increase_Aircraft_Production
-		icon = GFX_goal_unknown
+		icon = GFX_Invest_in_Supersonic
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2284,7 +2293,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_The_Tu_114_Propaganda_Campaign
-		icon = GFX_goal_unknown
+		icon = GFX_TU_114_Focus 
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2298,7 +2307,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Indian_Arms_Deals
-		icon = GFX_goal_unknown
+		icon = GFX_indian_arms_deal
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2336,7 +2345,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Adopt_the_MiG_15
-		icon = GFX_Generic_MiG_17
+		icon = GFX_focus_soviet_mig_15 
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2373,7 +2382,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Focus_on_Jet_Interceptors
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_MiG_17 
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2395,7 +2404,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Prioritize_High_Speed_Interceptors
-		icon = GFX_goal_unknown
+		icon = Jet_Engines
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2417,7 +2426,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_The_Soviet_Army
-		icon = GFX_goal_unknown
+		icon = GFX_SOV_Army
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2431,7 +2440,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Adopt_the_AKM
-		icon = GFX_goal_unknown
+		icon = GFX_Soviet_AKM
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2469,7 +2478,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Invest_in_the_T55
-		icon = GFX_FocusImportSovietTanks
+		icon = GFX_T_55
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2565,7 +2574,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Promote_Softer_Leadership_in_the_Eastern_Bloc
-		icon = GFX_goal_unknown
+		icon = GFX_liberalize_the_eastern_bloc
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2588,7 +2597,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Consolidate_Soviet_Supremacy
-		icon = GFX_goal_unknown
+		icon = GFX_European_Communist_Spy
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2626,7 +2635,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Allow_Liberalization_Throughout_the_Bloc
-		icon = GFX_goal_unknown
+		icon = GFX_Press_Liberalization 
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2646,7 +2655,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_The_Soviet_Navy
-		icon = GFX_goal_unknown
+		icon = GFX_SOV_Navy
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2701,7 +2710,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Kotlin_Class_Destroyer
-		icon = GFX_goal_unknown
+		icon = GFX_Skoryy_Destroyers
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2712,10 +2721,10 @@ focus_tree = {
 		completion_reward = {
 			navy_experience = 20
 			add_tech_bonus = {
-				name = screen_hull_medium_bonus
+				name = screen_hull_heavy_bonus
 				bonus = 2
 				uses = 1
-				category = screen_hull_medium
+				category = screen_hull_heavy
 			}		
 		}
 			
@@ -2757,13 +2766,13 @@ focus_tree = {
 				name = grozny_class_bonus
 				bonus = 2
 				uses = 1
-				category = screen_hull_large
+				category = battle_hull_light
 			}		
 		}
 	} 
 	focus = {
 		id = KHRUSCHEV_Refine_COMECON
-		icon = GFX_goal_unknown
+		icon = GFX_Cuba_COMECON
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2782,7 +2791,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Create_Permanent_Sectoral_Commissions
-		icon = GFX_goal_unknown
+		icon = GFX_SP_focus_trade_unions
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2802,7 +2811,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Establish_a_CMEA_Secretariat
-		icon = GFX_goal_unknown
+		icon = GFX_focus_renounce_the_treaty_of_triannon 
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2821,7 +2830,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Boost_the_Polish_Economy
-		icon = GFX_goal_unknown
+		icon = GFX_Economic_Reconstruction_Generic
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2863,7 +2872,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Increase_East_German_Trade
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_positive_trade_relations
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2979,7 +2988,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Develop_Intrabloc_Tourism
-		icon = GFX_Support_Tourism
+		icon = GFX_gambling
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2996,7 +3005,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_The_Berlin_Gamble
-		icon = GFX_goal_unknown
+		icon = GFX_East_German_Soldier
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3010,7 +3019,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Promote_Intergenerational_Cohabitation_and_Solidarity
-		icon = GFX_goal_unknown
+		icon = GFX_Public_Service_Funding
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3023,6 +3032,7 @@ focus_tree = {
 		y = 8
 		completion_reward = {
 			add_to_variable = { cpsu_strength = 0.05 }
+			custom_effect_tooltip = cpsu_strength_increase_TT
 			add_stability = 0.01
 		}
 	}
@@ -3043,11 +3053,12 @@ focus_tree = {
 			add_to_variable = { cg_spend_base_ten = 0.05 }
 			add_to_variable = { cg_spend_base_four = 0.02 }
 			add_to_variable = { cg_spend_base_fouralt = 0.02 }
+			custom_effect_tooltip = cg_spend_increase_TT
 		}
 	}
 	focus = {
 		id = KHRUSCHEV_Control_Renting_and_Heating_Prices
-		icon = GFX_goal_unknown
+		icon = GFX_StateControl
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3062,11 +3073,12 @@ focus_tree = {
 			add_to_variable = { cg_spend_base_ten = 0.05 }
 			add_to_variable = { cg_spend_base_four = 0.02 }
 			add_to_variable = { cg_spend_base_fouralt = 0.02 }
+			custom_effect_tooltip = cg_spend_increase_TT
 		}
 	}
 	focus = {
 		id = KHRUSCHEV_Regionalize_Economic_Decision_Process
-		icon = GFX_goal_unknown
+		icon = GFX_Agri_Collectivization
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3089,7 +3101,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Mobilize_Women_and_Soliders_in_the_Workforce
-		icon = GFX_goal_unknown
+		icon = GFX_send_soldiers_back_to_the_workplace
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3103,7 +3115,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Comfort_for_the_People
-		icon = GFX_goal_unknown
+		icon = GFX_ISR_Focus_Increase_Living_Standards
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3114,12 +3126,13 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { cg_spend_base_ten = 0.1 }
 			add_to_variable = { cg_spend_base_four = 0.04 }
+			custom_effect_tooltip = cg_spend_increase_TT
 			add_to_variable = { cg_spend_base_fouralt = 0.04 }
 		}
 	}
 	focus = {
 		id = KHRUSCHEV_Encourage_Growth_of_the_Automobile_Industry
-		icon = GFX_goal_unknown
+		icon = GFX_focus_auto_industry
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3148,7 +3161,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Enhance_Synthetic_Fiber_Production
-		icon = GFX_goal_unknown
+		icon = GFX_FocusExpandTextileIndustry
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3170,7 +3183,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Expand_Mineral_Fertilizer_Output
-		icon = GFX_goal_unknown
+		icon = GFX_fertilizer
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3189,7 +3202,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_The_Fate_of_the_Economic_Thaw
-		icon = GFX_goal_unknown
+		icon = GFX_Market_Liberalization
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3212,7 +3225,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Modernize_Obsolete_Machine_Tools
-		icon = GFX_goal_unknown
+		icon = GFX_machine_tools
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3250,7 +3263,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Launch_Engineer_Training_Programs
-		icon = GFX_goal_unknown
+		icon = GFX_communist_engineers
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3300,7 +3313,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Rationalized_Seed_Production
-		icon = GFX_goal_unknown
+		icon = GFX_increase_seed_production
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3366,13 +3379,13 @@ focus_tree = {
 				name = agri_tech_bonus
 				bonus = 1.75
 				uses = 1
-				category = agri_tech
+				category = agriculture
 			}
 		}
 	}
 	focus = {
 		id = KHRUSCHEV_Open_Up_New_Fields
-		icon = GFX_goal_unknown
+		icon = GFX_new_fields
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3444,7 +3457,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Establish_Agrarian_Banks
-		icon = GFX_rebrandbanks
+		icon = GFX_agricultural_banks 
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3517,7 +3530,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Decentralize_Agricultural_Management
-		icon = GFX_goal_unknown
+		icon = GFX_decentralized_agricultural_management
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3611,7 +3624,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Erase_Kolkhozy_Long_Term_Debts
-		icon = GFX_goal_unknown
+		icon = GFX_farmer_debt_relief
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3713,7 +3726,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Favor_Polyculture
-		icon = GFX_goal_unknown
+		icon = GFX_Soviet_Agriculture
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3732,11 +3745,12 @@ focus_tree = {
 			add_to_variable = {
 				farmBonus = 0.05
 			}	
+			custom_effect_tooltip = farmBonus_increase_TT
 		}
 	}
 	focus = {
 		id = KHRUSCHEV_Dig_the_Karakum_Canal
-		icon = GFX_Irrigation_Pipes
+		icon = GFX_karakum_canal
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3788,7 +3802,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Preserve_Traditional_Agriculture
-		icon = GFX_goal_unknown
+		icon = GFX_GRE_MP_agriculture
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3803,7 +3817,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Grant_Larger_Autonomy_to_Kolkhozes
-		icon = GFX_goal_unknown
+		icon = GFX_increase_kolkhoz_funding
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3830,6 +3844,7 @@ focus_tree = {
 			add_to_variable = {
 				farmBonus = 0.05
 			}	
+			custom_effect_tooltip = farmBonus_increase_TT
 			
 		}
 	}
@@ -3851,11 +3866,12 @@ focus_tree = {
 			add_to_variable = {
 				farmBonus = 0.05
 			}	
+			custom_effect_tooltip = farmBonus_increase_TT
 		}
 	}
 	focus = {
 		id = KHRUSCHEV_Create_Massive_Agricultural_Complexes
-		icon = GFX_goal_unknown
+		icon = GFX_Irrigation_Pipes
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3898,7 +3914,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Large_Scale_Maize_Production
-		icon = GFX_goal_unknown
+		icon = GFX_Maize_Production
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3943,7 +3959,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Promote_Agrarian_Propaganda
-		icon = GFX_goal_unknown
+		icon = GFX_agrarian_propaganda
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3960,7 +3976,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Expand_Fertilizer_Usa
-		icon = GFX_goal_unknown
+		icon = GFX_Agricultural_Subsidies
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -3976,7 +3992,7 @@ focus_tree = {
 				name = agri_tech_bonus
 				bonus = 1.75
 				uses = 1
-				category = agri_tech
+				category = agriculture
 			}
 		}
 	}
@@ -4040,7 +4056,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Overtax_Remaining_Private_Livestock
-		icon = GFX_goal_unknown
+		icon = GFX_livestock_taxes
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -4052,6 +4068,7 @@ focus_tree = {
 			add_to_variable = {
 				farmBonus = -0.05
 			}
+			custom_effect_tooltip = farmBonus_decrease_TT
 			add_stability = -0.02
 			add_timed_idea = {
 				idea = industrial_growth
@@ -4061,7 +4078,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Forbid_Urban_Meat_Production
-		icon = GFX_goal_unknown
+		icon = GFX_ban_urban_meat_production
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -4089,12 +4106,13 @@ focus_tree = {
 		y = 13
 		completion_reward = {
 			add_to_variable = { cpsu_strength = 0.05 }
+			custom_effect_tooltip = cpsu_strength_increase_TT
 			add_political_power = 50
 		}
 	}
 	focus = {
 		id = KHRUSCHEV_Allow_Small_Private_Flocks
-		icon = GFX_goal_unknown
+		icon = GFX_support_tribal_farmer
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -4114,11 +4132,12 @@ focus_tree = {
 			add_to_variable = {
 				cg_spend_base_fouralt = -0.01
 			}
+			custom_effect_tooltip = cg_spend_decrease_TT
 		}
 	}
 	focus = {
 		id = KHRUSCHEV_Encourage_Private_Vegetable_Gardens
-		icon = GFX_goal_unknown
+		icon = GFX_vegetable_gardens
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -4135,6 +4154,7 @@ focus_tree = {
 			add_to_variable = {
 				cg_spend_base_fouralt = -0.01
 			}
+			custom_effect_tooltip = cg_spend_decrease_TT
 		}
 	}
 	focus = {
@@ -4156,11 +4176,12 @@ focus_tree = {
 			add_to_variable = {
 				cg_spend_base_fouralt = -0.01
 			}
+			custom_effect_tooltip = cg_spend_decrease_TT
 		}
 	}
 	focus = {
 		id = KHRUSCHEV_Regulate_Ailments_Prices
-		icon = GFX_goal_unknown
+		icon = GFX_Paper
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -4177,11 +4198,12 @@ focus_tree = {
 			add_to_variable = {
 				cg_spend_base_fouralt = -0.01
 			}
+			custom_effect_tooltip = cg_spend_decrease_TT
 		}
 	}
 	focus = {
 		id = KHRUSCHEV_Integrate_the_Informal_Economy
-		icon = GFX_goal_unknown
+		icon = GFX_integrate_the_black_market
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -4199,7 +4221,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Allow_Farmers_to_Buy_Their_Own_Material
-		icon = GFX_goal_unknown
+		icon = GFX_rebrandbanks
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -4213,7 +4235,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Abolish_Machine_Tractor_Stations
-		icon = GFX_goal_unknown
+		icon = GFX_ban_tractor_stations
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -4239,6 +4261,7 @@ focus_tree = {
 			add_to_variable = {
 				farmBonus = 0.05
 			}
+			custom_effect_tooltip = farmBonus_increase_TT
 		}
 	}
 	focus = {
@@ -4255,12 +4278,13 @@ focus_tree = {
 			add_to_variable = {
 				farmBonus = 0.025
 			}
+			custom_effect_tooltip = farmBonus_increase_TT
 			add_political_power = 50
 		}
 	}
 	focus = {
 		id = KHRUSCHEV_Favor_Livestock_Multiplication
-		icon = GFX_goal_unknown
+		icon = GFX_ContinueCollectivizingPastoralEconomies
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -4275,12 +4299,13 @@ focus_tree = {
 			add_to_variable = {
 				farmBonus = 0.025
 			}
+			custom_effect_tooltip = farmBonus_increase_TT
 			add_political_power = 50
 		}
 	}
 	focus = {
 		id = KHRUSCHEV_Replace_Hostile_Officials
-		icon = GFX_goal_unknown
+		icon = GFX_Communist_Spy
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -4290,12 +4315,13 @@ focus_tree = {
 		y = 6
 		completion_reward = {
 			add_to_variable = { cpsu_strength = 0.05 }
+			custom_effect_tooltip = cpsu_strength_increase_TT
 			add_political_power = 50
 		}
 	}
 	focus = {
 		id = KHRUSCHEV_Force_Malenkovs_Resignation
-		icon = GFX_goal_unknown
+		icon = GFX_Mongolian_Political_Investigations
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -4309,7 +4335,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_XXth_Congress_of_the_CPSU
-		icon = GFX_goal_unknown
+		icon = GFX_twentieth_congress_of_the_cpsu
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -4332,7 +4358,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Reduce_Criminal_Sentences
-		icon = GFX_goal_unknown
+		icon = GFX_goal_Recall_Prisoners 
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -4345,6 +4371,7 @@ focus_tree = {
 			add_to_variable = { gulag_factor_neg = 0.01 }		
 			add_to_variable = { gulag_factor_five = -0.05 }			
 			add_to_variable = { gulag_factor_five_neg = 0.05 }
+			custom_effect_tooltip = gulag_factor_decrease_TT
 		}
 	}
 	focus = {
@@ -4364,7 +4391,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Reveal_the_Factitious_Doctors_Plot
-		icon = GFX_goal_unknown
+		icon = GFX_microphone
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -4378,7 +4405,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Gain_the_Backing_of_the_Red_Army
-		icon = GFX_goal_unknown
+		icon = GFX_CommunistPride
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -4387,10 +4414,9 @@ focus_tree = {
 		x = 48
 		y = 9
 		completion_reward = {
-		#comecon_member = {
 			add_to_variable = { cpsu_strength = 0.05 }
+			custom_effect_tooltip = cpsu_strength_increase_TT
 			add_war_support = 0.01
-			#}
 		}
 	}
 	focus = {
@@ -4411,11 +4437,12 @@ focus_tree = {
 			add_to_variable = { gulag_factor_neg = 0.01 }		
 			add_to_variable = { gulag_factor_five = -0.05 }			
 			add_to_variable = { gulag_factor_five_neg = 0.05 }
+			custom_effect_tooltip = gulag_factor_decrease_TT
 		}
 	}
 	focus = {
 		id = KHRUSCHEV_Promote_Limited_Cultural_Liberalization
-		icon = GFX_goal_unknown
+		icon = GFX_Communist_Liberalization 
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -4433,7 +4460,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Counter_the_Anti_Party_Group
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Power_Struggle
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -4460,6 +4487,7 @@ focus_tree = {
 		y = 12
 		completion_reward = {
 			add_to_variable = { cpsu_strength = 0.05 }
+			custom_effect_tooltip = cpsu_strength_increase_TT
 			add_political_power = 50
 		}
 	}
@@ -4477,6 +4505,7 @@ focus_tree = {
 			country_event = KhruschevRel.1
 			add_to_variable = { clergy_persecution_factor = 0.05 }
 			add_to_variable = { clergy_persecution_negative = -0.05  }
+			custom_effect_tooltip = clergy_persecution_increase_TT
 		}
 	}
 	focus = {
@@ -4492,6 +4521,7 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { clergy_persecution_factor = 0.05 }
 			add_to_variable = { clergy_persecution_negative = -0.05  }
+			custom_effect_tooltip = clergy_persecution_increase_TT
 		}
 	}
 	focus = {
@@ -4508,6 +4538,7 @@ focus_tree = {
 			country_event = KhruschevRel.2
 			add_to_variable = { clergy_persecution_factor = 0.05 }
 			add_to_variable = { clergy_persecution_negative = -0.05  }
+			custom_effect_tooltip = clergy_persecution_increase_TT
 		}
 	}
 	focus = {
@@ -4523,6 +4554,7 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { clergy_persecution_factor = 0.1 }
 			add_to_variable = { clergy_persecution_negative = -0.1  }
+			custom_effect_tooltip = clergy_persecution_increase_TT
 		}
 	}
 	focus = {
@@ -4543,9 +4575,10 @@ focus_tree = {
 			add_to_variable = { gulag_factor_neg = -0.01 }		
 			add_to_variable = { gulag_factor_five = 0.05 }			
 			add_to_variable = { gulag_factor_five_neg = -0.05 }
-			
+			custom_effect_tooltip = gulag_factor_increase_TT
 			add_to_variable = { clergy_persecution_factor = 0.05 }
 			add_to_variable = { clergy_persecution_negative = -0.05  }
+			custom_effect_tooltip = clergy_persecution_increase_TT
 		}
 	}
 	focus = {
@@ -4562,7 +4595,7 @@ focus_tree = {
 		x = 42
 		y = 15
 		completion_reward = {
-			remove_ideas =  art_and_liberalization
+			remove_ideas = art_and_liberalization
 			add_popularity = {
 				ideology = communism
 				popularity = 0.02
@@ -4650,6 +4683,7 @@ focus_tree = {
 		y = 15
 		completion_reward = {
 			add_to_variable = { cpsu_strength = 0.05 }
+			custom_effect_tooltip = cpsu_strength_increase_TT
 		}
 	}
 	focus = {
@@ -4732,7 +4766,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Depose_Kim_il_Sung
-		icon = GFX_goal_unknown
+		icon = GFX_Purge_Kim_il_Sung
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -4762,7 +4796,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Expand_Indochinese_Guerilla_Operations
-		icon = GFX_goal_unknown
+		icon = GFX_Indochinese_Guerillas
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -4787,7 +4821,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Reach_Out_to_Thai_Communists
-		icon = GFX_goal_unknown
+		icon = GFX_support_thai_communists
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -4836,7 +4870,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Condemn_Hoxha
-		icon = GFX_goal_unknown
+		icon = GFX_condemn_hoxha
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -4862,7 +4896,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Reconcile_with_Tito
-		icon = GFX_goal_unknown
+		icon = GFX_yugoslavian_rappoachment
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -4888,7 +4922,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Cut_Ties_with_Mao
-		icon = GFX_goal_unknown
+		icon = GFX_Sino_Soviet_Split
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -4917,7 +4951,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KHRUSCHEV_Form_the_Warsaw_Pact
-		icon = GFX_goal_unknown
+		icon = GFX_Warsaw_Pact
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {

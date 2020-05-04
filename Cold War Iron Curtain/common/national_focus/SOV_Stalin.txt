@@ -65,7 +65,7 @@ focus_tree = {
 		id = STALIN_Confirm_Stalins_Omnipotence
 		icon = GFX_AppealtoStalin
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		x = 36
 		y = 0
 		completion_reward = {
@@ -76,7 +76,7 @@ focus_tree = {
 		id = STALIN_The_Soviet_Armed_Forces
 		icon = GFX_Emblem_of_the_USSR
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 1.00
 		x = 49
 		y = 0
 		completion_reward = {
@@ -89,7 +89,7 @@ focus_tree = {
 		id = STALIN_Catch_Up_with_Western_Atomic_Research
 		icon = GFX_nuclear_detonation
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Heavy_Industry_Development
 		}
@@ -108,7 +108,7 @@ focus_tree = {
 		id = STALIN_Utilize_German_Rocketry_Knowledge
 		icon = GFX_SovietRocketry
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Catch_Up_with_Western_Atomic_Research
 		}
@@ -128,7 +128,7 @@ focus_tree = {
 		id = STALIN_Prioritize_Electronic_Developments
 		icon = GFX_Improved_Electronics
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 15.00
 		prerequisite = {
 			focus = STALIN_Utilize_German_Rocketry_Knowledge
 		}
@@ -138,19 +138,21 @@ focus_tree = {
 		x = 1
 		y = 6
 		completion_reward = {
+			add_research_slot = 1
 			add_tech_bonus = {
 				name = electronics_bonus
-				bonus = 1
+				bonus = 1.5
 				uses = 2
 				category = electronics
 			}
 		}
+
 	}
 	focus = {
 		id = STALIN_Aid_Ukranian_Reconstruction
 		icon = GFX_aid_ukranian_reconstruction
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Heavy_Industry_Development
 		}
@@ -178,7 +180,7 @@ focus_tree = {
 		id = STALIN_Rebuild_Ukranian_Agriculture
 		icon = GFX_Aid_Ukraine 
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Aid_Ukranian_Reconstruction
 		}
@@ -201,7 +203,7 @@ focus_tree = {
 		id = STALIN_Rebuild_Destroyed_Dams
 		icon = GFX_FocusHydroelectricDams
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Rebuild_Ukranian_Agriculture
 		}
@@ -247,7 +249,7 @@ focus_tree = {
 		id = STALIN_Invest_in_the_Baltics
 		icon = GFX_baltic_ssr_investments
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Heavy_Industry_Development
 		}
@@ -280,7 +282,7 @@ focus_tree = {
 		id = STALIN_Rebuild_Stalingrad
 		icon = GFX_Rebuild_Stalingrad
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Aid_Ukranian_Reconstruction
 		}
@@ -314,7 +316,7 @@ focus_tree = {
 		id = STALIN_Open_New_Metallurgy_Plants
 		icon = GFX_Communist_Steel_Mills
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Rebuild_Ukranian_Agriculture
 		}
@@ -346,7 +348,7 @@ focus_tree = {
 		id = STALIN_Complete_the_Don_Volga_Canal
 		icon = GFX_don_volga
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Open_New_Metallurgy_Plants
 		}
@@ -375,7 +377,7 @@ focus_tree = {
 		id = STALIN_Repair_Mining_Pits
 		icon = GFX_Mining_Pits
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Invest_in_the_Baltics
 		}
@@ -400,7 +402,7 @@ focus_tree = {
 		id = STALIN_Eliminate_Infrastructure_Bottlenecks
 		icon = GFX_FocusBuildRoads
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Rebuild_Stalingrad
 		}
@@ -420,7 +422,7 @@ focus_tree = {
 		id = STALIN_Increase_Cement_Production
 		icon = GFX_Cement
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Repair_Mining_Pits
 		}
@@ -439,7 +441,7 @@ focus_tree = {
 		id = STALIN_Build_New_Railways
 		icon = GFX_FocusBuildRailroads
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Increase_Cement_Production
 		}
@@ -511,7 +513,7 @@ focus_tree = {
 		id = STALIN_Follow_the_Percentage_Agreements
 		icon = GFX_focus_world_peace
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 1.00
 		prerequisite = {
 			focus = STALIN_The_Iron_Curtain_Diplomacy
 		}
@@ -529,7 +531,7 @@ focus_tree = {
 		id = STALIN_Abandon_Turkish_Claims
 		icon = GFX_Commie_Treaty
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 4.00
 		prerequisite = {
 			focus = STALIN_Follow_the_Percentage_Agreements
 		}
@@ -543,7 +545,7 @@ focus_tree = {
 		id = STALIN_Promote_Democratic_Route_to_Communism
 		icon = GFX_focus_red_propaganda
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 4.00
 		prerequisite = {
 			focus = STALIN_Abandon_Turkish_Claims
 		}
@@ -575,7 +577,7 @@ focus_tree = {
 		id = STALIN_Pressure_Yugoslavia
 		icon = GFX_microphone
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 4.00
 		prerequisite = {
 			focus = STALIN_Follow_the_Percentage_Agreements
 		}
@@ -595,7 +597,7 @@ focus_tree = {
 		id = STALIN_Fund_the_PCF_and_PCI
 		icon = GFX_PCF
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 4.00
 		prerequisite = {
 			focus = STALIN_Pressure_Yugoslavia
 		}
@@ -630,15 +632,17 @@ focus_tree = {
 		x = 18
 		y = 4
 		completion_reward = {
-			add_research_slot = 1
+			add_ideas = extra_spies
 			add_political_power = 100
 		}
+		
 	}
 	focus = {
 		id = STALIN_Aid_the_Greek_Loyalists
 		icon = GFX_Guns_for_PDG
 		search_filters = {IC_FILTER}
 		cost = 1.00
+		cancel_if_invalid = yes
 		prerequisite = {
 			focus = STALIN_The_Iron_Curtain_Diplomacy
 		}
@@ -649,8 +653,8 @@ focus_tree = {
 		y = 1
 		available = {
 			country_exists = PDG
+			NOT = { PDG = { is_subject_of = YUG } }
 		}
-		cancel_if_invalid = yes
 		completion_reward = {
 			set_global_flag = PDG_INTERVENTION
 			add_to_faction = PDG
@@ -659,6 +663,7 @@ focus_tree = {
 				add_ideas = ideological_fanaticism_focus
 				add_war_support = 0.15
 				add_manpower = 25000
+				remove_ideas = cold_war_civil_war_ideological_idea
 			}
 		}
 	}
@@ -666,7 +671,7 @@ focus_tree = {
 		id = STALIN_Integrate_Greece_into_the_Eastern_Bloc
 		icon = GFX_PDG_Integration
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Aid_the_Greek_Loyalists
 		}
@@ -692,7 +697,7 @@ focus_tree = {
 		id = STALIN_Maintain_Push_for_Turkish_Regime_Change
 		icon = GFX_Soviet_Turkey
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Integrate_Greece_into_the_Eastern_Bloc
 		}
@@ -708,7 +713,7 @@ focus_tree = {
 		id = STALIN_Redraw_Bosphorous_Borders
 		icon = GFX_focus_generic_provoke_border_clashes
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Integrate_Greece_into_the_Eastern_Bloc
 		}
@@ -765,7 +770,7 @@ focus_tree = {
 		id = STALIN_An_Ultimatum_to_Yugoslavia
 		icon = GFX_Crush_Yugoslavia
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Redraw_Bosphorous_Borders
 		}
@@ -785,7 +790,7 @@ focus_tree = {
 		id = STALIN_Maintain_Berlin_Blockade
 		icon = GFX_BurningGlobe
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 1.00
 		prerequisite = {
 			focus = STALIN_The_Iron_Curtain_Diplomacy
 		}
@@ -804,7 +809,7 @@ focus_tree = {
 		id = STALIN_Cave_to_the_Western_Powers
 		icon = GFX_goal_big_news
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 1.00
 		prerequisite = {
 			focus = STALIN_The_Iron_Curtain_Diplomacy
 		}
@@ -821,7 +826,7 @@ focus_tree = {
 		id = STALIN_Allow_the_Foundation_of_a_German_State_for_Reperations
 		icon = GFX_DDR_Commie
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 1.00
 		prerequisite = {
 			focus = STALIN_Maintain_Berlin_Blockade
 			focus = STALIN_Cave_to_the_Western_Powers
@@ -837,7 +842,7 @@ focus_tree = {
 		id = STALIN_Deepen_COMECON_Collaboration
 		icon = GFX_comecon_goal
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Allow_the_Foundation_of_a_German_State_for_Reperations
 		}
@@ -863,7 +868,7 @@ focus_tree = {
 		id = STALIN_Invest_in_the_Czech_and_Polish_Economy
 		icon = GFX_Cash_and_Carry
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 2.00
 		prerequisite = {
 			focus = STALIN_Deepen_COMECON_Collaboration
 		}
@@ -910,7 +915,7 @@ focus_tree = {
 		id = STALIN_Aid_Balkan_Reconstruction
 		icon = GFX_Money
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 2.00
 		prerequisite = {
 			focus = STALIN_Deepen_COMECON_Collaboration
 		}
@@ -973,7 +978,7 @@ focus_tree = {
 		id = STALIN_Exploit_our_Eastern_Puppets
 		icon = GFX_RootoutFunding
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 1.00
 		prerequisite = {
 			focus = STALIN_Aid_Balkan_Reconstruction
 		}
@@ -992,7 +997,7 @@ focus_tree = {
 		id = STALIN_Increase_Ties_with_Mao_and_Kim_Il_Sung
 		icon = GFX_goal_PRC_deal
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 2.00
 		prerequisite = {
 			focus = STALIN_Exploit_our_Eastern_Puppets
 		}
@@ -1073,7 +1078,7 @@ focus_tree = {
 		id = STALIN_Support_Indochinese_Insurrections
 		icon = GFX_Vietnam_War
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 2.00
 		prerequisite = {
 			focus = STALIN_Exploit_our_Eastern_Puppets
 		}
@@ -1120,17 +1125,17 @@ focus_tree = {
 		x = 28
 		y = 7
 		available = {
-			has_global_flag = korean_war_begun
+			has_global_flag = korean_war
 		}
 		bypass = {
-			has_global_flag = korean_war_begun
+			has_global_flag = korean_war
 		}
 	}
 	focus = {
 		id = STALIN_Send_Military_Advisors
 		icon = GFX_focus_soviet_advisors
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 2.00
 		prerequisite = {
 			focus = STALIN_The_Korean_War
 		}
@@ -1150,7 +1155,7 @@ focus_tree = {
 		id = STALIN_Provide_Surplus_Tanks_and_Planes
 		icon = GFX_FocusImportSovietTanks
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 2.00
 		prerequisite = {
 			focus = STALIN_Send_Military_Advisors
 		}
@@ -1180,7 +1185,7 @@ focus_tree = {
 		id = STALIN_Send_Infantry_Equipment
 		icon = GFX_FocusAK47s
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 2.00
 		prerequisite = {
 			focus = STALIN_Send_Military_Advisors
 		}
@@ -1200,7 +1205,7 @@ focus_tree = {
 		id = STALIN_Establish_the_64th_Fighter_Aviation_Corps
 		icon = GFX_KPA_Sov_Air_Volunteers
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 2.00
 		prerequisite = {
 			focus = STALIN_Send_Military_Advisors
 		}
@@ -1223,7 +1228,7 @@ focus_tree = {
 		id = STALIN_Increase_Korean_Production_Capabilities
 		icon = GFX_goal_BEL_WW2Weapons
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Provide_Surplus_Tanks_and_Planes
 		}
@@ -1260,7 +1265,7 @@ focus_tree = {
 		id = STALIN_Purge_Seditous_Reactionaries
 		icon = GFX_Communist_Spy
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 1.00
 		prerequisite = {
 			focus = STALIN_Confirm_Stalins_Omnipotence
 		}
@@ -1272,13 +1277,15 @@ focus_tree = {
 			add_to_variable = { gulag_factor_five = 0.05 }			
 			add_to_variable = { gulag_factor_five_neg = -0.05 }
 			add_to_variable = { cpsu_strength = -0.05 }
+			custom_effect_tooltip = cpsu_strength_decrease_TT
+			custom_effect_tooltip = gulag_factor_increase_TT
 		}
 	}
 	focus = {
 		id = STALIN_Denounce_Leningrads_Fair_Embezzlement
 		icon = GFX_CommunistLoyalty
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 1.00
 		prerequisite = {
 			focus = STALIN_Purge_Seditous_Reactionaries
 		}
@@ -1292,7 +1299,7 @@ focus_tree = {
 		id = STALIN_Purge_the_Leningrad_Dissenters
 		icon = GFX_European_Communist_Spy
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 1.00
 		prerequisite = {
 			focus = STALIN_Purge_Seditous_Reactionaries
 		}
@@ -1302,13 +1309,14 @@ focus_tree = {
 			add_political_power = 100
 			country_event = Stalin_Purge.1
 			add_to_variable = { cpsu_strength = -0.05 }
+			custom_effect_tooltip = cpsu_strength_decrease_TT
 		}
 	}
 	focus = {
 		id = STALIN_Encourage_Anti_Semetism
 		icon = GFX_focus_com_crush_judaism
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Purge_the_Leningrad_Dissenters
 		}
@@ -1319,6 +1327,7 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			add_ideas = repression
+			custom_effect_tooltip = cpsu_strength_decrease_TT
 			add_to_variable = { cpsu_strength = -0.05 }
 		}
 	}
@@ -1326,7 +1335,7 @@ focus_tree = {
 		id = STALIN_Dismantle_The_Jewish_Anti_Fascist_Committee
 		icon = GFX_Persecute_Jews
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 1.00
 		prerequisite = {
 			focus = STALIN_Encourage_Anti_Semetism
 		}
@@ -1336,13 +1345,14 @@ focus_tree = {
 			add_stability = 0.02
 			country_event = Stalin_Jew.1
 			add_to_variable = { cpsu_strength = -0.05 }
+			custom_effect_tooltip = cpsu_strength_decrease_TT
 		}
 	}
 	focus = {
 		id = STALIN_Secret_Trials_for_Jewish_Intellectuals
 		icon = GFX_purge
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Encourage_Anti_Semetism
 		}
@@ -1351,6 +1361,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = leftwing_deathsquads
 			add_to_variable = { cpsu_strength = -0.05 }
+			custom_effect_tooltip = cpsu_strength_decrease_TT
 		}
 
 	}
@@ -1358,7 +1369,7 @@ focus_tree = {
 		id = STALIN_Arrest_Treasonous_Doctors
 		icon = GFX_police
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 1.00
 		prerequisite = {
 			focus = STALIN_Dismantle_The_Jewish_Anti_Fascist_Committee
 		}
@@ -1372,19 +1383,21 @@ focus_tree = {
 			add_to_variable = { gulag_factor_neg = -0.01 }		
 			add_to_variable = { gulag_factor_five = 0.05 }			
 			add_to_variable = { gulag_factor_five_neg = -0.05 }
+			custom_effect_tooltip = gulag_factor_increase_TT
 		}
 	}
 	focus = {
 		id = STALIN_Force_Berias_Withdrawal
 		icon = GFX_Mongolian_Political_Investigations
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 1.00
 		prerequisite = {
 			focus = STALIN_Encourage_Anti_Semetism
 		}
 		x = 39
 		y = 4
 		completion_reward = {
+            #please recode this into ideas, this were ministers 
 			remove_ideas = Lavrenti_Beria
 			add_ideas = Sergue_Krouglov
 		}
@@ -1393,7 +1406,7 @@ focus_tree = {
 		id = STALIN_Purge_Mingrelians_from_the_Georgian_Party
 		icon = GFX_PurgeKulaks
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 1.00
 		prerequisite = {
 			focus = STALIN_Secret_Trials_for_Jewish_Intellectuals
 		}
@@ -1406,13 +1419,14 @@ focus_tree = {
 			add_political_power = 100
 			country_event = Stalin_Purge.2
 			add_to_variable = { cpsu_strength = -0.05 }
+			custom_effect_tooltip = cpsu_strength_decrease_TT
 		}
 	}
 	focus = {
 		id = STALIN_The_Soviet_Airforce
 		icon = GFX_SOV_AF
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 1.00
 		prerequisite = {
 			focus = STALIN_The_Soviet_Armed_Forces
 		}
@@ -1426,7 +1440,7 @@ focus_tree = {
 		id = STALIN_Expand_MiG_15_Production
 		icon = GFX_focus_soviet_mig_15
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_The_Soviet_Airforce
 		}
@@ -1437,10 +1451,10 @@ focus_tree = {
 		}
 	}	
 	focus = {
-		id = STALIN_Develop_Sakhallin_Airfields
+		id = STALIN_Develop_Sakhalin_Airfields
 		icon = GFX_Sakhailin
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_The_Soviet_Airforce
 		}
@@ -1467,9 +1481,9 @@ focus_tree = {
 		id = STALIN_Develop_the_Tu_16
 		icon = GFX_Tu_16
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 2.00
 		prerequisite = {
-			focus = STALIN_Develop_Sakhallin_Airfields
+			focus = STALIN_Develop_Sakhalin_Airfields
 		}
 		prerequisite = {
 			focus = STALIN_Expand_MiG_15_Production
@@ -1508,7 +1522,7 @@ focus_tree = {
 		id = STALIN_The_Soviet_Army
 		icon = GFX_SOV_Army
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 1.00
 		prerequisite = {
 			focus = STALIN_The_Soviet_Armed_Forces
 		}
@@ -1522,7 +1536,7 @@ focus_tree = {
 		id = STALIN_Begin_Mass_Production_of_the_T54
 		icon = GFX_T_55	#Placeholder
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_The_Soviet_Army
 		}
@@ -1536,7 +1550,7 @@ focus_tree = {
 		id = STALIN_Rapid_Adoption_of_the_AK47
 		icon = GFX_FocusAK47s
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_The_Soviet_Army
 		}
@@ -1550,7 +1564,7 @@ focus_tree = {
 		id = STALIN_Expand_the_VDV
 		icon = GFX_SOV_VDV
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 2.00
 		prerequisite = {
 			focus = STALIN_Rapid_Adoption_of_the_AK47
 		}
@@ -1645,7 +1659,7 @@ focus_tree = {
 		id = STALIN_The_Soviet_Navy
 		icon = GFX_SOV_Navy
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 1.00
 		prerequisite = {
 			focus = STALIN_The_Soviet_Armed_Forces
 		}
@@ -1659,7 +1673,7 @@ focus_tree = {
 		id = STALIN_Project_30bis
 		icon = GFX_Skoryy_Destroyers
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_The_Soviet_Navy
 		}
@@ -1668,7 +1682,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = dd_bonus
-				category = screen_hull_medium
+				category = screen_hull_heavy
 				bonus = 1
 				uses = 2
 			}
@@ -1678,7 +1692,7 @@ focus_tree = {
 		id = STALIN_Modernize_the_Black_Sea_Shipyards
 		icon = GFX_SOV_Modernize_Black_Sea_Shipyard
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_The_Soviet_Navy
 		}
@@ -1698,7 +1712,7 @@ focus_tree = {
 		id = STALIN_Study_German_Submarine_Designs
 		icon = GFX_Study_German_Ship_Design
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 2.00
 		prerequisite = {
 			focus = STALIN_Modernize_the_Black_Sea_Shipyards
 		}
@@ -1833,7 +1847,7 @@ focus_tree = {
 		id = STALIN_Ensure_the_Survival_of_the_Kim_Regime
 		icon = GFX_goal_KPA_Proclamation
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Increase_Korean_Production_Capabilities
 		}

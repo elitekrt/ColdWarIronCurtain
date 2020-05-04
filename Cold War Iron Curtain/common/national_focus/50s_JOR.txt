@@ -566,7 +566,7 @@ focus_tree = {
 	}
 	focus = {
 		id = JOR_Refugee_Workers
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Refugee_Focus
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1245,9 +1245,6 @@ focus_tree = {
 			focus = JOR_The_Liberal_Experiment
 		}
 		prerequisite = {
-			focus = JOR_A_Liberal_Experiment
-		}
-		prerequisite = {
 			focus = JOR_Support_the_Bedouin_Peoples
 		}
 		available = {
@@ -1425,6 +1422,9 @@ focus_tree = {
 			country_event = {
 				id = jordan.11
 				}
+			country_event = {
+				id = jordan.12
+				}
 		}
 
 	}
@@ -1501,8 +1501,8 @@ focus_tree = {
 			set_cosmetic_tag = JOR_Revolution
 			kill_country_leader = yes
 			create_country_leader = {
-				name = "Ali Abu Nuwar"
-				picture = "Ali_Abu_Nuwar.dds"
+				name = "Abdullah Rimawi"
+				picture = "Abdullah_Rimawi.dds"
 				ideology = pan_arabism
 			}
 			country_event = {
@@ -1573,7 +1573,7 @@ focus_tree = {
 		x = 14
 		y = 17
 		completion_reward = {
-			add_ideas = gen_pro_union_2
+			add_ideas = policy_union_temp_5
 		}
 
 	}
@@ -1866,7 +1866,7 @@ focus_tree = {
 		x = 17
 		y = 12
 		completion_reward = {
-			add_stability = 0.5
+			add_stability = 0.05
 		}
 
 	}
@@ -2080,6 +2080,9 @@ focus_tree = {
 			}
 			country_event = {
 				id = jordan.11
+				}
+			country_event = {
+				id = jordan.12
 				}
 		}
 

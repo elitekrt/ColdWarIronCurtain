@@ -30,9 +30,7 @@ focus_tree = {
 		available = {
 			always = no
 		}
-		completion_reward = {
-			news_event = nva_geneva.1
-		}
+
 	}
 	focus = {
 		id = VIN_Reconstruction_from_the_Ashes
@@ -420,7 +418,8 @@ focus_tree = {
 			add_to_variable = { gulag_factor = 0.04 }					
 			add_to_variable = { gulag_factor_neg = -0.04 }		
 			add_to_variable = { gulag_factor_five = 0.10 }			
-			add_to_variable = { gulag_factor_five_neg = -0.10 }			
+			add_to_variable = { gulag_factor_five_neg = -0.10 }	
+			custom_effect_tooltip = gulag_factor_increase_TT
 		}
 	}
 	focus = {
@@ -437,7 +436,8 @@ focus_tree = {
 			add_to_variable = { gulag_factor = 0.04 }					
 			add_to_variable = { gulag_factor_neg = -0.04 }		
 			add_to_variable = { gulag_factor_five = 0.10 }			
-			add_to_variable = { gulag_factor_five_neg = -0.10 }			
+			add_to_variable = { gulag_factor_five_neg = -0.10 }	
+			custom_effect_tooltip = gulag_factor_increase_TT
 		}
 	}
 	focus = {
@@ -473,7 +473,7 @@ focus_tree = {
 				name = agri_tech_bonus
 				bonus = 1.75
 				uses = 1
-				category = agri_tech
+				category = agriculture
 			}
 		}
 	}
@@ -491,7 +491,8 @@ focus_tree = {
 			add_to_variable = { gulag_factor = 0.04 }					
 			add_to_variable = { gulag_factor_neg = -0.04 }		
 			add_to_variable = { gulag_factor_five = 0.10 }			
-			add_to_variable = { gulag_factor_five_neg = -0.10 }			
+			add_to_variable = { gulag_factor_five_neg = -0.10 }
+custom_effect_tooltip = gulag_factor_increase_TT			
 		}
 	}
 	focus = {
@@ -511,7 +512,8 @@ focus_tree = {
 			add_to_variable = { gulag_factor = 0.02 }					
 			add_to_variable = { gulag_factor_neg = -0.02 }		
 			add_to_variable = { gulag_factor_five = 0.05 }			
-			add_to_variable = { gulag_factor_five_neg = -0.05 }	
+			add_to_variable = { gulag_factor_five_neg = -0.05 }
+			custom_effect_tooltip = gulag_factor_increase_TT
 			add_political_power = 100
 			add_popularity = {
 				ideology = maoism
@@ -691,7 +693,7 @@ focus_tree = {
 		x = 23
 		y = 5
 		completion_reward = {
-			country_event = PathetLao.1
+			country_event = Pathet_Lao.1
 		}
 	}
 	focus = {
@@ -848,6 +850,7 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { clergy_persecution_factor = 0.05 }
 			add_to_variable = { clergy_persecution_negative = -0.05  }		
+			custom_effect_tooltip = clergy_persecution_increase_TT
 		}
 	}
 	focus = {
@@ -902,7 +905,8 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			add_to_variable = { clergy_persecution_factor = -0.05 }
-			add_to_variable = { clergy_persecution_negative = 0.05  }		
+			add_to_variable = { clergy_persecution_negative = 0.05  }
+			custom_effect_tooltip = clergy_persecution_decrease_TT
 		}
 	}
 	focus = {
@@ -1002,7 +1006,8 @@ focus_tree = {
 		y = 5
 		completion_reward = {
 			add_to_variable = { clergy_persecution_factor = 0.05 }
-			add_to_variable = { clergy_persecution_negative = -0.05  }		
+			add_to_variable = { clergy_persecution_negative = -0.05  }	
+			custom_effect_tooltip = clergy_persecution_increase_TT
 		}
 	}
 	focus = {
@@ -1928,7 +1933,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = VIN_Endorse_the_CPSU’s_Twentieth_Congress
+		id = VIN_Endorse_the_CPSUs_Twentieth_Congress
 		icon = GFX_SOV_CPSU
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -1995,7 +2000,8 @@ focus_tree = {
 			add_to_variable = { gulag_factor = -0.02 }					
 			add_to_variable = { gulag_factor_neg = 0.02 }		
 			add_to_variable = { gulag_factor_five = -0.05 }			
-			add_to_variable = { gulag_factor_five_neg = 0.05 }			
+			add_to_variable = { gulag_factor_five_neg = 0.05 }	
+			custom_effect_tooltip = gulag_factor_decrease_TT
 		}
 	}
 	focus = {
@@ -2012,7 +2018,8 @@ focus_tree = {
 			add_to_variable = { gulag_factor = -0.02 }					
 			add_to_variable = { gulag_factor_neg = 0.02 }		
 			add_to_variable = { gulag_factor_five = -0.05 }			
-			add_to_variable = { gulag_factor_five_neg = 0.05 }			
+			add_to_variable = { gulag_factor_five_neg = 0.05 }	
+			custom_effect_tooltip = gulag_factor_decrease_TT
 		}
 	}
 	focus = {
@@ -2030,6 +2037,7 @@ focus_tree = {
 			add_to_variable = { gulag_factor_neg = 0.02 }		
 			add_to_variable = { gulag_factor_five = -0.05 }			
 			add_to_variable = { gulag_factor_five_neg = 0.05 }			
+			custom_effect_tooltip = gulag_factor_decrease_TT
 		}
 	}
 	focus = {
@@ -2049,7 +2057,8 @@ focus_tree = {
 			add_to_variable = { gulag_factor = -0.02 }					
 			add_to_variable = { gulag_factor_neg = 0.02 }		
 			add_to_variable = { gulag_factor_five = -0.05 }			
-			add_to_variable = { gulag_factor_five_neg = 0.05 }			
+			add_to_variable = { gulag_factor_five_neg = 0.05 }
+			custom_effect_tooltip = gulag_factor_decrease_TT
 		}
 	}
 	focus = {
@@ -2069,7 +2078,8 @@ focus_tree = {
 			add_to_variable = { gulag_factor = -0.02 }					
 			add_to_variable = { gulag_factor_neg = 0.02 }		
 			add_to_variable = { gulag_factor_five = -0.05 }			
-			add_to_variable = { gulag_factor_five_neg = 0.05 }			
+			add_to_variable = { gulag_factor_five_neg = 0.05 }
+			custom_effect_tooltip = gulag_factor_decrease_TT
 		}
 	}
 	focus = {
@@ -2196,6 +2206,7 @@ focus_tree = {
 			add_to_variable = { gulag_factor_neg = 0.02 }		
 			add_to_variable = { gulag_factor_five = -0.05 }			
 			add_to_variable = { gulag_factor_five_neg = 0.05 }
+			custom_effect_tooltip = gulag_factor_decrease_TT
 		}	
 	}
 	focus = {
@@ -2241,6 +2252,7 @@ focus_tree = {
 			add_to_variable = { gulag_factor_neg = 0.02 }		
 			add_to_variable = { gulag_factor_five = -0.05 }			
 			add_to_variable = { gulag_factor_five_neg = 0.05 }
+			custom_effect_tooltip = gulag_factor_decrease_TT
 		}
 	}
 	focus = {
@@ -2261,6 +2273,7 @@ focus_tree = {
 			add_to_variable = { gulag_factor_neg = 0.02 }		
 			add_to_variable = { gulag_factor_five = -0.05 }			
 			add_to_variable = { gulag_factor_five_neg = 0.05 }
+			custom_effect_tooltip = gulag_factor_decrease_TT
 		}
 	}
 	focus = {
@@ -2652,6 +2665,7 @@ focus_tree = {
 			add_to_variable = { gulag_factor_neg = 0.02 }		
 			add_to_variable = { gulag_factor_five = -0.05 }			
 			add_to_variable = { gulag_factor_five_neg = 0.05 }
+			custom_effect_tooltip = gulag_factor_decrease_TT
 		}
 	}
 	focus = {

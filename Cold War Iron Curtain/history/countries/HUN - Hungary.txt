@@ -23,7 +23,7 @@ if = {
 	set_technology = {
 		subkiller_0 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
 		ship_armament_light_0 = 1
@@ -36,8 +36,8 @@ if = {
 		sub_hull_large_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
-		screen_hull_small_0 = 1
 		screen_hull_medium_0 = 1
+		screen_hull_heavy_0 = 1
 	}
 }
 
@@ -147,6 +147,9 @@ set_technology = {
 add_ideas = {
 	foreign_aggression_policy_6
 	comecon_member
+	food_shortages
+	fiscal_collapse_3
+	soviet_reparations
 }
 
 set_convoys = 0
@@ -298,6 +301,26 @@ set_variable = { var = domestic_influence_amount value = 700 }
 
 
 1949.1.1 = {
+set_variable = { cg_spend_base_ten = -0.4 }
+set_variable = { cg_spend_base_four = -0.16 }
+add_dynamic_modifier = {
+	modifier = consumer_goods_spending
+}
+set_variable = { clergy_persecution_factor = 0.10 }
+set_variable = { clergy_persecution_negative = -0.10  }
+
+add_dynamic_modifier = {
+	modifier = clergy_tolerance
+}
+set_variable = { gulag_factor = 0.01 }
+set_variable = { gulag_factor_neg = -0.01 }
+set_variable = { gulag_factor_five = 0.05 }
+set_variable = { gulag_factor_five_neg = -0.05 }
+
+
+add_dynamic_modifier = {
+	modifier = soviet_repression
+}
 set_cosmetic_tag = HUN_2RP
 
 
@@ -338,6 +361,7 @@ set_cosmetic_tag = HUN_2RP
 create_country_leader = {
 	name = "Mátyás Rákosi"
 	picture = "Matyas_Rakosi.dds"
+	desc = "RAKOSI_DESC"
 	    ideology = stalinism
 		traits = {
 		Stalins_best_pupil
@@ -399,6 +423,10 @@ create_country_leader = {
 	name = "János Kádár"
 	picture = "Janos_Kadar.dds"
 	ideology = marxism_leninism 
+	traits = {
+		conciliatory_pragmatic
+		goulash_communism
+	}
  }
 }
 
