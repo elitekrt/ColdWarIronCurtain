@@ -1077,7 +1077,7 @@ focus_tree = {
 		x = 37
 		y = 5
 		completion_reward = {
-			remove_ideas = SYR_autarky
+			remove_ideas = SPR_autarky
 		}
 
 	}
@@ -1192,7 +1192,7 @@ focus_tree = {
 		x = 32
 		y = 10
 			completion_reward = {
-					add_ideas = tve
+					add_ideas = SPR_tve
 				}
 	}
 	focus = {
@@ -1308,6 +1308,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SPR_The_Spanish_Question
 		}
+		mutually_exclusive = { focus = SPR_The_Fundamental_Principles_of_the_National_Movement } 
 		x = 21
 		y = 9
 		completion_reward = {
@@ -1424,7 +1425,7 @@ focus_tree = {
 		x = 23
 		y = 12
 		completion_reward = {
-			add_ideas = OEEC
+			add_ideas = SPR_OEEC_associate
 		}
 	}
 	focus = {
@@ -1451,11 +1452,9 @@ focus_tree = {
 			focus = SPR_Embrace_the_Opus_Dei
 		}
 		prerequisite = {
-			focus = SPR_Enlist_the_Support_of_the_IMF
+			focus = SPR_Enlist_the_Support_of_the_IMF focus = SPR_Increase_Anti_Semetic_Rhetoric
 		}
-		prerequisite = {
-			focus = SPR_Increase_Anti_Semetic_Rhetoric
-		}
+
 		x = 30
 		y = 14
 		completion_reward = {
@@ -1502,6 +1501,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SPR_The_Spanish_Question
 		}
+		mutually_exclusive = { focus = SPR_Neo_Liberal_Reforms } 
 		x = 39
 		y = 9
 		completion_reward = {

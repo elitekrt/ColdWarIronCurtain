@@ -67,6 +67,14 @@ if = {
 	}
 }
 
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	create_intelligence_agency = yes
+	upgrade_intelligence_agency = upgrade_form_department
+}
+
 set_technology = {
 
 ##### INFRA #####
@@ -963,10 +971,11 @@ add_ideas = {
 	black_market3
 	Global_Intervention
 	gossnab
-	
+	agricultural_dysfunction_0
 	policy_taxrate_temp_5
+	Failing_Health_System_5
 	
-	policy_union_temp_0
+	policy_union_temp_4
 	policy_media_temp_0
 	policy_women_temp_3
 	policy_minorities_temp_1
@@ -1263,8 +1272,8 @@ create_navy_leader = {
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
+	#planning_skill = 2
+	#logistics_skill = 2
 }
 
 create_navy_leader = {
@@ -1275,8 +1284,8 @@ create_navy_leader = {
 	skill = 4
 	attack_skill = 4
 	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 4
+	#planning_skill = 4
+	#logistics_skill = 4
 }
 
 create_navy_leader = {
@@ -1287,12 +1296,8 @@ create_navy_leader = {
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-1949.1.1 = {
-	remove_unit_leader = 19491
+	#planning_skill = 2
+	#logistics_skill = 2
 }
 
 1956.1.1 = {

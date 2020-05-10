@@ -312,7 +312,6 @@ if = {
 		election_frequency = 48
 		elections_allowed = yes
 	}
-	remove_unit_leader = 9500
 	USA = {
 		set_variable = { democratic_total_representatives = 264 }
 		set_variable = { democratic_supportive_representatives = 0 }
@@ -821,27 +820,27 @@ create_field_marshal = {
 	id = 57
 	picture = "Douglas_MacArthur.dds"
 	traits = { defensive_doctrine offensive_doctrine  }
-	skill = 6
-	attack_skill = 6
-	defense_skill = 5
+	skill = 5
+	attack_skill = 4
+	defense_skill = 3
 	planning_skill = 6
-	logistics_skill = 5
+	logistics_skill = 4
 }
 create_corps_commander = {
 	name = "Clark Louis Ruffner"
 	picture = "Clark_Louis_Ruffner.dds"
-	traits = {  }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 1
+	traits = { infantry_leader trickster }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 3
 
 }
 create_corps_commander = {
 	name = "Earle Wheeler"
 	picture = "Earle_Wheeler.dds"
-	traits = {  }
+	traits = { commando adaptable guerilla_fighter }
 	skill = 3
 	attack_skill = 4
 	defense_skill = 2
@@ -852,7 +851,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Guy Stanley Meloy Jr."
 	picture = "Guy_Stanley_Meloy_Jr.dds"
-	traits = {  }
+	traits = { trait_reckless infantry_leader }
 	skill = 4
 	attack_skill = 3
 	defense_skill = 2
@@ -864,11 +863,11 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Paul Donald Markins"
 	picture = "Paul_Donal_Harkins.dds"
-	traits = {  }
-	skill = 2
-	attack_skill = 2
+	traits = { harsh_leader combined_arms_expert ranger }
+	skill = 3
+	attack_skill = 4
 	defense_skill = 2
-	planning_skill = 1
+	planning_skill = 2
 	logistics_skill = 3
 
 }
@@ -876,7 +875,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Wallace H. Graham"
 	picture = "Wallace_H_Graham.dds"
-	traits = {  }
+	traits = { infantry_leader commando }
 	skill = 4
 	attack_skill = 3
 	defense_skill = 4
@@ -887,11 +886,11 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Bruce Cooper Clarke"
 	picture = "Bruce_Cooper_Clarke.dds"
-	traits = {  }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 2
+	traits = { armor_officer infantry_leader }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 3
 	logistics_skill = 3
 
 }
@@ -899,7 +898,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "James Edward Moore"
 	picture = "James_Edward_Moore.dds"
-	traits = {  }
+	traits = { skilled_staffer }
 	skill = 3
 	attack_skill = 2
 	defense_skill = 1
@@ -911,7 +910,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Charles Day Palmer Jr."
 	picture = "Charles_Day_Palmer_Jr.dds"
-	traits = {  }
+	traits = { bearer_of_artillery cavalry_officer }
 	skill = 3
 	attack_skill = 1
 	defense_skill = 4
@@ -923,19 +922,19 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "James Francis Collins"
 	picture = "James_Francis_Collins.dds"
-	traits = {  }
+	traits = { bearer_of_artillery }
 	skill = 3
 	attack_skill = 3
-	defense_skill = 1
+	defense_skill = 2
 	planning_skill = 2
-	logistics_skill = 3
+	logistics_skill = 4
 
 }
 
 create_corps_commander = {
 	name = "William Westmoreland"
 	picture = "William_Westmoreland.dds"
-	traits = {  }
+	traits = { expert_improviser guerilla_fighter paratrooper combined_arms_expert }
 	skill = 4
 	attack_skill = 2
 	defense_skill = 3
@@ -948,7 +947,7 @@ create_corps_commander = {
 
 create_navy_leader = {
 	name = "Ernest King"
-	picture = "Portrait_USA_Earnest_King.dds"
+	picture = "Admiral_Ernest_King.dds"
 	traits = { blockade_runner superior_tactician }
 	skill = 5
 	attack_skill = 5
@@ -956,10 +955,50 @@ create_navy_leader = {
 	#planning_skill = 5
 	#logistics_skill = 5
 }
+create_navy_leader = {
+	name = "Whelan Anderson"
+	picture = "Admiral_George_Whelan_Anderson.dds"
+	traits = { blockade_runner superior_tactician }
+	skill = 3
+	attack_skill = 5
+	defense_skill = 1
+	#planning_skill = 5
+	#logistics_skill = 5
+}
+create_navy_leader = {
+	name = "Thomas Hinman"
+	picture = "Admiral_Thomas_Hinman_Moorer.dds"
+	traits = { spotter }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	#planning_skill = 5
+	#logistics_skill = 5
+}
+create_navy_leader = {
+	name = "Ulysses Simpson Grant Sharp"
+	picture = "Admiral_Ulysses_Simpson_Grant_Sharp.dds"
+	traits = {  }
+	skill = 4
+	attack_skill = 5
+	defense_skill = 3
+	#planning_skill = 5
+	#logistics_skill = 5
+}
+create_navy_leader = {
+	name = "Whelan Anderson"
+	picture = "Admiral_John_Sidney_McCain.dds"
+	traits = { spotter }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	#planning_skill = 5
+	#logistics_skill = 5
+}
 
 create_navy_leader = {
 	name = "Chester W. Nimitz"
-	picture = "Portrait_USA_Chester_W_Nimitz.dds"
+	picture = "Admiral_Chester_William_Nimitz.dds"
 	traits = { superior_tactician spotter }
 	skill = 7
 	attack_skill = 6
@@ -968,13 +1007,45 @@ create_navy_leader = {
 	#logistics_skill = 5
 }
 
+create_navy_leader = {
+	name = "Elmo Zumwalt"
+	picture = "Admiral_Elmo_Zumwalt.dds"
+	traits = { blockade_runner }
+	skill = 6
+	attack_skill = 9
+	defense_skill = 4
+	#planning_skill = 5
+	#logistics_skill = 5
+}
+
 
 create_navy_leader = {
 	name = "William Halsey, Jr."
-	picture = "Portrait_USA_William_Halsey_Jr.dds"
+	picture = "Admiral_William_Halsey.dds"
 	traits = { superior_tactician spotter }
 	skill = 4
 	attack_skill = 4
+	defense_skill = 4
+	#planning_skill = 4
+	#logistics_skill = 4
+}
+create_navy_leader = {
+	name = "William James Crowe"
+	picture = "Admiral_William_James_Crowe.dds"
+	traits = {  }
+	skill = 4
+	attack_skill = 5
+	defense_skill = 6
+	#planning_skill = 4
+	#logistics_skill = 4
+}
+
+create_navy_leader = {
+	name = "Arthur William Radford"
+	picture = "Admiral_Arthur_William_Radford.dds"
+	traits = { superior_tactician spotter }
+	skill = 2
+	attack_skill = 1
 	defense_skill = 4
 	#planning_skill = 4
 	#logistics_skill = 4
@@ -1015,10 +1086,21 @@ create_navy_leader = {
 
 create_navy_leader = {
 	name = "Arleigh Burke"
-	picture = "Portrait_USA_Arleigh_Burke.dds"
+	picture = "Admiral_Arleigh_Albert_Burke.dds"
 	traits = { old_guard_navy superior_tactician }
 	skill = 4
 	attack_skill = 4
+	defense_skill = 4
+	#planning_skill = 4
+	#logistics_skill = 4
+}
+
+create_navy_leader = {
+	name = "Dewey Struble"
+	picture = "Admiral_Arthur_Dewey_Struble.dds"
+	traits = { old_guard_navy superior_tactician }
+	skill = 3
+	attack_skill = 2
 	defense_skill = 4
 	#planning_skill = 4
 	#logistics_skill = 4

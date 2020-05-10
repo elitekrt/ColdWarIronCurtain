@@ -57,10 +57,11 @@ variables_calculation_category = {
 			every_country = {
 				ic_pulse = yes
 			}
+			mercenary_calc_global = yes
 		}
 		
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 	}
 	
@@ -128,7 +129,7 @@ variables_calculation_category = {
 		ai_will_do = {
 			factor = 1
 		}
-	}	
+	}
 	usa_rejoin_nato_1 = {
 
 		icon = generic_industry
@@ -152,7 +153,7 @@ variables_calculation_category = {
 		ai_will_do = {
 			factor = 1
 		}
-	}	
+	}
 	usa_rejoin_nato_2 = {
 
 		icon = generic_industry
@@ -176,7 +177,7 @@ variables_calculation_category = {
 		ai_will_do = {
 			factor = 1
 		}
-	}	
+	}
 	usa_rejoin_nato_3 = {
 
 		icon = generic_industry
@@ -200,7 +201,7 @@ variables_calculation_category = {
 		ai_will_do = {
 			factor = 1
 		}
-	}	
+	}
 	Break_the_Stalemate = {
 		visible = {
 			original_tag = USA
@@ -313,7 +314,7 @@ variables_calculation_category = {
 		ai_will_do = {
 			factor = 0
 		}
-	}	
+	}
 
 	unify_korea = {
 
@@ -340,7 +341,7 @@ variables_calculation_category = {
 				every_owned_state = {
 					remove_core_of = KPA
 				}
-			}	
+			}
 			every_owned_state = {
 				remove_core_of = KOR
 			}
@@ -410,7 +411,7 @@ variables_calculation_category = {
 			factor = 1
 
 		}
-	}	
+	}
 	rename_coptic = {
 
 		icon = generic_industry
@@ -475,7 +476,7 @@ propaganda_efforts = {
 			has_country_leader = {
 				name = "Joseph Stalin"
 				ruling_only = yes
-			}			
+			}
 			original_tag = SOV
 		}
 
@@ -494,7 +495,7 @@ propaganda_efforts = {
 			factor = 1
 
 		}
-	}	
+	}
 
 }
 
@@ -653,7 +654,7 @@ operations = {
 				damage_building = {
 					type = infrastructure
 					damage = 10
-				}			
+				}
 			}
 		}
 
@@ -707,7 +708,7 @@ operations = {
 		ai_will_do = {
 			factor = 1
 		}
-	}	
+	}
 	blow_suez_canal = {
 
 		icon = GFX_decision_generic_ignite_civil_war
@@ -1045,144 +1046,6 @@ special_projects = {
 
 war_measures = {
 
-	negotiate_peace_with_israel_leb = {
-
-		icon = generic_industry
-
-		available = {
-				tag = LEB
-
-		}
-		visible = {
-				has_war_with = ISR
-				surrender_progress > 0.25
-				has_civil_war = no	
-		}
-
-		fire_only_once = no
-
-		days_re_enable = 90
-
-		cost = 100
-
-		complete_effect = {
-			country_event = lebanon.1
-
-		}
-		ai_will_do = {
-			factor = 2
-		}
-	}
-	negotiate_peace_with_israel_syr = {
-
-		icon = generic_industry
-
-		available = {
-		   	ISR = { controls_state = 759 }
-		}
-		visible = {
-			original_tag = SYR
-			has_war_with = ISR
-		}
-
-		fire_only_once = no
-
-		days_re_enable = 90
-
-		cost = 100
-
-		complete_effect = {
-			country_event = syria.1
-		}
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 1000
-				is_historical_focus_on = yes
-			}
-		}
-	}
-	negotiate_peace_with_israel_irq = {
-
-		icon = generic_industry
-
-		available = {
-				surrender_progress > 0.25
-				has_civil_war = no
-		}
-		visible = {
-				tag = IRQ
-				has_war_with = ISR
-		}
-
-		fire_only_once = no
-
-		days_re_enable = 90
-
-		cost = 100
-
-		complete_effect = {
-			country_event = iraq.1
-
-		}
-		ai_will_do = {
-			factor = 2
-		}
-	}
-	negotiate_peace_with_israel_egy = {
-
-		icon = generic_industry
-
-		available = {
-		   	ISR = { controls_state = 453 }
-			ISR = { controls_state = 805 }
-		}
-		visible = {
-			original_tag = EGY
-			has_war_with = ISR
-		}
-
-		fire_only_once = yes
-
-		cost = 100
-
-		complete_effect = {
-			country_event = egypte.4
-		}
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 1000
-				is_historical_focus_on = yes
-			}
-		}
-	}
-	negotiate_peace_with_england_egy = {
-
-		icon = generic_industry
-
-		available = {
-				surrender_progress > 0.20
-				has_civil_war = no
-		}
-		visible = {
-				tag = EGY
-				has_war_with = ENG
-		}
-
-		fire_only_once = yes
-
-
-		cost = 100
-
-		complete_effect = {
-			country_event = egypte.6
-
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	
 	#negotiate_peace_with_israel_egy_2 = {
 
@@ -1212,62 +1075,6 @@ war_measures = {
 	#			factor = 1
 	#		}
 	#	}
-	end_the_indonesian_war_ino = {
-
-		icon = generic_industry
-
-		available = {
-			surrender_progress > 0.60
-		}
-		visible = {
-				tag = INO
-				INS = {
-					exists = yes
-					has_war_with = INO
-				}
-		}
-
-		fire_only_once = yes
-
-
-		cost = 100
-
-		complete_effect = {
-			country_event = INO.2
-
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	end_the_indonesian_war_hol = {
-
-		icon = generic_industry
-
-		available = {
-			surrender_progress > 0.60
-		}
-		visible = {
-				tag = HOL
-				INS = {
-					exists = yes
-					has_war_with = INO
-				}
-		}
-
-		fire_only_once = yes
-
-
-		cost = 100
-
-		complete_effect = {
-			country_event = INO.1
-
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 
 	emergency_factory_conversion_defensive = {
 
@@ -1358,80 +1165,6 @@ war_measures = {
 
 		complete_effect = {
 
-		}
-	}
-	Declare_Victory_Against_Communists_KOR = {
-
-		icon = GFX_decision_generic_ignite_civil_war
-		allowed = {
-			tag = KOR
-		}
-		available = {
-			has_full_control_of_state = 866
-			has_full_control_of_state = 920
-			has_full_control_of_state = 1131
-			has_full_control_of_state = 745
-			has_full_control_of_state = 746
-			has_full_control_of_state = 747
-			has_full_control_of_state = 1205
-			has_full_control_of_state = 527
-			has_full_control_of_state = 748
-			has_full_control_of_state = 1325
-			has_full_control_of_state = 1326
-		}
-	
-		visible = {
-			KOR = { has_war_with = KPA }
-		}
-	
-		fire_only_once = no
-	
-		days_remove = 90
-	
-		cost = 50
-	
-
-		complete_effect = {
-
-		}
-	
-		remove_effect = {
-			if = {
-				limit = {
-					has_full_control_of_state = 866
-					has_full_control_of_state = 920
-					has_full_control_of_state = 1131
-					has_full_control_of_state = 745
-					has_full_control_of_state = 746
-					has_full_control_of_state = 747
-					has_full_control_of_state = 1205
-					has_full_control_of_state = 527
-					has_full_control_of_state = 748
-					has_full_control_of_state = 1325
-					has_full_control_of_state = 1326
-				}
-				dismantle_faction = yes
-				CHI = { dismantle_faction = yes }
-				annex_country = {
-					target = KPA
-					transfer_troops = no
-				}
-				transfer_state = 1325
-				transfer_state = 1326
-				every_owned_state = {
-					add_core_of = KOR
-				}
-				PRC = {
-					white_peace = KOR
-					white_peace = USA
-				}
-				news_event = Korean_War.50
-			}
-
-		}
-		ai_will_do = {
-			factor = 1
-			
 		}
 	}
 

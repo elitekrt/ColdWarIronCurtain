@@ -58,7 +58,7 @@
 	}
 	shared_focus = {
 		id = SOV_ECON_Reward_Private_Discoveries
-		icon = GFX_goal_unknown
+		icon = GFX_Gold
 		search_filters = {IC_FILTER}
 		cost = 6
 		prerequisite = {
@@ -79,7 +79,7 @@
 	}
 	shared_focus = {
 		id = SOV_ECON_Distribute_Computers_to_Soviet_Companies
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_computers
 		search_filters = {IC_FILTER}
 		cost = 6
 		prerequisite = {
@@ -159,7 +159,7 @@
 	}
 	shared_focus = {
 		id = SOV_ECON_Modernize_Economic_Processes
-		icon = GFX_goal_unknown
+		icon = GFX_machine_tools
 		search_filters = {IC_FILTER}
 		cost = 6
 		prerequisite = {
@@ -219,7 +219,7 @@
 	}
 	shared_focus = {
 		id = SOV_ECON_Increase_Female_Employment
-		icon = GFX_goal_unknown
+		icon = GFX_femicon
 		search_filters = {IC_FILTER}
 		cost = 6
 		prerequisite = {
@@ -227,8 +227,11 @@
 		}
 		
 		completion_reward = {	
-            add_to_variable = { sov_10th_5yp_progress = 2 }		
-			
+            add_to_variable = { sov_10th_5yp_progress = 2 }
+            add_timed_idea = {
+				idea = sov_more_women_prod
+				days = 1925
+			}				
 		}
 		x = 20
 		y = 23
@@ -268,7 +271,11 @@
 		}
 		
 		completion_reward = {	
-            add_to_variable = { sov_10th_5yp_progress = 2 }		
+            add_to_variable = { sov_10th_5yp_progress = 2 }	
+            add_timed_idea = {
+				idea = sov_prod_to_workers
+				days = 1925
+			}			
 			
 		}
 		x = 18
@@ -316,7 +323,7 @@
 	}
 	shared_focus = {
 		id = SOV_ECON_Expand_the_Merchant_Fleet
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Maritime_Trade
 		search_filters = {IC_FILTER}
 		cost = 6
 		prerequisite = {
@@ -746,7 +753,7 @@
 	}
 	shared_focus = {
 		id = SOV_ECON_Modernize_Food_Processing
-		icon = GFX_goal_unknown
+		icon = GFX_farmer_debt_relief
 		search_filters = {IC_FILTER}
 		cost = 6
 		prerequisite = {
@@ -761,6 +768,11 @@
 		
 		completion_reward = {
 		    add_to_variable = { sov_10th_5yp_progress = 3 }
+			add_timed_idea = {
+				idea = sov_food_proc_mod 
+				days = 1925
+			}
+			custom_effect_tooltip = SOV_ECON_Modernize_Food_Processing_tooltip
 		}
 
 	}

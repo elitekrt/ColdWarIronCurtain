@@ -59,7 +59,7 @@ mercenaries = {
 		ai_will_do = {
 			factor = 0 #Gotta allow the Americans to help
 		}
-	}	
+	}
    hire_4_Commando = {
 
 		icon = generic_political_discourse
@@ -102,8 +102,6 @@ mercenaries = {
 					}
 				}
 				capital_scope = {
-					if = {
-						limit = { ROOT = { has_full_control_of_state = PREV } }
 						create_unit = {
 							division = "name = \"4 Commando\" division_template = \"Private Military Contractors\" start_experience_factor = 4.0"
 							owner = ROOT
@@ -120,9 +118,8 @@ mercenaries = {
 							division = "name = \"4 Commando\" division_template = \"Private Military Contractors\" start_experience_factor = 4.0"
 							owner = ROOT
 						}
-					}
 				}
-				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes }	 
+				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes } 
 				create_corps_commander = { 
 					name = "Mike Hoare" 
 					portrait_path = "gfx/leaders/PMC/Hoare.dds"
@@ -132,7 +129,7 @@ mercenaries = {
 						commando
 					} 
 					skill = 6
-				}	
+				}
 			}
 		}
 
@@ -182,8 +179,6 @@ mercenaries = {
 					}
 				}
 				capital_scope = {
-					if {
-						limit = { ROOT = { has_full_control_of_state = PREV } }
 						create_unit = {
 							division = "name = \"5 Commando\" division_template = \"Private Military Contractors\" start_experience_factor = 5.0"
 							owner = ROOT
@@ -200,9 +195,8 @@ mercenaries = {
 							division = "name = \"5 Commando\" division_template = \"Private Military Contractors\" start_experience_factor = 5.0"
 							owner = ROOT
 						}
-					}
 				}
-				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes }	 
+				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes } 
 				create_corps_commander = { 
 					name = "John Peters" 
 					picture = "gfx/leaders/PMC/Peters.dds" 
@@ -212,7 +206,7 @@ mercenaries = {
 						commando
 					} 
 					skill = 5
-				}	
+				}
 			}
 		}
 
@@ -262,8 +256,6 @@ mercenaries = {
 					}
 				}
 				capital_scope = {
-					if = {
-						limit = { ROOT = { has_full_control_of_state = PREV } }
 						create_unit = {
 							division = "name = \"6 Commando\" division_template = \"Private Military Contractors\" start_experience_factor = 6.0"
 							owner = ROOT
@@ -280,9 +272,8 @@ mercenaries = {
 							division = "name = \"6 Commando\" division_template = \"Private Military Contractors\" start_experience_factor = 6.0"
 							owner = ROOT
 						}
-					}
 				}
-				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes }	 
+				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes } 
 				create_corps_commander = { 
 					name = "Karl Corukes" 
 					picture = "gfx/leaders/PMC/Corukes.dds" 
@@ -292,7 +283,7 @@ mercenaries = {
 						commando
 					} 
 					skill = 4
-				}	
+				}
 			}
 		}
 
@@ -342,8 +333,6 @@ mercenaries = {
 					}
 				}
 				capital_scope = {
-					if = {
-						limit = { ROOT = { has_full_control_of_state = PREV } }
 						create_unit = {
 							division = "name = \"10 Commando\" division_template = \"Private Military Contractors\" start_experience_factor = 10.0"
 							owner = ROOT
@@ -360,9 +349,8 @@ mercenaries = {
 							division = "name = \"10 Commando\" division_template = \"Private Military Contractors\" start_experience_factor = 10.0"
 							owner = ROOT
 						}
-					}
 				}
-				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes }	 
+				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes } 
 				create_corps_commander = { 
 					name = "Jean Schramme" 
 					portrait_path = "gfx/leaders/PMC/Schramme.dds" 
@@ -372,7 +360,7 @@ mercenaries = {
 						commando
 					} 
 					skill = 4
-				}	
+				}
 			}
 		}
 
@@ -422,8 +410,6 @@ mercenaries = {
 					}
 				}
 				capital_scope = {
-					if = {
-						limit = { ROOT = { has_full_control_of_state = PREV } }
 						create_unit = {
 							division = "name = \"Vinnell Corporation\" division_template = \"Private Military Contractors\" start_experience_factor = 10.0"
 							owner = ROOT
@@ -440,15 +426,14 @@ mercenaries = {
 							division = "name = \"Vinnell Corporation\" division_template = \"Private Military Contractors\" start_experience_factor = 10.0"
 							owner = ROOT
 						}
-					}
 				}
-				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes }	 
+				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes } 
 				create_corps_commander = { 
 					name = "Allan S. Vinnell" 
 					portrait_path = "gfx/leaders/PMC/Vinell.dds"
 					id = 9007
 					skill = 4
-				}	
+				}
 			}
 		}
 
@@ -498,8 +483,6 @@ mercenaries = {
 					}
 				}
 				capital_scope = {
-					if = {
-						limit = { ROOT = { has_full_control_of_state = PREV } }
 						create_unit = {
 							division = "name = \"Les Affreux\" division_template = \"Private Military Contractors\" start_experience_factor = 10.0"
 							owner = ROOT
@@ -516,15 +499,15 @@ mercenaries = {
 							division = "name = \"Les Affreux\" division_template = \"Private Military Contractors\" start_experience_factor = 10.0"
 							owner = ROOT
 						}
-					}
+					
 				}
-				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes }	 
+				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes } 
 				create_corps_commander = { 
 					name = "Bob Denard" 
 					portrait_path = "gfx/leaders/PMC/Denard.dds"
 					id = 9008
 					skill = 6
-				}	
+				}
 			}
 		}
 
@@ -574,8 +557,6 @@ mercenaries = {
 					}
 				}
 				capital_scope = {
-					if = {
-						limit = { ROOT = { has_full_control_of_state = PREV } }
 						create_unit = {
 							division = "name = \"WatchGuard International\" division_template = \"Private Military Contractors\" start_experience_factor = 10.0"
 							owner = ROOT
@@ -592,15 +573,15 @@ mercenaries = {
 							division = "name = \"WatchGuard International\" division_template = \"Private Military Contractors\" start_experience_factor = 10.0"
 							owner = ROOT
 						}
-					}
+					
 				}
-				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes }	 
+				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes } 
 				create_corps_commander = { 
 					name = "David Stirling" 
 					portrait_path = "gfx/leaders/PMC/Stirling.dds"
 					id = 9009
 					skill = 6
-				}	
+				}
 			}
 		}
 
@@ -650,8 +631,6 @@ mercenaries = {
 					}
 				}
 				capital_scope = {
-					if = {
-						limit = { ROOT = { has_full_control_of_state = PREV } }
 						create_unit = {
 							division = "name = \"Control Risks\" division_template = \"Private Military Contractors\" start_experience_factor = 10.0"
 							owner = ROOT
@@ -668,15 +647,15 @@ mercenaries = {
 							division = "name = \"Control Risks\" division_template = \"Private Military Contractors\" start_experience_factor = 10.0"
 							owner = ROOT
 						}
-					}
+					
 				}
-				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes }	 
+				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes } 
 				create_corps_commander = { 
 					name = "Hogg Robinson" 
 					picture = "Robinson.dds" 
 					id = 9010
 					skill = 6
-				}	
+				}
 			}
 		}
 
@@ -726,8 +705,6 @@ mercenaries = {
 					}
 				}
 				capital_scope = {
-					if = {
-						limit = { ROOT = { has_full_control_of_state = PREV } }
 						create_unit = {
 							division = "name = \"Babies of Biafra\" division_template = \"Private Military Contractors\" start_experience_factor = 10.0"
 							owner = ROOT
@@ -744,15 +721,15 @@ mercenaries = {
 							division = "name = \"Babies of Biafra\" division_template = \"Private Military Contractors\" start_experience_factor = 10.0"
 							owner = ROOT
 						}
-					}
+					
 				}
-				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes }	 
+				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes } 
 				create_corps_commander = { 
 					name = "Carl Gustaf von Rosen" 
 					portrait_path = "gfx/leaders/PMC/Rosen.dds"
 					id = 9011
 					skill = 4
-				}	
+				}
 			}
 		}
 
@@ -802,8 +779,6 @@ mercenaries = {
 					}
 				}
 				capital_scope = {
-					if = {
-						limit = { ROOT = { has_full_control_of_state = PREV } }
 						create_unit = {
 							division = "name = \"Jesa Air West Africa\" division_template = \"Private Military Contractors\" start_experience_factor = 10.0"
 							owner = ROOT
@@ -820,9 +795,9 @@ mercenaries = {
 							division = "name = \"Jesa Air West Africa\" division_template = \"Private Military Contractors\" start_experience_factor = 10.0"
 							owner = ROOT
 						}
-					}
+					
 				}
-				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes }	 
+				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes } 
 			}
 		}
 
@@ -877,8 +852,6 @@ mercenaries = {
 					}
 				}
 				capital_scope = {
-					if = {
-						limit = { ROOT = { has_full_control_of_state = PREV } }
 						create_unit = {
 							division = "name = \"Militaires Sans Frontières\" division_template = \"Private Military Contractors\" start_experience_factor = 10.0"
 							owner = ROOT
@@ -895,9 +868,9 @@ mercenaries = {
 							division = "name = \"Militaires Sans Frontières\" division_template = \"Private Military Contractors\" start_experience_factor = 10.0"
 							owner = ROOT
 						}
-					}
+					
 				}
-				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes }	 
+				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes } 
 				create_corps_commander = { 
 					name = "John Snake"
 					portrait_path = "gfx/leaders/PMC/Boss.dds"
@@ -962,8 +935,6 @@ mercenaries = {
 					}
 				}
 				capital_scope = {
-					if = {
-						limit = { ROOT = { has_full_control_of_state = PREV } }
 						create_unit = {
 							division = "name = \"Diamond Dogs\" division_template = \"Private Military Contractors\" start_experience_factor = 10.0"
 							owner = ROOT
@@ -980,15 +951,15 @@ mercenaries = {
 							division = "name = \"Diamond Dogs\" division_template = \"Private Military Contractors\" start_experience_factor = 10.0"
 							owner = ROOT
 						}
-					}
+					
 				}
-				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes }	 
+				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes } 
 				create_corps_commander = { 
 					name = "John Snake" 
 					picture = "gfx/leaders/PMC/Boss.dds" 
 					id = 9012
 					skill = 4
-				}	
+				}
 			}
 		}
 
@@ -1036,8 +1007,6 @@ mercenaries = {
 					}
 				}
 				capital_scope = {
-					if = {
-						limit = { ROOT = { has_full_control_of_state = PREV } }
 						create_unit = {
 							division = "name = \"Mercenary Division\" division_template = \"Private Military Contractor\" start_experience_factor = 2.0"
 							owner = ROOT
@@ -1046,9 +1015,9 @@ mercenaries = {
 							division = "name = \"Mercenary Division\" division_template = \"Private Military Contractor\" start_experience_factor = 2.0"
 							owner = ROOT
 						}
-					}
+					
 				}
-				set_division_template_lock = { division_template = "Private Military Contractor" is_locked = yes }	 
+				set_division_template_lock = { division_template = "Private Military Contractor" is_locked = yes } 
 
 			}
 		}
@@ -1113,8 +1082,6 @@ mercenaries = {
 					}
 				}
 				capital_scope = {
-					if = {
-						limit = { ROOT = { has_full_control_of_state = PREV } }
 						create_unit = {
 							division = "name = \"Local Guerilla\" division_template = \"Private Military Contractors\" start_experience_factor = 2.0"
 							owner = ROOT
@@ -1131,9 +1098,9 @@ mercenaries = {
 							division = "name = \"Local Guerilla\" division_template = \"Private Military Contractors\" start_experience_factor = 2.0"
 							owner = ROOT
 						}
-					}
+					
 				}
-				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes }	 
+				set_division_template_lock = { division_template = "Private Military Contractors" is_locked = yes } 
 				create_corps_commander = { 
 					name = "Che Guevara" 
 					portrait_path = "gfx/leaders/PMC/che.dds"
@@ -1143,7 +1110,7 @@ mercenaries = {
 					defense_skill = 6
 					planning_skill = 6
 					logistics_skill = 6
-				}	
+				}
 			}
 		}
 

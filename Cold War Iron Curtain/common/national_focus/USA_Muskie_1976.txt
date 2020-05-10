@@ -24,7 +24,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_MUSKIE76_Persue_Gun_Control_Legislation
-		icon = GFX_goal_unknown
+		icon = GFX_focus_gun_control
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -60,7 +60,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_MUSKIE76_Community_Reinvestment_Act
-		icon = GFX_goal_unknown
+		icon = GFX_Cash_and_Carry
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -75,7 +75,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_MUSKIE76_Push_for_Free_Four_Year_University
-		icon = GFX_goal_unknown
+		icon = GFX_Universities
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -116,7 +116,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_MUSKIE76_Emergency_Natural_Gas_Act
-		icon = GFX_goal_unknown
+		icon = GFX_goal_oil_derrick
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -131,7 +131,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_MUSKIE76_Humphrey_Hawkins_Full_Employment_Act
-		icon = GFX_goal_unknown
+		icon = GFX_industrial_subsidies
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -170,7 +170,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_MUSKIE76_Energy_Security_Act
-		icon = GFX_goal_unknown
+		icon = GFX_goal_Further_Oil
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -188,7 +188,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_MUSKIE76_Job_Training_Partnership_Act
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Arab_Infrastructure
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -203,7 +203,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_MUSKIE76_Nuclear_Waste_Policy_Act
-		icon = GFX_goal_unknown
+		icon = GFX_Nuclear_Energy
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -221,7 +221,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_MUSKIE76_Public_Infrastructure_Investments
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Arab_Infrastructure
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -238,7 +238,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_MUSKIE76_Campaign_for_Consumer_Protections
-		icon = GFX_goal_unknown
+		icon = GFX_Mongolian_Political_Investigations
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -258,7 +258,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_MUSKIE76_Staggs_Railroad_Act
-		icon = GFX_goal_unknown
+		icon = GFX_FocusBuildRailroads
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -276,7 +276,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_MUSKIE76_Surface_Transportation_Assistance_Act
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Arab_Industry
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -294,7 +294,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_MUSKIE76_Bayh_Dole_Act
-		icon = GFX_goal_unknown
+		icon = GFX_Paper_Two
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -312,7 +312,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_MUSKIE76_Comprehensive_Crime_Control_Act
-		icon = GFX_goal_unknown
+		icon = GFX_focus_police
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -330,7 +330,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_MUSKIE76_Strengthen_Unions
-		icon = GFX_goal_unknown
+		icon = GFX_SP_focus_trade_unions
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {

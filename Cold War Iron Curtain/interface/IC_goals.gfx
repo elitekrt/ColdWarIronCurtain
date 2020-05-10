@@ -436,6 +436,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/Generic_Radio_Broadcast.tga"
 	}
 	SpriteType = {
+		name = "GFX_British_Persian_Gulf"
+		texturefile = "gfx/interface/goals/British_Persian_Gulf.tga"
+	}
+	SpriteType = {
+		name = "GFX_American_Persian_Gulf"
+		texturefile = "gfx/interface/goals/American_Persian_Gulf.tga"
+	}
+	SpriteType = {
+		name = "GFX_Generic_Persian_Gulf"
+		texturefile = "gfx/interface/goals/Generic_Persian_Gulf.tga"
+	}
+	SpriteType = {
 		name = "GFX_gsg9"
 		texturefile = "gfx/interface/goals/gsg9.tga"
 	}
@@ -576,7 +588,46 @@ spriteTypes = {
 		name = "GFX_Develop_Assam"
 		texturefile = "gfx/interface/goals/Develop_Assam.tga"
 	}
-	
+	SpriteType = {
+		name = "GFX_VFXProgram"
+		texturefile = "gfx/interface/goals/VFXProgram.tga"
+	}
+	SpriteType = {
+		name = "GFX_SpruanceClass"
+		texturefile = "gfx/interface/goals/SpruanceClass.tga"
+	}
+	SpriteType = {
+		name = "GFX_VikingS3"
+		texturefile = "gfx/interface/goals/VikingS3.tga"
+	}
+	SpriteType = {
+		name = "GFX_VFXWinner"
+		texturefile = "gfx/interface/goals/VFXWinner.tga"
+	}
+	SpriteType = {
+		name = "GFX_DBigCatsBigDecks"
+		texturefile = "gfx/interface/goals/BigCatsBigDecks.tga"
+	}
+	SpriteType = {
+		name = "GFX_Carrier_Power_Projection"
+		texturefile = "gfx/interface/goals/Carrier_Power_Projection.tga"
+	}
+	SpriteType = {
+		name = "GFX_HarpoonASuM"
+		texturefile = "gfx/interface/goals/HarpoonASuM.tga"
+	}
+	SpriteType = {
+		name = "GFX_US_Navy_XX_Decade"
+		texturefile = "gfx/interface/goals/US_Navy_XX_Decade.tga"
+	}
+	SpriteType = {
+		name = "GFX_Nimitz_Supercarrier"
+		texturefile = "gfx/interface/goals/Nimitz_Supercarrier.tga"
+	}
+	SpriteType = {
+		name = "GFX_Restart_VFAX"
+		texturefile = "gfx/interface/goals/Restart_VFAX.tga"
+	}
 	SpriteType = {
 		name = "GFX_Indian_Communist_Party"
 		texturefile = "gfx/interface/goals/Indian_Communist_Party.tga"
@@ -644,6 +695,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_Market_Liberalization"
 		texturefile = "gfx/interface/goals/Market_Liberalization.tga"
+	}
+	SpriteType = {
+		name = "GFX_Appoint_Volcker"
+		texturefile = "gfx/interface/goals/Appoint_Volcker.tga"
 	}
 
 	SpriteType = {
@@ -11093,7 +11148,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_Adopt_New_Constitiution"
+		name = "GFX_Adopt_New_Constitiution"		#Generic Legislation
 		texturefile = "gfx/interface/goals/Adopt_New_Constitiution.tga"
 	}
 

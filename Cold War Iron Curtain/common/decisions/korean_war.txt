@@ -1,7 +1,6 @@
 korean_war_prc_category = {
 	cross_the_yaoulu_river = {
 		icon = generic_propaganda
-		cost = 50
 		fire_only_once = yes
 		days_remove = 31
 		allowed = {
@@ -74,7 +73,7 @@ korean_war_prc_category = {
 				create_unit = {
 					division = "name = \"114th Division\" division_template = \"Qīngxíng Jīdòng huà Bùbīng Shī\" start_experience_factor = 1 start_equipment_factor = 1"
 					owner = PRC
-				}	
+				}
 				#39th Corps
 				create_unit = {
 					division = "name = \"115th Division\" division_template = \"Juntuán\" start_experience_factor = 1 start_equipment_factor = 1"
@@ -87,7 +86,7 @@ korean_war_prc_category = {
 				create_unit = {
 					division = "name = \"117th Division\" division_template = \"Juntuán\" start_experience_factor = 1 start_equipment_factor = 1"
 					owner = PRC
-				}	
+				}
 				#40th Corps
 				create_unit = {
 					division = "name = \"118th Division\" division_template = \"Juntuán\" start_experience_factor = 1 start_equipment_factor = 1"
@@ -100,7 +99,7 @@ korean_war_prc_category = {
 				create_unit = {
 					division = "name = \"120th Division\" division_template = \"Juntuán\" start_experience_factor = 1 start_equipment_factor = 1"
 					owner = PRC
-				}	
+				}
 				#42nd Corps
 				create_unit = {
 					division = "name = \"124th Division\" division_template = \"Juntuán\" start_experience_factor = 1 start_equipment_factor = 1"
@@ -113,20 +112,20 @@ korean_war_prc_category = {
 				create_unit = {
 					division = "name = \"126th Division\" division_template = \"Juntuán\" start_experience_factor = 1 start_equipment_factor = 1"
 					owner = PRC
-				}		
+				}
 				#55th Corps
 				create_unit = {
 					division = "name = \"148th Division\" division_template = \"Juntuán\" start_experience_factor = 1 start_equipment_factor = 1"
 					owner = PRC
-				}	
+				}
 				create_unit = {
 					division = "name = \"149th Division\" division_template = \"Shān Bùbīng Shī\" start_experience_factor = 1 start_equipment_factor = 1"
 					owner = PRC
-				}							
+				}
 				create_unit = {
 					division = "name = \"150th Division\" division_template = \"Qīngxíng Jīdòng huà Bùbīng Shī\" start_experience_factor = 1 start_equipment_factor = 1"
 					owner = PRC
-				}								
+				}
 				#66th Corps
 				create_unit = {
 					division = "name = \"196th Division\" division_template = \"Juntuán\" start_experience_factor = 1 start_equipment_factor = 1"
@@ -139,7 +138,7 @@ korean_war_prc_category = {
 				create_unit = {
 					division = "name = \"198th Division\" division_template = \"Juntuán\" start_experience_factor = 1 start_equipment_factor = 1"
 					owner = PRC
-				}						
+				}
 			}
 		}
 		remove_effect = {
@@ -241,7 +240,7 @@ korean_war_prc_category = {
 				set_country_flag = sent_reinforcements_to_korea4
 				clr_country_flag = sent_reinforcements_to_korea3
 			}
-		}	
+		}
 		}
 		operation_ripper = {
 			icon = generic_propaganda
@@ -272,13 +271,7 @@ korean_war_prc_category = {
 			always = no
 		}
 		visible = {
-			tag = PRC
 			tag = USA
-			tag = KPA
-			tag = ENG
-			tag = KOR
-			tag = JAP
-			tag = SOV
 		}
 		available = {
 			always = no
@@ -288,7 +281,7 @@ korean_war_prc_category = {
 				has_war_with = KOR
 			}
 			PRC = {
-				has_country_flag = sent_reinforcements_to_korea1
+				has_war_with = KOR
 			}
 			NOT = { has_global_flag = KOREA_CEASEFIRE_UN }
 		}
@@ -306,8 +299,19 @@ korean_war_prc_category = {
 				limit = {
 					NOT = { has_global_flag = KOREA_CEASEFIRE_UN }
 					KOR = { has_war_with = KPA } 
+					NOT = { KPA = { has_capitulated = yes } }
 				}
 				country_event = korea.21 
+				set_global_flag = KOREA_CEASEFIRE_UN
+			}
+			if = {
+				limit = {
+					NOT = { has_global_flag = KOREA_CEASEFIRE_UN }
+					KOR = { has_war_with = KPA } 
+					KPA = { has_capitulated = yes } 
+				}
+				news_event = korea.21 
+				annex_country = { target = KPA transfer_troops = yes }				
 				set_global_flag = KOREA_CEASEFIRE_UN
 			}
 		}
@@ -317,8 +321,19 @@ korean_war_prc_category = {
 				limit = {
 					NOT = { has_global_flag = KOREA_CEASEFIRE_UN }
 					KOR = { has_war_with = KPA } 
+					NOT = { KPA = { has_capitulated = yes } }
 				}
 				country_event = korea.21 
+				set_global_flag = KOREA_CEASEFIRE_UN
+			}
+			if = {
+				limit = {
+					NOT = { has_global_flag = KOREA_CEASEFIRE_UN }
+					KOR = { has_war_with = KPA } 
+					KPA = { has_capitulated = yes } 
+				}
+				news_event = korea.27
+				annex_country = { target = KPA transfer_troops = yes }				
 				set_global_flag = KOREA_CEASEFIRE_UN
 			}
 		}

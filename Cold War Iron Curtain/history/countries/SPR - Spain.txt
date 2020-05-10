@@ -208,8 +208,9 @@ add_to_array = { influence_array_val = 500 }
 add_ideas = {
 	SOV_government_corruption
 	ddr_idea_industrial_corruption
+	SPR_memories_of_civil_war
 	closed_economy
-	SYR_autarky
+	SPR_autarky
 	neutrality_idea
 }
 
@@ -501,8 +502,8 @@ create_corps_commander = {
 	set_popularities = { 
 		democratic = 0
 		communism = 2
-		fascism = 78
-		nationalism = 0
+		fascism = 39
+		nationalism = 39
 		monarchism = 0
 		neutrality = 0
 		islamism = 0
@@ -526,7 +527,7 @@ create_corps_commander = {
 	}
 
 	set_politics = {
-	ruling_party = fascism
+	ruling_party = nationalism
 	last_election = "1945.1.1"
 	election_frequency = 48
 	elections_allowed = no
