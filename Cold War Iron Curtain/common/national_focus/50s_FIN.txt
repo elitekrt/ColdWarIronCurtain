@@ -2691,6 +2691,7 @@ focus_tree = {
 		x = 43
 		y = 7
 		completion_reward = {
+			news_event = fin.28
 			FIN = {
 					add_opinion_modifier = {
 							target = SOV

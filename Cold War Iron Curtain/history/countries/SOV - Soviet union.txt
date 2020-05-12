@@ -72,7 +72,7 @@ if = {
 		has_dlc = "La Resistance"
 	}
 	create_intelligence_agency = yes
-	upgrade_intelligence_agency = upgrade_form_department
+	add_ideas = Major_Power_Spy_Bonus
 }
 
 set_technology = {
