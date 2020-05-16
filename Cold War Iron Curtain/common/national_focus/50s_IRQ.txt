@@ -840,6 +840,9 @@ focus_tree = {
 		}
 		x = 33
 		y = 4
+		available = {
+			always = no
+		}
 		completion_reward = {
 			country_event = IRQ.9901
 			SAU = {
@@ -1768,7 +1771,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = jet_interceptor_equipment_1
 				amount = 75
-				producer = ENG
+				producer = CAP
 			}
 
 		}
@@ -1790,7 +1793,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = jet_interceptor_equipment_2
 				amount = 75
-				producer = ENG
+				producer = CAP
 			}		
 		}
 	}
@@ -1847,7 +1850,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = jet_interceptor_equipment_3
 				amount = 50
-				producer = ENG
+				producer = CAP
 			}
 			air_experience = 10
 		}

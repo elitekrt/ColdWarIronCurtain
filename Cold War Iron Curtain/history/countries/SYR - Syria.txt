@@ -801,7 +801,15 @@ if = {
 			
 
 		}
-	
+		
+		if = {
+			limit = {
+				has_dlc = "La Resistance"
+			}
+			create_intelligence_agency = { name = "Idarat al-Mukhabarat al-Jawiyya" icon = "GFX_intelligence_agency_logo_syr" } 
+			
+		}
+
 		set_politics = {
 			ruling_party = fascism
 			last_election = "1963.3.8"

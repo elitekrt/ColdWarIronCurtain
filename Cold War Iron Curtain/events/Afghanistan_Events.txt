@@ -28,6 +28,13 @@ country_event = {		#Coup Start
 			country_event = Afghani_Coup.3
 			complete_national_focus = AFG_The_1950_Coup_Attempt
 			complete_national_focus = AFG_Crackdown_on_Hizb_I_Sirri_Ittihad
+			ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 1000
+				is_historical_focus_on = yes
+			}
+		}
 		}
 	}
 	option = {
@@ -60,7 +67,7 @@ country_event = {
 
 country_event = {
 	id = AFG_REP.1
-	title = "The Decleration of the Republic of Afghanistan"
+	title = "The Declaration of the Republic of Afghanistan"
 	desc = AFG_REP.1.d
 	picture = GFX_Afghan_Radio
 
@@ -163,6 +170,13 @@ country_event = {		#Coup Start
 			name = "Mohammed Daoud Khan"
 			picture = "Mohammed_Daoud_Khan.dds"
 			ideology = monarchy
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 1000
+				is_historical_focus_on = yes
+			}
 		}
 	}
 	option = {

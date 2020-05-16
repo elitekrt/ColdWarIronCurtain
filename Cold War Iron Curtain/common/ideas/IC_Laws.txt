@@ -411,6 +411,127 @@ ideas = {
 			production_speed_buildings_factor = -0.2
 		}
 	}
+	weakened_professional_and_bazaari_classes = {
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+
+		
+		modifier = {
+			production_speed_buildings_factor = 0.25
+		}
+	}
+	Chehelom_Massacres = {
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+
+		
+		modifier = {
+			conscription = -0.10
+			production_speed_buildings_factor = -0.35
+			stability_factor = -0.25
+		}
+	}
+	Chehelom_Protests = {
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+
+		
+		modifier = {
+			production_speed_buildings_factor = -0.20
+			stability_factor = -0.05
+		}
+	}
+	intensifying_protests = {
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+
+		
+		modifier = {
+			production_speed_buildings_factor = -0.25
+			stability_factor = -0.10
+		}
+	}
+	intensified_protests = {
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+
+		
+		modifier = {
+			production_speed_buildings_factor = -0.30
+			stability_factor = -0.125
+			production_factory_max_efficiency_factor = -0.10
+		}
+	}
+	crippling_protests = {
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+
+		
+		modifier = {
+			production_speed_buildings_factor = -0.40
+			production_factory_max_efficiency_factor = -0.25
+			stability_factor = -0.15
+		}
+	}
+	Radical_Revolts = {
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+
+		
+		modifier = {
+			conscription = -0.20
+			war_support_factor = -0.05
+			stability_factor = -0.05
+		}
+	}
+	Disintegrating_Army = {
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+
+		
+		modifier = {
+			conscription = -0.10
+			war_support_factor = -0.15
+		}
+	}
+	crippling_protests_alt = {
+		removal_cost = -1
+		
+		allowed = {
+			always = no # Added via focus
+		}
+
+		
+		modifier = {
+			production_speed_buildings_factor = -0.30
+			production_factory_max_efficiency_factor = -0.25
+			stability_factor = -0.15
+		}
+	}
 		policy_taxrate_temp_1 = {
 			removal_cost = -1
 			
@@ -1935,6 +2056,8 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = 0.02
 				political_power_factor = 0.1
+				production_speed_buildings_factor = 0.08
+				trade_opinion_factor = 0.1
 			}
 		}
 		gen_globalist_1 = {
@@ -1951,6 +2074,8 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = 0.04
 				political_power_factor = 0.2
+				production_speed_buildings_factor = 0.15
+				trade_opinion_factor = 0.2
 			}
 		}
 	}

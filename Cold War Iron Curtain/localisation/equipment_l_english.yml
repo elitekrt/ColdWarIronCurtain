@@ -114,6 +114,9 @@
  
  ABILITY_REQUISITION_HEAT_GEAR:0 "Requisition Desert Gear"
  ABILITY_REQUISITION_HEAT_GEAR_DESC:0 "Massively speeds up hot climate acclimation"
+ 
+ ABILITY_REQUISITION_WINTER_GEAR:0 "Requisition Winter Gear"
+ ABILITY_REQUISITION_WINTER_GEAR_DESC:0 "Massively speeds up cold climate acclimation"
 
  ###LAND
  
@@ -161,8 +164,6 @@
  mountain_warfare_6_short:0 "Modern Mountain warfare Equipment/Tactics"
  mountain_warfare_6_desc:0 ""
  
- ABILITY_REQUISITION_WINTER_GEAR:0 "Requisition Winter Gear"
- ABILITY_REQUISITION_WINTER_GEAR_DESC:0 "Massively speeds up cold climate acclimation"
  
  ###AMPHIBIOUS WARFARE
  

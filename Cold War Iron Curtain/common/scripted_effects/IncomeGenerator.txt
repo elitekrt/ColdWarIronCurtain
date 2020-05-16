@@ -1,4 +1,4 @@
-income_effect = {
+income_effect = {		#DO NOT TOUCH FILE WITHOUT APPROVAL; IDEALLY FROM SWF
 	
 	set_variable = { grossdomesticproduct_influence_limit = grossdomesticproduct }
 	multiply_variable = { grossdomesticproduct_influence_limit = 2 }
@@ -30,6 +30,10 @@ income_effect = {
 		add_to_variable = { ROOT.oil_refinery_total = building_level@synthetic_refinery }
 		add_to_variable = { ROOT.steel_works_total = building_level@steel_factory }
 		add_to_variable = { ROOT.tungsten_factory_total = building_level@tungsten_factory }
+		
+		add_to_variable = { ROOT.fossil_fuel_powerplant_total = building_level@fossil_fuel_powerplant }
+		add_to_variable = { ROOT.renewable_powerplant_total = building_level@renewable_powerplant }
+		add_to_variable = { ROOT.nuclear_powerplant_total = building_level@nuclear_powerplant }
 		
 		add_to_variable = { ROOT.office_park_total = building_level@office_park }	#+2
 		
@@ -777,6 +781,7 @@ income_effect = {
 	add_to_variable = { refinery_total = oil_refinery_total }
 
 
+	ai_economic_planning = yes
 	
 	set_variable = { IncomeTotal = 0 }
 	set_variable = { ROOT.industrial_complex_total = 0 }  
@@ -1906,7 +1911,696 @@ flag_building_macro = {
 }
 
 
-
+ai_economic_planning = {	#Caulcates building targets for the AI Strategies in default.txt
+	if = { limit = { is_ai = yes } emergency_policy_replanning = yes } #AI Reduces Policies if Overbudget
+	#ai_fossil_fuel_powerplant_target is total economic buildings x the ai_power_Ratio global define
+	set_variable = { ai_fossil_fuel_powerplant_target = ROOT.industrial_complex_total }
+	multiply_variable = { ai_fossil_fuel_powerplant_target = 1.2 }
+	add_to_variable = { ai_fossil_fuel_powerplant_target = ROOT.dockyard_total }
+	add_to_variable = { ai_fossil_fuel_powerplant_target = ROOT.office_park_total }
+	multiply_variable = { ai_fossil_fuel_powerplant_target = global.ai_power_ratio }
+	#Calculations for the large economy power plant building targets
+	set_variable = { ai_fossil_fuel_powerplant_target_reduced = ai_fossil_fuel_powerplant_target }
+	set_temp_variable = { alpha = 1 }
+	subtract_from_temp_variable = { alpha = global.ai_renewable_ratio }
+	subtract_from_temp_variable = { alpha = global.ai_nuclear_ratio }
+	multiply_variable = { ai_fossil_fuel_powerplant_target_reduced = alpha }
+	set_variable = { ai_renewable_powerplant_target = ai_fossil_fuel_powerplant_target }
+	set_variable = { ai_nuclear_powerplant_target = ai_fossil_fuel_powerplant_target }
+	multiply_variable = { ai_renewable_powerplant_target = global.ai_renewable_ratio }
+	multiply_variable = { ai_nuclear_powerplant_target = global.ai_nuclear_ratio }
+	
+	#office target = factories x global define ratio
+	set_variable = { ai_office_park_target = ROOT.industrial_complex_total }
+	multiply_variable = { ai_office_park_target = global.ai_office_ratio }
+	
+	#AI will spend the ai_agri_investment on factories on agri-industry until they reach a positive food balance
+	set_variable = { ai_agri_industrial_complex_target = ROOT.farm_total }
+	set_temp_variable = { beta = ROOT.num_of_civilian_factories_available_for_projects }
+	add_to_variable = { beta = 1 }
+	divide_temp_variable = { beta = 7 } #one half max factories per construction project rounded down
+	multiply_temp_variable = { beta = global.ai_agri_investment }
+	multiply_variable = { ai_agri_industrial_complex_target = beta }
+	
+	round_variable = ai_fossil_fuel_powerplant_target
+	round_variable = ai_fossil_fuel_powerplant_target_reduced
+	round_variable = ai_renewable_powerplant_target
+	round_variable = ai_nuclear_powerplant_target
+	round_variable = ai_office_park_target
+	round_variable = ai_agri_industrial_complex_target
+	
+	#At the ai_water_point variable's number of factories that can construct in the country, the AI will start to build water infrastructure
+	set_temp_variable = { gamma = 1.5 } #Will build 2 per month at gamma x the ai_water_point
+	multiply_temp_variable = { gamma = global.ai_water_point }
+	set_temp_variable = { delta = 2.5 } #Will build 3 per month at delta x the ai_water_point
+	multiply_temp_variable = { delta = global.ai_water_point }
+	if = {
+		limit = { 
+			AND = { 
+				num_of_civilian_factories_available_for_projects > global.ai_water_point 
+				is_ai = yes
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					agri_industrial_complex > 0
+					
+					free_building_slots = {
+						building = water_infrastructure
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = water_infrastructure
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+	}
+	if = {
+		limit = { 
+			AND = { 
+				num_of_civilian_factories_available_for_projects > gamma
+				is_ai = yes
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					agri_industrial_complex > 0
+					
+					free_building_slots = {
+						building = water_infrastructure
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = water_infrastructure
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+	}
+	if = {
+		limit = { 
+			AND = { 
+				num_of_civilian_factories_available_for_projects > delta
+				is_ai = yes
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					agri_industrial_complex > 0
+					
+					free_building_slots = {
+						building = water_infrastructure
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = water_infrastructure
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+	}
+	
+##### TEMPORARY FIX FOR VANILLA AI ERROR #####
+	if = {
+		limit = { 
+			AND = { 
+				num_of_civilian_factories_available_for_projects > 50
+				ai_fossil_fuel_powerplant_target > ROOT.fossil_fuel_powerplant_total
+				is_ai = yes
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = fossil_fuel_powerplant
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = fossil_fuel_powerplant
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = fossil_fuel_powerplant
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = fossil_fuel_powerplant
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = fossil_fuel_powerplant
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = fossil_fuel_powerplant
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			AND = { 
+				num_of_civilian_factories_available_for_projects > 25
+				ai_fossil_fuel_powerplant_target > ROOT.fossil_fuel_powerplant_total
+				is_ai = yes
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = fossil_fuel_powerplant
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = fossil_fuel_powerplant
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = fossil_fuel_powerplant
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = fossil_fuel_powerplant
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			AND = { 
+				num_of_civilian_factories_available_for_projects > 10
+				ai_fossil_fuel_powerplant_target > ROOT.fossil_fuel_powerplant_total
+				is_ai = yes
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = fossil_fuel_powerplant
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = fossil_fuel_powerplant
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+	}
+	
+##### TEMPORARY FIX FOR VANILLA AI ERROR #####
+	if = {
+		limit = { 
+			AND = {
+				num_of_civilian_factories_available_for_projects > 75
+				ai_renewable_powerplant_target > ROOT.renewable_powerplant_total
+				is_ai = yes
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = renewable_powerplant
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = renewable_powerplant
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = renewable_powerplant
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = renewable_powerplant
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = renewable_powerplant
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = renewable_powerplant
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			AND = { 
+				num_of_civilian_factories_available_for_projects > 50
+				ai_renewable_powerplant_target > ROOT.renewable_powerplant_total
+				is_ai = yes
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = renewable_powerplant
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = renewable_powerplant
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = renewable_powerplant
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = renewable_powerplant
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			AND = { 
+				num_of_civilian_factories_available_for_projects > 25
+				ai_renewable_powerplant_target > ROOT.renewable_powerplant_total
+				is_ai = yes
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = renewable_powerplant
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = renewable_powerplant
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+	}
+	
+##### TEMPORARY FIX FOR VANILLA AI ERROR #####
+	if = {
+		limit = { 
+			AND = { 
+				num_of_civilian_factories_available_for_projects > 75
+				ai_nuclear_powerplant_target > ROOT.nuclear_powerplant_total
+				is_ai = yes
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = nuclear_powerplant
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = nuclear_powerplant
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = nuclear_powerplant
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = nuclear_powerplant
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			AND = { 
+				num_of_civilian_factories_available_for_projects > 50
+				ai_nuclear_powerplant_target > ROOT.nuclear_powerplant_total
+				is_ai = yes
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = nuclear_powerplant
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = nuclear_powerplant
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+	}
+	
+##### TEMPORARY FIX FOR VANILLA AI ERROR #####
+	if = {
+		limit = { 
+			AND = { 
+				num_of_civilian_factories_available_for_projects > 50
+				ai_office_park_target > ROOT.office_park_total
+				is_ai = yes
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = office_park
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = office_park
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = office_park
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = office_park
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = office_park
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = office_park
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			AND = { 
+				num_of_civilian_factories_available_for_projects > 25
+				ai_office_park_target > ROOT.office_park_total
+				is_ai = yes
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = office_park
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = office_park
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = office_park
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = office_park
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			AND = { 
+				num_of_civilian_factories_available_for_projects > 10
+				ai_office_park_target > ROOT.office_park_total
+				is_ai = yes
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = office_park
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = office_park
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+	}
+	
+##### TEMPORARY FIX FOR VANILLA AI ERROR #####
+	if = {
+		limit = { 
+			AND = { 
+				num_of_civilian_factories_available_for_projects > 50
+				ai_agri_industrial_complex_target > ROOT.agri_industrial_complex_total
+				is_ai = yes
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = agri_industrial_complex
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = agri_industrial_complex
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = agri_industrial_complex
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = agri_industrial_complex
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = agri_industrial_complex
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = agri_industrial_complex
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			AND = { 
+				num_of_civilian_factories_available_for_projects > 25
+				ai_agri_industrial_complex_target > ROOT.agri_industrial_complex_total
+				is_ai = yes
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = agri_industrial_complex
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = agri_industrial_complex
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = agri_industrial_complex
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = agri_industrial_complex
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			AND = { 
+				num_of_civilian_factories_available_for_projects > 10
+				ai_agri_industrial_complex_target > ROOT.agri_industrial_complex_total
+				is_ai = yes
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					free_building_slots = {
+						building = agri_industrial_complex
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = agri_industrial_complex
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+	}
+}
 
 
 

@@ -107,6 +107,7 @@ country_event  = {
 		name = "Nagy Must be Re-Appointed Prime Minister"
 		news_event = HUNGARIAN_REV.10
 		HUN = {
+			country_event = HUNGARIAN_REV.11
 			set_politics = {
 				ruling_party = trotskyism
 				elections_allowed = no
@@ -168,10 +169,16 @@ country_event  = {
 	option = {
 		name = "Let Diplomacy Prevail"
 		HUN = { country_event = HUNGARIAN_REV.15 }
+		ai_chance = {
+			factor = 20
+		}
 	}
 	option = {
 		name = "Disregard the Letter"
 		country_event = HUNGARIAN_REV.14
+		ai_chance = {
+			factor = 80
+		}
 	}
 } 
 country_event  = {
@@ -257,7 +264,7 @@ country_event  = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		name = ""
+		name = "Good"
 		news_event = HUNGARIAN_REV.21
 		SOV = { country_event = { id = HUNGARIAN_REV.22 days = 2 } }
 	}
