@@ -363,6 +363,16 @@ country_event = {
 
 	option = {
 		name = "One Less Despot in the World"
+		if = {
+			limit = { tag = DOM }
+			DOM = {
+				create_country_leader = {
+					name = "Ramfis Trujillo"
+					picture = "Ramfis_Trujillo.dds"
+					ideology = fascism_ideology
+				}
+			}
+		}
 	}
 }
 country_event = {
@@ -407,7 +417,7 @@ country_event = {
 
 country_event = {
 	id = pbsuccess.2
-	title = "Coup d'état Attempt"
+	title = "Coup d'ï¿½tat Attempt"
 	desc = pbsuccess.2.d
 	picture = report_event_notecrisis7
 
@@ -435,6 +445,7 @@ country_event = {
 		if = {
 			limit = {
 				date > 1956.1.1
+				NOT = { date > 1961.1.1 }
 			}
 			load_focus_tree = USA_Eisenhower_1956
 		}
@@ -1567,7 +1578,11 @@ country_event = {
 	title = "Election of 1968: Democratic Nomination"
 	desc = "Election of 1968: Democratic Nomination"
 	picture = GFX_report_event_usa_election_generic
-
+	trigger = {
+        tag = USA
+        date > 1968.7.15
+        date < 1968.9.31
+    }
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -1618,6 +1633,11 @@ country_event = {
 	desc = "Election of 1968: Republican Nomination"
 	picture = GFX_report_event_usa_election_generic
 
+	trigger = {
+        tag = USA
+        date > 1968.7.1
+        date < 1968.9.15
+    } 
 	fire_only_once = yes
 	is_triggered_only = yes
 
@@ -1745,7 +1765,7 @@ country_event = {
 		retire_country_leader = yes
 		create_country_leader = {
 			name = "Robert F. Kennedy"
-			picture = "Robert_F_Kennedy.dds"
+			picture = "Bobby_Kennedy.dds"
 			ideology = democratic_america
 		}
 		set_global_flag = rfk_68
@@ -2067,7 +2087,7 @@ country_event = {
 		retire_country_leader = yes
 		create_country_leader = {
 			name = "Robert F. Kennedy"
-			picture = "Robert_F_Kennedy.dds"
+			picture = "Bobby_Kennedy.dds"
 			ideology = democratic_america
 		}
 		load_focus_tree = USA_RFK_1972

@@ -540,7 +540,7 @@ focus_tree = {
 							name = light_air_bonus
 							bonus = 0.1
 							uses = 1
-							category = light_air
+							category = air_single_engine
 						}
 				}
 
@@ -4839,7 +4839,12 @@ focus_tree = {
 		x = 29
 		y = 9
 			completion_reward = {
-					add_ideas = free_press_5
+			remove_ideas = policy_media_temp_0
+			remove_ideas = policy_media_temp_1
+			remove_ideas = policy_media_temp_2
+			remove_ideas = policy_media_temp_3
+			remove_ideas = policy_media_temp_3a
+			add_ideas = policy_media_temp_3
 				}
 
 	}

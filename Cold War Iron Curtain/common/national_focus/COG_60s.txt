@@ -5,11 +5,6 @@ focus_tree = {
 	}
 	default = no
 	
-	shared_focus = GRE_1960s_non_aligned
-	
-	shared_focus = GRE_1960s_soviet_alignment
-	
-	shared_focus = GRE_1960s_american_alignment
 
 	focus = {
 		id = DOC_Indepencne_Secured
@@ -699,7 +694,10 @@ focus_tree = {
 			always = no
 		}
 		completion_reward = {
-			news_event = lumumba_deposed.1
+			if = {
+				limit = { NOT = { has_global_flag = lumumba_deposed_already } }
+				news_event = lumumba_deposed.1
+			}
 			set_politics = {
 				ruling_party = Liberal_Conservatism
 				elections_allowed = no

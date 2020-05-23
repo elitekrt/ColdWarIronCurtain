@@ -2,7 +2,7 @@
 		id = FRA_The_French_Navy
 		icon = GFX_goal_generic_navy_battleship
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -25
 			y = 7
@@ -21,7 +21,7 @@
 		id = FRA_The_French_Army
 		icon = GFX_Army_Officers_Coup_Attempt
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -38
 			y = 10
@@ -40,7 +40,7 @@
 		id = FRA_The_French_Airforce
 		icon = GFX_StrikeMarseillesFocus
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -51
 			y = 13
@@ -59,7 +59,7 @@
 		id = FRA_Surmar_Doctrine
 		icon = GFX_Army_Officers_Coup_Attempt
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -25
 			y = 7
@@ -75,7 +75,7 @@
 			completion_reward = {
 					add_tech_bonus = {
 							name = CHL_naval_doctrine
-							bonus = 0.5
+							bonus = 1
 							uses = 2
 							category = naval_doctrine
 						}
@@ -86,7 +86,7 @@
 		id = FRA_Naval_Bombers
 		icon = GFX_Aerial_Fleet
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -25
 			y = 7
@@ -102,7 +102,7 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = nav_bomber_bonus
-				bonus = 0.5
+				bonus = 1
 				uses = 1
 				category = naval_bomber
 			}
@@ -113,7 +113,7 @@
 		id = FRA_Porte_Avions
 		icon = GFX_Grand_Carrier
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -25
 			y = 7
@@ -129,7 +129,7 @@
 			completion_reward = {
 					add_tech_bonus = {
 							name = capital_ships_bonus
-							bonus = 0.75
+							bonus = 1
 							category = capital_tech
 							uses = 1
 						}
@@ -140,7 +140,7 @@
 		id = FRA_Marine_Commandos
 		icon = GFX_slotting_floppies
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -25
 			y = 7
@@ -159,7 +159,7 @@
 			completion_reward = {
 					add_tech_bonus = {
 							name = special_forces_bonus
-							bonus = 0.5
+							bonus = 1
 							uses = 2
 							category = sf_forces
 						}
@@ -169,7 +169,7 @@
 		id = FRA_Combined_Operations
 		icon = GFX_focus_generic_combined_arms
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -25
 			y = 7
@@ -185,7 +185,7 @@
 			completion_reward = {
 					add_tech_bonus = {
 							name = FRA_naval_doc
-							bonus = 0.15
+							bonus = 1
 							uses = 1
 							category = naval_doctrine
 						}
@@ -195,7 +195,7 @@
 		id = FRA_Logistical_Strongholds
 		icon = GFX_goal_generic_army_doctrines
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -25
 			y = 7
@@ -214,7 +214,7 @@
 			completion_reward = {
 					add_tech_bonus = {
 							name = logistic_bonus
-							bonus = 0.25
+							bonus = 1
 							uses = 2
 							technology = combat_service_support
 							technology = tech_logistics_company
@@ -228,7 +228,7 @@
 		id = FRA_New_Naval_Tactics
 		icon = GFX_goal_generic_NavalBases
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -25
 			y = 7
@@ -244,7 +244,7 @@
 			completion_reward = {
 					add_tech_bonus = {
 							name = CHL_naval_doctrine
-							bonus = 0.2
+							bonus = 1
 							uses = 1
 							category = naval_doctrine
 						}
@@ -254,7 +254,7 @@
 		id = FRA_American_Arms_Support
 		icon = GFX_focus_american_advisors
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -38
 			y = 10
@@ -279,7 +279,7 @@
 		id = FRA_Field_Hospitals
 		icon = GFX_focus_public_housing
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -38
 			y = 10
@@ -295,7 +295,7 @@
 			completion_reward = {
 					add_tech_bonus = {
 							name = hospital_bonus
-							bonus = 0.25
+							bonus = 1
 							uses = 2
 							technology = combat_service_support
 							technology = tech_field_hospital
@@ -310,7 +310,7 @@
 		id = FRA_Military_Service
 		icon = GFX_military_service_reduction
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -38
 			y = 10
@@ -331,7 +331,7 @@
 		id = FRA_Le_Gendarmerie
 		icon = GFX_focus_generic_military_mission
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -38
 			y = 10
@@ -355,7 +355,7 @@
 		id = FRA_The_Foriegn_Legion
 		icon = GFX_black_military
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -38
 			y = 10
@@ -377,7 +377,7 @@
 		id = FRA_Go_With_Tanks
 		icon = GFX_TanksAcrosstheBorder
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -38
 			y = 10
@@ -399,7 +399,7 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = armor_bonus
-				bonus = 0.5
+				bonus = 1
 				uses = 1
 				category = armor
 			}
@@ -409,7 +409,7 @@
 		id = FRA_Our_Artillery_Will_Destroy_the_Enemy
 		icon = GFX_goal_generic_army_artillery2
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -38
 			y = 10
@@ -428,7 +428,7 @@
 			completion_reward = {
 					add_tech_bonus = {
 							name = land_doc_bonus
-							bonus = 0.5
+							bonus = 1
 							uses = 1
 							category = artillery
 						}
@@ -439,7 +439,7 @@
 		id = FRA_Dassault_Ouragan
 		icon = GFX_dassaultf1
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -51
 			y = 13
@@ -455,9 +455,9 @@
 			completion_reward = {
 					add_tech_bonus = {
 							name = air_bonus
-							bonus = 0.15
+							bonus = 1
 							uses = 1
-							category = light_air
+							category = air_single_engine
 						}
 				}
 	}
@@ -465,7 +465,7 @@
 		id = FRA_First_Fighter_Jets
 		icon = GFX_goal_generic_air_fighter
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -51
 			y = 13
@@ -481,9 +481,9 @@
 			completion_reward = {
 					add_tech_bonus = {
 							name = air_bonus
-							bonus = 0.15
+							bonus = 1
 							uses = 1
-							category = light_air
+							category = air_single_engine
 						}
 				}
 
@@ -492,7 +492,7 @@
 		id = FRA_Jet_Bombers
 		icon = GFX_Jet_Research
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -51
 			y = 13
@@ -508,7 +508,7 @@
 			completion_reward = {
 					add_tech_bonus = {
 							name = jet_bomber_bonus
-							bonus = 0.5
+							bonus = 1
 							uses = 1
 							technology = jet_strategic_bomber1
 						}
@@ -519,7 +519,7 @@
 		id = FRA_Doctrine_Reorganization
 		icon = GFX_goal_generic_air_doctrine
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -51
 			y = 13
@@ -538,7 +538,7 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = air_doc_bonus
-				bonus = 0.15
+				bonus = 1
 				uses = 1
 				category = air_doctrine
 			}		
@@ -548,7 +548,7 @@
 		id = FRA_Establish_NATO_Bases
 		icon = GFX_nato
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -51
 			y = 13
@@ -576,7 +576,7 @@
 		id = FRA_Le_Parachutistes
 		icon = GFX_focus_generic_paratrooper
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -51
 			y = 13
@@ -595,7 +595,7 @@
 			completion_reward = {
 					add_tech_bonus = {
 							name = airborne_bonus
-							bonus = 0.25
+							bonus = 1
 							uses = 2
 							category = sf_forces
 						}
@@ -606,7 +606,7 @@
 		id = FRA_Airforce_Modernization
 		icon = GFX_goal_continuous_air_production
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		offset = {
 			x = -51
 			y = 13
@@ -622,9 +622,9 @@
 			completion_reward = {
 					add_tech_bonus = {
 							name = air_bonus
-							bonus = 0.15
+							bonus = 1
 							uses = 1
-							category = light_air
+							category = air_single_engine
 						}
 				}
 	}

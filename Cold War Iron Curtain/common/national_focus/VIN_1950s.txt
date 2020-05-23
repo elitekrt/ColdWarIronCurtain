@@ -39,6 +39,9 @@ focus_tree = {
 		cost = 10.00
 		x = 4
 		y = 0
+		available = {
+			owns_state = 786
+		}
 		completion_reward = {
 			every_owned_state = {
 					add_extra_state_shared_building_slots = 1
@@ -93,6 +96,9 @@ focus_tree = {
 		cost = 10.00
 		x = 14
 		y = 0
+		available = {
+			owns_state = 786
+		}
 		completion_reward = {
 			custom_effect_tooltip = AgriModernization_tt
 			add_to_variable = { agriBonus = 5 }
@@ -1411,7 +1417,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 				name = light_air_bonus
 				bonus = 1.25
 				uses = 1
-				category = light_air
+				category = air_single_engine
 			}
 		}
 	}
@@ -1453,7 +1459,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 				name = light_air_bonus
 				bonus = 1.25
 				uses = 1
-				category = light_air
+				category = air_single_engine
 			}
 		}
 	}

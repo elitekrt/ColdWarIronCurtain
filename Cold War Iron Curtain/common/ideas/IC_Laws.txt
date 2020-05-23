@@ -662,7 +662,7 @@ ideas = {
 			modifier = {
 				planning_speed = -0.1
 				army_speed_factor = -0.1
-				production_speed_buildings_factor = -0.1
+				production_speed_buildings_factor = -0.2
 			}
 		}
 		SOV_seventh_five_year_plan = { 
@@ -1015,7 +1015,13 @@ ideas = {
 				stability_factor = 0.03
 			}
 		}
-		
+		tax_break = {
+			removal_cost = -1
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.05
+			}		
+		}
 		Compulsory_Religous_Attendance = {
 			allowed = { always = no } 
 			modifier = {

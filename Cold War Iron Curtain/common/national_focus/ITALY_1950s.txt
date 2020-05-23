@@ -511,7 +511,7 @@ focus_tree = {
 							name = light_air_bonus
 							bonus = 1
 							uses = 2
-							category = light_air
+							category = air_single_engine
 						}
 				}
 	}
@@ -1898,7 +1898,10 @@ focus_tree = {
 		x = 27
 		y = 18
 		completion_reward = {
-			add_ideas = communism_banned
+			add_timed_idea = {
+				idea = communism_banned
+				days = 150
+			}
 		}
 
 
@@ -1914,7 +1917,12 @@ focus_tree = {
 		x = 21
 		y = 17
 		completion_reward = {
-		add_ideas = free_press_3
+			remove_ideas = policy_media_temp_0
+			remove_ideas = policy_media_temp_1
+			remove_ideas = policy_media_temp_2
+			remove_ideas = policy_media_temp_3
+			remove_ideas = policy_media_temp_3a
+			add_ideas = policy_media_temp_1
 		}
 
 	}
@@ -2171,7 +2179,12 @@ focus_tree = {
 		x = 21
 		y = 14
 		completion_reward = {
-			add_ideas = press_censorship_5
+			remove_ideas = policy_media_temp_0
+			remove_ideas = policy_media_temp_1
+			remove_ideas = policy_media_temp_2
+			remove_ideas = policy_media_temp_3
+			remove_ideas = policy_media_temp_3a
+			add_ideas = policy_media_temp_1
 		}
 	}
 	focus = {

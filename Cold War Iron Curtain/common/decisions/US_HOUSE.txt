@@ -1,4 +1,54 @@
 CONGRESS_US = {
+	USA_tax_break = {
+		icon = ger_mefo_bills
+		available = {
+			NOT = {
+				has_idea = tax_break
+			}
+		}
+		visible = {
+			NOT = {
+				has_idea = tax_break
+			} 
+		}
+		cost = 25
+		days_remove = 30
+		days_re_enable = 180
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+			add_timed_idea = {
+			days = 180
+			idea = tax_break
+		}
+		}
+	}
+	USA_subsidies = {
+		icon = ger_mefo_bills
+		available = {
+			NOT = {
+				has_idea = industrial_subsidies
+			}
+		}
+		visible = {
+			NOT = {
+				has_idea = industrial_subsidies
+			} 
+		}
+		cost = 25
+		days_remove = 30
+		days_re_enable = 180
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+			add_timed_idea = {
+			days = 180
+			idea = industrial_subsidies
+		}
+		}
+	}
 	The_Admission_of_Alaska_and_Hawaii = {
 	
 		allowed = { tag = USA }
@@ -905,7 +955,7 @@ CONGRESS_US = {
 				add_political_power = 30
 					add_tech_bonus = {
 							name = industrial_bonus
-							bonus = 0.15
+							bonus = 1
 							uses = 1
 							category = industry
 						}
@@ -924,7 +974,7 @@ CONGRESS_US = {
 					add_political_power = 30
 					add_tech_bonus = {
 							name = industrial_bonus
-							bonus = 0.15
+							bonus = 1
 							uses = 1
 							category = industry
 						}
@@ -1419,7 +1469,7 @@ CONGRESS_US = {
 				add_political_power = 30
 					add_tech_bonus = {
 							name = agri_tech_bonus
-							bonus = 0.10
+							bonus = 1
 							category = agri_tech
 						}
 					}
@@ -1436,7 +1486,7 @@ CONGRESS_US = {
 					add_political_power = 30
 					add_tech_bonus = {
 							name = agri_tech_bonus
-							bonus = 0.10
+							bonus = 1
 							category = agri_tech
 						}
 				}
@@ -3669,31 +3719,6 @@ CONGRESS_US = {
 			
 			clr_country_flag = law_passing
 		}
-	}
-	Drug_Efficacy_Amendment = {
-	
-		allowed = { tag = USA }
-		
-		available = {
-			NOT = { has_country_flag = law_passing }
-		}
-		visible = {
-			NOT = { has_country_flag = law_passing }
-		   has_country_flag = Drug_Efficacy_Amendment_vote
-		}
-		cost = 0
-		fire_only_once = yes
-		
-		complete_effect = {
-			set_country_flag = law_passing
-			
-			hidden_effect = {
-				country_event = { id = congress.1 days = 5 }
-				country_event = { id = congress.2 days = 10 }
-				country_event = { id = congress.7 days = 15 }
-			}
-			add_ideas = Drug_Efficacy_Amendment
-		}
 		days_remove = 50
 		remove_effect = {
 			if = {
@@ -3869,7 +3894,7 @@ CONGRESS_US = {
 		}
 		visible = {
 			NOT = { has_country_flag = law_passing }
-		   has_country_flag = Social_Security_Act_of_1965_vote
+		   has_country_flag = Total_Economic_Reconstruction_of_Family_Assistance_Vote 
 		}
 		cost = 0
 		fire_only_once = yes
@@ -4767,7 +4792,7 @@ CONGRESS_US = {
 		}
 		visible = {
 			NOT = { has_country_flag = law_passing }
-		   has_country_flag = Social_Security_Act_of_1965_vote
+		   has_country_flag = Social_Security_Act_of_1964_vote
 		}
 		cost = 0
 		fire_only_once = yes
@@ -5205,7 +5230,7 @@ CONGRESS_US = {
 		}
 		visible = {
 			NOT = { has_country_flag = law_passing }
-		   has_country_flag = Social_Security_Act_of_1965_vote
+		  # has_country_flag = Social_Security_Act_of_1965_vote
 		}
 		cost = 0
 		fire_only_once = yes
@@ -5215,7 +5240,8 @@ CONGRESS_US = {
 			
 			hidden_effect = {
 				country_event = { id = congress.1 days = 1 }
-				country_event = { id = congress.5 days = 2 }
+				country_event = { id = congress.2 days = 5 }
+				country_event = { id = congress.7 days = 5 }
 			}
 			add_political_power = 25
 		}
@@ -5237,8 +5263,10 @@ CONGRESS_US = {
 			}
 			if = {
 				limit = { 
-					check_variable = { supseat < 218 } 
-					check_variable = { supseat_sen < 50 } 
+					OR = {
+						check_variable = { supseat < 218 } 
+						check_variable = { supseat_sen < 50 } 
+					}
 				}
 				country_event = { id = parliament.1 }
 			}
@@ -5570,7 +5598,7 @@ CONGRESS_US = {
 				country_event = { id = congress.4 days = 10 }
 				country_event = { id = congress.7 days = 15 }
 			}
-			add_ideas = equal_pay_act
+			add_ideas = foriegn_assistance_act
 		}
 		days_remove = 50
 		remove_effect = {
@@ -5581,7 +5609,7 @@ CONGRESS_US = {
 				}
 				country_event = { id = us_congress.100 }
 				add_to_variable = { foriegnPowerProjectionMonth = 150 }
-				add_ideas = equal_pay_act
+				add_ideas = foriegn_assistance_act
 			}
 			if = {
 				limit = { 

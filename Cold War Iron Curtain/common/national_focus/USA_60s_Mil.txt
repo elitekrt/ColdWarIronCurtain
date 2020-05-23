@@ -95,26 +95,29 @@
 			completion_reward = {
 					random_owned_controlled_state = {
 							limit = {
-									free_building_slots = {
-											building = rocket_site
-											size > 3
-										}
+								free_building_slots = {
+									building = arms_factory
+									size > 1
+									include_locked = yes
 								}
+									
+							}
 							add_building_construction = {
-									type = rocket_site
+									type = arms_factory
 									level = 2
 									instant_build = yes
 								}
 						}
 					random_owned_controlled_state = {
 							limit = {
-									free_building_slots = {
-											building = rocket_site
-											size > 3
-										}
+								free_building_slots = {
+									building = arms_factory
+									size > 1
+									include_locked = yes
 								}
+							}
 							add_building_construction = {
-									type = rocket_site
+									type = arms_factory
 									level = 2
 									instant_build = yes
 								}
@@ -500,10 +503,10 @@
 		y = 3
 		completion_reward = {
 			add_tech_bonus = {
-				name = Nuclear_Bomber_Development_bonus
+				name = High_Mach_Bomber_Development_bonus
 				bonus = 1
 				uses = 1
-				category = bomber_nuclear
+				category = bomber_high_mach
 			}		
 		}	 
 	} 
@@ -523,10 +526,10 @@
 		y = 3
 		completion_reward = {
 			add_tech_bonus = {
-				name = High_Mach_Bomber_Development_bonus
+				name = Nuclear_Bomber_Development_bonus
 				bonus = 1
 				uses = 1
-				category = bomber_high_mach
+				category = bomber_nuclear
 			}		
 		}
 	}

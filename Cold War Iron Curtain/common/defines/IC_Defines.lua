@@ -26,7 +26,7 @@ NDefines.NBuildings.AIRBASE_CAPACITY_MULT = 50 -- Each level of airbase building
 NDefines.NBuildings.ANTI_AIR_SUPERIORITY_MULT = 100.0 -- How much air superiority reduction to the enemy does our AA guns? Normally each building level = -1 reduction. With this multiplier.
 NDefines.NBuildings.INFRASTRUCTURE_RESOURCE_BONUS= 0.0
 NDefines.NBuildings.MAX_BUILDING_LEVELS = 200
-NDefines.NBuildings.MAX_SHARED_SLOTS = 40
+NDefines.NBuildings.MAX_SHARED_SLOTS = 42
 NDefines.NBuildings.RADAR_RANGE_MAX = 220 -- Range is interpolated between building levels 1-15.
 NDefines.NBuildings.SUPPLY_PORT_LEVEL_THROUGHPUT = 20 -- Supply throughput per level of naval base. Vanilla value is 3.
 
@@ -118,6 +118,8 @@ NDefines.NAI.MAX_AHEAD_RESEARCH_PENALTY = 1
 NDefines.NAI.RESEARCH_AHEAD_OF_TIME_FACTOR = 9999999
 
 NDefines.NProduction.MAX_EQUIPMENT_RESOURCES_NEED = 4
+NDefines.NProduction.MAX_CIV_FACTORIES_PER_LINE = 10
+NDefines.NProduction.BASE_FACTORY_SPEED_NAV = 1.2 -- Double construction time for ships, vanilla 25
 NDefines.NProduction.INFRA_MAX_CONSTRUCTION_COST_EFFECT = 0.7
 NDefines.NProduction.EQUIPMENT_MODULE_ADD_XP_COST = 2.0
 NDefines.NProduction.EQUIPMENT_MODULE_REPLACE_XP_COST = 2.0
@@ -135,3 +137,10 @@ NDefines.NOperatives.AGENCY_UPGRADE_DAYS = 100
 NDefines.NOperatives.AGENCY_OPERATIVE_RECRUITMENT_TIME = 120
 NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 15
 NDefines.NOperatives.AGENCY_UPGRADE_PER_OPERATIVE_SLOT = 10
+
+NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.025
+NDefines.NMilitary.LAND_COMBAT_ORG_DAMAGE_MODIFIER = 0.025
+NDefines.NMilitary.LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.08
+NDefines.NMilitary.LAND_AIR_COMBAT_ORG_DAMAGE_MODIFIER = 0.12
+NDefines.NMilitary.LAND_COMBAT_STR_ARMOR_ON_SOFT_DICE_SIZE = 6
+NDefines.NMilitary.LAND_COMBAT_COLLATERAL_FACTOR = 0.02

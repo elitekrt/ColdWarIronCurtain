@@ -27,7 +27,7 @@ ic_pulse = {
 		every_owned_state = {
 			if = {
 				limit = {
-					has_resistance > 90
+					resistance > 90
 					is_core_of = NLF
 					is_fully_controlled_by = VIE
 				}
@@ -47,6 +47,16 @@ ic_pulse = {
 		}
 		country_event = French_PM.1
 		set_country_flag = French_Gov_1
+	}
+	if = {
+		limit = {
+			tag = FRA
+			date > 1953.12.01
+			date < 1955.01.01
+			NOT = { has_country_flag = French_Gov_11 }
+		}
+		set_country_flag = French_Gov_11
+		country_event = french_elections.11
 	}
 	if = {
 		limit = {
@@ -1635,8 +1645,8 @@ ic_pulse = {
 	 if = {
 		limit = {
 				tag = FRA
-				date > 1961.04.20
-				date < 1961.04.30
+				date > 1961.04.01
+				date < 1961.05.30
 			}
 		country_event = algeirs.2
 	}
@@ -2204,6 +2214,36 @@ ic_pulse = {
 			}
 			if = {
 				limit = {
+					date > 1972.12.31
+					date < 1973.01.31
+					NOT = {
+						has_country_flag = focus_tree_60_reset
+					}
+					NOT = { tag = USA }
+					NOT = { tag = SOV }
+					NOT = { tag = FRA }
+					NOT = { tag = CAR }
+
+				}
+				load_focus_tree = generic_70s
+				set_country_flag = focus_tree_73_reset
+			}
+			if = {
+				limit = {
+					date > 1972.12.31
+					date < 1973.01.31
+					NOT = {
+						has_country_flag = focus_tree_60_reset
+					}
+					tag = FRA 
+
+				}
+				load_focus_tree = FRA_1970s
+				set_country_flag = focus_tree_73_reset
+			}
+			
+			if = {
+				limit = {
 					tag = ROM
 					date > 1965.04.02
 					date < 1965.07.22					
@@ -2269,6 +2309,16 @@ ic_pulse = {
 					date < 1952.04.01
 				}
 				country_event = iran_elections.1952
+			}
+			if = {
+				limit = {
+					tag = USA
+					date > 1961.06.01
+					date < 1961.08.01
+					NOT = { has_country_flag = Jupiter_Misisles_Turkey }
+				}
+				set_country_flag = Jupiter_Misisles_Turkey
+				news_event = cubamc.1
 			}
 			if = {
 				limit = {
@@ -4431,8 +4481,10 @@ ic_pulse = {
 			date < 1967.09.01
 			NOT = { has_country_flag = Biafra_War_Start }
 			tag = NGA
+			NOT = { country_exists = NGA }
 		}
-		complete_national_focus = NGA_1960s_Biafran_War
+		set_country_flag = Biafra_War_Start
+		NGA = { complete_national_focus = NGA_1960s_Biafran_War }
 		BFR = {
 			transfer_state = 1122
 			create_corps_commander = {
@@ -5565,7 +5617,7 @@ ic_pulse = {
 				country_exists = COG 
 			}
 			NOT = {
-				set_global_flag = free_republic_of_the_congo
+				has_global_flag = free_republic_of_the_congo
 			}
 		}
 		country_event = { id = congo.6 days = 1  }
