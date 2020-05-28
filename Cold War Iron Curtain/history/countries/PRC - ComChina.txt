@@ -163,7 +163,8 @@ set_variable = { var = domestic_influence_amount value = 10000 }
 		type = civil_war
 	}
 }
-
+set_country_flag = weapon_purchasing_CUM_permit
+set_country_flag = weapon_purchasing_MAO_permit
 add_ideas = {
 	closed_economy
 	extensive_conscription
@@ -178,6 +179,7 @@ add_ideas = {
 	agrarian_bourgeoisie_1
 	international_credibility_3
 	administration_integration_3
+	Major_Power_Spy_Bonus
 
 	policy_military_temp_3
 	policy_welfare_temp_1

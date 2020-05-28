@@ -6,14 +6,14 @@ focus_tree = {
 	}
 	default = no
 	shared_focus = USA_60s_The_CIA
-	shared_focus = USA_60s_Domestic_Affairs
+	
 	shared_focus = USA_60s_The_American_Armed_Forces
 	shared_focus = USA_60s_State_Department
 	shared_focus = USA_60s_Rethinking_our_Foriegn_Policies
 
 	focus = {
 		id = USA_ROCKEFELLER64_The_Rockefeller_Administration
-		icon = GFX_goal_unknown
+		icon = GFX_RockefellerAdministration
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		x = 5

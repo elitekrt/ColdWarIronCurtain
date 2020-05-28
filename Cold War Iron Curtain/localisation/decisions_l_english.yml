@@ -17,6 +17,13 @@
  Sarin_Attack_The_Contras:0 "Launch Sarin Attack on the Contras"
  VX_Attack_The_Contras:0 "Launch VX Attack on the Contras"
  The_Contras:0 "The Contras"
+ send_tanks_to_vietnam:0 "Send Tanks to North Vietnam"
+ communist_International_aid_category:0 "Communist International Aid"
+ send_guns_to_vietnam:0 "Send Guns to North Vietnam"
+ send_artillery_to_vietnam:0 "Send Artillery to North Vietnam"
+ send_support_equipment_to_vietnam:0 "Send Support Equipment to North Vietnam"
+ send_direct_fire_gun_to_vietnam:0 "Send AT Equipment to North Vietnam"
+ send_trucks_to_vietnam:0 "Send Trucks to North Vietnam"
  
  contra_insurgency_options.1.d:0 "The Contras rely on fear and intimidation to express themselves. Those who support them are often former thugs or greedy individuals desperate for cash provided by foreigners opposed to our revolution. As such it is not that hard for us to recruit locals in Contra controlled areas who are willing to do their patriotic duty and gather information for us. In a recent intelligence operation, we were able to successfully recruit a villager near a major Contra base. He has provided us invaluable information on their recruitment tactics, deployments, and level of arms supplies. More importantly, as many of the Contras shop or spend their free time in the village, we are also gaining information on future Contra offensives. From this information we are better able to deploy our forces in the area to counter their forces and were able to intercept several attempts by the Contras to bring new fighter in the area."
  contra_insurgency_options.2.d:0 "The Contras rely on fear and intimidation to express themselves. Those who support them are often former thugs or greedy individuals desperate for cash provided by foreigners opposed to our revolution. As such it is not that hard for us to recruit locals in Contra controlled areas who are willing to do their patriotic duty and gather information for us. In a recent intelligence operation, we were able to successfully recruit a villager in a Contra controlled area. The source at the time proved useful and provided intelligence that indicated a major Contra offensive in the area. We deployed forces to counter this upcoming offensive, but it ended up happening in a different area and the Contras drove off our unprepared forces. We realized our recruit was a double agent and had facilitated the Contra success. Our operation had been a failure."
@@ -383,7 +390,7 @@
  weapon_purchasing.0.cancel:0 "Cancel"
  
  #CAP#
- weapon_purchasing.CAP.d:0 "Select which type of equipment you would like to negotiate contracts for."
+ weapon_purchasing.CAP.d:0 "Select which type of equipment you would like to negotiate contracts for.\nLow-Tier - 100 PP\nMid-Tier - 200 PP\n High-Tier - 300 PP"
  
  weapon_purchasing.CAP.low:0 "Low-Tier Contract (Infantry, light weapons)"
  weapon_purchasing.CAP.mid:0 "Mid-Tier Contract (Armor, heavy weapons)"
@@ -392,7 +399,7 @@
  weapon_purchasing.CAP.cancel:0 "Cancel"
  
  #SOV#
- weapon_purchasing.CUM.d:0 "Select which type of equipment you would like to negotiate contracts for."
+ weapon_purchasing.CUM.d:0 "Select which type of equipment you would like to negotiate contracts for.\nLow-Tier - 100 PP\nMid-Tier - 200 PP\n High-Tier - 300 PP"
  
  weapon_purchasing.CUM.low:0 "Low-Tier Contract (Infantry, light weapons)"
  weapon_purchasing.CUM.mid:0 "Mid-Tier Contract (Armor, heavy weapons)"
@@ -401,7 +408,7 @@
  weapon_purchasing.CUM.cancel:0 "Cancel"
  
  #PRC#
- weapon_purchasing.MAO.d:0 "Select which type of equipment you would like to negotiate contracts for."
+ weapon_purchasing.MAO.d:0 "Select which type of equipment you would like to negotiate contracts for.\nLow-Tier - 100 PP\nMid-Tier - 200 PP\n High-Tier - 300 PP"
  
  weapon_purchasing.MAO.low:0 "Low-Tier Contract (Infantry, light weapons)"
  weapon_purchasing.MAO.mid:0 "Mid-Tier Contract (Armor, heavy weapons)"
@@ -410,7 +417,7 @@
  weapon_purchasing.MAO.cancel:0 "Cancel"
  
  #IMF#
- weapon_purchasing.IND.d:0 "Select which type of equipment you would like to negotiate contracts for."
+ weapon_purchasing.IND.d:0 "Select which type of equipment you would like to negotiate contracts for.\nLow-Tier - 100 PP\nMid-Tier - 200 PP\n High-Tier - 300 PP"
  
  weapon_purchasing.IND.low:0 "Low-Tier Contract (Infantry, light weapons)"
  weapon_purchasing.IND.mid:0 "Mid-Tier Contract (Armor, heavy weapons)"

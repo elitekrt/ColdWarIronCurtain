@@ -18,6 +18,20 @@ Angolan_War_Decisions_categorty = {
 
 	}	
 }
+communist_International_aid_category = {
+
+	icon = generic_propaganda
+
+	allowed = {
+		OR = {
+		has_government = communism
+		has_government = maoism
+		}
+		
+	}
+	
+	visible_when_empty = no
+}
 Iran_Iraq_War_decision_category = {
 
 	icon = revolt
@@ -72,7 +86,7 @@ Eritrean_War = {
 		ETH = { 
 			has_country_flag = Eritrean_War 
 			owns_state = 1000
-		}
+		}	
 		country_exists = ERI
 		country_exists = ETH
 	}
