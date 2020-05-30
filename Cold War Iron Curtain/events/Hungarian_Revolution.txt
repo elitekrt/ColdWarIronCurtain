@@ -94,6 +94,10 @@ news_event  = {
 	major = yes
 	option = {
 		name = "This will not end well"
+		if = {
+			limit = { tag = USA }
+			complete_national_focus = USA_The_Hungarian_Revolution
+		}
 	}
 }  
 country_event  = {
@@ -115,6 +119,12 @@ country_event  = {
 			add_popularity = {
 				ideology = trotskyism
 				popularity = 0.35
+			}
+			create_country_leader = {
+				name = "Imre Nagy"
+				picture = "Imre_Nagy.dds"
+				expire = "1956.1.1"
+				ideology = revolutionary_socialism
 			}
 		}
 	}
@@ -265,7 +275,11 @@ country_event  = {
 	fire_only_once = yes
 	option = {
 		name = "Good"
+		SOV = {
+
+		}
 		news_event = HUNGARIAN_REV.21
+		leave_faction = yes
 		SOV = { country_event = { id = HUNGARIAN_REV.22 days = 2 } }
 	}
 } 
@@ -290,10 +304,20 @@ country_event  = {
 	fire_only_once = yes
 	option = {
 		name = "Launch the Invasion"
+		add_to_faction = HUN
 		HUN = { 
 			set_politics = {
 				ruling_party = communism
 				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "János Kádár"
+				picture = "Janos_Kadar.dds"
+				ideology = marxism_leninism 
+				traits = {
+					conciliatory_pragmatic
+					goulash_communism
+				}
 			}
 			complete_national_focus = HUN_Nagys_Falling_Out_From_Moscow
 		}

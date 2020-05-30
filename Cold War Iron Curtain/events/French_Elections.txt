@@ -131,6 +131,7 @@ country_event = {
 
 	option = {
 		name = French_PM.4.o.a
+		
 		create_country_leader = {
 			name = "Rene Pleven"
 			picture = "Rene_Pleven.dds"
@@ -240,7 +241,6 @@ country_event = {
 			ruling_party = Social_Liberalism
 			elections_allowed = no
 		}
-		#country_event = french_elections.11
 		hidden_effect = {
 			set_country_flag = Mayer_PM
 			country_event = {
@@ -281,6 +281,10 @@ country_event = {
 				id = French_PM.9
 				days = 147
 			}
+		country_event = {
+			id = french_elections.11
+			days = 170
+		}
 		ai_chance = {
 			factor = 1
 		}
@@ -299,10 +303,11 @@ country_event = {
 
 	option = {
 		name = French_PM.9.o.a 
+		retire_country_leader = yes
 		create_country_leader = {
 			name = "Pierre Mendès-France"
 			picture = "Portrait_FRA_Mendes_France.dds"
-			ideology = Social_Liberalism
+			ideology = social_liberal
 		}
 		set_politics = {
 			ruling_party = Social_Liberalism
@@ -310,6 +315,10 @@ country_event = {
 		}
 		hidden_effect = {
 			set_country_flag = P_M_F
+			country_event = {
+				id = French_PM.10
+				days = 228
+			}
 		}
 	}
 }
@@ -325,10 +334,11 @@ country_event = {
 
 	option = {
 		name = French_PM.10.o.a 
+		retire_country_leader = yes
 		create_country_leader = {
 			name = "Edgar Faure"
 			picture = "Portrait_FRA_Edgar_Faure.dds"
-			ideology = Social_Liberalism
+			ideology = social_liberal
 		}
 		set_politics = {
 			ruling_party = Social_Liberalism
@@ -339,7 +349,7 @@ country_event = {
 		}
 		country_event = {
 				id = French_PM.10
-				days = 238
+				days = 330
 			}
 	}
 }
@@ -355,10 +365,11 @@ country_event = {
 
 	option = {
 		name = French_PM.11.o.a 
+		retire_country_leader = yes
 		create_country_leader = {
 			name = "Maurice Bourgès-Maunoury"
 			picture = "Maurice_Bourgès.dds"
-			ideology = Social_Liberalism
+			ideology = social_liberal
 		}
 		set_politics = {
 			ruling_party = Social_Liberalism
@@ -385,10 +396,11 @@ country_event = {
 
 	option = {
 		name = French_PM.12.o.a 
+		retire_country_leader = yes
 		create_country_leader = {
 			name = "Félix Gaillard"
 			picture = "Portrait_France_Marcel_Edmond_Naegelen.dds"
-			ideology = Social_Liberalism
+			ideology = social_liberal
 		}
 		set_politics = {
 			ruling_party = Social_Liberalism
@@ -415,13 +427,14 @@ country_event = {
 
 	option = {
 		name = French_PM.13.o.a 
+		retire_country_leader = yes
 		create_country_leader = {
 			name = "Pierre Pflimlin"
 			picture = "Pierre_Pfimlin.dds"
 			ideology = Christian_Democratic
 		}
 		set_politics = {
-			ruling_party = Christian_Democratic
+			ruling_party = christian_democracy
 			elections_allowed = no
 		}
 		hidden_effect = {
@@ -439,7 +452,6 @@ country_event = {
 
 
 
-}
 	# 1953 Presidential Elections
 country_event = {
 	id = french_elections.11

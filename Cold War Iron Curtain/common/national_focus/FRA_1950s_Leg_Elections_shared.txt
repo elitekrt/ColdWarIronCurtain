@@ -393,7 +393,7 @@
 				name = nuclear
 				bonus = 1.25
 				uses = 1
-				category = nuclear
+				category = nuclear_weapons
 			}
 		}
 	}
@@ -1892,7 +1892,7 @@
 		completion_reward = {
 			set_politics = {
 				ruling_party = conservative
-				elections_allowed = yes
+				elections_allowed = no
 			}
 			create_country_leader = {
 				name = "Charles de Gaulle"
