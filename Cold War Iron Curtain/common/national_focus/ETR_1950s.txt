@@ -325,6 +325,7 @@ focus_tree = {
 		x = 19
 		y = 1
 		completion_reward = {
+			custom_effect_tooltip = Resource_Efficiency_TT
 			add_timed_idea = {
 				idea = Resource_Efficiency
 				days = 1250
@@ -1323,6 +1324,7 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			PRC = {
+				annex_country = { target = SIK transfer_troops = yes }
 				country_event = prc.12
 			}
 		}

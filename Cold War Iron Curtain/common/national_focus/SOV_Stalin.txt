@@ -160,6 +160,7 @@ focus_tree = {
 			every_owned_state = {
 				limit = {
 					is_core_of = UKR
+					state_population > 1500000
 				}
 				add_building_construction = {
 					type = infrastructure
@@ -188,6 +189,7 @@ focus_tree = {
 			every_owned_state = {
 				limit = {
 					is_core_of = UKR
+					state_population > 1500000
 				}
 				add_building_construction = {
 					type = agri_industrial_complex
@@ -261,6 +263,7 @@ focus_tree = {
 						is_core_of = LAT
 						is_core_of = LIT
 					}
+					state_population > 300000
 				}
 				add_building_construction = {
 					type = infrastructure
@@ -1286,7 +1289,7 @@ focus_tree = {
 			add_to_variable = { gulag_factor_neg = -0.01 }		
 			add_to_variable = { gulag_factor_five = 0.05 }			
 			add_to_variable = { gulag_factor_five_neg = -0.05 }
-			add_to_variable = { cpsu_strength = -0.05 }
+			add_to_variable = { cpsu_strength_factor = -0.05 }
 			custom_effect_tooltip = cpsu_strength_decrease_TT
 			custom_effect_tooltip = gulag_factor_increase_TT
 		}
@@ -1321,7 +1324,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 			country_event = Stalin_Purge.1
-			add_to_variable = { cpsu_strength = -0.05 }
+			add_to_variable = { cpsu_strength_factor = -0.05 }
 			custom_effect_tooltip = cpsu_strength_decrease_TT
 		}
 	}
@@ -1344,7 +1347,7 @@ focus_tree = {
 				days = 750
 			}
 			custom_effect_tooltip = cpsu_strength_decrease_TT
-			add_to_variable = { cpsu_strength = -0.05 }
+			add_to_variable = { cpsu_strength_factor = -0.05 }
 		}
 	}
 	focus = {
@@ -1360,7 +1363,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.02
 			country_event = Stalin_Jew.1
-			add_to_variable = { cpsu_strength = -0.05 }
+			add_to_variable = { cpsu_strength_factor = -0.05 }
 			custom_effect_tooltip = cpsu_strength_decrease_TT
 		}
 	}
@@ -1379,7 +1382,7 @@ focus_tree = {
 				days = 500
 				idea = leftwing_deathsquads
 			}
-			add_to_variable = { cpsu_strength = -0.05 }
+			add_to_variable = { cpsu_strength_factor = -0.05 }
 			custom_effect_tooltip = cpsu_strength_decrease_TT
 		}
 
@@ -1437,7 +1440,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 			country_event = Stalin_Purge.2
-			add_to_variable = { cpsu_strength = -0.05 }
+			add_to_variable = { cpsu_strength_factor = -0.05 }
 			custom_effect_tooltip = cpsu_strength_decrease_TT
 		}
 	}
