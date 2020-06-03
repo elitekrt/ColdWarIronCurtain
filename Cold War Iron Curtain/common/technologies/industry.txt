@@ -4181,6 +4181,14 @@ technologies = {
 			position = { x = 28 y = 10 }
 		}
 		
+		on_research_complete = {
+			modify_building_resources = {
+				building = renewable_powerplant
+				resource = electricity
+				amount = 1
+			}
+		}
+		
 		ai_will_do = {
 			factor = 30
 		}

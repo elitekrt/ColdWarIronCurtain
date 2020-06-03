@@ -1853,6 +1853,9 @@ ic_pulse = {
 			NOT = {
 				has_country_flag = crisis_1958
 			}
+			NOT = { has_government = communism }
+			NOT = { has_government = trotskyism }
+			NOT = { has_government = maoism }
 		}
 		country_event = fra_crisis.2
 		set_country_flag = crisis_1958
@@ -2195,7 +2198,7 @@ ic_pulse = {
 					date > 1972.12.31
 					date < 1973.01.31
 					NOT = {
-						has_country_flag = focus_tree_60_reset
+						has_country_flag = focus_tree_73_reset
 					}
 					NOT = { tag = USA }
 					NOT = { tag = SOV }
@@ -2211,7 +2214,7 @@ ic_pulse = {
 					date > 1972.12.31
 					date < 1973.01.31
 					NOT = {
-						has_country_flag = focus_tree_60_reset
+						has_country_flag = focus_tree_73_reset
 					}
 					tag = FRA 
 
@@ -2282,6 +2285,22 @@ ic_pulse = {
 			}
 			if = {
 				limit = {
+					date > 1955.07.01
+					date < 1955.08.25
+					tag = YEM
+				}
+				country_event = YEM_COuP.1
+			}
+			if = {
+				limit = {
+					date > 1959.06.01
+					date < 1955.07.25
+					tag = YEM
+				}
+				country_event = YEM_COuP.4
+			}			
+			if = {
+				limit = {
 					tag = PER
 					date > 1952.03.01
 					date < 1952.04.01
@@ -2295,14 +2314,6 @@ ic_pulse = {
 					date < 1958.09.01
 				}
 				country_event = nfc.1
-			}
-			if = {
-				limit = {
-					tag = CHL
-					date > 1973.09.01
-					date < 1973.11.01
-				}
-				country_event = chile.1
 			}
 			if = {
 				limit = {
@@ -6422,7 +6433,32 @@ ic_pulse = {
 				country_event = { id = GRE_Elections.2 days = 1 }
 			}
 
-
+    if = {
+				limit = {
+					tag = GRE
+					date > 1956.2.18
+					date < 1957.1.1
+					NOT = { has_government = neutrality }
+					NOT = { has_government = monarchism }
+					NOT = { has_government = communism }
+					NOT = { has_government = maoism }
+				}
+				country_event = { id = GRE_Elections.3 days = 1 }
+			}
+			
+	if = {
+				limit = {
+					tag = GRE
+					date > 1958.5.11
+					date < 1959.1.1
+					NOT = { has_government = neutrality }
+					NOT = { has_government = monarchism }
+					NOT = { has_government = communism }
+					NOT = { has_government = maoism }
+				}
+				country_event = { id = GRE_Elections.4 days = 1 }
+			}
+			
 	if = {
 		limit = {
 			original_tag = SPR

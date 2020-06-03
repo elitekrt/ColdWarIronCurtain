@@ -243,6 +243,22 @@ add_ideas = {
 }
 
 if = {
+	limit = { has_dlc = "Man the Guns" }
+	create_equipment_variant = {
+		name = "Type IXA"
+		type = sub_hull_ww  
+		parent_version = 0
+		name_group = USA_SS_HISTORICAL
+		modules = {
+			fixed_sub_torpedo_slot = sub_torpedo_ww
+			fixed_sub_engine_slot = sub_engine_ww
+			fixed_maritime_slot = sonar_ww 
+			mid_1_custom_slot = sub_torpedo_ww
+		}
+	}
+}
+
+if = {
 	limit = {
 		has_dlc = "Together for Victory"
 	}
@@ -344,6 +360,7 @@ if = {
   FRA = { diplomatic_relation = { country = TUR relation = military_access active = yes } }
   FRA = { diplomatic_relation = { country = GRE relation = military_access active = yes } }
   FRA = { diplomatic_relation = { country = WGR relation = guarantee  active = no } }
+  remove_ideas = fiscal_collapse_3
 }
 
 1990.1.1 = {

@@ -167,7 +167,7 @@ focus_tree = {
 			every_owned_state = {
 			if = {
 				limit = {
-					state_population > 2500000
+					state_population > 500000
 				}
 				add_extra_state_shared_building_slots = 1
 			    }
@@ -4368,6 +4368,20 @@ focus_tree = {
 		completion_reward ={
 			country_event = cpsu.20
 			set_global_flag = Twentieth_Congress_of_the_CPSU
+			hidden_effect = {
+				CZE = {
+					complete_national_focus = CZE_The_Twentieth_Congress_of_the_CPSU
+				}
+				BUL = {
+					complete_national_focus = BUL_The_20th_Congress_of_the_CPSU
+				}
+				VIN = {
+					complete_national_focus = VIN_Endorse_the_CPSUs_Twentieth_Congress
+				}
+				ROM = {
+					complete_national_focus = ROM_The_Twentieth_Congress_of_the_CPSU
+				}
+			}
 		}
 	}
 	focus = {
@@ -4871,21 +4885,17 @@ focus_tree = {
 		}
 		x = 76
 		y = 10
+		available = {
+			always = no 
+		}
 		completion_reward = {
 			HUN = {
-				country_event = Hun_Rev.1
-			}
-			every_country = {
-				limit = { NOT = { tag = HUN } }
-				country_event = Hun_Rev.2
-			}
-			HUN = {
-				set_politics = {
-					ruling_party = communism
-					elections_allowed = no
-				    }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
 				}
 			}
+		}
 	}
 	focus = {
 		id = KHRUSCHEV_Condemn_Hoxha
