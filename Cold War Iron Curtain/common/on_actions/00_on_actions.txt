@@ -539,88 +539,100 @@ on_actions = {
 
 		effect = {
 			#Flag Building History Initialization#
-			#To avoid the history files creating duplicate tags mid-game, states recieve an initialize flag at the start which is exchanged ONLY AT STARTUP for their respective usable flag 
+			#This runs a cleanup in the history files to make modding states easier. All previous coms from seperate startdates are added and to prevent errors and duplicate flags this script cleans up all inferior flags
 			every_state = {
-				#Telecoms#
+				state_on_startup_initialization = yes
+				
 				if = {
 					limit = {
-						has_state_flag = initialize_coms_level_1
+						date < 1950.1.1
 					}
-					set_state_flag = coms_level_1
+					initialize_1949_setup = yes
 				}
 				else_if = {
 					limit = {
-						has_state_flag = initialize_coms_level_2
+						date < 1961.1.1
+						date > 1959.1.1
 					}
-					set_state_flag = coms_level_2
+					initialize_1960_setup = yes
 				}
 				else_if = {
 					limit = {
-						has_state_flag = initialize_coms_level_3
+						date < 1974.1.1
+						date > 1972.1.1
 					}
-					set_state_flag = coms_level_3
+					initialize_1973_setup = yes
 				}
 				else_if = {
 					limit = {
-						has_state_flag = initialize_coms_level_4
+						date < 1981.1.1
+						date > 1979.1.1
 					}
-					set_state_flag = coms_level_4
+					initialize_1980_setup = yes
 				}
 				else_if = {
 					limit = {
-						has_state_flag = initialize_coms_level_5
+						date < 1992.1.1
+						date > 1990.1.1
 					}
-					set_state_flag = coms_level_5
+					initialize_1991_setup = yes
 				}
 				else_if = {
 					limit = {
-						has_state_flag = initialize_coms_level_6
+						date < 2001.1.1
+						date > 1999.1.1
 					}
-					set_state_flag = coms_level_6
+					initialize_2000_setup = yes
 				}
-				#Grid#
+			}
+			every_country = {
 				if = {
 					limit = {
-						has_state_flag = initialize_grid_level_1
+						NOT = {
+							#Christian#
+							has_country_flag = PR_ChristianityCatholic 
+							has_country_flag = PR_ChristianityProtestant 
+							has_country_flag = PR_ChristianityOrthodox 
+							has_country_flag = PR_ChristianityOriental 
+							#Judaic#
+							has_country_flag = PR_Judaism 
+							#Islamic#
+							has_country_flag = PR_IslamSunni 
+							has_country_flag = PR_IslamShia 
+							has_country_flag = PR_IslamIbadi 
+							#Buddhism#
+							has_country_flag = PR_BuddhismVajrayana 
+							has_country_flag = PR_BuddhismMahayana 
+							has_country_flag = PR_BuddhismThereveda 
+							#Eastern#
+							has_country_flag = PR_Shinto 
+							has_country_flag = PR_TraditionalEastern 
+							has_country_flag = PR_Confucian 
+							#Indo-Iranian#
+							has_country_flag = PR_Hindu 
+							has_country_flag = PR_Sikh 
+							has_country_flag = PR_Jain 
+							has_country_flag = PR_TraditionalIranian 
+							#Irreligious#
+							has_country_flag = PR_Irreligious 
+							has_country_flag = PR_Atheist 
+							#Minor/Esoteric#
+							has_country_flag = PR_Spiritual 
+							has_country_flag = PR_Statist 
+							has_country_flag = PR_CultistSafe 
+							has_country_flag = PR_CultistFatal 
+							has_country_flag = PR_Furry 
+							has_country_flag = PR_Other 
+						}
 					}
-					set_state_flag = grid_level_1
-				}
-				else_if = {
-					limit = {
-						has_state_flag = initialize_grid_level_2
-					}
-					set_state_flag = grid_level_2
-				}
-				else_if = {
-					limit = {
-						has_state_flag = initialize_grid_level_3
-					}
-					set_state_flag = grid_level_3
-				}
-				else_if = {
-					limit = {
-						has_state_flag = initialize_grid_level_4
-					}
-					set_state_flag = grid_level_4
-				}
-				else_if = {
-					limit = {
-						has_state_flag = initialize_grid_level_5
-					}
-					set_state_flag = grid_level_5
-				}
-				else_if = {
-					limit = {
-						has_state_flag = initialize_grid_level_6
-					}
-					set_state_flag = grid_level_6
+					major_religion_placeholder = yes
 				}
 			}
 			
 ######################################################################
 #####################CWIC DEFINES, DO NOT TOUCH#######################
 #defines version
-	set_variable = { ICDefinesVersion = 31 }
+	set_variable = { ICDefinesVersion = 34 }
 #Use [?global.varname] in loc to display them
 #Use global.varname in scripts to use them
 #Bulk is 10x the base
@@ -762,6 +774,8 @@ on_actions = {
 	set_variable = { RGOElectricity = 360 } #General Electricity Project cost
 	set_variable = { RGOFusion = 7000 } #Tokamak Fusion Reactor cost
 	
+	set_variable = { RGOConstructionLength = 365 } #Days to build 1 RGO
+	
 	##Tourist Infrastructure Costs#
 	set_variable = { TIHistoricalSiteSmallCost = 60 }
 	set_variable = { TIHistoricalSiteLargeCost = 240 }
@@ -801,22 +815,38 @@ on_actions = {
 	set_variable = { category_upgrade_progress_per_month = 2 } #Percent category upgrade progress per month
 	
 	##TELECOMS COSTS##
-	set_variable = { coms0per = 6 } #Installing Landlines
-	set_variable = { coms1per = 12 } #Installing Digital Switches
-	set_variable = { coms2per = 18 } #Installing Cellular
-	set_variable = { coms3per = 30 } #Installing Broadband
-	set_variable = { coms3per = 36 } #Installing Fiber Optic
+	set_variable = { coms1per = 12 } #Installing Digital Switches [1940] #Radio, WW2 Computers
+	set_variable = { coms2per = 24 } #Installing Cellular [1960] #Coms II, Consumer Electronics II
+	set_variable = { coms3per = 24 } #Installing Fiber Optic [1980] #Coms IV, Interwebs III
+	set_variable = { coms4per = 36 } #Installing 4G LTE [2000] #Coms VI, Interwebs VII
+	set_variable = { coms5per = 36 } #Installing 5G [2020] #Coms VII, Interwebs XI
+	##GRID COSTS##
+	set_variable = { grid1per = 12 } #Installing Synchronized Power Grid [1950] #Grid I
+	set_variable = { grid2per = 24 } #Installing Modernized Electrical Grid [1970] #Grid III
+	set_variable = { grid3per = 24 } #Installing Resiliant Power Grid [1990] #Grid V
+	set_variable = { grid4per = 36 } #Installing Smart Grids [2010] #Grid VII
 	
-	set_variable = { coms_mini_mult = 2 } #micro/small
-	set_variable = { coms_nominal_mult = 5 } #nominal/medium
-	set_variable = { coms_largo_mult = 13 } #large/massive/gigantic
+	##FLAG SIZE AND POPULATION COST MULTIPLIERS##
+	set_variable = { flag_mini_mult = 2 } #micro/small
+	set_variable = { flag_nominal_mult = 5 } #nominal/medium
+	set_variable = { flag_largo_mult = 13 } #large/massive/gigantic
 	
-	set_variable = { coms_popsmall_mult = 2 } #Pop1/2
-	set_variable = { coms_popmedium_mult = 5 } #Pop3/4/5
-	set_variable = { coms_poplargo_mult = 10 } #Pop7/10/15
-	set_variable = { coms_overpopulated_mult = 20 } #Pop20+
+	set_variable = { flag_popsmall_mult = 2 } #Pop1/2
+	set_variable = { flag_popmedium_mult = 5 } #Pop3/4/5
+	set_variable = { flag_poplargo_mult = 10 } #Pop7/10/15
+	set_variable = { flag_overpopulated_mult = 20 } #Pop20+
 	
-	set_variable = { coms_upgrade_progress_per_month = 10 } #Percent coms upgrade progress per month
+	set_variable = { flag_upgrade_progress_per_month = 10 } #Percent coms upgrade progress per month
+	
+	##RELIGION##
+	set_variable = { AtheistDrift = 0.005 } #Population Converting to Atheism in Atheist State Per Month
+	set_variable = { TheocracyDrift = 0.005 } #Population Converting to Primary Religion in Theocracy Per Month
+	set_variable = { State_ReligionDrift = 0.0025 } #Population Converting to Primary Religion in Countries with State Religion Per Month
+	set_variable = { MoralistDrift = 0.001 } #Population Converting to Primary Religion in Moralist Countries Per Month
+	
+	set_variable = { MissionStrength = 0.03 } #Population Converted by Missionaries/Missions
+	
+	set_variable = { MissionCost = 1 } #Money Cost Per Mil Population Per Month to run a mission 
 ########################DEFINES CALCULATIONS##########################
 	
 	set_variable = { WPTierOneLarge = WPTierOne }

@@ -102,6 +102,9 @@ set_technology = {
 add_ideas = {
 	tribalism_politics
 	illiteracy
+	NGA_north_south_tension_moderate
+	NGA_shell_monopoly
+	NGA_richards_constitution
 }
 
 set_convoys = 46
@@ -111,30 +114,28 @@ set_cosmetic_tag = NGA_ENG
 
 
 	set_popularities = { 
-		democratic = 1
+		democratic = 12
 		communism = 0
 		fascism = 0
-		nationalism = 2
+		nationalism = 8
 		monarchism = 0
-		neutrality = 93
+		neutrality = 60
 		islamism = 0
 		radical_shiaism = 0
 		
 		Social_Democratic = 0
-		Social_Liberalism = 2
+		Social_Liberalism = 12
 		Salafism = 0
 		
 		Liberal_Conservatism = 0
 		
-		conservative = 2
+		conservative = 8
 		Christian_Democratic = 0
 		socialist = 0
 		centrist = 0
 		liberal = 0
 		trotskyism = 0
 		maoism = 0
-		
-
 	}
 
 	set_politics = {
@@ -159,9 +160,19 @@ create_country_leader = {
 	ideology = african_socialism
 }
 create_country_leader = {
+	name = "Abubakar Tafawa Balewa"
+	picture = "Abubakar_Tafawa_Balewa.dds"
+	ideology = national_conservatism
+}
+create_country_leader = {
 	name = "Nnamdi Azikiwe"
 	picture = "Nnamdi_Azikiwe.dds"
 	ideology = nationalist_ideology
+}
+create_country_leader = {
+	name = "Obafemi Awolowo"
+	picture = "Obafemi_Awolowo.dds"
+	ideology = social_democrat
 }
 create_country_leader = {
 	name = "Siddiq Abubakar III"
@@ -204,6 +215,46 @@ create_country_leader = {
 		ideology = socialist
 		long_name = "United National Independence Party" 
 		name = "UNIP"
+	}
+	remove_ideas = {
+		NGA_richards_constitution
+	}
+	add_ideas = {
+		NGA_lyttleton_constitution
+	}
+}
+1960.1.1 = {
+	remove_ideas = {
+		NGA_north_south_tension_moderate
+		NGA_shell_monopoly
+	}
+	add_ideas = {
+		NGA_igbo_yoruba_hausa_divide
+		NGA_shell_bp_PDCNL
+	}
+	set_popularities = { 
+		democratic = 0
+		communism = 0
+		fascism = 0
+		nationalism = 25
+		monarchism = 0
+		neutrality = 40
+		islamism = 0
+		radical_shiaism = 0
+		
+		Social_Democratic = 12
+		Social_Liberalism = 0
+		Salafism = 0
+		
+		Liberal_Conservatism = 0
+		
+		conservative = 18
+		Christian_Democratic = 0
+		socialist = 5
+		centrist = 0
+		liberal = 0
+		trotskyism = 0
+		maoism = 0
 	}
 }
 1960.10.1 = {
@@ -256,32 +307,6 @@ create_country_leader = {
 		art_upgrade_1 = 1
 		tech_support = 1
 	}
-	set_popularities = { 
-		democratic = 6
-		communism = 0
-		fascism = 0
-		nationalism = 14
-		monarchism = 0
-		neutrality = 53
-		islamism = 0
-		radical_shiaism = 0
-		
-		Social_Democratic = 12
-		Social_Liberalism = 5
-		Salafism = 0
-		
-		Liberal_Conservatism = 0
-		
-		conservative = 10
-		Christian_Democratic = 0
-		socialist = 0
-		centrist = 0
-		liberal = 0
-		trotskyism = 0
-		maoism = 0
-	}
-}
-1960.10.1 = {
 	set_cosmetic_tag = NGA_FED
 	set_popularities = { 
 		democratic = 0
@@ -309,6 +334,21 @@ create_country_leader = {
 		
 
 	}
+	create_country_leader = {
+		name = "Abubakar Tafawa Balewa"
+		picture = "Abubakar_Tafawa_Balewa.dds"
+		ideology = nationalist_ideology
+	}
+	set_party_name = { 
+		ideology = nationalism
+		long_name = "Northern People's Party - Coalition" 
+		name = "NPC/NCNC"
+	}
+	set_party_name = { 
+		ideology = conservative
+		long_name = "United Middle Belt Congress" 
+		name = "UMBC"
+	}
 
 	set_politics = {
 		ruling_party = nationalism
@@ -331,7 +371,7 @@ create_country_leader = {
 	}
 }
 1966.2.1 = {
-	set_cosmetic_tag = NGA_JUNTA
+	set_cosmetic_tag = NGA_FED_REP
 	set_popularities = { 
 		democratic = 18
 		communism = 6
@@ -363,6 +403,16 @@ create_country_leader = {
 		last_election = "1945.1.1"
 		election_frequency = 48
 		elections_allowed = no
+	}
+	set_party_name = { 
+		ideology = nationalism
+		long_name = "National Council of Nigeria and the Cameroons" 
+		name = "NCNC"
+	}
+	create_country_leader = {
+		name = "Nnamdi Azikiwe"
+		picture = "Nnamdi_Azikiwe.dds"
+		ideology = nationalist_ideology
 	}
 	create_country_leader = {
 		name = "Johnson Aguiyi-Ironsi"

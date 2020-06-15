@@ -164,16 +164,16 @@
  WOM_POL_regression_reaction_desc:0 "Women's Rights Protests in Progress\n§R-15%§! §YStability§!\n\n§YClick to open response event to handle the situation§!"
  WOM_POL_promotion_reaction_desc:0 "Anti-Women's Rights Reaction Active\n§R-10%§! §YStability§!\n\n§YClick to open response event to handle the situation§!"
  
- RAC_POL_0:0 "Current Effects:\n-§YRecruitable Pop Factor§! §R-15%§!\n-§YState/Water Infra Con Speed§! §G+25%§!\n-§YAgri-Industry Con Speed§! §G+35%§!\n-§YWar Support§! §G+15%§!\n-§YDrift Defense§! §G+45%§!\n-§RGreatly Raises Racial Rensions over Time§!"
- RAC_POL_1:0 "Current Effects:\n-§YRecruitable Pop Factor§! §R-10%§!\n-§YState/Water Infra Con Speed§! §G+10%§!\n-§YAgri-Industry Con Speed§! §G+20%§!\n-§YWar Support§! §G+10%§!\n-§YDrift Defense§! §G+30%§!\n-§RRaises Racial Rensions over Time§!"
+ RAC_POL_0:0 "Current Effects:\n-§YRecruitable Pop Factor§! §R-15%§!\n-§YState/Water Infra Con Speed§! §G+25%§!\n-§YAgri-Industry Con Speed§! §G+35%§!\n-§YWar Support§! §G+15%§!\n-§YDrift Defense§! §G+45%§!\n-§RGreatly Raises Racial Tensions over Time§!"
+ RAC_POL_1:0 "Current Effects:\n-§YRecruitable Pop Factor§! §R-10%§!\n-§YState/Water Infra Con Speed§! §G+10%§!\n-§YAgri-Industry Con Speed§! §G+20%§!\n-§YWar Support§! §G+10%§!\n-§YDrift Defense§! §G+30%§!\n-§RRaises Racial Tensions over Time§!"
  RAC_POL_2:0 "Current Effects:\n-§YRecruitable Pop Factor§! §R-5%§!\n-§YState/Water Infra Con Speed§! §G+5%§!\n-§YAgri-Industry Con Speed§! §G+5%§!\n-§YWar Support§! §G+5%§!"
- RAC_POL_3:0 "Current Effects:\n-§YRecruitable Pop Factor§! §G+5%§!\n-§YOffice Park Con Speed§! §G+10%§!\n-§YResearch Speed§! §G+5%§!\n-§YStability§! §G+10%§!\n-§YDrift Defense§! §R-10%§!\n-§GSlightly Reduces Racial Rensions over Time§!"
- RAC_POL_3a:0 "Current Effects:\n-§YOffice Park Con Speed§! §G+10%§!\n-§YResearch Speed§! §G+7.5%§!\n-§YWar Support§! §R-10%§!\n-§YDrift Defense§! §R-20%§!\n-§GReduces Racial Rensions over Time§!"
- RAC_POL_0_desc:0 "\n-§YRecruitable Pop Factor§! §R-15%§!\n-§YState/Water Infra Con Speed§! §G+25%§!\n-§YAgri-Industry Con Speed§! §G+35%§!\n-§YWar Support§! §G+15%§!\n-§YDrift Defense§! §G+45%§!\n-§RGreatly Raises Racial Rensions over Time§!"
- RAC_POL_1_desc:0 "\n-§YRecruitable Pop Factor§! §R-10%§!\n-§YState/Water Infra Con Speed§! §G+10%§!\n-§YAgri-Industry Con Speed§! §G+20%§!\n-§YWar Support§! §G+10%§!\n-§YDrift Defense§! §G+30%§!\n-§RRaises Racial Rensions over Time§!"
+ RAC_POL_3:0 "Current Effects:\n-§YRecruitable Pop Factor§! §G+5%§!\n-§YOffice Park Con Speed§! §G+10%§!\n-§YResearch Speed§! §G+5%§!\n-§YStability§! §G+10%§!\n-§YDrift Defense§! §R-10%§!\n-§GSlightly Reduces Racial Tensions over Time§!"
+ RAC_POL_3a:0 "Current Effects:\n-§YOffice Park Con Speed§! §G+10%§!\n-§YResearch Speed§! §G+7.5%§!\n-§YWar Support§! §R-10%§!\n-§YDrift Defense§! §R-20%§!\n-§GReduces Racial Tensions over Time§!"
+ RAC_POL_0_desc:0 "\n-§YRecruitable Pop Factor§! §R-15%§!\n-§YState/Water Infra Con Speed§! §G+25%§!\n-§YAgri-Industry Con Speed§! §G+35%§!\n-§YWar Support§! §G+15%§!\n-§YDrift Defense§! §G+45%§!\n-§RGreatly Raises Racial Tensions over Time§!"
+ RAC_POL_1_desc:0 "\n-§YRecruitable Pop Factor§! §R-10%§!\n-§YState/Water Infra Con Speed§! §G+10%§!\n-§YAgri-Industry Con Speed§! §G+20%§!\n-§YWar Support§! §G+10%§!\n-§YDrift Defense§! §G+30%§!\n-§RRaises Racial Tensions over Time§!"
  RAC_POL_2_desc:0 "\n-§YRecruitable Pop Factor§! §R-5%§!\n-§YState/Water Infra Con Speed§! §G+5%§!\n-§YAgri-Industry Con Speed§! §G+5%§!\n-§YWar Support§! §G+5%§!"
- RAC_POL_3_desc:0 "\n-§YRecruitable Pop Factor§! §G+5%§!\n-§YOffice Park Con Speed§! §G+10%§!\n-§YResearch Speed§! §G+5%§!\n-§YDrift Defense§! §R-10%§!\n-§GSlightly Reduces Racial Rensions over Time§!"
- RAC_POL_3a_desc:0 "\n-§YOffice Park Con Speed§! §G+10%§!\n-§YResearch Speed§! §G+7.5%§!\n-§YWar Support§! §R-10%§!\n-§YDrift Defense§! §R-20%§!\n-§GReduces Racial Rensions over Time§!"
+ RAC_POL_3_desc:0 "\n-§YRecruitable Pop Factor§! §G+5%§!\n-§YOffice Park Con Speed§! §G+10%§!\n-§YResearch Speed§! §G+5%§!\n-§YDrift Defense§! §R-10%§!\n-§GSlightly Reduces Racial Tensions over Time§!"
+ RAC_POL_3a_desc:0 "\n-§YOffice Park Con Speed§! §G+10%§!\n-§YResearch Speed§! §G+7.5%§!\n-§YWar Support§! §R-10%§!\n-§YDrift Defense§! §R-20%§!\n-§GReduces Racial Tensions over Time§!"
  RAC_POL_regression_reaction_desc:0 "Race War In Progress!\n§R-20%§! §YStability§!\n§RMilitancy and Infighting§!\n§RRepair Severely Impacted§!\n\n§YClick to open response event to handle the situation§!"
  RAC_POL_regression_reaction_reduced_desc:0 "Devastation from recent Race War\n§R-10%§! §YStability§!\n§RPotential International Reprecussions§!"
  RAC_POL_promotion_reaction_desc:0 "Civil Rights Reaction Active\n§R-20%§! §YStability§!\n§RMilitancy and Infighting§!\n\n§YClick to open response event to handle the situation§!"
@@ -641,9 +641,91 @@
  wom_instability_cooldown_desc:0 "There are nationwide Gender Equality Protests appalled at the current state of affairs"
  wom_reactionary_cooldown_desc:0 "There are Reactionary Rallies furious at the government's recent legislation"
  
+ #Religions#
+ #Christian#
+ ReligionChristianity:0 "Christianity"
+ ReligionChristianity_desc:0 "Christianity is an Abrahamic monotheistic religion based on the teachings of Jesus. Christians believe Jesus to be Christ, the messiah prophesized in the Tanakh. Following the conversion of the Roman emperor the religion emerged as the dominant faith in both the Western and Eastern Roman Empire. Over the centuries, Christianity was wracked by schisms but emerged as the dominant faith across Europe and neighboring areas. The advent of colonialism and proselytizing missions have spread the faith across the globe, making Christianity the largest faith and most spread out faith on the planet."
  
+ ReligionChristianityCatholic:0 "Catholic (Christian)"
+ ReligionChristianityProtestant:0 "Protestant (Christian)"
+ ReligionChristianityOrthodox:0 "Orthodox (Christian)"
+ ReligionChristianityOriental:0 "Oriental Orthodox (Christian)"
+ ReligionChristianityCatholic_desc:0 "Catholicism is the largest Christian denomination, headed by the Bishop of Rome, known as the Pope. The church is based in the Vatican, in Rome. Catholics believe their church was founded by Jesus and its bishops are the successors of the apostles. The church and its followers continue to adhere to the traditional practices of the church and follow the clergy directed by the Pope. Today, Catholicism is present in almost every nation and although the church lacks the political influence of its earlier days, the church remains an immense influence over its followers, especially in Europe and South America."
+ ReligionChristianityProtestant_desc:0 "Protestantism refers to a number of religious movements that emerged in the sixteenth century during the Reformation. Its founders disagreed with Catholic doctrine, especially with regards to the secular powers of the church, the role of its clergy, and some of the religious practices. The Protestant church sought to spread vernacular knowledge of the Bible and end what they saw as superstitious practices of the Catholic church. Today there are many different Protestant churches and their followers are present in large numbers across Western Europe and the United States."
+ ReligionChristianityOrthodox_desc:0 "The Orthodox Church views itself as the church of apostolic succession, and believes the Roman Catholic Church of the Pope left the church during the Great Schism of 1054. The schism occurred over disputes on the status of Papal primacy, and changes to interpretations that the Pope attempted to impose. The Orthodox Church is not a single church, but a collective of churches in communion, thus each church has different leaders and varying liturgical traditions. The church has followers in the Balkans, Eastern Europe and the Mediterranean. Despite the rise of Islam and more recently Communism in Eastern Europe, efforts of the faithful within the countries and the diaspora allow it to persevere."
+ ReligionChristianityOriental_desc:0 ""
+ #Judaic#
+ ReligionJudaic:0 "Judaic"
+ ReligionJudaic_desc:0 ""
  
+ ReligionJudaism:0 "Judaism (Judaic)"
+ ReligionJudaism_desc:0 ""
+ #Islamic#
+ ReligionIslamic:0 "Islamic"
+ ReligionIslamic_desc:0 ""
  
+ ReligionIslamSunni:0 "Sunni (Islamic)"
+ ReligionIslamShia:0 "Shia (Islamic)"
+ ReligionIslamIbadi:0 "Ibadi (Islamic)"
+ ReligionIslamSunni_desc:0 ""
+ ReligionIslamShia_desc:0 ""
+ ReligionIslamIbadi_desc:0 ""
+ #Buddhism#
+ ReligionBuddhism:0 "Buddism"
+ ReligionBuddhism_desc:0 ""
+ 
+ ReligionBuddhismVajrayana:0 "Vajrayana (Buddhism)"
+ ReligionBuddhismMahayana:0 "Mahayana (Buddhism)"
+ ReligionBuddhismThereveda:0 "Thereveda (Buddhism)"
+ ReligionBuddhismVajrayana_desc:0 ""
+ ReligionBuddhismMahayana_desc:0 ""
+ ReligionBuddhismThereveda_desc:0 ""
+ #Eastern#
+ ReligionEastern:0 "Eastern Philosophical"
+ ReligionEastern_desc:0 ""
+ 
+ ReligionShinto:0 "Shinto (Eastern)"
+ ReligionTraditionalEastern:0 "Traditional Eastern (Eastern)"
+ ReligionConfucian:0 "Confucian (Eastern)"
+ ReligionShinto_desc:0 ""
+ ReligionTraditionalEastern_desc:0 ""
+ ReligionConfucian_desc:0 ""
+ #Indo-Iranian#
+ ReligionIndoiranian:0 "Indo-Iranian"
+ ReligionIndoiranian_desc:0 ""
+ 
+ ReligionHindu:0 "Hindu (Indo-Iranian)"
+ ReligionSikh:0 "Sikh (Indo-Iranian)"
+ ReligionJain:0 "Jain (Indo-Iranian)"
+ ReligionTraditionalIranian:0 "Traditional Iranian (Indo-Iranian)"
+ ReligionHindu_desc:0 ""
+ ReligionSikh_desc:0 ""
+ ReligionJain_desc:0 ""
+ ReligionTraditionalIranian_desc:0 ""
+ #Irreligious#
+ ReligionNoreligion:0 "Non-Religious"
+ ReligionNoreligion_desc:0 ""
+ 
+ ReligionIrreligious:0 "Irreligious (Non-Religious)"
+ ReligionAtheist:0 "Atheist (Non-Religious)"
+ ReligionIrreligious_desc:0 ""
+ ReligionAtheist_desc:0 ""
+ #Minor/Esoteric#
+ ReligionEsoteric:0 "Esoterica"
+ ReligionEsoteric_desc:0 ""
+ 
+ ReligionSpiritual:0 "Spiritual (Esoterica)"
+ ReligionStatist:0 "Statist (Esoterica)"
+ ReligionCultistSafe:0 "Cosmopolitan Cultivation (Esoterica)"
+ ReligionCultistFatal:0 "Militant Cultivation (Esoterica)"
+ ReligionFurry:0 "Furry (Esoterica)"
+ ReligionOther:0 "Minor/Other (Esoterica)"
+ ReligionSpiritual_desc:0 ""
+ ReligionStatist_desc:0 ""
+ ReligionCultistSafe_desc:0 ""
+ ReligionCultistFatal_desc:0 ""
+ ReligionFurry_desc:0 ""
+ ReligionOther_desc:0 ""
  
  
  
@@ -681,3 +763,6 @@
  Federal_Aid_Highway_Act:0 "Federal Aid Highway Act"
  Trade_Act_of_1974:0 "Trade Act of 1974"
  Copyright_Act_of_1976:0 "Copyright Act of 1976"
+ 
+ 
+ 
