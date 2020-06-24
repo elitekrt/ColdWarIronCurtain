@@ -82,10 +82,12 @@ income_effect = {		#DO NOT TOUCH FILE WITHOUT APPROVAL; IDEALLY FROM SWF
 						has_state_category = pop2dev2
 						has_state_category = pop1dev3
 						has_state_category = pop2dev3
+						has_state_category = pop1dev4
+						has_state_category = pop2dev4
 					}
 				}
 			}
-			add_to_variable = { upgrade_progress = 2 }
+			add_to_variable = { upgrade_progress = global.upgrade_per_month_fast }
 		}
 		else_if = {
 			limit = { 
@@ -98,16 +100,23 @@ income_effect = {		#DO NOT TOUCH FILE WITHOUT APPROVAL; IDEALLY FROM SWF
 						has_state_category = pop3dev1
 						has_state_category = pop4dev1
 						has_state_category = pop5dev1
+						has_state_category = pop7dev1
 						has_state_category = pop3dev2
 						has_state_category = pop4dev2
 						has_state_category = pop5dev2
+						has_state_category = pop7dev2
 						has_state_category = pop3dev3
 						has_state_category = pop4dev3
 						has_state_category = pop5dev3
+						has_state_category = pop7dev3
+						has_state_category = pop3dev4
+						has_state_category = pop4dev4
+						has_state_category = pop5dev4
+						has_state_category = pop7dev4
 					}
 				}
 			}
-			add_to_variable = { upgrade_progress = 1.5 }
+			add_to_variable = { upgrade_progress = global.upgrade_per_month_nominal }
 		}
 		else_if = {
 			limit = { 
@@ -122,10 +131,12 @@ income_effect = {		#DO NOT TOUCH FILE WITHOUT APPROVAL; IDEALLY FROM SWF
 						has_state_category = pop15dev2
 						has_state_category = pop10dev3
 						has_state_category = pop15dev3
+						has_state_category = pop10dev4
+						has_state_category = pop15dev4
 					}
 				}
 			}
-			add_to_variable = { upgrade_progress = 1 }
+			add_to_variable = { upgrade_progress = global.upgrade_per_month_slow }
 		}
 		else_if = {
 			limit = { 
@@ -136,10 +147,11 @@ income_effect = {		#DO NOT TOUCH FILE WITHOUT APPROVAL; IDEALLY FROM SWF
 						has_state_category = pop20dev1
 						has_state_category = pop20dev2
 						has_state_category = pop20dev3
+						has_state_category = pop20dev4
 					}
 				}
 			}
-			add_to_variable = { upgrade_progress = 0.5 }
+			add_to_variable = { upgrade_progress = global.upgrade_per_month_marathon }
 		}
 		
 		if = { #Upgrade state if reached full progress
@@ -1190,6 +1202,157 @@ cpi_expenditure = {
 	add_to_variable = { cpi_cost = cpi_cost_cor_penalty }
 	add_to_variable = { cpi_cost_display = cpi_cost_cor_penalty }
 	subtract_from_variable = { IncomeCheck = cpi_cost }
+	
+	
+	#AGENCY-RELATED STUFF#
+	if = {
+		limit = {
+			has_intelligence_agency = yes
+		}
+		agency_calc_operative_slots = yes
+	}
+}
+agency_calc_operative_slots = {
+	count_agency_upgrades = yes
+	
+	set_variable = { operative_slot_bonus = num_agency_upgrades_real }
+	divide_variable = { operative_slot_bonus = global.upgrades_per_operative } #Number of agency upgrades divided by agency upgrades per operative gain
+	round_variable = operative_slot_bonus
+	if = {
+		limit = {
+			check_variable = { operative_slot_bonus = 1 }
+		}
+		add_ideas = operative_slots_from_upgrade_1
+	}
+	else_if = {
+		limit = {
+			check_variable = { operative_slot_bonus = 2 }
+		}
+		add_ideas = operative_slots_from_upgrade_2
+		
+		remove_ideas = { #Remove needs to be below to not delete existing operatives
+			operative_slots_from_upgrade_1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { operative_slot_bonus = 3 }
+		}
+		add_ideas = operative_slots_from_upgrade_3
+		
+		remove_ideas = { #Remove needs to be below to not delete existing operatives
+			operative_slots_from_upgrade_1
+			operative_slots_from_upgrade_2
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { operative_slot_bonus = 4 }
+		}
+		add_ideas = operative_slots_from_upgrade_4
+		
+		remove_ideas = { #Remove needs to be below to not delete existing operatives
+			operative_slots_from_upgrade_1
+			operative_slots_from_upgrade_2
+			operative_slots_from_upgrade_3
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { operative_slot_bonus = 5 }
+		}
+		add_ideas = operative_slots_from_upgrade_5
+		
+		remove_ideas = { #Remove needs to be below to not delete existing operatives
+			operative_slots_from_upgrade_1
+			operative_slots_from_upgrade_2
+			operative_slots_from_upgrade_3
+			operative_slots_from_upgrade_4
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { operative_slot_bonus = 6 }
+		}
+		add_ideas = operative_slots_from_upgrade_6
+		
+		remove_ideas = { #Remove needs to be below to not delete existing operatives
+			operative_slots_from_upgrade_1
+			operative_slots_from_upgrade_2
+			operative_slots_from_upgrade_3
+			operative_slots_from_upgrade_4
+			operative_slots_from_upgrade_5
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { operative_slot_bonus = 7 }
+		}
+		add_ideas = operative_slots_from_upgrade_7
+		
+		remove_ideas = { #Remove needs to be below to not delete existing operatives
+			operative_slots_from_upgrade_1
+			operative_slots_from_upgrade_2
+			operative_slots_from_upgrade_3
+			operative_slots_from_upgrade_4
+			operative_slots_from_upgrade_5
+			operative_slots_from_upgrade_6
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { operative_slot_bonus = 8 }
+		}
+		add_ideas = operative_slots_from_upgrade_8
+		
+		remove_ideas = { #Remove needs to be below to not delete existing operatives
+			operative_slots_from_upgrade_1
+			operative_slots_from_upgrade_2
+			operative_slots_from_upgrade_3
+			operative_slots_from_upgrade_4
+			operative_slots_from_upgrade_5
+			operative_slots_from_upgrade_6
+			operative_slots_from_upgrade_7
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { operative_slot_bonus = 9 }
+		}
+		add_ideas = operative_slots_from_upgrade_9
+		
+		remove_ideas = { #Remove needs to be below to not delete existing operatives
+			operative_slots_from_upgrade_1
+			operative_slots_from_upgrade_2
+			operative_slots_from_upgrade_3
+			operative_slots_from_upgrade_4
+			operative_slots_from_upgrade_5
+			operative_slots_from_upgrade_6
+			operative_slots_from_upgrade_7
+			operative_slots_from_upgrade_8
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				check_variable = { operative_slot_bonus = 10 }
+				check_variable = { operative_slot_bonus > 10 }
+			}
+		}
+		add_ideas = operative_slots_from_upgrade_10
+		
+		remove_ideas = { #Remove needs to be below to not delete existing operatives
+			operative_slots_from_upgrade_1
+			operative_slots_from_upgrade_2
+			operative_slots_from_upgrade_3
+			operative_slots_from_upgrade_4
+			operative_slots_from_upgrade_5
+			operative_slots_from_upgrade_6
+			operative_slots_from_upgrade_7
+			operative_slots_from_upgrade_8
+			operative_slots_from_upgrade_9
+		}
+	}
 }
 edu_expenditure = {
 	add_to_variable = { IncomeCheck = edu_cost }
@@ -2732,7 +2895,7 @@ social_indices = {
 		limit = {
 			AND = {
 				has_idea = policy_minorities_temp_1
-				check_variable = { segregationValue > -0.10 }
+				check_variable = { segregationValue > -0.05 }
 			}
 		}
 		add_to_variable = { segregationValue = -0.0005 }
@@ -2746,7 +2909,8 @@ social_indices = {
 		}
 		add_to_variable = { segregationValue = -0.001 }
 	}
-	else_if = { #Normalize Values to acceptable levels/cap penalties
+	
+	if = { #Normalize Values to acceptable levels/cap penalties
 		limit = {
 			check_variable = { segregationValue < -0.11 }
 		}

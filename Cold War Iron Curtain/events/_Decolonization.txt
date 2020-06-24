@@ -23,7 +23,6 @@ country_event = {
 			}
 		}
 		set_autonomy = { target = CMR autonomy_state = autonomy_free }
-		CMR = { remove_ideas = FRA_Protectorate}
 	}
 }
 
@@ -56,6 +55,7 @@ country_event = {
 			}
 		}
 		set_autonomy = { target = CMR autonomy_state = autonomy_free }
+		remove_from_faction = CMR
 	}
 
 	option = {
@@ -644,11 +644,31 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	option = {
-		name = decolonization.19.a
+	immediate = {
 		set_autonomy = { target = BOT autonomy_state = autonomy_free }
 		BOT = {
 			drop_cosmetic_tag = yes
+			set_popularities = { 
+				democratic = 0
+				communism = 0
+				fascism = 0
+				nationalism = 0
+				monarchism = 0
+				neutrality = 0
+				islamism = 0
+				radical_shiaism = 0
+				Social_Democratic = 0
+				Social_Liberalism = 0
+				Salafism = 0
+				Liberal_Conservatism = 0
+				conservative = 0
+				Christian_Democratic = 74
+				socialist = 26
+				centrist = 0
+				liberal = 0
+				trotskyism = 0
+				maoism = 0
+			}
 			set_politics = {
 				ruling_party = Christian_Democratic
 				elections_allowed = yes
@@ -657,7 +677,31 @@ country_event = {
 				ideology = Christian_Democratic
 				popularity = 0.9
 			}
+			create_country_leader = {
+				name = "Seretse Khama"
+				picture = "Seretse_Khama.dds"
+				ideology = christian_democracy
+			}
+			set_party_name = { 
+				ideology = Christian_Democratic
+				long_name = "Botswana Democratic Party" 
+				name = "BDP"
+			}
+			create_country_leader = {
+				name = "Kenneth Koma"
+				picture = "kenneth_koma.dds"
+				ideology = african_socialism
+			}
+			set_party_name = { 
+				ideology = Christian_Democratic
+				long_name = "Botswana Democratic Party" 
+				name = "BDP"
+			}
 		}
+	}
+
+	option = {
+		name = decolonization.19.a
 	}
 }
 
@@ -1179,6 +1223,81 @@ country_event = {
 				ideology = conservative
 				long_name = "United Middle Belt Congress" 
 				name = "UMBC"
+			}
+			remove_unit_leader = 834624
+			remove_unit_leader = 756124
+			remove_unit_leader = 3567831
+			create_field_marshal = {
+				name = "Johnson Aguiyi Ironsi"
+				portrait_path = "gfx/leaders/NGA/Johnson_Aguiyi_Ironsi.dds"
+				id = 6585724
+				traits = { career_officer politically_connected}
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				#planning_skill = 1
+				#logistics_skill = 1
+			}
+			create_field_marshal = {
+				name = "Mohammed Shuwa"
+				portrait_path = "gfx/leaders/NGA/Mohammed_Shuwa.dds"
+				traits = {  }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				#planning_skill = 1
+				#logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Murtala Mohammed"
+				portrait_path = "gfx/leaders/NGA/Murtala_Mohammed.dds"
+				traits = { career_officer politically_connected }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 1
+				#planning_skill = 1
+				#logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Benjamin Adekunle"
+				portrait_path = "gfx/leaders/NGA/Benjamin_Adekunle.dds"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				#planning_skill = 1
+				#logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Robert Adeyinka Adebayo"
+				portrait_path = "gfx/leaders/NGA/Robert_Adeyinka_Adebayo.dds"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				#planning_skill = 1
+				#logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Humphrey Chukwuka"
+				portrait_path = "gfx/leaders/NGA/Humphrey_Chukwuka.dds"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				#planning_skill = 1
+				#logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Victor Banjo"
+				portrait_path = "gfx/leaders/NGA/Victor_Banjo.dds"
+				id = 129798
+				traits = { reckless }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				#planning_skill = 1
+				#logistics_skill = 1
 			}
 		}
 	}
