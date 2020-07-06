@@ -239,6 +239,10 @@ ideologies = {
 			labor_zionism_mapai = {
 				can_be_randomly_selected = no
 			}
+
+			kemalism = {
+				can_be_randomly_selected = no
+			}
 		
 		}
 		dynamic_faction_names = {
@@ -1144,7 +1148,6 @@ ideologies = {
 		}
 
 		modifiers = {
-			join_faction_tension = 1.0
 			lend_lease_tension = 0.0
 			send_volunteers_tension = 0.0
 			guarantee_tension = 0.50
