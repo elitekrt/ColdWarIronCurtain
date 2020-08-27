@@ -17,6 +17,7 @@ country_event = {
 		#steel_consumption_set = yes
 		#aluminium_consumption_set = yes
 		#chromium_consumption_set = yes
+
 	}
 }
 
@@ -205,6 +206,9 @@ country_event = {
 		add_dynamic_modifier = {
 			modifier = resource_consumption
 		}
+		#add_dynamic_modifier = {
+		#	modifier = resource_concessions
+		#}
 		if = {
 			limit = {
 				tag = YUG
@@ -228,7 +232,7 @@ country_event = {
 		resource_bonus_script = yes
 		#authoriatiran_gfx_display_latam = yes
 		industrial_pulse = yes
-
+		resource_concession_evaluation = yes
 	}
 }
 country_event = {
@@ -884,4 +888,16 @@ country_event = {
 		name = tutorial.menu
 		country_event = tutorial.2
 	}
+}
+country_event = {
+id = TUTOR.211
+title = "WMD GUI"
+desc = TUTOR.211.d
+	
+	is_triggered_only = yes
+	major = no
+	option = {
+		name = "Boom."
+	}
+
 }

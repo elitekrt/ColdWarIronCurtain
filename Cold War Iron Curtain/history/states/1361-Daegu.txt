@@ -1,0 +1,33 @@
+state = {
+	id = 1361
+	name = "STATE_1361"
+	resources = {
+	}
+	history = {
+		owner = TIB
+		set_state_flag = mountains
+		set_state_flag = basic
+		set_state_flag = massive
+		set_state_flag = verypoor
+		buildings = {
+			infrastructure = 1
+			state_infrastructure = 1
+            agri_industrial_complex = 1
+
+		}
+		1951.1.1 = {
+			owner = PRC
+
+		}
+
+		add_core_of = TIB
+		add_core_of = PRC
+		add_core_of = CHI
+	}
+	provinces = {
+        12784 5094 12801 10802 1961 8029
+	}
+	manpower = 313705  
+	buildings_max_level_factor = 1.000
+	state_category = pop1dev1
+}

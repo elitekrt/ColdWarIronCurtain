@@ -15,17 +15,6 @@ state = {
 		set_state_flag = nominal
 		set_state_flag = poor
 		add_core_of = DOC
-		add_core_of = COG
-		victory_points = {
-			12783 5 
-		}
-		victory_points = {
-			1181 20
-		}
-		1965.1.1 = {
-			remove_core_of = COG
-
-		}
 		1998.1.1 = {
 			owner = COG
 			add_core_of = COG
@@ -43,11 +32,35 @@ state = {
 			industrial_complex = 1
 
 		}
+		victory_points = {
+			14962 2
+		}
+		victory_points = {
+			14953 2
+		}
+		victory_points = {
+			14940 2
+		}
+		victory_points = {
+			14920 8
+		}
 
 	}
 
 	provinces = {
-		1181 12783 13584 
+		12783
+		14962
+		14953
+		14940
+		14931
+		14920
+		1181
+		14908
+		14923
+		14932
+		13584
+		14951 
+		14960
 	}
 	manpower = 876567
 	buildings_max_level_factor = 1.000

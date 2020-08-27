@@ -4,6 +4,8 @@
 set_country_flag = tech_gfx_african
 set_country_flag = tech_alignment_eastern
 
+set_country_flag = non_arab_league
+
 #TECH/OOBS
 
 oob = "MOR_1949"
@@ -101,6 +103,11 @@ set_technology = {
 
 add_ideas = {
 	closed_economy
+	housing_crisis_3
+	fractured_legal_system_2
+	rural_poverty_crisis_2
+	fiscal_fragmentation_2
+	entrenched_aristocracy
 }
 
 set_convoys = 24
@@ -244,5 +251,8 @@ add_to_array = { influence_array = FRA.id }
 add_to_array = { influence_array_val = 1500 }
 add_to_array = { influence_array = SPR.id }
 add_to_array = { influence_array_val = 500 }
-
+ 
+set_variable = { French_Population = 500000 }
+set_variable = { Jewish_Population = 250000 }
+set_variable = { aliyah_monthly_percentage = 0.006 }
 

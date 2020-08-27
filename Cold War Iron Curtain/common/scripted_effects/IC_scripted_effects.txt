@@ -1,23 +1,40 @@
 
 ic_pulse = {
+	random_country = {
+		global_statistics = yes
+	}
+	federation_calculator = yes
 	set_variable = { temp_check = THIS.id } 
 	set_variable = { oil_consumption_total_desired = 0 }
 	monthly_power_projection_gain = yes
 	monthly_set_fpp = yes
+	monthly_infamy_calc = yes
+	#resource_concession_evaluation = yes
+	if = {
+		limit = {
+			check_variable = { global.eco_health < 0 }
+		}
+		set_variable = { global.eco_health = 0 }
+	}
+	
+	set_variable = { global.eco_output_factor = 1 }
+	set_temp_variable = { ecoalpha = global.eco_health }
+	multiply_temp_variable = { ecoalpha = 10 }
+	add_to_variable = { global.eco_output_factor = ecoalpha }
+	divide_variable = { global.eco_output_factor = 11 } #Average between 1 and eco_health x 11. 0 eco_health = 0.09 output factor
 	
 	clamp_variable = {
 		var = foriegnPowerProjection
 		min = 0
 		max = 2000000
 	}
+	clamp_variable = {
+		var = badboy
+		min = 0
+		max = 100
+	}
 	every_owned_state = {
 		state_infra_modifier_setup = yes
-		#farm_pulse = yes #FOOD
-		#Food_Need_Pulse = yes
-		###OLD###
-		#renewable_energy_pulse = yes
-		#fossil_fuel_pulse = yes
-		#nuclear_power_pulse = yes
 	}
 	if = {
 		limit = {
@@ -288,6 +305,13 @@ ic_pulse = {
 			has_global_flag = First_Iraqi_Kurdish_War
 		}
 		country_event = Rawanduz_Campaign.1
+	}
+	if = {
+		limit = {
+			tag = SOV
+			has_global_flag = SOV_Beria_Struggle_1
+		}
+		country_event = SOV_Beria_Struggle.1
 	}
 	if = {
 		limit = {
@@ -1942,7 +1966,6 @@ ic_pulse = {
 					NOT = { tag = PER }
 					NOT = { tag = GRE }
 					NOT = { tag = PRC }
-					NOT = { tag = SPR }
 					NOT = { tag = NGA }
 					NOT = { tag = POL }
 					NOT = { tag = SOM }
@@ -1950,11 +1973,9 @@ ic_pulse = {
 					NOT = { tag = SAF }
 					NOT = { tag = KOR }
 					NOT = { tag = KPA }
-					NOT = { tag = BUL }
 					NOT = { tag = EGY }
 					NOT = { tag = SYR }
 					NOT = { tag = ROM }
-					NOT = { tag = SWE }
 					NOT = { tag = SWI }
 					NOT = { tag = CUB }
 					NOT = { tag = ZIM }
@@ -2000,7 +2021,6 @@ ic_pulse = {
 						tag = SAF
 						tag = KOR
 						tag = KPA
-						tag = BUL
 						tag = EGY
 						tag = SYR
 						tag = CUB
@@ -2038,7 +2058,7 @@ ic_pulse = {
 					limit = {
 						tag = DDR
 					}
-					load_focus_tree = DDR_1960s
+					load_focus_tree = GDR_1960s
 				}
 				
 
@@ -3083,7 +3103,7 @@ ic_pulse = {
 				limit = {
 					original_tag = DDR
 					date > 1953.06.15
-					date < 1953.09.01
+					date < 1953.07.16
 					NOT = { has_global_flag = berlin_uprising_1952 }
 					has_capitulated = no		
 				}
@@ -4508,6 +4528,19 @@ ic_pulse = {
 	}
 	if = {
 		limit = {
+			date > 1956.1.1
+			date < 1956.1.29
+			tag = ENG
+			NOT = { 
+				EGY = {
+					has_completed_focus = EGY_Push_for_Annexation
+				}
+			}
+		}
+		country_event = decolonization.44
+	}
+	if = {
+		limit = {
 			date > 1967.07.01
 			date < 1967.09.01
 			NOT = { has_country_flag = Biafra_War_Start }
@@ -5502,7 +5535,6 @@ ic_pulse = {
 				has_cosmetic_tag = GHA_ENG_DOM
 				has_cosmetic_tag = NFL_ENG
 				has_cosmetic_tag = BRU_ENG 
-				has_cosmetic_tag = ZAM_ENG
 				has_cosmetic_tag = SRL_ENG
 				has_cosmetic_tag = PAK_ENG
 				has_cosmetic_tag = RAJ_ENG
@@ -5522,7 +5554,8 @@ ic_pulse = {
 				has_cosmetic_tag = KOR_USA
 				has_cosmetic_tag = AFR_ETH
 				has_cosmetic_tag = ERI_ETH
-
+				has_cosmetic_tag = ZAM_ENG
+				
 				#has_cosmetic_tag = FRA_WST_AFR
 				#has_cosmetic_tag = MAD_FRA
 				#has_cosmetic_tag = CMR_FRA
@@ -5664,9 +5697,13 @@ ic_pulse = {
 				has_global_flag = katanga_seceded
 			}
 			has_completed_focus = DOC_The_Red_and_Blue_Unite
-			NOT = { has_global_flag = simba_rebellion country_exists = SKS country_exists = KAG country_exists = COG }
+			NOT = { has_global_flag = simba_rebellion 
+					country_exists = SKS 
+					country_exists = KAG 
+					country_exists = COG 
+			}
 		}
-		country_event = { id = congo.7 days = 1  }
+		country_event = congo.7
 		set_global_flag = simba_rebellion
 	}
 	if = {
@@ -5694,9 +5731,12 @@ ic_pulse = {
 	}
 	if = {
 		limit = {
-			tag = DOC
-			surrender_progress > 0.9
+			OR = {
+				tag = DOC
+				tag = COG
+			}
 			has_war_with = KAG
+			surrender_progress > 0.9
 		}
 		country_event = congo.11
 	}
@@ -6072,6 +6112,38 @@ ic_pulse = {
 			date < 1961.05.01
 		}
 		country_event = decolonization.32
+	}
+	if = {
+		limit = {
+			original_tag = ENG
+			date > 1978.10.10
+			date < 1978.11.1
+		}
+		country_event = decolonization.45
+	}
+	if = {
+		limit = {
+			original_tag = ENG
+			date > 1978.11.22
+			date < 1978.12.1
+		}
+		country_event = decolonization.46
+	}
+	if = {
+		limit = {
+			original_tag = ENG
+			date > 1979.10.22
+			date < 1979.11.1
+		}
+		country_event = decolonization.47
+	}
+	if = {
+		limit = {
+			original_tag = ENG
+			date > 1974.10.22
+			date < 1974.11.1
+		}
+		country_event = decolonization.48
 	}
 	if = {
 		limit = {
@@ -7212,20 +7284,18 @@ ic_pulse = {
 	}
 	if = {
 		limit = {
-			date < 1960.10.01
-			date > 1961.05.01
+			date > 1960.10.01
+			date < 1961.05.01
 			tag = ENG
 		}
 		country_event = decolonization.41
 	}
 	if = {
 		limit = {
+			date > 1960.1.1
 			date < 1960.10.01
 			tag = DOC
-			NOT = {
-				has_government = socialist
-				has_government = neutrality
-			}
+			has_government = Liberal_Conservatism
 		}
 		country_event = lumumba_deposed.2
 	}
@@ -7260,8 +7330,9 @@ ic_pulse = {
 					is_controlled_by = LAO
 				}
 			}
-			FRA = {remove_resource_rights = 1281}
+			
 		}
+		FRA = {remove_resource_rights = 1281}
 	}
 	if = {
 		limit = {
@@ -7273,8 +7344,9 @@ ic_pulse = {
 					is_controlled_by = LAO
 				}
 			}
-			FRA = {remove_resource_rights = 786}
+			
 		}
+		FRA = {remove_resource_rights = 786}
 	}
 	if = {
 		limit = {
@@ -7286,8 +7358,9 @@ ic_pulse = {
 					is_controlled_by = LAO
 				}
 			}
-				FRA = {remove_resource_rights = 671}
+				
 		}
+		FRA = {remove_resource_rights = 671}
 	}
 	if = {
 		limit = {
@@ -7299,9 +7372,10 @@ ic_pulse = {
 					is_controlled_by = LAO
 				}
 			}
-			FRA = {remove_resource_rights = 751}
+			
 
 		}
+		FRA = {remove_resource_rights = 751}
 	}
 	#founding of action group (nigerian political party)
 	if = {

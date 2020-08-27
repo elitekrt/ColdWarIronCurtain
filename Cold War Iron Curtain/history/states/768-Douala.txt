@@ -10,9 +10,6 @@ state = {
 		set_state_flag = micro
 		set_state_flag = poor
 		add_core_of = CMR
-		victory_points = {
-			6039 10 
-		}
 		buildings = {
 			infrastructure = 1
 			state_infrastructure = 1
@@ -21,10 +18,23 @@ state = {
 			fossil_fuel_powerplant = 1
 
 		}
+		victory_points = {
+			6039 10 
+		}
+		victory_points = {
+			14600 5
+		}
+		victory_points = {
+			14597 5
+		}
 	}
 
 	provinces = {
 		6039 
+		14600
+		13550
+		14597
+		14599
 	}
 	manpower = 3174437
 	buildings_max_level_factor = 1.000

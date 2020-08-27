@@ -1,4 +1,71 @@
 bitmapfonts = {
+
+	bitmapfont = {
+		name = "console_18"
+		path = "gfx/fonts/console_18"
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "console_16"
+		path = "gfx/fonts/console_16"
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "console_16_outline"
+		path = "gfx/fonts/console_16_outline"
+		color = 0xffffffff
+		textcolors = {
+		   G = { 136 254 199 }
+		   R = { 66 139 114 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "console_16_outline2"
+		path = "gfx/fonts/console_16_outline2"
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	
+	bitmapfont = {
+		name = "console_16_1"
+		path = "gfx/fonts/console_16_1"
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
 	bitmapfont = {
 		name = "bombardier_16"
 		path = "gfx/fonts/bombardier_16"
@@ -11,6 +78,34 @@ bitmapfonts = {
 		   T = { 255 255 255 }
 	   }
 	}
+	
+	bitmapfont = {
+		name = "bomb_20_outline"
+		path = "gfx/fonts/bomb_20_outline"
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "bombardier_alt_16"
+		path = "gfx/fonts/bombardier_16"
+		color = 0xffffffff
+		textcolors = {
+		   G = { 128 64 64 }	#Pan-Arab
+		   R = { 193 39 45 }	#Istqal
+		   Y = { 242 205 94 }	#Spain
+		   H = { 149 45 159 }	#Pasha
+		   B = { 30 100 230 }	#France
+		   T = { 255 255 255 }
+	
+	   }
+	}
 
 
 
@@ -18,6 +113,20 @@ bitmapfonts = {
 		name = "bombardier_20"
 		path = "gfx/fonts/bombardier_20"
 		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+		
+	bitmapfont = {
+		name = "bombardier_20b"
+		path = "gfx/fonts/bombardier_20"
+		color = 0x99999999
 		textcolors = {
 		   G = { 86 172 91 }
 		   R = { 222 86 70 }
@@ -220,4 +329,319 @@ bitmapfonts = {
 		   T = { 255 255 255 }
 	   }
 	}
+	
+	bitmapfont = {
+		name = "PoynterText_Regular_22"
+		path = "gfx/fonts/PoynterText_Regular_22"   
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "Bomb_16"
+		path = "gfx/fonts/Bomb_16"   
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "Bomb_18"
+		path = "gfx/fonts/Bomb_18"   
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "Bomb_20"
+		path = "gfx/fonts/Bomb_20"   
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "Bomb_24"
+		path = "gfx/fonts/Bomb_24"   
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "Bomb_28"
+		path = "gfx/fonts/Bomb_28"   
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "Bomb_32"
+		path = "gfx/fonts/Bomb_32"   
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "Bomb_36"
+		path = "gfx/fonts/Bomb_36"   
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "vt323_16_outline"
+		path = "gfx/fonts/vt323_16_outline"   
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "vt323_18_outline"
+		path = "gfx/fonts/vt323_18_outline"   
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "vt323_20_outline"
+		path = "gfx/fonts/vt323_20_outline"   
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "vt323_22_outline"
+		path = "gfx/fonts/vt323_22_outline"   
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "vt323_24_outline"
+		path = "gfx/fonts/vt323_24_outline"   
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "vt323_30_outline"
+		path = "gfx/fonts/vt323_30_outline"   
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "vt323_32_outline"
+		path = "gfx/fonts/vt323_32_outline"   
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "vt323_36_outline"
+		path = "gfx/fonts/vt323_36_outline"   
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "vt323_72_WT_outline"
+		path = "gfx/fonts/vt323_72_WT_outline"   
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "chicago_17"
+		path = "gfx/fonts/chicago_17"
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "chicago_20"
+		path = "gfx/fonts/chicago_20"
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "chicago_16"
+		path = "gfx/fonts/chicago_16"
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "chicago_16_outline"
+		path = "gfx/fonts/chicago_16_outline"
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "chicago_18_align"
+		path = "gfx/fonts/chicago_18_align"
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "chicago_16_black"
+		path = "gfx/fonts/chicago_16_black"
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	bitmapfont = {
+		name = "bomb_20_black"
+		path = "gfx/fonts/bomb_20_black"
+		color = 0xffffffff
+		textcolors = {
+		   G = { 86 172 91 }
+		   R = { 222 86 70 }
+		   Y = { 238 201 35 }
+		   H = { 238 203 35 }
+		   T = { 255 255 255 }
+	   }
+	}
+	
+	
+	
 }

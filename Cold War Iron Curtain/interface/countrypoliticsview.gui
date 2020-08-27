@@ -6,6 +6,11 @@ guiTypes = {
 		show_position = { x=-6 y =78 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
+		verticalScrollbar = "right_vertical_slider"
+		
+		
+		
+						
 		animation_time = 300	
 		size = { width=760 height=100%% }
 		
@@ -336,9 +341,12 @@ guiTypes = {
 			containerWindowType = {
 				name = "national_spirit_container"
 				position = { x = 90 y = 13 }
-				size = { width = 365 height = 68 }
+				size = { width = 373 height = 68 }
 				
 				verticalScrollbar = "right_vertical_slider"
+				vertical_scroll_step = 20
+				scroll_wheel_factor = 20
+				smooth_scrolling = yes
 				
 				background = {
 					name = "Background"
@@ -349,8 +357,8 @@ guiTypes = {
 					name = "spirit_grid"
 					position = { x = 12 y = 0 }
 					size = { width = 350 height = 100%% }
-					slotsize = { width = 60 height = 68 }
-					max_slots = { x = 8 y = 1 }
+					slotsize = { width = 69 height = 64 }
+					max_slots_horizontal = 5
 					format = "UPPER_LEFT"
 				}
 				gridboxtype = {
@@ -440,7 +448,7 @@ guiTypes = {
 		
 		buttonType = {
 			name = "close_button"
-			position = { x = -46 y = 9 }
+			position = { x = -58 y = 9 }
 			quadTextureSprite ="GFX_closebutton"
 			buttonFont = "Main_14_black"
 			shortcut = "ESCAPE"
@@ -544,7 +552,7 @@ guiTypes = {
 		iconType = {
 			name = "rules"
 			spriteType = "GFX_rules_sum_icon"
-			position = { x = 680 y = 7 }
+			position = { x = 675 y = 7 }
 		}
 	
 		buttonType = {

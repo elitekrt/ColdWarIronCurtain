@@ -229,40 +229,6 @@ set_technology = {
 }
 
 
-set_variable = { cg_spend_base_ten = -0.2 }
-set_variable = { cg_spend_base_four = -0.08 }
-add_dynamic_modifier = {
-	modifier = consumer_goods_spending
-}
-add_dynamic_modifier = {
-	modifier = alcoholism
-}
-set_variable = { alcoholism_factor = -0.1 }
-
-set_variable = { gulag_factor = 0.02 }
-set_variable = { gulag_factor_neg = -0.02 }
-set_variable = { gulag_factor_five = 0.10 }
-set_variable = { gulag_factor_five_neg = -0.10 }
-set_variable = { efficiency_welfare = 0.1 }
-set_variable = { efficiency_military = 0.2 }
-
-add_dynamic_modifier = {
-	modifier = soviet_repression
-}
-
-
-set_variable = { clergy_persecution_factor = -0.10 }
-set_variable = { clergy_persecution_negative = 0.10  }
-
-add_dynamic_modifier = {
-	modifier = clergy_tolerance
-}
-
-set_variable = { cpsu_strength_factor = -0.10 }
-
-add_dynamic_modifier = {
-	modifier = cpsu_party_strength
-}
 1949.1.1 = {
 	if = {
 		limit = { has_dlc = "Man the Guns" }
@@ -1050,6 +1016,7 @@ if = {
 			puppet = HUN
 		}
 	}
+
 }
 
 set_cosmetic_tag = SOV_FLAG
@@ -1062,18 +1029,15 @@ add_ideas = {
 	comecon_member
 	defcon_system_5
 	Suchyi_voyny
-	Andrey_Vyshinsky
-	Sergue_Krouglov
-	Arseny_Zverev
-	#Ivan_Kairov
-	black_market3
-	Global_Intervention
+	global_intervention
+	
+	#old economy ideas 
 	gossnab
-	agricultural_dysfunction_0
 	policy_taxrate_temp_5
 	Failing_Health_System_5
 	antiquated_infrastructure
-	agricultural_recovery
+
+
 	
 	policy_union_temp_4
 	policy_media_temp_0
@@ -1081,7 +1045,97 @@ add_ideas = {
 	policy_minorities_temp_1
 	policy_religion_temp_0a
 	policy_saga_temp_2
+
 }
+
+#New economy dynamic ideas 
+
+## List - 1 Consumer Goods Spending - 2 Alcoholism - 
+## 3 Gulag Repression - 4 Clergy Tolerance - 5 Party Strength - 6 Soviet Agriculture - 7 Labor Shortage 
+## total 7 
+
+#1
+
+add_dynamic_modifier = {
+	modifier = consumer_goods_spending
+}
+set_variable = { CG_Effiency = -0.2 }
+set_variable = { CG_Research = -0.1 }
+set_variable = { CG_CG = -0.08 }
+
+#2
+
+add_dynamic_modifier = {
+	modifier = alcoholism
+}
+set_variable = { alcoholism_factor = -0.05 }
+
+#3
+
+add_dynamic_modifier = {
+	modifier = soviet_repression
+}
+
+set_variable = { gulag_factor_neg = -0.02 }
+set_variable = { gulag_factor_five = 0.10 }
+
+
+#4 
+
+add_dynamic_modifier = {
+	modifier = clergy_tolerance
+}
+
+set_variable = {	clergy_persecution_negative = -0.08}
+set_variable = { clergy_persecution_factor = 0.1 }
+
+
+#5
+
+add_dynamic_modifier = {
+	modifier = cpsu_party_strength
+}
+
+set_variable = { cpsu_strength_stability = -0.05 	}
+set_variable = { cpsu_strength_pp = 0.15 }
+
+#6
+
+add_dynamic_modifier = {
+	modifier = Soviet_Agriculture
+}
+
+set_variable = {
+	Soviet_Agriculture_robbed_positive = 0.1
+}
+
+set_variable = {Soviet_Agriculture_robbed_negative = -0.2}
+set_variable = {Soviet_Agriculture_Export = 0.1}
+set_variable = {Soviet_Agriculture_Stability = -0.20}
+set_variable = {Soviet_Agriculture_efficiency = -0.05}
+set_variable = {Soviet_Agriculture_PP = 0}
+
+set_variable = {Soviet_Agriculture_farmBonus = -0.25}
+
+#7
+
+add_dynamic_modifier = {
+	modifier = Soviet_Labor_Shortage
+}
+
+set_variable = {Labor_Shortage_Efficiency = 0.2}
+set_variable = {Labor_Shortage = -0.15}
+
+
+
+## 
+set_variable = { efficiency_welfare = 0.1 }
+set_variable = { efficiency_military = 0.2 }
+
+
+
+
+
 
 
 1945.1.1 = {
@@ -1289,6 +1343,18 @@ create_field_marshal = {
 	logistics_skill = 4 
 }
 
+
+create_field_marshal = {
+	name = "Grigory Kulik"
+	portrait_path = "gfx/leaders/SOV/FIELD_MARSHALS/Grigory_Kulik.dds"
+	traits = { old_guard }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
 #Generals
 
 create_corps_commander = {
@@ -1363,6 +1429,20 @@ create_corps_commander = {
 	logistics_skill = 2
 }
 
+create_corps_commander = {
+	name = "Pavel Batov"
+	id = 25000
+	portrait_path = "gfx/leaders/SOV/GENERALS/Pavel_Batov.dds"
+
+	traits = {infantry_leader infantry_officer engineer organizer war_hero trickster brilliant_strategist }
+
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2 
+	planning_skill = 3
+	logistics_skill = 3
+}
+
 #Admirals
 create_navy_leader = {
 	name = "Sergey Gorshkov"
@@ -1372,8 +1452,8 @@ create_navy_leader = {
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2
-	#planning_skill = 2
-	#logistics_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
 }
 
 create_navy_leader = {
@@ -1384,8 +1464,8 @@ create_navy_leader = {
 	skill = 4
 	attack_skill = 4
 	defense_skill = 4
-	#planning_skill = 4
-	#logistics_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
 }
 
 create_navy_leader = {
@@ -1396,8 +1476,8 @@ create_navy_leader = {
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2
-	#planning_skill = 2
-	#logistics_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
 }
 
 1956.1.1 = {

@@ -151,7 +151,7 @@
  militia:0 "Militia"
  militia_desc:0 ""  
  mercenaries:0 "Mercenaries"
- mercenaries_desc:0 ""  
+ mercenaries_desc:0 "We can pay mercenaries and foreign  fighters  to \nhelp  augment our forces on the ground and can \nfill our ranks.  These  masters  of asymmetric \nwarfare,  bring  with them  years  of  experience  \nand  can be  enough to turn the tide. \n\n Mercenaries and PMC's from all across the world \nare prepared to fight for their ideals, given the \nprice is right..."  
  ffl:0 "French Foreign Legion"
  ffl_desc:0 ""  
  pmc:0 "Private Army"
@@ -528,4 +528,4 @@
  TASK_FORCE_FLEET_INFORMATION_SLOWEST_SHIPS:0 "\n§HSlowest Ships§!\n"
  TASK_FORCE_FLEET_INFORMATION_SHORTEST_RANGES:0 "\n§HShortest Ranges§!\n"
  TASK_FORCE_FLEET_INFORMATION_DELAYED:0 "To learn more about individual ship details, select a task force, then click on the ship details portrait."
- WMD_Select_Three_TT:0 "Requires §Yone§! of the following:\n-Missiles Placed in Cuba\n-Jupiter Missiles Placed in Turkey\n-Level §Y1§! ICBM Technology"
+ 

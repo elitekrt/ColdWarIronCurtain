@@ -326,7 +326,7 @@ if = {
 	}
 	set_autonomy = {
 		target = SUD
-		autonomous_state = autonomy_puppet
+		autonomous_state = autonomy_dominion
 		freedom_level = 0.1
 	}
 	set_autonomy = {
@@ -361,16 +361,6 @@ if = {
 	}
 	set_autonomy = {
 		target = NGA
-		autonomous_state = autonomy_colony
-		freedom_level = 0.1
-	}
-	set_autonomy = {
-		target = JAM
-		autonomous_state = autonomy_colony
-		freedom_level = 0.1
-	}
-	set_autonomy = {
-		target = BAD
 		autonomous_state = autonomy_colony
 		freedom_level = 0.1
 	}
@@ -475,11 +465,6 @@ if = {
 		freedom_level = 0.1
 	}
 	set_autonomy = {
-		target = TRI
-		autonomous_state = autonomy_colony
-		freedom_level = 0.1
-	}
-	set_autonomy = {
 		target = SKK
 		autonomous_state = autonomy_protectorate
 		freedom_level = 0.1
@@ -496,7 +481,22 @@ if = {
 	}
 	set_autonomy = {
 		target = GND
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.1
+	}
+	set_autonomy = {
+		target = BAD
 		autonomous_state = autonomy_colony
+		freedom_level = 0.1
+	}
+	set_autonomy = {
+		target = STL
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.1
+	}
+	set_autonomy = {
+		target = SVI
+		autonomous_state = autonomy_dominion
 		freedom_level = 0.1
 	}
 
@@ -526,7 +526,6 @@ if = {
 		puppet = SIE
 		puppet = SWA
 		puppet = SOL 
-		puppet = JAM
 		puppet = JOR
 		puppet = PAL
 		puppet = WGR
@@ -644,7 +643,6 @@ add_ai_strategy = {
 	set_autonomy = { target = WGR autonomy_state = autonomy_free }
 	set_autonomy = { target = NFL autonomy_state = autonomy_free }
 	set_autonomy = { target = SKK autonomy_state = autonomy_free }
-	set_autonomy = { target = NZL autonomy_state = autonomy_free }
 	if = {
 		limit = {
 			has_dlc = "Together for Victory"
@@ -851,9 +849,11 @@ add_ai_strategy = {
 1960.7.26 = {
 	set_autonomy = { target = SML autonomy_state = autonomy_free } 
 }
+
 1960.7.26 = {
 	set_autonomy = { target = BCR autonomy_state = autonomy_free } 
 }
+
 1960.7.26 = {
 	set_autonomy = { target = BTG autonomy_state = autonomy_free } 
 }
@@ -878,7 +878,9 @@ add_ai_strategy = {
 1963.1.1 = {
 	set_autonomy = { target = ZAZ autonomy_state = autonomy_free } 
 }
-
+1963.1.1 = {
+	set_autonomy = { target = KEN autonomy_state = autonomy_free }
+}
 1964.1.1 = {
 	set_autonomy = { target = ZAM autonomy_state = autonomy_free }
 	set_autonomy = { target = MLW autonomy_state = autonomy_free }
@@ -894,6 +896,9 @@ add_ai_strategy = {
 
 1966.1.1 = {
 	set_autonomy = { target = BOT autonomy_state = autonomy_free }
+}
+1966.1.1 = {
+	set_autonomy = { target = BAD autonomy_state = autonomy_free }
 }
 
 1967.1.1 = {
@@ -918,14 +923,22 @@ add_ai_strategy = {
 	set_autonomy = { target = SRL autonomy_state = autonomy_free }
 }
 
-1963.1.1 = {
-	set_autonomy = { target = KEN autonomy_state = autonomy_free }
+1973.1.1 = {
+	set_autonomy = { target = NZL autonomy_state = autonomy_free }
 }
+1974.1.1 = {
+	set_autonomy = { target = GND autonomy_state = autonomy_free }
+}
+
 
 1978.1.1 = {
 	set_autonomy = { target = SOL autonomy_state = autonomy_free }
+	set_autonomy = { target = DMN autonomy_state = autonomy_free }
 }
-
+1979.1.1 = {
+	set_autonomy = { target = STL autonomy_state = autonomy_free }
+	set_autonomy = { target = SVI autonomy_state = autonomy_free }
+}
 1982.1.1 = {
 	set_autonomy = { target = CAN autonomy_state = autonomy_free }
 }

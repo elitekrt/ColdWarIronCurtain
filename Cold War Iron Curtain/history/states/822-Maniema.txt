@@ -16,23 +16,29 @@ state = {
 		set_state_flag = medium
 		set_state_flag = poor
 		add_core_of = DOC
-		add_core_of = COG
-		victory_points = {
-			10766 1 
-		}
-		victory_points = {
-			7161 1 
-		}
-		victory_points = {
-			10858 1 
-		}
-		victory_points = {
-			13582 1 
-		}
-		1965.1.1 = {
-			remove_core_of = COG
 
+		victory_points = {
+			14936 2
 		}
+		victory_points = {
+			14914 2
+		}
+		victory_points = {
+			14887 2
+		}
+		victory_points = {
+			14881 2
+		}
+		victory_points = {
+			14869 2
+		}
+		victory_points = {
+			14866 2
+		}
+		victory_points = {
+			14845 2
+		}
+
 		1998.1.1 = {
 			owner = COG
 			add_core_of = COG
@@ -54,7 +60,38 @@ state = {
 	}
 
 	provinces = {
-		7161 10766 10858 13576 13581 13582 
+		14933
+		14937
+		14936
+		14939
+		14924
+		13582
+		14914
+		14895
+		14905
+		14900
+		13576
+		10858
+		14843
+		14844
+		14840
+		14845
+		14848
+		7161
+		14842
+		14852
+		14866
+		14881
+		14855
+		14869
+		14861
+		14878
+		14887
+		10766
+		14902
+		14906
+		14919
+
 	}
 	manpower = 740948
 	buildings_max_level_factor = 1.000

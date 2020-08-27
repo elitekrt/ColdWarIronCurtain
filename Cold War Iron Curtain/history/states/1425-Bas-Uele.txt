@@ -1,0 +1,88 @@
+state = {
+	id = 1425
+	name = "STATE_1425"
+	resources = {
+	}
+	history = {
+		owner = DOC
+		set_state_flag = tropical
+		set_state_flag = riverlarge
+		set_state_flag = large
+		set_state_flag = undeveloped
+		buildings = {
+			infrastructure = 1
+			state_infrastructure = 1
+
+			agri_industrial_complex = 1
+			
+		}
+
+		add_core_of = DOC
+
+		1998.1.1 = {
+			owner = COG
+			add_core_of = COG
+		}
+		2003.1.1 = {
+			owner = DOC
+			remove_core_of = COG
+		}
+		1970.1.1 = {
+			set_province_name = {
+				id = 15010
+				name = "Isiro"
+			}
+		}
+		victory_points = {
+			15040 2
+		}
+		victory_points = {
+			15047 2
+		}
+		victory_points = {
+			15014 2
+		}
+		victory_points = {
+			15011 2
+		}
+		victory_points = {
+			15027 2
+		}
+		victory_points = {
+			15035 2
+		}
+		victory_points = {
+			15010 2
+		}
+	}
+
+	provinces = {
+        15040
+        15030
+        15023
+        15014
+        15007
+        15011
+        15009
+        15012
+        15010
+        12808
+        15031
+        15036
+        15048
+        15047
+        15044
+        15045
+        2073
+        15025
+        15021
+        15027
+        15037
+        11934
+        15035
+        13596
+	}
+	manpower = 684539
+	buildings_max_level_factor = 1.000
+	state_category = pop1
+}

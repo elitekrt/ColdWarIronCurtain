@@ -1,0 +1,46 @@
+state = {
+	id = 1380
+	name = "STATE_1380"
+	resources = {
+	}
+
+	history = {
+		owner = SEN
+		set_state_flag = desert
+		set_state_flag = basic
+		set_state_flag = nominal
+		set_state_flag = abjectpoor
+		buildings = {
+			infrastructure = 1
+			state_infrastructure = 1
+			agri_industrial_complex = 1
+		}
+		victory_points = {
+			15562 2
+		}
+		victory_points = {
+			15563 1
+		}
+		add_core_of = SEN
+		add_core_of = MRT
+		add_claim_by = MOR
+		1960.1.1 = {
+			owner = MRT
+			remove_core_of = SEN
+		}
+		1969.1.1 = {
+			remove_claim_by = MOR
+		}
+	}
+	provinces = {
+        7992
+        14126
+        14132
+        14127
+		15562
+		15563
+	}
+	manpower = 220163
+	buildings_max_level_factor = 1.000
+	state_category = pop1
+}

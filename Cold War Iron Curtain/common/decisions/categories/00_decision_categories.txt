@@ -21,19 +21,44 @@ Angolan_War_Decisions_categorty = {
 communist_International_aid_category = {
 
 	icon = generic_propaganda
+	picture = GFX_decision_ussrmilitaryaid
 
 	allowed = {
 		OR = {
 		has_government = communism
 		has_government = maoism
 		}
-		
+		VIN = {
+			country_exists = yes 
+		}
 	}
 	visible = {
 		NOT = { tag = VIN }
 	}
 	
 	visible_when_empty = no
+}
+soviet_economy_category = {
+
+	icon = generic_propaganda 
+
+	allowed = {
+		tag = SOV 
+	}
+	visible = {
+		tag = SOV 
+	}
+}
+soviet_international_detente_category = {
+
+	icon = generic_propaganda 
+
+	allowed = {
+		tag = SOV 
+	}
+	visible = {
+		tag = SOV
+	}
 }
 Iran_Iraq_War_decision_category = {
 
@@ -54,8 +79,8 @@ rollout_equipment_category = {
 
 	icon = decision_category_army_reform
 	
-	picture = GFX_decision_cat_picture_ammo	
-	priority = 200	
+	picture = GFX_decision_bannerrollout
+	priority = 53	
 	
 }
 propaganda_efforts = {
@@ -102,6 +127,7 @@ korean_war = {
 }
 colonial_affairs = {
 	icon = GFX_mandates
+	picture = GFX_decision_banneraustraliacolonial
 
 	visible = {
 
@@ -135,11 +161,13 @@ operations = {
 
 economy_decisions_reenable = {
 	icon = generic_economy
+	picture = GFX_decision_bannereconomic
 	priority = 300
 	visible = { has_country_flag = hide_economic_decisions }
 }
 economy_decisions = {
 	icon = generic_economy
+	picture = GFX_decision_bannereconomic
 	priority = 61
 	visible_when_empty = yes
 	visible = { NOT = { has_country_flag = hide_economic_decisions } }
@@ -155,21 +183,21 @@ economic_investments = {
 
 prospect_for_resources = {
 	icon = generic_prospect_for_resources
-	picture = GFX_decision_category_RGO_picture
+	picture = GFX_decision_bannerRGO3
 	priority = 57
 	visible = { NOT = { has_country_flag = hide_economic_decisions } }
 }
 weapon_purchasing = {
 	icon = decision_category_army_reform
 	
-	picture = GFX_decision_category_equipment_purchasing
+	picture = GFX_decision_banner1
 	priority = 54
 	visible = { NOT = { has_country_flag = hide_economic_decisions } }
 }
 
 mercenaries = {
-	icon = generic_political_actions
-	picture = GFX_decision_category_mercenaries
+	icon = infiltration
+	picture = GFX_decision_mercenaries
 	visible = {
 	
 	}
@@ -449,6 +477,14 @@ category_exile_forces = {
 		has_dlc = "Man the Guns"
 	}
 }
+morrocan_faction_decisions = {
+	priority = 100
+	icon = Morrocco_Decision_Cat
+	scripted_gui = morrocan_faction_gui
+	allowed = {
+		tag = MOR
+	}
+}
 Mau_Mau_decisions = {
 	
 	icon = infiltration
@@ -463,6 +499,7 @@ Mau_Mau_decisions = {
 War_Crime_decisions = {
 	
 	icon = War_Crime_decisions
+	picture = GFX_decision_bannerWMD
 	visible = {
 		
 	}
@@ -489,6 +526,7 @@ parliament_decisions = {
 uia_decisions = {
 	
 	icon = infiltration
+	picture = GFX_decision_bannerUIA
 	scripted_gui = country_state_target_menu_panel
 	allowed = {
 		tag = SOV
@@ -721,7 +759,7 @@ Cambodian_Civil_War_Decisions = {
 Laotion_Civil_War_Decisions_category = {
 	#icon = GFX_Indochina_Decision
 
-	#picture = GFX_vietnam_Desc_Pic
+	picture = GFX_decision_bannervietnam
 
 	visible = {
 		has_global_flag = Laos_Intervention
@@ -799,6 +837,42 @@ kenyan_decisions_0 = {
 		date < 1960.1.1
 	}
 }
+kenyan_decisions_1 = {
+	icon = generic_political_actions
+
+	visible = {
+		tag = KEN
+		date > 1960.1.1
+		date < 1973.1.1
+	}
+}
+kenyan_national_parks = {
+	icon = generic_political_actions
+	picture = GFX_decision_kenyannationalpark
+
+	visible = {
+		tag = KEN
+		has_capitulated = no
+	}
+}
+ethiopian_national_parks = {
+	icon = generic_political_actions
+	picture = GFX_decision_ethiopianationalpark
+
+	visible = {
+		tag = ETH
+		has_capitulated = no
+	}
+}
+south_africa_national_parks = {
+	icon = generic_political_actions
+	picture = GFX_decision_southafricannationalpark
+	
+	visible = {
+		tag = SAF
+		has_capitulated = no
+	}
+}
 cyprus_decisions = {
 	
 	icon = infiltration
@@ -815,4 +889,5 @@ cyprus_decisions = {
 }
 Vietnam_War_Decisions_category = {
 	icon = infiltration
+	picture = GFX_decision_bannervietnam
 }

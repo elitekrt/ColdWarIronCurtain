@@ -1,6 +1,115 @@
 ideas = {
 
 	country = {
+		housing_crisis_3 = {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+			modifier = {
+				consumer_goods_factor = 0.5
+				production_speed_buildings_factor = -0.25
+				industrial_capacity_factory = -0.33
+				#production_factory_max_efficiency_factor = -0.3
+				#political_power_factor = -0.3
+				#research_speed_factor = -0.25
+			}			
+
+		}
+		housing_crisis_2 = {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+			modifier = {
+				consumer_goods_factor = 0.3
+				production_speed_buildings_factor = -0.175
+				industrial_capacity_factory = -0.20
+			}			
+
+		}
+		housing_crisis_1 = {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.10
+				industrial_capacity_factory = -0.10
+			}			
+
+		}
+		fractured_legal_system_2 = {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+			modifier = {
+				political_power_gain = -0.10
+				stability_factor = -0.10
+			}			
+
+		}
+		fractured_legal_system_1 = {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+			modifier = {
+				political_power_gain = -0.05
+				stability_factor = -0.05
+			}					
+
+		}
+		rural_poverty_crisis_2 = {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+			modifier = {
+				political_power_gain = -0.15
+				drift_defence_factor = -0.25
+				stability_factor = -0.15
+				war_support_factor = -0.10
+			}			
+
+		}
+		rural_poverty_crisis_1 = {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+			modifier = {
+				political_power_gain = -0.05
+				drift_defence_factor = -0.075				
+				stability_factor = -0.075
+				war_support_factor = -0.05
+			}			
+
+		}
+		fiscal_fragmentation_2 = {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+			modifier = {
+				production_factory_max_efficiency_factor = -0.25
+				production_speed_buildings_factor = -0.10
+			}			
+
+		}
+		fiscal_fragmentation_1 = {	
+			picture = generic_production_bonus
+			allowed = {
+				always = no 
+			}	
+			modifier = {
+				production_factory_max_efficiency_factor = -0.125
+				production_speed_buildings_factor = -0.05
+			}			
+
+		}
 		Anglo_Dominated_Military = {	
 			picture = generic_production_bonus
 			allowed = {
@@ -520,6 +629,29 @@ ideas = {
 				cic_to_target_factor = 0.05
 			}
 		}
+		softened_soviet_loans = {
+				
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.07
+				production_speed_buildings_factor = 0.25
+			}	
+			targeted_modifier = {
+				tag = SOV
+				trade_cost_for_target_factor = -0.10
+				cic_to_target_factor = 0.05
+			}
+		}
 		Price_Anderson_Nuclear_Industries_Indemnity_Act = {
 			
 			
@@ -1025,6 +1157,7 @@ ideas = {
 		}
 		banditry = {
 			removal_cost = -1
+			picture = banditry
 			
 			allowed = {
 				always = no # Added via focus
@@ -2919,7 +3052,7 @@ ideas = {
 		}
 		famine5 = {
 			
-			picture = neutrality_idea
+			picture = famine
 			
 			allowed = { always = no }
 			allowed_civil_war = {  }
@@ -2932,7 +3065,7 @@ ideas = {
 		}
 		famine4 = {
 			
-			picture = neutrality_idea
+			picture = famine
 			
 			allowed = { always = no }
 			allowed_civil_war = {  }
@@ -2945,7 +3078,7 @@ ideas = {
 		}
 		famine3 = {
 			
-			picture = neutrality_idea
+			picture = famine
 			
 			allowed = { always = no }
 			allowed_civil_war = {  }
@@ -2959,7 +3092,7 @@ ideas = {
 		}
 		famine2 = {
 			
-			picture = neutrality_idea
+			picture = famine
 			
 			allowed = { always = no }
 			allowed_civil_war = {  }
@@ -2973,7 +3106,7 @@ ideas = {
 		}
 		famine = {
 			
-			picture = neutrality_idea
+			picture = famine
 			
 			allowed = { always = no }
 			allowed_civil_war = {  }
@@ -4414,7 +4547,7 @@ ideas = {
 
 		}		
 		traditional_culture = {	
-			picture = generic_production_bonus
+			picture = traditional_culture
 			allowed = {
 				always = no 
 			}	
@@ -6187,7 +6320,7 @@ ideas = {
 			}
 		}		
 		The_Old_Order = {	
-			picture = generic_production_bonus
+			picture = the_old_order
 			allowed = {
 				always = no 
 			}	
@@ -6986,6 +7119,33 @@ ideas = {
 				infantry_weapons = 0.07
 			}			
 		}
+		french_advisors = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			cancel = {
+				ROOT = {
+					has_war_with = YUG
+				}
+			}
+
+			removal_cost = -1
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			research_bonus = {
+				infantry_weapons = 0.07
+			}			
+		}
 		yugoslavian_advisors = {
 		
 			allowed = {
@@ -7691,6 +7851,41 @@ ideas = {
 				weekly_manpower = 5000	
 			}
 		}
+		
+		increase_auto_use  = {
+
+			#picture = WIP
+			
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				production_speed_state_infrastructure_factor = 0.05
+				production_speed_infrastructure_factor = 0.05
+			}
+		}
+
+		increase_TV_use  = {
+
+			#picture = WIP
+			
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+			   drift_defence_factor = 0.05
+			   political_power_gain = 0.1
+			   stability_factor = 0.01
+			}
+		}
+
+
         The_Vietnam_War_NLF = {
 
 

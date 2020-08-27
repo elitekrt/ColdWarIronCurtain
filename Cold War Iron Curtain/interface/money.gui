@@ -85,6 +85,7 @@ guiTypes = {
 			fixedsize = yes
 		}
 	}
+
 	containerWindowType = {
 		name = "fln_country_state_target_menu"
 		position = {x=0 y=0}
@@ -277,16 +278,43 @@ guiTypes = {
 	containerWindowType = {
 		name = "current_money_container"
 		
-		position = { x = 1050 y = 4 } #990
+		position = { x = 727 y = 4 } #990
+
 		iconType ={
 			name ="money_bg"
 			spriteType = "GFX_moneybarBG"
-			position = { x=-75 y=-1 }
+			position = { x=-75 y=-91 }
 		}
 
+
+		iconType ={
+			name ="GDPbg"
+			spriteType = "GFX_GDPbg"
+			position = { x=-73 y=0}
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name ="gdp_line_text"
+			position = { x= -100 y = 6 }
+			font = "hoi_16mbs"
+			text = "core_gdp"
+			format = center
+			maxWidth = 130
+			maxHeight = 24
+			fixedsize = yes
+			pdx_tooltip = "GDP_TOPBAR"
+			alwaystransparent = yes
+		}
+
+		iconType ={
+			name ="incomebg"
+			spriteType = "GFX_incomebg"
+			position = { x=3 y=0 }
+			alwaystransparent = yes
+		}	
 		instantTextBoxType = {
 			name ="income_line_text"
-			position = { x= 5 y = 4 }
+			position = { x= -6 y = 6 }
 			font = "hoi_16mbs"
 			text = "core_cash"
 			format = center
@@ -294,20 +322,18 @@ guiTypes = {
 			maxHeight = 24
 			fixedsize = yes
 			pdx_tooltip = "core_debt"
+			alwaystransparent = yes
 		}
-		instantTextBoxType = {
-			name ="gdp_line_text"
-			position = { x= -99 y = 4 }
-			font = "hoi_16mbs"
-			text = "core_gdp"
-			format = center
-			maxWidth = 130
-			maxHeight = 24
-			fixedsize = yes
-		}
+
+
+		iconType ={
+			name ="foodbg"
+			spriteType = "GFX_foodbg"
+			position = { x=120 y=0 }
+		}	
 		instantTextBoxType = {
 			name ="omnom_line_text"
-			position = { x= 116 y = 4 }
+			position = { x= 97 y = 6 }
 			font = "hoi_16mbs"
 			text = "core_food"
 			format = center
@@ -316,14 +342,16 @@ guiTypes = {
 			fixedsize = yes
 			pdx_tooltip = "core_omnom"
 		}
+		
+
 		iconType ={
 			name ="nuke_bg"
 			spriteType = "GFX_nukeBG"
-			position = { x= 230 y=-1 }
+			position = { x= 4770 y=69 }
 		}
 		instantTextBoxType = {
 			name ="nukecount"
-			position = { x= 211 y = 4 }
+			position = { x= 4751 y = 74 }
 			font = "hoi_16mbs"
 			text = "num_nukes_IC"
 			format = center
@@ -415,11 +443,11 @@ guiTypes = {
 		
 		instantTextboxType = {
 			name = "Development_Tier"
-			position = { x = 370 y = 254 }
+			position = { x = 390 y = 254 }
 			font = "hoi_16mbs"
 			text = "Development: [DEVELOPMENT_TIER]" 
 			format = center
-			maxWidth = 250
+			maxWidth = 170
 			maxHeight = 20
 			fixedsize = yes
 			pdx_tooltip = DEVELOPMENT_TIER_TT
@@ -513,6 +541,7 @@ guiTypes = {
 			maxWidth = 250
 			maxHeight = 20
 			fixedsize = yes
+			pdx_tooltip = category_upgrade_general_tooltip
 		}
 		buttonType = {
 			name = "upgrade_cost_display"
@@ -627,6 +656,36 @@ guiTypes = {
 			spriteType = "GFX_decision_select_icon_strip"
 			frame = 3
 			pdx_tooltip = "Decision Completed"
+		}
+	}
+	#EXPERIMENT
+	containerWindowType = {
+		name = "un_action_target_menu"
+		position = {x=0 y=0}
+		size = { width=480 height=200 }
+
+		fade_time = 300
+		fade_type = linear
+		moveable = no
+		clipping = yes
+		containerWindowType = {	
+			name = "flncountry_state_target_menu_grid"
+			position = {x=0 y=0}
+			size = { width=200 height=100%% }
+			margin = { top = 10 bottom = 10 }
+			Orientation = upper_left
+
+			verticalScrollbar = "left_vertical_slider"
+
+
+			gridboxtype = {
+				name = "un_action_menu_selection_grid"
+				position = { x = -30 y = -15 }
+				size = { width = 400 height = 100% }
+				slotsize = { width = 200 height = 25 }
+				max_slots_horizontal = 2
+				add_horizontal = yes
+			}
 		}
 	}
 

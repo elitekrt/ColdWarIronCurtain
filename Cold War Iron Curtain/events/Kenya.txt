@@ -141,6 +141,9 @@ country_event = {
 			name = "Evelyn Baring"
 			picture = "Sir_Evelyn_Baring.dds"
 			ideology = colonial_regime
+			traits = {
+				colonial_governor
+			}
 		}
 	}
 }
@@ -305,11 +308,21 @@ country_event = {
 	title = "The inauguration of Michael Blundell"
 	desc = "Running on the platform of expanding exclusivity of the white highlands, Michael Blundell has been elected governor of Kenya"
 	immediate = {
-		set_politics = {
-			ruling_party = conservative
-			elections_allowed = no
+		hidden_effect = {
+			set_politics = {
+				ruling_party = conservative
+				elections_allowed = no
+			}
+			add_popularity = { ideology = conservative popularity = 0.35 }
+			add_popularity = { ideology = nationalism popularity = 0.05 }
+			add_popularity = { ideology = socialist popularity = 0.05 }
+			add_popularity = { ideology = neutrality popularity = -0.5 }
+			set_party_name = {
+				ideology = neutrality
+				name = "K-MJ"
+				long_name = "the Kenyan Military Junta"
+			}
 		}
-		add_popularity = { ideology = conservative popularity = 0.35 }
 	}
 	trigger = {
 		tag = KEN
@@ -351,6 +364,9 @@ country_event = {
 			name = "Patrick Muir Renison"
 			picture = "Sir_Patrick_Muir_Renison.dds"
 			ideology = colonial_regime
+			traits = {
+				colonial_governor
+			}
 		}
 	}
 	is_triggered_only = yes
@@ -396,7 +412,7 @@ country_event = {
 country_event = {
 	id = kenya.19
 	title = "The Direction of the Protectorate"
-	desc = "This decade is turbulent for the British Colonies. We are clearly a component of an obsolete and antiquated system. Shall the selfish perserve their own power, or will reign over an uhuru Kenya"
+	desc = "This decade is turbulent for the British Colonies. We are clearly a component of an obsolete and antiquated system. Shall the selfish perserve their own power, or will majority rule reign over an uhuru Kenya?"
 	trigger = {
 		tag = KEN
 	}
@@ -407,6 +423,9 @@ country_event = {
 			name = "Eric Griffith Jones"
 			picture = "Sir_Eric_Griffith_Jones.dds"
 			ideology = colonial_regime
+			traits = {
+				colonial_governor
+			}
 		}
 	}
 	option = {
@@ -431,6 +450,9 @@ country_event = {
 			name = "Malcolm MacDonald"
 			picture = "Malcolm_Macdonald.dds"
 			ideology = colonial_regime
+			traits = {
+				reformist_colonial_governor
+			}
 		}
 	}
 }

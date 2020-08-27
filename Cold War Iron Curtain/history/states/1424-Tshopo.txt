@@ -1,0 +1,107 @@
+state = {
+	id = 1424
+	name = "STATE_1424"
+	resources = {
+	}
+	history = {
+		owner = DOC
+		set_state_flag = tropical
+		set_state_flag = riverlarge
+		set_state_flag = large
+		set_state_flag = undeveloped
+		buildings = {
+			infrastructure = 1
+			state_infrastructure = 1
+
+			agri_industrial_complex = 1
+			
+		}
+
+		add_core_of = DOC
+
+
+		1998.1.1 = {
+			owner = COG
+			add_core_of = COG
+		}
+		2003.1.1 = {
+			owner = DOC
+			remove_core_of = COG
+		}
+                1970.1.1 = {
+                        set_province_name = {
+                                id = 14934
+                                name = "Ubundu"
+                        }
+                        set_province_name = {
+                                id = 14965
+                                name = "Kisangani"
+                        }
+                }
+                victory_points = {
+		        14999 2
+		}
+                victory_points = {
+		        14985 2
+		}
+                victory_points = {
+		        14958 2
+		}
+                victory_points = {
+		        14934 2
+		}
+                victory_points = {
+		        8048 2
+		}
+                victory_points = {
+		        14965 18
+		}
+                victory_points = {
+		        14983 2
+		}
+	}
+
+	provinces = {
+        13585
+        14959
+        14967
+        12847
+        14995
+        14994
+        14989
+        14999
+        14984
+        14992
+        13591
+        14993
+        14982
+        13588
+        14966
+        14952
+        14943
+        14927
+        14912
+        14916
+        13581
+        14934
+        14947
+        14950
+        14949
+        14948    
+        14983
+        14974
+        14956
+        8048
+        1950
+        14971
+        14965
+        14975
+        14977
+        14985
+        14964
+        14958   
+	}
+	manpower = 684539
+	buildings_max_level_factor = 1.000
+	state_category = pop1
+}

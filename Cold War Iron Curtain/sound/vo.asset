@@ -56,6 +56,9 @@ category =
 	NOR_infantry_neutral_combat
 	NOR_infantry_positive_combat
 	NOR_infantry_retreat
+	money_easteregg
+	premonition_easteregg
+	superevent_korean_nuke
  }
   compressor = 
  {
@@ -1224,6 +1227,49 @@ soundeffect =
 	volume_random_offset = { 0.0 -0.15 }
 	playbackrate_random_offset = { 0.0 -0.15}
 }
+
+soundeffect = 
+{
+    name = "money_easteregg"
+    sounds = {
+		sound = money_easteregg_001
+        
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+soundeffect = 
+{
+    name = "premonition_easteregg"
+    sounds = {
+		sound = premonition_easteregg_001
+        
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
+soundeffect = 
+{
+    name = "superevent_korean_nuke"
+    sounds = {
+		sound = superevent_korean_nuke_001
+        
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1
+	volume_random_offset = { 0.0 -0.15 }
+	playbackrate_random_offset = { 0.0 -0.15 }
+}
+
 soundeffect = 
 {
     name = "USA_infantry_retreat"
@@ -5069,6 +5115,7 @@ sound =
 	name = "us_Positive_017"
 	file = "usa/us_Positive_017.wav"
 }
+
 sound = 
 {
 	name = "us_Positive_018"
@@ -5209,6 +5256,25 @@ sound =
 	name = "us_Retreat_018_alt"
 	file = "usa/us_Retreat_018_alt.wav"
 }
+sound = 
+{
+	name = "money_easteregg_001"
+	file = "menu/reallyrich.wav"
+}
+
+sound = 
+{
+	name = "premonition_easteregg_001"
+	file = "menu/premonition.wav"
+}
+
+sound = 
+{
+	name = "superevent_korean_nuke_001"
+	file = "menu/superevent_korean_nuke.wav"
+}
+
+
 ############ den
 sound = 
 {

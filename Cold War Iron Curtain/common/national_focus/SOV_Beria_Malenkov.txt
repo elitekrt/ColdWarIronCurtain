@@ -1,0 +1,5393 @@
+focus_tree = {
+	id = SOV_Beria_Malenkov
+	
+    country = {
+		factor = 0
+	}
+	default = no
+
+focus = {
+    id = BERMAL_Rise_Duumvirate
+    search_filters = {IC_FILTER}
+	cost = 50.00
+	x = 20
+	y = 1
+    select_effect = {
+        country_event = {
+            days = 5
+            id = SOV_Beria_Struggle.1
+        } 
+    }
+    completion_reward = {
+        custom_effect_tooltip = purgeberia_TT
+    }
+}
+focus = {
+    id = BERMAL_Halt_Five
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 9
+    y = 1
+    available = {
+        has_completed_focus = BERMAL_Rise_Duumvirate
+    }
+
+    completion_reward = {
+        add_ideas = sov_suspended_5
+        add_political_power = 100
+
+    }
+
+}
+focus = {
+    id = BERMAL_Abandon_Pharaonic
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 5 
+    y = 2 
+
+    prerequisite = {
+        focus = BERMAL_Halt_Five
+    }
+
+    completion_reward = {
+        remove_ideas = sov_suspended_5
+        add_ideas = sov_suspended_5_plus
+
+        add_political_power = 50
+
+        hidden_effect = {
+            remove_ideas = Failing_Health_System_5
+        }
+    }
+}
+focus = {
+    id = BERMAL_Upper_Limit_Military_Spendings
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 3
+    y = 3
+
+    prerequisite = {
+        focus = BERMAL_Abandon_Pharaonic
+    }
+
+    completion_reward = {
+        add_timed_idea = {
+        idea = sov_demilitarize_1
+        days = 1000
+        }
+        add_war_support = -0.05
+    }
+}
+focus = {
+    id = BERMAL_Reallow_Workforce  
+    search_filters = {IC_FILTER}
+    cost = 4.00 
+
+    x = 7
+    y = 3 
+
+    prerequisite = {
+        focus = BERMAL_Abandon_Pharaonic
+    }
+
+    completion_reward = {
+        add_stability = 0.05
+        add_political_power = 50
+
+        add_to_variable = {
+            Labor_Shortage = 0.05
+            Labor_Shortage_Efficiency = -0.03
+        }
+    }
+}
+focus = {
+    id = BERMAL_Maintain_Factory_Discipline 
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 5 
+    y = 4 
+
+    
+    prerequisite = {
+        focus = BERMAL_Reallow_Workforce
+    }
+    prerequisite = {
+        focus = BERMAL_Upper_Limit_Military_Spendings
+    }
+
+    completion_reward = {
+        add_timed_idea = {
+            idea = temporary_soviet_discipline
+            days = 180
+        } 
+    }
+}
+focus = {
+    id = BERMAL_Emergency_Relief
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 13 
+    y = 2
+
+
+    prerequisite = {
+        focus = BERMAL_Halt_Five
+
+        custom_effect_tooltip = has_money
+    }
+    available = {
+        check_variable = {
+            currentMoney > 200
+        }
+    }
+    select_effect = {
+        add_to_variable = { currentMoney = -200 }
+    }
+    completion_reward = {
+
+        custom_effect_tooltip = spend_200_billion_now_TT
+
+        custom_effect_tooltip = soviet_agriculture_stability_TT
+
+        add_to_variable = {
+            Soviet_Agriculture_Stability = 0.1
+        }
+    }
+}
+focus = {
+    id = BERMAL_Raise_Procurement
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 11 
+    y = 3
+
+    prerequisite = {
+        focus = BERMAL_Emergency_Relief
+    }
+
+    completion_reward = {
+        
+        
+        custom_effect_tooltip = soviet_agriculture_up_TT
+        add_to_variable = {
+            Soviet_Agriculture_Stability = 0.05
+        }
+        add_to_variable = {
+            Soviet_Agriculture_robbed_negative = 0.10
+        }
+        add_to_variable = {
+            Soviet_Agriculture_robbed_positive = -0.05
+        }
+        add_to_variable = {
+				Soviet_Agriculture_farmBonus = 0.01
+		}
+    }
+}
+focus = {
+    id = BERMAL_Soften_Quotas
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 15
+    y = 3 
+
+    prerequisite = {
+        focus = BERMAL_Emergency_Relief
+    }
+    completion_reward = {
+
+        custom_effect_tooltip = soviet_agriculture_stability_TT
+        custom_effect_tooltip = undo_stalin_agri_TT
+
+        add_to_variable = {
+            Soviet_Agriculture_Export = 0.02
+        }
+        add_to_variable = {
+            Soviet_Agriculture_Stability = 0.05
+        }
+    }
+}
+focus = {
+    id = BERMAL_Fragment_Larger_Farms
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 13 
+    y = 4
+    prerequisite = {
+        focus = BERMAL_Raise_Procurement
+    }
+    prerequisite = {
+        focus = BERMAL_Soften_Quotas
+    }
+    completion_reward = {
+        custom_effect_tooltip = agriculture_long_term_TT
+
+        add_to_variable = {
+            Soviet_Agriculture_efficiency = 0.01
+        }
+        add_to_variable = {
+			Soviet_Agriculture_farmBonus = 0.02
+		}
+    }
+}
+focus = {
+    id = BERMAL_Announce_Seven_Years_Plan
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 90
+    y = 5 
+
+    available = {
+        has_completed_focus = BERMAL_Maintain_Factory_Discipline
+    }
+    available = {
+        has_completed_focus = BERMAL_Fragment_Larger_Farms 
+    }
+    available = {
+        has_completed_focus = BERMAL_XXth_Congress
+    }
+    completion_reward = {
+        add_political_power = 200
+    }
+}
+focus = {
+    id = BERAL_Announce_New_Agricultural_Era
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 114
+    y = 7 
+
+    prerequisite = {
+        focus = BERMAL_Announce_Seven_Years_Plan
+    }
+    available = {
+        has_political_power > 100
+    }
+    select_effect = {
+        add_political_power = -100
+    }
+    completion_reward = {
+
+        custom_effect_tooltip = soviet_agriculture_stability_TT
+        custom_effect_tooltip = undo_stalin_agri_TT
+        custom_effect_tooltip = Kulakism_TT
+
+        add_to_variable = {
+            Soviet_Agriculture_PP = 0.1
+        }
+        add_to_variable = {
+            Soviet_Agriculture_Stability = 0.02
+        }
+        add_to_variable = {
+            Soviet_Agriculture_Export = -0.02
+        }
+
+
+
+    }
+}
+focus = {
+    id = BERMAL_Increase_Agricultural_Investments
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 118 
+    y = 8 
+
+    prerequisite = {
+        focus = BERAL_Announce_New_Agricultural_Era
+    }
+    available = {
+        check_variable = {
+            currentMoney > 300
+        }
+    }
+    select_effect = {
+        add_to_variable = {
+
+            currentMoney = -300
+        }
+    }
+    completion_reward = {
+
+        custom_effect_tooltip = agriculture_long_term_TT
+
+        custom_effect_tooltip = spend_300_billion_now_TT
+
+        add_to_variable = {
+            Soviet_Agriculture_efficiency = 0.02
+        }
+        add_to_variable = {
+				Soviet_Agriculture_farmBonus = 0.05
+		}
+    }
+}
+focus = {
+    id = BERMAL_Ramp_Up_Tractors
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 116
+    y = 9 
+
+    prerequisite = {
+        focus = BERMAL_Increase_Agricultural_Investments 
+    }
+
+    completion_reward = {
+
+        206 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+        }
+
+        custom_effect_tooltip = soviet_agriculture_up_TT
+        add_to_variable = {
+            Soviet_Agriculture_robbed_positive = -0.02
+        }
+        add_to_variable = {
+            Soviet_Agriculture_robbed_negative = 0.04
+        }
+        add_to_variable = {
+				Soviet_Agriculture_farmBonus = 0.02
+		}
+    }
+
+}
+focus = {
+    id = BERMAL_Open_New_Agricultural_Industries
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 120
+    y = 9 
+
+    prerequisite = {
+        focus = BERMAL_Increase_Agricultural_Investments
+    }
+    completion_reward = {
+        234 = {
+        add_extra_state_shared_building_slots = 2
+        add_building_construction = {
+            instant_build = yes 
+            type = synthetic_refinery
+			level = 2
+        }
+    }
+    add_tech_bonus = {
+		name = agri_tech_bonus	
+    	bonus = 1.25
+		uses = 1
+		category = agriculture
+	    }
+    }
+    
+}
+focus = {
+    id = BERMAL_Purge_Lyssenko
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 118
+    y = 10 
+
+    prerequisite = {
+        focus = BERMAL_Ramp_Up_Tractors
+    }
+    prerequisite = {
+        focus = BERMAL_Open_New_Agricultural_Industries
+    }
+    completion_reward = {
+        add_political_power = 100
+    } 
+}
+focus = {
+    id = BERMAL_Improve_Irrigation
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 116
+    y = 11 
+
+    prerequisite = {
+        focus = BERMAL_Purge_Lyssenko
+    }
+    completion_reward = {
+        218 = {
+            add_building_construction = {
+            instant_build = yes 
+            type = water_infrastructure
+			level = 1
+            }
+        }
+        221 = {
+            add_building_construction = {
+            instant_build = yes 
+            type = water_infrastructure
+			level = 1
+            }
+        }
+        227 = {
+            add_building_construction = {
+            instant_build = yes 
+            type = water_infrastructure
+			level = 1
+            }
+        }
+        228 = {
+            add_building_construction = {
+            instant_build = yes 
+            type = water_infrastructure
+			level = 1
+            }
+        }
+        217 = {
+            add_building_construction = {
+            instant_build = yes 
+            type = water_infrastructure
+			level = 1
+            }
+        }
+
+        custom_effect_tooltip = soviet_agriculture_up_TT
+
+        add_to_variable = {
+            Soviet_Agriculture_robbed_positive = -0.02
+        }
+        add_to_variable = {
+            Soviet_Agriculture_robbed_negative = 0.04
+        }
+        add_to_variable = {
+			Soviet_Agriculture_farmBonus = 0.02
+		}
+    }
+}
+focus = {
+    id = BERMAL_Expand_Fertilizer_Use
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 120
+    y = 11 
+
+    prerequisite = {
+        focus = BERMAL_Purge_Lyssenko
+    }
+    available = {
+        has_completed_focus = BERMAL_Expand_Fertilizer_Industry
+    }
+    completion_reward = {
+
+        custom_effect_tooltip = agriculture_long_term_TT
+
+        add_to_variable = {
+			Soviet_Agriculture_farmBonus = 0.04
+		}
+        add_to_variable = {
+            Soviet_Agriculture_efficiency = 0.01
+        }
+    }
+}
+focus = {
+    id = BERMAl_Create_Water_Commissions
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 118
+    y = 12 
+
+    prerequisite = {
+        focus = BERMAL_Improve_Irrigation 
+    }
+    prerequisite = {
+        focus = BERMAL_Expand_Fertilizer_Use
+    }
+
+    completion_reward = {
+
+        add_timed_idea = {
+            idea = Recently_Created_Water_Commissions
+            days = 720 
+        }
+
+        custom_effect_tooltip = agriculture_long_term_TT
+
+        add_to_variable = {
+			Soviet_Agriculture_farmBonus = 0.02
+		}
+        add_to_variable = {
+            Soviet_Agriculture_efficiency = 0.01
+        }
+    }
+}
+focus = {
+    id = BERMAL_Renounce_Forced_Collectivization
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 109 
+    y = 8 
+
+    prerequisite = {
+        focus = BERAL_Announce_New_Agricultural_Era
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = soviet_agriculture_stability_TT
+
+        custom_effect_tooltip = undo_stalin_agri_TT
+
+        custom_effect_tooltip = agriculture_PP_down_TT
+
+        add_to_variable = {
+            Soviet_Agriculture_Stability = 0.02
+        }
+        add_to_variable = {
+            Soviet_Agriculture_Export = -0.02
+        }
+        add_to_variable = {
+            Soviet_Agriculture_PP = -0.05
+        }
+    }
+}
+focus = {
+    id = BERMAL_Encourage_Private_Livestock
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 107
+    y = 9 
+
+    prerequisite = {
+        focus = BERMAL_Renounce_Forced_Collectivization
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = soviet_agriculture_stability_TT
+
+        custom_effect_tooltip = undo_stalin_agri_TT
+
+        custom_effect_tooltip = agriculture_PP_down_TT
+
+        custom_effect_tooltip = soviet_agriculture_up_TT
+
+        add_to_variable = {
+            Soviet_Agriculture_Stability = 0.02
+        }
+        add_to_variable = {
+            Soviet_Agriculture_Export = -0.02
+        }
+        add_to_variable = {
+            Soviet_Agriculture_PP = -0.05
+        }
+        add_to_variable = {
+            Soviet_Agriculture_robbed_positive = -0.02
+        }
+        add_to_variable = {
+            Soviet_Agriculture_robbed_negative = 0.04
+        }
+        add_to_variable = {
+			Soviet_Agriculture_farmBonus = 0.02
+		}
+
+    }
+
+    
+}
+focus = {
+    id = BERMAL_Subsidize_Private_Plots
+    search_filters = {IC_FILTER}
+    cost = 4.00 
+
+    x = 111
+    y = 9 
+
+    prerequisite = {
+        focus = BERMAL_Renounce_Forced_Collectivization
+    }
+
+    completion_reward = {
+
+    custom_effect_tooltip = soviet_agriculture_up_TT
+
+    custom_effect_tooltip = agriculture_PP_down_TT
+
+    custom_effect_tooltip = agriculture_long_term_investment_TT
+
+    add_to_variable = {
+            Soviet_Agriculture_PP = -0.05
+        }
+
+    add_to_variable = {
+            Soviet_Agriculture_efficiency = -0.01
+        }
+
+    
+
+    add_to_variable = {
+            Soviet_Agriculture_robbed_positive = -0.02
+        }
+        add_to_variable = {
+            Soviet_Agriculture_robbed_negative = 0.04
+        }
+        add_to_variable = {
+			Soviet_Agriculture_farmBonus = 0.02
+		}
+    }
+    
+}
+focus = {
+    id = BERMAL_Limit_Maximum_FarmLand_Ownership
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 109 
+    y = 10 
+
+    prerequisite = {
+        focus = BERMAL_Subsidize_Private_Plots
+    }
+    prerequisite = {
+        focus = BERMAL_Encourage_Private_Livestock
+    }
+    completion_reward = { 
+
+        custom_effect_tooltip = soviet_agriculture_stability_TT
+
+        custom_effect_tooltip = agriculture_PP_down_TT
+
+        custom_effect_tooltip = undo_stalin_agri_TT
+
+        add_to_variable = {
+            Soviet_Agriculture_Stability = 0.05
+        }
+
+        add_to_variable = {
+            Soviet_Agriculture_PP = -0.05
+        }
+        add_to_variable = {
+            Soviet_Agriculture_Export = -0.02
+        }
+        add_to_variable = {
+			Soviet_Agriculture_farmBonus = 0.02
+		}
+
+    }
+    
+    
+}
+focus = {
+    id = BERMAL_Transform_MTS
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 114
+    y = 10
+
+    prerequisite = {
+        focus = BERMAL_Subsidize_Private_Plots 
+    }
+    prerequisite = {
+        focus = BERMAL_Ramp_Up_Tractors
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -250
+        }
+    }
+    
+    completion_reward = {
+
+        custom_effect_tooltip = spend_250_billion_TT
+        
+        custom_effect_tooltip = agriculture_long_term_TT
+
+        custom_effect_tooltip = Labor_VeryGood_TT
+
+        custom_effect_tooltip = soviet_agriculture_stability_TT
+
+        custom_effect_tooltip = agriculture_PP_down_TT
+
+        add_to_variable = {
+			Soviet_Agriculture_farmBonus = 0.02
+		}
+        add_to_variable = {
+            Soviet_Agriculture_efficiency = 0.01
+        }
+        add_to_variable = {
+				Labor_Shortage = 0.03
+		}			
+        add_to_variable = {
+            Soviet_Agriculture_PP = -0.10
+        }	
+        add_to_variable = {
+            Soviet_Agriculture_Stability = 0.05
+        }
+
+
+    }
+
+}
+focus = {
+    id = BERMAL_Limit_Guarantee_Food_Prices
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 114 
+    y = 12
+
+    prerequisite = {
+        focus = BERMAL_Transform_MTS
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = agriculture_long_term_investment_TT
+
+        custom_effect_tooltip = soviet_agriculture_stability_TT
+
+        custom_effect_tooltip = farmBonus_increase_TT
+
+        add_to_variable = {
+            Soviet_Agriculture_Stability = 0.05
+        }
+        add_to_variable = {
+			Soviet_Agriculture_farmBonus = 0.1
+		}
+        add_to_variable = {
+            Soviet_Agriculture_efficiency = -0.03
+        }
+
+    }
+
+
+}
+focus = {
+    id = BERMAL_Prepare_Agrarian_Legislation
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 106 
+    y = 11 
+
+    prerequisite = {
+        focus = BERMAL_Limit_Maximum_FarmLand_Ownership
+    }
+    available = {
+        has_political_power > 150
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = soviet_agriculture_stability_TT
+
+        custom_effect_tooltip = agriculture_PP_down_TT
+
+        add_political_power = -150
+
+        add_to_variable = {
+            Soviet_Agriculture_Stability = 0.05
+        }
+
+        add_to_variable = {
+            Soviet_Agriculture_PP = -0.10
+        }
+    }
+}
+focus = {
+    id = BERMAL_Develop_State_Run__Private_Market_Networks
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 109 
+    y = 11 
+
+    prerequisite = {
+        focus = BERMAL_Limit_Maximum_FarmLand_Ownership
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -200
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_200_billion_now_TT
+
+        custom_effect_tooltip = soviet_agriculture_up_TT
+
+        custom_effect_tooltip = soviet_agriculture_stability_TT
+
+        add_to_variable = {
+            Soviet_Agriculture_robbed_positive = -0.02
+        }
+        add_to_variable = {
+            Soviet_Agriculture_robbed_negative = 0.04
+        }
+        add_to_variable = {
+			Soviet_Agriculture_farmBonus = 0.02
+		    }
+
+        add_to_variable = {
+            Soviet_Agriculture_Stability = 0.05
+            }
+        }
+    }
+
+focus = {
+    id = BERMAL_Prevent_Kulakism
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 112
+    y = 11 
+
+    prerequisite = {
+        focus = BERMAL_Limit_Maximum_FarmLand_Ownership
+    }
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -50
+        }
+    }
+
+    completion_reward = {
+        
+        custom_effect_tooltip = spend_50_billion_now_TT
+
+        custom_effect_tooltip = soviet_agriculture_unstability_TT
+
+        custom_effect_tooltip = Kulakism_NOT_TT
+
+        add_to_variable = {
+
+            Soviet_Agriculture_Stability = -0.05
+        }
+        add_to_variable = {
+
+            Soviet_Agriculture_PP = 0.1
+        }
+
+    }
+}
+focus = {
+    id = BERMAL_Red_Family_Farms
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 109 
+    y = 12 
+
+    prerequisite = {
+        focus = BERMAL_Prevent_Kulakism
+    }
+    prerequisite = {
+        focus = BERMAL_Develop_State_Run__Private_Market_Networks
+    }
+    prerequisite = {
+        focus = BERMAL_Prepare_Agrarian_Legislation
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = soviet_agriculture_stability_TT
+
+        add_to_variable = {
+
+            Soviet_Agriculture_Stability = 0.1
+        }
+    }
+    
+
+
+}
+focus = {
+    id = BERMAL_Declare_Renewed_Soviet_Agriculture
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 114 
+    y = 13
+
+    prerequisite = {
+        focus = BERMAL_Red_Family_Farms
+    }
+    prerequisite = {
+        focus = BERMAL_Limit_Guarantee_Food_Prices
+    }
+    prerequisite = {
+        focus = BERMAl_Create_Water_Commissions
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = farmBonus_increase_substantial_TT
+
+        add_to_variable = {
+            Soviet_Agriculture_farmBonus = 0.25
+        }
+        add_to_variable = {
+            Soviet_Agriculture_efficiency = 0.075
+        }
+    }
+}
+focus = {
+    id = BERMAL_Invest_Cutting_Edge_Sectors
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 98 
+    y = 7 
+
+    prerequisite = {
+        focus = BERMAL_Announce_Seven_Years_Plan
+    }
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -50
+        }
+    }
+    completion_reward = {
+
+        custom_effect_tooltip = spend_50_billion_now_TT
+
+        add_tech_bonus = {
+            name = electronics_bonus
+				bonus = 1.5
+				uses = 1
+				category = electronics
+        }
+    }
+}
+focus = {
+    id = BERMAL_Intesify_Electronics
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 94 
+    y = 8 
+
+    prerequisite = {
+        focus = BERMAL_Invest_Cutting_Edge_Sectors
+    }
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -200
+        }
+    }
+    completion_reward = {
+
+        custom_effect_tooltip = spend_200_billion_now_TT
+
+        add_tech_bonus = {
+            name = electronics_bonus
+				bonus = 1.5
+				uses = 1
+				category = electronics
+        }
+
+        custom_effect_tooltip = Labor_Good_TT 
+
+        add_to_variable = {
+
+            Labor_Shortage_Efficiency = 0.02
+        }
+    }
+}
+focus = {
+    id = BERMAL_Develop_Chemical_Industry
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 102
+    y =  8 
+
+    prerequisite = {
+        focus = BERMAL_Invest_Cutting_Edge_Sectors
+    }
+    available = {
+        has_completed_focus = BERMAL_Open_New_Agricultural_Industries
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -100
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_100_billion_now_TT
+
+        236 = {
+
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+            instant_build = yes 
+            type = synthetic_refinery
+			level = 3
+        }
+    }
+}
+}
+focus = {
+    id = BERMAL_Encourage_Civilian_Computers
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 92
+    y = 9 
+
+    prerequisite = {
+        focus = BERMAL_Intesify_Electronics
+    }
+
+    select_effect = {
+
+        add_to_variable = {
+            currentMoney = -100
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_100_billion_now_TT 
+
+        custom_effect_tooltip = Consumer_Share_TT
+
+        custom_effect_tooltip = Consumer_Innovation_TT
+
+        add_to_variable = {
+
+            CG_CG = 0.01
+        }
+        add_to_variable = {
+
+            CG_Research = 0.02
+        }
+    }
+}
+focus = {
+    id = BERMAL_Create_Soviet_Conglomerates
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 98
+    y = 9 
+
+    prerequisite = {
+        focus = BERMAL_Intesify_Electronics
+    }
+    prerequisite = {
+        focus = BERMAL_Develop_Chemical_Industry
+    }
+
+    available = {
+        has_completed_focus = BERMAL_Improve_InterOblast_Highways
+    }
+
+    completion_reward = {
+
+        add_dynamic_modifier = {
+            modifier = Soviet_Zaibatsus
+        }
+        set_variable = {
+            zaibatsu_strong = -0.05
+
+        }
+        set_variable = {
+            zaibatsu_cg = 0.01
+            
+        }
+        set_variable = {
+            zaibatsu_effiency = 0.02
+            
+        }
+        set_variable = {
+            zaibatsu_research = 0.02
+        }
+
+        add_political_power = 100
+    }
+}
+focus = {
+    id = BERMAL_Redirect_Engineers
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 104 
+    y = 9 
+
+    prerequisite = {
+        focus = BERMAL_Intesify_Electronics
+    }
+    prerequisite = {
+        focus = BERMAL_Develop_Chemical_Industry
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = Labor_VeryGood_TT
+
+        add_timed_idea = {
+            days = 1000 
+            idea = redirected_engineers
+        }
+
+        add_to_variable = {
+
+            Labor_Shortage = 0.04
+        }
+    }
+}
+focus = {
+    id = BERMAL_Create_High_Quality_Machine_Tools
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 93
+    y = 10 
+
+    prerequisite = {
+       focus = BERMAL_Create_Soviet_Conglomerates 
+    }
+    prerequisite = {
+        focus = BERMAL_Encourage_Civilian_Computers
+    }
+
+    select_effect = {
+
+        add_to_variable = {
+            currentMoney = -50 
+        }
+    }
+
+        completion_reward = {
+
+            custom_effect_tooltip = spend_50_billion_now_TT
+
+            custom_effect_tooltip = Zaibatsu_Effiency_Up
+
+            add_to_variable = {
+                zaibatsu_effiency = 0.02
+            }
+            add_to_variable = {
+                zaibatsu_strong = -0.05
+            }
+        }
+}
+focus = {
+    id = BERMAL_Heavily_Support_IT
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 96
+    y = 10 
+
+    prerequisite = {
+       focus = BERMAL_Create_Soviet_Conglomerates 
+    }
+    prerequisite = {
+        focus = BERMAL_Encourage_Civilian_Computers
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -200
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_200_billion_now_TT
+
+        custom_effect_tooltip = Zaibatsu_Research_Up
+
+        add_to_variable = {
+            zaibatsu_strong = -0.05
+        }
+        add_to_variable = {
+            zaibatsu_research = 0.04
+        }
+        add_to_variable = {
+            zaibatsu_cg = 0.03
+        }
+
+        add_tech_bonus = {
+            name = electronics_bonus
+				bonus = 1
+				uses = 2
+				category = electronics
+        }
+    }
+}
+focus = {
+    id = BERMAL_Further_Subsidy_Pharmaceutical
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 96 
+    y = 11
+
+    prerequisite = {
+        focus = BERMAL_Heavily_Support_IT 
+    }
+    prerequisite = {
+        focus = BERMAL_Create_High_Quality_Machine_Tools
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -500 
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_500_billion_now_TT 
+
+        custom_effect_tooltip = Zaibatsu_Consumer_Up 
+
+        custom_effect_tooltip = Zaibatsu_Effiency_Up
+
+        custom_effect_tooltip = Zaibatsu_Research_Up
+
+        add_to_variable = {
+
+            zaibatsu_cg = 0.03
+        }
+        add_to_variable = {
+            zaibatsu_strong = -0.05   
+        }
+        add_to_variable = {
+            zaibatsu_effiency = 0.02
+        }
+
+        add_to_variable = {
+
+            zaibatsu_research = 0.03
+        }
+
+        651 = {
+
+            add_extra_state_shared_building_slots = 6
+
+            add_building_construction = {
+            instant_build = yes 
+            type = synthetic_refinery
+			level = 2
+            }
+
+            add_building_construction = {
+                instant_build = yes 
+                type = office_park
+                level = 2 
+            }
+
+            add_building_construction = {
+                instant_build = yes 
+                type = industrial_complex
+                level = 2 
+            }
+        }
+    }
+
+}
+focus = {
+    id = BERMAL_Build_Petrochemical_Plants_Baku
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 100
+    y = 10 
+
+    prerequisite = {
+        focus = BERMAL_Create_Soviet_Conglomerates
+    }
+    prerequisite = {
+        focus = BERMAL_Redirect_Engineers
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = 200
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_200_billion_now_TT
+
+        custom_effect_tooltip = Zaibatsu_Effiency_Up
+
+        add_to_variable = {
+
+            zaibatsu_effiency = 0.02
+        }
+        add_to_variable = {
+            zaibatsu_strong = 0.05
+        }
+
+        229 = {
+            add_extra_state_shared_building_slots = 5
+
+            add_building_construction = {
+            instant_build = yes 
+            type = synthetic_refinery
+			level = 5
+            }
+
+            add_building_construction = {
+                instant_build = yes 
+                type = state_infrastructure 
+                level = 1 
+            }
+        }
+
+    }
+}
+focus = {
+    id = BERMAL_Expand_Fertilizer_Industry
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 103 
+    y = 10
+
+    prerequisite = {
+        focus = BERMAL_Redirect_Engineers
+    }
+    available = {
+        has_completed_focus = BERMAL_Open_New_Agricultural_Industries     
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -1000
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_1000_billion_now_TT 
+
+        custom_effect_tooltip = Zaibatsu_Research_Up
+        
+        custom_effect_tooltip = Zaibatsu_Effiency_Up 
+
+        add_to_variable = {
+            zaibatsu_strong = 0.05
+        }
+        add_to_variable = {
+            zaibatsu_research = 0.03
+        }
+        add_to_variable = {
+            zaibatsu_effiency = 0.02
+        }
+
+        263 = {
+
+            add_extra_state_shared_building_slots = 4 
+
+            add_building_construction = {
+            instant_build = yes 
+            type = synthetic_refinery
+			level = 2
+            }
+
+            add_building_construction = {
+            instant_build = yes 
+            type = industrial_complex
+			level = 2
+            }
+
+            add_building_construction = {
+                instant_build = yes 
+                type = state_infrastructure 
+                level = 1
+            }
+
+        }
+
+        242 = {
+
+            add_extra_state_shared_building_slots = 4 
+
+            add_building_construction = {
+            instant_build = yes 
+            type = synthetic_refinery
+			level = 2
+            }
+
+            add_building_construction = {
+            instant_build = yes 
+            type = industrial_complex
+			level = 2
+            }
+
+            add_building_construction = {
+                instant_build = yes 
+                type = state_infrastructure 
+                level = 1
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Encourage_Synthetic_Fabric_Innovations
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 100
+    y = 11 
+
+    prerequisite = {
+        focus = BERMAL_Expand_Fertilizer_Industry
+    }
+    prerequisite = { 
+        focus = BERMAL_Build_Petrochemical_Plants_Baku
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = 500
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_500_billion_now_TT
+
+        custom_effect_tooltip = Zaibatsu_Research_Up
+
+        custom_effect_tooltip = Zaibatsu_Effiency_Up
+
+        custom_effect_tooltip = Zaibatsu_Consumer_Up
+
+        add_to_variable = {
+            zaibatsu_effiency = 0.01
+        }
+        add_to_variable = {
+            zaibatsu_research = 0.02
+        }
+        add_to_variable = {
+            zaibatsu_cg = 0.03
+        }
+
+        232 = {
+
+            add_extra_state_shared_building_slots = 2
+
+            add_building_construction = {
+            instant_build = yes 
+            type = synthetic_refinery
+			level = 2
+            }
+        }
+        232 = {
+
+            add_extra_state_shared_building_slots = 2
+
+            add_building_construction = {
+            instant_build = yes 
+            type = synthetic_refinery
+			level = 2
+            }
+        }
+        798 = {
+
+            add_extra_state_shared_building_slots = 2
+
+            add_building_construction = {
+            instant_build = yes 
+            type = synthetic_refinery
+			level = 2
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Insert_Conglomerates_Global
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 98 
+    y = 12 
+
+    prerequisite = {
+        focus = BERMAL_Further_Subsidy_Pharmaceutical 
+    }
+    prerequisite = {
+        focus = BERMAL_Encourage_Synthetic_Fabric_Innovations
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -2000
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_2000_billion_now_TT
+
+        custom_effect_tooltip = Zaibatsu_full_TT
+
+        add_to_variable = {
+            zaibatsu_cg = -0.05
+        }
+        add_to_variable = {
+            zaibatsu_effiency = 0.05
+        }
+        add_to_variable = {
+            zaibatsu_research = 0.05
+        }
+        add_to_variable = {
+            zaibatsu_strong = 0.1
+        }
+
+        add_research_slot = 1
+    }
+}
+focus = {
+    id = BERMAL_Restart_Public_Works_Projects
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 83
+    y = 7
+
+    prerequisite = {
+        focus = BERMAL_Announce_Seven_Years_Plan
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -2500
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = Global_Investment_Plan
+
+        add_ideas = Soviet_Greatworks
+    }
+}
+focus = {
+    id = BERMAL_Increased_Socialized_Housing
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 81 
+    y = 8 
+
+    prerequisite = {
+        focus = BERMAL_Restart_Public_Works_Projects
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -1000
+        }
+    }
+
+    completion_reward = {
+        
+        custom_effect_tooltip = spend_1000_billion_now_TT
+
+        every_owned_state = {
+            add_extra_state_shared_building_slots = 2
+        }
+    }
+}
+focus = {
+    id = BERMAL_Improve_InterOblast_Highways
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 85 
+    y = 8 
+
+    prerequisite = {
+        focus = BERMAL_Restart_Public_Works_Projects
+    }
+
+    select_effect = {
+
+        add_to_variable = {
+            currentMoney = -2000
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_2000_billion_now_TT
+
+        every_owned_state = {
+            add_building_construction = {
+            instant_build = yes 
+            type = state_infrastructure 
+			level = 1
+            }
+        }
+    }
+
+}
+focus = {
+    id = BERMAL_Connect_Caucasus
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 83 
+    y = 9 
+
+    prerequisite = {
+        focus = BERMAL_Increased_Socialized_Housing
+    }
+    prerequisite = {
+        focus = BERMAL_Improve_InterOblast_Highways
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -1000
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_1000_billion_now_TT
+
+        every_owned_state = {
+		    limit = {
+			    is_core_of = AZR
+		        }
+
+        add_building_construction = {
+            instant_build = yes 
+            type = state_infrastructure 
+			level = 1
+            }
+        add_building_construction = {
+            instant_build = yes 
+            type = infrastructure  
+			level = 1
+            }
+        }
+        every_owned_state = {
+		    limit = {
+			    is_core_of = GEO
+		        }
+
+        add_building_construction = {
+            instant_build = yes 
+            type = state_infrastructure 
+			level = 1
+            }
+        add_building_construction = {
+            instant_build = yes 
+            type = infrastructure 
+			level = 1
+            }
+        }
+        every_owned_state = {
+		    limit = {
+			    is_core_of = ARM
+		    }
+
+        add_building_construction = {
+            instant_build = yes 
+            type = state_infrastructure 
+			level = 1
+            }
+        add_building_construction = {
+            instant_build = yes 
+            type = infrastructure 
+			level = 1
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Modernize_Old_Train_Engines
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 80 
+    y = 9 
+
+    prerequisite = {
+        focus = BERMAL_Increased_Socialized_Housing
+    }
+
+    select_effect = {
+
+        add_to_variable = {
+            currentMoney = -500
+        }
+    }
+
+    completion_reward = {
+
+        remove_ideas = antiquated_infrastructure
+
+        custom_effect_tooltip = spend_500_billion_now_TT
+    }
+}
+focus = {
+    id = BERMAL_Expand_Black_Shipyards
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 86 
+    y = 9 
+
+    prerequisite = {
+        focus = BERMAL_Improve_InterOblast_Highways
+    }
+
+    select_effect = {
+
+        add_to_variable = {
+            currentMoney = -500 
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_500_billion_now_TT 
+
+        192 = {
+            
+            add_extra_state_shared_building_slots = 2
+
+            add_building_construction = {
+            instant_build = yes 
+            type = dockyard 
+			level = 2
+            }
+        }
+        137 = {
+            
+            add_extra_state_shared_building_slots = 2
+
+            add_building_construction = {
+            instant_build = yes 
+            type = dockyard 
+			level = 2
+            }
+        }
+        1037 = {
+            
+            add_extra_state_shared_building_slots = 2
+
+            add_building_construction = {
+            instant_build = yes 
+            type = dockyard 
+			level = 2
+            }
+        }
+        218 = {
+            
+            add_extra_state_shared_building_slots = 2
+
+            add_building_construction = {
+            instant_build = yes 
+            type = dockyard 
+			level = 2
+            }
+        }
+        234 = {
+            
+            add_extra_state_shared_building_slots = 2
+
+            add_building_construction = {
+            instant_build = yes 
+            type = dockyard 
+			level = 2
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_BAM_Mainline 
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 81 
+    y = 10 
+
+    prerequisite = {
+        focus = BERMAL_Connect_Caucasus
+    }
+    prerequisite = {
+        focus = BERMAL_Modernize_Old_Train_Engines
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -500
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_500_billion_now_TT
+
+        566 = {
+            add_building_construction = {
+            instant_build = yes 
+            type = state_infrastructure 
+			level = 1
+            }
+        }
+        564 = {
+            add_building_construction = {
+            instant_build = yes 
+            type = state_infrastructure 
+			level = 1
+            }
+        }
+        563 = {
+            add_building_construction = {
+            instant_build = yes 
+            type = state_infrastructure 
+			level = 1
+            }
+        }
+        561 = {
+            add_building_construction = {
+            instant_build = yes 
+            type = state_infrastructure 
+			level = 1
+            }
+        }
+        657 = {
+            add_building_construction = {
+            instant_build = yes 
+            type = state_infrastructure 
+			level = 1
+            }
+        }
+        409 = {
+            add_building_construction = {
+            instant_build = yes 
+            type = state_infrastructure 
+			level = 1
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Kickstart_Oil_Prospection
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 85 
+    y = 10 
+
+    prerequisite = {
+        focus = BERMAL_Connect_Caucasus 
+    }
+    prerequisite = {
+        focus = BERMAL_Expand_Black_Shipyards
+    }
+
+    completion_reward = {
+        custom_effect_tooltip = RGO_Oil_TT
+    }
+}
+focus = {
+    id = BERMAL_Develop_Public_Transport_Central_Asia
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 83 
+    y = 11 
+
+    prerequisite = {
+        focus = BERMAL_Kickstart_Oil_Prospection 
+    }
+    prerequisite = {
+        focus = BERMAL_BAM_Mainline
+    }
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -1000
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_1000_billion_now_TT
+
+        remove_ideas = Soviet_Greatworks
+
+        every_owned_state = {
+            limit = {
+                is_core_of = KAZ 
+            }
+            add_building_construction = {
+            instant_build = yes 
+            type = infrastructure 
+			level = 1
+            }
+        }
+        every_owned_state = {
+            limit = {
+                is_core_of = KYR 
+            }
+            add_building_construction = {
+            instant_build = yes 
+            type = infrastructure 
+			level = 1
+            }
+        }
+        every_owned_state = {
+            limit = {
+                is_core_of = TAJ 
+            }
+            add_building_construction = {
+            instant_build = yes 
+            type = infrastructure 
+			level = 1
+            }
+        }
+        every_owned_state = {
+            limit = {
+                is_core_of = TMS 
+            }
+            add_building_construction = {
+            instant_build = yes 
+            type = infrastructure 
+			level = 1
+            }
+        }
+        every_owned_state = {
+            limit = {
+                is_core_of = UZB 
+            }
+            add_building_construction = {
+            instant_build = yes 
+            type = infrastructure 
+			level = 1
+            }
+        }
+
+        remove_ideas = Soviet_Greatworks
+    }
+}
+focus = {
+    id = BERMAL_Great_Consumer_Shift
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 68
+    y = 7
+
+    prerequisite = {
+        focus = BERMAL_Announce_Seven_Years_Plan
+    }
+    available = {
+        has_completed_focus = BERMAL_Create_Soviet_Conglomerates
+    }
+    available = {
+        has_political_power > 500
+    }
+
+    completion_reward = {
+
+        add_political_power = -500 
+
+        add_war_support = -0.25
+
+        custom_effect_tooltip = Consumer_Share_TT
+
+        add_to_variable = {
+            CG_CG = 0.02
+        }
+    }
+}
+focus = {
+    id = BERMAL_Develop_GAZ_Group
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 61 
+    y = 8 
+
+    prerequisite = {
+        focus = BERMAL_Great_Consumer_Shift
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -100
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_100_billion_now_TT
+
+        252 = {
+
+            add_extra_state_shared_building_slots = 3 
+
+            add_building_construction = {
+                instant = yes 
+                type = industrial_complex 
+                level = 3
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Allow_Moskovitch_Funds
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 65
+    y = 8 
+
+    prerequisite = {
+        focus = BERMAL_Great_Consumer_Shift
+    }
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -200
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_200_billion_now_TT 
+
+        244 = {
+        add_extra_state_shared_building_slots = 3 
+
+            add_building_construction = {
+                instant = yes 
+                type = industrial_complex 
+                level = 3
+            }
+    }
+    219 = {
+        add_extra_state_shared_building_slots = 2
+
+            add_building_construction = {
+                instant = yes 
+                type = industrial_complex 
+                level = 2
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Increase_Private_Truck_Use
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 59 
+    y = 9 
+
+    prerequisite = {
+        focus = BERMAL_Develop_GAZ_Group
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -200
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_200_billion_now_TT
+
+        399 = {
+        add_extra_state_shared_building_slots = 3 
+
+            add_building_construction = {
+                instant = yes 
+                type = industrial_complex 
+                level = 3
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Modernize_Automobile_Factories
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 63 
+    y = 9 
+
+    prerequisite = {
+        focus = BERMAL_Allow_Moskovitch_Funds
+    }
+    prerequisite = {
+        focus = BERMAL_Develop_GAZ_Group
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -200
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_200_billion_now_TT
+
+        custom_effect_tooltip = Consumer_Share_TT
+
+        custom_effect_tooltip = Consumer_Innovation_TT
+
+        custom_effect_tooltip = Consumer_Efficiency_TT
+
+        add_to_variable = {
+            CG_CG = 0.01
+        }
+        add_to_variable = {
+            CG_Research = 0.04
+        }
+        add_to_variable = {
+            CG_Effiency = 0.04
+        }
+    }
+}
+focus = {
+    id = BERMAL_Kickstart_Export_Centered_Car_Industry
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 67 
+    y = 9 
+
+    prerequisite = {
+        focus = BERMAL_Allow_Moskovitch_Funds
+    }
+
+    completion_reward = {
+        custom_effect_tooltip = Consumer_Share_TT
+
+        custom_effect_tooltip = Consumer_Innovation_TT
+
+        custom_effect_tooltip = Consumer_Efficiency_TT
+
+        add_to_variable = {
+            CG_CG = 0.02
+        }
+        add_to_variable = {
+            CG_Research = 0.04
+        }
+        add_to_variable = {
+            CG_Effiency = 0.04
+        }
+    }
+}
+focus = {
+    id = BERMAL_Begin_International_Market_Research
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 61 
+    y = 10 
+
+    prerequisite = {
+        focus = BERMAL_Modernize_Automobile_Factories
+    }
+    prerequisite = {
+        focus = BERMAL_Increase_Private_Truck_Use
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -50 
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = Consumer_Innovation_TT
+
+        custom_effect_tooltip = Consumer_Efficiency_TT
+
+        add_to_variable = {
+            CG_Research = 0.02
+        }
+        add_to_variable = {
+            CG_Effiency = 0.04
+        }
+    }
+}
+focus = {
+    id = BERMAL_Unlock_Funds_To_Adjust_Quality
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 65
+    y = 10 
+
+    prerequisite = {
+        focus = BERMAL_Modernize_Automobile_Factories
+    }
+    prerequisite = {
+        focus = BERMAL_Kickstart_Export_Centered_Car_Industry
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = 200 
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_200_billion_now_TT
+
+        custom_effect_tooltip = Consumer_Share_TT
+
+        custom_effect_tooltip = Consumer_Innovation_TT
+
+        custom_effect_tooltip = Consumer_Efficiency_TT
+
+        add_to_variable = {
+            CG_CG = 0.01
+        }
+        add_to_variable = {
+            CG_Research = 0.03
+        }
+        add_to_variable = {
+            CG_Effiency = 0.03
+        }
+    }
+}
+focus = {
+    id = BERMAL_One_Family_One_Car
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 63
+    y = 11 
+
+    prerequisite = {
+        focus = BERMAL_Unlock_Funds_To_Adjust_Quality 
+    }
+    prerequisite = {
+        focus = BERMAL_Begin_International_Market_Research
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = Consumer_Share_TT
+
+        add_to_variable = {
+            CG_CG = 0.01
+        }
+
+        add_stability = 0.1
+
+        add_political_power = 150
+    }
+}
+focus = {
+    id = BERMAL_Household_Well_Being_Committee
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    y = 8 
+    x = 72
+
+    prerequisite = {
+        focus = BERMAL_Great_Consumer_Shift
+    }
+
+    completion_reward = {
+
+        add_political_power = 50 
+        add_stability = 0.03
+    }
+}
+focus = {
+    id = BERMAL_Enhance_Appliance_Production
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 70 
+    y = 9 
+
+    prerequisite = {
+        focus = BERMAL_Household_Well_Being_Committee
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -250
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_250_billion_now_TT
+
+        custom_effect_tooltip = Consumer_Share_TT
+
+        custom_effect_tooltip = Consumer_Efficiency_TT
+
+        add_to_variable = {
+            CG_CG = 0.01
+        }
+        add_to_variable = {
+            CG_Effiency = 0.03
+        }
+
+        206 = {
+
+            add_extra_state_shared_building_slots = 1
+
+            add_building_construction = {
+                instant_build = yes 
+                level = 1 
+                type = office_park 
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Create_Subsidiaries_Baltics
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 74 
+    y = 9 
+
+    prerequisite = {
+        focus = BERMAL_Household_Well_Being_Committee
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -500
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_500_billion_now_TT 
+
+        892 = {
+
+            add_extra_state_shared_building_slots = 1 
+            add_building_construction = {
+                instant_build = yes 
+                level = 1 
+                type = office_park 
+            }
+        }
+        13 = {
+
+            add_extra_state_shared_building_slots = 1 
+            add_building_construction = {
+                instant_build = yes 
+                level = 1 
+                type = office_park 
+            }
+        }
+        12 = {
+
+            add_extra_state_shared_building_slots = 1 
+            add_building_construction = {
+                instant_build = yes 
+                level = 1 
+                type = office_park 
+            }
+        }
+        96 = {
+
+            add_extra_state_shared_building_slots = 1 
+            add_building_construction = {
+                instant_build = yes 
+                level = 1 
+                type = office_park 
+            }
+        }
+    }
+
+}
+focus = {
+    id = BERMAL_Develop_Consumer_Hubs
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 72
+    y = 10 
+
+    prerequisite = {
+        focus = BERMAL_Create_Subsidiaries_Baltics
+    }
+    prerequisite = {
+        focus = BERMAL_Enhance_Appliance_Production
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -1000
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_1000_billion_now_TT
+        
+        202 = {
+
+            add_extra_state_shared_building_slots = 1 
+            add_building_construction = {
+                instant_build = yes 
+                level = 1 
+                type = office_park 
+            }
+        }
+        219 = {
+
+            add_extra_state_shared_building_slots = 1 
+            add_building_construction = {
+                instant_build = yes 
+                level = 1 
+                type = office_park 
+            }
+        }
+        195 = {
+
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                instant_build = yes 
+                level = 2
+                type = office_park 
+            }
+        }
+        408 = {
+
+            add_extra_state_shared_building_slots = 1 
+            add_building_construction = {
+                instant_build = yes 
+                level = 1 
+                type = office_park 
+            }
+        }
+
+        custom_effect_tooltip = Consumer_Share_TT
+
+        custom_effect_tooltip = Consumer_Innovation_TT
+
+        custom_effect_tooltip = Consumer_Efficiency_TT
+
+        add_to_variable = {
+            CG_CG = 0.01
+        }
+        add_to_variable = {
+            CG_Research = 0.02
+        }
+        add_to_variable = {
+            CG_Effiency = 0.02
+        }
+    }
+}
+focus = {
+    id = BERMAL_Massively_Provide_Food_Cooking_Goods
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 70 
+    y = 11 
+
+    prerequisite = {
+        focus = BERMAL_Develop_Consumer_Hubs
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = Consumer_Share_TT
+
+        custom_effect_tooltip = Consumer_Efficiency_TT
+
+        add_to_variable = {
+            CG_CG = 0.02
+        }
+        add_to_variable = {
+            CG_Effiency = 0.02
+        }
+
+    }
+}
+focus = {
+    id = BERMAL_Manufacture_TV_En_Masse
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 74 
+    y = 11 
+
+    prerequisite = {
+        focus = BERMAL_Develop_Consumer_Hubs
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = Consumer_Share_TT
+
+        custom_effect_tooltip = Consumer_Efficiency_TT
+
+        add_to_variable = {
+            CG_CG = 0.02
+        }
+        add_to_variable = {
+            CG_Effiency = 0.02
+        }
+    }
+}
+focus = {
+    id = BERMAL_Touristic_Outlook
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 68 
+    y = 12 
+
+    prerequisite = {
+        focus = BERMAL_One_Family_One_Car
+    }
+    prerequisite = {
+        focus = BERMAL_Massively_Provide_Food_Cooking_Goods
+    }
+    prerequisite = {
+        focus = BERMAL_Manufacture_TV_En_Masse
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = Touristic_Outlook_TT
+
+        add_to_variable = {
+            CG_Effiency = 0.04
+        }
+    }
+}
+focus = {
+    id = BERMAL_Promote_Red_Tourism
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 66 
+    y = 13
+
+    prerequisite = {
+        focus = BERMAL_Touristic_Outlook
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -500
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_500_billion_now_TT
+
+        custom_effect_tooltip = Touristic_Outlook_TT
+
+        add_to_variable = {
+            CG_Effiency = 0.01
+        }
+
+        custom_effect_tooltip = Red_Tourism_Huge_TT
+
+        195 = {
+            add_to_variable = {
+                tourism_infrastructure = global.TIHistoricalSiteReligious
+            }
+        }
+        219 = {
+            add_to_variable = {
+                tourism_infrastructure = global.TIHistoricalSiteReligious
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Develop_Black_Sea_Resort
+    search_filters = {IC_FILTER}
+    cost = 4.00
+    
+    x = 68 
+    y = 13 
+
+    prerequisite = {
+        focus = BERMAL_Touristic_Outlook
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -250
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_250_billion_now_TT
+
+        custom_effect_tooltip = resort_blacksea_TT
+
+        234 = {
+            add_to_variable = {
+                tourism_infrastructure = global.TIResortNominal 
+            }
+        }
+        934 = {
+            add_to_variable = {
+                tourism_infrastructure = global.TIResortNominal
+            }
+        }
+        567 = {
+            add_to_variable = {
+                tourism_infrastructure = global.TIResortNominal
+            }
+        }
+        210 = {
+            add_to_variable = {
+                tourism_infrastructure = global.TIResortNominal
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Increase_Skiing_Capabilities_Caucasus
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 70
+    y = 13 
+
+    prerequisite = {
+        focus = BERMAL_Touristic_Outlook
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -500
+        }
+    }
+
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_500_billion_now_TT 
+
+        custom_effect_tooltip = Caucasus_Skiing_TT
+
+
+        234 = {
+            add_to_variable = {
+                tourism_infrastructure = global.TIResortNominal 
+            }
+        }
+        233 = {
+            add_to_variable = {
+                tourism_infrastructure = global.TIResortNominal
+            }
+        }
+        567 = {
+            add_to_variable = {
+                tourism_infrastructure = global.TIResortNominal
+            }
+        }
+        685 = {
+            add_to_variable = {
+                tourism_infrastructure = global.TIResortNominal
+            }
+        }
+        933 = {
+            add_to_variable = {
+                tourism_infrastructure = global.TIResortNominal
+            }
+        }
+        264 = {
+            add_to_variable = {
+                tourism_infrastructure = global.TIResortNominal
+            }
+        }
+        231 = {
+            add_to_variable = {
+                tourism_infrastructure = global.TIResortNominal
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Form_Agencies_Cruise_Networks
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 67
+    y = 14 
+
+    prerequisite = {
+        focus = BERMAL_Promote_Red_Tourism
+    }
+    prerequisite = {
+        focus = BERMAL_Develop_Black_Sea_Resort
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -300
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_300_billion_now_TT
+
+        custom_effect_tooltip = Cruise_Network_TT
+
+        1037 = {
+            add_to_variable = {
+                tourism_infrastructure = global.TIResortNominal
+            }
+        }
+        218 = {
+            add_to_variable = {
+                tourism_infrastructure = global.TIResortNominal
+            }
+        }
+        892 = {
+            add_to_variable = {
+                tourism_infrastructure = global.TIResortNominal
+            }
+        }
+        195 = {
+            add_to_variable = {
+                tourism_infrastructure = global.TIResortNominal
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Ensure_Biannual_Holidays
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 69
+    y = 14 
+
+    prerequisite = {
+        focus = BERMAL_Increase_Skiing_Capabilities_Caucasus
+    }
+    prerequisite = {
+        focus = BERMAL_Develop_Black_Sea_Resort
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = Touristic_Outlook_TT 
+
+        add_to_variable = {
+            CG_CG = 0.01
+        }
+        add_to_variable = {
+            CG_Effiency = 0.03
+        }
+    }
+}
+focus = {
+    id = BERMAL_Create_Joint_Comecon_Touristic_Comission
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 68 
+    y = 15 
+
+    prerequisite = {
+        focus = BERMAL_Form_Agencies_Cruise_Networks
+    }
+    prerequisite = {
+        focus = BERMAL_Ensure_Biannual_Holidays 
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = WIP 
+    }
+}
+focus = {
+    id = BERMAL_Appoint_Merkoulov
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 20
+    y = 2
+
+    prerequisite = {
+        focus = BERMAL_Rise_Duumvirate
+    }
+
+    completion_reward = {
+
+        add_political_power = 75 
+    }
+}
+focus = {
+    id = BERMAL_Denounce_Khrushchevite_Generals
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 17
+    y = 2
+    prerequisite = {
+        focus = BERMAL_Rise_Duumvirate
+    }
+
+    completion_reward = {
+
+        add_political_power = 50
+        add_stability = -0.03
+    }
+}
+focus = {
+    id = BERMAL_Prepare_Mass_Release_Plan
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 23 
+    y = 2
+
+    prerequisite = {
+        focus = BERMAL_Rise_Duumvirate
+    }
+
+    completion_reward = {
+
+        
+
+        add_political_power = 150
+
+        hidden_effect = {
+            
+            add_ideas = Soaring_Criminality
+            
+            add_stability = -0.15 
+        }
+
+    }
+}
+focus = {
+    id = BERMAL_Create_KGB
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 19
+    y = 3
+
+    prerequisite = {
+        focus = BERMAL_Denounce_Khrushchevite_Generals
+    }
+    prerequisite = {
+        focus = BERMAL_Appoint_Merkoulov
+    }
+
+    completion_reward = {
+        add_dynamic_modifier = {
+            modifier = KGB_Dynamic_Idea
+        }
+        set_variable = {
+            KGB_Upgrade = -0.01
+        }
+        set_variable = {
+            KGB_network = 0.01
+        }
+        set_variable = {
+            KGB_Resistance = 0
+        }
+        set_variable = {
+            KGB_Defense = 0.5
+        }
+    }
+}
+focus = {
+    id = BERMAL_Execute_Bulganin
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 21
+    y = 3
+
+    prerequisite = {
+        focus = BERMAL_Prepare_Mass_Release_Plan
+    }
+    prerequisite = {
+        focus = BERMAL_Denounce_Khrushchevite_Generals
+    }
+    
+    completion_reward = {
+
+        add_stability = -0.1 
+
+        add_political_power = 150 
+    }
+}
+focus = {
+    id = BERMAL_XXth_Congress
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 20 
+    y = 4 
+
+    prerequisite = {
+        focus = BERMAL_Create_KGB
+    }
+    prerequisite = {
+        focus = BERMAL_Execute_Bulganin
+    }
+    
+    completion_reward = {
+
+        custom_effect_tooltip = Beria_XXth
+
+        hidden_effect = {
+        if = {
+            limit = {
+                has_political_power > 500
+
+                NOT = {
+                    has_country_flag = BERIA_Dead 
+                }
+            }
+            country_event = SOV_Beria_Struggle.10
+        }
+        else = {
+            country_event = SOV_Beria_Struggle.11
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Replace_Molotov
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 41 
+    y = 5 
+
+    prerequisite = {
+        focus = BERMAL_XXth_Congress
+    }
+
+    completion_reward = {
+
+        add_timed_idea = {
+            days = 365
+            idea = recently_reshuffled_foreign_ministry
+        }
+    }
+}
+focus = {
+    id = BERMAL_Asian_Relations_Warming
+    search_filters = {IC_FILTER}
+    
+    x = 31
+    y = 8 
+    cost = 4.00
+
+    prerequisite = {
+        focus = BERMAL_Launch_International_Detente
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = touring_asia_TT
+
+        set_country_flag = Soviet_Detente_Asian
+    }
+}
+focus = {
+    id = BERMAL_Japanese_Peace_Treaty_Compromise
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 27
+    y = 9 
+    prerequisite = {
+        focus = BERMAL_Asian_Relations_Warming
+    }
+
+    completion_reward = {
+        JAP = {
+            country_event = SOV_Beria_Struggle.43
+        }
+    }
+}
+focus = {
+    id = BERMAL_Launch_International_Detente
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 41 
+    y = 7
+
+
+    prerequisite = {
+        focus = BERMAL_Replace_Molotov
+    }
+
+    completion_reward = {
+
+        set_country_flag = Soviet_Detente
+
+        custom_effect_tooltip = Unlock_Detente_TT
+    }
+}
+focus = {
+    id = BERMAL_Heal_European_Relations
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 41 
+    y = 8 
+    prerequisite = {
+        focus = BERMAL_Launch_International_Detente
+    }
+    completion_reward = {
+
+        set_country_flag = Soviet_Detente_European
+
+        custom_effect_tooltip = touring_europe_TT
+    }
+}
+focus = {
+    id = BERMAL_Draft_Huge_Stimulus_Package
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 51 
+    y = 8 
+
+    prerequisite = {
+        focus = BERMAL_Launch_International_Detente
+    }
+
+    completion_reward = {
+        country_event = SOV_Beria_Struggle.27
+    }
+}
+focus = {
+    id = BERMAL_Halt_Official_Indochinese_Support
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 38 
+    y = 9 
+    prerequisite = {
+        focus = BERMAL_Heal_European_Relations
+    }
+    prerequisite = {
+        focus = BERMAL_Asian_Relations_Warming
+    }
+
+    completion_reward = {
+        add_political_power = 100
+
+        add_threat = -5
+    }
+}
+focus = {
+    id = BERMAL_Maintain_Strong_Chinese_Links
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 33 
+    y = 9 
+    prerequisite = {
+        focus = BERMAL_Asian_Relations_Warming
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -500
+        }
+    }
+
+    completion_reward = {
+        custom_effect_tooltip = spend_500_billion_now_TT
+
+        1178 = {
+            add_extra_state_shared_building_slots = 1 
+            add_building_construction = {
+                type = agri_industrial_complex 
+                level = 1 
+                instant_build = yes 
+            }
+            add_building_construction = {
+                type = water_infrastructure 
+                level = 1 
+                instant_build = yes 
+            }
+        }
+        1172 = {
+            add_extra_state_shared_building_slots = 1 
+            add_building_construction = {
+                type = agri_industrial_complex 
+                level = 1 
+                instant_build = yes 
+            }
+            add_building_construction = {
+                type = water_infrastructure 
+                level = 1 
+                instant_build = yes 
+            }
+        }
+        1179 = {
+            add_extra_state_shared_building_slots = 1 
+            add_building_construction = {
+                type = agri_industrial_complex 
+                level = 1 
+                instant_build = yes 
+            }
+            add_building_construction = {
+                type = water_infrastructure 
+                level = 1 
+                instant_build = yes 
+            }
+        }
+        1171 = {
+            add_extra_state_shared_building_slots = 1 
+            add_building_construction = {
+                type = agri_industrial_complex 
+                level = 1 
+                instant_build = yes 
+            }
+            add_building_construction = {
+                type = water_infrastructure 
+                level = 1 
+                instant_build = yes 
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Fund_Indochinese_Development
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    y = 10
+    x = 31 
+
+
+    prerequisite = {
+        focus = BERMAL_Maintain_Strong_Chinese_Links
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = 1500
+        }
+    }
+    
+    completion_reward = {
+        custom_effect_tooltip = spend_1500_billion_now_TT
+
+        VIN = {
+            capital_scope = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+
+                    type = industrial_complex 
+                    level = 3 
+                    instant_build = yes 
+                }
+            }
+        }
+        CAM = {
+            capital_scope = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+
+                    type = industrial_complex 
+                    level = 3 
+                    instant_build = yes 
+                }
+            }
+        }
+        LAO = {
+            capital_scope = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+
+                    type = industrial_complex 
+                    level = 3 
+                    instant_build = yes 
+                }
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Soften_Credit_Access_Mao
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 35
+    y = 10
+
+    prerequisite = {
+        focus = BERMAL_Maintain_Strong_Chinese_Links
+    }
+
+    completion_reward = {
+        PRC = {
+            if = {
+                limit = {
+                    has_idea = soviet_loans 
+                }
+                remove_ideas = soviet_loans 
+                add_timed_idea = {
+                    idea = softened_soviet_loans
+                    days = 1500
+                }
+            }
+            else = {
+                add_timed_idea = {
+                    idea = softened_soviet_loans 
+                    days = 1500
+                }
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Soviet_US_Korean_Peninsula_Civilian_Development
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 25 
+    y = 10 
+    prerequisite = {
+        focus = BERMAL_Japanese_Peace_Treaty_Compromise
+    }
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -2000
+        }
+    }
+
+    completion_reward = {
+        custom_effect_tooltip = spend_2000_billion_now_TT
+
+        USA = {
+
+        country_event = SOV_Beria_Struggle.46
+        }
+    }
+}
+focus = {
+    id = BERMAL_Develop_Chinese_CrossBorder_Infrastructure
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 29 
+    y = 10 
+    prerequisite = {
+        focus = BERMAL_Japanese_Peace_Treaty_Compromise
+    }
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -500
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_500_billion_now_TT
+
+        PRC =  {
+            country_event = SOV_Beria_Struggle.50
+        }
+    }
+}
+focus = {
+    id = BERMAL_Fund_Burmese_Shipyards_and_Ports
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 27 
+    y = 11 
+
+    prerequisite = {
+        focus = BERMAL_Soviet_US_Korean_Peninsula_Civilian_Development
+    }
+    prerequisite = {
+        focus = BERMAL_Develop_Chinese_CrossBorder_Infrastructure
+    }
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -1000
+        }
+    }
+
+    completion_reward = {
+        custom_effect_tooltip = spend_1000_billion_now_TT 
+
+        SOV = {
+            408 {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                type = dockyard
+                level = 2
+                instant_build = yes
+                }
+            }  
+        }
+        BRM = {
+            every_owned_state = {
+                limit = {
+                    is_coastal = yes 
+                }
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = dockyard
+                    level = 1
+                    instant_build = yes
+                }
+            }
+
+            1186 = {
+                add_building_construction = {
+				    type = naval_base
+				    level = 5
+				    province = 12090
+				    instant_build = yes
+			    }
+            }
+            288 = {
+                add_building_construction = {
+				    type = naval_base
+				    level = 6
+				    province = 1330
+				    instant_build = yes
+			    }
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Renounce_Chinese_Border_Claims
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 30 
+    y = 11 
+
+    prerequisite = {
+        focus = BERMAL_Develop_Chinese_CrossBorder_Infrastructure
+    }
+    prerequisite = {
+        focus = BERMAL_Fund_Indochinese_Development
+    }
+
+    completion_reward = {
+        PRC = {
+            add_political_power = 200
+        }
+        SOV = {
+            add_stability = 0.03 
+            add_war_support = -0.05
+        }
+    }
+}
+focus = {
+    id = BERMAL_Indian_Industrial_Kickstart_Initiative
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    y = 11 
+    x = 33 
+
+    prerequisite = {
+        focus = BERMAL_Soften_Credit_Access_Mao
+    }
+    prerequisite = {
+       focus = BERMAL_Fund_Indochinese_Development
+    }
+
+    completion_reward = {
+
+        set_country_flag = indian_investment
+
+        custom_effect_tooltip = indian_investment_TT
+    }
+}
+focus = {
+    id = BERMAL_Halt_Zealous_Communist_Parties
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 41 
+    y = 9
+
+    prerequisite = {
+        focus = BERMAL_Heal_European_Relations
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = Soviet_Halt_European_TT
+
+        set_country_flag = Soviet_Halt_European
+    }
+}
+focus = {
+    id = BERMAL_Transform_Reparations_Into_FDI
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 44
+    y = 9 
+
+    prerequisite = {
+        focus = BERMAL_Heal_European_Relations
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_1000_billion_now_HUNROM_TT 
+        if = {
+            limit = {
+                ROM = {
+                    has_idea = soviet_reperations 
+                }
+            }
+                ROM = {
+                    remove_ideas = soviet_reperations
+
+                    79 = {
+                        add_extra_state_shared_building_slots = 2
+                        add_building_construction = {
+                            type = industrial_complex 
+                            level = 2
+                            instant_build = yes
+                        }
+                    }
+                }
+                add_to_variable = {
+                    currentMoney = -500
+                }
+                random_owned_state = {
+                     add_extra_state_shared_building_slots = 2
+                        add_building_construction = {
+                            type = office_park 
+                            level = 2
+                            instant_build = yes
+                    }
+                }
+            }
+
+        if = {
+            limit = {
+                HUN = {
+                    has_idea = soviet_reparations 
+                }
+            }
+                HUN = {
+                    remove_ideas = soviet_reparations
+                    remove_ideas = soviet_reperations
+
+                    43 = {
+                        add_extra_state_shared_building_slots = 2
+                        add_building_construction = {
+                            type = industrial_complex 
+                            level = 2
+                            instant_build = yes
+                        }
+                    }
+                }
+                add_to_variable = {
+                    currentMoney = -500
+                }
+                random_owned_state = {
+                     add_extra_state_shared_building_slots = 2
+                        add_building_construction = {
+                            type = office_park 
+                            level = 2
+                            instant_build = yes
+                    }
+                }
+            }
+        if = {
+            limit = {
+                DDR = {
+                    has_idea = war_reparations 
+                }
+            }
+                DDR = {
+                    remove_ideas = war_reparations
+                    remove_ideas = soviet_reperations
+
+                    744 = {
+                        add_extra_state_shared_building_slots = 2
+                        add_building_construction = {
+                            type = industrial_complex 
+                            level = 2
+                            instant_build = yes
+                        }
+                    }
+                }
+                add_to_variable = {
+                    currentMoney = -500
+                }
+                random_owned_state = {
+                     add_extra_state_shared_building_slots = 2
+                        add_building_construction = {
+                            type = office_park 
+                            level = 2
+                            instant_build = yes
+                    }
+                }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Finance_ECSC_Mediterranean_Ports
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 40 
+    y = 10 
+
+    prerequisite = {
+        focus = BERMAL_Halt_Official_Indochinese_Support
+    }
+    prerequisite = {
+        focus = BERMAL_Halt_Zealous_Communist_Parties
+    }
+
+    completion_reward = {
+        set_country_flag = ECSC_Ports_Soviet
+
+        custom_effect_tooltip = ECSC_Ports_Soviet_TT
+
+        every_country = {
+            limit = {
+                tag = FRA 
+                tag = ITA
+            }
+            add_to_variable = {
+                global.EU_acceptance_factor = 1
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Propose_Unified_Deutschemark_Zone
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 42
+    y = 10 
+
+    prerequisite = {
+        focus = BERMAL_Transform_Reparations_Into_FDI
+    }
+    prerequisite = {
+        focus = BERMAL_Halt_Zealous_Communist_Parties
+    }
+
+    completion_reward = {
+        DDR = {
+            country_event = SOV_Beria_Struggle.24
+        }
+        WGR = {
+            country_event = SOV_Beria_Struggle.24
+        }
+        USA = {
+            country_event = SOV_Beria_Struggle.24
+        }
+    }
+}
+focus = {
+    id = BERMAL_Force_Eastern_European_Military_Limitations
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 44 
+    y = 11 
+
+    prerequisite = {
+        focus = BERMAL_Propose_Unified_Deutschemark_Zone
+    }
+
+    completion_reward = {
+         ROM = {
+            add_timed_idea = {
+                days = 1150
+                idea = military_spending_limitation
+            }
+        }
+        BUL = {
+            add_timed_idea = {
+                days = 1150
+                idea = military_spending_limitation
+            }
+        }
+        CZE = {
+            add_timed_idea = {
+                days = 1150
+                idea = military_spending_limitation
+            }
+        }
+        HUN = {
+            add_timed_idea = {
+                days = 1150
+                idea = military_spending_limitation
+            }
+        }
+        DDR = {
+            add_timed_idea = {
+                days = 1150
+                idea = military_spending_limitation
+            }
+        }
+        POL = {
+            add_timed_idea = {
+                days = 1150
+                idea = military_spending_limitation
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Begin_Cross_Country_Norm_Harmonization
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    y = 13 
+    x = 46
+
+    prerequisite = {
+        focus = BERMAL_Develop_East_German_Chemical_Industry
+    }
+    prerequisite = {
+        focus = BERMAL_Create_Czech_Soviet_Automobile_Joint_Venture
+    }
+    prerequisite = {
+        focus = BERMAL_German_Partial_Demilitarization_Accords
+    }
+    prerequisite = {
+        focus = BERMAL_Create_Industrial_Electronics_RD_Hub
+    }
+
+    completion_reward = {
+        
+        set_global_flag = European_PP
+
+        add_dynamic_modifier = {
+            modifier = federation_european_union
+        }
+
+        FRA = {
+            country_event = SOV_Beria_Struggle.30
+        } 
+        ENG = {
+            country_event = SOV_Beria_Struggle.30
+        }
+        ITA = {
+            country_event = SOV_Beria_Struggle.30
+        }
+        ROM = {
+            country_event = SOV_Beria_Struggle.30
+        }
+        DDR = {
+            country_event = SOV_Beria_Struggle.30
+        }
+        CZE = {
+            country_event = SOV_Beria_Struggle.30
+        }
+        HUN = {
+            country_event = SOV_Beria_Struggle.30
+        }
+        BUL = {
+            country_event = SOV_Beria_Struggle.30
+        }
+        ALB = {
+            country_event = SOV_Beria_Struggle.30
+        }
+        POL = {
+            country_event = SOV_Beria_Struggle.30
+        }
+        BEL = {
+            country_event = SOV_Beria_Struggle.30
+        }
+        HOL = {
+            country_event = SOV_Beria_Struggle.30
+        }
+        LUX = {
+            country_event = SOV_Beria_Struggle.30
+        }
+        WGR = {
+            country_event = SOV_Beria_Struggle.30
+        }
+
+        if = {
+            limit = {
+                PDG = {
+                    exists = yes 
+                }
+            }
+            PDG = {country_event = SOV_Beria_Struggle.30}
+        }
+        if = {
+            limit = {
+                TUR = {
+                    has_government = communism
+                }
+            }
+            TUR = {country_event = SOV_Beria_Struggle.30}
+        }   
+    }
+}
+focus = {
+    id = BERMAL_Instigate_Annual_European_Tariffs_Conference
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+
+    x = 41 
+    y = 11
+
+    prerequisite = {
+        focus = BERMAL_Finance_ECSC_Mediterranean_Ports
+    }
+    prerequisite = {
+        focus = BERMAL_Propose_Unified_Deutschemark_Zone
+    }
+
+    completion_reward = {
+
+        YUG = {
+				add_opinion_modifier = {
+					target = SOV
+					modifier = small_increase
+				}
+
+                add_stability = 0.05
+			}
+        SOV = {
+				add_opinion_modifier = {
+					target = YUG
+					modifier = small_increase
+				}
+
+                add_political_power = 100
+			}
+
+            hidden_effect = {
+                add_stability = -0.05
+            }
+    }
+}
+focus = {
+    id = BERMAL_German_Partial_Demilitarization_Accords
+
+
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 41 
+    y = 12
+
+    prerequisite = {
+        focus = BERMAL_Instigate_Annual_European_Tariffs_Conference
+    }
+    prerequisite = {
+        focus = BERMAL_Prepare_Inter_European_Investments_Plan
+    }
+    prerequisite = {
+       focus = BERMAL_Force_Eastern_European_Military_Limitations
+    }
+
+    completion_reward = {
+
+        USA = {
+            country_event = SOV_Beria_Struggle.41
+        }
+        DDR = {
+            country_event = SOV_Beria_Struggle.41
+        }   
+        WGR = {
+            country_event = SOV_Beria_Struggle.41
+        }
+    }
+}
+focus = {
+    id = BERMAL_Create_Joint_Planning_Comission_with_Poland
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 49
+    y = 9
+
+    prerequisite = {
+        focus = BERMAL_Draft_Huge_Stimulus_Package
+    }
+
+    completion_reward = {
+        
+        add_timed_idea = {
+                idea = Joint_Planning_Commission
+                days = 720
+            } 
+
+        POL = {
+            add_timed_idea = {
+                idea = Joint_Planning_Commission
+                days = 720
+            } 
+        }
+    }
+}
+focus = {
+    id = BERMAL_Develop_Black_Sea_Merchant_Traffic
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 53 
+    y = 9
+
+    prerequisite = {
+        focus = BERMAL_Draft_Huge_Stimulus_Package
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -1500
+        }
+    }
+    completion_reward = {
+
+        custom_effect_tooltip = spend_1500_billion_now_TT
+
+        927 = {
+            add_extra_state_shared_building_slots = 2 
+
+            add_building_construction = {
+                type = dockyard
+                instant_build = yes  
+                level = 2
+            }
+            add_building_construction = {
+				type = naval_base
+				level = 2
+				province = 9635
+				instant_build = yes
+			}
+        }
+        77 = {
+            add_extra_state_shared_building_slots = 1
+
+            add_building_construction = {
+                type = dockyard
+                instant_build = yes  
+                level = 1
+            }
+            add_building_construction = {
+				type = naval_base
+				level = 4
+				province = 9783
+				instant_build = yes
+			}
+        }
+        211 = {
+            add_extra_state_shared_building_slots = 1
+
+            add_building_construction = {
+                type = dockyard
+                instant_build = yes  
+                level = 1
+            }
+        }
+        218 = {
+            add_extra_state_shared_building_slots = 2
+
+            add_building_construction = {
+                type = dockyard
+                instant_build = yes  
+                level = 2
+            }
+            add_building_construction = {
+				type = naval_base
+				level = 2
+				province = 9417
+				instant_build = yes
+			}
+        }
+        1037 = {
+            add_extra_state_shared_building_slots = 2
+
+            add_building_construction = {
+                type = dockyard
+                instant_build = yes  
+                level = 2
+            }
+
+            add_building_construction = {
+				type = naval_base
+				level = 2
+				province = 3686
+				instant_build = yes
+			}
+        }
+    }
+}
+focus = {
+    id = BERMAL_Expand_Eastern_European_Commissions_Power
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    y = 10 
+    x = 47
+
+    prerequisite = {
+        focus = BERMAL_Create_Joint_Planning_Comission_with_Poland
+    }
+
+    completion_reward = {
+
+        remove_ideas = Joint_Planning_Commission
+
+        add_timed_idea = {
+                days = 720
+                idea = Joint_Planning_Commission_Empowered
+            }
+
+        POL = {
+            remove_ideas = Joint_Planning_Commission
+
+            add_timed_idea = {
+                days = 720
+                idea = Joint_Planning_Commission_Empowered
+            }
+        }
+
+    }
+}
+focus = {
+    id = BERMAL_Begin_Comecon_Economic_Integration
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 51
+    y = 10
+
+    prerequisite = {
+        focus = BERMAL_Create_Joint_Planning_Comission_with_Poland
+    }
+    prerequisite = {
+        focus = BERMAL_Develop_Black_Sea_Merchant_Traffic
+    }
+    available = { 
+        has_completed_focus = BERMAL_Expand_Eastern_European_Commissions_Power
+    }
+    
+    completion_reward = {
+        CZE = {
+            add_timed_idea = {
+                days = 720
+                idea = Joint_Planning_Commission_Empowered
+            }
+        }
+        HUN = {
+            add_timed_idea = {
+                days = 720
+                idea = Joint_Planning_Commission_Empowered
+            }
+        }
+        BUL = {
+            add_timed_idea = {
+                days = 720
+                idea = Joint_Planning_Commission_Empowered
+            }
+        }
+        DDR = {
+            add_timed_idea = {
+                days = 720
+                idea = Joint_Planning_Commission_Empowered
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Increase_Bulgarian_Agricultural_Capabilities
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    y = 10 
+    x = 55
+
+    prerequisite = {
+        focus = BERMAL_Develop_Black_Sea_Merchant_Traffic
+    }
+
+    select_effect = {
+
+        add_to_variable = {
+            currentMoney = -1000
+        }
+    }
+
+    completion_reward = {
+         
+        custom_effect_tooltip = spend_1000_billion_now_TT
+
+        BUL = {
+            every_owned_state = {
+
+                add_extra_state_shared_building_slots = 1
+
+                add_building_construction = {
+                    type = agri_industrial_complex
+					level = 1
+					instant_build = yes
+                }
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Finance_Polish_Conglomerates
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    y = 11
+    x = 49 
+
+    prerequisite = {
+        focus = BERMAL_Begin_Comecon_Economic_Integration
+    }
+    prerequisite = {
+        focus = BERMAL_Expand_Eastern_European_Commissions_Power
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -500
+        }
+        POL = {
+        add_to_variable = {
+            currentMoney = -250
+        }
+        }        
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_500_billion_now_TT
+        custom_effect_tooltip = spend_eastern_250_TT
+
+        POL = {
+        add_ideas = POL_Champion_1
+        }
+    }
+}
+focus = {
+    id = BERMAL_Hungarian_Civil_Aviation_Giant
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    y = 11 
+    x = 53
+
+    prerequisite = {
+        focus = BERMAL_Increase_Bulgarian_Agricultural_Capabilities
+    }
+    prerequisite = {
+        focus = BERMAL_Begin_Comecon_Economic_Integration
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -500
+        }
+        HUN = {
+        add_to_variable = {
+            currentMoney = -250
+            }
+
+        43 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                type = industrial_complex 
+                instant_build = yes 
+                level = 2
+            }
+        }
+        }        
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_500_billion_now_TT
+        custom_effect_tooltip = spend_eastern_250_TT
+
+        HUN = {
+            add_ideas = Hungarian_Champion_1
+        }
+    }
+}
+focus = {
+    id = BERMAL_Create_Czech_Soviet_Automobile_Joint_Venture
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 47 
+    y = 12 
+
+    prerequisite = {
+        focus = BERMAL_Finance_Polish_Conglomerates
+    }
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -500
+        }
+        CZE = {
+        add_to_variable = {
+            currentMoney = -250
+            }
+        }        
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_500_billion_now_TT
+        custom_effect_tooltip = spend_eastern_250_TT
+
+        CZE = {
+        add_ideas = CZE_Champion_1
+
+        9 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                type = industrial_complex 
+                instant_build = yes 
+                level = 2
+                }
+            }
+        }
+
+        random_owned_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                type = industrial_complex 
+                instant_build = yes 
+                level = 2
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Develop_East_German_Chemical_Industry
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 51
+    y = 12
+
+    prerequisite = {
+        focus = BERMAL_Hungarian_Civil_Aviation_Giant
+    }
+    prerequisite = {
+        focus = BERMAL_Finance_Polish_Conglomerates
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -500
+        }
+        DDR = {
+        add_to_variable = {
+            currentMoney = -250
+            }
+        }        
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_500_billion_now_TT
+        custom_effect_tooltip = spend_eastern_250_TT
+
+
+        DDR = {
+        add_ideas = DDR_Champion_1
+        }
+    }
+}
+focus = {
+    id = BERMAL_Create_Industrial_Electronics_RD_Hub
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 55
+    y = 12
+
+    prerequisite = {
+        focus = BERMAL_Hungarian_Civil_Aviation_Giant
+    }
+
+    available = {
+        has_completed_focus = BERMAL_Create_Czech_Soviet_Automobile_Joint_Venture
+    }
+    available = {
+        has_completed_focus = BERMAL_Develop_East_German_Chemical_Industry
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -500
+        }
+        BUL = {
+            add_to_variable = {
+            currentMoney = -100
+            } 
+        }
+        DDR = {
+            add_to_variable = {
+            currentMoney = -100
+            } 
+        }
+        HUN = {
+            add_to_variable = {
+            currentMoney = -100
+            } 
+        }
+        CZE = {
+            add_to_variable = {
+            currentMoney = -100
+            } 
+        }
+        POL = {
+            add_to_variable = {
+            currentMoney = -100
+            } 
+        }
+        ROM = {
+            add_to_variable = {
+            currentMoney = -100
+            } 
+        }
+    }
+
+    completion_reward = { 
+
+        custom_effect_tooltip = spend_500_billion_now_TT
+
+        custom_effect_tooltip = spend_eastern_TT
+
+            BUL = {
+                add_ideas = BUL_Champion_2
+            }
+            ROM = {
+                add_ideas = ROM_Champion_2
+            }
+            DDR = {
+                remove_ideas = DDR_Champion_1
+                add_ideas = DDR_Champion_2
+            }
+            POL = {
+                remove_ideas = POL_Champion_1
+                add_ideas = POL_Champion_2
+            }
+            HUN = {
+                remove_ideas = Hungarian_Champion_1
+                add_ideas = Hungarian_Champion_2
+            }
+            CZE = {
+                remove_ideas = CZE_Champion_1
+                add_ideas = CZE_Champion_2
+        }
+    }  
+}
+focus = {
+    id = BERMAL_Prepare_Inter_European_Investments_Plan
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 38
+    y = 11
+
+    prerequisite = {
+        focus = BERMAL_Finance_ECSC_Mediterranean_Ports
+    }
+
+    completion_reward = {
+        set_country_flag = Investing_Europea_Soviet
+
+        custom_effect_tooltip = Investing_Europea_Soviet_TT
+    }
+
+   
+}
+focus = {
+    id = BERMAL_Create_European_Space_Agency
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 40
+    y = 14
+
+    prerequisite = {
+        focus = BERMAL_Begin_Cross_Country_Norm_Harmonization
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = Space_PAEU_TT
+
+        every_country = {
+            limit = {
+                has_dynamic_modifier = {
+                modifier = federation_european_union 
+                }
+            }
+            add_tech_bonus = {
+				name = space_manned_bonus
+				bonus = 1.75
+				uses = 2
+				category = space_manned
+			}
+			add_tech_bonus = {
+				name = space_unmanned_bonus
+				bonus = 1.75
+				uses = 2
+				category = space_unmanned
+			}
+        }
+    }
+}
+focus = {
+    id = BERMAL_Participate_in_EurAtom
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 42
+    y = 15
+
+    prerequisite = {
+        focus = BERMAL_Create_European_Space_Agency
+    }
+
+    completion_reward = {
+        
+        custom_effect_tooltip = Nuclear_PAEU_TT
+
+        every_country = {
+            limit = {
+                has_dynamic_modifier = {
+                modifier = federation_european_union 
+                }
+            }
+            add_tech_bonus = {
+				name = nuclear_reactor_bonus
+				bonus = 1.50
+				uses = 3
+				category = nuclear_reactor
+			}
+        }
+    }
+}
+focus = {
+    id = BERMAL_European_Scale_Wargames
+    search_filters = {IC_FILTER}
+    cost = 4.00
+    
+    x = 38
+    y = 15
+
+    prerequisite = {
+        focus = BERMAL_Create_European_Space_Agency
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = Army_PAEU
+
+        set_global_flag = PanEuropean_Leader
+    }
+}
+focus = {
+    id = BERMAL_Form_Licensing_Office
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 40 
+    y = 16 
+
+    prerequisite = {
+        focus = BERMAL_Participate_in_EurAtom
+    }
+    prerequisite = {
+        focus = BERMAL_European_Scale_Wargames
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = License_PAEU_TT
+
+        set_global_flag = PanEuropean_license
+    }
+}
+focus = {
+    id = BERMAL_Instate_Triannual_Exchange_Rate_Commission
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    y = 14
+    x = 48
+
+    prerequisite = {
+        focus = BERMAL_Begin_Cross_Country_Norm_Harmonization
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = Trade_PAEU_TT
+
+        set_global_flag = European_Trade
+    }
+}
+focus = {
+    id = BERMAL_Negotiations_Common_Commercial_Border
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 45
+    y = 15
+
+    prerequisite = {
+        focus = BERMAL_Instate_Triannual_Exchange_Rate_Commission
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = Construction_TT
+
+        set_global_flag = PanEuropean_Construction
+    }
+}
+focus = {
+    id = BERMAL_Encourage_European_Tech_Transfer
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 48
+    y = 15 
+
+    prerequisite = {
+        focus = BERMAL_Instate_Triannual_Exchange_Rate_Commission
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = PAEU_Common_TT
+
+        set_global_flag = PanEuropean_ResearchSharing
+    }
+}
+focus = {
+    id = BERMAL_Guarantee_Oil_Prices_For_ECSC
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 51 
+    y = 15 
+
+    prerequisite = {
+        focus = BERMAL_Instate_Triannual_Exchange_Rate_Commission
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = FOOD_PAEU_TT
+
+        set_global_flag = PanEuropean_Food
+    }
+}
+focus = {
+    id = BERMAL_Develop_Paris_Berlin_Warsaw_Railway
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 46
+    y = 16
+
+    prerequisite = {
+        focus = BERMAL_Encourage_European_Tech_Transfer
+    }
+    prerequisite = {
+        focus = BERMAL_Negotiations_Common_Commercial_Border
+    }
+
+    select_effect = {
+        add_to_variable = {
+            currentMoney = -1000
+        }
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = spend_1000_billion_now_TT
+
+        744 = {
+            add_building_construction = {
+                level = 1 
+                type = state_infrastructure 
+                instant_build = yes 
+            }
+        }
+        742 = {
+            add_building_construction = {
+                level = 1 
+                type = state_infrastructure 
+                instant_build = yes 
+            }
+        }
+        64 = {
+            add_building_construction = {
+                level = 1 
+                type = state_infrastructure 
+                instant_build = yes 
+            }
+        }
+        68 = {
+            add_building_construction = {
+                level = 1 
+                type = state_infrastructure 
+                instant_build = yes 
+            }
+        }
+        86 = {
+            add_building_construction = {
+                level = 1 
+                type = state_infrastructure 
+                instant_build = yes 
+            }
+        }
+        10 = {
+            add_building_construction = {
+                level = 1 
+                type = state_infrastructure 
+                instant_build = yes 
+            }
+        }
+        56 = {
+            add_building_construction = {
+                level = 1 
+                type = state_infrastructure 
+                instant_build = yes 
+            }
+        }
+        55 = {
+            add_building_construction = {
+                level = 1 
+                type = state_infrastructure 
+                instant_build = yes 
+            }
+        }
+        42 = {
+            add_building_construction = {
+                level = 1 
+                type = state_infrastructure 
+                instant_build = yes 
+            }
+        }
+        28 = {
+            add_building_construction = {
+                level = 1 
+                type = state_infrastructure 
+                instant_build = yes 
+            }
+        }
+        20 = {
+            add_building_construction = {
+                level = 1 
+                type = state_infrastructure 
+                instant_build = yes 
+            }
+        }
+        18 = {
+            add_building_construction = {
+                level = 1 
+                type = state_infrastructure 
+                instant_build = yes 
+            }
+        }
+        16 = {
+            add_building_construction = {
+                level = 1 
+                type = state_infrastructure 
+                instant_build = yes 
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Ease_Passport_Delivrance_for_Business
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 50
+    y = 16
+
+    prerequisite = {
+        focus = BERMAL_Encourage_European_Tech_Transfer
+    }
+    prerequisite = {
+        focus = BERMAL_Guarantee_Oil_Prices_For_ECSC
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = Research_PAEU
+
+        set_global_flag = PanEuropean_ResearchGrants
+    }
+}
+focus = {
+    id = BERMAL_Prepare_Conferences_Settle_Economic_Union
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 48 
+    y = 17
+
+    prerequisite = {
+        focus = BERMAL_Develop_Paris_Berlin_Warsaw_Railway 
+    }
+    prerequisite = {
+        focus = BERMAL_Ease_Passport_Delivrance_for_Business
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = European_union_Effects
+
+        set_global_flag = PanEuropean_Efficiency
+    }
+}
+focus = {
+    id = BERMAL_Prepare_AntiStalinist_Offensive
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 18 
+    y = 5
+
+    prerequisite = {
+        focus = BERMAL_XXth_Congress
+    }
+
+    completion_reward = {
+        custom_effect_tooltip = cpsu_strength_increase_TT
+
+        add_to_variable = {
+            cpsu_strength_pp = -0.05
+        }
+        add_to_variable = {
+            cpsu_strength_stability = 0.03
+        }
+
+        add_political_power = 100
+    }
+}
+focus = {
+    id = BERMAL_Increase_KGB_Funding
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 16 
+    y = 6 
+
+    prerequisite = {
+        focus = BERMAL_Prepare_AntiStalinist_Offensive
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = KGB_Upgrade_TT
+        custom_effect_tooltip = KBG_Stability_TT
+
+        add_to_variable = {
+            KGB_Upgrade = -0.02
+        }
+        add_to_variable = {
+            KBG_Stability = 0.001
+        }
+        
+    }
+}
+focus = {
+    id = BERMAL_Denounce_Recent_Violence_Outbursts
+    search_filters = {IC_FILTER}
+    cost = 4.00
+    
+    x = 20 
+    y = 6 
+
+    prerequisite = {
+        focus = BERMAL_Prepare_AntiStalinist_Offensive
+    }
+
+    completion_reward = {
+
+        add_political_power = 80
+
+        add_stability = 0.01
+    }
+}
+focus = {
+    id = BERMAL_Reshuffle_Politburo_Positions
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    y = 7 
+    x = 15
+
+    prerequisite = {
+        focus = BERMAL_Increase_KGB_Funding
+    }
+    prerequisite = {
+        focus = BERMAL_Denounce_Recent_Violence_Outbursts
+    }
+
+    completion_reward = {
+
+        add_political_power = 150
+    }
+}
+focus = {
+    id = BERMAL_Purge_Hardliners_Middle_Members
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 18
+    y = 7 
+    prerequisite = {
+        focus = BERMAL_Increase_KGB_Funding
+    }
+    prerequisite = {
+        focus = BERMAL_Denounce_Recent_Violence_Outbursts
+    }
+    available = {
+        has_political_power > 300
+    }
+
+    select_effect = {
+        add_political_power = -300
+    }
+
+    completion_reward = {
+        custom_effect_tooltip = cpsu_strength_decrease_TT
+    }
+}
+focus = {
+    id = BERMAL_Incriminate_Molotov_Under_Article70
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 21
+    y = 7 
+
+    prerequisite = {
+        focus = BERMAL_Denounce_Recent_Violence_Outbursts 
+    }
+    prerequisite = {
+        focus = BERMAL_Increase_KGB_Funding
+    }
+    select_effect = {
+        add_political_power = -100
+    }
+    available = {
+        has_political_power > 100
+    }
+
+    completion_reward = {
+        add_manpower = -1 
+
+        add_stability = 0.05
+    }
+}
+focus = {
+    id = BERMAL_Call_For_Unity_Against_Saboteurs
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 16 
+    y = 8
+
+    prerequisite = {
+        focus = BERMAL_Purge_Hardliners_Middle_Members
+    }
+    prerequisite = {
+        focus = BERMAL_Reshuffle_Politburo_Positions
+    }
+
+    completion_reward = {
+
+        add_stability = 0.04
+
+        custom_effect_tooltip = gulag_factor_increase_TT
+
+        add_to_variable = {
+            gulag_factor_five = 0.05
+        }
+        add_to_variable = {
+            gulag_factor_neg = -0.01
+        }
+    }
+}
+focus = {
+    id = BERMAL_Frame_Voroshilov_Associates
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 20 
+    y = 8 
+
+    prerequisite = {
+        focus = BERMAL_Incriminate_Molotov_Under_Article70
+    }
+    prerequisite = {
+        focus = BERMAL_Purge_Hardliners_Middle_Members
+    }
+
+    completion_reward = {
+        add_political_power = 150 
+    }
+}
+focus = {
+    id = BERMAL_Announce_Great_Soviet_Rebirth
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 18
+    y = 9 
+
+    prerequisite = {
+        focus = BERMAL_Frame_Voroshilov_Associates
+    }
+    prerequisite = {
+        focus = BERMAL_Call_For_Unity_Against_Saboteurs
+    }
+
+    select_effect = {
+        add_political_power = -500
+    }
+    available = {
+        has_political_power > 500
+    }
+
+    completion_reward = {
+        custom_effect_tooltip = KBG_Stability_TT
+
+        add_to_variable = {
+            KBG_Stability = 0.001
+        }
+
+        custom_effect_tooltip = gulag_factor_increase_TT
+
+        add_to_variable = {
+            gulag_factor_five = 0.025
+        }
+        add_to_variable = {
+            gulag_factor_neg = -0.005
+        }
+    }
+}
+focus = {
+    id = BERMAL_Increase_Political_Training_For_Lower_Officers
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 13 
+    y = 10 
+
+    prerequisite = {
+        focus = BERMAL_Announce_Great_Soviet_Rebirth
+    }
+
+    completion_reward = {
+        add_ideas = Politicized_Army_1
+    }   
+}
+focus = {
+    id = BERMAL_Increase_Military_Wages
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 11
+    y = 11
+
+    prerequisite = {
+        focus = BERMAL_Increase_Political_Training_For_Lower_Officers
+    }
+
+    completion_reward = {
+
+        add_stability = 0.05
+
+        custom_effect_tooltip = Increased_Wages_TT
+
+        hidden_effect = {
+        if = {
+            limit = {
+                has_idea = policy_military_temp_0
+            }
+            remove_ideas = policy_military_temp_0
+            add_ideas = policy_military_temp_1
+        }
+        else_if = {
+            limit = {
+                has_idea = policy_military_temp_1
+            }
+            remove_ideas = policy_military_temp_1
+            add_ideas = policy_military_temp_2
+        }
+        else_if = {
+            limit = {
+                has_idea = policy_military_temp_2
+            }
+            remove_ideas = policy_military_temp_2
+            add_ideas = policy_military_temp_3
+        }
+        else_if = {
+            limit = {
+                has_idea = policy_military_temp_3
+            }
+            remove_ideas = policy_military_temp_3
+            add_ideas = policy_military_temp_4
+            }
+        }
+    }
+}
+focus = {
+    id = BERMAL_Intensify_Great_Patriotic_War_Propaganda
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 15
+    y = 11
+
+    prerequisite = {
+       focus = BERMAL_Increase_Political_Training_For_Lower_Officers
+    }
+
+    completion_reward = {
+        remove_ideas = Politicized_Army_1
+        add_ideas = Politicized_Army_2
+    }
+}
+focus = {
+    id = BERMAL_Raise_Komsomol_Funding
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    y = 12 
+    x = 13
+
+    prerequisite = {
+        focus = BERMAL_Intensify_Great_Patriotic_War_Propaganda
+    }
+    prerequisite = {
+        focus = BERMAL_Increase_Military_Wages
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = clergy_persecution_increase_TT
+
+        add_to_variable = {
+            clergy_persecution_negative = -0.03
+        }
+        add_to_variable = {
+            clergy_persecution_factor = 0.05
+        }
+
+        
+    }
+}
+focus = {
+    id = BERMAl_Anti_Criminal_Campaign
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 22
+    y = 10
+
+    prerequisite = {
+        focus = BERMAL_Announce_Great_Soviet_Rebirth
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = KBG_Stability_TT
+
+        custom_effect_tooltip = gulag_factor_increase_TT
+
+        add_to_variable = {
+            KBG_Stability = 0.001
+        }
+
+        add_to_variable = {
+            gulag_factor_five = 0.025
+        }
+        add_to_variable = {
+            gulag_factor_neg = -0.005
+        }
+    }
+}
+focus = {
+    id = BERMAL_Allow_Military_Service_KGB
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 20
+    y = 11 
+
+    prerequisite = {
+        focus = BERMAl_Anti_Criminal_Campaign
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = gulag_factor_increase_TT
+
+        add_to_variable = {
+            gulag_factor_five = 0.025
+        }
+        add_to_variable = {
+            gulag_factor_neg = -0.005
+        }
+    }
+}
+focus = {
+    id = BERMAL_Increase_Merkoulov_Prerogatives
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 24
+    y = 11
+
+    prerequisite = {
+        focus = BERMAl_Anti_Criminal_Campaign
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = KGB_Resistance_TT
+        custom_effect_tooltip = KBG_Stability_TT
+        custom_effect_tooltip = KGB_Defense_TT
+
+        add_to_variable = {
+            KGB_Resistance = 0.05
+        }
+        add_to_variable = {
+            KBG_Stability = 0.001
+        }
+        add_to_variable = {
+            KGB_Defense = 0.05
+        }
+    }
+}
+focus = {
+    id = BERMAL_Reinstate_Penal_Batallions
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 18 
+    y = 12
+
+    prerequisite = {
+        focus = BERMAL_Allow_Military_Service_KGB
+    }
+
+    completion_reward = {
+        custom_effect_tooltip = gulag_factor_increase_TT
+
+        add_to_variable = {
+            gulag_factor_five = 0.025
+        }
+        add_to_variable = {
+            gulag_factor_neg = -0.005
+        }
+    }
+}
+focus = {
+    id = BERMAL_Restore_KGB_Judicial_Powers
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 22
+    y = 12 
+
+    prerequisite = {
+        focus = BERMAL_Allow_Military_Service_KGB
+    }
+    prerequisite = {
+        focus = BERMAL_Increase_Merkoulov_Prerogatives
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = gulag_factor_increase_TT
+
+        add_to_variable = {
+            gulag_factor_five = 0.025
+        }
+        add_to_variable = {
+            gulag_factor_neg = -0.005
+        }
+
+
+        custom_effect_tooltip = KBG_Stability_TT
+
+        add_to_variable = {
+            KBG_Stability = 0.001
+        }
+    }
+}
+focus = {
+    id = BERMAl_Make_Harder_Penal_Code
+    search_filters = {IC_FILTER}
+    cost = 4.00 
+
+    x = 26
+    y = 12
+
+
+    prerequisite = {
+        focus = BERMAL_Increase_Merkoulov_Prerogatives
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = KBG_Stability_TT
+        
+        add_to_variable = {
+            KBG_Stability = 0.001
+        }
+
+        custom_effect_tooltip = gulag_factor_increase_TT
+
+        add_to_variable = {
+            gulag_factor_five = 0.0125
+        }
+        add_to_variable = {
+            gulag_factor_neg = -0.0025
+        }
+    }
+}
+focus = {
+    id = BERMAL_Prepare_Show_Trials
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 24 
+    y = 13 
+
+    prerequisite = {
+        focus = BERMAL_Restore_KGB_Judicial_Powers
+    }
+    prerequisite = {
+        focus = BERMAl_Make_Harder_Penal_Code
+    }
+    available = {
+        has_completed_focus = BERMAL_Intensify_Great_Patriotic_War_Propaganda
+    }
+
+    completion_reward = {
+
+        remove_ideas = Politicized_Army_2
+        add_ideas = Politicized_Army_3
+        
+    }
+}
+focus = {
+    id = BERMAL_Decide_Zhukov_Fate
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 20 
+    y = 13
+
+    prerequisite = {
+        focus = BERMAL_Restore_KGB_Judicial_Powers
+    }
+    prerequisite = {
+        focus = BERMAL_Reinstate_Penal_Batallions
+    }
+    available = {
+        has_completed_focus = BERMAL_Prepare_Show_Trials
+    }
+
+    completion_reward = {
+
+        country_event = SOV_Beria_Struggle.40
+    }
+}
+focus = {
+    id = BERMAL_Turn_Komsomol_Into_Spy_Networks
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 15 
+    y = 13 
+
+    prerequisite = {
+        focus = BERMAL_Reinstate_Penal_Batallions
+    }
+    prerequisite = {
+        focus = BERMAL_Raise_Komsomol_Funding
+    }
+
+    completion_reward = {
+
+        custom_effect_tooltip = KGB_network_TT
+
+        custom_effect_tooltip = KGB_Defense_TT
+
+        custom_effect_tooltip = KGB_Resistance_TT
+
+        add_to_variable = {
+            KGB_network = 0.05
+        }
+        add_to_variable = {
+            KGB_Defense = 0.05
+        }
+        add_to_variable = {
+            KGB_Resistance = 0.05
+        }
+    }
+}
+focus = {
+    id = BERMAL_Escalate_Into_Full_Scale_Purge
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    x = 19
+    y = 14
+
+    prerequisite = {
+        focus = BERMAL_Decide_Zhukov_Fate
+    }
+    prerequisite = {
+        focus = BERMAL_Prepare_Show_Trials
+    }
+    prerequisite = {
+        focus = BERMAL_Turn_Komsomol_Into_Spy_Networks
+    }
+
+    completion_reward = {
+        custom_effect_tooltip = WIP
+    }
+}
+focus = {
+    id = BERMAl_Propose_A_Limited_Fleet_Treaty
+    search_filters = {IC_FILTER}
+    cost = 4.00
+
+    y = 12
+    x = 31
+
+    prerequisite = {
+        focus = BERMAL_Fund_Burmese_Shipyards_and_Ports
+    }
+    prerequisite = {
+        focus = BERMAL_Renounce_Chinese_Border_Claims
+    }
+    prerequisite = {
+        focus = BERMAL_Indian_Industrial_Kickstart_Initiative
+    }
+
+    completion_reward = {
+
+            set_global_flag = pacific_treaty
+
+            add_ideas = pacific_naval_treaty_adherent
+
+        set_country_flag = pacific_naval_treaty_adherent
+
+        add_threat = -0.5
+
+        news_event = SOV_Beria_Struggle.105
+
+            USA = {
+                country_event = SOV_Beria_Struggle.104
+            }
+            FRA = {
+                country_event = SOV_Beria_Struggle.104
+            }
+            ENG = {
+                country_event = SOV_Beria_Struggle.104
+            }
+            AUS = {
+                country_event = SOV_Beria_Struggle.104
+            }
+            NZL = {
+                country_event = SOV_Beria_Struggle.104
+            }
+            INO = {
+                country_event = SOV_Beria_Struggle.104
+            }
+            JAP = {
+                country_event = SOV_Beria_Struggle.104
+            }
+            PRC = {
+                country_event = SOV_Beria_Struggle.104
+            }
+            ROC = {
+                country_event = SOV_Beria_Struggle.104
+            }
+            PHI = {
+                country_event = SOV_Beria_Struggle.104
+            }
+            KOR = {
+                country_event = SOV_Beria_Struggle.104
+            }
+            KPA = {
+                country_event = SOV_Beria_Struggle.104
+            }
+        }
+    }
+}
