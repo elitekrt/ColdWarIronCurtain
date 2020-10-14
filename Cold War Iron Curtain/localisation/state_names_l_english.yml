@@ -775,7 +775,7 @@
  STATE_774:0 "Conkary"
  STATE_775:0 "Fezzan-Ghadames"
  STATE_776:0 "Nordjylland"
- STATE_777:0 "Rojavaye Kurdistane"
+ STATE_777:0 "Al-Hasakah"
  STATE_778:0 "Azarbayjan Gharbi"
  STATE_779:0 "Gilgit-Baltistan"
  STATE_780:0 "Doha"
@@ -1553,3 +1553,4 @@
  STATE_1552:0 "Pernambuco"
  STATE_1553:0 "Nickerie"
  STATE_1554:0 "Sipaliwini"
+ STATE_1555:0 "Parbotto Chottogram"

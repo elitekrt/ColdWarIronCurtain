@@ -1,4 +1,344 @@
 spriteTypes = {
+	#MacArthur Dissmisal
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_1"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_1.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_2"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_2.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_3"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_3.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_4"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_4.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_5"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_5.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_6"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_6.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_7"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_7.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_8"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_8.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_9"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_9.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_10"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_10.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_11"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_11.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_12"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_12.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_13"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_13.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_14"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_14.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_15"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_15.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_16"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_16.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_17"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_17.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_18"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_18.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_19"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_19.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_20"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_20.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_21"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_21.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_22"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_22.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_23"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_23.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_24"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_24.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_25"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_25.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_MacArthur_Dismissal_26"
+		texturefile = "gfx/event_pictures/MacArthur_Dismissal_26.tga"
+	} 	
+	#Black September
+	spriteType = { 
+		name = "GFX_black_september_prelude_1"
+		texturefile = "gfx/event_pictures/black_september_prelude_1.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_prelude_2"
+		texturefile = "gfx/event_pictures/black_september_prelude_2.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_prelude_3"
+		texturefile = "gfx/event_pictures/black_september_prelude_3.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_prelude_4"
+		texturefile = "gfx/event_pictures/black_september_prelude_4.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_prelude_5"
+		texturefile = "gfx/event_pictures/black_september_prelude_5.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_prelude_6"
+		texturefile = "gfx/event_pictures/black_september_prelude_6.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_prelude_7"
+		texturefile = "gfx/event_pictures/black_september_prelude_7.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_prelude_8"
+		texturefile = "gfx/event_pictures/black_september_prelude_8.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_prelude_9"
+		texturefile = "gfx/event_pictures/black_september_prelude_9.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_prelude_10"
+		texturefile = "gfx/event_pictures/black_september_prelude_10.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_prelude_11"
+		texturefile = "gfx/event_pictures/black_september_prelude_11.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_prelude_12"
+		texturefile = "gfx/event_pictures/black_september_prelude_12.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_prelude_13"
+		texturefile = "gfx/event_pictures/black_september_prelude_13.tga"
+	} 	
+	#Black September
+	spriteType = { 
+		name = "GFX_black_september_1"
+		texturefile = "gfx/event_pictures/black_september_1.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_2"
+		texturefile = "gfx/event_pictures/black_september_2.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_3"
+		texturefile = "gfx/event_pictures/black_september_3.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_4"
+		texturefile = "gfx/event_pictures/black_september_4.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_5"
+		texturefile = "gfx/event_pictures/black_september_5.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_6"
+		texturefile = "gfx/event_pictures/black_september_6.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_7"
+		texturefile = "gfx/event_pictures/black_september_7.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_8"
+		texturefile = "gfx/event_pictures/black_september_8.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_9" 
+		texturefile = "gfx/event_pictures/black_september_9.tga"  
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_10"
+		texturefile = "gfx/event_pictures/black_september_10.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_11"
+		texturefile = "gfx/event_pictures/black_september_11.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_12"
+		texturefile = "gfx/event_pictures/black_september_12.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_13"
+		texturefile = "gfx/event_pictures/black_september_13.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_14"
+		texturefile = "gfx/event_pictures/black_september_14.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_15"
+		texturefile = "gfx/event_pictures/black_september_15.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_16"
+		texturefile = "gfx/event_pictures/black_september_16.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_17"
+		texturefile = "gfx/event_pictures/black_september_17.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_18"
+		texturefile = "gfx/event_pictures/black_september_18.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_19"
+		texturefile = "gfx/event_pictures/black_september_19.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_20"
+		texturefile = "gfx/event_pictures/black_september_20.tga"
+	} 	
+	spriteType = { 
+		name = "GFX_black_september_21"
+		texturefile = "gfx/event_pictures/black_september_21.tga"
+	} 	
+
+	#Super Events
+	spriteType = { 
+		name = "GFX_Big_Samson_Option"
+		texturefile = "gfx/event_pictures/Big_Samson_Option.tga"
+		effectFile = "gfx/FX/crtimage.lua" 
+	} 	
+	spriteType = { 
+		name = "GFX_Big_Angolan_Civil_War"
+		texturefile = "gfx/event_pictures/Big_Angolan_Civil_War.dds" 
+		effectFile = "gfx/FX/crtimage.lua" 
+	} 	
+	spriteType = { 
+		name = "GFX_Big_Rhodesian_UDI"
+		texturefile = "gfx/event_pictures/Big_Rhodesian_UDI.dds" 
+		effectFile = "gfx/FX/crtimage.lua" 
+	} 	
+	spriteType = { 
+		name = "GFX_Big_Cuban_Revolution"
+		texturefile = "gfx/event_pictures/Big_Cuban_Revolution.dds" 
+		effectFile = "gfx/FX/crtimage.lua" 
+	} 	
+	spriteType = { 
+		name = "GFX_Big_Portugese_Colonial_Wars"
+		texturefile = "gfx/event_pictures/Big_Portugese_Colonial_Wars.dds" 
+		effectFile = "gfx/FX/crtimage.lua" 
+	} 	
+	spriteType = { 
+		name = "GFX_Big_Vietnam_Withdrawl"
+		texturefile = "gfx/event_pictures/Big_Vietnam_Withdrawl.dds" 
+		effectFile = "gfx/FX/crtimage.lua" 
+	} 	
+	spriteType = { 
+		name = "GFX_Big_Year_Zero"
+		texturefile = "gfx/event_pictures/Big_Year_Zero.dds" 
+		effectFile = "gfx/FX/crtimage.lua" 
+	} 	
+	spriteType = { 
+		name = "GFX_Big_Simba_Rebellion"
+		texturefile = "gfx/event_pictures/Big_Simba_Rebellion.dds" 
+		effectFile = "gfx/FX/crtimage.lua" 
+	} 	
+	spriteType = { 
+		name = "GFX_Big_Congo_Crisis"
+		texturefile = "gfx/event_pictures/Big_Congo_Crisis.dds" 
+		effectFile = "gfx/FX/crtimage.lua" 
+	} 	
+	spriteType = { 
+		name = "GFX_Big_Sino_Soviet_War"
+		texturefile = "gfx/event_pictures/Super_Event_Sino_Soviet_War.dds" 
+		effectFile = "gfx/FX/crtimage.lua" 
+	} 		
+	spriteType = { 
+		name = "GFX_Big_Soviet_Afghan_War"
+		texturefile = "gfx/event_pictures/Big_Soviet_Afghan_War.dds" 
+		effectFile = "gfx/FX/crtimage.lua" 
+	} 		
+	spriteType = { 
+		name = "GFX_Big_Vietnam_War"
+		texturefile = "gfx/event_pictures/Big_Vietnam_War.dds" 
+		effectFile = "gfx/FX/crtimage.lua" 
+	} 
+	spriteType = { 
+		name = "GFX_Big_Stevenson_52"
+		texturefile = "gfx/event_pictures/Big_Stevenson_52.dds" 
+		effectFile = "gfx/FX/crtimage.lua" 
+	} 
+	spriteType = { 
+		name = "GFX_Big_Mao_Funeral"
+		texturefile = "gfx/event_pictures/Big_Mao_Funeral.dds" 
+		effectFile = "gfx/FX/crtimage.lua" 
+	}
+	spriteType = { 
+		name = "GFX_Big_July_14_Revolution"
+		texturefile = "gfx/event_pictures/Big_July_14_Revolution.dds" 
+		effectFile = "gfx/FX/crtimage.lua" 
+	}		
+	spriteType = { 
+		name = "GFX_Big_Hashemite_Twilight"
+		texturefile = "gfx/event_pictures/Big_Hashemite_Twilight.dds" 
+		effectFile = "gfx/FX/crtimage.lua" 
+	}
+	spriteType = { 
+		name = "GFX_Big_Berlin_Wall"
+		texturefile = "gfx/event_pictures/Big_Berlin_Wall.dds" 
+		effectFile = "gfx/FX/crtimage.lua" 
+	}		
+
+	
+	
+	
+	#Normal 
+	spriteType = { 
+		name = "GFX_SAF_Hardliners_Purged"
+		texturefile = "gfx/event_pictures/SAF_Hardliners_Purged.tga"
+	}
+	
 	spriteType = { 
 		name = "GFX_UN_Generic_Intervention_Asia"
 		texturefile = "gfx/event_pictures/UN_Generic_Intervention_Asia.tga"
